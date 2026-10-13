@@ -1,0 +1,3156 @@
+// =========================================================
+// EDUPASS 10 - KHO ĐỀ THI TUYỂN SINH VÀO 10 CÁC NĂM (2022 - 2024)
+// Đề thi chính thức Sở GD&ĐT TP.HCM, Sở GD&ĐT Hà Nội & Toàn Quốc
+// =========================================================
+
+window.ENGLISH_EXAMS = [
+  {
+    "id": "eng_exam_hcmc_2024",
+    "title": "Đề thi chính thức Tuyển sinh Lớp 10 TP.HCM Năm 2024 - Môn Tiếng Anh",
+    "subject": "english",
+    "year": 2024,
+    "location": "TP.HCM",
+    "isOfficial": true,
+    "badgeText": "⭐ Đề Chính Thức 2024",
+    "durationMinutes": 90,
+    "totalQuestions": 40,
+    "description": "Đề thi chính thức tuyển sinh vào lớp 10 năm học 2024 - 2025 của Sở GD&ĐT TP.HCM. Chuẩn cấu trúc 40 câu: Biển báo Ga Metro Bến Thành, Công viên Bến Bạch Đằng, Đọc hiểu Rừng Cần Giờ, Điền từ Xe buýt điện, Word Form, Sắp xếp và Viết lại câu.",
+    "questions": [
+      {
+        "id": "e24_q01",
+        "topic": "Phát âm đuôi -ed (Pronunciation)",
+        "difficulty": "Nhận biết",
+        "question": "Choose the word whose underlined part is pronounced differently from the others: **develop<u>ed</u>**, **promot<u>ed</u>**, **visit<u>ed</u>**, **decid<u>ed</u>**",
+        "options": [
+          "developed (/t/)",
+          "promoted (/ɪd/)",
+          "visited (/ɪd/)",
+          "decided (/ɪd/)"
+        ],
+        "correctIndex": 0,
+        "explanation": "Quy tắc phát âm đuôi -ed:\n- /t/: sau âm vô thanh /p/ -> developed (/dɪˈvel.əpt/)\n- /ɪd/: sau âm /t/ hoặc /d/ -> promoted, visited, decided.\nDo đó 'developed' có đuôi -ed phát âm là /t/, khác với 3 từ còn lại phát âm là /ɪd/.",
+        "trapTip": "Nhớ mẹo: Tận cùng bằng /t/ hoặc /d/ thì đuôi -ed luôn đọc là /ɪd/ (tiền - đô)."
+      },
+      {
+        "id": "e24_q02",
+        "topic": "Phát âm nguyên âm (Pronunciation)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word whose underlined part is pronounced differently from the others: **br<u>ea</u>the**, **thr<u>ea</u>t**, **w<u>ea</u>ther**, **l<u>ea</u>ther**",
+        "options": [
+          "threat (/e/)",
+          "weather (/e/)",
+          "leather (/e/)",
+          "breathe (/iː/)"
+        ],
+        "correctIndex": 3,
+        "explanation": "- breathe: /briːð/ (nguyên âm /iː/ dài, chú ý động từ có 'e' ở cuối)\n- threat: /θret/ (nguyên âm /e/ ngắn)\n- weather: /ˈweð.ər/ (nguyên âm /e/ ngắn)\n- leather: /ˈleð.ər/ (nguyên âm /e/ ngắn)\nDo đó 'breathe' có nguyên âm phát âm khác.",
+        "trapTip": "Phân biệt danh từ 'breath' (/breθ/ - hơi thở) và động từ 'breathe' (/briːð/ - hít thở)."
+      },
+      {
+        "id": "e24_q03",
+        "topic": "Trọng âm từ 2 âm tiết (Word Stress)",
+        "difficulty": "Nhận biết",
+        "question": "Choose the word that has a different stress pattern from the others: **reˈduce**, **ˈproduct**, **preˈfer**, **conˈnect**",
+        "options": [
+          "reduce (âm 2)",
+          "product (âm 1)",
+          "prefer (âm 2)",
+          "connect (âm 2)"
+        ],
+        "correctIndex": 1,
+        "explanation": "- ˈproduct: trọng âm rơi vào âm tiết thứ 1 (danh từ 2 âm tiết thường nhấn âm 1).\n- reˈduce, preˈfer, conˈnect: trọng âm rơi vào âm tiết thứ 2 (động từ 2 âm tiết thường nhấn âm 2).\nDo đó 'product' có trọng âm khác biệt.",
+        "trapTip": "Quy tắc cơ bản: Danh từ 2 âm tiết thường nhấn âm 1, Động từ 2 âm tiết thường nhấn âm 2."
+      },
+      {
+        "id": "e24_q04",
+        "topic": "Trọng âm từ 3 âm tiết (Word Stress)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word that has a different stress pattern from the others: **eˈlectric**, **comˈputer**, **conˈvenient**, **ˈenergy**",
+        "options": [
+          "electric (âm 2)",
+          "computer (âm 2)",
+          "convenient (âm 2)",
+          "energy (âm 1)"
+        ],
+        "correctIndex": 3,
+        "explanation": "- ˈenergy: /ˈen.ə.dʒi/ (trọng âm rơi vào âm tiết thứ 1).\n- eˈlectric: /iˈlek.trɪk/ (đuôi -ic nhấn trước nó, âm 2).\n- comˈputer: /kəmˈpjuː.tər/ (nhấn âm 2).\n- conˈvenient: /kənˈviː.ni.ənt/ (đuôi -ient nhấn trước nó, âm 2).\nDo đó 'energy' có trọng âm rơi vào âm 1.",
+        "trapTip": "Từ có tận cùng là đuôi -ic (electric, historic, scientific) thì trọng âm rơi vào âm tiết ngay trước nó."
+      },
+      {
+        "id": "e24_q05",
+        "topic": "Giới từ chỉ thời gian (Prepositions)",
+        "difficulty": "Nhận biết",
+        "question": "Metro Line 1 (Ben Thanh - Suoi Tien) officially carried out free commercial test runs _______ December 2024.",
+        "options": [
+          "in",
+          "on",
+          "at",
+          "by"
+        ],
+        "correctIndex": 0,
+        "explanation": "Quy tắc sử dụng giới từ chỉ thời gian:\n- Dùng 'in' trước tháng, năm, mùa, thế kỷ (in December, in 2024).\n- Dùng 'on' trước ngày, thứ (on Monday, on December 22nd).\n- Dùng 'at' trước giờ chính xác (at 7:30 AM).\nDo đó đi với tháng 'December' ta dùng giới từ 'in'.",
+        "trapTip": "Mẹo nhớ: 'Trong năm, trong tháng, trong mùa - Đi với IN nhé chớ đùa bạn ơi'."
+      },
+      {
+        "id": "e24_q06",
+        "topic": "Mạo từ (Articles)",
+        "difficulty": "Thông hiểu",
+        "question": "Students in Ho Chi Minh City had _______ memorable experience during their volunteer trip to the Mekong Delta.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "zero article (không mạo từ)"
+        ],
+        "correctIndex": 0,
+        "explanation": "- 'memorable experience' ở đây là một trải nghiệm đáng nhớ (danh từ đếm được số ít, chưa xác định).\n- Tính từ 'memorable' bắt đầu bằng phụ âm /m/ nên ta dùng mạo từ 'a'.",
+        "trapTip": "Kinh nghiệm/trải nghiệm cụ thể là đếm được: 'a memorable experience'."
+      },
+      {
+        "id": "e24_q07",
+        "topic": "Câu hỏi đuôi (Tag Questions)",
+        "difficulty": "Thông hiểu",
+        "question": "The youth volunteers of Nguyen Du School have collected over three tons of plastic waste along the canal, _______?",
+        "options": [
+          "haven't they",
+          "have they",
+          "didn't they",
+          "don't they"
+        ],
+        "correctIndex": 0,
+        "explanation": "Mệnh đề chính dùng thì hiện tại hoàn thành ở thể khẳng định: 'have collected' với chủ ngữ số nhiều 'The youth volunteers' (đại từ thay thế là 'they').\nPhần đuôi phải ở thể phủ định: 'haven't they?'.",
+        "trapTip": "Trước khẳng định thì sau phủ định; trước dùng thì hiện tại hoàn thành (have) thì đuôi phải dùng 'haven't'."
+      },
+      {
+        "id": "e24_q08",
+        "topic": "Cụm động từ (Phrasal Verbs)",
+        "difficulty": "Vận dụng",
+        "question": "Environmental researchers from HCMC National University are _______ a comprehensive project to restore mangrove forests in Can Gio.",
+        "options": [
+          "carrying out",
+          "turning down",
+          "looking after",
+          "putting off"
+        ],
+        "correctIndex": 0,
+        "explanation": "- carry out: tiến hành, thực hiện (nghiên cứu, dự án, khảo sát).\n- turn down: từ chối, vặn nhỏ.\n- look after: chăm sóc.\n- put off: trì hoãn.\nNgữ cảnh 'tiến hành dự án phục hồi rừng ngập mặn' -> chọn 'carrying out'.",
+        "trapTip": "'Carry out a project / research / experiment' là cụm từ học thuật xuất hiện rất nhiều trong đề thi vào 10 TP.HCM."
+      },
+      {
+        "id": "e24_q09",
+        "topic": "Từ vựng về Môi trường đô thị (Vocabulary)",
+        "difficulty": "Thông hiểu",
+        "question": "VinBus electric buses are regarded as _______ friendly public transport because they produce zero harmful tailpipe emissions.",
+        "options": [
+          "environmentally",
+          "environmental",
+          "environment",
+          "environmentalists"
+        ],
+        "correctIndex": 0,
+        "explanation": "Trước tính từ 'friendly' (thân thiện) ta cần một phó từ (trạng từ) để bổ nghĩa: 'environmentally friendly' (thân thiện với môi trường).\nĐây là cụm cố định phổ biến: environmentally friendly = eco-friendly.",
+        "trapTip": "Đừng nhầm tính từ 'environmental' - vị trí đứng trước tính từ 'friendly' phải là trạng từ tận cùng -ly."
+      },
+      {
+        "id": "e24_q10",
+        "topic": "Liên từ chỉ sự nhượng bộ (Conjunctions)",
+        "difficulty": "Thông hiểu",
+        "question": "_______ the heavy downpour on Vo Van Kiet Boulevard, hundreds of volunteers continued planting trees along the roadside.",
+        "options": [
+          "Despite",
+          "Although",
+          "Because of",
+          "Even though"
+        ],
+        "correctIndex": 0,
+        "explanation": "Phía sau là một cụm danh từ: 'the heavy downpour on Vo Van Kiet Boulevard' (cơn mưa như trút nước trên đại lộ Võ Văn Kiệt).\nÝ câu mang nghĩa tương phản (mặc dù mưa lớn nhưng vẫn trồng cây):\n- Despite + Cụm danh từ / V-ing: Mặc dù.\n- Although / Even though + Mệnh đề (S + V).\nDo đó chọn 'Despite'.",
+        "trapTip": "Nhớ công thức: Although + S + V | Despite / In spite of + Noun phrase / V-ing."
+      },
+      {
+        "id": "e24_q11",
+        "topic": "Câu điều kiện loại 1 (Conditionals)",
+        "difficulty": "Thông hiểu",
+        "question": "If citizens in Ho Chi Minh City _______ public transport like the new Metro regularly, traffic jams in the city center will decrease significantly.",
+        "options": [
+          "use",
+          "used",
+          "will use",
+          "would use"
+        ],
+        "correctIndex": 0,
+        "explanation": "Mệnh đề kết quả dùng 'will decrease' (thì tương lai đơn) -> Đây là câu điều kiện loại 1 (nói về sự việc có thật hoặc có thể xảy ra ở hiện tại/tương lai).\nCấu trúc mệnh đề IF: If + S + V(hiện tại đơn).\nChủ ngữ 'citizens' số nhiều -> động từ nguyên mẫu 'use'.",
+        "trapTip": "Tuyệt đối không dùng 'will' trong mệnh đề chứa IF của câu điều kiện loại 1."
+      },
+      {
+        "id": "e24_q12",
+        "topic": "Giao tiếp hàng ngày (Social Communication)",
+        "difficulty": "Thông hiểu",
+        "question": "Lan: 'Would you mind if I turned on the air conditioner? It's really hot inside the classroom.'\nMinh: '_______'",
+        "options": [
+          "No, not at all. Go ahead.",
+          "Yes, I would love to.",
+          "Yes, you can do it.",
+          "No, I am busy right now."
+        ],
+        "correctIndex": 0,
+        "explanation": "Câu hỏi 'Would you mind if I...?' mang nghĩa 'Bạn có phiền nếu tôi... không?'.\nKhi đồng ý cho người khác làm điều đó, ta trả lời phủ định mang nghĩa 'Không phiền đâu':\n- 'No, not at all' (Không, không phiền chút nào) hoặc 'Please do / Go ahead' (Bạn cứ tự nhiên).\nNếu nói 'Yes' nghĩa là 'Tôi thấy phiền đấy (không cho làm)'.",
+        "trapTip": "Bẫy tâm lý người Việt: Khi muốn đồng ý hay nói 'Yes', nhưng với cấu trúc 'Do you mind / Would you mind' thì đồng ý PHẢI NÓI 'No / Not at all'."
+      },
+      {
+        "id": "e24_q13",
+        "topic": "Biển báo Ga Metro Bến Thành (Signs & Notices)",
+        "difficulty": "Thông hiểu",
+        "question": "What does this public safety notice at Ben Thanh Metro Station mean?\n\n[ ⚠️ **ATTENTION PASSENGERS**:\n*PLEASE STAND BEHIND THE YELLOW SAFETY LINE UNTIL THE TRAIN HAS COME TO A COMPLETE STOP.* ]",
+        "options": [
+          "Passengers must wait behind the yellow line before boarding the train.",
+          "Passengers are allowed to cross the yellow line at any time.",
+          "Passengers should paint the safety line yellow.",
+          "The train will not stop if passengers stand behind the yellow line."
+        ],
+        "correctIndex": 0,
+        "explanation": "Biển báo an toàn đường sắt đô thị: Yêu cầu hành khách đứng phía sau vạch an toàn màu vàng cho đến khi tàu dừng hẳn. Do đó đáp án A: 'Passengers must wait behind the yellow line before boarding the train' là hoàn toàn chính xác.",
+        "trapTip": "Dạng bài Biển báo thực tế TP.HCM luôn đòi hỏi học sinh hiểu bản chất thông điệp an toàn nơi công cộng."
+      },
+      {
+        "id": "e24_q14",
+        "topic": "Biển báo Phân loại rác Bến Bạch Đằng (Signs & Notices)",
+        "difficulty": "Thông hiểu",
+        "question": "What does this notice on the park trash bins at Bach Dang Wharf instruct visitors to do?\n\n[ ♻️ **WASTE SORTING STATION**:\n*BIN A: PLASTIC BOTTLES, ALUMINUM CANS & PAPER*\n*BIN B: LEFTOVER FOOD & ORGANIC WASTE* ]",
+        "options": [
+          "Visitors must separate recyclable materials from organic waste into proper bins.",
+          "Visitors should put all kinds of garbage into Bin A only.",
+          "Visitors are not allowed to throw trash in the park.",
+          "Food waste must be placed together with plastic bottles."
+        ],
+        "correctIndex": 0,
+        "explanation": "Thông báo hướng dẫn phân loại rác: Thùng A chứa rác tái chế (chai nhựa, lon nhôm, giấy); Thùng B chứa thức ăn thừa và rác hữu cơ. Hành khách phải phân loại rác đúng thùng quy định.",
+        "trapTip": "Chú ý các từ khóa phân loại rác: 'separate', 'sort', 'organic' (hữu cơ), 'recyclable' (tái chế)."
+      },
+      {
+        "id": "e24_q15",
+        "topic": "Đọc hiểu: Ý chính bài đọc (Reading Comprehension)",
+        "difficulty": "Thông hiểu",
+        "question": "Read the passage about Can Gio Mangrove Forest and choose the best title:\n\n'Located approximately 40 kilometers southeast of central Ho Chi Minh City, the Can Gio Mangrove Forest is widely recognized as the green lung of the southern metropolis. Covering over 75,000 hectares, this unique ecosystem was severely damaged during wartime. However, thanks to the relentless reforestation campaign launched by the city government and generations of citizens since 1978, millions of mangrove trees have been successfully replanted.\n\nIn the year 2000, UNESCO designated Can Gio as Vietnam's first International Mangrove Biosphere Reserve. Today, it serves as a critical natural barrier protecting Ho Chi Minh City from coastal storms, soil erosion, and severe tidal flooding. Moreover, the reserve absorbs massive amounts of carbon dioxide from urban traffic and factories, filtering fresh air for more than 10 million residents.\n\nIn recent years, local secondary schools in Ho Chi Minh City have organized regular eco-tours and practical biology field trips to Can Gio. Students not only learn about biodiversity by observing thousands of migratory birds, wild monkeys, and saltwater crocodiles, but they also actively participate in planting young mangrove saplings. Through these hands-on experiences, young citizens develop a strong sense of responsibility toward environmental conservation.'\n\nWhat is the best title for the passage?",
+        "options": [
+          "Can Gio Mangrove Reserve: The Vital Green Lung of Ho Chi Minh City",
+          "The Negative Effects of Urbanization in Ho Chi Minh City",
+          "A Guide to Raising Saltwater Crocodiles in Vietnam",
+          "History of Wars and Economic Development in Can Gio"
+        ],
+        "correctIndex": 0,
+        "explanation": "Toàn bộ bài đọc tập trung giới thiệu về Rừng ngập mặn Cần Giờ: quá trình tái sinh, vai trò là 'lá phổi xanh' bảo vệ TP.HCM khỏi bão lũ và ô nhiễm, cùng hoạt động giáo dục môi trường của học sinh thành phố.",
+        "trapTip": "Tiêu đề tốt nhất phải bao quát toàn bài, không được quá hẹp (chỉ nói về cá sấu) hay quá rộng (chiến tranh nói chung)."
+      },
+      {
+        "id": "e24_q16",
+        "topic": "Đọc hiểu: Chi tiết thông tin (Reading Comprehension)",
+        "difficulty": "Thông hiểu",
+        "question": "According to paragraph 2, when was Can Gio officially recognized by UNESCO as an International Biosphere Reserve?",
+        "options": [
+          "In the year 2000",
+          "In the year 1978",
+          "In the year 1990",
+          "In the year 2024"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dẫn chứng trong đoạn 2: 'In the year 2000, UNESCO designated Can Gio as Vietnam's first International Mangrove Biosphere Reserve.'",
+        "trapTip": "Đừng nhầm với năm 1978 (năm bắt đầu chiến dịch trồng lại rừng)."
+      },
+      {
+        "id": "e24_q17",
+        "topic": "Đọc hiểu: Vai trò bảo vệ của rừng (Reading Comprehension)",
+        "difficulty": "Thông hiểu",
+        "question": "Which of the following is NOT mentioned as a protective function of Can Gio Mangrove Forest?",
+        "options": [
+          "Producing electricity for urban factories",
+          "Protecting the city from coastal storms and erosion",
+          "Preventing severe tidal flooding",
+          "Absorbing carbon dioxide and filtering fresh air"
+        ],
+        "correctIndex": 0,
+        "explanation": "Bài đọc nêu rõ: Cần Giờ chắn bão (storms), chống xói mòn (erosion), giảm ngập triều cường (flooding), hấp thụ khí CO2. Bài đọc KHÔNG hề nhắc đến việc sản xuất điện cho nhà máy.",
+        "trapTip": "Đọc kỹ từ 'NOT mentioned' để tìm phương án không có trong bài."
+      },
+      {
+        "id": "e24_q18",
+        "topic": "Đọc hiểu: Từ quy chiếu (Reading Comprehension)",
+        "difficulty": "Thông hiểu",
+        "question": "The word **'they'** in the last paragraph refers to:",
+        "options": [
+          "Students",
+          "Wild monkeys",
+          "Secondary schools",
+          "Mangrove saplings"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dẫn chứng trong đoạn cuối: 'Students not only learn about biodiversity... but **they** also actively participate in planting young mangrove saplings.' Đại từ 'they' thay thế cho danh từ 'Students' ở trước đó.",
+        "trapTip": "Tìm danh từ số nhiều đứng ngay câu hoặc mệnh đề trước đại từ 'they'."
+      },
+      {
+        "id": "e24_q19",
+        "topic": "Đọc hiểu: Từ đồng nghĩa trong ngữ cảnh (Reading Comprehension)",
+        "difficulty": "Vận dụng",
+        "question": "The word **'vital'** in the context of the green lung most closely means:",
+        "options": [
+          "extremely important and necessary",
+          "difficult to understand",
+          "cheap and convenient",
+          "dangerous and harmful"
+        ],
+        "correctIndex": 0,
+        "explanation": "'Vital' có nghĩa là 'vô cùng quan trọng, sống còn, thiết yếu' = 'extremely important and necessary'.",
+        "trapTip": "Vital = Crucial = Essential = Extremely important."
+      },
+      {
+        "id": "e24_q20",
+        "topic": "Đọc hiểu: Suy luận thực tiễn (Reading Comprehension)",
+        "difficulty": "Vận dụng",
+        "question": "What practical action do Ho Chi Minh City students do when visiting Can Gio according to the text?",
+        "options": [
+          "They plant young mangrove saplings with their own hands.",
+          "They hunt migratory birds for food.",
+          "They build modern factories inside the reserve.",
+          "They cut down ancient trees to make furniture."
+        ],
+        "correctIndex": 0,
+        "explanation": "Dẫn chứng trong đoạn cuối: 'they also actively participate in planting young mangrove saplings' (trực tiếp trồng những cây con ngập mặn).",
+        "trapTip": "Các đáp án mang tính tiêu cực đối với môi trường đều trái với tinh thần giáo dục bảo tồn của bài đọc."
+      },
+      {
+        "id": "e24_q21",
+        "topic": "Điền từ: Đại từ quan hệ (Cloze Passage)",
+        "difficulty": "Nhận biết",
+        "question": "Choose the best option for blank (21):\n\n'Ho Chi Minh City is accelerating its transition toward sustainable urban mobility. The city has recently introduced hundreds of 100% electric smart buses, (21) _______ produce zero tailpipe emissions and significantly reduce noise pollution.'",
+        "options": [
+          "which",
+          "who",
+          "whom",
+          "whose"
+        ],
+        "correctIndex": 0,
+        "explanation": "Thay thế cho danh từ chỉ vật 'electric smart buses' (những chiếc xe buýt điện thông minh) đứng sau dấu phẩy trong mệnh đề quan hệ không xác định, ta dùng đại từ quan hệ 'which'.",
+        "trapTip": "Sau dấu phẩy KHÔNG BAO GIỜ dùng 'that'. Chỉ người dùng 'who', chỉ vật dùng 'which'."
+      },
+      {
+        "id": "e24_q22",
+        "topic": "Điền từ: Thành ngữ & Cụm từ (Cloze Passage)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best option for blank (22):\n\n'By using modern mobile applications, commuters can easily track bus schedules and (22) _______ advantage of convenient cashless digital tickets.'",
+        "options": [
+          "take",
+          "make",
+          "do",
+          "get"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cụm thành ngữ cố định (Idiomatic phrase): **take advantage of sth** có nghĩa là 'tận dụng lợi thế của điều gì'.",
+        "trapTip": "Thành ngữ chuẩn: 'take advantage of'. Không dùng 'make advantage' hay 'do advantage'."
+      },
+      {
+        "id": "e24_q23",
+        "topic": "Điền từ: Giới từ theo sau động từ (Cloze Passage)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best option for blank (23):\n\n'This new public transportation system is expected to contribute (23) _______ improving urban air quality and easing traffic jams during peak rush hours.'",
+        "options": [
+          "to",
+          "for",
+          "with",
+          "in"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc cố định: **contribute to + V-ing / Noun** (đóng góp vào việc gì). Ở đây: 'contribute to improving urban air quality'.",
+        "trapTip": "Chú ý: Sau 'contribute to' là V-ing hoặc danh từ, không phải V nguyên thể."
+      },
+      {
+        "id": "e24_q24",
+        "topic": "Điền từ: Từ vựng theo ngữ cảnh (Cloze Passage)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best option for blank (24):\n\n'When more residents choose green transport over personal motorbikes, it helps (24) _______ total greenhouse gas emissions across the city.'",
+        "options": [
+          "cut down",
+          "grow up",
+          "give up",
+          "look forward to"
+        ],
+        "correctIndex": 0,
+        "explanation": "- cut down (emissions): cắt giảm (lượng khí thải phát thải).\n- grow up: lớn lên, trưởng thành.\n- give up: từ bỏ.\n- look forward to: mong đợi.\nChọn 'cut down' để mang nghĩa giảm lượng khí thải độc hại.",
+        "trapTip": "Cut down = reduce = cắt giảm."
+      },
+      {
+        "id": "e24_q25",
+        "topic": "Điền từ: Tính từ phù hợp ngữ pháp (Cloze Passage)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best option for blank (25):\n\n'Integrated smart ticketing makes traveling between the Metro and electric feeder buses much more (25) _______ for local students.'",
+        "options": [
+          "convenient",
+          "convenience",
+          "conveniently",
+          "inconvenient"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc: **make + something + (much more) + Adjective** (làm cho cái gì trở nên như thế nào).\nỞ đây cần tính từ mang nghĩa tích cực: 'convenient' (tiện lợi, thuận tiện).",
+        "trapTip": "Sau Make + O là Tính từ (Adjective), không dùng Trạng từ (-ly) hay Danh từ (-ence)."
+      },
+      {
+        "id": "e24_q26",
+        "topic": "Điền từ: Liên từ liên kết đoạn (Cloze Passage)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best option for blank (26):\n\n'(26) _______, secondary and high school students in Ho Chi Minh City are offered substantial fare discounts to encourage green travel habits from an early age.'",
+        "options": [
+          "In addition",
+          "However",
+          "Otherwise",
+          "Therefore"
+        ],
+        "correctIndex": 0,
+        "explanation": "'In addition' (Hơn thế nữa, ngoài ra) dùng để bổ sung thêm một thông tin tích cực (học sinh được giảm giá vé đáng kể). 'However' mang nghĩa tương phản (nhưng), 'Otherwise' mang nghĩa nếu không thì, không phù hợp ngữ cảnh.",
+        "trapTip": "In addition = Furthermore = Hơn nữa, thêm vào đó."
+      },
+      {
+        "id": "e24_q27",
+        "topic": "Word Form: PRESERVE (Dạng từ)",
+        "difficulty": "Vận dụng",
+        "question": "Supply the correct form of the word in brackets: 'The municipal government of Ho Chi Minh City is making great efforts for the [PRESERVE] _______ of heritage architectural landmarks in District 1.'",
+        "options": [
+          "preservation",
+          "preservative",
+          "preserves",
+          "preserved"
+        ],
+        "correctIndex": 0,
+        "explanation": "Sau mạo từ 'the' và trước giới từ 'of' ta cần một Danh từ (Noun).\nTừ gốc 'preserve' (bảo tồn) -> Danh từ chỉ sự bảo tồn di sản là **preservation**.\n('preservative' là chất bảo quản thực phẩm).",
+        "trapTip": "Bẫy Word Form kinh điển: Phân biệt 'preservation' (sự bảo tồn di sản) và 'preservative' (chất bảo quản hóa học)."
+      },
+      {
+        "id": "e24_q28",
+        "topic": "Word Form: DANGER (Dạng từ)",
+        "difficulty": "Vận dụng",
+        "question": "Supply the correct form of the word in brackets: 'Can Gio Mangrove Biosphere Reserve provides a safe natural sanctuary for dozens of [DANGER] _______ bird and animal species.'",
+        "options": [
+          "endangered",
+          "dangerous",
+          "dangerously",
+          "danger"
+        ],
+        "correctIndex": 0,
+        "explanation": "Trước cụm danh từ 'bird and animal species' cần một Tính từ.\nTừ gốc 'danger' (nguy hiểm) -> Tính từ mang nghĩa 'bị đe dọa tuyệt chủng' là **endangered**.\n('dangerous' nghĩa là nguy hiểm, gây nguy hại cho người khác).",
+        "trapTip": "Loài động vật có nguy cơ tuyệt chủng luôn dùng cụm: 'endangered species'."
+      },
+      {
+        "id": "e24_q29",
+        "topic": "Word Form: POLLUTE (Dạng từ)",
+        "difficulty": "Vận dụng",
+        "question": "Supply the correct form of the word in brackets: 'Industrial factories must thoroughly treat toxic waste before discharging it to avoid [POLLUTE] _______ the Saigon River.'",
+        "options": [
+          "polluting",
+          "pollution",
+          "pollutants",
+          "polluted"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc: **avoid + V-ing** (tránh làm việc gì). Phía sau có tân ngữ 'the Saigon River' nên cần dạng V-ing mang tính chủ động: **polluting**.",
+        "trapTip": "Sau avoid luôn là V-ing: avoid polluting the river."
+      },
+      {
+        "id": "e24_q30",
+        "topic": "Word Form: CELEBRATE (Dạng từ)",
+        "difficulty": "Thông hiểu",
+        "question": "Supply the correct form of the word in brackets: 'Tens of thousands of young citizens gathered along Nguyen Hue Walking Street for the Lunar New Year [CELEBRATE] _______.'",
+        "options": [
+          "celebration",
+          "celebrations",
+          "celebrating",
+          "celebrated"
+        ],
+        "correctIndex": 0,
+        "explanation": "Sau cụm danh từ bổ nghĩa 'Lunar New Year' cần một Danh từ.\nTừ gốc 'celebrate' (kỷ niệm, ăn mừng) -> Danh từ là **celebration** (lễ hội kỷ niệm / sự chào đón).",
+        "trapTip": "Lễ hội chào đón năm mới: New Year celebration."
+      },
+      {
+        "id": "e24_q31",
+        "topic": "Word Form: FRIEND (Dạng từ)",
+        "difficulty": "Thông hiểu",
+        "question": "Supply the correct form of the word in brackets: 'The local people in Ho Chi Minh City always welcome foreign tourists with great warmth and [FRIEND] _______.'",
+        "options": [
+          "friendliness",
+          "friendship",
+          "friendly",
+          "friend"
+        ],
+        "correctIndex": 0,
+        "explanation": "Sau liên từ 'and' kết nối với danh từ 'warmth' (sự nồng ấm), ta cần một danh từ chỉ phẩm chất: **friendliness** (sự thân thiện, mến khách).\n('friendship' là tình bạn).",
+        "trapTip": "Cấu trúc song hành: warmth and friendliness (sự ấm áp và lòng hiếu khách)."
+      },
+      {
+        "id": "e24_q32",
+        "topic": "Word Form: SUCCESS (Dạng từ)",
+        "difficulty": "Thông hiểu",
+        "question": "Supply the correct form of the word in brackets: 'The robotics club of Le Hong Phong High School [SUCCESS] _______ designed an automatic trash-collecting boat.'",
+        "options": [
+          "successfully",
+          "successful",
+          "succeed",
+          "success"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đứng trước động từ chính ở quá khứ 'designed' ta cần một Trạng từ (Adverb) để bổ nghĩa cho hành động: **successfully** (một cách thành công).",
+        "trapTip": "Vị trí trước hoặc sau động từ thường: dùng trạng từ tận cùng bằng -ly (successfully designed)."
+      },
+      {
+        "id": "e24_q33",
+        "topic": "Sắp xếp câu (Sentence Rearrangement)",
+        "difficulty": "Vận dụng",
+        "question": "Rearrange the groups of words in the correct order to make a complete meaningful sentence:\n\n*(1) helps reduce carbon emissions / (2) in Ho Chi Minh City / (3) Using electric buses / (4) and protects our urban air*",
+        "options": [
+          "(3) - (1) - (4) - (2): Using electric buses helps reduce carbon emissions and protects our urban air in Ho Chi Minh City.",
+          "(1) - (3) - (2) - (4): Helps reduce carbon emissions Using electric buses in Ho Chi Minh City and protects our urban air.",
+          "(2) - (4) - (1) - (3): In Ho Chi Minh City and protects our urban air helps reduce carbon emissions Using electric buses.",
+          "(3) - (2) - (1) - (4): Using electric buses in Ho Chi Minh City helps reduce carbon emissions and protects our urban air."
+        ],
+        "correctIndex": 0,
+        "explanation": "Trật tự câu chuẩn: Chủ ngữ Danh động từ (Using electric buses) + Động từ (helps reduce carbon emissions) + Mệnh đề liên từ (and protects our urban air) + Trạng từ chỉ nơi chốn (in Ho Chi Minh City).",
+        "trapTip": "Xác định chủ ngữ đứng đầu câu (V-ing đứng đầu làm chủ ngữ: Using electric buses)."
+      },
+      {
+        "id": "e24_q34",
+        "topic": "Sắp xếp câu (Sentence Rearrangement)",
+        "difficulty": "Vận dụng",
+        "question": "Rearrange the groups of words in the correct order to make a complete meaningful sentence:\n\n*(1) for secondary students / (2) provides rich learning materials / (3) The city digital library / (4) to study independently*",
+        "options": [
+          "(3) - (2) - (1) - (4): The city digital library provides rich learning materials for secondary students to study independently.",
+          "(1) - (3) - (2) - (4): For secondary students The city digital library provides rich learning materials to study independently.",
+          "(4) - (3) - (2) - (1): To study independently The city digital library provides rich learning materials for secondary students.",
+          "(2) - (3) - (1) - (4): Provides rich learning materials The city digital library for secondary students to study independently."
+        ],
+        "correctIndex": 0,
+        "explanation": "Trật tự câu: S (The city digital library) + V (provides) + O (rich learning materials) + Prep phrase (for secondary students) + Purpose (to study independently).",
+        "trapTip": "Chủ ngữ là danh từ chỉ vật số ít: 'The city digital library'."
+      },
+      {
+        "id": "e24_q35",
+        "topic": "Viết lại câu với WISH (Sentence Transformation)",
+        "difficulty": "Vận dụng",
+        "question": "Choose the sentence that is closest in meaning: 'I am really sorry that I do not have enough free time to join the school youth volunteer club.'",
+        "options": [
+          "I wish I had enough free time to join the school youth volunteer club.",
+          "I wish I don't have enough free time to join the school youth volunteer club.",
+          "I wish I have enough free time to join the school youth volunteer club.",
+          "I wish I would have enough free time to join the school youth volunteer club."
+        ],
+        "correctIndex": 0,
+        "explanation": "Câu ước cho điều không có thật ở hiện tại: **S + wish + S + V(quá khứ đơn)**.\nỞ hiện tại: 'do not have' -> lùi về quá khứ: 'had'.\n'I wish I had enough free time...'.",
+        "trapTip": "Ước ở hiện tại PHẢI lùi thì về Quá khứ đơn (Past Simple)."
+      },
+      {
+        "id": "e24_q36",
+        "topic": "Viết lại câu với Câu điều kiện loại 2 (Sentence Transformation)",
+        "difficulty": "Vận dụng",
+        "question": "Choose the sentence that is closest in meaning: 'Because Nam does not have a bicycle, he cannot cycle to Gia Dinh High School with his friends.'",
+        "options": [
+          "If Nam had a bicycle, he could cycle to Gia Dinh High School with his friends.",
+          "If Nam has a bicycle, he can cycle to Gia Dinh High School with his friends.",
+          "If Nam didn't have a bicycle, he couldn't cycle to Gia Dinh High School with his friends.",
+          "Unless Nam had a bicycle, he could cycle to Gia Dinh High School with his friends."
+        ],
+        "correctIndex": 0,
+        "explanation": "Tình huống ở hiện tại: Nam không có xe đạp nên không thể đi cùng bạn. Giả định trái ngược với hiện tại dùng Câu điều kiện loại 2:\n**If + S + V(quá khứ đơn), S + could/would + V(nguyên thể)**.\n-> 'If Nam had a bicycle, he could cycle...'.",
+        "trapTip": "Tình huống hiện tại phủ định thì mệnh đề IF giả định khẳng định (lùi thì)."
+      },
+      {
+        "id": "e24_q37",
+        "topic": "Viết lại câu Bị động Hiện tại hoàn thành (Sentence Transformation)",
+        "difficulty": "Vận dụng",
+        "question": "Choose the sentence that is closest in meaning: 'The youth volunteers have planted over 5,000 mangrove trees in Can Gio this summer.'",
+        "options": [
+          "Over 5,000 mangrove trees have been planted in Can Gio by the youth volunteers this summer.",
+          "Over 5,000 mangrove trees has been planted in Can Gio by the youth volunteers this summer.",
+          "Over 5,000 mangrove trees were planted in Can Gio by the youth volunteers this summer.",
+          "Over 5,000 mangrove trees have planted in Can Gio by the youth volunteers this summer."
+        ],
+        "correctIndex": 0,
+        "explanation": "Câu chủ động ở thì Hiện tại hoàn thành: 'have planted'.\nChuyển sang bị động: Tân ngữ 'over 5,000 mangrove trees' (số nhiều) + **have been + V3/ed (planted)**.\nBẫy: Nhiều bạn nhầm dùng 'has been' (số ít) hoặc thiếu 'been'.",
+        "trapTip": "Chủ ngữ mới số nhiều (trees) phải đi với 'have been planted', không dùng 'has'."
+      },
+      {
+        "id": "e24_q38",
+        "topic": "Viết lại câu ALTHOUGH -> DESPITE (Sentence Transformation)",
+        "difficulty": "Vận dụng",
+        "question": "Choose the sentence that is closest in meaning: 'Although the entrance exam was challenging, Minh Thu achieved an impressive score of 9.5 in English.'",
+        "options": [
+          "Despite the challenging entrance exam, Minh Thu achieved an impressive score of 9.5 in English.",
+          "Despite the entrance exam was challenging, Minh Thu achieved an impressive score of 9.5 in English.",
+          "In spite of the entrance exam is challenging, Minh Thu achieved an impressive score of 9.5 in English.",
+          "Although the challenging entrance exam, Minh Thu achieved an impressive score of 9.5 in English."
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc chuyển đổi:\n**Although + S + be + Adj = Despite / In spite of + the + Adj + Noun**.\n'Although the entrance exam was challenging' -> 'Despite the challenging entrance exam'.",
+        "trapTip": "Tuyệt đối không dùng mệnh đề (S + V) ngay sau Despite: 'Despite the exam was challenging' là SAI."
+      },
+      {
+        "id": "e24_q39",
+        "topic": "Viết lại câu SO THAT -> IN ORDER TO (Sentence Transformation)",
+        "difficulty": "Vận dụng",
+        "question": "Choose the sentence that is closest in meaning: 'She gets up early every morning so that she will not miss the 6:15 AM bus to Nguyen Thi Minh Khai High School.'",
+        "options": [
+          "She gets up early every morning in order not to miss the 6:15 AM bus to Nguyen Thi Minh Khai High School.",
+          "She gets up early every morning in order to not miss the 6:15 AM bus to Nguyen Thi Minh Khai High School.",
+          "She gets up early every morning so as to miss the 6:15 AM bus to Nguyen Thi Minh Khai High School.",
+          "She gets up early every morning in order that she not miss the 6:15 AM bus to Nguyen Thi Minh Khai High School."
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc chỉ mục đích phủ định:\n**so that + S + will not + V = in order NOT to + V = so as NOT to + V**.\nVị trí của 'not': 'in order not to miss', không đặt 'not' sau 'to'.",
+        "trapTip": "Nhớ vị trí từ 'NOT': In order NOT to V (không bao giờ viết in order to not V)."
+      },
+      {
+        "id": "e24_q40",
+        "topic": "Viết lại câu IT TOOK -> SPENT (Sentence Transformation)",
+        "difficulty": "Vận dụng",
+        "question": "Choose the sentence that is closest in meaning: 'It took the school robotics club two months to build this automated solar irrigation model.'",
+        "options": [
+          "The school robotics club spent two months building this automated solar irrigation model.",
+          "The school robotics club spent two months to build this automated solar irrigation model.",
+          "The school robotics club took two months building this automated solar irrigation model.",
+          "The school robotics club spent two months build this automated solar irrigation model."
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc tương đương kinh điển:\n**It took + O + time + to V = S + spent + time + V-ING**.\n'to build' chuyển thành 'building'.",
+        "trapTip": "Take đi với TO V, Spend đi với V-ING."
+      }
+    ]
+  },
+  {
+    "id": "eng_exam_02",
+    "title": "Đề thi chính thức Tuyển sinh Lớp 10 TP.HCM Năm 2023 - Môn Tiếng Anh",
+    "subject": "english",
+    "durationMinutes": 90,
+    "totalQuestions": 40,
+    "description": "Bộ đề bám sát 100% cấu trúc đề thi chính thức của Sở GD&ĐT TP. Hồ Chí Minh: Phát âm, Trọng âm, Biển báo đời sống (Signs & Notices), Điền từ (Cloze), Đọc hiểu, Word Form (Dạng từ), Sắp xếp câu và Viết lại câu.",
+    "questions": [
+      {
+        "id": "e02_q01",
+        "topic": "Phát âm phụ âm (Pronunciation)",
+        "difficulty": "Nhận biết",
+        "question": "Choose the word whose underlined part is pronounced differently from the others: **schoo<u>l</u>**, **schedu<u>le</u>**, **scho<u>lar</u>ship**, **ma<u>chine</u>**",
+        "options": [
+          "scholarship (/sk/)",
+          "school (/sk/)",
+          "schedule (/sk/)",
+          "machine (/ʃ/)"
+        ],
+        "correctIndex": 3,
+        "explanation": "- *scholarship*, *school*, *schedule* có nhóm 'ch' phát âm là /k/.\n- *machine* có nhóm 'ch' phát âm là /ʃ/ (/məˈʃiːn/).\nDo đó 'machine' có phần gạch chân phát âm khác biệt.",
+        "trapTip": "Từ mượn gốc Pháp 'machine' đọc là /ʃ/, đừng nhầm với các từ gốc Hy Lạp đọc là /k/ như school, scholar, ache, chemistry."
+      },
+      {
+        "id": "e02_q02",
+        "topic": "Phát âm đuôi -ed (Pronunciation)",
+        "difficulty": "Nhận biết",
+        "question": "Choose the word whose underlined part is pronounced differently from the others: **decid<u>ed</u>**, **visit<u>ed</u>**, **want<u>ed</u>**, **look<u>ed</u>**",
+        "options": [
+          "decided",
+          "visited",
+          "wanted",
+          "looked"
+        ],
+        "correctIndex": 3,
+        "explanation": "Quy tắc phát âm đuôi -ed:\n- /ɪd/: sau âm /t/ và /d/ -> *decided*, *visited*, *wanted*.\n- /t/: sau âm vô thanh /k/ -> *looked* (/lʊkt/).\nDo đó 'looked' phát âm là /t/, ba từ còn lại phát âm là /ɪd/.",
+        "trapTip": "Nhớ mẹo: sau 't, d' đuôi -ed đọc là /ɪd/ (tiền - đô)."
+      },
+      {
+        "id": "e02_q03",
+        "topic": "Trọng âm 2 âm tiết (Word Stress)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word that has a different stress pattern from the others: **deˈsign**, **supˈport**, **ˈlisten**, **proˈvide**",
+        "options": [
+          "design",
+          "support",
+          "listen",
+          "provide"
+        ],
+        "correctIndex": 2,
+        "explanation": "- *ˈlisten*: trọng âm rơi vào âm tiết thứ 1 (ngoại lệ động từ 2 âm tiết có đuôi -en).\n- *deˈsign*, *supˈport*, *proˈvide*: đều nhấn vào âm tiết thứ 2 (động từ 2 âm tiết).\nDo đó 'listen' có trọng âm khác biệt.",
+        "trapTip": "Các động từ tận cùng bằng -en, -er, -it như listen, enter, visit thường nhấn âm 1."
+      },
+      {
+        "id": "e02_q04",
+        "topic": "Trọng âm 3 âm tiết (Word Stress)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word that has a different stress pattern from the others: **ˈenergy**, **ˈnatural**, **polˈlutant**, **ˈcultural**",
+        "options": [
+          "energy",
+          "natural",
+          "pollutant",
+          "cultural"
+        ],
+        "correctIndex": 2,
+        "explanation": "- *polˈlutant*: trọng âm rơi vào âm tiết thứ 2.\n- *ˈenergy*, *ˈnatural*, *ˈcultural*: đều có trọng âm rơi vào âm tiết thứ 1.\nDo đó 'pollutant' có trọng âm khác biệt.",
+        "trapTip": "Từ có đuôi -al thường giữ nguyên trọng âm của từ gốc: 'nature -> 'natural, 'culture -> 'cultural."
+      },
+      {
+        "id": "e02_q05",
+        "topic": "Cụm động từ (Phrasal Verbs)",
+        "difficulty": "Thông hiểu",
+        "question": "Remember to ________ the water tap after brushing your teeth to avoid wasting clean water.",
+        "options": [
+          "turn off",
+          "turn on",
+          "turn up",
+          "turn down"
+        ],
+        "correctIndex": 0,
+        "explanation": "- *turn off*: khóa lại, tắt đi.\n- *turn on*: mở lên, bật.\n- *turn up*: vặn to / xuất hiện.\n- *turn down*: vặn nhỏ / từ chối.\nKhóa vòi nước để tránh lãng phí -> chọn 'turn off'.",
+        "trapTip": "Turn off the tap = khóa vòi nước."
+      },
+      {
+        "id": "e02_q06",
+        "topic": "Giới từ chỉ thời gian (Prepositions)",
+        "difficulty": "Nhận biết",
+        "question": "The entrance examination in Ho Chi Minh City usually begins ________ early June every year.",
+        "options": [
+          "in",
+          "on",
+          "at",
+          "for"
+        ],
+        "correctIndex": 0,
+        "explanation": "Quy tắc giới từ thời gian: Trước tháng (June, July...) hoặc mùa dùng giới từ **in** (in early June = vào đầu tháng 6).",
+        "trapTip": "Chỉ khi có ngày cụ thể (ví dụ on June 6th) mới dùng ON; chỉ có tháng dùng IN."
+      },
+      {
+        "id": "e02_q07",
+        "topic": "Liên từ (Conjunctions)",
+        "difficulty": "Thông hiểu",
+        "question": "The students were very tired after the long trip; ________, they eagerly cleaned up the campsite.",
+        "options": [
+          "however",
+          "therefore",
+          "moreover",
+          "because"
+        ],
+        "correctIndex": 0,
+        "explanation": "Hai vế câu mang ý nghĩa tương phản đối lập: 'Học sinh rất mệt sau chuyến đi; tuy nhiên, họ vẫn hào hứng dọn dẹp khu cắm trại'.\nSau dấu chấm phẩy (;) và trước dấu phẩy (,) dùng **however** (tuy nhiên).",
+        "trapTip": "Cấu trúc ; however, ... dùng nối hai mệnh đề tương phản."
+      },
+      {
+        "id": "e02_q08",
+        "topic": "Câu điều kiện loại 1 (Conditionals)",
+        "difficulty": "Thông hiểu",
+        "question": "If we continue to use single-use plastics, we ________ our marine ecosystem severely.",
+        "options": [
+          "will damage",
+          "damaged",
+          "would damage",
+          "have damaged"
+        ],
+        "correctIndex": 0,
+        "explanation": "Câu điều kiện loại 1 diễn tả sự việc có thể xảy ra trong thực tế:\n**If + S + V(hiện tại đơn), S + will + V-inf**.\nVế If chia 'continue' (hiện tại đơn) -> vế chính chia 'will damage'.",
+        "trapTip": "Điều kiện loại 1 dùng will + V nguyên mẫu ở mệnh đề chính."
+      },
+      {
+        "id": "e02_q09",
+        "topic": "Mệnh đề quan hệ (Relative Clauses)",
+        "difficulty": "Thông hiểu",
+        "question": "Ben Thanh Market, ________ was constructed in 1912, is one of the most famous landmarks of Ho Chi Minh City.",
+        "options": [
+          "which",
+          "that",
+          "who",
+          "where"
+        ],
+        "correctIndex": 0,
+        "explanation": "Ben Thanh Market là danh từ riêng chỉ vật, đứng trước dấu phẩy (mệnh đề quan hệ không xác định). Đại từ quan hệ thay thế là **which**.\nLƯU Ý QUAN TRỌNG: 'that' KHÔNG ĐƯỢC dùng trong mệnh đề có dấu phẩy!",
+        "trapTip": "Bẫy kinh điển: Không bao giờ dùng 'that' sau dấu phẩy!"
+      },
+      {
+        "id": "e02_q10",
+        "topic": "Câu hỏi đuôi (Tag Questions)",
+        "difficulty": "Thông hiểu",
+        "question": "Your brother rides a bicycle to school every morning, ________?",
+        "options": [
+          "doesn't he",
+          "does he",
+          "isn't he",
+          "didn't he"
+        ],
+        "correctIndex": 0,
+        "explanation": "Mệnh đề trước ở thể khẳng định, thì hiện tại đơn với động từ thường 'rides' (ngôi thứ 3 số ít) -> Phần đuôi phải ở thể phủ định mượn trợ động từ **doesn't he?**.",
+        "trapTip": "Động từ thường thì hiện tại đơn -> mượn trợ động từ does/do cho câu hỏi đuôi."
+      },
+      {
+        "id": "e02_q11",
+        "topic": "Giao tiếp xã hội - Phản hồi lời khen (Communication)",
+        "difficulty": "Nhận biết",
+        "question": "Lan: 'You gave such an impressive presentation on green energy, Nam!' - Nam: '________'",
+        "options": [
+          "That's very kind of you to say so.",
+          "You're welcome.",
+          "I don't agree with you.",
+          "Never mind, that's fine."
+        ],
+        "correctIndex": 0,
+        "explanation": "Khi được khen ngợi ('You gave such an impressive presentation...'), câu đáp lại lịch sự và tự nhiên nhất là: 'That's very kind of you to say so' (Bạn thật tốt khi nói như vậy).",
+        "trapTip": "Đáp lại lời khen luôn là lời cảm ơn hoặc khiêm tốn đáp lại."
+      },
+      {
+        "id": "e02_q12",
+        "topic": "Giao tiếp xã hội - Lời đề nghị (Communication)",
+        "difficulty": "Nhận biết",
+        "question": "Minh: 'How about taking the Saigon Waterbus to enjoy the sunset this afternoon?' - An: '________'",
+        "options": [
+          "That sounds like a wonderful idea!",
+          "Yes, I do.",
+          "No, I don't like sunset.",
+          "You are totally wrong."
+        ],
+        "correctIndex": 0,
+        "explanation": "'How about...?' là lời rủ rê, đề xuất (Suggestion). Câu phản hồi đồng ý nhiệt tình là: 'That sounds like a wonderful idea!' (Ý kiến đó nghe tuyệt quá!).",
+        "trapTip": "Phản hồi lời rủ rê: That sounds great / Good idea / I'd love to."
+      },
+      {
+        "id": "e02_q13",
+        "topic": "Hiểu Biển báo / Thông báo (Signs & Notices)",
+        "difficulty": "Thông hiểu",
+        "question": "Look at the sign on the canal bank: **[NO LITTERING - PENALTY UP TO 5,000,000 VND]**.\nWhat does this sign mean to citizens in Ho Chi Minh City?",
+        "options": [
+          "People can pay 5,000,000 VND to collect rubbish here.",
+          "Throwing garbage into the canal is strictly prohibited and violators will be heavily fined.",
+          "People are rewarded with 5,000,000 VND if they clean the canal.",
+          "Rubbish must be put into plastic bags before throwing it into the canal."
+        ],
+        "correctIndex": 1,
+        "explanation": "- *No littering*: Cấm xả rác.\n- *Penalty up to...*: Phạt tiền lên tới...\nBiển báo này có nghĩa: 'Việc vứt rác xuống kênh bị nghiêm cấm và người vi phạm sẽ bị phạt tiền nặng'.",
+        "trapTip": "Penalty = tiền phạt; Prohibited = bị nghiêm cấm."
+      },
+      {
+        "id": "e02_q14",
+        "topic": "Hiểu Biển báo / Thông báo (Signs & Notices)",
+        "difficulty": "Thông hiểu",
+        "question": "Look at the notice at the Ben Thanh - Suoi Tien Metro Station: **[PLEASE STAND BEHIND THE YELLOW SAFETY LINE UNTIL THE TRAIN COMES TO A COMPLETE STOP]**.\nWhat are passengers requested to do?",
+        "options": [
+          "Step over the yellow line as soon as the train approaches the platform.",
+          "Stay behind the safety line for their own safety while waiting for the train to stop.",
+          "Paint the safety line yellow while waiting for the metro train.",
+          "Sit on the yellow line until the station staff calls them."
+        ],
+        "correctIndex": 1,
+        "explanation": "Thông báo tại nhà ga Metro: 'Vui lòng đứng sau vạch an toàn màu vàng cho đến khi tàu dừng hẳn'.\nNghĩa là hành khách phải đứng sau vạch an toàn để bảo đảm an toàn khi đợi tàu.",
+        "trapTip": "Behind the safety line = đứng sau vạch an toàn."
+      },
+      {
+        "id": "e02_q15",
+        "topic": "Đọc hiểu điền từ (Cloze Test)",
+        "difficulty": "Thông hiểu",
+        "question": "Read the passage about Green Living in HCMC and choose the best word for (15):\n'Ho Chi Minh City is actively promoting green transport systems to reduce air pollution and traffic congestion. The municipal government encourages citizens to (15) ________ use of public transport such as electric buses and the new metro system...'",
+        "options": [
+          "make",
+          "take",
+          "do",
+          "give"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cụm từ cố định (Collocation): **make use of sth** có nghĩa là 'tận dụng, sử dụng cái gì'.",
+        "trapTip": "Make use of sth = tận dụng cái gì."
+      },
+      {
+        "id": "e02_q16",
+        "topic": "Đọc hiểu điền từ (Cloze Test)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best word for (16):\n'...Electric vehicles produce zero direct emissions, making them (16) ________ friendly alternatives to traditional gas-powered motorbikes...'",
+        "options": [
+          "environment",
+          "environmentally",
+          "environmental",
+          "environmentalists"
+        ],
+        "correctIndex": 1,
+        "explanation": "Cụm từ ghép: **environmentally friendly** (thân thiện với môi trường). Trạng từ 'environmentally' bổ nghĩa cho tính từ 'friendly'.",
+        "trapTip": "Environmentally friendly là cụm từ xuất hiện nhiều nhất trong đề thi vào 10 TP.HCM."
+      },
+      {
+        "id": "e02_q17",
+        "topic": "Đọc hiểu điền từ (Cloze Test)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best word for (17):\n'...In addition, many schools in the city have started campaigns to educate students (17) ________ the harmful impacts of single-use plastic waste...'",
+        "options": [
+          "about",
+          "with",
+          "for",
+          "at"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc: **educate sb about sth** có nghĩa là 'giáo dục, tuyên truyền cho ai về vấn đề gì'.",
+        "trapTip": "Educate sb about sth = giáo dục ai về cái gì."
+      },
+      {
+        "id": "e02_q18",
+        "topic": "Đọc hiểu điền từ (Cloze Test)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best word for (18):\n'...Students are advised to carry reusable water bottles (18) ________ buying bottled water every day at school canteens...'",
+        "options": [
+          "instead of",
+          "because of",
+          "in spite of",
+          "in addition to"
+        ],
+        "correctIndex": 0,
+        "explanation": "**instead of + V-ing** có nghĩa là 'thay vì làm gì'.\nHọc sinh được khuyên mang theo bình nước cá nhân thay vì mua nước đóng chai dùng một lần.",
+        "trapTip": "Instead of + V-ing = thay vì làm gì."
+      },
+      {
+        "id": "e02_q19",
+        "topic": "Đọc hiểu điền từ (Cloze Test)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best word for (19):\n'...Small daily habits, when practiced by millions of residents, can (19) ________ a significant difference in preserving our urban environment...'",
+        "options": [
+          "make",
+          "take",
+          "create",
+          "bring"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cụm từ cố định: **make a difference** nghĩa là 'tạo ra sự khác biệt, đem lại thay đổi tích cực'.",
+        "trapTip": "Make a difference = tạo nên sự khác biệt tích cực."
+      },
+      {
+        "id": "e02_q20",
+        "topic": "Đọc hiểu điền từ (Cloze Test)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best word for (20):\n'...Together, we can build a modern, clean, and (20) ________ city for future generations.'",
+        "options": [
+          "sustainable",
+          "sustain",
+          "sustainability",
+          "sustainably"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cần một tính từ đứng song song với các tính từ 'modern' và 'clean':\n- *sustainable* (adj): bền vững.\n- *sustainability* (n): sự bền vững.\nThành phố hiện đại, sạch đẹp và bền vững -> chọn 'sustainable'.",
+        "trapTip": "Cấu trúc song hành: Adj, Adj and Adj -> modern, clean and sustainable."
+      },
+      {
+        "id": "e02_q21",
+        "topic": "Đọc hiểu True/False (Reading Comprehension)",
+        "difficulty": "Thông hiểu",
+        "question": "Read the passage about Can Gio Mangrove Forest:\n'Located about 40 kilometers southeast of downtown Ho Chi Minh City, the Can Gio Mangrove Forest covers an area of over 75,000 hectares. Recognized by UNESCO as an International Biosphere Reserve in 2000, it plays a vital role as the \"green lung\" of the city. The forest absorbs huge amounts of carbon dioxide and acts as a natural barrier protecting the city from typhoons and sea level rise. Furthermore, it is home to hundreds of rare species of flora and fauna, making it an ideal destination for ecotourism and environmental education.'\n\n**Statement: Can Gio Mangrove Forest is located right in the center of District 1.**\nIs this statement TRUE or FALSE?",
+        "options": [
+          "TRUE",
+          "FALSE"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bài đọc ghi: 'Located about 40 kilometers southeast of downtown Ho Chi Minh City' (cách trung tâm 40 km về phía đông nam), không phải nằm ngay trung tâm Quận 1. Do đó nhận định này là **FALSE**.",
+        "trapTip": "Đối chiếu kỹ vị trí địa lý: 40 km southeast of downtown != right in the center."
+      },
+      {
+        "id": "e02_q22",
+        "topic": "Đọc hiểu True/False (Reading Comprehension)",
+        "difficulty": "Thông hiểu",
+        "question": "**Statement: The forest was recognized as an International Biosphere Reserve by UNESCO in the year 2000.**\nIs this statement TRUE or FALSE?",
+        "options": [
+          "TRUE",
+          "FALSE"
+        ],
+        "correctIndex": 0,
+        "explanation": "Bài đọc ghi rõ: 'Recognized by UNESCO as an International Biosphere Reserve in 2000'. Do đó nhận định này là **TRUE**.",
+        "trapTip": "Tìm mốc năm 2000 và tên tổ chức UNESCO trong bài đọc."
+      },
+      {
+        "id": "e02_q23",
+        "topic": "Đọc hiểu True/False (Reading Comprehension)",
+        "difficulty": "Thông hiểu",
+        "question": "**Statement: The mangrove forest acts as a natural shield that protects the city against typhoons.**\nIs this statement TRUE or FALSE?",
+        "options": [
+          "TRUE",
+          "FALSE"
+        ],
+        "correctIndex": 0,
+        "explanation": "Bài đọc ghi: 'acts as a natural barrier protecting the city from typhoons and sea level rise' (đóng vai trò như lá chắn tự nhiên bảo vệ thành phố khỏi bão). Do đó nhận định này là **TRUE**.",
+        "trapTip": "Natural barrier đồng nghĩa với natural shield (lá chắn tự nhiên)."
+      },
+      {
+        "id": "e02_q24",
+        "topic": "Đọc hiểu True/False (Reading Comprehension)",
+        "difficulty": "Thông hiểu",
+        "question": "**Statement: The forest only has trees and does not contain any wild animal species.**\nIs this statement TRUE or FALSE?",
+        "options": [
+          "TRUE",
+          "FALSE"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bài đọc ghi: 'it is home to hundreds of rare species of flora and fauna' (là ngôi nhà của hàng trăm loài động thực vật quý hiếm). Câu nhận định cho rằng 'không có loài động vật nào' là hoàn toàn sai -> **FALSE**.",
+        "trapTip": "Flora = thực vật; Fauna = động vật."
+      },
+      {
+        "id": "e02_q25",
+        "topic": "Đọc hiểu - Ý chính (Reading Comprehension)",
+        "difficulty": "Thông hiểu",
+        "question": "What is the main topic of the reading passage?",
+        "options": [
+          "The history of Ho Chi Minh City's industrial development.",
+          "The environmental importance and biodiversity of Can Gio Mangrove Forest.",
+          "How to travel by bus from District 1 to Can Gio.",
+          "A scientific guide to planting mangrove trees."
+        ],
+        "correctIndex": 1,
+        "explanation": "Toàn bộ bài đọc nói về tầm quan trọng môi trường (lá phổi xanh, chống bão) và sự đa dạng sinh học của Rừng ngập mặn Cần Giờ -> Chọn đáp án: The environmental importance and biodiversity of Can Gio Mangrove Forest.",
+        "trapTip": "Câu hỏi ý chính (Main topic): tóm lược nội dung toàn bài, không chọn chi tiết phụ."
+      },
+      {
+        "id": "e02_q26",
+        "topic": "Đọc hiểu - Từ quy chiếu (Reading Comprehension)",
+        "difficulty": "Thông hiểu",
+        "question": "In the passage, the word **'it'** in '...it plays a vital role as the \"green lung\" of the city' refers to:",
+        "options": [
+          "Downtown Ho Chi Minh City",
+          "UNESCO",
+          "The Can Gio Mangrove Forest",
+          "Ecotourism"
+        ],
+        "correctIndex": 2,
+        "explanation": "Từ 'it' thay thế cho chủ ngữ của mệnh đề chính đứng trước là 'The Can Gio Mangrove Forest'.",
+        "trapTip": "Dạng bài từ quy chiếu (Reference): nhìn ngược lại danh từ số ít làm chủ thể ở câu trước."
+      },
+      {
+        "id": "e02_q27",
+        "topic": "Dạng đúng của từ (Word Form - TP.HCM)",
+        "difficulty": "Thông hiểu",
+        "question": "Use the correct form of the word in bracket: 'Solar power is an ________ source of clean energy that will never run out.' **[EXHAUST]**",
+        "options": [
+          "inexhaustible",
+          "exhausted",
+          "exhausting",
+          "exhaustion"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đứng trước danh từ 'source' cần một tính từ. Năng lượng mặt trời không bao giờ cạn kiệt -> tính từ mang nghĩa 'vô tận, không cạn kiệt' là **inexhaustible** (thêm tiền tố phủ định in- và hậu tố -ible).",
+        "trapTip": "Dạng bài Word Form TP.HCM rất hay kiểm tra tiền tố phủ định: in-, un-, dis-, im-."
+      },
+      {
+        "id": "e02_q28",
+        "topic": "Dạng đúng của từ (Word Form - TP.HCM)",
+        "difficulty": "Thông hiểu",
+        "question": "Use the correct form of the word in bracket: 'The air in some crowded crossroads has become ________ polluted during rush hours.' **[DANGER]**",
+        "options": [
+          "dangerously",
+          "dangerous",
+          "endanger",
+          "endangered"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đứng trước tính từ 'polluted' phải là một **Trạng từ (Adverb)** để bổ nghĩa -> DANGER (danh từ) -> dangerous (tính từ) -> **dangerously** (trạng từ).",
+        "trapTip": "Công thức: Adv + Adj (dangerously polluted = bị ô nhiễm ở mức độ nguy hiểm)."
+      },
+      {
+        "id": "e02_q29",
+        "topic": "Dạng đúng của từ (Word Form - TP.HCM)",
+        "difficulty": "Thông hiểu",
+        "question": "Use the correct form of the word in bracket: 'Traveling by the newly opened metro line is fast, safe, and ________.' **[CONVENIENCE]**",
+        "options": [
+          "convenient",
+          "conveniently",
+          "inconvenient",
+          "inconvenience"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc song hành sau to be: 'fast' (adj), 'safe' (adj), and ________ (adj). Danh từ CONVENIENCE biến đổi thành tính từ là **convenient** (thuận tiện).",
+        "trapTip": "Song hành tính từ: Adj, Adj and Adj."
+      },
+      {
+        "id": "e02_q30",
+        "topic": "Dạng đúng của từ (Word Form - TP.HCM)",
+        "difficulty": "Thông hiểu",
+        "question": "Use the correct form of the word in bracket: 'We were deeply ________ that our outdoor sports event was canceled due to sudden heavy rain.' **[DISAPPOINT]**",
+        "options": [
+          "disappointed",
+          "disappointing",
+          "disappointment",
+          "disappointedly"
+        ],
+        "correctIndex": 0,
+        "explanation": "Sau to be 'were deeply' diễn tả cảm xúc của con người ('We') -> Dùng tính từ đuôi **-ed**: **disappointed** (cảm thấy thất vọng).",
+        "trapTip": "Cảm xúc của người dùng tính từ đuôi -ed (disappointed); tính chất sự việc dùng đuôi -ing (disappointing)."
+      },
+      {
+        "id": "e02_q31",
+        "topic": "Dạng đúng của từ (Word Form - TP.HCM)",
+        "difficulty": "Thông hiểu",
+        "question": "Use the correct form of the word in bracket: 'To save electricity, consumers should purchase ________ appliances for their homes.' **[ENERGY]**",
+        "options": [
+          "energy-saving",
+          "energetic",
+          "energize",
+          "energetically"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cụm danh từ ghép chỉ thiết bị tiết kiệm điện: **energy-saving appliances**.",
+        "trapTip": "Energy-saving appliances = thiết bị tiết kiệm năng lượng."
+      },
+      {
+        "id": "e02_q32",
+        "topic": "Dạng đúng của từ (Word Form - TP.HCM)",
+        "difficulty": "Thông hiểu",
+        "question": "Use the correct form of the word in bracket: 'The young athlete ________ defended his gold medal at the National Sports Festival.' **[SUCCESS]**",
+        "options": [
+          "successfully",
+          "successful",
+          "succeed",
+          "unsuccessful"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đứng trước động từ quá khứ 'defended' phải là một **Trạng từ (Adverb)** để bổ nghĩa cho động từ: SUCCESS (n) -> successful (adj) -> **successfully** (adv).",
+        "trapTip": "Trạng từ đứng trước động từ thường: successfully defended."
+      },
+      {
+        "id": "e02_q33",
+        "topic": "Sắp xếp trật tự từ thành câu (Sentence Rearrangement)",
+        "difficulty": "Vận dụng",
+        "question": "Rearrange the groups of words in the correct order to make a complete meaningful sentence:\n**to reduce carbon emissions / People in urban areas / instead of private vehicles / should take public transport**",
+        "options": [
+          "People in urban areas should take public transport to reduce carbon emissions instead of private vehicles.",
+          "People in urban areas should take public transport instead of private vehicles to reduce carbon emissions.",
+          "To reduce carbon emissions instead of private vehicles, people should take public transport in urban areas.",
+          "Public transport should take people in urban areas instead of private vehicles to reduce carbon emissions."
+        ],
+        "correctIndex": 1,
+        "explanation": "Trật tự câu chuẩn ngữ pháp tiếng Anh:\n[Chủ ngữ: People in urban areas] + [Vị ngữ: should take public transport] + [Cụm thay thế: instead of private vehicles] + [Mục đích: to reduce carbon emissions].",
+        "trapTip": "Xác định rõ: Ai làm gì (S + V) -> Thay vì cái gì (instead of) -> Để làm gì (to V)."
+      },
+      {
+        "id": "e02_q34",
+        "topic": "Sắp xếp trật tự từ thành câu (Sentence Rearrangement)",
+        "difficulty": "Vận dụng",
+        "question": "Rearrange the groups of words in the correct order to make a complete meaningful sentence:\n**historic landmarks / for future generations / It is crucial / that we preserve**",
+        "options": [
+          "It is crucial that we preserve historic landmarks for future generations.",
+          "It is crucial for future generations that we preserve historic landmarks.",
+          "That we preserve historic landmarks is crucial for future generations.",
+          "Historic landmarks are crucial that we preserve for future generations."
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc câu giả định với It is crucial that:\n**It is crucial that + S + (should) + V-inf + O + for future generations**.\nNghĩa: 'Việc chúng ta bảo tồn các di tích lịch sử cho thế hệ tương lai là vô cùng quan trọng'.",
+        "trapTip": "Cấu trúc chuẩn: It is crucial/essential that + S + V + O."
+      },
+      {
+        "id": "e02_q35",
+        "topic": "Viết lại câu nhượng bộ (Sentence Transformation)",
+        "difficulty": "Vận dụng",
+        "question": "Rewrite the sentence so that it has the same meaning: 'Although the weather was extremely hot, the workers continued their work.'\nRewrite beginning with: **Despite...**",
+        "options": [
+          "Despite the extremely hot weather, the workers continued their work.",
+          "Despite the weather was extremely hot, the workers continued their work.",
+          "Despite of the extremely hot weather, the workers continued their work.",
+          "Despite the workers continued their work, the weather was extremely hot."
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc chuyển đổi giữa Although và Despite:\n**Although + S + be + Adj = Despite + the + Adj + Noun**.\n'Although the weather was extremely hot' -> 'Despite the extremely hot weather...'.\nLƯU Ý: Despite KHÔNG BAO GIỜ đi với 'of' (chỉ có In spite of).",
+        "trapTip": "Bẫy kinh điển: Despite không có 'of' (chỉ có in spite of)."
+      },
+      {
+        "id": "e02_q36",
+        "topic": "Viết lại câu thì hoàn thành sang quá khứ (Sentence Transformation)",
+        "difficulty": "Vận dụng",
+        "question": "Rewrite the sentence: 'They last planted green trees along this street two years ago.'\nRewrite beginning with: **They haven't...**",
+        "options": [
+          "They haven't planted green trees along this street for two years.",
+          "They haven't planted green trees along this street since two years.",
+          "They haven't planted green trees along this street two years ago.",
+          "They haven't planted green trees along this street for two years ago."
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc tương đương giữa Quá khứ đơn và Hiện tại hoàn thành:\n**S + last + V2/ed + time + ago = S + haven't/hasn't + V3/ed + for + time**.\n'They last planted... two years ago' = 'They haven't planted... for two years'.",
+        "trapTip": "Dùng FOR với khoảng thời gian (for two years), SINCE với mốc thời gian."
+      },
+      {
+        "id": "e02_q37",
+        "topic": "Viết lại câu cấu trúc Quá... đến nỗi (Sentence Transformation)",
+        "difficulty": "Vận dụng",
+        "question": "Rewrite the sentence: 'The chemistry test was so difficult that no student in my class could finish it on time.'\nRewrite using: **too... for... to...**",
+        "options": [
+          "The chemistry test was too difficult for any student in my class to finish on time.",
+          "The chemistry test was too difficult for no student in my class to finish on time.",
+          "The chemistry test was too difficult so that students finished it on time.",
+          "The chemistry test was too easy for students to finish on time."
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc: **S + be + so + Adj + that + nobody could + V = S + be + too + Adj + for anybody to V**.\nBài kiểm tra quá khó để bất kỳ học sinh nào có thể hoàn thành đúng giờ.",
+        "trapTip": "Bản thân 'too... to...' đã mang nghĩa phủ định nên đổi no student thành any student."
+      },
+      {
+        "id": "e02_q38",
+        "topic": "Viết lại câu gián tiếp với Suggest (Sentence Transformation)",
+        "difficulty": "Vận dụng",
+        "question": "Rewrite the sentence: '“Why don't we organize a clean-up campaign in our neighborhood this Sunday?”, said Mary.'\nRewrite beginning with: **Mary suggested...**",
+        "options": [
+          "Mary suggested organizing a clean-up campaign in their neighborhood that Sunday.",
+          "Mary suggested to organize a clean-up campaign in their neighborhood that Sunday.",
+          "Mary suggested that why didn't they organize a clean-up campaign.",
+          "Mary suggested organize a clean-up campaign in our neighborhood."
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc với SUGGEST khi tường thuật lời rủ rê 'Why don't we...':\n**S + suggested + V-ing** (hoặc suggested that + S + should + V-inf).\nĐồng thời đổi tính từ sở hữu và trạng từ thời gian: 'our' -> 'their', 'this Sunday' -> 'that Sunday'.",
+        "trapTip": "Không bao giờ dùng 'suggest to V'!"
+      },
+      {
+        "id": "e02_q39",
+        "topic": "Viết lại câu điều kiện với Unless (Sentence Transformation)",
+        "difficulty": "Vận dụng",
+        "question": "Rewrite the sentence: 'If you don't wear your protective helmet, you will be fined by traffic police.'\nRewrite beginning with: **Unless...**",
+        "options": [
+          "Unless you wear your protective helmet, you will be fined by traffic police.",
+          "Unless you don't wear your protective helmet, you will be fined by traffic police.",
+          "Unless you wear your protective helmet, you won't be fined by traffic police.",
+          "Unless you wear your protective helmet, you will not ride a motorbike."
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức: **Unless = If ... not**.\nBỏ 'don't', mệnh đề Unless giữ động từ ở thể khẳng định: 'Unless you wear your protective helmet, you will be fined...'.",
+        "trapTip": "Trong mệnh đề Unless không dùng NOT."
+      },
+      {
+        "id": "e02_q40",
+        "topic": "Viết lại câu bị động khách quan (Sentence Transformation)",
+        "difficulty": "Vận dụng cao",
+        "question": "Rewrite the sentence: 'People believe that the ancient pagoda was built over three hundred years ago.'\nRewrite beginning with: **It is believed that...**",
+        "options": [
+          "It is believed that the ancient pagoda was built over three hundred years ago.",
+          "It was believed that the ancient pagoda was built over three hundred years ago.",
+          "It is believed to build the ancient pagoda over three hundred years ago.",
+          "The ancient pagoda believes to have been built over three hundred years ago."
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc câu bị động khách quan (Impersonal passive):\n**People + believe + that + S + V = It is believed that + S + V**.\nVì động từ chính 'believe' ở hiện tại đơn nên chuyển thành 'It is believed that...'.",
+        "trapTip": "Bị động khách quan: People say/believe that... = It is said/believed that..."
+      }
+    ],
+    "year": 2023,
+    "location": "TP.HCM",
+    "isOfficial": true,
+    "badgeText": "⭐ Đề Chính Thức 2023"
+  },
+  {
+    "id": "eng_exam_hcmc_2022",
+    "title": "Đề thi chính thức Tuyển sinh Lớp 10 TP.HCM Năm 2022 - Môn Tiếng Anh",
+    "subject": "english",
+    "year": 2022,
+    "location": "TP.HCM",
+    "isOfficial": true,
+    "badgeText": "⭐ Đề Chính Thức 2022",
+    "durationMinutes": 90,
+    "totalQuestions": 40,
+    "description": "Đề thi chính thức tuyển sinh vào lớp 10 năm học 2022 - 2023 của Sở GD&ĐT TP.HCM. Cấu trúc 40 câu: Biển báo PCCC chung cư, Đọc hiểu Bánh mì Sài Gòn & Ẩm thực đường phố, Điền từ Blended Learning, Word Form, Sắp xếp và Viết lại câu.",
+    "questions": [
+      {
+        "id": "e22_q01",
+        "topic": "Phát âm phụ âm 'th' (Pronunciation)",
+        "difficulty": "Nhận biết",
+        "question": "Choose the word whose underlined part is pronounced differently: **bro<u>th</u>er**, **wea<u>th</u>er**, **toge<u>th</u>er**, **brea<u>th</u>**",
+        "options": [
+          "breath (/θ/)",
+          "brother (/ð/)",
+          "weather (/ð/)",
+          "together (/ð/)"
+        ],
+        "correctIndex": 0,
+        "explanation": "- breath: /breθ/ (danh từ hơi thở, âm /θ/ vô thanh)\n- brother, weather, together: đều phát âm là âm /ð/ hữu thanh.\nDo đó 'breath' có phần gạch chân phát âm khác.",
+        "trapTip": "Phân biệt danh từ breath (/θ/) và động từ breathe (/ð/)."
+      },
+      {
+        "id": "e22_q02",
+        "topic": "Phát âm đuôi -s/es (Pronunciation)",
+        "difficulty": "Nhận biết",
+        "question": "Choose the word whose underlined part is pronounced differently: **stop<u>s</u>**, **book<u>s</u>**, **hat<u>s</u>**, **pen<u>s</u>**",
+        "options": [
+          "stops (/s/)",
+          "books (/s/)",
+          "hats (/s/)",
+          "pens (/z/)"
+        ],
+        "correctIndex": 3,
+        "explanation": "- stops, books, hats: tận cùng bằng phụ âm vô thanh /p/, /k/, /t/ nên đuôi -s phát âm là /s/.\n- pens: tận cùng bằng phụ âm hữu thanh /n/ nên đuôi -s phát âm là /z/.",
+        "trapTip": "Mẹo nhớ âm /s/: 'Thời Phong Kiến Phương Tây' (/t/, /p/, /k/, /f/, /θ/)."
+      },
+      {
+        "id": "e22_q03",
+        "topic": "Trọng âm 2 âm tiết (Word Stress)",
+        "difficulty": "Nhận biết",
+        "question": "Choose the word that has a different stress pattern: **deˈsign**, **preˈpare**, **reˈceive**, **ˈfinish**",
+        "options": [
+          "finish (âm 1)",
+          "design (âm 2)",
+          "prepare (âm 2)",
+          "receive (âm 2)"
+        ],
+        "correctIndex": 0,
+        "explanation": "- ˈfinish: /ˈfɪn.ɪʃ/ (động từ có đuôi -ish thường nhấn âm 1).\n- deˈsign, preˈpare, reˈceive: đều nhấn vào âm tiết thứ 2.\nDo đó 'finish' có trọng âm khác biệt.",
+        "trapTip": "Các động từ có đuôi -ish, -en, -er như finish, punish, listen, enter thường nhấn âm 1."
+      },
+      {
+        "id": "e22_q04",
+        "topic": "Trọng âm 3 âm tiết (Word Stress)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word that has a different stress pattern: **traˈdition**, **polˈlution**, **inˈvention**, **ˈnatural**",
+        "options": [
+          "natural (âm 1)",
+          "tradition (âm 2)",
+          "pollution (âm 2)",
+          "invention (âm 2)"
+        ],
+        "correctIndex": 0,
+        "explanation": "- ˈnatural: /ˈnætʃ.ər.əl/ (tính từ 3 âm tiết nhấn âm 1).\n- traˈdition, polˈlution, inˈvention: có đuôi -tion nên trọng âm rơi vào âm tiết ngay trước nó (âm 2).\nDo đó 'natural' có trọng âm khác.",
+        "trapTip": "Đuôi -tion luôn kéo trọng âm về âm tiết đứng ngay trước nó."
+      },
+      {
+        "id": "e22_q05",
+        "topic": "Đại từ quan hệ (Relative Pronouns)",
+        "difficulty": "Nhận biết",
+        "question": "The young doctor _______ volunteered at the field hospital in Ho Chi Minh City was awarded a certificate of merit.",
+        "options": [
+          "who",
+          "which",
+          "whom",
+          "whose"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đại từ quan hệ thay thế cho danh từ chỉ người 'The young doctor' và đóng vai trò làm chủ ngữ trước động từ 'volunteered' là 'who'.",
+        "trapTip": "Chỉ người làm chủ ngữ dùng WHO, làm tân ngữ dùng WHOM/WHO, chỉ vật dùng WHICH."
+      },
+      {
+        "id": "e22_q06",
+        "topic": "Động từ khuyết thiếu (Modal Verbs)",
+        "difficulty": "Thông hiểu",
+        "question": "Motorcyclists _______ wear standard safety helmets according to traffic laws in Vietnam. It is compulsory.",
+        "options": [
+          "must",
+          "may",
+          "can",
+          "might"
+        ],
+        "correctIndex": 0,
+        "explanation": "'It is compulsory' (Điều này là bắt buộc theo luật). Để diễn tả một bổn phận, nghĩa vụ bắt buộc theo luật pháp, ta dùng động từ khuyết thiếu 'must'.",
+        "trapTip": "Compulsory / Obligatory = Must (Bắt buộc)."
+      },
+      {
+        "id": "e22_q07",
+        "topic": "Trạng từ liên kết (Conjunctive Adverbs)",
+        "difficulty": "Thông hiểu",
+        "question": "Mai studied very hard for the entrance examination; _______, she passed into Nguyen Thuong Hien High School with top marks.",
+        "options": [
+          "therefore",
+          "however",
+          "although",
+          "otherwise"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dấu chấm phẩy (;) và dấu phẩy (,) ngăn cách một trạng từ liên kết chỉ kết quả: 'therefore' (do đó, vì vậy). 'Mai đã học rất chăm chỉ; do đó, cô ấy đã đỗ...'.",
+        "trapTip": "Cấu trúc: ; therefore, (chỉ kết quả) | ; however, (chỉ sự đối lập)."
+      },
+      {
+        "id": "e22_q08",
+        "topic": "Cụm động từ (Phrasal Verbs)",
+        "difficulty": "Thông hiểu",
+        "question": "Students should _______ the lights and ceiling fans before leaving the classroom to conserve electricity.",
+        "options": [
+          "turn off",
+          "turn on",
+          "look for",
+          "go on"
+        ],
+        "correctIndex": 0,
+        "explanation": "- turn off: tắt (thiết bị điện để tiết kiệm năng lượng).\n- turn on: bật.\n- look for: tìm kiếm.\n- go on: tiếp tục.",
+        "trapTip": "Tắt thiết bị điện: turn off / switch off."
+      },
+      {
+        "id": "e22_q09",
+        "topic": "Từ loại (Part of Speech)",
+        "difficulty": "Thông hiểu",
+        "question": "Secondary schools in the city encourage students to develop a _______ lifestyle by eating nutritious food and doing morning exercises.",
+        "options": [
+          "healthy",
+          "health",
+          "healthily",
+          "healthiness"
+        ],
+        "correctIndex": 0,
+        "explanation": "Trước danh từ 'lifestyle' (lối sống) cần một Tính từ (Adjective) để bổ nghĩa: 'healthy lifestyle' (lối sống lành mạnh, khỏe mạnh).",
+        "trapTip": "Vị trí trước danh từ luôn cần một tính từ bổ nghĩa."
+      },
+      {
+        "id": "e22_q10",
+        "topic": "Cấu trúc SUGGEST (Verb Patterns)",
+        "difficulty": "Thông hiểu",
+        "question": "The teacher suggested _______ old notebooks and plastic bottles to raise funds for poor students.",
+        "options": [
+          "recycling",
+          "to recycle",
+          "recycled",
+          "recycle"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc: **suggest + V-ing** (gợi ý/đề xuất cùng làm gì). Do đó dùng 'recycling'.",
+        "trapTip": "Ghi nhớ công thức vàng: Suggest + V-ing hoặc Suggest that S + (should) + V nguyên thể."
+      },
+      {
+        "id": "e22_q11",
+        "topic": "Giới từ chỉ khoảng thời gian (Prepositions)",
+        "difficulty": "Nhận biết",
+        "question": "Ben Thanh Market has been a bustling commercial symbol of Saigon _______ over one hundred years.",
+        "options": [
+          "for",
+          "since",
+          "in",
+          "during"
+        ],
+        "correctIndex": 0,
+        "explanation": "Trong thì Hiện tại hoàn thành (has been), đi với khoảng thời gian (over one hundred years) ta dùng giới từ 'for'. 'Since' chỉ đi với mốc thời gian (since 1914).",
+        "trapTip": "For + Khoảng thời gian (for 100 years) | Since + Mốc thời gian (since 1914)."
+      },
+      {
+        "id": "e22_q12",
+        "topic": "Giao tiếp xã hội (Everyday Dialogue)",
+        "difficulty": "Nhận biết",
+        "question": "David: 'Thank you very much for guiding me to the General Science Library!'\nThu: '_______'",
+        "options": [
+          "You're welcome.",
+          "Yes, of course.",
+          "Never mind, it was my fault.",
+          "You shouldn't say that."
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp lại lời cảm ơn 'Thank you very much', câu trả lời lịch sự chuẩn mực là: 'You're welcome' (Không có gì đâu bạn ơi) hoặc 'My pleasure' / 'Don't mention it'.",
+        "trapTip": "Không dùng 'Never mind' (thường dùng đáp lại lời xin lỗi: Không sao đâu)."
+      },
+      {
+        "id": "e22_q13",
+        "topic": "Biển báo PCCC Chung cư (Signs & Notices)",
+        "difficulty": "Thông hiểu",
+        "question": "What does this safety sign in an apartment building mean?\n\n[ 🚨 **FIRE EMERGENCY**:\n*DO NOT USE ELEVATORS IN CASE OF FIRE.*\n*USE EMERGENCY STAIRS ONLY.* ]",
+        "options": [
+          "You must walk down the emergency stairs if a fire breaks out.",
+          "You should use the elevators to escape quickly during a fire.",
+          "The emergency stairs are closed during a fire.",
+          "Elevators are safer than stairs when there is smoke."
+        ],
+        "correctIndex": 0,
+        "explanation": "Biển báo an toàn PCCC: Tuyệt đối không dùng thang máy khi có hỏa hoạn, chỉ dùng cầu thang bộ thoát hiểm. Do đó đáp án A đúng.",
+        "trapTip": "Khi hỏa hoạn thang máy có thể bị mất điện hoặc kẹt khói, luôn phải dùng cầu thang bộ."
+      },
+      {
+        "id": "e22_q14",
+        "topic": "Biển báo Ghế ưu tiên Xe buýt (Signs & Notices)",
+        "difficulty": "Thông hiểu",
+        "question": "What does this sign on public buses mean?\n\n[ 💺 **PRIORITY SEATS**:\n*PLEASE OFFER THESE SEATS TO THE ELDERLY, PREGNANT WOMEN AND THE DISABLED.* ]",
+        "options": [
+          "Passengers should give up these seats to people who need special assistance.",
+          "Only young students are permitted to sit here.",
+          "Nobody is allowed to sit on these seats at any time.",
+          "These seats are reserved exclusively for the bus driver."
+        ],
+        "correctIndex": 0,
+        "explanation": "Biển báo ghế ưu tiên trên phương tiện công cộng: Nhường ghế cho người cao tuổi, phụ nữ có thai và người khuyết tật.",
+        "trapTip": "Offer these seats = Nhường những chiếc ghế này."
+      },
+      {
+        "id": "e22_q15",
+        "topic": "Đọc hiểu: Bánh mì Sài Gòn (Reading Comprehension)",
+        "difficulty": "Thông hiểu",
+        "question": "Read the passage and choose the main topic:\n\n'Among various iconic culinary treasures of Vietnam, Saigon Banh Mi stands out as a world-renowned street food masterpiece. Originating from the French baguette introduced in the late 19th century, local bakers in Saigon creatively transformed it into a distinctly Vietnamese specialty.\n\nA typical Saigon Banh Mi features a warm, crispy outer crust and a light, airy interior. It is generously stuffed with savory layers of pork liver pâté, Vietnamese cold cuts, roast pork, pickled daikon and carrots, fresh cucumbers, and cilantro, completed with a splash of rich soy sauce and chili. Today, the word 'Banh mi' has been officially recognized in prestigious international dictionaries such as the Oxford English Dictionary, symbolizing Vietnam's creative and vibrant gastronomic culture on the global stage.'\n\nWhat is the passage mainly about?",
+        "options": [
+          "The history, characteristics, and global fame of Saigon Banh Mi",
+          "How French bakers make traditional baguettes in Paris",
+          "The negative effects of eating fast food on the street",
+          "A comparison between different dictionaries in the world"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đoạn văn giới thiệu nguồn gốc, thành phần đặc trưng và sự vinh danh toàn cầu của Bánh mì Sài Gòn.",
+        "trapTip": "Tìm câu mở đoạn và ý bao quát toàn bài."
+      },
+      {
+        "id": "e22_q16",
+        "topic": "Đọc hiểu: Chi tiết nguồn gốc (Reading Comprehension)",
+        "difficulty": "Thông hiểu",
+        "question": "According to paragraph 1, when was the French baguette first introduced to Vietnam?",
+        "options": [
+          "In the late 19th century",
+          "In the 21st century",
+          "In the early 18th century",
+          "In 1975"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dẫn chứng trong đoạn 1: 'Originating from the French baguette introduced in the late 19th century...'.",
+        "trapTip": "Kiểm tra số thế kỷ: the late 19th century (cuối thế kỷ 19)."
+      },
+      {
+        "id": "e22_q17",
+        "topic": "Đọc hiểu: Thành phần nhân bánh (Reading Comprehension)",
+        "difficulty": "Thông hiểu",
+        "question": "Which ingredient is NOT mentioned in a typical Saigon Banh Mi in paragraph 2?",
+        "options": [
+          "Cheese and French fries",
+          "Pork liver pâté",
+          "Pickled daikon and carrots",
+          "Cilantro and cucumber"
+        ],
+        "correctIndex": 0,
+        "explanation": "Bài đọc nêu rõ: pate gan heo (pâté), chả lụa (cold cuts), thịt nướng, đồ chua (pickled daikon and carrots), dưa leo và ngò rí (cilantro). KHÔNG CÓ phô mai và khoai tây chiên (Cheese and French fries).",
+        "trapTip": "Đọc kỹ danh sách nguyên liệu trong bài."
+      },
+      {
+        "id": "e22_q18",
+        "topic": "Đọc hiểu: Từ quy chiếu (Reading Comprehension)",
+        "difficulty": "Thông hiểu",
+        "question": "The word **'it'** in paragraph 1 refers to:",
+        "options": [
+          "The French baguette",
+          "The city of Saigon",
+          "The culinary treasure",
+          "The late 19th century"
+        ],
+        "correctIndex": 0,
+        "explanation": "'Originating from the French baguette introduced in the late 19th century, local bakers in Saigon creatively transformed **it** into a distinctly Vietnamese specialty.' Từ 'it' thay thế cho bánh mì baguette của Pháp.",
+        "trapTip": "Các thợ làm bánh đã biến đổi 'nó' (ổ bánh mì baguette) thành đặc sản Việt Nam."
+      },
+      {
+        "id": "e22_q19",
+        "topic": "Đọc hiểu: Từ vựng ngữ cảnh (Reading Comprehension)",
+        "difficulty": "Vận dụng",
+        "question": "The word **'renowned'** in paragraph 1 is closest in meaning to:",
+        "options": [
+          "famous and widely known",
+          "expensive and rare",
+          "strange and unusual",
+          "old-fashioned"
+        ],
+        "correctIndex": 0,
+        "explanation": "'renowned' nghĩa là 'nổi tiếng, trứ danh' = 'famous and widely known'.",
+        "trapTip": "World-renowned = Globally famous = Nổi tiếng toàn thế giới."
+      },
+      {
+        "id": "e22_q20",
+        "topic": "Đọc hiểu: Tầm vóc quốc tế (Reading Comprehension)",
+        "difficulty": "Thông hiểu",
+        "question": "Why is the inclusion of the word 'Banh mi' in the Oxford English Dictionary significant?",
+        "options": [
+          "It symbolizes Vietnam's unique gastronomic culture on the global stage.",
+          "It forces English speakers to stop eating bread.",
+          "It proves that Vietnamese is easier than English.",
+          "It shows that Banh Mi can only be sold in England."
+        ],
+        "correctIndex": 0,
+        "explanation": "Dẫn chứng cuối bài: 'symbolizing Vietnam's creative and vibrant gastronomic culture on the global stage' (biểu tượng cho văn hóa ẩm thực sáng tạo của Việt Nam trên trường quốc tế).",
+        "trapTip": "Gastronomic culture = Văn hóa ẩm thực."
+      },
+      {
+        "id": "e22_q21",
+        "topic": "Điền từ: Giới từ (Cloze Reading)",
+        "difficulty": "Nhận biết",
+        "question": "Choose the best word for blank (21):\n\n'Blended learning has become an effective educational approach in Vietnam. In this model, students attend traditional classes and participate (21) _______ interactive online learning activities.'",
+        "options": [
+          "in",
+          "on",
+          "at",
+          "with"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc cố định: **participate in + something** (tham gia vào việc gì).",
+        "trapTip": "Participate in = Take part in = Tham gia."
+      },
+      {
+        "id": "e22_q22",
+        "topic": "Điền từ: Từ vựng (Cloze Reading)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best word for blank (22):\n\n'Online platforms enable learners to review recorded lectures at their own (22) _______ whenever they need clarification.'",
+        "options": [
+          "pace",
+          "step",
+          "walk",
+          "run"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cụm thành ngữ cố định: **at one's own pace** (theo tốc độ, nhịp độ riêng của mỗi người).",
+        "trapTip": "At one's own pace là cụm từ rất hay trong chủ đề giáo dục hiện đại."
+      },
+      {
+        "id": "e22_q23",
+        "topic": "Điền từ: Động từ dạng V (Cloze Reading)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best word for blank (23):\n\n'Secondary students are encouraged to (23) _______ digital skills to collaborate effectively with classmates.'",
+        "options": [
+          "develop",
+          "destroy",
+          "refuse",
+          "forget"
+        ],
+        "correctIndex": 0,
+        "explanation": "Học sinh được khuyến khích 'phát triển' các kỹ năng số (develop digital skills).",
+        "trapTip": "Develop skills = Phát triển kỹ năng."
+      },
+      {
+        "id": "e22_q24",
+        "topic": "Điền từ: Đại từ bất định (Cloze Reading)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best word for blank (24):\n\n'Teachers can monitor the learning progress of (24) _______ student through smart management systems.'",
+        "options": [
+          "each",
+          "all",
+          "many",
+          "several"
+        ],
+        "correctIndex": 0,
+        "explanation": "Phía sau là danh từ đếm được số ít 'student'.\n- 'each' đi với danh từ số ít (mỗi học sinh).\n- 'all', 'many', 'several' đi với danh từ số nhiều (students).",
+        "trapTip": "Each + Danh từ số ít."
+      },
+      {
+        "id": "e22_q25",
+        "topic": "Điền từ: Tính từ (Cloze Reading)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best word for blank (25):\n\n'Self-discipline plays an extremely (25) _______ role in achieving success in digital environments.'",
+        "options": [
+          "important",
+          "importance",
+          "importantly",
+          "unimportant"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cụm danh từ: an extremely + Adjective + role. Cần tính từ 'important' mang nghĩa tích cực: đóng vai trò vô cùng quan trọng.",
+        "trapTip": "Play an important role in = Đóng vai trò quan trọng trong việc..."
+      },
+      {
+        "id": "e22_q26",
+        "topic": "Điền từ: Liên từ (Cloze Reading)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best word for blank (26):\n\n'(26) _______, digital education helps prepare 9th graders for the upcoming 10th grade curriculum.'",
+        "options": [
+          "Furthermore",
+          "Although",
+          "Despite",
+          "Unless"
+        ],
+        "correctIndex": 0,
+        "explanation": "'Furthermore' (Hơn nữa, ngoài ra) đứng đầu câu để bổ sung thêm luận điểm tích cực cho giáo dục số.",
+        "trapTip": "Furthermore = Moreover = Hơn nữa."
+      },
+      {
+        "id": "e22_q27",
+        "topic": "Word Form: INFORM (Dạng từ)",
+        "difficulty": "Nhận biết",
+        "question": "Supply the correct form of the word in brackets: 'You can easily search for useful [INFORM] _______ about the Grade 10 exam on the official portal of the Department of Education.'",
+        "options": [
+          "information",
+          "informative",
+          "informer",
+          "informatively"
+        ],
+        "correctIndex": 0,
+        "explanation": "Sau tính từ 'useful' cần một Danh từ (Noun): **information** (thông tin - danh từ không đếm được).",
+        "trapTip": "Information là danh từ không đếm được, không bao giờ có đuôi -s."
+      },
+      {
+        "id": "e22_q28",
+        "topic": "Word Form: ATTRACT (Dạng từ)",
+        "difficulty": "Thông hiểu",
+        "question": "Supply the correct form of the word in brackets: 'Ho Chi Minh City has many [ATTRACT] _______ tourist destinations such as Notre-Dame Cathedral and the Central Post Office.'",
+        "options": [
+          "attractive",
+          "attraction",
+          "attractively",
+          "attracted"
+        ],
+        "correctIndex": 0,
+        "explanation": "Trước cụm danh từ 'tourist destinations' (các điểm đến du lịch) cần một Tính từ (Adjective): **attractive** (hấp dẫn, lôi cuốn).",
+        "trapTip": "Attractive tourist destinations = Những điểm du lịch hấp dẫn."
+      },
+      {
+        "id": "e22_q29",
+        "topic": "Word Form: NATURE (Dạng từ)",
+        "difficulty": "Thông hiểu",
+        "question": "Supply the correct form of the word in brackets: 'Vietnam is blessed with tremendous [NATURE] _______ beauty, from the northern mountains to southern wetlands.'",
+        "options": [
+          "natural",
+          "nature",
+          "naturally",
+          "naturalist"
+        ],
+        "correctIndex": 0,
+        "explanation": "Trước danh từ 'beauty' cần một Tính từ: **natural** beauty (vẻ đẹp thiên nhiên).",
+        "trapTip": "Natural beauty = Vẻ đẹp tự nhiên/thiên nhiên."
+      },
+      {
+        "id": "e22_q30",
+        "topic": "Word Form: TRADITION (Dạng từ)",
+        "difficulty": "Thông hiểu",
+        "question": "Supply the correct form of the word in brackets: 'During the Tet holiday, Vietnamese women take immense pride in wearing the [TRADITION] _______ Ao Dai.'",
+        "options": [
+          "traditional",
+          "tradition",
+          "traditionally",
+          "traditionalist"
+        ],
+        "correctIndex": 0,
+        "explanation": "Trước danh từ riêng 'Ao Dai' cần một Tính từ: **traditional** (truyền thống).",
+        "trapTip": "Traditional Ao Dai = Táo dài truyền thống."
+      },
+      {
+        "id": "e22_q31",
+        "topic": "Word Form: HEALTH (Dạng từ)",
+        "difficulty": "Thông hiểu",
+        "question": "Supply the correct form of the word in brackets: 'Regular physical exercise helps teenagers stay active and [HEALTH] _______.'",
+        "options": [
+          "healthy",
+          "health",
+          "healthily",
+          "healthiness"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc: **stay + Adjective** (giữ trạng thái như thế nào). Đi sau liên từ 'and' kết nối với tính từ 'active' ta cần tính từ: **healthy** (khỏe mạnh).",
+        "trapTip": "Stay active and healthy."
+      },
+      {
+        "id": "e22_q32",
+        "topic": "Word Form: EXCITE (Dạng từ)",
+        "difficulty": "Thông hiểu",
+        "question": "Supply the correct form of the word in brackets: 'The 9th grade students cheered [EXCITE] _______ when they heard their team won the city science championship.'",
+        "options": [
+          "excitedly",
+          "excitement",
+          "exciting",
+          "excited"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đứng sau động từ thường chỉ hành động 'cheered' (reo hò) ta cần một Trạng từ (Adverb): **excitedly** (một cách hào hứng, phấn khích).",
+        "trapTip": "Bổ nghĩa cho động từ hành động thì dùng trạng từ có đuôi -ly (cheered excitedly)."
+      },
+      {
+        "id": "e22_q33",
+        "topic": "Sắp xếp câu (Sentence Rearrangement)",
+        "difficulty": "Vận dụng",
+        "question": "Rearrange the groups of words to make a complete meaningful sentence:\n\n*(1) Saigon street food / (2) for its delicious flavors / (3) has become famous worldwide / (4) and affordable prices*",
+        "options": [
+          "(1) - (3) - (2) - (4): Saigon street food has become famous worldwide for its delicious flavors and affordable prices.",
+          "(2) - (4) - (1) - (3): For its delicious flavors and affordable prices Saigon street food has become famous worldwide.",
+          "(3) - (1) - (2) - (4): Has become famous worldwide Saigon street food for its delicious flavors and affordable prices.",
+          "(1) - (2) - (3) - (4): Saigon street food for its delicious flavors has become famous worldwide and affordable prices."
+        ],
+        "correctIndex": 0,
+        "explanation": "Chủ ngữ (Saigon street food) + V (has become famous worldwide) + Cụm giới từ (for its delicious flavors and affordable prices).",
+        "trapTip": "Famous worldwide for sth = Nổi tiếng toàn thế giới vì điều gì."
+      },
+      {
+        "id": "e22_q34",
+        "topic": "Sắp xếp câu (Sentence Rearrangement)",
+        "difficulty": "Vận dụng",
+        "question": "Rearrange the groups of words to make a complete meaningful sentence:\n\n*(1) allows secondary students / (2) Learning English diligently / (3) in the future / (4) to access global opportunities*",
+        "options": [
+          "(2) - (1) - (4) - (3): Learning English diligently allows secondary students to access global opportunities in the future.",
+          "(1) - (4) - (2) - (3): Allows secondary students to access global opportunities Learning English diligently in the future.",
+          "(3) - (2) - (1) - (4): In the future Learning English diligently allows secondary students to access global opportunities.",
+          "(2) - (3) - (1) - (4): Learning English diligently in the future allows secondary students to access global opportunities."
+        ],
+        "correctIndex": 0,
+        "explanation": "Chủ ngữ Danh động từ (Learning English diligently) + V (allows secondary students) + To V (to access global opportunities) + Thời gian (in the future).",
+        "trapTip": "Cấu trúc: allow sb to do sth (cho phép ai làm gì)."
+      },
+      {
+        "id": "e22_q35",
+        "topic": "Viết lại câu với USED TO (Sentence Transformation)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the sentence that is closest in meaning: 'My grandfather often rode a bicycle to work when he was young, but now he takes the bus.'",
+        "options": [
+          "My grandfather used to ride a bicycle to work when he was young.",
+          "My grandfather used to riding a bicycle to work when he was young.",
+          "My grandfather is used to ride a bicycle to work when he was young.",
+          "My grandfather got used to ride a bicycle to work when he was young."
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc diễn tả thói quen trong quá khứ nay không còn nữa:\n**S + used to + V(nguyên thể)**.\n-> 'My grandfather used to ride a bicycle...'.",
+        "trapTip": "Phân biệt: Used to + V (đã từng) | Be/get used to + V-ing (quen với việc gì)."
+      },
+      {
+        "id": "e22_q36",
+        "topic": "Viết lại câu với SUGGEST + V-ING (Sentence Transformation)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the sentence that is closest in meaning: ''Why don't we organize a clean-up campaign in the local park this Sunday?' said Nam.'",
+        "options": [
+          "Nam suggested organizing a clean-up campaign in the local park this Sunday.",
+          "Nam suggested to organize a clean-up campaign in the local park this Sunday.",
+          "Nam suggested that they organize a clean-up campaign in the local park this Sunday.",
+          "Nam suggested organize a clean-up campaign in the local park this Sunday."
+        ],
+        "correctIndex": 0,
+        "explanation": "'Why don't we + V...?' là lời đề nghị cùng làm gì. Khi viết lại với động từ suggest:\n**S + suggested + V-ing**.\n-> 'Nam suggested organizing...'.",
+        "trapTip": "Suggest đi với V-ing, không đi với 'to V'."
+      },
+      {
+        "id": "e22_q37",
+        "topic": "Viết lại câu BECAUSE -> BECAUSE OF (Sentence Transformation)",
+        "difficulty": "Vận dụng",
+        "question": "Choose the sentence that is closest in meaning: 'Because the traffic was heavily congested on Cong Hoa Street, he arrived late for the seminar.'",
+        "options": [
+          "Because of the heavy traffic congestion on Cong Hoa Street, he arrived late for the seminar.",
+          "Because of the traffic was heavily congested on Cong Hoa Street, he arrived late for the seminar.",
+          "Because the heavy traffic congestion on Cong Hoa Street, he arrived late for the seminar.",
+          "Despite the heavy traffic congestion on Cong Hoa Street, he arrived late for the seminar."
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức: **Because + S + be + Adj = Because of + the + Adj + Noun**.\n'Because the traffic was heavily congested' -> 'Because of the heavy traffic congestion'.",
+        "trapTip": "Sau 'Because of' phải là cụm danh từ hoặc V-ing, không dùng mệnh đề S + V."
+      },
+      {
+        "id": "e22_q38",
+        "topic": "Viết lại câu SO... THAT... -> TOO... TO... (Sentence Transformation)",
+        "difficulty": "Vận dụng",
+        "question": "Choose the sentence that is closest in meaning: 'The math problem was so difficult that none of the students in my class could solve it.'",
+        "options": [
+          "The math problem was too difficult for any students in my class to solve.",
+          "The math problem was too difficult that none of the students in my class could solve it.",
+          "The math problem was not difficult enough for students in my class to solve.",
+          "The math problem was so difficult for any students in my class to solve it."
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc tương đương:\n**S + be + so + Adj + that + S + cannot/could not + V = S + be + too + Adj + (for sb) + to V**.\nChú ý khi dùng 'too... to...', đại từ tân ngữ 'it' ở cuối được lược bỏ vì chủ ngữ chính đã là 'The math problem'.",
+        "trapTip": "Bẫy lặp tân ngữ: 'too difficult for students to solve it' là SAI (phải bỏ 'it')."
+      },
+      {
+        "id": "e22_q39",
+        "topic": "Viết lại câu ĐIỀU KIỆN LOẠI 1 (Sentence Transformation)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the sentence that is closest in meaning: 'Hurry up, or you will miss the morning orientation meeting.'",
+        "options": [
+          "If you don't hurry up, you will miss the morning orientation meeting.",
+          "If you hurry up, you will miss the morning orientation meeting.",
+          "Unless you don't hurry up, you will miss the morning orientation meeting.",
+          "If you didn't hurry up, you would miss the morning orientation meeting."
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc: **V(mệnh lệnh) + or + S + will + V = If you don't + V, S + will + V**.\n'Nhanh lên, nếu không bạn sẽ lỡ cuộc họp' = 'Nếu bạn không nhanh lên, bạn sẽ lỡ cuộc họp'.",
+        "trapTip": "Or = If you don't = Unless you."
+      },
+      {
+        "id": "e22_q40",
+        "topic": "Viết lại câu WISH CHO HIỆN TẠI (Sentence Transformation)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the sentence that is closest in meaning: 'What a pity! The school library is closed on Sunday mornings.'",
+        "options": [
+          "I wish the school library were open on Sunday mornings.",
+          "I wish the school library is open on Sunday mornings.",
+          "I wish the school library had been open on Sunday mornings.",
+          "I wish the school library will be open on Sunday mornings."
+        ],
+        "correctIndex": 0,
+        "explanation": "'What a pity! S + is + Adj' (Thật đáng tiếc) -> viết lại câu ước ở hiện tại:\n**S + wish + S + were + Adj (trái ngược với hiện tại)**.\nThư viện đóng cửa (closed) -> Ước thư viện mở cửa: 'were open'.",
+        "trapTip": "Trong câu ước trang trọng, động từ to be ở quá khứ luôn chia là WERE cho tất cả các ngôi."
+      }
+    ]
+  },
+  {
+    "id": "eng_exam_hanoi_2023",
+    "title": "Đề thi chính thức Tuyển sinh Lớp 10 TP. Hà Nội Năm 2023 - Môn Tiếng Anh",
+    "subject": "english",
+    "year": 2023,
+    "location": "Hà Nội",
+    "isOfficial": true,
+    "badgeText": "⭐ Đề Chính Thức Hà Nội 2023",
+    "durationMinutes": 60,
+    "totalQuestions": 40,
+    "description": "Đề thi chính thức tuyển sinh vào lớp 10 năm học 2023 - 2024 của Sở GD&ĐT Hà Nội. Chuẩn 40 câu trắc nghiệm 60 phút: Phát âm, trọng âm, tìm lỗi sai, từ đồng nghĩa/trái nghĩa, câu giao tiếp, đọc hiểu Văn Miếu & Làng lụa Vạn Phúc, chọn câu đồng nghĩa.",
+    "questions": [
+      {
+        "id": "ehn23_q01",
+        "topic": "Phát âm đuôi -ed (Pronunciation)",
+        "difficulty": "Nhận biết",
+        "question": "Choose the word whose underlined part is pronounced differently: **want<u>ed</u>**, **visit<u>ed</u>**, **start<u>ed</u>**, **work<u>ed</u>**",
+        "options": [
+          "worked (/t/)",
+          "wanted (/ɪd/)",
+          "visited (/ɪd/)",
+          "started (/ɪd/)"
+        ],
+        "correctIndex": 0,
+        "explanation": "- wanted, visited, started có đuôi -ed phát âm là /ɪd/ sau âm /t/.\n- worked có đuôi -ed phát âm là /t/ sau âm /k/.\nDo đó 'worked' phát âm khác.",
+        "trapTip": "Tận cùng bằng /k/ thì đuôi -ed đọc là /t/."
+      },
+      {
+        "id": "ehn23_q02",
+        "topic": "Phát âm nguyên âm (Pronunciation)",
+        "difficulty": "Nhận biết",
+        "question": "Choose the word whose underlined part is pronounced differently: **c<u>a</u>t**, **h<u>a</u>t**, **m<u>a</u>p**, **f<u>a</u>st**",
+        "options": [
+          "fast (/ɑː/)",
+          "cat (/æ/)",
+          "hat (/æ/)",
+          "map (/æ/)"
+        ],
+        "correctIndex": 0,
+        "explanation": "- cat, hat, map: nguyên âm 'a' phát âm là /æ/ (a bẹt).\n- fast: phát âm là /fɑːst/ (a dài theo giọng chuẩn Anh-Anh).\nDo đó 'fast' có cách phát âm khác.",
+        "trapTip": "Chú ý âm /æ/ trong các từ đơn ngắn: cat, hat, bat, map."
+      },
+      {
+        "id": "ehn23_q03",
+        "topic": "Trọng âm 2 âm tiết (Stress)",
+        "difficulty": "Nhận biết",
+        "question": "Choose the word with a different stress pattern: **proˈtect**, **enˈjoy**, **ˈhappen**, **deˈcide**",
+        "options": [
+          "happen (âm 1)",
+          "protect (âm 2)",
+          "enjoy (âm 2)",
+          "decide (âm 2)"
+        ],
+        "correctIndex": 0,
+        "explanation": "- ˈhappen: /ˈhæp.ən/ (động từ 2 âm tiết tận cùng đuôi -en nhấn âm 1).\n- proˈtect, enˈjoy, deˈcide: đều nhấn vào âm tiết thứ 2.",
+        "trapTip": "Các động từ có đuôi -en như happen, listen, open luôn nhấn âm 1."
+      },
+      {
+        "id": "ehn23_q04",
+        "topic": "Trọng âm 3 âm tiết (Stress)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word with a different stress pattern: **traˈdition**, **conˈdition**, **inˈvention**, **ˈcelebrate**",
+        "options": [
+          "celebrate (âm 1)",
+          "tradition (âm 2)",
+          "condition (âm 2)",
+          "invention (âm 2)"
+        ],
+        "correctIndex": 0,
+        "explanation": "- ˈcelebrate: /ˈsel.ə.breɪt/ (động từ 3 âm tiết đuôi -ate nhấn âm 1).\n- traˈdition, conˈdition, inˈvention: đuôi -tion nhấn âm tiết đứng ngay trước nó (âm 2).",
+        "trapTip": "Đuôi -tion nhấn âm ngay trước nó."
+      },
+      {
+        "id": "ehn23_q05",
+        "topic": "Mệnh đề quan hệ (Relative Clauses)",
+        "difficulty": "Nhận biết",
+        "question": "The Temple of Literature, _______ was built in 1070, is one of Hanoi's most historic landmarks.",
+        "options": [
+          "which",
+          "who",
+          "whom",
+          "whose"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đại từ quan hệ thay thế cho danh từ chỉ vật 'The Temple of Literature' trong mệnh đề không xác định có dấu phẩy là 'which'.",
+        "trapTip": "Sau dấu phẩy không dùng THAT."
+      },
+      {
+        "id": "ehn23_q06",
+        "topic": "Cụm động từ (Phrasal Verbs)",
+        "difficulty": "Thông hiểu",
+        "question": "Don't forget to _______ your warm coat before going out into Hanoi's winter weather.",
+        "options": [
+          "put on",
+          "take off",
+          "turn down",
+          "look after"
+        ],
+        "correctIndex": 0,
+        "explanation": "- put on: mặc (áo ấm), đeo (kính).\n- take off: cởi ra, cất cánh.\n- turn down: từ chối, vặn nhỏ.\n- look after: chăm sóc.",
+        "trapTip": "Mặc áo ấm: put on a warm coat."
+      },
+      {
+        "id": "ehn23_q07",
+        "topic": "Câu điều kiện loại 1 (Conditionals)",
+        "difficulty": "Thông hiểu",
+        "question": "If she _______ harder, she will definitely pass the exam into Chu Van An High School.",
+        "options": [
+          "studies",
+          "studied",
+          "will study",
+          "would study"
+        ],
+        "correctIndex": 0,
+        "explanation": "Mệnh đề IF của câu điều kiện loại 1 chia thì hiện tại đơn: 'studies'.",
+        "trapTip": "Chủ ngữ ngôi thứ ba số ít 'she' động từ chia thêm -es (studies)."
+      },
+      {
+        "id": "ehn23_q08",
+        "topic": "Hỏi đuôi (Tag Questions)",
+        "difficulty": "Nhận biết",
+        "question": "Your brother is studying at Hanoi - Amsterdam High School, _______?",
+        "options": [
+          "isn't he",
+          "is he",
+          "doesn't he",
+          "wasn't he"
+        ],
+        "correctIndex": 0,
+        "explanation": "Mệnh đề chính khẳng định 'is studying' -> đuôi phủ định: 'isn't he?'.",
+        "trapTip": "Trước 'is' thì sau 'isn't'."
+      },
+      {
+        "id": "ehn23_q09",
+        "topic": "Liên từ (Conjunctions)",
+        "difficulty": "Thông hiểu",
+        "question": "We decided to go camping in Ba Vi National Park _______ the weather was sunny and pleasant.",
+        "options": [
+          "because",
+          "although",
+          "but",
+          "so"
+        ],
+        "correctIndex": 0,
+        "explanation": "Mệnh đề chỉ nguyên nhân (thời tiết nắng đẹp nên quyết định đi cắm trại): dùng 'because'.",
+        "trapTip": "Because + Mệnh đề chỉ lý do."
+      },
+      {
+        "id": "ehn23_q10",
+        "topic": "Từ vựng (Vocabulary)",
+        "difficulty": "Thông hiểu",
+        "question": "Van Phuc Silk Village in Hanoi is widely famous for its _______ silk products.",
+        "options": [
+          "traditional",
+          "tradition",
+          "traditionally",
+          "traditionalist"
+        ],
+        "correctIndex": 0,
+        "explanation": "Trước cụm danh từ 'silk products' cần tính từ: 'traditional silk products'.",
+        "trapTip": "Traditional = Thuộc về truyền thống."
+      },
+      {
+        "id": "ehn23_q11",
+        "topic": "Dạng động từ (Gerund & Infinitive)",
+        "difficulty": "Thông hiểu",
+        "question": "My mother enjoys _______ traditional Vietnamese dishes for the family on weekends.",
+        "options": [
+          "cooking",
+          "to cook",
+          "cook",
+          "cooked"
+        ],
+        "correctIndex": 0,
+        "explanation": "Sau động từ chỉ sở thích **enjoy** luôn là dạng V-ing: 'enjoy cooking'.",
+        "trapTip": "Enjoy + V-ing = Like / Love + V-ing."
+      },
+      {
+        "id": "ehn23_q12",
+        "topic": "Giao tiếp hàng ngày (Communication)",
+        "difficulty": "Nhận biết",
+        "question": "Hung: 'Would you like to visit Bat Trang Ceramic Village with us this Saturday?'\nMinh: '_______'",
+        "options": [
+          "I'd love to. Thanks!",
+          "No, I don't like ceramics.",
+          "You're welcome.",
+          "Never mind."
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp lại lời mời 'Would you like to...?', cách đồng ý lịch sự nhất là: 'I'd love to. Thanks!' (Mình rất muốn. Cảm ơn bạn nhé!).",
+        "trapTip": "Would you like to...? -> I'd love to."
+      },
+      {
+        "id": "ehn23_q13",
+        "topic": "Giao tiếp khen ngợi (Communication)",
+        "difficulty": "Nhận biết",
+        "question": "Teacher: 'Congratulations on scoring 10 in the English mock exam, Lan!'\nLan: '_______'",
+        "options": [
+          "Thank you so much for your guidance, teacher!",
+          "Not at all, it's boring.",
+          "You're welcome, teacher.",
+          "I don't think so."
+        ],
+        "correctIndex": 0,
+        "explanation": "Khi được khen ngợi hoặc chúc mừng (Congratulations), cần nói lời cảm ơn khiêm tốn.",
+        "trapTip": "Đáp lại lời chúc mừng luôn là lời cảm ơn (Thank you)."
+      },
+      {
+        "id": "ehn23_q14",
+        "topic": "So sánh hơn (Comparatives)",
+        "difficulty": "Nhận biết",
+        "question": "Living in a quiet rural village is often _______ than living in a crowded metropolis.",
+        "options": [
+          "more peaceful",
+          "peacefuler",
+          "most peaceful",
+          "as peaceful"
+        ],
+        "correctIndex": 0,
+        "explanation": "'peaceful' là tính từ dài 2 âm tiết -> so sánh hơn dùng 'more peaceful than'.",
+        "trapTip": "Tính từ dài không thêm đuôi -er."
+      },
+      {
+        "id": "ehn23_q15",
+        "topic": "Mạo từ (Articles)",
+        "difficulty": "Nhận biết",
+        "question": "Sword Lake is situated in _______ center of Hanoi Capital.",
+        "options": [
+          "the",
+          "a",
+          "an",
+          "zero article"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cụm từ cố định chỉ vị trí: 'in the center of' (ở trung tâm của).",
+        "trapTip": "In the center of / In the middle of."
+      },
+      {
+        "id": "ehn23_q16",
+        "topic": "Giới từ chỉ nơi chốn (Prepositions)",
+        "difficulty": "Nhận biết",
+        "question": "The historical relics are preserved _______ display in the National Museum of History.",
+        "options": [
+          "on",
+          "at",
+          "in",
+          "by"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cụm từ cố định: **on display** (đang được trưng bày triển lãm).",
+        "trapTip": "On display = Being shown to the public."
+      },
+      {
+        "id": "ehn23_q17",
+        "topic": "Từ đồng nghĩa (Synonyms)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word CLOSEST in meaning to the underlined word: 'Hanoi is well-known for its **<u>ancient</u>** pagodas and colonial buildings.'",
+        "options": [
+          "very old",
+          "modern",
+          "fashionable",
+          "new"
+        ],
+        "correctIndex": 0,
+        "explanation": "'ancient' có nghĩa là 'cổ kính, cổ xưa' = 'very old'.",
+        "trapTip": "Ancient = Very old."
+      },
+      {
+        "id": "ehn23_q18",
+        "topic": "Từ đồng nghĩa (Synonyms)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word CLOSEST in meaning to the underlined word: 'The government aims to **<u>conserve</u>** traditional craft villages across the country.'",
+        "options": [
+          "protect",
+          "destroy",
+          "abandon",
+          "pollute"
+        ],
+        "correctIndex": 0,
+        "explanation": "'conserve' nghĩa là 'bảo tồn, gìn giữ' = 'protect'.",
+        "trapTip": "Conserve = Preserve = Protect."
+      },
+      {
+        "id": "ehn23_q19",
+        "topic": "Từ trái nghĩa (Antonyms)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word OPPOSITE in meaning to the underlined word: 'Air quality in big cities has become severely **<u>polluted</u>** due to heavy traffic.'",
+        "options": [
+          "pure",
+          "dirty",
+          "contaminated",
+          "toxic"
+        ],
+        "correctIndex": 0,
+        "explanation": "'polluted' (ô nhiễm, bẩn) có từ TRÁI NGHĨA là 'pure' (trong lành, tinh khiết).\nCác từ 'dirty', 'contaminated', 'toxic' đều là từ đồng nghĩa.",
+        "trapTip": "CẨN THẬN: Đề bài yêu cầu tìm từ TRÁI NGHĨA (OPPOSITE), không phải đồng nghĩa."
+      },
+      {
+        "id": "ehn23_q20",
+        "topic": "Từ trái nghĩa (Antonyms)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word OPPOSITE in meaning to the underlined word: 'Secondary students found the science project extremely **<u>simple</u>** to complete.'",
+        "options": [
+          "complicated",
+          "easy",
+          "clear",
+          "basic"
+        ],
+        "correctIndex": 0,
+        "explanation": "'simple' (đơn giản, dễ dàng) có từ TRÁI NGHĨA là 'complicated' (phức tạp, rắc rối).",
+        "trapTip": "Simple >< Complicated / Difficult."
+      },
+      {
+        "id": "ehn23_q21",
+        "topic": "Tìm lỗi sai (Error Identification)",
+        "difficulty": "Vận dụng",
+        "question": "Find the underlined part that needs correction: 'Although he (A) <u>felt</u> tired, (B) <u>but</u> he still (C) <u>completed</u> all his (D) <u>homework</u>.'",
+        "options": [
+          "felt",
+          "but",
+          "completed",
+          "homework"
+        ],
+        "correctIndex": 1,
+        "explanation": "Trong tiếng Anh, đã dùng 'Although' ở đầu câu thì KHÔNG ĐƯỢC dùng 'but' ở mệnh đề sau. Phải bỏ 'but'.",
+        "trapTip": "Lỗi người Việt dịch 'Mặc dù... nhưng...' nên hay dùng cả Although lẫn But."
+      },
+      {
+        "id": "ehn23_q22",
+        "topic": "Tìm lỗi sai (Error Identification)",
+        "difficulty": "Vận dụng",
+        "question": "Find the underlined part that needs correction: 'My teacher (A) <u>suggested</u> that we (B) <u>should</u> (C) <u>to practice</u> speaking English (D) <u>every day</u>.'",
+        "options": [
+          "suggested",
+          "should",
+          "to practice",
+          "every day"
+        ],
+        "correctIndex": 2,
+        "explanation": "Sau 'should' (động từ khuyết thiếu) động từ phải ở dạng NGUYÊN THỂ KHÔNG TO: 'should practice', không dùng 'should to practice'.",
+        "trapTip": "Sau modal verbs (can, could, should, must) luôn là Bare Infinitive (V không 'to')."
+      },
+      {
+        "id": "ehn23_q23",
+        "topic": "Tìm lỗi sai (Error Identification)",
+        "difficulty": "Vận dụng",
+        "question": "Find the underlined part that needs correction: 'The book (A) <u>which</u> you (B) <u>lent</u> me (C) <u>yesterday</u> is (D) <u>interested</u>.'",
+        "options": [
+          "which",
+          "lent",
+          "yesterday",
+          "interested"
+        ],
+        "correctIndex": 3,
+        "explanation": "Quyển sách là danh từ chỉ vật tạo ra cảm giác thú vị, phải dùng tính từ đuôi -ing: 'interesting', không dùng 'interested' (chỉ cảm xúc của con người).",
+        "trapTip": "Sách, phim, sự vật thú vị dùng 'interesting'. Con người cảm thấy thích thú mới dùng 'interested'."
+      },
+      {
+        "id": "ehn23_q24",
+        "topic": "Tìm lỗi sai (Error Identification)",
+        "difficulty": "Vận dụng",
+        "question": "Find the underlined part that needs correction: 'She (A) <u>has lived</u> in Hanoi (B) <u>since</u> five (C) <u>years</u> with (D) <u>her family</u>.'",
+        "options": [
+          "has lived",
+          "since",
+          "years",
+          "her family"
+        ],
+        "correctIndex": 1,
+        "explanation": "'five years' là một khoảng thời gian (5 năm), phải dùng giới từ 'for', không dùng 'since'.",
+        "trapTip": "For + khoảng thời gian (for five years)."
+      },
+      {
+        "id": "ehn23_q25",
+        "topic": "Điền từ đoạn văn: Làng gốm Bát Tràng (Cloze)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best word for blank (25):\n\n'Bat Trang is an ancient pottery village located on the outskirts of Hanoi. For centuries, artisans here have (25) _______ sophisticated ceramic items that are famous nationwide.'",
+        "options": [
+          "produced",
+          "discovered",
+          "refused",
+          "damaged"
+        ],
+        "correctIndex": 0,
+        "explanation": "Nghệ nhân đã 'sản xuất/chế tác' những sản phẩm gốm sứ tinh xảo -> dùng 'produced'.",
+        "trapTip": "Produce ceramic items = Sản xuất đồ gốm."
+      },
+      {
+        "id": "ehn23_q26",
+        "topic": "Điền từ đoạn văn (Cloze)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best word for blank (26):\n\n'Visitors to Bat Trang can join practical workshops (26) _______ they learn how to shape clay on a potter's wheel.'",
+        "options": [
+          "where",
+          "which",
+          "whose",
+          "whom"
+        ],
+        "correctIndex": 0,
+        "explanation": "Trạng từ quan hệ chỉ nơi chốn thay thế cho 'workshops' (tại các xưởng làm việc nơi mà du khách được học) -> dùng 'where'.",
+        "trapTip": "Where + S + V chỉ nơi chốn."
+      },
+      {
+        "id": "ehn23_q27",
+        "topic": "Điền từ đoạn văn (Cloze)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best word for blank (27):\n\n'Making pottery requires great patience and (27) _______ from the craftsmen.'",
+        "options": [
+          "creativity",
+          "creative",
+          "creatively",
+          "create"
+        ],
+        "correctIndex": 0,
+        "explanation": "Sau liên từ 'and' kết nối với danh từ 'patience' (sự kiên nhẫn), ta cần một Danh từ: **creativity** (sự sáng tạo).",
+        "trapTip": "Cấu trúc song hành: patience and creativity (danh từ and danh từ)."
+      },
+      {
+        "id": "ehn23_q28",
+        "topic": "Điền từ đoạn văn (Cloze)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best word for blank (28):\n\n'These handcrafted items make wonderful souvenirs (28) _______ domestic and foreign tourists.'",
+        "options": [
+          "for",
+          "to",
+          "with",
+          "by"
+        ],
+        "correctIndex": 0,
+        "explanation": "Món quà lưu niệm dành 'cho' ai đó: 'souvenirs for domestic and foreign tourists'.",
+        "trapTip": "Souvenirs for sb = Quà lưu niệm cho ai."
+      },
+      {
+        "id": "ehn23_q29",
+        "topic": "Điền từ đoạn văn (Cloze)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the best word for blank (29):\n\n'The local authority is striving to promote Bat Trang as a (29) _______ tourism destination in the capital.'",
+        "options": [
+          "sustainable",
+          "harmful",
+          "boring",
+          "useless"
+        ],
+        "correctIndex": 0,
+        "explanation": "Điểm đến du lịch 'bền vững' (sustainable tourism destination). Các từ còn lại mang nghĩa tiêu cực.",
+        "trapTip": "Sustainable tourism = Du lịch bền vững."
+      },
+      {
+        "id": "ehn23_q30",
+        "topic": "Đọc hiểu: Văn Miếu Quốc Tử Giám (Reading)",
+        "difficulty": "Thông hiểu",
+        "question": "Read the text and answer:\n\n'Built in 1070 during the reign of Emperor Ly Thanh Tong, the Temple of Literature (Van Mieu) was initially dedicated to Confucius and scholars. In 1076, Quoc Tu Giam, Vietnam's first national university, was established within the complex to educate gifted scholars.\n\nOver several centuries, thousands of doctors graduated from this prestigious academy. Today, the complex preserves 82 Stone Stele of Doctors mounted on tortoise backs, recognized by UNESCO as World Documentary Heritage. Prior to important examinations such as the national high school exam or Grade 10 entrance exam, thousands of students visit Van Mieu to seek luck, pray for academic success, and honor the country's centuries-old tradition of studiousness.'\n\nWhat was Quoc Tu Giam when it was built in 1076?",
+        "options": [
+          "Vietnam's first national university",
+          "A market for ceramic products",
+          "A military fortress protecting Hanoi",
+          "A primary school for children"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dẫn chứng trong đoạn 1: 'In 1076, Quoc Tu Giam, Vietnam's first national university, was established...'.",
+        "trapTip": "Quoc Tu Giam là trường đại học đầu tiên của Việt Nam."
+      },
+      {
+        "id": "ehn23_q31",
+        "topic": "Đọc hiểu: Di sản UNESCO (Reading)",
+        "difficulty": "Thông hiểu",
+        "question": "How many Stone Stele of Doctors are preserved at the Temple of Literature today?",
+        "options": [
+          "82",
+          "1070",
+          "1076",
+          "100"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dẫn chứng trong đoạn 2: 'Today, the complex preserves 82 Stone Stele of Doctors mounted on tortoise backs...'.",
+        "trapTip": "82 bia tiến sĩ Văn Miếu."
+      },
+      {
+        "id": "ehn23_q32",
+        "topic": "Đọc hiểu: Ý nghĩa con rùa (Reading)",
+        "difficulty": "Thông hiểu",
+        "question": "The Stone Stele are mounted on the backs of which symbolic animal?",
+        "options": [
+          "Tortoises",
+          "Dragons",
+          "Lions",
+          "Elephants"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dẫn chứng: 'mounted on tortoise backs' (đặt trên lưng rùa đá).",
+        "trapTip": "Tortoise = Con rùa."
+      },
+      {
+        "id": "ehn23_q33",
+        "topic": "Đọc hiểu: Hoạt động học sinh (Reading)",
+        "difficulty": "Thông hiểu",
+        "question": "Why do students visit Van Mieu before important exams?",
+        "options": [
+          "To seek luck, pray for success and honor studiousness",
+          "To buy answers to the exam",
+          "To play computer games with friends",
+          "To apply for a job as a tour guide"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dẫn chứng câu cuối: 'thousands of students visit Van Mieu to seek luck, pray for academic success, and honor the country's centuries-old tradition of studiousness.'",
+        "trapTip": "Cầu may mắn và tôn vinh truyền thống hiếu học."
+      },
+      {
+        "id": "ehn23_q34",
+        "topic": "Đọc hiểu: Từ quy chiếu (Reading)",
+        "difficulty": "Thông hiểu",
+        "question": "The word **'prestigious'** in paragraph 2 most closely means:",
+        "options": [
+          "respected and admired",
+          "poor and unknown",
+          "boring and noisy",
+          "cheap and easy"
+        ],
+        "correctIndex": 0,
+        "explanation": "'prestigious' nghĩa là 'danh giá, uy tín, được kính trọng' = 'respected and admired'.",
+        "trapTip": "Prestigious academy = Học viện danh giá."
+      },
+      {
+        "id": "ehn23_q35",
+        "topic": "Viết lại câu BỊ ĐỘNG (Transformation)",
+        "difficulty": "Vận dụng",
+        "question": "Choose the sentence that is closest in meaning: 'They built this historic bridge over the Red River in 1902.'",
+        "options": [
+          "This historic bridge over the Red River was built in 1902.",
+          "This historic bridge over the Red River is built in 1902.",
+          "This historic bridge over the Red River were built in 1902.",
+          "This historic bridge over the Red River was build in 1902."
+        ],
+        "correctIndex": 0,
+        "explanation": "Câu chủ động ở quá khứ đơn (built) -> Câu bị động: S (This historic bridge - số ít) + **was built** in 1902.",
+        "trapTip": "Quá khứ bị động số ít: was + V3/ed."
+      },
+      {
+        "id": "ehn23_q36",
+        "topic": "Viết lại câu GIÁN TIẾP REPORTED SPEECH (Transformation)",
+        "difficulty": "Vận dụng",
+        "question": "Choose the sentence that is closest in meaning: ''I am revising for my Grade 10 English entrance exam now,' said Nam.'",
+        "options": [
+          "Nam said that he was revising for his Grade 10 English entrance exam then.",
+          "Nam said that he is revising for his Grade 10 English entrance exam now.",
+          "Nam said that I was revising for my Grade 10 English entrance exam then.",
+          "Nam said that he was revising for his Grade 10 English entrance exam now."
+        ],
+        "correctIndex": 0,
+        "explanation": "Quy tắc câu gián tiếp:\n- 'I' đổi thành 'he'\n- Thì hiện tại tiếp diễn 'am revising' lùi về quá khứ tiếp diễn 'was revising'\n- Tính từ sở hữu 'my' đổi thành 'his'\n- Trạng từ chỉ thời gian 'now' đổi thành 'then'.",
+        "trapTip": "Đừng quên đổi 'now' thành 'then' trong câu gián tiếp!"
+      },
+      {
+        "id": "ehn23_q37",
+        "topic": "Viết lại câu WISH HIỆN TẠI (Transformation)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the sentence that is closest in meaning: 'I don't have enough money to buy this new dictionary.'",
+        "options": [
+          "I wish I had enough money to buy this new dictionary.",
+          "I wish I have enough money to buy this new dictionary.",
+          "I wish I don't have enough money to buy this new dictionary.",
+          "I wish I would have enough money to buy this new dictionary."
+        ],
+        "correctIndex": 0,
+        "explanation": "Ước trái ngược hiện tại: lùi về quá khứ đơn (had).",
+        "trapTip": "I wish I had..."
+      },
+      {
+        "id": "ehn23_q38",
+        "topic": "Viết lại câu ALTHOUGH -> DESPITE (Transformation)",
+        "difficulty": "Vận dụng",
+        "question": "Choose the sentence that is closest in meaning: 'Although it rained heavily, we still attended the flag-raising ceremony.'",
+        "options": [
+          "Despite the heavy rain, we still attended the flag-raising ceremony.",
+          "Despite it rained heavily, we still attended the flag-raising ceremony.",
+          "Although the heavy rain, we still attended the flag-raising ceremony.",
+          "In spite of it was raining, we still attended the flag-raising ceremony."
+        ],
+        "correctIndex": 0,
+        "explanation": "Although + S + V = Despite + the + Adj + Noun ('the heavy rain').",
+        "trapTip": "Despite + Cụm danh từ."
+      },
+      {
+        "id": "ehn23_q39",
+        "topic": "Viết lại câu SO... THAT... -> TOO... TO... (Transformation)",
+        "difficulty": "Vận dụng",
+        "question": "Choose the sentence that is closest in meaning: 'The weather in Hanoi was so cold that we could not go jogging around West Lake.'",
+        "options": [
+          "The weather in Hanoi was too cold for us to go jogging around West Lake.",
+          "The weather in Hanoi was too cold that we could not go jogging around West Lake.",
+          "The weather in Hanoi was cold enough for us to go jogging around West Lake.",
+          "The weather in Hanoi was so cold for us to go jogging around West Lake."
+        ],
+        "correctIndex": 0,
+        "explanation": "So + Adj + that + S + couldn't V = Too + Adj + for us + to V.",
+        "trapTip": "Too cold for us to go jogging."
+      },
+      {
+        "id": "ehn23_q40",
+        "topic": "Kết hợp câu với MỆNH ĐỀ QUAN HỆ (Sentence Combination)",
+        "difficulty": "Vận dụng",
+        "question": "Choose the sentence that best combines these two sentences: 'This is the experienced teacher. She coached our school team for the English contest.'",
+        "options": [
+          "This is the experienced teacher who coached our school team for the English contest.",
+          "This is the experienced teacher which coached our school team for the English contest.",
+          "This is the experienced teacher whom coached our school team for the English contest.",
+          "This is the experienced teacher whose coached our school team for the English contest."
+        ],
+        "correctIndex": 0,
+        "explanation": "Kết hợp hai câu có danh từ chỉ người 'the experienced teacher' làm chủ ngữ trong câu thứ hai: dùng đại từ quan hệ 'who'.",
+        "trapTip": "Chỉ người làm chủ ngữ dùng WHO."
+      }
+    ]
+  },
+  {
+    "id": "eng_exam_03",
+    "title": "Đề thi thử Tiếng Anh Vào 10 - Đề số 03 (Chuyên đề Bứt Phá Điểm 9 - 10 Chuyên & Top 1)",
+    "subject": "english",
+    "durationMinutes": 45,
+    "totalQuestions": 20,
+    "description": "Bộ câu hỏi phân loại chuyên sâu: Thành ngữ Idioms, Cụm từ cố định Collocations, Rút gọn mệnh đề, Cấu trúc đảo ngữ và Từ loại phức hợp.",
+    "questions": [
+      {
+        "id": "e03_q01",
+        "topic": "Thành ngữ tiếng Anh (Idioms)",
+        "difficulty": "Vận dụng cao",
+        "question": "She passed the high school entrance examination with flying ________.",
+        "options": [
+          "colors",
+          "flags",
+          "stars",
+          "marks"
+        ],
+        "correctIndex": 0,
+        "explanation": "Thành ngữ tiếng Anh (Idiom): **pass with flying colors** có nghĩa là 'thi đỗ với kết quả xuất sắc, điểm số cao rực rỡ'.",
+        "trapTip": "Thành ngữ 'with flying colors' là câu phân loại điểm 10 quen thuộc trong các đề thi tuyển sinh."
+      },
+      {
+        "id": "e03_q02",
+        "topic": "Cụm từ cố định (Collocations)",
+        "difficulty": "Vận dụng cao",
+        "question": "Global warming is causing serious ________ to the natural environment.",
+        "options": [
+          "damage",
+          "harmful",
+          "hurts",
+          "injuries"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cụm từ cố định: **cause damage to sth** (gây ra tổn hại, thiệt hại nghiêm trọng cho cái gì).\n'Damage' là danh từ không đếm được chỉ tổn thất vật chất/môi trường.",
+        "trapTip": "Phân biệt damage (thiệt hại cho vật/môi trường) và injury (chấn thương cơ thể người)."
+      },
+      {
+        "id": "e03_q03",
+        "topic": "Rút gọn mệnh đề quan hệ (Reduced Relative Clauses)",
+        "difficulty": "Vận dụng cao",
+        "question": "The students ________ in the final entrance exam must arrive 30 minutes earlier.",
+        "options": [
+          "participating",
+          "participated",
+          "who participating",
+          "participate"
+        ],
+        "correctIndex": 0,
+        "explanation": "Rút gọn mệnh đề quan hệ mang nghĩa chủ động: Sử dụng **V-ing**.\nCâu gốc: 'The students *who participate* in...' -> Rút gọn thành: 'The students *participating* in...'.",
+        "trapTip": "Chủ động rút gọn bằng V-ing | Bị động rút gọn bằng V3/ed."
+      },
+      {
+        "id": "e03_q04",
+        "topic": "Rút gọn mệnh đề bị động (Reduced Relative Clauses)",
+        "difficulty": "Vận dụng cao",
+        "question": "The traditional craft village ________ centuries ago still preserves its unique customs.",
+        "options": [
+          "founding",
+          "founded",
+          "which founded",
+          "find"
+        ],
+        "correctIndex": 1,
+        "explanation": "Rút gọn mệnh đề quan hệ mang nghĩa bị động: Sử dụng **V3/ed**.\nCâu gốc: 'The traditional craft village *which was founded* centuries ago...' -> Rút gọn thành: '*founded* centuries ago'.",
+        "trapTip": "Động từ 'found' (thành lập) có quá khứ phân từ là 'founded'. Đừng nhầm với find -> found (tìm thấy)!"
+      },
+      {
+        "id": "e03_q05",
+        "topic": "Đảo ngữ (Inversion)",
+        "difficulty": "Vận dụng cao",
+        "question": "Hardly ________ the threshold of the examination room when the warning bell rang.",
+        "options": [
+          "had he crossed",
+          "he crossed",
+          "did he cross",
+          "he had crossed"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc đảo ngữ với Hardly... when... (Vừa mới... thì...):\n**Hardly + had + S + V3/ed + when + S + V2/ed**.\nDo đó: 'Hardly had he crossed...'.",
+        "trapTip": "Đảo ngữ với Hardly / Scarcely / No sooner: trợ động từ Had luôn đảo lên trước chủ ngữ."
+      },
+      {
+        "id": "e03_q06",
+        "topic": "Cấu trúc It's high time (Subjunctive)",
+        "difficulty": "Vận dụng cao",
+        "question": "It's high time we ________ more trees to protect our community from soil erosion.",
+        "options": [
+          "plant",
+          "planted",
+          "should plant",
+          "have planted"
+        ],
+        "correctIndex": 1,
+        "explanation": "Cấu trúc giả định: **It's time / It's high time + S + V2/ed** (Đã đến lúc ai đó phải làm gì ngay).\nDo đó động từ 'plant' phải chia ở thì quá khứ đơn: 'planted'.",
+        "trapTip": "Sau 'It's high time + S' động từ luôn lùi về Quá khứ đơn (V2/ed)!"
+      },
+      {
+        "id": "e03_q07",
+        "topic": "Giới từ đi với tính từ (Adjective + Prepositions)",
+        "difficulty": "Thông hiểu",
+        "question": "My best friend is exceptionally good ________ solving complex math equations.",
+        "options": [
+          "at",
+          "in",
+          "on",
+          "with"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc: **be good at + N/V-ing** nghĩa là 'giỏi về việc gì'.\nTrái nghĩa: **be bad at** (kém về việc gì).",
+        "trapTip": "Good AT (giỏi cái gì) khác với Good FOR (tốt cho sức khỏe: Milk is good for you)."
+      },
+      {
+        "id": "e03_q08",
+        "topic": "Cụm động từ nâng cao (Phrasal Verbs)",
+        "difficulty": "Vận dụng cao",
+        "question": "We should not ________ down on people who are less fortunate than ourselves.",
+        "options": [
+          "look",
+          "see",
+          "take",
+          "bring"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cụm thành ngữ động từ 3 từ: **look down on sb** có nghĩa là 'coi thường, khinh thường ai đó'.\nTrái nghĩa: **look up to sb** (kính trọng, ngưỡng mộ ai).",
+        "trapTip": "Nhớ cặp đôi đối lập: Look down on (coi thường) vs Look up to (kính trọng)."
+      },
+      {
+        "id": "e03_q09",
+        "topic": "Từ vựng dễ gây nhầm lẫn (Confusing Words)",
+        "difficulty": "Vận dụng cao",
+        "question": "The heavy storm had a devastating ________ on the farmers' rice crops.",
+        "options": [
+          "effect",
+          "affect",
+          "effective",
+          "effectively"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cụm từ: **have an effect on sth** (có tác động/ảnh hưởng đến cái gì).\n- *effect* (Noun): sự tác động, ảnh hưởng.\n- *affect* (Verb): làm ảnh hưởng đến.\nSau mạo từ 'a' và tính từ 'devastating' bắt buộc phải là một Danh từ -> 'effect'.",
+        "trapTip": "Bẫy kinh điển: Affect là Động từ (A = Action verb), Effect là Danh từ (E = Entity noun)!"
+      },
+      {
+        "id": "e03_q10",
+        "topic": "Từ loại nâng cao (Word Formation)",
+        "difficulty": "Vận dụng cao",
+        "question": "Due to his ________, the company lost a very important contract.",
+        "options": [
+          "careless",
+          "carelessly",
+          "carelessness",
+          "caring"
+        ],
+        "correctIndex": 2,
+        "explanation": "Đứng sau tính từ sở hữu 'his' phải là một **Danh từ**.\n- *careless* (adj): bất cẩn.\n- *carelessly* (adv): một cách bất cẩn.\n- *carelessness* (n): sự bất cẩn, tính cẩu thả.\nVì tính bất cẩn của anh ta, công ty đã mất hợp đồng quan trọng -> chọn danh từ 'carelessness'.",
+        "trapTip": "Hậu tố '-ness' dùng để biến tính từ thành danh từ chỉ phẩm chất: careless -> carelessness."
+      },
+      {
+        "id": "e03_q11",
+        "topic": "Cấu trúc Used to vs Be used to",
+        "difficulty": "Thông hiểu",
+        "question": "After living in London for three months, she got used to ________ on the left.",
+        "options": [
+          "drive",
+          "driving",
+          "drove",
+          "be driven"
+        ],
+        "correctIndex": 1,
+        "explanation": "Phân biệt:\n- **used to + V-inf**: đã từng làm gì trong quá khứ (nay không làm nữa).\n- **be / get used to + V-ing**: quen với việc gì ở hiện tại.\nỞ đây có 'got used to' nên động từ theo sau phải thêm -ing: 'driving'.",
+        "trapTip": "Cứ có To be hoặc Get đứng trước Used to thì động từ bắt buộc phải thêm -ING!"
+      },
+      {
+        "id": "e03_q12",
+        "topic": "Cấu trúc với Would rather",
+        "difficulty": "Vận dụng",
+        "question": "I would rather you ________ tell anyone about our secret plan.",
+        "options": [
+          "don't",
+          "didn't",
+          "won't",
+          "not to"
+        ],
+        "correctIndex": 1,
+        "explanation": "Cấu trúc Would rather có 2 chủ ngữ (muốn người khác làm/không làm gì):\n**S1 + would rather + S2 + V2/ed / didn't + V-inf**.\nỞ thể phủ định: 'didn't tell'.",
+        "trapTip": "Would rather 2 chủ ngữ -> lùi thì về Quá khứ đơn (didn't V)!"
+      },
+      {
+        "id": "e03_q13",
+        "topic": "Động từ khuyết thiếu suy đoán (Modal Verbs)",
+        "difficulty": "Vận dụng cao",
+        "question": "The lights are still on in his bedroom. He ________ still be studying for tomorrow's exam.",
+        "options": [
+          "must",
+          "can't",
+          "shouldn't",
+          "needn't"
+        ],
+        "correctIndex": 0,
+        "explanation": "Suy đoán logic có căn cứ chắc chắn ở hiện tại:\n- **must + V-inf**: chắc hẳn là (độ tin cậy > 90%).\nĐèn trong phòng ngủ vẫn sáng -> Chắc hẳn anh ấy vẫn đang học bài.",
+        "trapTip": "Must dùng để suy đoán chắc chắn: Must be = Chắc chắn là."
+      },
+      {
+        "id": "e03_q14",
+        "topic": "Thành ngữ tiếng Anh (Idioms)",
+        "difficulty": "Vận dụng cao",
+        "question": "Don't worry about the entrance exam! Just stay calm, do your best, and keep your fingers ________.",
+        "options": [
+          "crossed",
+          "closed",
+          "held",
+          "tied"
+        ],
+        "correctIndex": 0,
+        "explanation": "Thành ngữ: **keep one's fingers crossed** mang ý nghĩa 'cầu chúc may mắn, hy vọng điều tốt đẹp sẽ đến'.",
+        "trapTip": "Keep fingers crossed = Cầu may mắn."
+      },
+      {
+        "id": "e03_q15",
+        "topic": "Tìm lỗi sai nâng cao (Error Identification)",
+        "difficulty": "Vận dụng cao",
+        "question": "Find the underlined part that needs correction: 'The number of students (A) <u>who</u> (B) <u>attends</u> the extra English class (C) <u>have increased</u> (D) <u>significantly</u>.'",
+        "options": [
+          "who",
+          "attends",
+          "have increased",
+          "significantly"
+        ],
+        "correctIndex": 2,
+        "explanation": "Quy tắc hòa hợp chủ vị giữa 'The number of' và 'A number of':\n- **A number of + N(số nhiều) + V(số nhiều)**\n- **The number of + N(số nhiều) + V(SỐ ÍT)**.\nChủ ngữ chính là 'The number of...' nên động từ phải chia số ít: 'have increased' sửa thành **has increased**.",
+        "trapTip": "THE number of -> V số ít | A number of -> V số nhiều!"
+      },
+      {
+        "id": "e03_q16",
+        "topic": "Tìm lỗi sai về liên từ (Error Identification)",
+        "difficulty": "Vận dụng",
+        "question": "Find the underlined part that needs correction: 'Despite (A) <u>she had</u> (B) <u>a severe headache</u>, she managed (C) <u>to perform</u> well in (D) <u>her interview</u>.'",
+        "options": [
+          "she had",
+          "a severe headache",
+          "to perform",
+          "her interview"
+        ],
+        "correctIndex": 0,
+        "explanation": "Sau **Despite** không được dùng một mệnh đề có chủ ngữ và động từ (she had).\nPhải sửa thành: 'Although she had...' hoặc 'Despite having a severe headache...'.",
+        "trapTip": "Despite / In spite of + Noun / V-ing, không bao giờ đi với mệnh đề S + V."
+      },
+      {
+        "id": "e03_q17",
+        "topic": "Viết lại câu cấu trúc Not until (Inversion)",
+        "difficulty": "Vận dụng cao",
+        "question": "Choose the sentence that is closest in meaning: 'I didn't realize how important family was until I went away to university.'",
+        "options": [
+          "Not until I went away to university did I realize how important family was.",
+          "Only when I realized how important family was, did I go to university.",
+          "Until I went away to university, I had realized how important family was.",
+          "Not until did I go to university, I realized how important family was."
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc đảo ngữ với NOT UNTIL:\n**Not until + Mệnh đề thời gian + Mệnh đề đảo ngữ (Did + S + V-inf)**.\nDo đó: 'Not until I went away to university did I realize...'.",
+        "trapTip": "Đảo ngữ ở vế thứ 2 (did I realize), vế sau 'Not until' giữ nguyên trật tự khẳng định."
+      },
+      {
+        "id": "e03_q18",
+        "topic": "Viết lại câu cấu trúc Prefer vs Would rather",
+        "difficulty": "Vận dụng",
+        "question": "Choose the sentence that is closest in meaning: 'Peter prefers playing basketball to watching television.'",
+        "options": [
+          "Peter would rather play basketball than watch television.",
+          "Peter would rather playing basketball than watching television.",
+          "Peter likes watching television more than basketball.",
+          "Peter prefers to play basketball more than watch television."
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc tương đương biểu đạt sở thích:\n**S + prefer + V-ing + to + V-ing = S + would rather + V-inf + than + V-inf**.\nDo đó: 'Peter would rather play basketball than watch television'.",
+        "trapTip": "Prefer V-ing TO V-ing | Would rather V THAN V."
+      },
+      {
+        "id": "e03_q19",
+        "topic": "Viết lại câu cấu trúc It takes time",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the sentence that is closest in meaning: 'She spent two hours finishing her English assignment yesterday.'",
+        "options": [
+          "It took her two hours to finish her English assignment yesterday.",
+          "She took two hours finishing her English assignment yesterday.",
+          "It took two hours for she to finish her English assignment yesterday.",
+          "Finishing her English assignment took of her two hours yesterday."
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc tương đương:\n**S + spend + time + V-ing = It + take + sb + time + to V**.\nỞ quá khứ: 'It took her two hours to finish...'.",
+        "trapTip": "Spend đi với V-ing | Take đi với TO V."
+      },
+      {
+        "id": "e03_q20",
+        "topic": "Viết lại câu với As long as (Conditionals)",
+        "difficulty": "Vận dụng",
+        "question": "Choose the sentence that is closest in meaning: 'You can borrow my dictionary, but you must return it by Friday.'",
+        "options": [
+          "You can borrow my dictionary as long as you return it by Friday.",
+          "Unless you return my dictionary by Friday, you can borrow it.",
+          "You can't borrow my dictionary even if you return it by Friday.",
+          "You can borrow my dictionary although you return it by Friday."
+        ],
+        "correctIndex": 0,
+        "explanation": "**As long as / Provided that** mang nghĩa 'Miễn là / Với điều kiện là' (tương đương với If).\n'Bạn có thể mượn từ điển miễn là bạn trả lại trước thứ Sáu'.",
+        "trapTip": "As long as = Provided that = Miễn là."
+      }
+    ],
+    "year": 2024,
+    "location": "Chuyên Top 1",
+    "badgeText": "🔥 Đề Chuyên & Điểm 9-10"
+  },
+  {
+    "id": "eng_exam_01",
+    "title": "Đề thi thử Tiếng Anh Vào 10 - Đề số 01 (Cấu trúc chuẩn Hà Nội & Toàn Quốc)",
+    "subject": "english",
+    "durationMinutes": 45,
+    "totalQuestions": 25,
+    "description": "Bộ đề chuẩn hóa bao quát 100% các dạng bài: Ngữ âm, Trọng âm, Ngữ pháp, Từ vựng, Giao tiếp, Tìm lỗi sai, Đọc hiểu và Viết lại câu.",
+    "questions": [
+      {
+        "id": "e01_q01",
+        "topic": "Phát âm đuôi -ed (Pronunciation)",
+        "difficulty": "Nhận biết",
+        "question": "Choose the word whose underlined part is pronounced differently: **decid<u>ed</u>**, **stopp<u>ed</u>**, **look<u>ed</u>**, **watch<u>ed</u>**",
+        "options": [
+          "decided",
+          "stopped",
+          "looked",
+          "watched"
+        ],
+        "correctIndex": 0,
+        "explanation": "Quy tắc phát âm đuôi **-ed**:\n- /ɪd/: sau âm /t/, /d/ -> *decided* (/dɪˈsaɪdɪd/)\n- /t/: sau âm vô thanh /p/, /k/, /f/, /s/, /ʃ/, /tʃ/ -> *stopped*, *looked*, *watched*\n- /d/: sau các âm hữu thanh còn lại.\nDo đó 'decided' phát âm là /ɪd/, ba từ còn lại phát âm là /t/.",
+        "trapTip": "Mẹo nhớ: Tận cùng bằng /t/ hoặc /d/ thì đuôi -ed luôn phát âm là /ɪd/ (tiền - đô)."
+      },
+      {
+        "id": "e01_q02",
+        "topic": "Phát âm đuôi -s/es (Pronunciation)",
+        "difficulty": "Nhận biết",
+        "question": "Choose the word whose underlined part is pronounced differently: **book<u>s</u>**, **cat<u>s</u>**, **pen<u>s</u>**, **map<u>s</u>**",
+        "options": [
+          "books",
+          "cats",
+          "pens",
+          "maps"
+        ],
+        "correctIndex": 2,
+        "explanation": "Quy tắc phát âm đuôi **-s/es**:\n- /s/: sau âm vô thanh /p/, /k/, /f/, /t/, /θ/ -> *books*, *cats*, *maps*\n- /z/: sau nguyên âm và phụ âm hữu thanh -> *pens* (/penz/)\n- /ɪz/: sau các âm rít /s/, /z/, /ʃ/, /tʃ/, /ʒ/, /dʒ/.\nDo đó 'pens' phát âm là /z/, ba từ còn lại phát âm là /s/.",
+        "trapTip": "Mẹo nhớ âm /s/: 'Thảo Phải Kính Phật Tổ' (/θ/, /p/, /k/, /f/, /t/)."
+      },
+      {
+        "id": "e01_q03",
+        "topic": "Phát âm nguyên âm (Vowel Sound)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word whose underlined part is pronounced differently: **cl<u>ea</u>n**, **m<u>ea</u>t**, **b<u>ea</u>ch**, **h<u>ea</u>d**",
+        "options": [
+          "clean",
+          "meat",
+          "beach",
+          "head"
+        ],
+        "correctIndex": 3,
+        "explanation": "- *clean*: /kliːn/ (âm /iː/ dài)\n- *meat*: /miːt/ (âm /iː/ dài)\n- *beach*: /biːtʃ/ (âm /iː/ dài)\n- *head*: /hed/ (âm /e/ ngắn)\nDo đó 'head' có phần gạch chân phát âm là /e/, khác với 3 từ còn lại.",
+        "trapTip": "Cụm 'ea' hay bị nhầm giữa /iː/ (clean, eat, meat) và /e/ (head, bread, weather, heavy)."
+      },
+      {
+        "id": "e01_q04",
+        "topic": "Trọng âm từ 2 âm tiết (Word Stress)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word that has a different stress pattern from the others: **proˈvide**, **ˈlisten**, **ˈhappen**, **ˈvisit**",
+        "options": [
+          "provide",
+          "listen",
+          "happen",
+          "visit"
+        ],
+        "correctIndex": 0,
+        "explanation": "- *proˈvide*: trọng âm rơi vào âm tiết 2 (động từ 2 âm tiết thường nhấn âm 2).\n- *ˈlisten*, *ˈhappen*, *ˈvisit*: đều có trọng âm rơi vào âm tiết 1 (ngoại lệ tận cùng bằng -en, -it).",
+        "trapTip": "Các động từ 2 âm tiết có đuôi -en, -er, -it thường nhấn vào âm tiết thứ 1: listen, happen, enter, visit, finish."
+      },
+      {
+        "id": "e01_q05",
+        "topic": "Trọng âm từ 3 âm tiết (Word Stress)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word that has a different stress pattern: **ˈdifficult**, **ˈdangerous**, **imˈportant**, **ˈbeautiful**",
+        "options": [
+          "difficult",
+          "dangerous",
+          "important",
+          "beautiful"
+        ],
+        "correctIndex": 2,
+        "explanation": "- *imˈportant*: trọng âm rơi vào âm tiết 2.\n- *ˈdifficult*, *ˈdangerous*, *ˈbeautiful*: trọng âm rơi vào âm tiết 1.\nDo đó 'important' có trọng âm khác biệt.",
+        "trapTip": "Các từ có đuôi -ful, -ous thường giữ nguyên trọng âm của từ gốc."
+      },
+      {
+        "id": "e01_q06",
+        "topic": "Câu điều kiện loại 1 (Conditionals)",
+        "difficulty": "Thông hiểu",
+        "question": "If the weather ________ fine tomorrow, we will go on a picnic in the park.",
+        "options": [
+          "is",
+          "will be",
+          "was",
+          "would be"
+        ],
+        "correctIndex": 0,
+        "explanation": "Câu điều kiện loại 1 (Conditional Type 1) diễn tả hành động có thể xảy ra ở hiện tại hoặc tương lai:\n**If + S + V(hiện tại đơn), S + will + V-inf**.\nChủ ngữ 'the weather' là danh từ không đếm được nên động từ to be chia là 'is'.",
+        "trapTip": "Mệnh đề chứa IF trong câu điều kiện loại 1 TUYỆT ĐỐI KHÔNG dùng 'will'!"
+      },
+      {
+        "id": "e01_q07",
+        "topic": "Câu điều kiện loại 2 (Conditionals)",
+        "difficulty": "Thông hiểu",
+        "question": "If I ________ a lot of money, I would travel around the world.",
+        "options": [
+          "have",
+          "had",
+          "will have",
+          "would have"
+        ],
+        "correctIndex": 1,
+        "explanation": "Câu điều kiện loại 2 diễn tả điều kiện giả định không có thật ở hiện tại:\n**If + S + V2/ed, S + would + V-inf**.\nĐộng từ 'have' lùi thì thành 'had'.",
+        "trapTip": "Nhìn vế sau có 'would travel' thì vế If phải chia Quá khứ đơn."
+      },
+      {
+        "id": "e01_q08",
+        "topic": "Mệnh đề quan hệ (Relative Clauses)",
+        "difficulty": "Thông hiểu",
+        "question": "The girl ________ won the first prize in the English speaking contest is my classmate.",
+        "options": [
+          "which",
+          "who",
+          "whom",
+          "whose"
+        ],
+        "correctIndex": 1,
+        "explanation": "Đại từ quan hệ thay thế cho danh từ chỉ người 'The girl' làm chủ ngữ (đứng trước động từ 'won') là **who**.\n- *which*: dùng cho danh từ chỉ vật.\n- *whom*: dùng cho tân ngữ chỉ người.\n- *whose*: dùng cho quan hệ sở hữu.",
+        "trapTip": "Đứng ngay trước động từ làm chủ ngữ thì chọn WHO, không được chọn WHOM."
+      },
+      {
+        "id": "e01_q09",
+        "topic": "Đại từ quan hệ sở hữu (Relative Clauses)",
+        "difficulty": "Vận dụng",
+        "question": "The woman ________ car was stolen yesterday has reported it to the local police.",
+        "options": [
+          "who",
+          "whose",
+          "which",
+          "whom"
+        ],
+        "correctIndex": 1,
+        "explanation": "Theo sau là danh từ 'car' thuộc quyền sở hữu của 'The woman' (chiếc xe của người phụ nữ ấy bị đánh cắp).\nCấu trúc: **N(người/vật) + whose + N**.",
+        "trapTip": "Gặp công thức [Danh từ + ... + Danh từ] 99% chọn WHOSE."
+      },
+      {
+        "id": "e01_q10",
+        "topic": "Cụm động từ (Phrasal Verbs)",
+        "difficulty": "Thông hiểu",
+        "question": "My sister has to ________ her younger brother while our parents are at work.",
+        "options": [
+          "look after",
+          "look for",
+          "look at",
+          "look up"
+        ],
+        "correctIndex": 0,
+        "explanation": "- *look after*: chăm sóc, trông nom (= take care of).\n- *look for*: tìm kiếm (= search for).\n- *look at*: nhìn vào.\n- *look up*: tra cứu (từ điển, danh bạ).\nNgữ cảnh trông em khi bố mẹ đi làm -> chọn 'look after'.",
+        "trapTip": "Phân biệt kỹ: look after (chăm sóc) vs look for (tìm kiếm)."
+      },
+      {
+        "id": "e01_q11",
+        "topic": "Cụm động từ (Phrasal Verbs)",
+        "difficulty": "Vận dụng",
+        "question": "They decided to ________ the soccer match because of the heavy thunderstorm.",
+        "options": [
+          "turn off",
+          "put off",
+          "give up",
+          "call off"
+        ],
+        "correctIndex": 3,
+        "explanation": "- *call off* = *cancel*: hủy bỏ trận đấu hoàn toàn.\n- *put off* = *postpone / delay*: hoãn lại sang ngày khác.\n- *turn off*: tắt thiết bị điện.\n- *give up*: từ bỏ thói quen.\nTrong đề thi vào 10, 'call off' thường dùng với trận đấu, sự kiện bị hủy.",
+        "trapTip": "Phân biệt: Call off (hủy luôn) và Put off (hoãn lại sang ngày khác)."
+      },
+      {
+        "id": "e01_q12",
+        "topic": "Thì của động từ (Verb Tenses)",
+        "difficulty": "Thông hiểu",
+        "question": "Up to now, the charity organization ________ thousands of homeless children.",
+        "options": [
+          "helped",
+          "has helped",
+          "helps",
+          "is helping"
+        ],
+        "correctIndex": 1,
+        "explanation": "Cụm từ **Up to now** (= so far = until now = up to the present) là dấu hiệu kinh điển của **Thì Hiện Tại Hoàn Thành (Present Perfect)**:\nCấu trúc: **S + have/has + V3/ed** -> 'has helped'.",
+        "trapTip": "Dấu hiệu nhận biết thì HTHT: since, for, already, yet, ever, never, so far, up to now, recently."
+      },
+      {
+        "id": "e01_q13",
+        "topic": "Câu bị động (Passive Voice)",
+        "difficulty": "Thông hiểu",
+        "question": "This ancient bridge ________ by French engineers in the early 20th century.",
+        "options": [
+          "built",
+          "was built",
+          "is built",
+          "has been built"
+        ],
+        "correctIndex": 1,
+        "explanation": "Chủ ngữ là vật 'This ancient bridge' (cây cầu cổ này) và mốc thời gian là 'in the early 20th century' (thế kỷ 20 - quá khứ xác định).\nCấu trúc bị động quá khứ đơn: **was/were + V3/ed** -> 'was built'.",
+        "trapTip": "Có mốc thời gian quá khứ xác định (in 1990, yesterday, in the 20th century) thì chia bị động Quá khứ đơn, không chia Hiện tại hoàn thành."
+      },
+      {
+        "id": "e01_q14",
+        "topic": "Câu hỏi đuôi (Tag Questions)",
+        "difficulty": "Thông hiểu",
+        "question": "Your brother didn't go to school yesterday, ________?",
+        "options": [
+          "did he",
+          "didn't he",
+          "does he",
+          "was he"
+        ],
+        "correctIndex": 0,
+        "explanation": "Quy tắc câu hỏi đuôi (Tag question):\n- Mệnh đề trước là phủ định ở quá khứ đơn ('didn't go') -> Phần đuôi phải là khẳng định: **did + S**.\n- 'Your brother' là nam giới -> đại từ thay thế là 'he'.\nVậy phần đuôi đúng là 'did he?'.",
+        "trapTip": "Nguyên tắc đối lập: Vế trước Phủ định (-) thì phần đuôi Khẳng định (+), và ngược lại!"
+      },
+      {
+        "id": "e01_q15",
+        "topic": "Liên từ nhượng bộ (Conjunctions)",
+        "difficulty": "Thông hiểu",
+        "question": "________ having a bad cold, she still managed to complete the final exam successfully.",
+        "options": [
+          "Although",
+          "In spite of",
+          "Because",
+          "Because of"
+        ],
+        "correctIndex": 1,
+        "explanation": "- 'having a bad cold' là cụm V-ing (danh động từ).\n- Ý nghĩa là tương phản (bị cảm nặng nhưng vẫn làm tốt bài thi).\n- **In spite of / Despite + V-ing / Noun phrase**.\n- *Although / Even though + S + V (mệnh đề)*.",
+        "trapTip": "Nhớ công thức: Although + Mệnh đề (S + V) | In spite of / Despite + Cụm từ (V-ing / Noun)."
+      },
+      {
+        "id": "e01_q16",
+        "topic": "Giao tiếp xã hội (Communication)",
+        "difficulty": "Nhận biết",
+        "question": "Mark: 'What a beautiful dress you are wearing today!' - Lisa: '________'",
+        "options": [
+          "Thanks, it's nice of you to say so.",
+          "You're welcome.",
+          "I don't think so.",
+          "No problem, don't mention it."
+        ],
+        "correctIndex": 0,
+        "explanation": "Khi nhận được một lời khen ngợi ('What a beautiful dress...'), câu đáp lại lịch sự và tự nhiên nhất là cảm ơn: 'Thanks, it's nice of you to say so' (Cảm ơn bạn, bạn thật tốt khi khen như vậy).",
+        "trapTip": "Đáp lại lời khen luôn bắt đầu bằng lời cảm ơn (Thanks / Thank you)."
+      },
+      {
+        "id": "e01_q17",
+        "topic": "Giao tiếp xã hội (Communication)",
+        "difficulty": "Nhận biết",
+        "question": "Tom: 'Shall we go to the cinema tonight?' - Jerry: '________'",
+        "options": [
+          "Yes, I do.",
+          "That sounds like a great idea!",
+          "No, I haven't.",
+          "You are right."
+        ],
+        "correctIndex": 1,
+        "explanation": "'Shall we...?' là câu đưa ra lời rủ rê, gợi ý (Suggestion).\nCâu phản hồi đồng ý nhiệt tình là: 'That sounds like a great idea!' (Ý kiến tuyệt vời đấy!).",
+        "trapTip": "Phản hồi lời gợi ý 'Shall we / Let's / Why don't we' dùng: 'Great idea!' hoặc 'I'd love to'."
+      },
+      {
+        "id": "e01_q18",
+        "topic": "Từ loại (Word Formation)",
+        "difficulty": "Vận dụng",
+        "question": "The air in major industrial cities is becoming ________ polluted.",
+        "options": [
+          "danger",
+          "dangerous",
+          "dangerously",
+          "endanger"
+        ],
+        "correctIndex": 2,
+        "explanation": "Từ 'polluted' là một tính từ (Adjective). Đứng trước và bổ nghĩa cho một tính từ phải là một **Trạng từ (Adverb)**.\n- *danger* (n): sự nguy hiểm.\n- *dangerous* (adj): nguy hiểm.\n- *dangerously* (adv): một cách nguy hiểm.\n- *endanger* (v): gây nguy hiểm.\nDo đó chọn trạng từ 'dangerously' (bị ô nhiễm ở mức độ nguy hiểm).",
+        "trapTip": "Cấu trúc: Trạng từ (Adv) đứng trước bổ nghĩa cho Tính từ (Adj) -> Adv + Adj."
+      },
+      {
+        "id": "e01_q19",
+        "topic": "Cụm từ cố định (Collocations)",
+        "difficulty": "Vận dụng",
+        "question": "Every student should ________ an effort to improve their English communicative skills.",
+        "options": [
+          "do",
+          "make",
+          "take",
+          "give"
+        ],
+        "correctIndex": 1,
+        "explanation": "Cụm từ cố định (Collocation): **make an effort (to do sth)** nghĩa là 'nỗ lực, cố gắng làm việc gì'.\nKhông dùng 'do an effort'.",
+        "trapTip": "Phân biệt Make và Do: make an effort, make a mistake, make progress, do homework, do research."
+      },
+      {
+        "id": "e01_q20",
+        "topic": "Tìm lỗi sai (Error Identification)",
+        "difficulty": "Vận dụng",
+        "question": "Find the underlined part that needs correction: 'Although he (A) <u>was tired</u>, (B) <u>but</u> he (C) <u>stayed up late</u> to finish (D) <u>his project</u>.'",
+        "options": [
+          "was tired",
+          "but",
+          "stayed up late",
+          "his project"
+        ],
+        "correctIndex": 1,
+        "explanation": "Trong tiếng Anh, **Although** và **But** KHÔNG BAO GIỜ cùng xuất hiện trong một câu. Đã dùng 'Although' ở mệnh đề đầu thì ở mệnh đề thứ hai chỉ dùng dấu phẩy, phải bỏ 'but'.\nSửa lại: 'Although he was tired, he stayed up late...'.",
+        "trapTip": "LỖI KINH ĐIỂN CỦA HỌC SINH VIỆT NAM: Dịch theo tiếng Việt 'Mặc dù... nhưng...' nên hay cho cả Although lẫn But vào cùng một câu!"
+      },
+      {
+        "id": "e01_q21",
+        "topic": "Tìm lỗi sai (Error Identification)",
+        "difficulty": "Vận dụng",
+        "question": "Find the underlined part that needs correction: 'Neither my father (A) <u>nor</u> my mother (B) <u>like</u> (C) <u>drinking</u> coffee in the (D) <u>evening</u>.'",
+        "options": [
+          "nor",
+          "like",
+          "drinking",
+          "evening"
+        ],
+        "correctIndex": 1,
+        "explanation": "Cấu trúc hòa hợp chủ vị với **Neither... nor...**:\nĐộng từ chia theo chủ ngữ gần nó nhất (chủ ngữ đứng sau 'nor').\nỞ đây 'my mother' là danh từ số ít ở hiện tại đơn nên động từ phải chia thêm -s: **likes**.",
+        "trapTip": "Công thức: Neither S1 nor S2 + V(chia theo S2). S2 là số ít thì V chia số ít!"
+      },
+      {
+        "id": "e01_q22",
+        "topic": "Từ đồng nghĩa (Closest in Meaning)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word CLOSEST in meaning to the underlined word: 'The scientist spent years doing research to find an **<u>effective</u>** treatment for this rare disease.'",
+        "options": [
+          "useful",
+          "harmful",
+          "useless",
+          "expensive"
+        ],
+        "correctIndex": 0,
+        "explanation": "- *effective* (adj): hiệu quả, hữu ích (= useful / efficacious).\n- *harmful*: có hại.\n- *useless*: vô ích.\n- *expensive*: đắt đỏ.\nDo đó 'effective' đồng nghĩa với 'useful'.",
+        "trapTip": "Luôn kiểm tra ngữ cảnh câu: tìm phương thuốc 'hiệu quả' cho bệnh nhân."
+      },
+      {
+        "id": "e01_q23",
+        "topic": "Từ trái nghĩa (Opposite in Meaning)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word OPPOSITE in meaning to the underlined word: 'We should encourage people to use public transport to **<u>reduce</u>** traffic jams.'",
+        "options": [
+          "decrease",
+          "increase",
+          "control",
+          "prevent"
+        ],
+        "correctIndex": 1,
+        "explanation": "- *reduce* (v): làm giảm, cắt giảm.\n- *decrease*: làm giảm (từ đồng nghĩa).\n- *increase* (v): làm tăng lên (TỪ TRÁI NGHĨA).\nDo đó từ trái nghĩa với 'reduce' là 'increase'.",
+        "trapTip": "CẨN THẬN: Đề bài yêu cầu tìm từ TRÁI NGHĨA (Opposite). Đừng vội vàng chọn từ đồng nghĩa 'decrease'!"
+      },
+      {
+        "id": "e01_q24",
+        "topic": "Viết lại câu (Sentence Transformation)",
+        "difficulty": "Vận dụng",
+        "question": "Choose the sentence that is closest in meaning: 'I have never seen such a fascinating science-fiction movie before.'",
+        "options": [
+          "This is the most fascinating science-fiction movie I have ever seen.",
+          "I have seen this movie many times before.",
+          "This movie is not as fascinating as other movies.",
+          "I saw a more fascinating movie yesterday."
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc viết lại câu kinh điển giữa So sánh nhất và Hiện tại hoàn thành:\n**S + have never + V3/ed + such a/an + Adj + N = This is the most + Adj + N + S + have ever + V3/ed**.\nNghĩa: 'Tôi chưa bao giờ xem bộ phim nào hấp dẫn như vậy' = 'Đây là bộ phim khoa học viễn tưởng hấp dẫn nhất tôi từng xem'.",
+        "trapTip": "Học thuộc lòng công thức: 'have never ... such a ...' = 'This is the most/best ... I have ever ...'."
+      },
+      {
+        "id": "e01_q25",
+        "topic": "Viết lại câu gián tiếp (Reported Speech)",
+        "difficulty": "Vận dụng",
+        "question": "Choose the sentence that is closest in meaning: 'Why don't you join an English club to practice speaking?', asked Lan.",
+        "options": [
+          "Lan suggested that I should join an English club to practice speaking.",
+          "Lan told me why I didn't join an English club.",
+          "Lan invited me to her English club yesterday.",
+          "Lan ordered me to join an English club immediately."
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc gợi ý 'Why don't you...?' khi chuyển sang câu gián tiếp dùng động từ tường thuật **suggest**:\n**S + suggested that + S + (should) + V-inf**.\nDo đó phương án đúng là Lan suggested that I should join an English club...",
+        "trapTip": "'Why don't you' là câu gợi ý (suggestion), không phải câu hỏi chất vấn 'tại sao'!"
+      }
+    ],
+    "year": 2023,
+    "location": "Toàn quốc",
+    "badgeText": "Đề Chuẩn Toàn Quốc"
+  }
+];

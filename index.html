@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduPass 10 - Hệ Thống Thi Thử & Luyện Thi Vào Lớp 10 Toàn Diện</title>
+  <meta name="description" content="Trang web thi thử tuyển sinh lớp 9 lên 10: thi thử bấm giờ thực chiến môn Toán, Văn, Anh, nhận kết quả chi tiết, sổ tay kiểm tra lỗi sai, ôn tập công thức và theo dõi lộ trình tiến bộ.">
+  
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- KaTeX for High Quality Math Formulas -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Chart.js for Progress Visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/exam.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ================= APP HEADER ================= -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="header-top-row">
+        <div class="brand-wrapper" id="brandLogoLink">
+          <div class="brand-logo-icon">
+            <i data-lucide="graduation-cap"></i>
+          </div>
+          <div class="brand-info">
+            <div class="brand-title">
+              EduPass 10 <span class="brand-badge">Lớp 9 lên 10</span>
+            </div>
+            <div class="brand-subtitle">Chinh phục cánh cổng trường cấp 3 mơ ước</div>
+          </div>
+        </div>
+
+        <div class="header-controls">
+          <button class="btn-icon-circle" id="themeToggleBtn" title="Chuyển đổi giao diện Sáng / Tối">
+            <i data-lucide="sun"></i>
+          </button>
+          <button class="btn-icon-circle" id="soundToggleBtn" title="Bật / Tắt âm thanh hiệu ứng">
+            <i data-lucide="volume-2"></i>
+          </button>
+          <button class="btn-icon-circle" id="btnResetData" title="Khôi phục dữ liệu mẫu">
+            <i data-lucide="rotate-ccw"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="header-stats">
+        <div class="stat-pill countdown-pill" id="headerCountdownPill" title="Thời gian còn lại tới kỳ thi tuyển sinh lớp 10">
+          <i data-lucide="calendar"></i>
+          <span id="headerCountdownText">Còn 54 ngày thi vào 10</span>
+        </div>
+        <div class="stat-pill streak-pill" title="Chuỗi ngày học liên tục">
+          <i data-lucide="flame"></i>
+          <span id="headerStreakVal">6 ngày</span>
+        </div>
+        <div class="stat-pill target-pill" id="headerTargetPill" title="Nhấn để đổi trường mục tiêu">
+          <i data-lucide="target"></i>
+          <span id="headerTargetSchoolVal">THPT Nguyễn Thượng Hiền (TP.HCM)</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN NAVIGATION TABS ================= -->
+  <nav class="app-nav">
+    <div class="nav-container">
+      <button class="nav-tab-btn active" data-tab="dashboard">
+        <i data-lucide="layout-dashboard"></i> Tổng quan
+      </button>
+      <button class="nav-tab-btn" data-tab="exams-list">
+        <i data-lucide="file-text"></i> Danh sách đề thi
+      </button>
+      <button class="nav-tab-btn" data-tab="exam">
+        <i data-lucide="timer"></i> Phòng thi thử
+      </button>
+      <button class="nav-tab-btn" data-tab="results">
+        <i data-lucide="bar-chart-2"></i> Kết quả thi
+      </button>
+      <button class="nav-tab-btn" data-tab="review">
+        <i data-lucide="search"></i> Xem lại bài làm
+      </button>
+      <button class="nav-tab-btn" data-tab="mistakes">
+        <i data-lucide="book-x"></i> Sổ tay lỗi sai <span class="nav-tab-badge" id="navMistakeBadgeCount">2</span>
+      </button>
+      <button class="nav-tab-btn" data-tab="knowledge">
+        <i data-lucide="sparkles"></i> Ôn tập kiến thức
+      </button>
+      <button class="nav-tab-btn" data-tab="roadmap">
+        <i data-lucide="trending-up"></i> Lộ trình tiến bộ
+      </button>
+    </div>
+  </nav>
+
+  <!-- ================= APP MAIN VIEW AREA ================= -->
+  <main class="app-main">
+
+    <!-- TAB 1: DASHBOARD (TỔNG QUAN) -->
+    <section class="tab-pane active" id="tabPane_dashboard">
+      <!-- Hero Banner -->
+      <div class="hero-banner">
+        <div class="hero-banner-content">
+          <div class="hero-tag">
+            <i data-lucide="zap"></i> Hệ Thống Luyện Thi Trí Tuệ Lớp 10
+          </div>
+          <h1 class="hero-title">Tự Tin Bứt Phá Điểm 9+ Vào Trường THPT Mơ Ước</h1>
+          <p class="hero-description">
+            Thi thử chuẩn cấu trúc đề thi tuyển sinh của các Sở GD&ĐT, phát hiện ngay lỗ hổng kiến thức, giải mã cặn kẽ từng bẫy đề thi và theo dõi lộ trình tiến bộ theo thời gian thực.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary btn-lg" id="btnHeroStartExam">
+              <i data-lucide="play-circle"></i> Bắt đầu thi thử ngay
+            </button>
+            <button class="btn btn-secondary btn-lg" id="btnHeroRoadmap">
+              <i data-lucide="map"></i> Khám phá lộ trình 4 chặng
+            </button>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <img src="assets/hero_exam_prep.jpg" alt="Luyện thi vào lớp 10 EduPass" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Quick Stats Grid -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon indigo">
+            <i data-lucide="award"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-value" id="dashAverageScore">8.2/10</div>
+            <div class="stat-label">Điểm trung bình hiện tại</div>
+            <div class="stat-sub">↑ Tăng 0.8đ so với tuần trước</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon emerald">
+            <i data-lucide="check-circle-2"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-value" id="dashTotalExams">4</div>
+            <div class="stat-label">Bộ đề đã hoàn thành</div>
+            <div class="stat-sub">Toán • Ngữ Văn • Tiếng Anh</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon cyan">
+            <i data-lucide="pie-chart"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-value" id="dashAccuracyRate">82%</div>
+            <div class="stat-label">Tỷ lệ trả lời chính xác</div>
+            <div class="stat-sub">Mức độ an toàn cao</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon rose">
+            <i data-lucide="alert-octagon"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-value" id="dashMistakesCount">2</div>
+            <div class="stat-label">Câu sai trong sổ tay</div>
+            <div class="stat-sub" style="color: var(--primary); cursor: pointer;" id="btnGoToMistakeNotebook">Khắc phục ngay →</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPECIAL SECTION: CHUYÊN TRANG TIẾNG ANH VÀO 10 TP.HCM -->
+      <div class="stat-card" style="margin-bottom: 2rem; padding: 2rem; background: linear-gradient(135deg, rgba(14, 165, 233, 0.2) 0%, rgba(99, 102, 241, 0.15) 50%, rgba(17, 24, 39, 0.95) 100%); border: 1.5px solid rgba(14, 165, 233, 0.5); box-shadow: 0 10px 30px rgba(14, 165, 233, 0.2);">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 1rem; width: 100%;">
+          <div style="flex: 1; min-width: 280px;">
+            <div style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.85rem; border-radius: 999px; background: rgba(14, 165, 233, 0.25); color: #38bdf8; font-weight: 800; font-size: 0.82rem; text-transform: uppercase; margin-bottom: 0.75rem; letter-spacing: 0.03em;">
+              <i data-lucide="sparkles"></i> Kho Đề Thi Tuyển Sinh Lớp 10 Các Năm (2022 - 2024)
+            </div>
+            <h2 style="font-size: 1.65rem; font-weight: 900; line-height: 1.3; margin-bottom: 0.5rem; color: #fff;">
+              Chuyên Trang Luyện Đề Thi Tuyển Sinh Vào 10 Qua Các Năm
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; max-width: 760px;">
+              Kho đề thi chính thức các năm <strong>2024, 2023, 2022</strong> chuẩn Sở GD&ĐT TP.HCM và Hà Nội: Đầy đủ 8 phần thi Tiếng Anh (Biển báo, Đọc hiểu Cần Giờ/Chợ Lớn/Bánh mì, Điền từ Xe buýt điện, Word Form, Viết lại câu) và 8 bài Toán thực tế đặc trưng TP.HCM. Có phát âm Audio bản ngữ từng câu!
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+            <button class="btn btn-primary" id="btnBannerStartHcmcEnglish" style="background: linear-gradient(135deg, #f59e0b, #ef4444); font-weight: 800; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);">
+              <i data-lucide="play-circle"></i> Đề TP.HCM 2024 Mới Nhất (40 câu)
+            </button>
+            <button class="btn btn-secondary" onclick="window.examEngine.startExam(window.ENGLISH_EXAMS.find(e => e.id === 'eng_exam_02'))">
+              <i data-lucide="file-check"></i> Đề TP.HCM 2023 (40 câu)
+            </button>
+            <button class="btn btn-secondary" onclick="window.examEngine.startExam(window.ENGLISH_EXAMS.find(e => e.id === 'eng_exam_hcmc_2022'))">
+              <i data-lucide="history"></i> Đề TP.HCM 2022 (40 câu)
+            </button>
+            <button class="btn btn-secondary" onclick="window.examEngine.startExam(window.ENGLISH_EXAMS.find(e => e.id === 'eng_exam_hanoi_2023'))">
+              <i data-lucide="award"></i> Đề Hà Nội 2023 (40 câu)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Three Core Subjects Section -->
+      <div class="section-header">
+        <h2 class="section-title">
+          <i data-lucide="compass"></i> Khám phá các môn thi trọng tâm
+        </h2>
+        <div class="section-actions">
+          <button class="btn btn-secondary btn-sm" onclick="window.app.switchTab('exams-list')">
+            Xem tất cả bộ đề các năm <i data-lucide="arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="subject-grid">
+        <!-- Card Môn Toán -->
+        <div class="subject-card">
+          <div class="subject-card-top">
+            <span class="subject-badge math">Toán Học 9</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Hệ số 1 hoặc 2</span>
+          </div>
+          <h3 class="subject-title">Toán Tuyển Sinh Vào 10</h3>
+          <p class="subject-desc">
+            Bộ đề chính thức các năm 2024, 2023 của TP.HCM & Hà Nội: Parabol, Vi-ét, Giảm giá kép Phương Nam/Co.opmart, Pha cồn Chợ Rẫy, Lượng giác Cột cờ/Landmark 81, Cước taxi Xanh SM.
+          </p>
+          <div class="subject-meta">
+            <div class="subject-meta-item"><i data-lucide="layers"></i> 4 Đề thi các năm</div>
+            <div class="subject-meta-item"><i data-lucide="file-question"></i> 49 Câu hỏi thực tế</div>
+          </div>
+          <button class="btn btn-primary" onclick="window.examEngine.startExam(window.MATH_EXAMS.find(e => e.id === 'math_exam_hcmc_2024'))">
+            <i data-lucide="play"></i> Thi Đề Toán TP.HCM 2024
+          </button>
+        </div>
+
+        <!-- Card Môn Tiếng Anh -->
+        <div class="subject-card" style="border-color: rgba(14, 165, 233, 0.4); box-shadow: 0 4px 18px rgba(14, 165, 233, 0.15);">
+          <div class="subject-card-top">
+            <span class="subject-badge english">Tiếng Anh 9 (Trọng Tâm)</span>
+            <span style="font-size: 0.8rem; color: #38bdf8; font-weight: 700;">★ 6 Bộ đề các năm</span>
+          </div>
+          <h3 class="subject-title">Tiếng Anh Tuyển Sinh Vào 10</h3>
+          <p class="subject-desc">
+            Kho đề thi chính thức TP.HCM (2024, 2023, 2022), Hà Nội 2023 & Đề Chuyên: Chuẩn 40 câu 90 phút với Biển báo thực tế, Đọc hiểu, Điền từ, Word Form và Viết lại câu.
+          </p>
+          <div class="subject-meta">
+            <div class="subject-meta-item"><i data-lucide="layers"></i> 6 Đề thi các năm</div>
+            <div class="subject-meta-item"><i data-lucide="file-question"></i> 205 Câu hỏi chuẩn hóa</div>
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn btn-primary" style="flex: 1;" onclick="window.examEngine.startExam(window.ENGLISH_EXAMS.find(e => e.id === 'eng_exam_hcmc_2024'))">
+              <i data-lucide="play"></i> Vào thi Đề 2024
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="window.app.switchTab('exams-list')" title="Xem toàn bộ kho đề">
+              Kho đề
+            </button>
+          </div>
+        </div>
+
+        <!-- Card Môn Ngữ Văn -->
+        <div class="subject-card">
+          <div class="subject-card-top">
+            <span class="subject-badge literature">Ngữ Văn 9</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Hệ số 1 hoặc 2</span>
+          </div>
+          <h3 class="subject-title">Ngữ Văn Tuyển Sinh Vào 10</h3>
+          <p class="subject-desc">
+            Đề thi chính thức TP.HCM 2023 chủ đề 'Cất cánh', Đọc hiểu thông điệp cuộc sống, Lòng biết ơn, Trách nhiệm tuổi trẻ và kiến thức tác giả - tác phẩm lớp 9 trọng tâm.
+          </p>
+          <div class="subject-meta">
+            <div class="subject-meta-item"><i data-lucide="layers"></i> 2 Đề thi các năm</div>
+            <div class="subject-meta-item"><i data-lucide="file-question"></i> 30 Câu trắc nghiệm</div>
+          </div>
+          <button class="btn btn-primary" onclick="window.examEngine.startExam(window.LITERATURE_EXAMS.find(e => e.id === 'lit_exam_hcmc_2023'))">
+            <i data-lucide="play"></i> Thi Đề Ngữ Văn 2023
+          </button>
+        </div>
+      </div>
+
+      <!-- Recent Exam Activity -->
+      <div class="section-header" style="margin-top: 2rem;">
+        <h2 class="section-title">
+          <i data-lucide="history"></i> Lịch sử thi thử gần nhất
+        </h2>
+      </div>
+      <div id="recentExamHistoryList">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- TAB 2: EXAMS LIST (DANH SÁCH BỘ ĐỀ) -->
+    <section class="tab-pane" id="tabPane_exams-list">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Kho Đề Thi Tuyển Sinh Vào Lớp 10</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Chọn đề thi theo môn học hoặc theo định hướng cấu trúc đề của các Sở Giáo Dục</p>
+        </div>
+      </div>
+
+      <!-- Enhanced Filter and Search Container -->
+      <div class="exam-filter-container">
+        <!-- Search row -->
+        <div class="exam-search-row">
+          <div class="exam-search-input-wrap">
+            <i data-lucide="search" class="exam-search-icon"></i>
+            <input type="text" id="examSearchInput" placeholder="Tìm kiếm đề thi: gõ 2024, TP.HCM, Hà Nội, Biển báo, Parabol, Word Form..." class="exam-search-input">
+            <button id="btnClearExamSearch" class="btn-clear-search" style="display: none;" title="Xóa tìm kiếm">&times;</button>
+          </div>
+          <div class="exam-results-count-pill" id="examCountDisplay">
+            <i data-lucide="layers"></i> Đang hiển thị <span id="examShownCount">12</span>/<span id="examTotalCount">12</span> bộ đề
+          </div>
+        </div>
+
+        <!-- Filter Row 1: Môn học -->
+        <div class="filter-bar" style="margin-bottom: 0.5rem;">
+          <div class="filter-group">
+            <span class="filter-label"><i data-lucide="book-open"></i> Môn học:</span>
+            <button class="filter-chip exam-filter-chip active" data-filter-type="subject" data-val="all">Tất cả môn</button>
+            <button class="filter-chip exam-filter-chip" data-filter-type="subject" data-val="english">Tiếng Anh (Trọng tâm)</button>
+            <button class="filter-chip exam-filter-chip" data-filter-type="subject" data-val="math">Toán Học</button>
+            <button class="filter-chip exam-filter-chip" data-filter-type="subject" data-val="literature">Ngữ Văn</button>
+          </div>
+        </div>
+
+        <!-- Filter Row 2: Năm thi -->
+        <div class="filter-bar" style="margin-bottom: 0.5rem;">
+          <div class="filter-group">
+            <span class="filter-label"><i data-lucide="calendar"></i> Năm thi:</span>
+            <button class="filter-chip exam-filter-chip active" data-filter-type="year" data-val="all">Tất cả năm</button>
+            <button class="filter-chip exam-filter-chip" data-filter-type="year" data-val="2024">Năm 2024 (Mới nhất)</button>
+            <button class="filter-chip exam-filter-chip" data-filter-type="year" data-val="2023">Năm 2023</button>
+            <button class="filter-chip exam-filter-chip" data-filter-type="year" data-val="2022">Năm 2022</button>
+          </div>
+        </div>
+
+        <!-- Filter Row 3: Khu vực tuyển sinh -->
+        <div class="filter-bar">
+          <div class="filter-group">
+            <span class="filter-label"><i data-lucide="map-pin"></i> Khu vực:</span>
+            <button class="filter-chip exam-filter-chip active" data-filter-type="location" data-val="all">Tất cả khu vực</button>
+            <button class="filter-chip exam-filter-chip" data-filter-type="location" data-val="TP.HCM">⭐ TP. Hồ Chí Minh</button>
+            <button class="filter-chip exam-filter-chip" data-filter-type="location" data-val="Hà Nội">TP. Hà Nội</button>
+            <button class="filter-chip exam-filter-chip" data-filter-type="location" data-val="Toàn quốc">Chuẩn Toàn Quốc / Chuyên</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Exam Catalog Grid -->
+      <div class="subject-grid" id="examCatalogGrid">
+        <!-- Dynamically injected -->
+      </div>
+    </section>
+
+    <!-- TAB 3: EXAM SIMULATOR (PHÒNG THI THỰC CHIẾN) -->
+    <section class="tab-pane" id="tabPane_exam">
+      <div class="exam-container">
+        <!-- Sticky Exam Top Control Bar -->
+        <div class="exam-bar">
+          <div class="exam-bar-left">
+            <div class="exam-title-badge" id="examTitleBadge">
+              Đề thi thử Tuyển sinh Lớp 10
+            </div>
+            <div class="exam-timer-wrapper" id="examTimerWrapper" title="Thời gian làm bài còn lại">
+              <i data-lucide="clock"></i>
+              <span id="examTimerDisplay">45:00</span>
+            </div>
+          </div>
+          <div class="exam-bar-right">
+            <button class="btn btn-secondary btn-sm" id="btnFlagQuestion" title="Đánh dấu câu này để xem lại sau">
+              <i data-lucide="flag"></i> Đánh dấu xem lại
+            </button>
+            <button class="btn btn-primary btn-sm" id="btnSubmitExam">
+              <i data-lucide="send"></i> Nộp bài thi
+            </button>
+          </div>
+        </div>
+
+        <!-- Main Work Area (Left: Question Sheet, Right: Palette) -->
+        <div class="exam-work-area">
+          <!-- Question Sheet -->
+          <div class="question-sheet">
+            <div class="question-sheet-header">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <span class="question-seq-badge" id="currentQuestionSeq">Câu 1</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted);" id="totalQuestionsSeq">/ 15</span>
+                <span class="question-topic-pill" id="currentQuestionTopic">Căn thức bậc hai</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <span class="badge" style="background: var(--bg-surface-elevated); padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; color: var(--text-muted);" id="currentQuestionDifficulty">Nhận biết</span>
+                <button class="btn btn-secondary btn-sm" id="btnAudioSpeakQuestion" style="display: none; padding: 3px 8px; font-size: 0.75rem;" title="Nghe phát âm chuẩn (AI Voice)">
+                  <i data-lucide="volume-2" style="width: 13px; height: 13px;"></i> Nghe đọc
+                </button>
+              </div>
+            </div>
+
+            <!-- Question Body -->
+            <div class="question-body" id="currentQuestionBody">
+              Đang tải nội dung câu hỏi...
+            </div>
+
+            <!-- Options List A, B, C, D -->
+            <div class="options-list" id="currentOptionsContainer">
+              <!-- Dynamically rendered -->
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="question-actions-bar">
+              <button class="btn btn-secondary" id="btnPrevQuestion">
+                <i data-lucide="chevron-left"></i> Câu trước
+              </button>
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Dùng phím mũi tên ← → để chuyển câu nhanh</span>
+              </div>
+              <button class="btn btn-primary" id="btnNextQuestion">
+                Câu tiếp theo <i data-lucide="chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Mobile Quick Action Bar -->
+          <div class="mobile-exam-action-bar" id="mobileExamActionBar">
+            <button class="btn btn-secondary btn-sm" id="btnMobilePrevQ" title="Câu trước">
+              <i data-lucide="chevron-left"></i> Trước
+            </button>
+            <button class="btn btn-secondary btn-sm" id="btnMobileTogglePalette" style="font-weight: 700; border-color: var(--primary);">
+              <i data-lucide="grid"></i> <span id="mobileExamProgressText">Câu 1</span>
+            </button>
+            <button class="btn btn-primary btn-sm" id="btnMobileNextQ" title="Câu tiếp theo">
+              Tiếp <i data-lucide="chevron-right"></i>
+            </button>
+            <button class="btn btn-success btn-sm" id="btnMobileSubmitExam" title="Nộp bài">
+              <i data-lucide="send"></i> Nộp
+            </button>
+          </div>
+
+          <!-- Right Palette Card -->
+          <div class="palette-card">
+            <div class="palette-title">
+              <span>Bảng câu hỏi</span>
+              <span style="font-size: 0.82rem; color: var(--primary); font-family: var(--font-mono);">
+                <span id="paletteAnsweredCount">0</span>/<span id="paletteTotalCount">15</span> đã làm
+              </span>
+            </div>
+
+            <div class="palette-legend">
+              <div class="legend-item">
+                <div class="legend-dot answered"></div>
+                <span>Đã trả lời</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot unanswered"></div>
+                <span>Chưa trả lời</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot flagged"></div>
+                <span>Đã cắm cờ</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot current"></div>
+                <span>Đang chọn</span>
+              </div>
+            </div>
+
+            <div class="palette-grid" id="examPaletteGrid">
+              <!-- Dynamically populated 1..N -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: RESULTS (BÁO CÁO KẾT QUẢ THI) -->
+    <section class="tab-pane" id="tabPane_results">
+      <div class="result-card">
+        <div class="result-header">
+          <div class="score-display-box">
+            <div class="score-number" id="resultScoreNumber">8.5</div>
+            <div class="score-scale">thang điểm 10</div>
+          </div>
+          <h2 class="result-verdict" id="resultVerdictText">Rất tốt! Cơ hội đỗ trường mục tiêu rất cao</h2>
+          <p class="result-feedback" id="resultFeedbackText">
+            Kiến thức nền tảng rất chắc chắn. Hãy xem lại một vài câu sai sót nhỏ trong Sổ tay lỗi sai để bứt phá lên mốc 9.5 - 10!
+          </p>
+        </div>
+
+        <div class="result-stats-row">
+          <div class="result-stat-item">
+            <div class="result-stat-val" style="color: var(--success);" id="resultCorrectVal">12/15</div>
+            <div class="result-stat-lbl">Số câu đúng</div>
+          </div>
+          <div class="result-stat-item">
+            <div class="result-stat-val" style="color: var(--danger);" id="resultWrongVal">3</div>
+            <div class="result-stat-lbl">Số câu sai</div>
+          </div>
+          <div class="result-stat-item">
+            <div class="result-stat-val" style="color: var(--accent-cyan);" id="resultTimeVal">28m 15s</div>
+            <div class="result-stat-lbl">Thời gian hoàn thành</div>
+          </div>
+          <div class="result-stat-item">
+            <div class="result-stat-val" style="color: var(--primary);" id="resultAccuracyVal">80%</div>
+            <div class="result-stat-lbl">Độ chính xác</div>
+          </div>
+        </div>
+
+        <!-- Topic Breakdown -->
+        <div style="background: var(--bg-surface-elevated); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); margin-bottom: 2rem;">
+          <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+            <i data-lucide="pie-chart"></i> Đánh giá theo từng chuyên đề kỹ năng:
+          </h3>
+          <div id="resultTopicBreakdown">
+            <!-- Dynamically injected -->
+          </div>
+        </div>
+
+        <!-- Action CTAs -->
+        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <button class="btn btn-primary btn-lg" id="btnViewExamReview">
+            <i data-lucide="eye"></i> Xem chi tiết lời giải & lỗi sai
+          </button>
+          <button class="btn btn-secondary btn-lg" onclick="window.app.switchTab('exams-list')">
+            <i data-lucide="refresh-cw"></i> Làm bài thi khác
+          </button>
+          <button class="btn btn-secondary btn-lg" onclick="window.app.switchTab('roadmap')">
+            <i data-lucide="trending-up"></i> Xem lộ trình tiến bộ
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: REVIEW EXAM (XEM LẠI CHI TIẾT BÀI THI) -->
+    <section class="tab-pane" id="tabPane_review">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title" id="reviewExamTitle">Xem lại chi tiết bài làm</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Rà soát từng câu hỏi, đối chiếu đáp án và nắm bắt các bẫy thường gặp</p>
+        </div>
+        <div class="filter-group">
+          <button class="filter-chip active" id="btnReviewFilterAll">Tất cả câu hỏi</button>
+          <button class="filter-chip" id="btnReviewFilterWrong">Chỉ xem câu sai</button>
+        </div>
+      </div>
+
+      <div id="reviewQuestionsList">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- TAB 6: MISTAKE NOTEBOOK (SỔ TAY LỖI SAI TÍCH LŨY) -->
+    <section class="tab-pane" id="tabPane_mistakes">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">
+            <i data-lucide="book-x"></i> Sổ Tay Lỗi Sai Tuyển Sinh 10
+          </h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Nơi tập hợp tự động toàn bộ những câu hỏi bạn đã từng làm sai từ các bài thi thử. "Không vấp ngã ở cùng một bẫy đề thi hai lần!"
+          </p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <button class="btn btn-success" id="btnRetakeMistakes">
+            <i data-lucide="play"></i> Làm lại riêng các câu sai
+          </button>
+          <button class="btn btn-secondary btn-sm" id="btnClearMistakes" title="Làm sạch sổ tay câu sai">
+            <i data-lucide="trash-2"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="filter-bar">
+        <div class="filter-group">
+          <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Lọc theo môn:</span>
+          <select class="form-select" id="mistakeSubjectFilter" style="width: auto; padding: 0.4rem 1rem;">
+            <option value="all">Tất cả các môn</option>
+            <option value="math">Toán Học</option>
+            <option value="english">Tiếng Anh</option>
+            <option value="literature">Ngữ Văn</option>
+          </select>
+        </div>
+        <div style="font-size: 0.85rem; color: var(--text-muted);">
+          Tổng số: <strong style="color: var(--danger);" id="mistakeNotebookTotalBadge">2 câu</strong>
+        </div>
+      </div>
+
+      <div id="mistakeNotebookList">
+        <!-- Injected dynamically -->
+      </div>
+    </section>
+
+    <!-- TAB 7: KNOWLEDGE & FLASHCARDS (ÔN TẬP KIẾN THỨC) -->
+    <section class="tab-pane" id="tabPane_knowledge">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">
+            <i data-lucide="brain"></i> Trung Tâm Ôn Tập Kiến Thức & Flashcard 3D
+          </h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Lật thẻ nhớ nhanh các công thức toán học, quy tắc ngữ pháp tiếng Anh và kiến thức cốt lõi môn Ngữ Văn.
+          </p>
+        </div>
+      </div>
+
+      <!-- Subject Switch Tabs -->
+      <div class="filter-bar" style="justify-content: flex-start; gap: 0.75rem;">
+        <button class="filter-chip fc-sub-tab active" data-subject="math">📐 Môn Toán</button>
+        <button class="filter-chip fc-sub-tab" data-subject="english">🔤 Tiếng Anh</button>
+        <button class="filter-chip fc-sub-tab" data-subject="literature">📖 Ngữ Văn</button>
+      </div>
+
+      <!-- Flashcard Interactive Area -->
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 2rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <label style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted);">Chuyên đề:</label>
+            <select class="form-select" id="flashcardTopicSelect" style="width: auto; padding: 0.45rem 1rem;">
+              <!-- Options injected -->
+            </select>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <span class="stat-pill" style="font-size: 0.8rem;" id="fcMasteryCountBadge">0 thẻ đã thuộc</span>
+            <span class="stat-pill" style="font-size: 0.8rem; font-family: var(--font-mono);" id="fcCardCounter">1 / 3</span>
+          </div>
+        </div>
+
+        <!-- 3D Interactive Flashcard Stage -->
+        <div class="flashcard-stage" id="interactiveFlashcard" title="Nhấn vào đây hoặc bấm nút Lật thẻ để xem đáp án">
+          <div class="flashcard-inner">
+            <div class="flashcard-front">
+              <span class="subject-badge math" id="fcSubjectBadge" style="margin-bottom: 1rem;">Toán Học</span>
+              <div class="flashcard-question" id="fcCardQuestion">
+                Điều kiện xác định của căn bậc hai?
+              </div>
+              <div class="flashcard-hint">
+                <i data-lucide="touchpad"></i> Nhấn vào thẻ để lật xem lời giải
+              </div>
+            </div>
+            <div class="flashcard-back">
+              <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; color: #a5b4fc;">
+                Công thức & Phương pháp ghi nhớ:
+              </div>
+              <div class="flashcard-answer" id="fcCardAnswer">
+                Căn A xác định khi A >= 0
+              </div>
+              <div class="flashcard-hint" style="color: #c7d2fe;">
+                <i data-lucide="check-circle"></i> Nhấn lần nữa để lật lại mặt trước
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard Controls -->
+        <div class="flashcard-controls">
+          <button class="btn btn-secondary" id="btnFcPrev" title="Thẻ trước">
+            <i data-lucide="arrow-left"></i>
+          </button>
+          <button class="btn btn-secondary" id="btnFcFlip">
+            <i data-lucide="rotate-cw"></i> Lật thẻ
+          </button>
+          <button class="btn btn-success" id="btnFcMaster">
+            <i data-lucide="bookmark-plus"></i> Đánh dấu đã thuộc
+          </button>
+          <button class="btn btn-secondary" id="btnFcShuffle" title="Trộn thẻ ngẫu nhiên">
+            <i data-lucide="shuffle"></i>
+          </button>
+          <button class="btn btn-secondary" id="btnFcNext" title="Thẻ tiếp theo">
+            <i data-lucide="arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Full Topic Cheat Sheets & Traps -->
+      <div class="section-header">
+        <h3 class="section-title">
+          <i data-lucide="book-open"></i> Cẩm nang công thức trọng tâm & Bẫy đề thi
+        </h3>
+      </div>
+      <div id="knowledgeCheatSheetArea">
+        <!-- Injected dynamically -->
+      </div>
+    </section>
+
+    <!-- TAB 8: ROADMAP & PROGRESS (LỘ TRÌNH TIẾN BỘ) -->
+    <section class="tab-pane" id="tabPane_roadmap">
+
+      <!-- Sticky Quick Section Jump Navigation -->
+      <div class="roadmap-quick-nav" id="roadmapQuickNav">
+        <button class="roadmap-quick-btn active" data-jump="sec_roadmapMilestones">
+          <i data-lucide="milestone"></i> Lộ trình 4 Chặng
+        </button>
+        <button class="roadmap-quick-btn" data-jump="sec_roadmapTarget">
+          <i data-lucide="target"></i> Mục tiêu & Dự báo
+        </button>
+        <button class="roadmap-quick-btn" data-jump="sec_roadmapActionPlan">
+          <i data-lucide="compass"></i> Kế hoạch hôm nay
+        </button>
+        <button class="roadmap-quick-btn" data-jump="sec_roadmapDiagnostics">
+          <i data-lucide="stethoscope"></i> Chẩn đoán 3 Môn
+        </button>
+        <button class="roadmap-quick-btn" data-jump="sec_roadmapCharts">
+          <i data-lucide="bar-chart-2"></i> Biểu đồ & Radar
+        </button>
+        <button class="roadmap-quick-btn" data-jump="sec_roadmapAchievements">
+          <i data-lucide="award"></i> Huy hiệu
+        </button>
+      </div>
+
+      <!-- Target High School Card with 3-Subject Admission Projection -->
+      <div class="stat-card" id="sec_roadmapTarget" style="margin-bottom: 2rem; padding: 1.8rem; background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(14, 165, 233, 0.1) 50%, var(--bg-surface) 100%); border: 1.5px solid rgba(99, 102, 241, 0.35); box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <div style="flex: 1; min-width: 300px;">
+            <div style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.25rem 0.75rem; border-radius: 999px; background: rgba(99, 102, 241, 0.2); color: #818cf8; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.5rem;">
+              <i data-lucide="target"></i> Dự Báo Trúng Tuyển Tuyển Sinh Lớp 10
+            </div>
+            <h2 style="font-size: 1.7rem; font-weight: 900; color: var(--text-main); margin-bottom: 0.35rem;" id="roadmapTargetSchoolName">
+              THPT Nguyễn Thượng Hiền (TP.HCM)
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.5;">
+              Hệ thống tự động tổng hợp điểm thực tế 3 môn (Toán + Tiếng Anh + Ngữ Văn) theo barem tuyển sinh Sở GD&ĐT để đo lường xác suất trúng tuyển an toàn.
+            </p>
+          </div>
+          <button class="btn btn-secondary btn-sm" id="btnEditTargetSchool" style="align-self: flex-start;">
+            <i data-lucide="edit-3"></i> Đổi trường mục tiêu
+          </button>
+        </div>
+
+        <!-- Metric Cards Inside Target Header -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle);">
+          <div>
+            <div style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Điểm chuẩn mục tiêu:</div>
+            <div style="font-size: 1.4rem; font-weight: 800; font-family: var(--font-mono); color: var(--text-main); margin-top: 2px;" id="roadmapTargetBenchmark">
+              25.50 điểm
+            </div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">Trung bình cần: <strong id="roadmapTargetPerSubject">8.50đ/môn</strong></div>
+          </div>
+
+          <div>
+            <div style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Tổng điểm 3 môn dự phóng:</div>
+            <div style="font-size: 1.4rem; font-weight: 800; font-family: var(--font-mono); color: var(--primary); margin-top: 2px;" id="roadmapProjectedTotal">
+              24.50 / 30.0đ
+            </div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);" id="roadmapProjectedBreakdown">Toán: 8.5 • Anh: 8.5 • Văn: 7.5</div>
+          </div>
+
+          <div>
+            <div style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Chênh lệch so với điểm chuẩn:</div>
+            <div style="font-size: 1.4rem; font-weight: 800; font-family: var(--font-mono); margin-top: 2px;" id="roadmapScoreGap">
+              -1.00 điểm
+            </div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);" id="roadmapGapDetail">Cần thêm ~1 - 2 câu đúng</div>
+          </div>
+
+          <div>
+            <div style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Xác suất trúng tuyển:</div>
+            <div class="stat-pill" style="margin-top: 0.35rem; font-weight: 800; display: inline-flex; width: auto;" id="roadmapAdmissionChanceBadge">
+              Đang bám đuổi (65 - 75%)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4-Stage Milestone Roadmap with Mode Switcher (PROMINENT POSITION) -->
+      <div id="sec_roadmapMilestones">
+        <div class="section-header" style="flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <div style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.2rem 0.6rem; border-radius: 999px; background: rgba(14, 165, 233, 0.15); color: #38bdf8; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.35rem;">
+              <i data-lucide="compass"></i> Trọng Tâm Học Tập
+            </div>
+            <h3 class="section-title">
+              <i data-lucide="milestone"></i> Lộ trình 4 Chặng Chinh Phục Điểm 9 - 10
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Tiến độ tự động đồng bộ theo từng tiêu chí học lực đã được kiểm chứng qua các bài thi thực tế</p>
+          </div>
+
+          <!-- Mode Switcher -->
+          <div class="roadmap-mode-switcher">
+            <button class="roadmap-mode-btn active" id="btnRoadmapModeAll">
+              <i data-lucide="layers"></i> Toàn diện 3 Môn
+            </button>
+            <button class="roadmap-mode-btn" id="btnRoadmapModeEnglish">
+              <i data-lucide="sparkles"></i> Chuyên sâu Tiếng Anh TP.HCM
+            </button>
+          </div>
+        </div>
+
+        <div class="roadmap-container" id="roadmapMilestonesContainer">
+          <!-- Rendered dynamically based on mode -->
+        </div>
+      </div>
+
+      <!-- Daily Smart Action Plan -->
+      <div id="sec_roadmapActionPlan" style="margin-top: 2rem;">
+        <div class="section-header">
+          <div>
+            <h3 class="section-title">
+              <i data-lucide="compass"></i> Kế hoạch hành động bứt phá hôm nay
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">3 nhiệm vụ ưu tiên nhất dựa trên lịch sử làm bài và lỗi sai gần đây</p>
+          </div>
+        </div>
+
+        <div class="action-plan-grid" id="roadmapActionPlanGrid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
+      <!-- 3-Subject Gap Diagnostics Grid -->
+      <div id="sec_roadmapDiagnostics" style="margin-top: 2rem;">
+        <div class="section-header">
+          <div>
+            <h3 class="section-title">
+              <i data-lucide="stethoscope"></i> Chẩn đoán năng lực & Lỗ hổng theo môn
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Khoanh vùng chính xác môn nào đang là điểm tựa và môn nào cần bồi đắp điểm số</p>
+          </div>
+        </div>
+
+        <div class="diagnostic-grid" id="roadmapDiagnosticGrid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
+      <!-- Charts Section: Score Line Chart + 6-Axis Skill Radar -->
+      <div id="sec_roadmapCharts" style="margin-top: 2rem;">
+        <div class="section-header">
+          <div>
+            <h3 class="section-title">
+              <i data-lucide="line-chart"></i> Phân tích trực quan & Đánh giá năng lực thực tế
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Theo dõi quỹ đạo điểm thi và 6 chiều kỹ năng giải đề</p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
+          <!-- Line Chart -->
+          <div class="subject-card">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+              <h3 style="font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
+                <i data-lucide="trending-up" style="color: var(--primary);"></i> Biểu đồ tiến độ điểm qua các bài thi
+              </h3>
+              <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">Đường tham chiếu: Mục tiêu</span>
+            </div>
+            <div style="position: relative; height: 260px; width: 100%;">
+              <canvas id="scoreProgressionChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Radar Chart -->
+          <div class="subject-card">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+              <h3 style="font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">
+                <i data-lucide="radar" style="color: var(--accent-cyan);"></i> Đánh giá năng lực 6 chiều thực tế
+              </h3>
+              <span style="font-size: 0.75rem; color: #38bdf8; font-weight: 600;">Dữ liệu câu hỏi thật</span>
+            </div>
+            <div style="position: relative; height: 260px; width: 100%;">
+              <canvas id="skillRadarChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Badges & Achievements -->
+      <div id="sec_roadmapAchievements" style="margin-top: 2rem;">
+        <div class="section-header">
+          <h3 class="section-title">
+            <i data-lucide="award"></i> Huy hiệu thành tích cá nhân
+          </h3>
+        </div>
+        <div class="stats-grid" id="achievementsList">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= MODALS ================= -->
+
+  <!-- Modal: Xác nhận nộp bài thi -->
+  <div class="modal-overlay" id="submitConfirmModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 style="font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem;">
+          <i data-lucide="help-circle" style="color: var(--primary);"></i> Xác nhận nộp bài thi
+        </h3>
+      </div>
+      <div class="modal-body">
+        <p id="submitModalMessage" style="font-size: 1rem; line-height: 1.6;">
+          Bạn có chắc chắn muốn nộp bài thi ngay bây giờ?
+        </p>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.75rem;">
+          Sau khi nộp bài, hệ thống sẽ chấm điểm tức thì, chỉ ra các câu làm sai và phân tích chi tiết phương pháp giải.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="btnCancelSubmit">Tiếp tục làm bài</button>
+        <button class="btn btn-primary" id="btnConfirmSubmit">Xác nhận nộp bài</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Đổi trường cấp 3 mục tiêu -->
+  <div class="modal-overlay" id="targetSchoolModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 style="font-size: 1.15rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem;">
+          <i data-lucide="target" style="color: var(--primary);"></i> Cài đặt trường THPT mục tiêu
+        </h3>
+      </div>
+      <div class="modal-body">
+        <div style="margin-bottom: 1.25rem;">
+          <label class="form-label" style="display: flex; justify-content: space-between; align-items: center;">
+            <span>Chọn nhanh trường Top tại TP. Hồ Chí Minh:</span>
+            <span style="font-size: 0.72rem; padding: 2px 8px; border-radius: 999px; background: rgba(14, 165, 233, 0.15); color: #38bdf8; font-weight: 700;">Chuẩn Sở GD&ĐT TP.HCM</span>
+          </label>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.5rem;" id="hcmcSchoolPresets">
+            <button type="button" class="btn btn-secondary btn-sm preset-school-btn" data-name="THPT Nguyễn Thượng Hiền (TP.HCM)" data-score="25.5">Nguyễn Thượng Hiền (25.5đ)</button>
+            <button type="button" class="btn btn-secondary btn-sm preset-school-btn" data-name="THPT Gia Định (TP.HCM)" data-score="24.5">Gia Định (24.5đ)</button>
+            <button type="button" class="btn btn-secondary btn-sm preset-school-btn" data-name="THPT Nguyễn Thị Minh Khai (TP.HCM)" data-score="24.25">Minh Khai (24.25đ)</button>
+            <button type="button" class="btn btn-secondary btn-sm preset-school-btn" data-name="THPT Bùi Thị Xuân (TP.HCM)" data-score="23.75">Bùi Thị Xuân (23.75đ)</button>
+            <button type="button" class="btn btn-secondary btn-sm preset-school-btn" data-name="THPT Lê Quý Đôn (TP.HCM)" data-score="23.5">Lê Quý Đôn (23.5đ)</button>
+            <button type="button" class="btn btn-secondary btn-sm preset-school-btn" data-name="THPT Mạc Đĩnh Chi (TP.HCM)" data-score="23.25">Mạc Đĩnh Chi (23.25đ)</button>
+            <button type="button" class="btn btn-secondary btn-sm preset-school-btn" data-name="THPT Phú Nhuận (TP.HCM)" data-score="23.0">Phú Nhuận (23.0đ)</button>
+            <button type="button" class="btn btn-secondary btn-sm preset-school-btn" data-name="THPT Chuyên Lê Hồng Phong (TP.HCM)" data-score="41.0">Chuyên Lê Hồng Phong (41.0đ)</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tên trường cấp 3 mơ ước của bạn:</label>
+          <input type="text" class="form-input" id="inputTargetSchoolName" placeholder="Ví dụ: THPT Nguyễn Thượng Hiền, THPT Gia Định...">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Điểm chuẩn tham khảo (Tổng điểm các môn):</label>
+          <input type="number" step="0.25" class="form-input" id="inputTargetBenchmark" placeholder="Ví dụ: 25.5 hoặc 41.0">
+          <small style="color: var(--text-muted); font-size: 0.78rem; display: block; margin-top: 4px;">
+            Hệ thống sẽ lấy điểm chuẩn này để so sánh và tính toán tỷ lệ đỗ an toàn.
+          </small>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="btnCancelTargetSchool">Hủy bỏ</button>
+        <button class="btn btn-primary" id="btnSaveTargetSchool">Lưu mục tiêu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MOBILE BOTTOM NAVIGATION BAR ================= -->
+  <nav class="mobile-bottom-nav" id="mobileBottomNav">
+    <button class="mobile-nav-item active" data-tab="dashboard">
+      <i data-lucide="layout-dashboard"></i>
+      <span>Trang chủ</span>
+    </button>
+    <button class="mobile-nav-item" data-tab="exams-list">
+      <i data-lucide="book-open"></i>
+      <span>Kho đề</span>
+    </button>
+    <button class="mobile-nav-item" data-tab="roadmap">
+      <i data-lucide="trending-up"></i>
+      <span>Lộ trình</span>
+    </button>
+    <button class="mobile-nav-item" data-tab="mistakes">
+      <i data-lucide="book-x"></i>
+      <span>Sổ lỗi</span>
+      <span class="mobile-badge" id="mobileMistakeBadge">2</span>
+    </button>
+    <button class="mobile-nav-item" data-tab="knowledge">
+      <i data-lucide="brain"></i>
+      <span>Ôn tập</span>
+    </button>
+  </nav>
+
+  <!-- ================= APP FOOTER ================= -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <div>
+        <strong style="color: var(--text-main);">EduPass 10</strong> — Hệ Thống Thi Thử Tuyển Sinh Vào Lớp 10 Toàn Diện
+        <div style="font-size: 0.78rem; margin-top: 0.25rem;">Xây dựng dành riêng cho các sĩ tử lớp 9 ôn thi vào 10 toàn quốc.</div>
+      </div>
+      <div class="footer-quote">
+        "Thành công là tổng hòa của những nỗ lực nhỏ được lặp đi lặp lại mỗi ngày."
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT BUNDLES ================= -->
+  <script src="js/data/questions-math.js"></script>
+  <script src="js/data/questions-english.js"></script>
+  <script src="js/data/questions-literature.js"></script>
+  <script src="js/data/knowledge-base.js"></script>
+  <script src="js/audio-utils.js"></script>
+  <script src="js/storage-manager.js"></script>
+  <script src="js/exam-engine.js"></script>
+  <script src="js/review-engine.js"></script>
+  <script src="js/flashcards.js"></script>
+  <script src="js/progress-tracker.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
