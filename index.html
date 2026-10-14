@@ -190,27 +190,24 @@
         <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 1rem; width: 100%;">
           <div style="flex: 1; min-width: 280px;">
             <div style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.85rem; border-radius: 999px; background: rgba(14, 165, 233, 0.25); color: #38bdf8; font-weight: 800; font-size: 0.82rem; text-transform: uppercase; margin-bottom: 0.75rem; letter-spacing: 0.03em;">
-              <i data-lucide="sparkles"></i> Kho Đề Thi Tuyển Sinh Lớp 10 Các Năm (2022 - 2024)
+              <i data-lucide="sparkles"></i> Kho Đề Thi Tuyển Sinh & Thi Thử Vào 10 Năm 2025 (GDPT 2018)
             </div>
             <h2 style="font-size: 1.65rem; font-weight: 900; line-height: 1.3; margin-bottom: 0.5rem; color: #fff;">
-              Chuyên Trang Luyện Đề Thi Tuyển Sinh Vào 10 Qua Các Năm
+              Kho Đề Thi Chuẩn Mới 2025–2026 & Đề Thi Thử Các Cụm Trường Trọng Điểm
             </h2>
             <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; max-width: 760px;">
-              Kho đề thi chính thức các năm <strong>2024, 2023, 2022</strong> chuẩn Sở GD&ĐT TP.HCM và Hà Nội: Đầy đủ 8 phần thi Tiếng Anh (Biển báo, Đọc hiểu Cần Giờ/Chợ Lớn/Bánh mì, Điền từ Xe buýt điện, Word Form, Viết lại câu) và 8 bài Toán thực tế đặc trưng TP.HCM. Có phát âm Audio bản ngữ từng câu!
+              Hệ thống tổng hợp <strong>21 bộ đề thi</strong> gồm: Đề tham khảo Sở GD&ĐT TP.HCM, Đề minh họa Bộ GD&ĐT 2025 và <strong>các đề thi thử mới nhất năm 2025</strong> từ cụm trường THCS Quận 1 TP.HCM, Cầu Giấy Hà Nội, THCS Chuyên Lê Hồng Phong - Trần Đại Nghĩa: <strong>Toán (120p)</strong> tỷ lệ 45%-40%-15%, <strong>Văn (120p)</strong> 100% ngoài SGK, <strong>Tiếng Anh (90p)</strong> 40 câu có dạng bài tra cứu chú thích mới!
             </p>
           </div>
           <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
-            <button class="btn btn-primary" id="btnBannerStartHcmcEnglish" style="background: linear-gradient(135deg, #f59e0b, #ef4444); font-weight: 800; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);">
-              <i data-lucide="play-circle"></i> Đề TP.HCM 2024 Mới Nhất (40 câu)
+            <button class="btn btn-primary" onclick="window.examEngine.startExam(window.ENGLISH_EXAMS.find(e => e.id === 'eng_exam_mock_hcmc_2025'))" style="background: linear-gradient(135deg, #0ea5e9, #6366f1); font-weight: 800; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);">
+              <i data-lucide="sparkles"></i> Thi Thử Anh 2025
             </button>
-            <button class="btn btn-secondary" onclick="window.examEngine.startExam(window.ENGLISH_EXAMS.find(e => e.id === 'eng_exam_02'))">
-              <i data-lucide="file-check"></i> Đề TP.HCM 2023 (40 câu)
+            <button class="btn btn-primary" onclick="window.examEngine.startExam(window.MATH_EXAMS.find(e => e.id === 'math_exam_mock_hcmc_2025'))" style="background: linear-gradient(135deg, #f59e0b, #ef4444); font-weight: 800; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);">
+              <i data-lucide="play-circle"></i> Thi Thử Toán Q.1 2025
             </button>
-            <button class="btn btn-secondary" onclick="window.examEngine.startExam(window.ENGLISH_EXAMS.find(e => e.id === 'eng_exam_hcmc_2022'))">
-              <i data-lucide="history"></i> Đề TP.HCM 2022 (40 câu)
-            </button>
-            <button class="btn btn-secondary" onclick="window.examEngine.startExam(window.ENGLISH_EXAMS.find(e => e.id === 'eng_exam_hanoi_2023'))">
-              <i data-lucide="award"></i> Đề Hà Nội 2023 (40 câu)
+            <button class="btn btn-primary" onclick="window.examEngine.startExam(window.LITERATURE_EXAMS.find(e => e.id === 'lit_exam_mock_hcmc_2025'))" style="background: linear-gradient(135deg, #ec4899, #8b5cf6); font-weight: 800; box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);">
+              <i data-lucide="book-open"></i> Thi Thử Văn Chuyên 2025
             </button>
           </div>
         </div>
@@ -223,72 +220,91 @@
         </h2>
         <div class="section-actions">
           <button class="btn btn-secondary btn-sm" onclick="window.app.switchTab('exams-list')">
-            Xem tất cả bộ đề các năm <i data-lucide="arrow-right"></i>
+            Xem tất cả 21 bộ đề thi <i data-lucide="arrow-right"></i>
           </button>
         </div>
       </div>
 
       <div class="subject-grid">
         <!-- Card Môn Toán -->
-        <div class="subject-card">
+        <div class="subject-card" style="border-color: rgba(99, 102, 241, 0.4); box-shadow: 0 4px 18px rgba(99, 102, 241, 0.15);">
           <div class="subject-card-top">
-            <span class="subject-badge math">Toán Học 9</span>
-            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Hệ số 1 hoặc 2</span>
+            <span class="subject-badge math">Toán Học 9 (GDPT 2018)</span>
+            <span style="font-size: 0.8rem; color: #a5b4fc; font-weight: 700;">★ Tỷ Lệ 45% - 40% - 15%</span>
           </div>
           <h3 class="subject-title">Toán Tuyển Sinh Vào 10</h3>
           <p class="subject-desc">
-            Bộ đề chính thức các năm 2024, 2023 của TP.HCM & Hà Nội: Parabol, Vi-ét, Giảm giá kép Phương Nam/Co.opmart, Pha cồn Chợ Rẫy, Lượng giác Cột cờ/Landmark 81, Cước taxi Xanh SM.
+            Chuẩn cấu trúc 7 bài Sở GD&ĐT TP.HCM 2025 & Đề thi thử Cụm Q.1, Cầu Giấy Hà Nội, Bộ GD&ĐT: Parabol, Vi-ét, Thống kê tần số & Xác suất thực nghiệm (15%), Bồn nước inox, Hóa đơn nước Sawaco, Đo tháp Bitexco và Hình học phẳng (45%).
           </p>
           <div class="subject-meta">
-            <div class="subject-meta-item"><i data-lucide="layers"></i> 4 Đề thi các năm</div>
-            <div class="subject-meta-item"><i data-lucide="file-question"></i> 49 Câu hỏi thực tế</div>
+            <div class="subject-meta-item"><i data-lucide="layers"></i> 8 Đề thi chính thức & thi thử</div>
+            <div class="subject-meta-item"><i data-lucide="file-question"></i> 104 Câu hỏi thực tế</div>
           </div>
-          <button class="btn btn-primary" onclick="window.examEngine.startExam(window.MATH_EXAMS.find(e => e.id === 'math_exam_hcmc_2024'))">
-            <i data-lucide="play"></i> Thi Đề Toán TP.HCM 2024
-          </button>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="btn btn-primary" style="flex: 1;" onclick="window.examEngine.startExam(window.MATH_EXAMS.find(e => e.id === 'math_exam_hcmc_2025'))">
+              <i data-lucide="sparkles"></i> Đề TP.HCM 2025
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="window.examEngine.startExam(window.MATH_EXAMS.find(e => e.id === 'math_exam_mock_hcmc_2025'))" title="Đề Thi Thử Quận 1 2025">
+              Thi Thử Q.1 2025
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="window.examEngine.startExam(window.MATH_EXAMS.find(e => e.id === 'math_exam_mock_hanoi_2025'))" title="Đề Thi Thử Cầu Giấy Hà Nội 2025">
+              Thi Thử HN 2025
+            </button>
+          </div>
         </div>
 
         <!-- Card Môn Tiếng Anh -->
         <div class="subject-card" style="border-color: rgba(14, 165, 233, 0.4); box-shadow: 0 4px 18px rgba(14, 165, 233, 0.15);">
           <div class="subject-card-top">
-            <span class="subject-badge english">Tiếng Anh 9 (Trọng Tâm)</span>
-            <span style="font-size: 0.8rem; color: #38bdf8; font-weight: 700;">★ 6 Bộ đề các năm</span>
+            <span class="subject-badge english">Tiếng Anh 9 (GDPT 2018)</span>
+            <span style="font-size: 0.8rem; color: #38bdf8; font-weight: 700;">★ 4 Phần 40 Câu (90p)</span>
           </div>
           <h3 class="subject-title">Tiếng Anh Tuyển Sinh Vào 10</h3>
           <p class="subject-desc">
-            Kho đề thi chính thức TP.HCM (2024, 2023, 2022), Hà Nội 2023 & Đề Chuyên: Chuẩn 40 câu 90 phút với Biển báo thực tế, Đọc hiểu, Điền từ, Word Form và Viết lại câu.
+            Chuẩn cấu trúc 4 phần TP.HCM 2025: Ngữ âm, Ngữ pháp - từ vựng - giao tiếp (Smart City, AI giáo dục), Đọc hiểu (Biển báo VinBus/Lab AI, Điền từ, Bảo tồn Chợ Bến Thành), Viết (Word form, Tra cứu chú thích từ điển & thẻ thư viện, Sắp xếp & Viết lại câu).
           </p>
           <div class="subject-meta">
-            <div class="subject-meta-item"><i data-lucide="layers"></i> 6 Đề thi các năm</div>
-            <div class="subject-meta-item"><i data-lucide="file-question"></i> 205 Câu hỏi chuẩn hóa</div>
+            <div class="subject-meta-item"><i data-lucide="layers"></i> 8 Đề thi chính thức & thi thử</div>
+            <div class="subject-meta-item"><i data-lucide="file-question"></i> 285 Câu hỏi chuẩn hóa</div>
           </div>
-          <div style="display: flex; gap: 0.5rem;">
-            <button class="btn btn-primary" style="flex: 1;" onclick="window.examEngine.startExam(window.ENGLISH_EXAMS.find(e => e.id === 'eng_exam_hcmc_2024'))">
-              <i data-lucide="play"></i> Vào thi Đề 2024
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="btn btn-primary" style="flex: 1;" onclick="window.examEngine.startExam(window.ENGLISH_EXAMS.find(e => e.id === 'eng_exam_hcmc_2025'))">
+              <i data-lucide="sparkles"></i> Đề TP.HCM 2025
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="window.examEngine.startExam(window.ENGLISH_EXAMS.find(e => e.id === 'eng_exam_mock_hcmc_2025'))" title="Đề Thi Thử TP.HCM 2025">
+              Thi Thử 2025
             </button>
             <button class="btn btn-secondary btn-sm" onclick="window.app.switchTab('exams-list')" title="Xem toàn bộ kho đề">
-              Kho đề
+              Kho 8 Đề
             </button>
           </div>
         </div>
 
         <!-- Card Môn Ngữ Văn -->
-        <div class="subject-card">
+        <div class="subject-card" style="border-color: rgba(236, 72, 153, 0.4); box-shadow: 0 4px 18px rgba(236, 72, 153, 0.15);">
           <div class="subject-card-top">
-            <span class="subject-badge literature">Ngữ Văn 9</span>
-            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Hệ số 1 hoặc 2</span>
+            <span class="subject-badge literature">Ngữ Văn 9 (GDPT 2018)</span>
+            <span style="font-size: 0.8rem; color: #f472b6; font-weight: 700;">★ 2 Phần - 100% Ngoài SGK</span>
           </div>
           <h3 class="subject-title">Ngữ Văn Tuyển Sinh Vào 10</h3>
           <p class="subject-desc">
-            Đề thi chính thức TP.HCM 2023 chủ đề 'Cất cánh', Đọc hiểu thông điệp cuộc sống, Lòng biết ơn, Trách nhiệm tuổi trẻ và kiến thức tác giả - tác phẩm lớp 9 trọng tâm.
+            Chuẩn 2 phần mỗi phần 5.0 điểm theo Sở GD&ĐT TP.HCM 2025: Phần 1 Đọc hiểu thơ 'Con nằm' (Tế Hanh) / 'Những ngọn gió trẻ' & Viết đoạn văn 200 chữ cảm nghĩ nghệ thuật; Phần 2 Đọc hiểu văn bản thông tin & Viết bài văn nghị luận xã hội về sự trưởng thành.
           </p>
           <div class="subject-meta">
-            <div class="subject-meta-item"><i data-lucide="layers"></i> 2 Đề thi các năm</div>
-            <div class="subject-meta-item"><i data-lucide="file-question"></i> 30 Câu trắc nghiệm</div>
+            <div class="subject-meta-item"><i data-lucide="layers"></i> 5 Đề thi chính thức & thi thử</div>
+            <div class="subject-meta-item"><i data-lucide="file-question"></i> 75 Câu hỏi đổi mới</div>
           </div>
-          <button class="btn btn-primary" onclick="window.examEngine.startExam(window.LITERATURE_EXAMS.find(e => e.id === 'lit_exam_hcmc_2023'))">
-            <i data-lucide="play"></i> Thi Đề Ngữ Văn 2023
-          </button>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="btn btn-primary" style="flex: 1;" onclick="window.examEngine.startExam(window.LITERATURE_EXAMS.find(e => e.id === 'lit_exam_hcmc_2025'))">
+              <i data-lucide="sparkles"></i> Đề TP.HCM 2025
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="window.examEngine.startExam(window.LITERATURE_EXAMS.find(e => e.id === 'lit_exam_mock_hcmc_2025'))" title="Đề Thi Thử Chuyên TP.HCM 2025">
+              Thi Thử Chuyên 2025
+            </button>
+            <button class="btn btn-secondary btn-sm" onclick="window.examEngine.startExam(window.LITERATURE_EXAMS.find(e => e.id === 'lit_exam_moet_2025'))" title="Đề Bộ GD&ĐT 2025">
+              Bộ GD&ĐT 2025
+            </button>
+          </div>
         </div>
       </div>
 
@@ -318,11 +334,11 @@
         <div class="exam-search-row">
           <div class="exam-search-input-wrap">
             <i data-lucide="search" class="exam-search-icon"></i>
-            <input type="text" id="examSearchInput" placeholder="Tìm kiếm đề thi: gõ 2024, TP.HCM, Hà Nội, Biển báo, Parabol, Word Form..." class="exam-search-input">
+            <input type="text" id="examSearchInput" placeholder="Tìm kiếm đề thi: gõ 2025, 2024, TP.HCM, Hà Nội, GDPT 2018, Biển báo, Parabol, Word Form..." class="exam-search-input">
             <button id="btnClearExamSearch" class="btn-clear-search" style="display: none;" title="Xóa tìm kiếm">&times;</button>
           </div>
           <div class="exam-results-count-pill" id="examCountDisplay">
-            <i data-lucide="layers"></i> Đang hiển thị <span id="examShownCount">12</span>/<span id="examTotalCount">12</span> bộ đề
+            <i data-lucide="layers"></i> Đang hiển thị <span id="examShownCount">14</span>/<span id="examTotalCount">14</span> bộ đề
           </div>
         </div>
 
@@ -332,8 +348,8 @@
             <span class="filter-label"><i data-lucide="book-open"></i> Môn học:</span>
             <button class="filter-chip exam-filter-chip active" data-filter-type="subject" data-val="all">Tất cả môn</button>
             <button class="filter-chip exam-filter-chip" data-filter-type="subject" data-val="english">Tiếng Anh (Trọng tâm)</button>
-            <button class="filter-chip exam-filter-chip" data-filter-type="subject" data-val="math">Toán Học</button>
-            <button class="filter-chip exam-filter-chip" data-filter-type="subject" data-val="literature">Ngữ Văn</button>
+            <button class="filter-chip exam-filter-chip" data-filter-type="subject" data-val="math">Toán Học (Toán thực tế)</button>
+            <button class="filter-chip exam-filter-chip" data-filter-type="subject" data-val="literature">Ngữ Văn (GDPT 2018)</button>
           </div>
         </div>
 
@@ -342,6 +358,7 @@
           <div class="filter-group">
             <span class="filter-label"><i data-lucide="calendar"></i> Năm thi:</span>
             <button class="filter-chip exam-filter-chip active" data-filter-type="year" data-val="all">Tất cả năm</button>
+            <button class="filter-chip exam-filter-chip" data-filter-type="year" data-val="2025">🔥 Năm 2025 (GDPT 2018 Mới)</button>
             <button class="filter-chip exam-filter-chip" data-filter-type="year" data-val="2024">Năm 2024 (Mới nhất)</button>
             <button class="filter-chip exam-filter-chip" data-filter-type="year" data-val="2023">Năm 2023</button>
             <button class="filter-chip exam-filter-chip" data-filter-type="year" data-val="2022">Năm 2022</button>
@@ -353,6 +370,7 @@
           <div class="filter-group">
             <span class="filter-label"><i data-lucide="map-pin"></i> Khu vực:</span>
             <button class="filter-chip exam-filter-chip active" data-filter-type="location" data-val="all">Tất cả khu vực</button>
+            <button class="filter-chip exam-filter-chip" data-filter-type="location" data-val="Bộ GD&ĐT">🔥 Chuẩn Bộ GD&ĐT (2025)</button>
             <button class="filter-chip exam-filter-chip" data-filter-type="location" data-val="TP.HCM">⭐ TP. Hồ Chí Minh</button>
             <button class="filter-chip exam-filter-chip" data-filter-type="location" data-val="Hà Nội">TP. Hà Nội</button>
             <button class="filter-chip exam-filter-chip" data-filter-type="location" data-val="Toàn quốc">Chuẩn Toàn Quốc / Chuyên</button>

@@ -5,6 +5,1154 @@
 
 window.ENGLISH_EXAMS = [
   {
+    "id": "eng_exam_mock_hcmc_2025",
+    "title": "Đề Thi Thử Tuyển Sinh Lớp 10 Năm 2025 - Cụm Trường Trọng Điểm TP.HCM",
+    "subject": "english",
+    "year": 2025,
+    "location": "TP.HCM",
+    "isOfficial": false,
+    "badgeText": "📝 Thi Thử TP.HCM 2025",
+    "durationMinutes": 90,
+    "totalQuestions": 40,
+    "description": "Đề thi thử tuyển sinh lớp 10 năm học 2025 - 2026 cụm trường THCS trọng điểm TP.HCM theo chuẩn 4 phần cấu trúc GDPT 2018 của Sở GD&ĐT TP.HCM (40 câu - thang điểm 10): Phonetics, Grammar - Vocabulary - Communication (Chủ đề Smart City & Giáo dục AI), Reading (Biển báo trạm xe buýt điện VinBus & Phòng Lab STEM/AI; Điền từ AI trong trường học; Đọc hiểu Bảo tồn di sản Chợ Bến Thành), Writing (Word Form, Dạng mới tra cứu từ điển và bảng dữ liệu thư viện số, Sắp xếp câu, Viết lại câu).",
+    "questions": [
+      {
+        "id": "e_mock25_q01",
+        "topic": "Phát âm nguyên âm (Pronunciation of Vowels)",
+        "difficulty": "Nhận biết",
+        "question": "Choose the word whose underlined part is pronounced differently from the others: **ch<u>ea</u>p**, **h<u>ea</u>t**, **cl<u>ea</u>n**, **thr<u>ea</u>t**",
+        "options": [
+          "threat (/e/)",
+          "cheap (/iː/)",
+          "heat (/iː/)",
+          "clean (/iː/)"
+        ],
+        "correct": 0,
+        "explanation": "'threat' phát âm là /θret/ (nguyên âm ngắn /e/), trong khi ba từ còn lại đều có phần gạch chân phát âm là /iː/ (cheap /tʃiːp/, heat /hiːt/, clean /kliːn/)."
+      },
+      {
+        "id": "e_mock25_q02",
+        "topic": "Phát âm đuôi -ed (Pronunciation of Endings)",
+        "difficulty": "Nhận biết",
+        "question": "Choose the word whose underlined part is pronounced differently from the others: **discover<u>ed</u>**, **announc<u>ed</u>**, **look<u>ed</u>**, **watch<u>ed</u>**",
+        "options": [
+          "discovered (/d/)",
+          "announced (/t/)",
+          "looked (/t/)",
+          "watched (/t/)"
+        ],
+        "correct": 0,
+        "explanation": "'discovered' kết thúc bằng âm hữu thanh /r/ nên đuôi -ed phát âm là /d/. Các từ còn lại kết thúc bằng âm vô thanh (/s/, /k/, /tʃ/) nên đuôi -ed phát âm là /t/."
+      },
+      {
+        "id": "e_mock25_q03",
+        "topic": "Trọng âm từ 2 âm tiết (Word Stress)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word that has a different stress pattern from the others: **create**, **protect**, **machine**, **future**",
+        "options": [
+          "future (trọng âm 1)",
+          "create (trọng âm 2)",
+          "protect (trọng âm 2)",
+          "machine (trọng âm 2)"
+        ],
+        "correct": 0,
+        "explanation": "'future' /ˈfjuːtʃər/ có trọng âm rơi vào âm tiết thứ nhất. Ba từ còn lại có trọng âm rơi vào âm tiết thứ hai: create /kriˈeɪt/, protect /prəˈtekt/, machine /məˈʃiːn/."
+      },
+      {
+        "id": "e_mock25_q04",
+        "topic": "Trọng âm từ 3 âm tiết (Word Stress)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word that has a different stress pattern from the others: **innovate**, **decorate**, **qualify**, **replenish**",
+        "options": [
+          "replenish (trọng âm 2)",
+          "innovate (trọng âm 1)",
+          "decorate (trọng âm 1)",
+          "qualify (trọng âm 1)"
+        ],
+        "correct": 0,
+        "explanation": "'replenish' /rɪˈplenɪʃ/ có trọng âm rơi vào âm tiết thứ 2. Các từ còn lại có trọng âm rơi vào âm tiết thứ nhất: innovate /ˈɪnəveɪt/, decorate /ˈdekəreɪt/, qualify /ˈkwɒlɪfaɪ/."
+      },
+      {
+        "id": "e_mock25_q05",
+        "topic": "Từ vựng Thành phố thông minh & Chuyển đổi số",
+        "difficulty": "Thông hiểu",
+        "question": "Ho Chi Minh City is accelerating digital transformation to build a ________ city with intelligent traffic management and modern e-governance.",
+        "options": [
+          "smart",
+          "dusty",
+          "old-fashioned",
+          "temporary"
+        ],
+        "correct": 0,
+        "explanation": "'smart city' (thành phố thông minh) là thuật ngữ chuẩn xác trong bối cảnh giao thông thông minh và chính quyền điện tử số."
+      },
+      {
+        "id": "e_mock25_q06",
+        "topic": "Cụm động từ (Phrasal Verbs)",
+        "difficulty": "Thông hiểu",
+        "question": "Secondary school graduates should equip themselves with critical skills to ________ with rapid technological changes in modern society.",
+        "options": [
+          "cope",
+          "look",
+          "turn",
+          "take"
+        ],
+        "correct": 0,
+        "explanation": "'cope with' có nghĩa là ứng phó, thích ứng và vượt qua khó khăn, thay đổi (to deal successfully with a difficult situation)."
+      },
+      {
+        "id": "e_mock25_q07",
+        "topic": "Liên từ chỉ sự nhượng bộ (Conjunctions)",
+        "difficulty": "Nhận biết",
+        "question": "________ having a hectic revision schedule for the entrance exam, Minh always sets aside one hour every weekend for community tree planting.",
+        "options": [
+          "Despite",
+          "Although",
+          "However",
+          "Because"
+        ],
+        "correct": 0,
+        "explanation": "Đứng trước danh động từ 'having a hectic revision schedule' (cụm V-ing) mang ý nghĩa nhượng bộ ta dùng giới từ 'Despite' (hoặc In spite of)."
+      },
+      {
+        "id": "e_mock25_q08",
+        "topic": "Đại từ quan hệ (Relative Pronouns)",
+        "difficulty": "Thông hiểu",
+        "question": "The intelligent camera system ________ detects traffic violations at crowded intersections has significantly reduced accidents.",
+        "options": [
+          "which",
+          "who",
+          "whom",
+          "whose"
+        ],
+        "correct": 0,
+        "explanation": "Đại từ quan hệ 'which' thay thế cho danh từ chỉ vật 'The intelligent camera system' làm chủ ngữ cho mệnh đề quan hệ."
+      },
+      {
+        "id": "e_mock25_q09",
+        "topic": "Câu điều kiện loại 1 (Conditional Type 1)",
+        "difficulty": "Thông hiểu",
+        "question": "If urban citizens continue to prioritize electric vehicles and mass transit, air pollution levels ________ noticeably.",
+        "options": [
+          "will decrease",
+          "decreased",
+          "would decrease",
+          "had decreased"
+        ],
+        "correct": 0,
+        "explanation": "Mệnh đề If ở hiện tại đơn (continue) diễn tả điều kiện có thể xảy ra ở hiện tại/tương lai (Câu điều kiện loại 1) ➔ Mệnh đề chính dùng 'will + V-inf': 'will decrease'."
+      },
+      {
+        "id": "e_mock25_q10",
+        "topic": "Thể bị động trong tương lai (Future Passive)",
+        "difficulty": "Thông hiểu",
+        "question": "The historic timber roof and southern clock tower of Ben Thanh Market ________ by skilled conservation artisans next quarter.",
+        "options": [
+          "will be restored",
+          "will restore",
+          "is restoring",
+          "restored"
+        ],
+        "correct": 0,
+        "explanation": "Chủ ngữ chỉ vật 'The historic timber roof...' chịu tác động của hành động và có trạng ngữ 'next quarter' ➔ thì tương lai đơn thể bị động: 'will be restored'."
+      },
+      {
+        "id": "e_mock25_q11",
+        "topic": "Cụm từ cố định & Giới từ (Collocations)",
+        "difficulty": "Nhận biết",
+        "question": "Students should take advantage ________ digital learning platforms to review past exam papers and improve their test-taking skills.",
+        "options": [
+          "of",
+          "on",
+          "in",
+          "with"
+        ],
+        "correct": 0,
+        "explanation": "Cấu trúc collocation cố định: 'take advantage of something' (tận dụng, tận dụng lợi thế của điều gì)."
+      },
+      {
+        "id": "e_mock25_q12",
+        "topic": "Từ vựng Sức khỏe học đường",
+        "difficulty": "Thông hiểu",
+        "question": "Balancing study hours with daily physical exercise plays an essential role in preserving both mental and physical ________.",
+        "options": [
+          "health",
+          "obstacle",
+          "emission",
+          "damage"
+        ],
+        "correct": 0,
+        "explanation": "'mental and physical health' (sức khỏe thể chất và tinh thần) là cụm từ chuẩn và hoàn toàn phù hợp với ngữ cảnh cân bằng giữa học tập và rèn luyện."
+      },
+      {
+        "id": "e_mock25_q13",
+        "topic": "Giao tiếp hàng ngày (Communication - Congratulation)",
+        "difficulty": "Thông hiểu",
+        "question": "Teacher: 'Congratulations on winning the municipal STEM Innovation Contest, Nam!'\nNam: '________. We couldn\\'t have achieved it without your guidance!'",
+        "options": [
+          "Thank you very much, teacher!",
+          "Never mind, it was trivial.",
+          "You're welcome.",
+          "I don't think so."
+        ],
+        "correct": 0,
+        "explanation": "Khi nhận lời chúc mừng từ thầy cô, cách đáp lại lịch sự và lễ phép nhất là 'Thank you very much, teacher!'."
+      },
+      {
+        "id": "e_mock25_q14",
+        "topic": "Giao tiếp hàng ngày (Communication - Requesting Help)",
+        "difficulty": "Thông hiểu",
+        "question": "A student is asking for instructions at the school's smart library desk:\nStudent: 'Excuse me, could you show me how to sync digital textbooks onto my tablet?'\nLibrarian: '________. Just scan this QR code using the student portal app.'",
+        "options": [
+          "Certainly, let me guide you.",
+          "No, I have no time for that.",
+          "You must buy a new tablet.",
+          "Never mind, you don't need it."
+        ],
+        "correct": 0,
+        "explanation": "Câu trả lời nhiệt tình, thân thiện của thủ thư khi hướng dẫn học sinh: 'Certainly, let me guide you.' (Chắc chắn rồi, để tôi hướng dẫn bạn)."
+      },
+      {
+        "id": "e_mock25_q15",
+        "topic": "Động từ khuyết thiếu cấm đoán (Modal Verbs)",
+        "difficulty": "Nhận biết",
+        "question": "Passengers ________ smoke or light cigarettes anywhere inside underground metro train carriages.",
+        "options": [
+          "mustn't",
+          "needn't",
+          "shouldn't have",
+          "might"
+        ],
+        "correct": 0,
+        "explanation": "'mustn't + V-inf' (tuyệt đối không được phép, bị cấm đoán theo luật/quy định an toàn trên tàu điện ngầm)."
+      },
+      {
+        "id": "e_mock25_q16",
+        "topic": "Từ vựng Bảo tồn thiên nhiên",
+        "difficulty": "Thông hiểu",
+        "question": "Local authorities are implementing decisive policies to protect Can Gio's irreplaceable natural ________.",
+        "options": [
+          "resources",
+          "injuries",
+          "appliances",
+          "pollutants"
+        ],
+        "correct": 0,
+        "explanation": "'natural resources' (nguồn tài nguyên thiên nhiên) là danh từ ghép đúng ngữ nghĩa trong việc bảo vệ hệ sinh thái rừng ngập mặn Cần Giờ."
+      },
+      {
+        "id": "e_mock25_q17",
+        "topic": "Đọc hiểu biển báo thực tế (Smart Bus Charging Bay Sign)",
+        "difficulty": "Thông hiểu",
+        "question": "**Read the safety warning sign at the VinBus electric depot:**\n\n```\n+-------------------------------------------------------------+\n|                  VINBUS CHARGING STATION                    |\n| • DANGER: HIGH-VOLTAGE DIRECT CURRENT (DC) CHARGING BAY.    |\n| • AUTHORIZED ELECTRIC VEHICLES AND TRAINED OPERATORS ONLY.   |\n| • IN EMERGENCY: PUSH RED SHUT-DOWN SWITCH NEXT TO PILLAR 3. |\n+-------------------------------------------------------------+\n```\n\nWhat is the primary message of this warning sign?",
+        "options": [
+          "Only certified electric buses and trained staff are allowed in this high-voltage charging zone.",
+          "Any passenger can plug in and charge their private e-bikes here.",
+          "Smoking is allowed near pillar 3 during emergencies.",
+          "The charging bay is open to general pedestrian traffic."
+        ],
+        "correct": 0,
+        "explanation": "Biển báo cảnh báo điện áp cao nguy hiểm và quy định rõ chỉ có phương tiện điện được cấp phép và nhân viên đã qua đào tạo mới được vào khu vực này."
+      },
+      {
+        "id": "e_mock25_q18",
+        "topic": "Đọc hiểu quy định thực tế (STEM & AI Lab Guidelines)",
+        "difficulty": "Thông hiểu",
+        "question": "**Read the guidelines on the door of the School AI & Robotics Lab:**\n\n```\n+-------------------------------------------------------------+\n|                 AI & ROBOTICS LAB RULES                     |\n| 1. Tap your Student Digital ID Card to log in.              |\n| 2. NO food, sugary drinks, or liquids near terminals.      |\n| 3. Save all simulation files to Cloud Server before logging |\n|    out. Unsaved local files will be wiped overnight.        |\n+-------------------------------------------------------------+\n```\n\nWhat are students instructed to do before finishing their lab session?",
+        "options": [
+          "Back up their project files to the cloud server before logging out.",
+          "Leave leftover drinks and snacks beside the computer keyboards.",
+          "Shut down the power grid of the entire school building.",
+          "Save their work on the local desktop because files are kept permanently."
+        ],
+        "correct": 0,
+        "explanation": "Quy định số 3 nêu rõ: lưu toàn bộ file vào máy chủ đám mây (Cloud Server) trước khi đăng xuất vì file lưu cục bộ sẽ bị xóa tự động vào ban đêm."
+      },
+      {
+        "id": "e_mock25_q19",
+        "topic": "Đọc điền từ (Cloze Reading - AI in Education) - Câu 19",
+        "difficulty": "Thông hiểu",
+        "question": "**Read the passage and choose the best word for blank (19):**\n\n\"In the era of the Fourth Industrial Revolution, Artificial Intelligence (AI) is transforming classroom education at an unprecedented pace. Rather than replacing human educators, AI tools serve as smart learning (19)________ that tailor lessons to each student's unique learning pace and strengths.\"",
+        "options": [
+          "assistants",
+          "obstacles",
+          "pollutants",
+          "disasters"
+        ],
+        "correct": 0,
+        "explanation": "'learning assistants' (trợ lý học tập): AI đóng vai trò như những trợ lý học tập thông minh hỗ trợ giáo viên và học sinh cá nhân hóa lộ trình học tập."
+      },
+      {
+        "id": "e_mock25_q20",
+        "topic": "Đọc điền từ (Cloze Reading - AI in Education) - Câu 20",
+        "difficulty": "Nhận biết",
+        "question": "**Read the passage and choose the best word for blank (20):**\n\n\"Intelligent tutoring systems can analyze test results instantly, identifying gaps in understanding and recommending personalized (20)________ exercises for each learner.\"",
+        "options": [
+          "practice",
+          "harmful",
+          "ancient",
+          "destruction"
+        ],
+        "correct": 0,
+        "explanation": "'practice exercises' (các bài tập luyện tập) là cụm từ tự nhiên và chính xác trong ngữ cảnh sư phạm rèn luyện kiến thức."
+      },
+      {
+        "id": "e_mock25_q21",
+        "topic": "Đọc điền từ (Cloze Reading - AI in Education) - Câu 21",
+        "difficulty": "Thông hiểu",
+        "question": "**Read the passage and choose the best word for blank (21):**\n\n\"Language learners can now interact with conversational chatbots in real time to hone natural pronunciation and grammatical (21)________ without feeling shy or nervous.\"",
+        "options": [
+          "accuracy",
+          "hazard",
+          "damage",
+          "pollution"
+        ],
+        "correct": 0,
+        "explanation": "'grammatical accuracy' (độ chính xác ngữ pháp) là collocation quen thuộc trong việc học ngoại ngữ (phát âm tự nhiên và độ chuẩn xác ngữ pháp)."
+      },
+      {
+        "id": "e_mock25_q22",
+        "topic": "Đọc điền từ (Cloze Reading - AI in Education) - Câu 22",
+        "difficulty": "Vận dụng",
+        "question": "**Read the passage and choose the best word for blank (22):**\n\n\"The ultimate purpose of schooling is to cultivate critical thinking, creative problem-solving, and empathetic teamwork - qualities that no machine can truly (22)________.\"",
+        "options": [
+          "replicate",
+          "ignore",
+          "destroy",
+          "pollute"
+        ],
+        "correct": 0,
+        "explanation": "'replicate' (sao chép, tái tạo): tư duy phản biện, sự sáng tạo và lòng trắc ẩn của con người là những phẩm chất mà không cỗ máy nào có thể sao chép hoàn toàn."
+      },
+      {
+        "id": "e_mock25_q23",
+        "topic": "Đọc điền từ (Cloze Reading - AI in Education) - Câu 23",
+        "difficulty": "Thông hiểu",
+        "question": "**Read the passage and choose the best word for blank (23):**\n\n\"By combining cutting-edge technology with active self-study (23)________, secondary students can master complex concepts much faster.\"",
+        "options": [
+          "habits",
+          "wastes",
+          "pollutions",
+          "hazards"
+        ],
+        "correct": 0,
+        "explanation": "'self-study habits' (thói quen tự học): công nghệ kết hợp với thói quen chủ động tự học tạo nên hiệu quả tối ưu cho học sinh."
+      },
+      {
+        "id": "e_mock25_q24",
+        "topic": "Đọc điền từ (Cloze Reading - AI in Education) - Câu 24",
+        "difficulty": "Nhận biết",
+        "question": "**Read the passage and choose the best word for blank (24):**\n\n\"These foundational competencies ensure that young Vietnamese graduates can thrive in an ever-evolving (24)________ world.\"",
+        "options": [
+          "digital",
+          "primitive",
+          "ancient",
+          "historic"
+        ],
+        "correct": 0,
+        "explanation": "'digital world' (thế giới kỹ thuật số / kỷ nguyên số) là thuật ngữ miêu tả chính xác bối cảnh thời đại ngày nay."
+      },
+      {
+        "id": "e_mock25_q25",
+        "topic": "Đọc hiểu Di sản Chợ Bến Thành - Ý chính toàn bài",
+        "difficulty": "Thông hiểu",
+        "question": "**Read the passage about Ben Thanh Market:**\n\n*Constructed in 1914 by the French contractor Brossard et Maupin, Ben Thanh Market is undeniably one of the most iconic architectural landmarks and cultural symbols of Ho Chi Minh City. Situated in the beating heart of District 1, the market with its world-famous southern clock tower has witnessed over a century of Saigon's historical transformation. Beyond being a bustling commercial hub with over 1,500 stalls selling traditional fabrics, handicrafts, and delectable Southern culinary delicacies, Ben Thanh Market embodies the spirit, warmth, and resilience of the local community.*\n\n*In recent years, the completion of the underground Central Metro Station right in front of the market square has breathed vibrant new vitality into the heritage quarter. Urban planners and heritage conservationists are working collaboratively on a comprehensive renovation blueprint. The primary objective is to restore the market's authentic French-colonial roof architecture and reinforce historical timber beams while upgrading fire prevention systems and pedestrian walkways. By striking a harmonious balance between historic preservation and contemporary urban dynamics, Ho Chi Minh City ensures that Ben Thanh Market remains a timeless crossroads where past heritage warmly meets future prosperity.*\n\n**What is the primary topic of the passage?**",
+        "options": [
+          "The historical significance, cultural value, and modern architectural conservation of Ben Thanh Market.",
+          "The technical construction of underground railway tunnels in Southeast Asia.",
+          "A business report detailing wholesale fabric prices in District 1.",
+          "The life and career of contractor Brossard et Maupin in France."
+        ],
+        "correct": 0,
+        "explanation": "Đoạn văn tập trung giới thiệu lịch sử xây dựng, giá trị văn hóa biểu tượng và kế hoạch trùng tu bảo tồn kiến trúc Chợ Bến Thành trong bối cảnh quảng trường metro mới."
+      },
+      {
+        "id": "e_mock25_q26",
+        "topic": "Đọc hiểu Di sản Chợ Bến Thành - Chi tiết mốc thời gian",
+        "difficulty": "Nhận biết",
+        "question": "According to the first paragraph, in what year was the current Ben Thanh Market constructed?",
+        "options": [
+          "In 1914",
+          "In 2000",
+          "In 1975",
+          "In 1859"
+        ],
+        "correct": 0,
+        "explanation": "Thông tin ở câu đầu tiên: 'Constructed in 1914 by the French contractor Brossard et Maupin...'."
+      },
+      {
+        "id": "e_mock25_q27",
+        "topic": "Đọc hiểu Di sản Chợ Bến Thành - Từ đồng nghĩa trong ngữ cảnh",
+        "difficulty": "Vận dụng",
+        "question": "The word **'delectable'** in paragraph 1 is closest in meaning to:",
+        "options": [
+          "delicious and appetizing",
+          "terrible and tasteless",
+          "cheap and low-quality",
+          "harmful and poisonous"
+        ],
+        "correct": 0,
+        "explanation": "'delectable' miêu tả các món ăn ẩm thực phương Nam thơm ngon, hấp dẫn ➔ đồng nghĩa với 'delicious and appetizing'."
+      },
+      {
+        "id": "e_mock25_q28",
+        "topic": "Đọc hiểu Di sản Chợ Bến Thành - Công trình giao thông mới",
+        "difficulty": "Thông hiểu",
+        "question": "According to paragraph 2, which new public transit development has brought vibrant vitality to the market square?",
+        "options": [
+          "The underground Central Metro Station",
+          "A new domestic airport terminal",
+          "A multi-lane elevated highway",
+          "An international seaport terminal"
+        ],
+        "correct": 0,
+        "explanation": "Căn cứ đoạn 2: '...the completion of the underground Central Metro Station right in front of the market square has breathed vibrant new vitality into the heritage quarter'."
+      },
+      {
+        "id": "e_mock25_q29",
+        "topic": "Cấu tạo từ (Word Formation) - Tính từ",
+        "difficulty": "Thông hiểu",
+        "question": "Transitioning toward green energy sources is imperative for achieving long-term ________ economic development. (SUSTAIN)",
+        "options": [
+          "sustainable",
+          "sustainably",
+          "sustainability",
+          "sustenance"
+        ],
+        "correct": 0,
+        "explanation": "Trước cụm danh từ 'economic development' cần một tính từ bổ nghĩa: 'sustainable' (bền vững). 'Sustainable economic development': phát triển kinh tế bền vững."
+      },
+      {
+        "id": "e_mock25_q30",
+        "topic": "Cấu tạo từ (Word Formation) - Tính từ",
+        "difficulty": "Thông hiểu",
+        "question": "Our history teacher is exceptionally ________ about the cultural heritage and ancient monuments of Saigon - Ho Chi Minh City. (KNOWLEDGE)",
+        "options": [
+          "knowledgeable",
+          "knowledgeably",
+          "knowledge",
+          "unknowing"
+        ],
+        "correct": 0,
+        "explanation": "Sau động từ liên kết 'is' và phó từ 'exceptionally' cần tính từ: 'knowledgeable about something' (am hiểu, có kiến thức sâu rộng về điều gì)."
+      },
+      {
+        "id": "e_mock25_q31",
+        "topic": "Cấu tạo từ (Word Formation) - Danh từ",
+        "difficulty": "Thông hiểu",
+        "question": "Digital banking apps provide users with unparalleled ________, but cyber-security must remain a top priority. (CONVENIENT)",
+        "options": [
+          "convenience",
+          "conveniently",
+          "convenient",
+          "inconvenience"
+        ],
+        "correct": 0,
+        "explanation": "Sau tính từ 'unparalleled' (vô song, chưa từng có) cần một danh từ: 'convenience' (sự tiện lợi)."
+      },
+      {
+        "id": "e_mock25_q32",
+        "topic": "Cấu tạo từ (Word Formation) - Tính từ",
+        "difficulty": "Thông hiểu",
+        "question": "The university has introduced an highly ________ STEM curriculum that fosters creative problem-solving among high school students. (INNOVATE)",
+        "options": [
+          "innovative",
+          "innovate",
+          "innovation",
+          "innovatively"
+        ],
+        "correct": 0,
+        "explanation": "Đứng trước cụm danh từ 'STEM curriculum' cần một tính từ: 'innovative' (mang tính đổi mới, sáng tạo)."
+      },
+      {
+        "id": "e_mock25_q33",
+        "topic": "Dạng mới Sở GD&ĐT TP.HCM: Tra cứu chú thích từ điển (Dictionary Entry)",
+        "difficulty": "Vận dụng",
+        "question": "**Look at the dictionary entry note below:**\n\n```\n+-------------------------------------------------------------------------+\n| artificial intelligence  /ˌɑː.tɪ.fɪʃ.əl ɪnˈtel.ɪ.dʒəns/  (noun)         |\n| Definition:                                                             |\n|   The theory and development of computer systems able to perform        |\n|   tasks that normally require human intelligence, such as visual        |\n|   perception, speech recognition, decision-making, and translation.     |\n| Common collocations:                                                    |\n|   • integrate / deploy artificial intelligence                          |\n|   • powered by artificial intelligence                                  |\n|   • ethics in artificial intelligence                                   |\n+-------------------------------------------------------------------------+\n```\n\n**Complete the sentence with the exact 2-word phrase defined above:**\n\n*\"Modern municipal hospitals in Thu Duc City are beginning to integrate ________ to help doctors analyze medical scans and detect diseases early.\"*",
+        "options": [
+          "artificial intelligence",
+          "greenhouse emission",
+          "public transportation",
+          "natural resource"
+        ],
+        "correct": 0,
+        "explanation": "Căn cứ chú thích từ điển cung cấp: cụm 2 từ đi với động từ 'integrate' theo đúng định nghĩa là 'artificial intelligence' (trí tuệ nhân tạo)."
+      },
+      {
+        "id": "e_mock25_q34",
+        "topic": "Dạng mới Sở GD&ĐT TP.HCM: Đọc bảng thông tin & Điền cụm từ phù hợp",
+        "difficulty": "Vận dụng",
+        "question": "**Read the official library service table below:**\n\n```\n+-------------------------------------------------------------------------+\n| GENERAL SCIENCE LIBRARY - DIGITAL CARD CLASSIFICATION                   |\n|                                                                         |\n| Card Category  | Target Audience               | Digital Privileges    |\n| Standard Card  | General local residents       | Borrow 3 paper books  |\n| Smart Card     | Secondary students & Scholars | Unlimited Cloud Access|\n| Visitor Token  | Daily tourists                | 2-hour WiFi only      |\n+-------------------------------------------------------------------------+\n```\n\n**Based on the table, which 2-word phrase correctly completes the instruction?**\n\n*\"High school and secondary students requiring unlimited remote access to scientific databases must sign up for a ________.\"*",
+        "options": [
+          "Smart Card",
+          "Visitor Token",
+          "Standard Card",
+          "WiFi Access"
+        ],
+        "correct": 0,
+        "explanation": "Theo bảng phân loại thẻ thư viện: Hạng thẻ dành cho 'Secondary students & Scholars' có đặc quyền 'Unlimited Cloud Access' là 'Smart Card' (Thẻ thông minh)."
+      },
+      {
+        "id": "e_mock25_q35",
+        "topic": "Sắp xếp từ thành câu hoàn chỉnh (Sentence Rearrangement)",
+        "difficulty": "Thông hiểu",
+        "question": "**Rearrange the given groups of words into a grammatically correct and meaningful sentence:**\n\n`are encouraged / to help protect / urban commuters / by using electric buses / the environment / in our smart city`",
+        "options": [
+          "Urban commuters are encouraged to help protect the environment by using electric buses in our smart city.",
+          "Urban commuters are encouraged by using electric buses to help protect the environment in our smart city.",
+          "In our smart city urban commuters are encouraged the environment to help protect by using electric buses.",
+          "To help protect the environment urban commuters are encouraged by using electric buses in our smart city."
+        ],
+        "correct": 0,
+        "explanation": "Cấu trúc câu chuẩn: Chủ ngữ (Urban commuters) + Bị động (are encouraged) + Mục đích (to help protect the environment) + Phương thức (by using electric buses) + Địa điểm (in our smart city)."
+      },
+      {
+        "id": "e_mock25_q36",
+        "topic": "Sắp xếp từ thành câu hoàn chỉnh (Sentence Rearrangement)",
+        "difficulty": "Thông hiểu",
+        "question": "**Rearrange the given groups of words into a grammatically correct and meaningful sentence:**\n\n`in personalizing education / is playing / artificial intelligence / a crucial role / for modern students`",
+        "options": [
+          "Artificial intelligence is playing a crucial role in personalizing education for modern students.",
+          "Artificial intelligence is personalizing education for modern students in playing a crucial role.",
+          "In personalizing education artificial intelligence is playing for modern students a crucial role.",
+          "For modern students artificial intelligence a crucial role is playing in personalizing education."
+        ],
+        "correct": 0,
+        "explanation": "Cấu trúc câu chuẩn: Chủ ngữ (Artificial intelligence) + Động từ (is playing) + Tân ngữ (a crucial role) + Giới từ bổ ngữ (in personalizing education for modern students)."
+      },
+      {
+        "id": "e_mock25_q37",
+        "topic": "Viết lại câu - Thể bị động khách quan với 'It is estimated that...'",
+        "difficulty": "Thông hiểu",
+        "question": "**Finish the second sentence so that it has the closest meaning to the original sentence:**\n\n*People estimate that the new automated metro line will transport over 150,000 commuters daily.*\n\n➔ **It is _________________________________________________.**",
+        "options": [
+          "It is estimated that the new automated metro line will transport over 150,000 commuters daily.",
+          "It was estimated that the new automated metro line will transport over 150,000 commuters daily.",
+          "It is estimating that the new automated metro line will transport over 150,000 commuters daily.",
+          "It has estimated that the new automated metro line will transport over 150,000 commuters daily."
+        ],
+        "correct": 0,
+        "explanation": "Cấu trúc bị động khách quan: 'People estimate that + S + V' ➔ 'It is estimated that + S + V'."
+      },
+      {
+        "id": "e_mock25_q38",
+        "topic": "Viết lại câu - Chuyển đổi giữa so sánh hơn và so sánh nhất",
+        "difficulty": "Thông hiểu",
+        "question": "**Finish the second sentence so that it has the closest meaning to the original sentence:**\n\n*No other traditional market in Ho Chi Minh City is more famous than Ben Thanh Market.*\n\n➔ **Ben Thanh Market _________________________________________________.**",
+        "options": [
+          "Ben Thanh Market is the most famous traditional market in Ho Chi Minh City.",
+          "Ben Thanh Market is as famous as any other traditional market in Ho Chi Minh City.",
+          "Ben Thanh Market is more famous traditional market in Ho Chi Minh City.",
+          "Ben Thanh Market is not so famous as traditional markets in Ho Chi Minh City."
+        ],
+        "correct": 0,
+        "explanation": "Chuyển từ cấu trúc 'No other ... is more [adj] than X' sang so sánh nhất: 'X is the most [adj] ...'."
+      },
+      {
+        "id": "e_mock25_q39",
+        "topic": "Viết lại câu - Câu điều kiện loại 2 từ nguyên nhân thực tế",
+        "difficulty": "Vận dụng",
+        "question": "**Finish the second sentence so that it has the closest meaning to the original sentence:**\n\n*Because students do not manage their digital screen time prudently, they frequently feel exhausted.*\n\n➔ **If students _________________________________________________.**",
+        "options": [
+          "If students managed their digital screen time prudently, they would not frequently feel exhausted.",
+          "If students manage their digital screen time prudently, they will not frequently feel exhausted.",
+          "If students had managed their digital screen time prudently, they wouldn't frequently feel exhausted.",
+          "If students managed their digital screen time prudently, they will frequently feel exhausted."
+        ],
+        "correct": 0,
+        "explanation": "Tình huống thực tế ở hiện tại. Viết lại bằng câu điều kiện trái với hiện tại (Câu điều kiện loại 2): 'If + S + V-ed/V2, S + would not + V-inf'."
+      },
+      {
+        "id": "e_mock25_q40",
+        "topic": "Viết lại câu - Chuyển đổi giữa 'Although' và 'In spite of'",
+        "difficulty": "Thông hiểu",
+        "question": "**Finish the second sentence so that it has the closest meaning to the original sentence:**\n\n*Although the weather was stormy, the youth volunteers persevered in planting mangrove saplings.*\n\n➔ **In spite of _________________________________________________.**",
+        "options": [
+          "In spite of the stormy weather, the youth volunteers persevered in planting mangrove saplings.",
+          "In spite of the weather was stormy, the youth volunteers persevered in planting mangrove saplings.",
+          "In spite of the weather being storm, the youth volunteers persevered in planting mangrove saplings.",
+          "In spite of stormy, the youth volunteers persevered in planting mangrove saplings."
+        ],
+        "correct": 0,
+        "explanation": "Chuyển từ 'Although + S + V' ('the weather was stormy') sang 'In spite of + Noun phrase' ('the stormy weather')."
+      }
+    ]
+  },
+  {
+    "id": "eng_exam_hcmc_2025",
+    "title": "Đề thi Tham khảo Tuyển sinh Lớp 10 TP.HCM Năm học 2025 - 2026 - Môn Tiếng Anh",
+    "subject": "english",
+    "year": 2025,
+    "location": "TP.HCM",
+    "isOfficial": true,
+    "badgeText": "🔥 Chuẩn Mới GDPT 2018 (2025-2026)",
+    "durationMinutes": 90,
+    "totalQuestions": 40,
+    "description": "Đề thi tham khảo tuyển sinh vào lớp 10 năm học 2025 - 2026 của Sở GD&ĐT TP.HCM theo Chương trình GDPT 2018. Chuẩn 4 phần (40 câu - thang điểm 10): Phonetics, Grammar - Vocabulary - Communication, Reading (Biển báo metro/công viên xanh, Điền từ xe buýt điện, Đọc hiểu Rừng Sác Cần Giờ), Writing (Word Form, Dạng câu hỏi mới tra cứu chú thích từ điển/thông tin cho sẵn, Sắp xếp câu, Viết lại câu).",
+    "questions": [
+      {
+        "id": "e25_q01",
+        "topic": "Phát âm nguyên âm (Pronunciation of Vowels)",
+        "difficulty": "Nhận biết",
+        "question": "Choose the word whose underlined part is pronounced differently from the others: **fl<u>oo</u>d**, **t<u>oo</u>th**, **f<u>oo</u>d**, **sch<u>oo</u>l**",
+        "options": [
+          "flood (/ʌ/)",
+          "tooth (/uː/)",
+          "food (/uː/)",
+          "school (/uː/)"
+        ],
+        "correct": 0,
+        "explanation": "'flood' phát âm là /flʌd/ (âm ngắn /ʌ/), trong khi các từ còn lại đều có phần gạch chân phát âm là /uː/ ('tooth' /tuːθ/, 'food' /fuːd/, 'school' /skuːl/)."
+      },
+      {
+        "id": "e25_q02",
+        "topic": "Phát âm đuôi -s/-es (Pronunciation of Endings)",
+        "difficulty": "Nhận biết",
+        "question": "Choose the word whose underlined part is pronounced differently from the others: **protect<u>s</u>**, **laugh<u>s</u>**, **clean<u>s</u>**, **stop<u>s</u>**",
+        "options": [
+          "cleans (/z/)",
+          "protects (/s/)",
+          "laughs (/s/)",
+          "stops (/s/)"
+        ],
+        "correct": 0,
+        "explanation": "'cleans' kết thúc bằng âm hữu thanh /n/ nên đuôi -s phát âm là /z/. Các từ 'protects' (/t/), 'laughs' (/f/), 'stops' (/p/) kết thúc bằng âm vô thanh nên đuôi -s phát âm là /s/."
+      },
+      {
+        "id": "e25_q03",
+        "topic": "Trọng âm từ 2 âm tiết (Word Stress)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word that has a different stress pattern from the others: **pollute**, **provide**, **solar**, **reduce**",
+        "options": [
+          "solar (trọng âm 1)",
+          "pollute (trọng âm 2)",
+          "provide (trọng âm 2)",
+          "reduce (trọng âm 2)"
+        ],
+        "correct": 0,
+        "explanation": "'solar' /ˈsəʊlər/ có trọng âm rơi vào âm tiết thứ nhất. Ba từ còn lại là động từ 2 âm tiết có trọng âm rơi vào âm tiết thứ hai: pollute /pəˈluːt/, provide /prəˈvaɪd/, reduce /rɪˈdjuːs/."
+      },
+      {
+        "id": "e25_q04",
+        "topic": "Trọng âm từ 3 âm tiết (Word Stress)",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word that has a different stress pattern from the others: **emission**, **energy**, **natural**, **dangerous**",
+        "options": [
+          "emission (trọng âm 2)",
+          "energy (trọng âm 1)",
+          "natural (trọng âm 1)",
+          "dangerous (trọng âm 1)"
+        ],
+        "correct": 0,
+        "explanation": "'emission' /ɪˈmɪʃn/ có trọng âm rơi vào âm tiết thứ 2 (hậu tố -ion làm trọng âm rơi vào âm tiết ngay trước nó). Các từ còn lại có trọng âm rơi vào âm tiết thứ nhất: energy /ˈenədʒi/, natural /ˈnætʃrəl/, dangerous /ˈdeɪndʒərəs/."
+      },
+      {
+        "id": "e25_q05",
+        "topic": "Từ vựng Giao thông xanh & Đô thị bền vững",
+        "difficulty": "Thông hiểu",
+        "question": "Ho Chi Minh City is actively encouraging residents to switch to ________ public transport such as electric buses and Metro Line 1 to reduce greenhouse gas emissions.",
+        "options": [
+          "eco-friendly",
+          "energy-consuming",
+          "out-of-date",
+          "disposable"
+        ],
+        "correct": 0,
+        "explanation": "'eco-friendly' (thân thiện với môi trường) là tính từ phù hợp nhất về nghĩa với ngữ cảnh xe buýt điện và tuyến Metro số 1 nhằm giảm phát thải khí nhà kính."
+      },
+      {
+        "id": "e25_q06",
+        "topic": "Cụm động từ (Phrasal Verbs)",
+        "difficulty": "Thông hiểu",
+        "question": "The youth volunteer club decided to ________ clean-up campaigns along the Nhieu Loc - Thi Nghe Canal every weekend.",
+        "options": [
+          "carry out",
+          "turn down",
+          "give up",
+          "look after"
+        ],
+        "correct": 0,
+        "explanation": "'carry out' có nghĩa là tiến hành, thực hiện (chiến dịch, kế hoạch, thí nghiệm). Các cụm từ khác: 'turn down' (từ chối/vặn nhỏ), 'give up' (từ bỏ), 'look after' (chăm sóc)."
+      },
+      {
+        "id": "e25_q07",
+        "topic": "Liên từ chỉ sự nhượng bộ (Conjunctions)",
+        "difficulty": "Nhận biết",
+        "question": "________ single-use plastic bags are undeniably convenient for daily shopping, they take hundreds of years to decompose in nature.",
+        "options": [
+          "Although",
+          "Because",
+          "Therefore",
+          "Despite"
+        ],
+        "correct": 0,
+        "explanation": "'Although' + mệnh đề (S + V) diễn tả sự tương phản/nhượng bộ: 'Mặc dù túi nilon dùng một lần rất tiện lợi... nhưng mất hàng trăm năm để phân hủy'. 'Despite' phải đi với cụm danh từ hoặc V-ing."
+      },
+      {
+        "id": "e25_q08",
+        "topic": "Câu điều kiện loại 2 (Conditional Type 2)",
+        "difficulty": "Vận dụng",
+        "question": "If our neighborhood ________ more shade trees along the pedestrian walkways, the urban heat island effect would be significantly alleviated.",
+        "options": [
+          "planted",
+          "plants",
+          "will plant",
+          "had planted"
+        ],
+        "correct": 0,
+        "explanation": "Mệnh đề chính dùng 'would + V-inf' (would be alleviated) diễn tả giả định trái ngược với hiện tại (câu điều kiện loại 2), nên mệnh đề If chia ở thì quá khứ đơn: 'planted'."
+      },
+      {
+        "id": "e25_q09",
+        "topic": "Mệnh đề quan hệ (Relative Clauses)",
+        "difficulty": "Thông hiểu",
+        "question": "The youth volunteers ________ planted over 5,000 mangrove trees in Can Gio Biosphere Reserve were warmly commended by the municipal authorities.",
+        "options": [
+          "who",
+          "which",
+          "whom",
+          "whose"
+        ],
+        "correct": 0,
+        "explanation": "Đại từ quan hệ 'who' làm chủ ngữ thay thế cho danh từ chỉ người 'The youth volunteers' và đứng ngay trước động từ 'planted'."
+      },
+      {
+        "id": "e25_q10",
+        "topic": "Động từ khuyết thiếu & Thể bị động (Modals & Passive)",
+        "difficulty": "Thông hiểu",
+        "question": "Hazardous e-waste such as discarded lithium batteries and fluorescent bulbs ________ into ordinary domestic trash bins.",
+        "options": [
+          "must not be thrown",
+          "must not throw",
+          "should be throwing",
+          "cannot throw"
+        ],
+        "correct": 0,
+        "explanation": "Chủ ngữ 'Hazardous e-waste' (rác điện tử độc hại) là vật chịu tác động nên cần cấu trúc bị động với động từ khuyết thiếu mang tính cấm đoán: 'must not be + V3/ed' (không được phép vứt vào)."
+      },
+      {
+        "id": "e25_q11",
+        "topic": "Giới từ đi với cụm từ cố định (Collocations & Prepositions)",
+        "difficulty": "Nhận biết",
+        "question": "Modern households across the city are paying greater attention ________ classifying organic and recyclable waste at source.",
+        "options": [
+          "to",
+          "on",
+          "with",
+          "for"
+        ],
+        "correct": 0,
+        "explanation": "Cấu trúc collocation chuẩn: 'pay attention to something / V-ing' (chú ý, quan tâm đến việc gì)."
+      },
+      {
+        "id": "e25_q12",
+        "topic": "Từ vựng Chuyển đổi số & Giáo dục thông minh",
+        "difficulty": "Thông hiểu",
+        "question": "Cloud-based digital libraries provide secondary school students with convenient access to vast ________ of academic materials.",
+        "options": [
+          "resources",
+          "pollutants",
+          "obstacles",
+          "appliances"
+        ],
+        "correct": 0,
+        "explanation": "'resources' (nguồn tài nguyên / tài liệu học tập) là từ duy nhất phù hợp trong ngữ cảnh thư viện số và giáo dục."
+      },
+      {
+        "id": "e25_q13",
+        "topic": "Giao tiếp hàng ngày (Communication - Suggestion)",
+        "difficulty": "Thông hiểu",
+        "question": "Lan and Minh are discussing ways to conserve energy at home.\nLan: 'Why don\\'t we switch off all unnecessary lights and unplug chargers before going to bed?'\nMinh: '________. Every kilowatt-hour saved matters!'",
+        "options": [
+          "That's a wonderful idea!",
+          "I don't think that's practical.",
+          "You're totally wrong.",
+          "It's none of our business."
+        ],
+        "correct": 0,
+        "explanation": "Minh bày tỏ sự tán thành nhiệt tình với gợi ý tiết kiệm điện của Lan: 'That\\'s a wonderful idea!' (Đó là một ý tưởng tuyệt vời!)."
+      },
+      {
+        "id": "e25_q14",
+        "topic": "Giao tiếp hàng ngày (Communication - Public Services)",
+        "difficulty": "Thông hiểu",
+        "question": "A passenger is asking for assistance at the Ben Thanh Central Metro Station.\nPassenger: 'Excuse me, could you show me where I can top up my smart transit card?'\nStation Assistant: '________. The ticket vending machines and help desk are right past the turnstiles.'",
+        "options": [
+          "Certainly, follow this directional sign.",
+          "I am terribly busy right now.",
+          "Never mind, you don't need one.",
+          "You shouldn't ask me."
+        ],
+        "correct": 0,
+        "explanation": "Lời đáp lịch sự, hữu ích của nhân viên nhà ga khi được hỏi đường/dịch vụ: 'Certainly, follow this directional sign.' (Chắc chắn rồi, bạn hãy đi theo biển chỉ dẫn này)."
+      },
+      {
+        "id": "e25_q15",
+        "topic": "Đọc hiểu biển báo thực tế (Metro Station Safety Sign)",
+        "difficulty": "Thông hiểu",
+        "question": "**Read the safety sign displayed at the Ben Thanh Metro Platform:**\n\n```\n+-------------------------------------------------------------+\n|                   SAFETY REGULATION                         |\n| • STAND BEHIND THE YELLOW TACTILE LINE UNTIL TRAIN STOPS.   |\n| • DO NOT LEAN ON OR OBSTRUCT AUTOMATIC SCREEN DOORS.        |\n| • MIND THE PLATFORM GAP WHEN BOARDING AND ALIGHTING.        |\n+-------------------------------------------------------------+\n```\n\nWhat is the primary instruction conveyed to passengers waiting for the train?",
+        "options": [
+          "Passengers must maintain a safe distance behind the yellow tactile line until the train is stationary.",
+          "Passengers are encouraged to lean firmly against the screen doors while waiting.",
+          "Passengers should step over the yellow line as soon as the train approaches.",
+          "Passengers must open the automated screen doors by hand."
+        ],
+        "correct": 0,
+        "explanation": "Biển báo quy định rõ: 'STAND BEHIND THE YELLOW TACTILE LINE UNTIL TRAIN STOPS' -> Hành khách phải giữ khoảng cách an toàn phía sau vạch vàng cho đến khi tàu dừng hẳn."
+      },
+      {
+        "id": "e25_q16",
+        "topic": "Đọc hiểu biển báo thực tế (Green Public Space Notice)",
+        "difficulty": "Thông hiểu",
+        "question": "**Read the notice posted at the entrance of Bach Dang Riverfront Park:**\n\n```\n+-------------------------------------------------------------+\n|                 GREEN PARK NOTICE                           |\n| • ZERO SINGLE-USE PLASTICS: Bring reusable drink bottles.   |\n| • FREE CHILLED WATER REFILL STATIONS LOCATED NEAR PIER 2.   |\n| • SEPARATE ALL WASTE INTO RECYCLABLES AND ORGANIC COMPOST.  |\n+-------------------------------------------------------------+\n```\n\nWhat are park visitors requested to do?",
+        "options": [
+          "Use reusable water containers and sort their trash into designated collection bins.",
+          "Purchase single-use plastic bottles from street vendors before entering.",
+          "Throw all types of garbage into a single common trash bag.",
+          "Pay a mandatory entrance fee to access the chilled water refill stations."
+        ],
+        "correct": 0,
+        "explanation": "Thông báo khuyến khích: mang bình nước cá nhân tái sử dụng (reusable drink bottles) và phân loại rác thành đồ tái chế và rác hữu cơ (separate all waste into recyclables and organic compost)."
+      },
+      {
+        "id": "e25_q17",
+        "topic": "Đọc điền từ (Cloze Reading - Green Urban Transit) - Câu 17",
+        "difficulty": "Thông hiểu",
+        "question": "**Read the passage and choose the best word for blank (17):**\n\n\"In recent years, Ho Chi Minh City has taken decisive steps toward becoming an environmentally sustainable and smart metropolis. One of the central pillars of this strategy is modernizing urban transportation. The commercial operation of Metro Line 1 (Ben Thanh - Suoi Tien) represents a momentous milestone, offering hundreds of thousands of commuters a fast, safe, and zero-emission (17)________ to motorbikes and private cars.\"",
+        "options": [
+          "alternative",
+          "hindrance",
+          "disadvantage",
+          "destruction"
+        ],
+        "correct": 0,
+        "explanation": "'alternative to something' (giải pháp thay thế cho...) là danh từ phù hợp nhất: Tuyến Metro số 1 mang lại giải pháp thay thế không phát thải cho xe máy và ô tô cá nhân."
+      },
+      {
+        "id": "e25_q18",
+        "topic": "Đọc điền từ (Cloze Reading - Green Urban Transit) - Câu 18",
+        "difficulty": "Nhận biết",
+        "question": "**Read the passage and choose the best word for blank (18):**\n\n\"Alongside rail transit, the city is rapidly expanding the fleet of modern electric buses, which run smoothly without generating toxic exhaust fumes or excessive noise (18)________.\"",
+        "options": [
+          "pollution",
+          "protection",
+          "treatment",
+          "preservation"
+        ],
+        "correct": 0,
+        "explanation": "Cụm danh từ 'noise pollution' (ô nhiễm tiếng ồn) là collocation phổ biến và chuẩn ngữ nghĩa trong văn cảnh giao thông công cộng không gây khói thải độc hay ô nhiễm tiếng ồn."
+      },
+      {
+        "id": "e25_q19",
+        "topic": "Đọc điền từ (Cloze Reading - Green Urban Transit) - Câu 19",
+        "difficulty": "Nhận biết",
+        "question": "**Read the passage and choose the best word for blank (19):**\n\n\"Furthermore, community environmental consciousness has witnessed remarkable growth. Schools and local youth unions regularly organize 'Green Sunday' campaigns to dredge drainage canals and (19)________ indigenous shade trees across residential areas.\"",
+        "options": [
+          "plant",
+          "fell",
+          "destroy",
+          "uproot"
+        ],
+        "correct": 0,
+        "explanation": "'plant trees' (trồng cây) là hành động tích cực, hoàn toàn phù hợp với ngữ cảnh 'Chủ nhật Xanh' và làm sạch kênh mương."
+      },
+      {
+        "id": "e25_q20",
+        "topic": "Đọc điền từ (Cloze Reading - Green Urban Transit) - Câu 20",
+        "difficulty": "Thông hiểu",
+        "question": "**Read the passage and choose the best word for blank (20):**\n\n\"Students are actively encouraged to bring reusable tumblers and canvas bags rather than (20)________ disposable non-biodegradable plastics.\"",
+        "options": [
+          "relying on",
+          "giving up",
+          "looking after",
+          "turning off"
+        ],
+        "correct": 0,
+        "explanation": "'rely on' (dựa vào / phụ thuộc vào): Học sinh được khuyến khích dùng túi vải và bình nước cá nhân thay vì phụ thuộc vào đồ nhựa dùng một lần."
+      },
+      {
+        "id": "e25_q21",
+        "topic": "Đọc điền từ (Cloze Reading - Green Urban Transit) - Câu 21",
+        "difficulty": "Thông hiểu",
+        "question": "**Read the passage and choose the best word for blank (21):**\n\n\"Urban infrastructure planners have also deployed IoT sensors that monitor the real-time Air Quality Index (AQI), helping citizens make informed daily decisions regarding outdoor (21)________.\"",
+        "options": [
+          "activities",
+          "accidents",
+          "appliances",
+          "contaminants"
+        ],
+        "correct": 0,
+        "explanation": "Cụm 'outdoor activities' (các hoạt động ngoài trời): dữ liệu chỉ số chất lượng không khí giúp người dân đưa ra quyết định phù hợp khi tham gia hoạt động ngoài trời."
+      },
+      {
+        "id": "e25_q22",
+        "topic": "Đọc điền từ (Cloze Reading - Green Urban Transit) - Câu 22",
+        "difficulty": "Nhận biết",
+        "question": "**Read the passage and choose the best word for blank (22):**\n\n\"By fostering sustainable daily habits, the people of Ho Chi Minh City are ensuring a greener, healthier, and more resilient urban habitat for (22)________ generations.\"",
+        "options": [
+          "future",
+          "historic",
+          "ancient",
+          "primitive"
+        ],
+        "correct": 0,
+        "explanation": "'future generations' (các thế hệ tương lai) là cụm từ chuẩn và mang ý nghĩa phát triển bền vững cho đời sau."
+      },
+      {
+        "id": "e25_q23",
+        "topic": "Đọc hiểu Rừng ngập mặn Cần Giờ - Ý chính (Main Idea)",
+        "difficulty": "Thông hiểu",
+        "question": "**Read the passage about Can Gio Biosphere Reserve:**\n\n*Located just 40 kilometers southeast of downtown Ho Chi Minh City, the Can Gio Mangrove Forest is widely recognized as the city’s 'green lungs' and an irreplaceable ecological shield. Covering approximately 75,000 hectares, Can Gio was designated as Vietnam's first International Biosphere Reserve by UNESCO in January 2000. It is home to one of the most successfully rehabilitated mangrove ecosystems in the world after suffering catastrophic wartime deforestation.*\n\n*The mangrove forest fulfills multiple indispensable ecological functions. First and foremost, its dense root network stabilizes coastal soil, preventing shoreline erosion and dampening storm surges and high tides rolling in from the East Sea. Second, the wetland serves as an exceptional natural carbon sink. Mangroves absorb and sequester atmospheric carbon dioxide at rates three to five times higher per hectare than mature inland tropical forests. Third, the reserve acts as a vast biological filter, cleansing wastewater from industrial and domestic sources in the Saigon - Dong Nai river basin before it empties into the ocean.*\n\n*Biodiversity thrives across Can Gio's lush waterways. The reserve provides vital breeding grounds, nurseries, and feeding habitats for countless species of marine life, including mud crabs, mollusks, shrimps, and rare fish. It is also an imperative stopover for migratory waterbirds traveling along the East Asian - Australasian Flyway. Today, Can Gio is pioneering sustainable community-based ecotourism, welcoming travelers who wish to kayak through emerald canals and observe wildlife without disturbing nature.*\n\n**What is the main idea of the entire passage?**",
+        "options": [
+          "The ecological roles, biodiversity, and conservation significance of the Can Gio Mangrove Biosphere Reserve.",
+          "The commercial advantages of developing industrial factories along the Can Gio coastline.",
+          "The technical methods used to dredge navigation channels in the Dong Nai river basin.",
+          "A travel guidebook focusing on high-speed ferry tickets from central Saigon to Vung Tau."
+        ],
+        "correct": 0,
+        "explanation": "Toàn bài văn tập trung trình bày về các vai trò sinh thái thiết yếu (lá chắn bờ biển, hấp thụ CO2, lọc nước thải), sự đa dạng sinh học phong phú và ý nghĩa bảo tồn của Khu dự trữ sinh quyển Rừng ngập mặn Cần Giờ."
+      },
+      {
+        "id": "e25_q24",
+        "topic": "Đọc hiểu Rừng ngập mặn Cần Giờ - Chi tiết văn bản",
+        "difficulty": "Nhận biết",
+        "question": "According to the first paragraph, when was the Can Gio Mangrove Forest officially designated as an International Biosphere Reserve by UNESCO?",
+        "options": [
+          "In January 2000",
+          "In late 2018",
+          "In April 1975",
+          "In December 2024"
+        ],
+        "correct": 0,
+        "explanation": "Thông tin rõ ràng ở đoạn 1: 'Can Gio was designated as Vietnam's first International Biosphere Reserve by UNESCO in January 2000'."
+      },
+      {
+        "id": "e25_q25",
+        "topic": "Đọc hiểu Rừng ngập mặn Cần Giờ - Từ đồng nghĩa trong ngữ cảnh",
+        "difficulty": "Vận dụng",
+        "question": "The word **'dampening'** in paragraph 2 is closest in meaning to:",
+        "options": [
+          "weakening or reducing the impact of",
+          "increasing the destructive power of",
+          "creating or generating suddenly",
+          "recording and broadcasting"
+        ],
+        "correct": 0,
+        "explanation": "Trong câu 'preventing shoreline erosion and dampening storm surges and high tides', 'dampening' mang nghĩa là làm suy giảm, triệt tiêu bớt lực tác động của sóng bão và triều cường (weakening or reducing the impact of)."
+      },
+      {
+        "id": "e25_q26",
+        "topic": "Đọc hiểu Rừng ngập mặn Cần Giờ - Khả năng hấp thụ carbon",
+        "difficulty": "Thông hiểu",
+        "question": "According to paragraph 2, how efficient are mangroves at absorbing atmospheric carbon dioxide compared to terrestrial tropical forests?",
+        "options": [
+          "They sequester carbon at rates three to five times higher per hectare.",
+          "They absorb exactly the same amount of carbon per hectare.",
+          "They absorb far less carbon than inland forests.",
+          "They only capture carbon during periods of severe flooding."
+        ],
+        "correct": 0,
+        "explanation": "Căn cứ đoạn 2: 'Mangroves absorb and sequester atmospheric carbon dioxide at rates three to five times higher per hectare than mature inland tropical forests'."
+      },
+      {
+        "id": "e25_q27",
+        "topic": "Đọc hiểu Rừng ngập mặn Cần Giờ - Quy chiếu đại từ",
+        "difficulty": "Thông hiểu",
+        "question": "The pronoun **'It'** in paragraph 3 refers to:",
+        "options": [
+          "The reserve (Can Gio)",
+          "The East Sea",
+          "Industrial wastewater",
+          "The migratory flyway"
+        ],
+        "correct": 0,
+        "explanation": "Ở đoạn 3: 'The reserve provides vital breeding grounds... It is also an imperative stopover for migratory waterbirds...'. Đại từ 'It' thay thế trực tiếp cho danh từ 'The reserve' (khu bảo tồn Cần Giờ)."
+      },
+      {
+        "id": "e25_q28",
+        "topic": "Đọc hiểu Rừng ngập mặn Cần Giờ - Tìm chi tiết KHÔNG đúng",
+        "difficulty": "Vận dụng",
+        "question": "Which of the following statements is **NOT TRUE** according to the passage?",
+        "options": [
+          "Can Gio is situated hundreds of kilometers away from Ho Chi Minh City with no biological link to its water system.",
+          "The dense root system of mangroves helps stabilize coastal soil and prevent shoreline erosion.",
+          "Can Gio acts as a giant natural filter cleansing wastewater from the Saigon - Dong Nai river basin.",
+          "The wetland serves as an indispensable stopover for migratory waterbirds on the East Asian - Australasian Flyway."
+        ],
+        "correct": 0,
+        "explanation": "Câu khẳng định 'Can Gio is situated hundreds of kilometers away from Ho Chi Minh City...' là SAI, vì đoạn 1 nói rõ: 'Located just 40 kilometers southeast of downtown Ho Chi Minh City' và đóng vai trò 'lá phổi xanh', lọc nước cho lưu vực sông Sài Gòn - Đồng Nai."
+      },
+      {
+        "id": "e25_q29",
+        "topic": "Cấu tạo từ (Word Formation) - Danh từ",
+        "difficulty": "Thông hiểu",
+        "question": "The municipal administration has prioritized the continuous ________ of the city's green public transit infrastructure. (MODERN)",
+        "options": [
+          "modernization",
+          "modernize",
+          "modernly",
+          "modernism"
+        ],
+        "correct": 0,
+        "explanation": "Sau mạo từ 'the' và tính từ 'continuous' cần một danh từ: 'modernization' (sự hiện đại hóa). Động từ gốc: modernize."
+      },
+      {
+        "id": "e25_q30",
+        "topic": "Cấu tạo từ (Word Formation) - Trạng từ",
+        "difficulty": "Thông hiểu",
+        "question": "Rooftop solar photovoltaic panels installed across schools in Thu Duc City have proved to be ________ efficient in reducing electricity expenses. (REMARK)",
+        "options": [
+          "remarkably",
+          "remarkable",
+          "remark",
+          "remarking"
+        ],
+        "correct": 0,
+        "explanation": "Cần trạng từ 'remarkably' (một cách đáng kể/xuất sắc) đứng trước tính từ 'efficient' để bổ nghĩa cho tính từ này."
+      },
+      {
+        "id": "e25_q31",
+        "topic": "Cấu tạo từ (Word Formation) - Tính từ",
+        "difficulty": "Thông hiểu",
+        "question": "Educators are endeavoring to highlight the ________ environmental consequences of microplastics in our food and water chains. (HARM)",
+        "options": [
+          "harmful",
+          "harmless",
+          "harmfully",
+          "harm"
+        ],
+        "correct": 0,
+        "explanation": "Đứng trước cụm danh từ 'environmental consequences' cần tính từ mang nghĩa tiêu cực: 'harmful' (có hại, gây nguy hại)."
+      },
+      {
+        "id": "e25_q32",
+        "topic": "Cấu tạo từ (Word Formation) - Tính từ",
+        "difficulty": "Thông hiểu",
+        "question": "The ongoing afforestation program in the Can Gio coastal area is widely praised as an exceptionally ________ conservation model. (SUCCEED)",
+        "options": [
+          "successful",
+          "successfully",
+          "success",
+          "succeed"
+        ],
+        "correct": 0,
+        "explanation": "Sau phó từ 'exceptionally' và trước danh từ 'conservation model' cần một tính từ: 'successful' (thành công). 'An exceptionally successful conservation model': một mô hình bảo tồn đặc biệt thành công."
+      },
+      {
+        "id": "e25_q33",
+        "topic": "Dạng mới Sở GD&ĐT TP.HCM: Tra cứu chú thích từ điển (Dictionary Entry)",
+        "difficulty": "Vận dụng",
+        "question": "**Look at the dictionary entry note below:**\n\n```\n+-------------------------------------------------------------------------+\n| carbon footprint  /ˌkɑː.bən ˈfʊt.prɪnt/  (noun)                         |\n| Definition:                                                             |\n|   The total amount of greenhouse gases (especially carbon dioxide)      |\n|   produced directly and indirectly by human activities, usually         |\n|   expressed in equivalent tons of CO2.                                  |\n| Common collocations:                                                    |\n|   • reduce / minimize one's carbon footprint                            |\n|   • leave a heavy / massive carbon footprint                            |\n|   • calculate one's personal carbon footprint                           |\n+-------------------------------------------------------------------------+\n```\n\n**Complete the sentence with the exact 2-word collocation defined above:**\n\n*\"By regularly commuting by electric bus and switching off idle lights, each student directly helps to reduce their ________ on the planet.\"*",
+        "options": [
+          "carbon footprint",
+          "greenhouse emission",
+          "ecological damage",
+          "energy resource"
+        ],
+        "correct": 0,
+        "explanation": "Căn cứ theo chú thích từ điển cung cấp: cụm danh từ 2 từ đi với động từ 'reduce' là 'reduce one's carbon footprint' (giảm thiểu dấu chân carbon của bản thân)."
+      },
+      {
+        "id": "e25_q34",
+        "topic": "Dạng mới Sở GD&ĐT TP.HCM: Đọc bảng thông tin & Điền cụm từ phù hợp",
+        "difficulty": "Vận dụng",
+        "question": "**Read the official transit guideline note below:**\n\n```\n+-------------------------------------------------------------------------+\n| HCMC METRO LINE 1 - PASSENGER FARE CLASSIFICATION TABLE                 |\n|                                                                         |\n| Ticket Category   | Intended User Profile          | Fare & Privileges |\n| Single Journey    | Occasional passengers          | 6,000 - 20,000 VND|\n| 1-Day Ticket      | Tourists / Short-term visitors | Unlimited 24-hr   |\n| Monthly Pass      | Daily commuters & Students     | Unlimited 30-day  |\n| QR-Code Ticket    | Mobile app digital users       | Paperless scan    |\n+-------------------------------------------------------------------------+\n```\n\n**Based on the table, which 2-word phrase correctly completes the announcement?**\n\n*\"Secondary school students commuting to school on the metro line every single day are strongly advised to purchase a ________ to enjoy unlimited travel for an entire month.\"*",
+        "options": [
+          "Monthly Pass",
+          "Single Journey",
+          "QR-Code Ticket",
+          "1-Day Ticket"
+        ],
+        "correct": 0,
+        "explanation": "Căn cứ vào bảng tra cứu: Loại vé dành cho 'Daily commuters & Students' có đặc quyền 'Unlimited 30-day' (không giới hạn lượt đi trong 30 ngày) chính là 'Monthly Pass' (Vé tháng)."
+      },
+      {
+        "id": "e25_q35",
+        "topic": "Sắp xếp từ thành câu hoàn chỉnh (Sentence Rearrangement)",
+        "difficulty": "Thông hiểu",
+        "question": "**Rearrange the given groups of words into a grammatically correct and meaningful sentence:**\n\n`urban air quality / Ho Chi Minh City / in public parks / is planting / to enhance / thousands of shade trees`",
+        "options": [
+          "Ho Chi Minh City is planting thousands of shade trees in public parks to enhance urban air quality.",
+          "Ho Chi Minh City is enhancing urban air quality in public parks to plant thousands of shade trees.",
+          "Thousands of shade trees Ho Chi Minh City is planting to enhance in public parks urban air quality.",
+          "In public parks to enhance urban air quality Ho Chi Minh City is planting thousands of shade trees."
+        ],
+        "correct": 0,
+        "explanation": "Trật tự câu chuẩn: Chủ ngữ (Ho Chi Minh City) + V (is planting) + Tân ngữ (thousands of shade trees) + Nơi chốn (in public parks) + Mệnh đề chỉ mục đích (to enhance urban air quality)."
+      },
+      {
+        "id": "e25_q36",
+        "topic": "Sắp xếp từ thành câu hoàn chỉnh (Sentence Rearrangement)",
+        "difficulty": "Thông hiểu",
+        "question": "**Rearrange the given groups of words into a grammatically correct and meaningful sentence:**\n\n`can create / toward sustainable development / meaningful changes / every small conservation habit / in our neighborhood`",
+        "options": [
+          "Every small conservation habit can create meaningful changes toward sustainable development in our neighborhood.",
+          "Every small conservation habit toward sustainable development can create in our neighborhood meaningful changes.",
+          "In our neighborhood can create every small conservation habit meaningful changes toward sustainable development.",
+          "Meaningful changes every small conservation habit can create in our neighborhood toward sustainable development."
+        ],
+        "correct": 0,
+        "explanation": "Trật tự câu chuẩn: Chủ ngữ (Every small conservation habit) + Động từ (can create) + Tân ngữ (meaningful changes) + Giới từ bổ ngữ (toward sustainable development in our neighborhood)."
+      },
+      {
+        "id": "e25_q37",
+        "topic": "Viết lại câu - Hiện tại hoàn thành & Quá khứ đơn",
+        "difficulty": "Thông hiểu",
+        "question": "**Finish the second sentence so that it has the closest meaning to the original sentence:**\n\n*The transport department began operating the automated electric bus system eight months ago.*\n\n➔ **The transport department has _________________________________________________.**",
+        "options": [
+          "The transport department has been operating the automated electric bus system for eight months.",
+          "The transport department has operated the automated electric bus system since eight months ago.",
+          "The transport department has begun operating the automated electric bus system for eight months.",
+          "The transport department had been operating the automated electric bus system eight months ago."
+        ],
+        "correct": 0,
+        "explanation": "Chuyển từ thì Quá khứ đơn với mốc 'began ... eight months ago' sang Hiện tại hoàn thành tiếp diễn / hoàn thành: 'has been operating ... for eight months' (đã và đang vận hành hệ thống xe buýt điện được 8 tháng)."
+      },
+      {
+        "id": "e25_q38",
+        "topic": "Viết lại câu - Câu điều kiện loại 2 từ thực tế",
+        "difficulty": "Vận dụng",
+        "question": "**Finish the second sentence so that it has the closest meaning to the original sentence:**\n\n*Residents do not separate solid waste at source, so excessive amounts of recyclable materials end up in landfills.*\n\n➔ **If residents _________________________________________________.**",
+        "options": [
+          "If residents separated solid waste at source, excessive amounts of recyclable materials would not end up in landfills.",
+          "If residents separate solid waste at source, excessive amounts of recyclable materials would end up in landfills.",
+          "If residents had separated solid waste at source, excessive amounts of recyclable materials would not end up in landfills.",
+          "If residents separated solid waste at source, excessive amounts of recyclable materials will end up in landfills."
+        ],
+        "correct": 0,
+        "explanation": "Tình huống thực tế ở hiện tại (do not separate ... end up). Khi viết lại bằng câu điều kiện trái với hiện tại, ta dùng Câu điều kiện loại 2: 'If + S + V-ed/V2, S + would/could (not) + V-inf'."
+      },
+      {
+        "id": "e25_q39",
+        "topic": "Viết lại câu - Lời gợi ý gián tiếp với 'suggested'",
+        "difficulty": "Thông hiểu",
+        "question": "**Finish the second sentence so that it has the closest meaning to the original sentence:**\n\n*\"Why don't we organize a school-wide electronic waste collection day next Friday?\" said Hoang.*\n\n➔ **Hoang suggested _________________________________________________.**",
+        "options": [
+          "Hoang suggested organizing a school-wide electronic waste collection day the following Friday.",
+          "Hoang suggested to organize a school-wide electronic waste collection day next Friday.",
+          "Hoang suggested that they organized a school-wide electronic waste collection day next Friday.",
+          "Hoang suggested about organizing a school-wide electronic waste collection day the following Friday."
+        ],
+        "correct": 0,
+        "explanation": "Cấu trúc đề xuất trong câu gián tiếp: 'suggest + V-ing' hoặc 'suggest that + S + (should) + V-inf'. Đồng thời lùi trạng từ chỉ thời gian 'next Friday' thành 'the following Friday'."
+      },
+      {
+        "id": "e25_q40",
+        "topic": "Viết lại câu - Chuyển từ 'Despite' sang 'Although'",
+        "difficulty": "Thông hiểu",
+        "question": "**Finish the second sentence so that it has the closest meaning to the original sentence:**\n\n*Despite the oppressive midday heat, hundreds of volunteers diligently planted mangrove saplings along the coastal mudflats.*\n\n➔ **Although _________________________________________________.**",
+        "options": [
+          "Although the midday heat was oppressive, hundreds of volunteers diligently planted mangrove saplings along the coastal mudflats.",
+          "Although of the oppressive midday heat, hundreds of volunteers diligently planted mangrove saplings along the coastal mudflats.",
+          "Although the volunteers felt the heat oppressive, but they planted mangrove saplings along the coastal mudflats.",
+          "Although oppressive was the midday heat, hundreds of volunteers diligently planted mangrove saplings along the coastal mudflats."
+        ],
+        "correct": 0,
+        "explanation": "Chuyển từ cấu trúc 'Despite + Noun phrase' sang 'Although + Clause (S + V)'. 'the oppressive midday heat' chuyển thành mệnh đề 'the midday heat was oppressive'. Lưu ý trong tiếng Anh không dùng đồng thời 'Although' và 'but'."
+      }
+    ]
+  },
+  {
     "id": "eng_exam_hcmc_2024",
     "title": "Đề thi chính thức Tuyển sinh Lớp 10 TP.HCM Năm 2024 - Môn Tiếng Anh",
     "subject": "english",

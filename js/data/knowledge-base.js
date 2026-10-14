@@ -113,6 +113,42 @@ window.KNOWLEDGE_BASE = {
             back: "Theo định lý Pythagore: $l = \\sqrt{h^2 + r^2}$."
           }
         ]
+      },
+      {
+        id: "math_t5",
+        title: "Toán Thực Tế Vào 10 (Chuẩn GDPT 2018)",
+        summary: "Bảo bối thực chiến chiếm 60% - 70% số điểm đề thi vào 10: Mua sắm giảm giá kép, Tiền điện EVN bậc thang, Nồng độ dung dịch, Đo đạc lượng giác giác kế, Thể tích vật thể đời sống, Thống kê & Xác suất thực nghiệm.",
+        formulas: [
+          { name: "Tiền điện EVN bậc thang", formula: "\\text{Chia sản lượng theo từng bậc: Bậc 1 (0-50), Bậc 2 (51-100), Bậc 3 (101-200)... rồi cộng thuế VAT 8%}" },
+          { name: "Giảm giá kép", formula: "T = \\text{Giá gốc} \\times (1 - %_1) \\times (1 - %_2) \\quad (\\text{Tuyệt đối không cộng dồn } %_1 + %_2!)" },
+          { name: "Lượng giác đo đạc", formula: "H = d \\cdot \\tan\\alpha + h_{\\text{giác kế}} \\quad (\\text{Luôn cộng thêm chiều cao mắt/giác kế } h)" },
+          { name: "Bảo toàn cồn/muối", formula: "V_1 \\cdot C_1 = V_2 \\cdot C_2; \\quad m_1 \\cdot C_1\\% = m_2 \\cdot C_2\\%" },
+          { name: "Hình học đời sống", formula: "\\text{Trụ: } V = \\pi r^2 h; \\quad \\text{Nón: } V = \\frac{1}{3}\\pi r^2 h; \\quad \\text{Cầu: } V = \\frac{4}{3}\\pi R^3 \\quad (1\\text{ m}^3 = 1000\\text{ lít})" },
+          { name: "Xác suất thực nghiệm", formula: "P = \\frac{\\text{Số kết quả thuận lợi}}{\\text{Tổng số lần thực nghiệm}} \\times 100\\%" }
+        ],
+        traps: [
+          "BẪY GIÁC KẾ: Tính được $d \\cdot \\tan\\alpha$ nhưng quên cộng chiều cao $1.4\\text{m} - 1.6\\text{m}$ của giác kế ngắm!",
+          "BẪY ĐƯỜNG KÍNH: Đề bài cho đường kính $d$, quên chia đôi để lấy bán kính $r$ trước khi tính thể tích/diện tích.",
+          "BẪY CỘNG DỒN GIẢM GIÁ: Lấy 10% + 5% = 15% là sai lầm mất điểm ngay lập tức!"
+        ],
+        flashcards: [
+          {
+            front: "Tại sao không được cộng dồn hai mức giảm giá $10\\%$ và $5\\%$ thành $15\\%$?",
+            back: "Vì đợt giảm giá thứ hai được tính trên GIÁ ĐÃ GIẢM của đợt một, chứ không phải trên giá niêm yết ban đầu. Công thức đúng: Giá gốc $\\times (1 - 0.10) \\times (1 - 0.05) = \\text{Giá gốc} \\times 0.855$ (tương đương giảm 14.5%, không phải 15%)."
+          },
+          {
+            front: "Khi dùng giác kế đặt cao $1.5\\text{ m}$ để đo chiều cao cột cờ, công thức tính chiều cao toàn phần $H$ là gì?",
+            back: "$H = d \\cdot \\tan\\alpha + 1.5$ (Trong đó $d$ là khoảng cách từ chân giác kế đến chân cột cờ, $\\alpha$ là góc ngắm nâng)."
+          },
+          {
+            front: "Pha chế $500\\text{ ml}$ cồn $70^\\circ$ từ cồn $90^\\circ$, lượng cồn $90^\\circ$ cần dùng tính như thế nào?",
+            back: "Bảo toàn thể tích cồn nguyên chất: $V_{90} \\times 90\\% = 500 \\times 70\\% \\Rightarrow V_{90} = \\frac{500 \\times 70}{90} \\approx 388.9\\text{ ml}$."
+          },
+          {
+            front: "Trong bài toán tiền điện nước bậc thang lũy tiến, phương pháp tính đúng là gì?",
+            back: "Chia mức tiêu thụ thành từng khoảng định mức theo bậc. Nhân số đơn vị của từng bậc với đơn giá của bậc đó, cộng tổng các bậc lại rồi mới nhân thuế VAT."
+          }
+        ]
       }
     ]
   },
@@ -401,6 +437,30 @@ window.KNOWLEDGE_BASE = {
           {
             front: "Nên đưa mấy dẫn chứng trong đoạn văn 200 chữ?",
             back: "Chỉ nên đưa 1 ĐẾN 2 DẪN CHỨNG tiêu biểu nhất, nêu ngắn gọn 2 - 3 câu để phân tích ý nghĩa, không kể lể chi tiết."
+          }
+        ]
+      },
+      {
+        id: "lit_t4",
+        title: "Kỹ năng Đọc hiểu Ngữ liệu ngoài SGK (Chuẩn GDPT 2018)",
+        summary: "Bí quyết đạt điểm tối đa phần Đọc hiểu và Nghị luận xã hội với ngữ liệu văn bản hoàn toàn ngoài SGK.",
+        formulas: [
+          { name: "Nhận diện thể loại", formula: "Văn bản nghị luận (luận điểm, lý lẽ, dẫn chứng) | Văn bản thông tin (số liệu, sự kiện) | Văn bản văn học (hình tượng, cảm xúc)" },
+          { name: "Tìm thông điệp", formula: "Trả lời 2 câu hỏi: Văn bản bàn về vấn đề gì? Tác giả muốn người đọc thay đổi nhận thức hay hành động như thế nào?" },
+          { name: "Nêu tác dụng tu từ", formula: "1. Tên biện pháp -> 2. Từ ngữ biểu hiện -> 3. Tác dụng gợi hình -> 4. Tác dụng gợi cảm, tư tưởng" }
+        ],
+        traps: [
+          "Chép lại nguyên xi văn bản khi trả lời câu hỏi thông điệp thay vì đúc kết thành bài học nhận thức cho bản thân.",
+          "Quên không liên hệ với thực tế đời sống học đường và trách nhiệm của người trẻ."
+        ],
+        flashcards: [
+          {
+            front: "Quy tắc vàng khi trả lời câu hỏi 'Thông điệp ý nghĩa nhất rút ra từ văn bản'?",
+            back: "Nêu rõ thông điệp (1 câu khái quát) + Giải thích ngắn gọn vì sao thông điệp đó có ý nghĩa đối với cuộc sống hôm nay (2-3 câu) + Liên hệ hành động thực tế của bản thân."
+          },
+          {
+            front: "Dấu hiệu nhận biết văn bản nghị luận xã hội trong phần Đọc hiểu ngoài SGK?",
+            back: "Mục đích thuyết phục người đọc về một tư tưởng, đạo lý hay hiện tượng đời sống; có hệ thống luận điểm rõ ràng, lý lẽ sắc bén và dẫn chứng thực tế chứng minh."
           }
         ]
       }

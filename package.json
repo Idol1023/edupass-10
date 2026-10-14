@@ -1,0 +1,18 @@
+{
+  "name": "edupass-10",
+  "version": "1.0.0",
+  "description": "EduPass 10 - He Thong Thi Thu & Luyen Thi Vao Lop 10 Toan Dien",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -s . -l 10000",
+    "build": "echo 'Static site ready'",
+    "dev": "npx serve -s ."
+  },
+  "keywords": [
+    "luyen-thi-vao-10",
+    "thi-thu-lop-10",
+    "edupass-10"
+  ],
+  "author": "Idol1023",
+  "license": "MIT"
+}

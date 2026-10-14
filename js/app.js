@@ -371,7 +371,8 @@ class EduPassApp {
 
       // Year badge
       let yearClass = 'year-2023';
-      if (exam.year === 2024) yearClass = 'year-2024';
+      if (exam.year === 2025) yearClass = 'year-2025';
+      else if (exam.year === 2024) yearClass = 'year-2024';
       else if (exam.year === 2022) yearClass = 'year-2022';
       const yearBadge = exam.year ? `<span class="exam-tag-badge ${yearClass}">Năm ${exam.year}</span>` : '';
 
@@ -379,12 +380,14 @@ class EduPassApp {
       let locClass = 'loc-national';
       if (exam.location === 'TP.HCM') locClass = 'loc-hcmc';
       else if (exam.location === 'Hà Nội') locClass = 'loc-hanoi';
+      else if (exam.location === 'Bộ GD&ĐT') locClass = 'loc-moet';
       const locBadge = `<span class="exam-tag-badge ${locClass}"><i data-lucide="map-pin" style="width: 11px; height: 11px;"></i> ${exam.location || 'Toàn quốc'}</span>`;
 
-      // Official badge
-      const officialBadge = exam.isOfficial ? `
+      // Official or special badge
+      const badgeContent = exam.badgeText || (exam.isOfficial ? '⭐ Đề Chính Thức' : '');
+      const officialBadge = badgeContent ? `
         <span class="exam-tag-badge year-2024" style="background: linear-gradient(135deg, #f59e0b, #ef4444); color: #fff;">
-          ⭐ Đề Chính Thức
+          ${badgeContent}
         </span>
       ` : '';
 
@@ -480,12 +483,16 @@ class EduPassApp {
         // Location check
         let matchLoc = true;
         if (activeFilters.location !== 'all') {
-          if (activeFilters.location === 'TP.HCM') {
+          if (activeFilters.location === 'Bộ GD&ĐT') {
+            matchLoc = exam.location === 'Bộ GD&ĐT';
+          } else if (activeFilters.location === 'TP.HCM') {
             matchLoc = exam.location === 'TP.HCM';
           } else if (activeFilters.location === 'Hà Nội') {
             matchLoc = exam.location === 'Hà Nội';
           } else if (activeFilters.location === 'Toàn quốc') {
             matchLoc = !exam.location || exam.location === 'Toàn quốc' || exam.location === 'Chuyên Top 1';
+          } else {
+            matchLoc = exam.location === activeFilters.location;
           }
         }
 
