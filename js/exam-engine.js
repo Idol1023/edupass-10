@@ -526,6 +526,32 @@ class ExamEngine {
       window.app.updateHeaderStats();
     }
   }
+
+  resetResults() {
+    this.activeExam = null;
+    this.userAnswers = {};
+    if (this.timerInterval) clearInterval(this.timerInterval);
+
+    const scoreNum = document.getElementById('resultScoreNumber');
+    const verdict = document.getElementById('resultVerdictText');
+    const feedback = document.getElementById('resultFeedbackText');
+    const correctVal = document.getElementById('resultCorrectVal');
+    const wrongVal = document.getElementById('resultWrongVal');
+    const timeVal = document.getElementById('resultTimeVal');
+    const accuracyVal = document.getElementById('resultAccuracyVal');
+    const topicList = document.getElementById('resultTopicBreakdown');
+
+    if (scoreNum) scoreNum.textContent = "0.0";
+    if (verdict) verdict.textContent = "Chưa có bài thi nào hoàn thành";
+    if (feedback) feedback.textContent = "Hãy chọn một đề thi trong Kho đề để bắt đầu làm bài và xem phân tích kết quả tại đây.";
+    if (correctVal) correctVal.textContent = "0/0";
+    if (wrongVal) wrongVal.textContent = "0";
+    if (timeVal) timeVal.textContent = "0m 00s";
+    if (accuracyVal) accuracyVal.textContent = "0%";
+    if (topicList) {
+      topicList.innerHTML = '<div style="color: var(--text-muted); text-align: center; padding: 1.5rem; font-size: 0.9rem;">Chưa có dữ liệu bài thi. Hãy hoàn thành bài thi đầu tiên!</div>';
+    }
+  }
 }
 
 window.examEngine = new ExamEngine();

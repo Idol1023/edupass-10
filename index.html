@@ -507,30 +507,30 @@
       <div class="result-card">
         <div class="result-header">
           <div class="score-display-box">
-            <div class="score-number" id="resultScoreNumber">8.5</div>
+            <div class="score-number" id="resultScoreNumber">0.0</div>
             <div class="score-scale">thang điểm 10</div>
           </div>
-          <h2 class="result-verdict" id="resultVerdictText">Rất tốt! Cơ hội đỗ trường mục tiêu rất cao</h2>
+          <h2 class="result-verdict" id="resultVerdictText">Chưa có bài thi nào hoàn thành</h2>
           <p class="result-feedback" id="resultFeedbackText">
-            Kiến thức nền tảng rất chắc chắn. Hãy xem lại một vài câu sai sót nhỏ trong Sổ tay lỗi sai để bứt phá lên mốc 9.5 - 10!
+            Hãy chọn một đề thi trong Kho đề để bắt đầu thử sức và theo dõi kết quả đánh giá năng lực tại đây.
           </p>
         </div>
 
         <div class="result-stats-row">
           <div class="result-stat-item">
-            <div class="result-stat-val" style="color: var(--success);" id="resultCorrectVal">12/15</div>
+            <div class="result-stat-val" style="color: var(--success);" id="resultCorrectVal">0/0</div>
             <div class="result-stat-lbl">Số câu đúng</div>
           </div>
           <div class="result-stat-item">
-            <div class="result-stat-val" style="color: var(--danger);" id="resultWrongVal">3</div>
+            <div class="result-stat-val" style="color: var(--danger);" id="resultWrongVal">0</div>
             <div class="result-stat-lbl">Số câu sai</div>
           </div>
           <div class="result-stat-item">
-            <div class="result-stat-val" style="color: var(--accent-cyan);" id="resultTimeVal">28m 15s</div>
+            <div class="result-stat-val" style="color: var(--accent-cyan);" id="resultTimeVal">0m 00s</div>
             <div class="result-stat-lbl">Thời gian hoàn thành</div>
           </div>
           <div class="result-stat-item">
-            <div class="result-stat-val" style="color: var(--primary);" id="resultAccuracyVal">80%</div>
+            <div class="result-stat-val" style="color: var(--primary);" id="resultAccuracyVal">0%</div>
             <div class="result-stat-lbl">Độ chính xác</div>
           </div>
         </div>
@@ -610,7 +610,7 @@
           </select>
         </div>
         <div style="font-size: 0.85rem; color: var(--text-muted);">
-          Tổng số: <strong style="color: var(--danger);" id="mistakeNotebookTotalBadge">2 câu</strong>
+          Tổng số: <strong style="color: var(--danger);" id="mistakeNotebookTotalBadge">0 câu</strong>
         </div>
       </div>
 
@@ -768,23 +768,23 @@
           <div>
             <div style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Tổng điểm 3 môn dự phóng:</div>
             <div style="font-size: 1.4rem; font-weight: 800; font-family: var(--font-mono); color: var(--primary); margin-top: 2px;" id="roadmapProjectedTotal">
-              24.50 / 30.0đ
+              0.0 / 30.0đ
             </div>
-            <div style="font-size: 0.75rem; color: var(--text-muted);" id="roadmapProjectedBreakdown">Toán: 8.5 • Anh: 8.5 • Văn: 7.5</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);" id="roadmapProjectedBreakdown">Toán: 0.0 • Anh: 0.0 • Văn: 0.0 (Chưa có bài thi)</div>
           </div>
 
           <div>
             <div style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Chênh lệch so với điểm chuẩn:</div>
-            <div style="font-size: 1.4rem; font-weight: 800; font-family: var(--font-mono); margin-top: 2px;" id="roadmapScoreGap">
-              -1.00 điểm
+            <div style="font-size: 1.4rem; font-weight: 800; font-family: var(--font-mono); color: var(--text-muted); margin-top: 2px;" id="roadmapScoreGap">
+              -25.50 điểm
             </div>
-            <div style="font-size: 0.75rem; color: var(--text-muted);" id="roadmapGapDetail">Cần thêm ~1 - 2 câu đúng</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);" id="roadmapGapDetail">Chưa có bài thi nào hoàn thành</div>
           </div>
 
           <div>
             <div style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Xác suất trúng tuyển:</div>
-            <div class="stat-pill" style="margin-top: 0.35rem; font-weight: 800; display: inline-flex; width: auto;" id="roadmapAdmissionChanceBadge">
-              Đang bám đuổi (65 - 75%)
+            <div class="stat-pill" style="margin-top: 0.35rem; font-weight: 800; display: inline-flex; width: auto; color: #94a3b8; background: rgba(148, 163, 184, 0.12); border-color: rgba(148, 163, 184, 0.25);" id="roadmapAdmissionChanceBadge">
+              Khởi đầu (0%)
             </div>
           </div>
         </div>
@@ -975,6 +975,38 @@
     </div>
   </div>
 
+  <!-- RESET DATA CONFIRMATION MODAL -->
+  <div class="modal-overlay" id="resetConfirmModal">
+    <div class="modal-card" style="max-width: 480px;">
+      <div class="modal-header">
+        <h3 class="modal-title" style="color: var(--danger); display: flex; align-items: center; gap: 0.5rem;">
+          <i data-lucide="alert-triangle"></i> Đặt lại toàn bộ dữ liệu về 0
+        </h3>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-main);">
+          Bạn có chắc chắn muốn làm sạch toàn bộ dữ liệu học tập để bắt đầu lại từ đầu không?
+        </p>
+        <ul style="margin-top: 0.75rem; font-size: 0.88rem; line-height: 1.6; color: var(--text-muted); padding-left: 1.25rem;">
+          <li>Lịch sử làm bài thi: Đưa về <strong>0 bộ đề</strong></li>
+          <li>Điểm trung bình và độ chính xác: Đưa về <strong>0.0đ / 0%</strong></li>
+          <li>Chuỗi ngày học tập (Streak): Đưa về <strong>0 ngày</strong></li>
+          <li>Sổ tay câu hỏi sai: Làm sạch về <strong>0 câu</strong></li>
+          <li>Lộ trình và huy hiệu: Đưa về mốc xuất phát <strong>0%</strong></li>
+        </ul>
+        <div style="margin-top: 1rem; padding: 0.75rem; border-radius: var(--radius-sm); background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.25); color: #fca5a5; font-size: 0.82rem;">
+          ⚠️ Hành động này sẽ xóa dữ liệu lưu trên trình duyệt của bạn và không thể hoàn tác.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="btnCancelResetData">Hủy bỏ</button>
+        <button class="btn btn-primary" id="btnConfirmResetData" style="background: var(--danger); border-color: var(--danger);">
+          <i data-lucide="trash-2"></i> Xác nhận đưa về 0
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- ================= MOBILE BOTTOM NAVIGATION BAR ================= -->
   <nav class="mobile-bottom-nav" id="mobileBottomNav">
     <button class="mobile-nav-item active" data-tab="dashboard">
@@ -992,7 +1024,7 @@
     <button class="mobile-nav-item" data-tab="mistakes">
       <i data-lucide="book-x"></i>
       <span>Sổ lỗi</span>
-      <span class="mobile-badge" id="mobileMistakeBadge">2</span>
+      <span class="mobile-badge" id="mobileMistakeBadge">0</span>
     </button>
     <button class="mobile-nav-item" data-tab="knowledge">
       <i data-lucide="brain"></i>
@@ -1007,8 +1039,13 @@
         <strong style="color: var(--text-main);">EduPass 10</strong> — Hệ Thống Thi Thử Tuyển Sinh Vào Lớp 10 Toàn Diện
         <div style="font-size: 0.78rem; margin-top: 0.25rem;">Xây dựng dành riêng cho các sĩ tử lớp 9 ôn thi vào 10 toàn quốc.</div>
       </div>
-      <div class="footer-quote">
-        "Thành công là tổng hòa của những nỗ lực nhỏ được lặp đi lặp lại mỗi ngày."
+      <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+        <div class="footer-quote">
+          "Thành công là tổng hòa của những nỗ lực nhỏ được lặp đi lặp lại mỗi ngày."
+        </div>
+        <button class="btn btn-secondary btn-sm" id="btnFooterResetData" title="Đặt lại toàn bộ dữ liệu học tập về 0" style="font-size: 0.78rem; border-color: rgba(239, 68, 68, 0.4); color: #f87171;">
+          <i data-lucide="rotate-ccw"></i> Đặt lại về 0
+        </button>
       </div>
     </div>
   </footer>

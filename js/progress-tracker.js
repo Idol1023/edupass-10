@@ -679,11 +679,11 @@ class ProgressTracker {
 
       // Stage 2: Biển báo TP.HCM, Phrasal Verbs & Viết lại câu
       const s2Criteria = [
-        { label: 'Làm đúng dạng bài Biển báo (Signs & Notices)', done: engAvg >= 7.5 },
-        { label: 'Giải quyết các câu sai về viết lại câu trong Sổ tay', done: mistakes.length <= 15 },
-        { label: 'Đạt điểm thi Tiếng Anh ≥ 7.5/10', done: engAvg >= 7.5 }
+        { label: 'Làm đúng dạng bài Biển báo (Signs & Notices)', done: engExams.length >= 1 && engAvg >= 7.5 },
+        { label: 'Giải quyết các câu sai về viết lại câu trong Sổ tay', done: engExams.length >= 1 && mistakes.length <= 15 },
+        { label: 'Đạt điểm thi Tiếng Anh ≥ 7.5/10', done: engExams.length >= 1 && engAvg >= 7.5 }
       ];
-      const s2Pct = s1Pct >= 100 ? Math.round((s2Criteria.filter(c => c.done).length / s2Criteria.length) * 100) : Math.round(s1Pct * 0.4);
+      const s2Pct = engExams.length === 0 ? 0 : s1Pct >= 100 ? Math.round((s2Criteria.filter(c => c.done).length / s2Criteria.length) * 100) : Math.round(s1Pct * 0.4);
 
       // Stage 3: Luyện đề chuẩn 40 câu TP.HCM (Word Form & Đọc hiểu Chợ Lớn)
       const s3Criteria = [
@@ -793,11 +793,11 @@ class ProgressTracker {
       const s1Pct = Math.round((s1Criteria.filter(c => c.done).length / s1Criteria.length) * 100);
 
       const s2Criteria = [
-        { label: 'Điểm trung bình 3 môn đạt ≥ 7.5/10', done: proj >= 22.5 },
-        { label: 'Xử lý tối thiểu 5 lỗi sai trong Sổ tay lỗi sai', done: mistakes.length <= 20 },
-        { label: 'Thuần thục chuyên đề Vi-ét, Parabol & Biển báo TP.HCM', done: stats.math.avg >= 7.5 && stats.english.avg >= 7.5 }
+        { label: 'Điểm trung bình 3 môn đạt ≥ 7.5/10', done: totalTests >= 1 && proj >= 22.5 },
+        { label: 'Xử lý tối thiểu 5 lỗi sai trong Sổ tay lỗi sai', done: totalTests >= 1 && mistakes.length <= 20 },
+        { label: 'Thuần thục chuyên đề Vi-ét, Parabol & Biển báo TP.HCM', done: totalTests >= 1 && stats.math.avg >= 7.5 && stats.english.avg >= 7.5 }
       ];
-      const s2Pct = s1Pct >= 100 ? Math.round((s2Criteria.filter(c => c.done).length / s2Criteria.length) * 100) : Math.round(s1Pct * 0.4);
+      const s2Pct = totalTests === 0 ? 0 : s1Pct >= 100 ? Math.round((s2Criteria.filter(c => c.done).length / s2Criteria.length) * 100) : Math.round(s1Pct * 0.4);
 
       const s3Criteria = [
         { label: 'Hoàn thành đề chuẩn Sở GD&ĐT TP.HCM (40 câu Tiếng Anh / 8 bài Toán)', done: totalTests >= 3 },
@@ -809,7 +809,7 @@ class ProgressTracker {
       const s4Criteria = [
         { label: 'Đạt điểm ≥ 9.0 trong ít nhất 1 bài thi tuyển sinh', done: history.some(h => h.score >= 9.0) },
         { label: 'Xử lý chính xác câu Vận dụng cao (Word Form khó, BĐT Cô-si)', done: stats.english.avg >= 9.0 || stats.math.avg >= 9.0 },
-        { label: `Vượt điểm chuẩn an toàn mục tiêu (${bench.toFixed(2)}đ)`, done: proj >= bench }
+        { label: `Vượt điểm chuẩn an toàn mục tiêu (${bench.toFixed(2)}đ)`, done: totalTests >= 3 && proj >= bench }
       ];
       const s4Pct = s3Pct >= 80 ? Math.round((s4Criteria.filter(c => c.done).length / s4Criteria.length) * 100) : 0;
 

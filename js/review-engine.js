@@ -78,21 +78,27 @@ class ReviewEngine {
       if (recentWithReview) {
         this.currentReviewList = recentWithReview.fullReviewData;
         this.currentTitle = recentWithReview.title;
-      } else if (window.MATH_EXAMS && window.MATH_EXAMS[0]) {
-        // Prepare demo review from Exam 1
-        const sampleExam = window.MATH_EXAMS[0];
-        this.currentTitle = `${sampleExam.title} (Minh họa bài mẫu)`;
-        this.currentReviewList = sampleExam.questions.slice(0, 6).map((q, i) => ({
-          ...q,
-          userAnswer: i === 1 ? (q.correctIndex + 1) % 4 : i === 5 ? (q.correctIndex + 2) % 4 : q.correctIndex,
-          isCorrect: i !== 1 && i !== 5,
-          subject: 'math'
-        }));
       }
     }
 
     if (this.reviewHeaderTitle) {
       this.reviewHeaderTitle.textContent = this.currentTitle || "Xem lại chi tiết bài làm";
+    }
+
+    if (this.currentReviewList.length === 0) {
+      this.reviewContainer.innerHTML = `
+        <div style="text-align: center; padding: 3.5rem 1rem; color: var(--text-muted);">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📝</div>
+          <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">Chưa có dữ liệu bài thi để xem lại</div>
+          <p style="font-size: 0.9rem; margin-top: 0.35rem; max-width: 440px; margin-left: auto; margin-right: auto;">
+            Bạn chưa hoàn thành bài thi nào. Hãy vào kho đề để chọn một bộ đề và thử sức ngay nhé!
+          </p>
+          <div style="margin-top: 1.25rem;">
+            <button class="btn btn-primary" onclick="window.app.switchTab('exams-list')">Vào làm bài thi ngay</button>
+          </div>
+        </div>
+      `;
+      return;
     }
 
     const filtered = this.currentReviewList.filter(item => {

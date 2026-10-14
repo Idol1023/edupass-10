@@ -14,6 +14,7 @@ class EduPassApp {
     this.initCountdown();
     this.renderExamCatalog();
     this.updateHeaderStats();
+    this.renderRecentHistory();
     this.initLucideIcons();
 
     // Default to dashboard
@@ -194,26 +195,51 @@ class EduPassApp {
       });
     }
 
-    // Reset data
+    // Reset data modal controls
     const resetBtn = document.getElementById('btnResetData');
-    if (resetBtn) {
-      resetBtn.addEventListener('click', () => {
-        if (confirm("Bạn có chắc chắn muốn đặt lại toàn bộ dữ liệu về 0 (xóa lịch sử làm bài, điểm số, chuỗi streak và sổ tay lỗi sai) không?")) {
-          window.storageManager.resetAllData();
-          if (window.examEngine) {
-            window.examEngine.activeExam = null;
-            window.examEngine.userAnswers = {};
-            if (window.examEngine.timerInterval) clearInterval(window.examEngine.timerInterval);
-          }
-          this.updateHeaderStats();
-          if (window.progressTracker) window.progressTracker.renderAll();
-          if (window.reviewEngine) {
-            window.reviewEngine.setReviewData([], "Chưa có bài thi nào");
-            window.reviewEngine.renderMistakeNotebook();
-          }
-          window.soundManager.playSuccess();
-          alert("Toàn bộ dữ liệu học tập đã được đưa về 0 thành công!");
+    const footerResetBtn = document.getElementById('btnFooterResetData');
+    const resetModal = document.getElementById('resetConfirmModal');
+    const cancelResetBtn = document.getElementById('btnCancelResetData');
+    const confirmResetBtn = document.getElementById('btnConfirmResetData');
+
+    const openResetModal = () => {
+      if (resetModal) resetModal.classList.add('active');
+      window.soundManager.playClick();
+      this.initLucideIcons();
+    };
+
+    if (resetBtn) resetBtn.addEventListener('click', openResetModal);
+    if (footerResetBtn) footerResetBtn.addEventListener('click', openResetModal);
+
+    if (cancelResetBtn) {
+      cancelResetBtn.addEventListener('click', () => {
+        if (resetModal) resetModal.classList.remove('active');
+        window.soundManager.playClick();
+      });
+    }
+
+    if (confirmResetBtn) {
+      confirmResetBtn.addEventListener('click', () => {
+        window.storageManager.resetAllData();
+        if (window.examEngine) {
+          window.examEngine.resetResults();
         }
+        this.updateHeaderStats();
+        this.renderRecentHistory();
+        if (window.progressTracker) {
+          window.progressTracker.renderAll();
+        }
+        if (window.reviewEngine) {
+          window.reviewEngine.setReviewData([], "Chưa có bài thi nào");
+          window.reviewEngine.renderMistakeNotebook();
+        }
+        if (window.flashcardTrainer) {
+          window.flashcardTrainer.init();
+        }
+        if (resetModal) resetModal.classList.remove('active');
+        this.initLucideIcons();
+        window.soundManager.playSuccess();
+        this.showToast("Toàn bộ dữ liệu học tập đã được đưa về mốc 0 thành công!");
       });
     }
   }
@@ -251,6 +277,10 @@ class EduPassApp {
     } else if (tabId === 'dashboard') {
       this.updateHeaderStats();
       this.renderRecentHistory();
+    } else if (tabId === 'results' && window.examEngine) {
+      if (window.storageManager.getExamHistory().length === 0) {
+        window.examEngine.resetResults();
+      }
     }
 
     this.initLucideIcons();
@@ -636,6 +666,44 @@ class EduPassApp {
     });
 
     this.initLucideIcons();
+  }
+
+  showToast(message, type = 'success') {
+    const existing = document.querySelector('.edupass-toast');
+    if (existing) existing.remove();
+
+    const toast = document.createElement('div');
+    toast.className = 'edupass-toast';
+    toast.style.cssText = `
+      position: fixed;
+      bottom: 85px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 99999;
+      background: rgba(17, 24, 39, 0.95);
+      border: 1.5px solid ${type === 'success' ? 'var(--success)' : 'var(--danger)'};
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 999px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s ease;
+    `;
+    const icon = type === 'success' ? 'check-circle' : 'alert-circle';
+    toast.innerHTML = `<i data-lucide="${icon}" style="color: ${type === 'success' ? 'var(--success)' : 'var(--danger)'}; width: 18px; height: 18px;"></i> <span>${message}</span>`;
+    document.body.appendChild(toast);
+    if (window.lucide) window.lucide.createIcons();
+
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateX(-50%) translateY(10px)';
+      setTimeout(() => toast.remove(), 400);
+    }, 3200);
   }
 
   initLucideIcons() {
