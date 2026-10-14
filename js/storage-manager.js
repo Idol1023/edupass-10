@@ -17,24 +17,29 @@ class StorageManager {
   }
 
   initDefaults() {
-    // Check if initial run
     const existingProfile = localStorage.getItem(this.KEYS.PROFILE);
-    if (!existingProfile || existingProfile.includes("Chu Văn An")) {
+    if (!existingProfile) {
       const defaultProfile = {
-        name: "Sĩ Tử Lớp 9 TP.HCM",
+        name: "Sĩ Tử Lớp 9",
         targetSchool: "THPT Nguyễn Thượng Hiền (TP.HCM)",
         benchmarkScore: 25.5, // Điểm chuẩn tuyển sinh lớp 10 TP.HCM
         targetAverage: 8.5,
         region: "TP. Hồ Chí Minh",
         examDate: "2026-06-06",
-        streakDays: 6,
-        lastActiveDate: new Date().toISOString().split('T')[0]
+        streakDays: 0,
+        lastActiveDate: null
       };
       this.saveProfile(defaultProfile);
     }
 
-    if (!localStorage.getItem(this.KEYS.EXAM_HISTORY)) {
-      this.seedSampleData();
+    if (localStorage.getItem(this.KEYS.EXAM_HISTORY) === null) {
+      localStorage.setItem(this.KEYS.EXAM_HISTORY, JSON.stringify([]));
+    }
+    if (localStorage.getItem(this.KEYS.MISTAKE_BANK) === null) {
+      localStorage.setItem(this.KEYS.MISTAKE_BANK, JSON.stringify([]));
+    }
+    if (localStorage.getItem(this.KEYS.FLASHCARDS) === null) {
+      localStorage.setItem(this.KEYS.FLASHCARDS, JSON.stringify([]));
     }
   }
 
@@ -231,11 +236,20 @@ class StorageManager {
   }
 
   resetAllData() {
-    localStorage.removeItem(this.KEYS.PROFILE);
-    localStorage.removeItem(this.KEYS.EXAM_HISTORY);
-    localStorage.removeItem(this.KEYS.MISTAKE_BANK);
-    localStorage.removeItem(this.KEYS.FLASHCARDS);
-    this.initDefaults();
+    const cleanProfile = {
+      name: "Sĩ Tử Lớp 9",
+      targetSchool: "THPT Nguyễn Thượng Hiền (TP.HCM)",
+      benchmarkScore: 25.5,
+      targetAverage: 8.5,
+      region: "TP. Hồ Chí Minh",
+      examDate: "2026-06-06",
+      streakDays: 0,
+      lastActiveDate: null
+    };
+    this.saveProfile(cleanProfile);
+    localStorage.setItem(this.KEYS.EXAM_HISTORY, JSON.stringify([]));
+    localStorage.setItem(this.KEYS.MISTAKE_BANK, JSON.stringify([]));
+    localStorage.setItem(this.KEYS.FLASHCARDS, JSON.stringify([]));
   }
 }
 

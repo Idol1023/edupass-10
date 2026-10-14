@@ -130,8 +130,8 @@ class ProgressTracker {
     const litExams = history.filter(h => h.subject === 'literature');
 
     // Helper: calculate weighted average (recent tests have higher weight)
-    const calcSubjectAvg = (exams, defaultVal) => {
-      if (exams.length === 0) return { avg: defaultVal, isEstimated: true, count: 0 };
+    const calcSubjectAvg = (exams) => {
+      if (exams.length === 0) return { avg: 0, isEstimated: true, count: 0, bestScore: 0 };
       let total = 0;
       let weightSum = 0;
       exams.forEach((ex, idx) => {
@@ -147,9 +147,9 @@ class ProgressTracker {
       };
     };
 
-    const math = calcSubjectAvg(mathExams, 8.25);
-    const english = calcSubjectAvg(engExams, 8.50);
-    const literature = calcSubjectAvg(litExams, 7.75);
+    const math = calcSubjectAvg(mathExams);
+    const english = calcSubjectAvg(engExams);
+    const literature = calcSubjectAvg(litExams);
 
     const projectedTotal = Math.round((math.avg + english.avg + literature.avg) * 100) / 100;
 
@@ -177,11 +177,29 @@ class ProgressTracker {
 
     const benchmark = profile.benchmarkScore || 25.5;
     const targetPerSubject = Math.round((benchmark / 3) * 100) / 100;
-    const gap = Math.round((stats.projectedTotal - benchmark) * 100) / 100;
 
     if (targetSchoolDisplay) targetSchoolDisplay.textContent = profile.targetSchool || "THPT Nguyễn Thượng Hiền (TP.HCM)";
     if (targetBenchDisplay) targetBenchDisplay.textContent = `${benchmark.toFixed(2)} điểm`;
     if (targetPerSubjectDisplay) targetPerSubjectDisplay.textContent = `${targetPerSubject.toFixed(2)}đ/môn`;
+
+    if (stats.totalExamsTaken === 0) {
+      if (projectedTotalDisplay) projectedTotalDisplay.textContent = `0.0 / 30.0đ`;
+      if (projectedBreakdownDisplay) projectedBreakdownDisplay.textContent = `Toán: 0.0 • Anh: 0.0 • Văn: 0.0 (Chưa có bài thi)`;
+      if (scoreGapDisplay) {
+        scoreGapDisplay.textContent = `-${benchmark.toFixed(2)} điểm`;
+        scoreGapDisplay.style.color = "var(--text-muted)";
+      }
+      if (gapDetailDisplay) gapDetailDisplay.textContent = `Chưa có dữ liệu bài thi. Hãy hoàn thành đề thi thử đầu tiên!`;
+      if (chanceBadge) {
+        chanceBadge.textContent = "Khởi đầu (0%)";
+        chanceBadge.style.color = "#94a3b8";
+        chanceBadge.style.background = "rgba(148, 163, 184, 0.12)";
+        chanceBadge.style.borderColor = "rgba(148, 163, 184, 0.25)";
+      }
+      return;
+    }
+
+    const gap = Math.round((stats.projectedTotal - benchmark) * 100) / 100;
 
     if (projectedTotalDisplay) {
       projectedTotalDisplay.textContent = `${stats.projectedTotal.toFixed(2)} / 30.0đ`;
@@ -267,7 +285,9 @@ class ProgressTracker {
         target: targetPerSubject,
         isEstimated: stats.math.isEstimated,
         count: stats.math.count,
-        advice: stats.math.avg >= targetPerSubject ? 
+        advice: stats.math.count === 0 ?
+          "📝 <strong>Bắt đầu luyện tập:</strong> Bạn chưa hoàn thành bài thi nào môn Toán. Hãy làm đề khảo sát đầu tiên để hệ thống chẩn đoán điểm mạnh/yếu!" :
+          stats.math.avg >= targetPerSubject ? 
           "✅ <strong>Thế mạnh vững vàng:</strong> Đã làm chủ 8 dạng toán thực tế TP.HCM (Parabol, Vi-ét, Co.opmart). Hãy tập trung rèn thêm câu phân loại 8c và BĐT Cô-si để bảo toàn mốc 9.0+." :
           `⚠️ <strong>Cần bù điểm:</strong> Còn thiếu ${(targetPerSubject - stats.math.avg).toFixed(2)}đ (~${Math.max(1, Math.ceil((targetPerSubject - stats.math.avg) / 1.0))} câu toán tự luận). Ôn kỹ dạng toán thực tế đo đạc Landmark 81 và hệ thức Vi-ét để ăn trọn 7.5 - 8.0 điểm.`
       },
@@ -280,7 +300,9 @@ class ProgressTracker {
         target: targetPerSubject,
         isEstimated: stats.english.isEstimated,
         count: stats.english.count,
-        advice: stats.english.avg >= targetPerSubject ?
+        advice: stats.english.count === 0 ?
+          "📝 <strong>Bắt đầu luyện tập:</strong> Bạn chưa có bài thi Tiếng Anh nào. Thử sức ngay với đề thi 40 câu chuẩn Sở GD&ĐT TP.HCM!" :
+          stats.english.avg >= targetPerSubject ?
           "🌟 <strong>Điểm tựa bứt phá:</strong> Nắm chắc cấu trúc 40 câu Sở GD&ĐT TP.HCM. Duy trì luyện bộ câu hỏi Biển báo đời sống, Word Form và đọc hiểu Chợ Lớn để đạt điểm 9.5." :
           `⚠️ <strong>Cần bù điểm:</strong> Còn thiếu ${(targetPerSubject - stats.english.avg).toFixed(2)}đ (~${Math.max(1, Math.ceil((targetPerSubject - stats.english.avg) / 0.25))} câu trắc nghiệm). Tập trung luyện trọn 6 câu Word Form và 2 câu Biển báo TP.HCM!`
       },
@@ -293,7 +315,9 @@ class ProgressTracker {
         target: targetPerSubject,
         isEstimated: stats.literature.isEstimated,
         count: stats.literature.count,
-        advice: stats.literature.avg >= targetPerSubject ?
+        advice: stats.literature.count === 0 ?
+          "📝 <strong>Bắt đầu luyện tập:</strong> Chưa có bài thi Ngữ Văn. Hãy làm đề thi thử đầu tiên để đánh giá kỹ năng đọc hiểu và viết đoạn văn!" :
+          stats.literature.avg >= targetPerSubject ?
           "✅ <strong>Phong độ ổn định:</strong> Nắm vững hệ thống văn bản SGK 9. Rèn thêm dẫn chứng thực tế sắc sảo cho đoạn văn nghị luận 200 chữ." :
           `⚠️ <strong>Cần củng cố:</strong> Còn thiếu ${(targetPerSubject - stats.literature.avg).toFixed(2)}đ (~${Math.max(1, Math.ceil((targetPerSubject - stats.literature.avg) / 0.5))} ý nghị luận). Chú ý các tác phẩm thơ hiện đại và kỹ năng trả lời câu hỏi đọc hiểu tiếng Việt.`
       }
@@ -301,11 +325,14 @@ class ProgressTracker {
 
     container.innerHTML = subjects.map(sub => {
       const diff = sub.score - sub.target;
-      const pct = Math.min(100, Math.round((sub.score / 10) * 100));
+      const pct = sub.count > 0 ? Math.min(100, Math.round((sub.score / 10) * 100)) : 0;
       let badgeClass = 'positive';
       let badgeText = `+${diff.toFixed(2)}đ Vượt chuẩn`;
 
-      if (Math.abs(diff) < 0.2) {
+      if (sub.count === 0) {
+        badgeClass = 'neutral';
+        badgeText = 'Chưa thi';
+      } else if (Math.abs(diff) < 0.2) {
         badgeClass = 'neutral';
         badgeText = '🎯 Đạt chuẩn';
       } else if (diff < 0) {
@@ -561,6 +588,9 @@ class ProgressTracker {
 
   // Helper: Extract competency metrics from real answered questions
   calculateRealSkills(history) {
+    if (!history || history.length === 0) {
+      return [0, 0, 0, 0, 0, 0];
+    }
     const mistakes = window.storageManager.getMistakes();
     const stats = this.getSubjectStats();
 

@@ -198,13 +198,21 @@ class EduPassApp {
     const resetBtn = document.getElementById('btnResetData');
     if (resetBtn) {
       resetBtn.addEventListener('click', () => {
-        if (confirm("Bạn có muốn đặt lại toàn bộ dữ liệu bài thi về mặc định ban đầu không?")) {
+        if (confirm("Bạn có chắc chắn muốn đặt lại toàn bộ dữ liệu về 0 (xóa lịch sử làm bài, điểm số, chuỗi streak và sổ tay lỗi sai) không?")) {
           window.storageManager.resetAllData();
+          if (window.examEngine) {
+            window.examEngine.activeExam = null;
+            window.examEngine.userAnswers = {};
+            if (window.examEngine.timerInterval) clearInterval(window.examEngine.timerInterval);
+          }
           this.updateHeaderStats();
           if (window.progressTracker) window.progressTracker.renderAll();
-          if (window.reviewEngine) window.reviewEngine.renderMistakeNotebook();
+          if (window.reviewEngine) {
+            window.reviewEngine.setReviewData([], "Chưa có bài thi nào");
+            window.reviewEngine.renderMistakeNotebook();
+          }
           window.soundManager.playSuccess();
-          alert("Đã làm mới dữ liệu hệ thống thành công!");
+          alert("Toàn bộ dữ liệu học tập đã được đưa về 0 thành công!");
         }
       });
     }
@@ -288,7 +296,8 @@ class EduPassApp {
     const mistakeBadgeCount = document.getElementById('navMistakeBadgeCount');
     const mobileMistakeBadge = document.getElementById('mobileMistakeBadge');
 
-    if (streakVal) streakVal.textContent = `${profile.streakDays || 5} ngày`;
+    const streak = typeof profile.streakDays === 'number' ? profile.streakDays : 0;
+    if (streakVal) streakVal.textContent = `${streak} ngày`;
     if (targetSchoolVal) targetSchoolVal.textContent = profile.targetSchool || "THPT Nguyễn Thượng Hiền (TP.HCM)";
     if (mistakeBadgeCount) mistakeBadgeCount.textContent = mistakes.length;
     if (mobileMistakeBadge) mobileMistakeBadge.textContent = mistakes.length;
@@ -308,12 +317,12 @@ class EduPassApp {
       if (dashAvg) dashAvg.textContent = `${avg.toFixed(1)}/10`;
 
       const totalQ = history.reduce((a, b) => a + (b.totalQuestions || 10), 0);
-      const totalC = history.reduce((a, b) => a + (b.correctCount || 8), 0);
-      const acc = Math.round((totalC / totalQ) * 100);
+      const totalC = history.reduce((a, b) => a + (b.correctCount || 0), 0);
+      const acc = totalQ > 0 ? Math.round((totalC / totalQ) * 100) : 0;
       if (dashAccuracy) dashAccuracy.textContent = `${acc}%`;
     } else {
-      if (dashAvg) dashAvg.textContent = "--";
-      if (dashAccuracy) dashAccuracy.textContent = "--";
+      if (dashAvg) dashAvg.textContent = "0.0/10";
+      if (dashAccuracy) dashAccuracy.textContent = "0%";
     }
   }
 
