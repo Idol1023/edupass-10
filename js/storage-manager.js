@@ -155,7 +155,48 @@ class StorageManager {
     }
   }
 
+  clearCookies() {
+    try {
+      const cookies = document.cookie.split(";");
+      const hostname = window.location.hostname;
+      const hostParts = hostname ? hostname.split(".") : [];
+
+      cookies.forEach(cookie => {
+        const eqPos = cookie.indexOf("=");
+        const name = eqPos > -1 ? cookie.substring(0, eqPos).trim() : cookie.trim();
+        if (!name) return;
+
+        // Path /
+        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC;`;
+
+        if (hostname) {
+          document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${hostname};`;
+          document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${hostname};`;
+        }
+
+        if (hostParts.length > 1) {
+          const domain = hostParts.slice(-2).join(".");
+          document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${domain};`;
+        }
+      });
+    } catch (e) {
+      console.warn("Could not clear cookies:", e);
+    }
+  }
+
   resetAllData() {
+    // 1. Clear all cookies
+    this.clearCookies();
+
+    // 2. Clear sessionStorage
+    try {
+      sessionStorage.clear();
+    } catch (e) {
+      console.warn("Could not clear sessionStorage:", e);
+    }
+
+    // 3. Clear localStorage items
     localStorage.removeItem(this.KEYS.EXAM_HISTORY);
     localStorage.removeItem(this.KEYS.MISTAKE_BANK);
     localStorage.removeItem(this.KEYS.FLASHCARDS);

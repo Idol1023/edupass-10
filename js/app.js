@@ -239,7 +239,7 @@ class EduPassApp {
         if (resetModal) resetModal.classList.remove('active');
         this.initLucideIcons();
         window.soundManager.playSuccess();
-        this.showToast("Toàn bộ dữ liệu học tập đã được đưa về mốc 0 thành công!");
+        this.showToast("Đã xóa sạch toàn bộ dữ liệu, cookies và đưa về mốc 0 thành công!");
       });
     }
   }
