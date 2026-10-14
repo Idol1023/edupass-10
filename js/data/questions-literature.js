@@ -27,6 +27,7 @@ window.LITERATURE_EXAMS = [
           "Thể thơ thất ngôn bát cú Đường luật",
           "Thể thơ song thất lục bát"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Đoạn trích có số chữ trong các dòng không cố định (dòng 5 chữ, dòng 8 chữ, dòng 6 chữ), ngắt nhịp linh hoạt theo dòng cảm xúc tự nhiên, thuộc thể thơ tự do."
       },
@@ -41,6 +42,7 @@ window.LITERATURE_EXAMS = [
           "yêu, thương, ôm, ấp",
           "chạy, nhảy, vui, hát"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Tác giả sử dụng 4 động từ liên tiếp 'lật, trườn, cười, réo' kết hợp điệp từ 'con' để khắc họa sinh động sự hiếu động, hồn nhiên và sức sống thơ ngây của em bé trong nôi."
       },
@@ -55,6 +57,7 @@ window.LITERATURE_EXAMS = [
           "Phép hoán dụ lấy bộ phận chỉ toàn thể",
           "Phép chơi chữ đồng âm dị nghĩa"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Tác giả sử dụng phép điệp cấu trúc '... nằm giữa ...' tạo sự đối xứng tuyệt đẹp: hình ảnh thực tế ấm áp ('con nằm giữa cha và mẹ') được nâng lên thành tầng nghĩa khái quát triết lý nhân văn sâu sắc ('cuộc đời nằm giữa yêu thương')."
       },
@@ -69,6 +72,7 @@ window.LITERATURE_EXAMS = [
           "Mỗi người cần sớm rời xa vòng tay cha mẹ để tự lập tuyệt đối.",
           "Chiếc giường hẹp là biểu tượng của hoàn cảnh nghèo khó cần sớm vượt qua."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Thông điệp cốt lõi của tác phẩm là tình cảm gia đình: dù 'chiếc giường nhỏ hẹp' nhưng vòng tay cha mẹ chính là 'nôi êm', nơi bao bọc trọn vẹn cuộc đời con người trong tình yêu thương cao cả."
       },
@@ -83,6 +87,7 @@ window.LITERATURE_EXAMS = [
           "Bài thơ tập trung đả kích lối sống thực dụng và phê phán xã hội hiện đại.",
           "Bài thơ chỉ đơn thuần là bài đồng dao ru ngủ không mang ý nghĩa triết lý."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Nét đặc sắc nghệ thuật của thơ Tế Hanh trong bài 'Con nằm' là sự giản dị, chân chất, không cầu kỳ hoa mỹ nhưng chạm đến đáy sâu cảm xúc nhờ hình ảnh chân thực và chiều sâu triết lý tình phụ mẫu."
       },
@@ -97,6 +102,7 @@ window.LITERATURE_EXAMS = [
           "Tác hại của việc người lớn thường xuyên nhắc nhở con cái",
           "Quy luật phát triển sinh học tự nhiên của cơ thể con người theo thời gian"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Đoạn trích tập trung làm rõ luận đề: sự trưởng thành không đo bằng tuổi tác mà đo bằng năng lực nhận diện các giá trị đích thực (tình yêu thương, sự thật, lẽ phải) đang bị che khuất trong đời sống."
       },
@@ -111,6 +117,7 @@ window.LITERATURE_EXAMS = [
           "Khả năng đọc nhanh hàng nghìn từ mỗi phút để nhớ kiến thức",
           "Việc đọc thuộc lòng các bài văn mẫu có sẵn"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'Biết đọc' ở đây được dùng theo nghĩa chuyển ẩn dụ: không phải đọc mặt chữ mà là 'đọc cuộc đời' – năng lực thấu cảm, nhận ra sự thật và tình yêu thương chân thành sau vẻ ngoài giản dị hay nghiêm khắc."
       },
@@ -125,6 +132,7 @@ window.LITERATURE_EXAMS = [
           "Sự sang trọng, quý phái xuất phát từ phẩm chất đạo đức chân thật",
           "Tương lai xán lạn và tràn đầy triển vọng của thế hệ trẻ"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'Hào nhoáng' chỉ sự lộng lẫy, bóng bẩy bên ngoài nhằm gây chú ý nhưng thiếu giá trị thực chất bên trong, thường dùng để đối lập với cái chân thật, bền vững."
       },
@@ -139,6 +147,7 @@ window.LITERATURE_EXAMS = [
           "Phép tương phản trái nghĩa hoàn toàn",
           "Phép tỉnh lược thành phần câu"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Cả hai câu đều lặp lại từ khóa trọng tâm 'trưởng thành' để duy trì chủ đề mạch lạc, đây là phép lặp từ ngữ (lexical repetition)."
       },
@@ -153,6 +162,7 @@ window.LITERATURE_EXAMS = [
           "Vì người trẻ buộc phải phục tùng mọi mệnh lệnh mà không cần suy nghĩ.",
           "Vì sự nhắc nhở nghiêm khắc luôn đem lại cảm giác dễ chịu cho người nghe."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Người trẻ thường dễ phản ứng trước lời nhắc nhở vì cái tôi non nớt. Khi biết lắng lại để cảm nhận sự lo lắng, tình thương phía sau vẻ nghiêm khắc, đó là minh chứng rõ nét cho một tâm hồn đã biết thấu hiểu và trưởng thành."
       },
@@ -167,6 +177,7 @@ window.LITERATURE_EXAMS = [
           "Tóm tắt toàn bộ nội dung sách giáo khoa Ngữ văn 9 từ học kỳ 1 đến học kỳ 2.",
           "Kể lại một chuyến đi du lịch xa cùng gia đình vào mùa hè năm trước."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Mở bài nghị luận xã hội hay cần đi từ bối cảnh thực tế đời sống, nêu bật vấn đề nghị luận và xác lập tầm quan trọng của việc trân trọng giá trị chân thật đối với lứa tuổi 15."
       },
@@ -181,6 +192,7 @@ window.LITERATURE_EXAMS = [
           "Một hiện tượng mạng nổi tiếng chỉ sau một đêm nhờ video giật gân, câu like.",
           "Một bạn học sinh chỉ chăm chú học bài trong phòng kín không bao giờ giao tiếp với ai."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Dẫn chứng từ các hoạt động xã hội thực tế như dự án bảo vệ môi trường Sài Gòn Xanh hay cứu trợ đồng bào có tính thời sự cao, phản ánh đúng lý tưởng cống hiến và trách nhiệm của thế hệ trẻ."
       },
@@ -195,6 +207,7 @@ window.LITERATURE_EXAMS = [
           "Khuyên tất cả học sinh nên ngừng học tập để đi làm từ thiện toàn thời gian.",
           "Cho rằng ai làm việc tốt cũng đều có động cơ vụ lợi cá nhân."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Phản đề hợp lý là chỉ ra những biểu hiện tiêu cực như chạy theo ảo tưởng hào nhoáng, thói vô cảm để từ đó cảnh tỉnh và tôn vinh lối sống chân thành, thực chất."
       },
@@ -209,6 +222,7 @@ window.LITERATURE_EXAMS = [
           "Dành nhiều thời gian 'sống ảo' để so sánh bản thân với người khác.",
           "Tránh xa mọi hoạt động tập thể để không bị ảnh hưởng."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Bài học nhận thức và hành động của học sinh lớp 9 cần gắn liền với tinh thần tự học, lòng biết ơn, trung thực trong thi cử và sự sẻ chia chân thành trong tập thể."
       },
@@ -223,6 +237,7 @@ window.LITERATURE_EXAMS = [
           "Kể thêm một câu chuyện dài dòng chưa từng được nhắc đến ở thân bài.",
           "Chỉ cần viết đúng một câu ngắn: 'Bài văn đến đây là hết'."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Kết bài hay cần thâu tóm được tư tưởng cốt lõi, tạo được dư ba trong lòng người chấm bằng thông điệp giàu chất nhân văn và niềm tin vào sự trưởng thành của tuổi trẻ."
       }

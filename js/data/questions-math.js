@@ -27,6 +27,7 @@ window.MATH_EXAMS = [
           "$N(-2; 4)$",
           "$N(-2; 1)$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Thay $x = -2$ vào hàm số $(P): y = \\frac{1}{2}(-2)^2 = \\frac{1}{2} \\cdot 4 = 2$. Vậy tọa độ điểm $N$ là $(-2; 2)$."
       },
@@ -41,6 +42,7 @@ window.MATH_EXAMS = [
           "$(-4; 8)$ và $(2; 2)$",
           "$(2; 6)$ và $(-2; 2)$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Phương trình hoành độ giao điểm của $(P)$ và $(d)$: $\\frac{1}{2}x^2 = x + 4 \\iff x^2 - 2x - 8 = 0$. Ta có $\\Delta' = (-1)^2 - 1(-8) = 9 > 0 \\implies x_1 = 1 + 3 = 4; x_2 = 1 - 3 = -2$. Với $x_1 = 4 \\implies y_1 = 4 + 4 = 8$. Với $x_2 = -2 \\implies y_2 = -2 + 4 = 2$. Vậy tọa độ giao điểm là $(4; 8)$ và $(-2; 2)$."
       },
@@ -55,6 +57,7 @@ window.MATH_EXAMS = [
           "Phương trình có nghiệm kép vì $\\Delta = 0$",
           "Phương trình có hai nghiệm cùng dấu dương"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Phương trình có $a = 2, c = -3 \\implies a \\cdot c = -6 < 0$. Do tích $a \\cdot c < 0$ nên $\\Delta = b^2 - 4ac > 0$, phương trình luôn có hai nghiệm phân biệt trái dấu."
       },
@@ -69,6 +72,7 @@ window.MATH_EXAMS = [
           "$T = 9$",
           "$T = 15$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Theo hệ thức Vi-ét: $S = x_1 + x_2 = -\\frac{b}{a} = \\frac{6}{2} = 3$ và $P = x_1x_2 = \\frac{c}{a} = -\\frac{3}{2}$. Biến đổi: $T = x_1^2 + x_2^2 = (x_1 + x_2)^2 - 2x_1x_2 = 3^2 - 2\\left(-\\frac{3}{2}\\right) = 9 + 3 = 12$."
       },
@@ -83,6 +87,7 @@ window.MATH_EXAMS = [
           "$20\\%$",
           "$50\\%$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Tần số tương đối của nhóm $[15; 30)$ là: $f = \\frac{230}{500} \\times 100\\% = 46\\%$."
       },
@@ -97,6 +102,7 @@ window.MATH_EXAMS = [
           "$0.46$ ($46\\%$)",
           "$0.10$ ($10\\%$)"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Số học sinh sử dụng từ 30 phút trở lên là: $100 + 50 = 150$ học sinh. Xác suất thực nghiệm là: $P(E) = \\frac{150}{500} = 0.30 = 30\\%$."
       },
@@ -111,6 +117,7 @@ window.MATH_EXAMS = [
           "$3297$ lít ($3.297\\text{ m}^3$)",
           "$1154$ lít ($1.154\\text{ m}^3$)"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Thể tích hình trụ: $V = \\pi R^2 h \\approx 3.14 \\times (0.7)^2 \\times 1.5 = 3.14 \\times 0.49 \\times 1.5 \\approx 2.3079\\text{ m}^3 \\approx 2308\\text{ lít}$."
       },
@@ -125,6 +132,7 @@ window.MATH_EXAMS = [
           "$\\approx 9.67\\text{ m}^2$",
           "$\\approx 13.20\\text{ m}^2$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Diện tích xung quanh của hình trụ: $S_{xq} = 2\\pi R h \\approx 2 \\times 3.14 \\times 0.7 \\times 1.5 = 4.396 \\times 1.5 \\approx 6.594\\text{ m}^2 \\approx 6.60\\text{ m}^2$."
       },
@@ -139,6 +147,7 @@ window.MATH_EXAMS = [
           "$10,800,000$ đồng",
           "$9,600,000$ đồng"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Giá sau khi giảm lần một: $12,000,000 \\times (1 - 0.10) = 10,800,000$ đồng. Giá thực tế sau khi giảm thêm $5\\%$ lần hai: $10,800,000 \\times (1 - 0.05) = 10,260,000$ đồng."
       },
@@ -153,6 +162,7 @@ window.MATH_EXAMS = [
           "$1,200,000$ đồng",
           "$1,440,000$ đồng"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Số tiền tiết kiệm: $12,000,000 - 10,260,000 = 1,740,000$ đồng. (Tỷ lệ giảm thực tế là: $1 - (0.90 \\times 0.95) = 1 - 0.855 = 14.5\\%$ chứ không phải $15\\%$ vì giảm trên giá đã hạ)."
       },
@@ -167,6 +177,7 @@ window.MATH_EXAMS = [
           "$160\\text{ m}$",
           "$138\\text{ m}$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Gọi $d$ là khoảng cách từ tàu đến chân tháp hải đăng. Ta có $\\tan 14^\\circ = \\frac{38}{d} \\implies d = \\frac{38}{\\tan 14^\\circ} \\approx \\frac{38}{0.2493} \\approx 152.4\\text{ m} \\approx 152\\text{ m}$."
       },
@@ -181,6 +192,7 @@ window.MATH_EXAMS = [
           "$\\approx 95\\text{ m}$",
           "$\\approx 60\\text{ m}$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Khoảng cách từ ca nô đến chân tháp: $d_2 = \\frac{38}{\\tan 28^\\circ} \\approx \\frac{38}{0.5317} \\approx 71.47\\text{ m} \\approx 71\\text{ m}$. Khoảng cách giữa hai tàu là: $d_1 - d_2 \\approx 152.4 - 71.5 = 80.9\\text{ m} \\approx 81\\text{ m}$."
       },
@@ -195,6 +207,7 @@ window.MATH_EXAMS = [
           "Đoạn thẳng $OM$ vuông góc với dây cung $AB$ tại trung điểm của $AB$",
           "$MA = MB$ theo tính chất hai tiếp tuyến cắt nhau"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Điểm $M$ là điểm tùy ý nằm ngoài $(O)$, khoảng cách $OM$ có thể lớn hơn $2R$ hoặc nhỏ hơn $2R$ (chỉ cần $OM > R$), nên khẳng định $OM$ luôn bằng đường kính là SAI."
       },
@@ -209,6 +222,7 @@ window.MATH_EXAMS = [
           "$MC \\cdot MD = OM^2 - 2R^2$",
           "$MA \\cdot MB = CD^2$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Xét hai tam giác đồng dạng $\\Delta MAC$ và $\\Delta MDA$ có $\\widehat{M}$ chung và $\\widehat{MAC} = \\widehat{MDA}$ (cùng chắn cung $AC$). Suy ra $\\frac{MA}{MD} = \\frac{MC}{MA} \\implies MA^2 = MC \\cdot MD$."
       }
@@ -237,6 +251,7 @@ window.MATH_EXAMS = [
           "Điểm $P(1; 1)$ thuộc $(P)$ vì khi $x = 1$ thì $y = 1$",
           "Điểm $Q(-3; 9)$ thuộc $(P)$ vì parabol luôn nhận giá trị dương"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Hàm số $(P): y = -x^2$. Với $x = 2$, ta có $y = -(2)^2 = -4$. Do đó điểm $M(2; -4)$ thuộc đồ thị parabol $(P)$."
       },
@@ -251,6 +266,7 @@ window.MATH_EXAMS = [
           "$(2; -4)$ và $(-1; -1)$",
           "$(3; -9)$ và $(-1; -1)$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Phương trình hoành độ giao điểm của $(P)$ và $(d)$ là: $-x^2 = 2x - 3 \\iff x^2 + 2x - 3 = 0$. Phương trình có $a + b + c = 1 + 2 - 3 = 0 \\implies x_1 = 1; x_2 = -3$. Với $x_1 = 1 \\implies y_1 = -(1)^2 = -1$. Với $x_2 = -3 \\implies y_2 = -(-3)^2 = -9$. Vậy tọa độ hai giao điểm là $(1; -1)$ và $(-3; -9)$."
       },
@@ -265,6 +281,7 @@ window.MATH_EXAMS = [
           "Phương trình có 2 nghiệm phân biệt cùng dấu dương vì tích $P > 0$",
           "Phương trình có nghiệm kép $x_1 = x_2 = 2$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Phương trình $x^2 - 4x - 5 = 0$ có $a = 1, c = -5 \\implies a \\cdot c = -5 < 0$. Do tích $a \\cdot c < 0$ nên phương trình luôn có 2 nghiệm phân biệt trái dấu."
       },
@@ -279,6 +296,7 @@ window.MATH_EXAMS = [
           "$A = 26$",
           "$A = 11$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Theo định lý Vi-ét: $S = x_1 + x_2 = 4$ và $P = x_1x_2 = -5$. Ta biến đổi: $A = x_1^2 + x_2^2 - 3x_1x_2 = (x_1 + x_2)^2 - 5x_1x_2 = (4)^2 - 5(-5) = 16 + 25 = 41$."
       },
@@ -293,6 +311,7 @@ window.MATH_EXAMS = [
           "$15\\%$",
           "$25\\%$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Số học sinh nhóm $[3; 4)$ giờ là $m = 60$. Tổng số học sinh điều tra là $N = 200$. Tần số tương đối là: $f = \\frac{60}{200} \\times 100\\% = 30\\%$."
       },
@@ -307,6 +326,7 @@ window.MATH_EXAMS = [
           "$0.15$ ($15\\%$)",
           "$0.70$ ($70\\%$)"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Số học sinh có thời gian tự học từ 3 giờ trở lên gồm nhóm $[3; 4)$ giờ ($60$ bạn) và nhóm $[4; 5)$ giờ ($30$ bạn), tổng cộng $60 + 30 = 90$ bạn. Xác suất thực nghiệm là: $P = \\frac{90}{200} = 0.45 = 45\\%$."
       },
@@ -321,6 +341,7 @@ window.MATH_EXAMS = [
           "$8140$ lít ($8.14\\text{ m}^3$)",
           "$1020$ lít ($1.02\\text{ m}^3$)"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Thể tích hình trụ: $V = \\pi R^2 h \\approx 3.14 \\times (0.6)^2 \\times 1.8 = 3.14 \\times 0.36 \\times 1.8 \\approx 2.03472\\text{ m}^3$. Vì $1\\text{ m}^3 = 1000$ lít, thể tích bồn nước là xấp xỉ $2035$ lít."
       },
@@ -335,6 +356,7 @@ window.MATH_EXAMS = [
           "$\\approx 12.32\\text{ m}^2$",
           "$\\approx 4.52\\text{ m}^2$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Diện tích toàn phần của hình trụ kín hai đáy: $S_{tp} = 2\\pi R(R + h) \\approx 2 \\times 3.14 \\times 0.6 \\times (0.6 + 1.8) = 3.768 \\times 2.4 \\approx 9.0432\\text{ m}^2 \\approx 9.04\\text{ m}^2$."
       },
@@ -349,6 +371,7 @@ window.MATH_EXAMS = [
           "$16\\text{ m}^3$ ở Bậc 1 và $0\\text{ m}^3$ ở Bậc 2",
           "$8\\text{ m}^3$ ở Bậc 1 và $14\\text{ m}^3$ ở Bậc 2"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Định mức Bậc 1 cho 4 người: $4 \\times 4\\text{ m}^3 = 16\\text{ m}^3$. Do tổng lượng nước là $22\\text{ m}^3 > 16\\text{ m}^3$ nên Bậc 1 tính trọn $16\\text{ m}^3$. Lượng nước còn lại chuyển sang Bậc 2 là: $22 - 16 = 6\\text{ m}^3$. (Định mức tối đa Bậc 2 là $4 \\times 2 = 8\\text{ m}^3$ nên $6\\text{ m}^3$ hoàn toàn nằm trong Bậc 2, không bị vượt sang Bậc 3)."
       },
@@ -363,6 +386,7 @@ window.MATH_EXAMS = [
           "$203,060\\text{ đồng}$",
           "$225,500\\text{ đồng}$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Tiền nước chưa thuế gồm:\n- Bậc 1: $16 \\times 6,700 = 107,200\\text{ đ}$\n- Bậc 2: $6 \\times 12,900 = 77,400\\text{ đ}$\nTổng tiền nước gốc = $107,200 + 77,400 = 184,600\\text{ đ}$.\nThuế VAT ($5\\%$) và phí bảo vệ môi trường ($10\\%$) tổng cộng là $15\\%$.\nTổng số tiền phải thanh toán là: $184,600 \\times (1 + 0.05 + 0.10) = 184,600 \\times 1.15 = 212,290\\text{ đồng}$."
       },
@@ -377,6 +401,7 @@ window.MATH_EXAMS = [
           "$352\\text{ m}$",
           "$175\\text{ m}$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Xét tam giác vuông tạo bởi đỉnh tháp, chân tháp và điểm quan sát $A$:\nTa có: $\\tan 42^\\circ = \\frac{\\text{Chiều cao}}{\\text{Khoảng cách}} = \\frac{262}{d} \\implies d = \\frac{262}{\\tan 42^\\circ} \\approx \\frac{262}{0.9004} \\approx 290.98\\text{ m} \\approx 291\\text{ m}$."
       },
@@ -391,6 +416,7 @@ window.MATH_EXAMS = [
           "$\\approx 28^\\circ 30'$",
           "$\\approx 22^\\circ 45'$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Khoảng cách từ điểm $B$ đến chân tháp là: $d_B = 291 + 100 = 391\\text{ m}$.\nTa có: $\\tan \\beta = \\frac{262}{391} \\approx 0.67008 \\implies \\beta = \\arctan(0.67008) \\approx 33.82^\\circ \\approx 33^\\circ 49'$."
       },
@@ -405,6 +431,7 @@ window.MATH_EXAMS = [
           "Tứ giác $ABOC$ nội tiếp đường tròn bán kính $2R$, và $\\widehat{BAC} = 45^\\circ$",
           "Tam giác $ABC$ là tam giác vuông cân tại $A$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Vì $AB, AC$ là tiếp tuyến nên $\\widehat{ABO} = \\widehat{ACO} = 90^\\circ \\implies \\widehat{ABO} + \\widehat{ACO} = 180^\\circ \\implies ABOC$ nội tiếp đường tròn đường kính $OA$. Trong tam giác vuông $ABO$, ta có $\\sin \\widehat{BAO} = \\frac{OB}{OA} = \\frac{R}{2R} = \\frac{1}{2} \\implies \\widehat{BAO} = 30^\\circ$. Do tính chất hai tiếp tuyến cắt nhau, tia $OA$ là phân giác của $\\widehat{BAC} \\implies \\widehat{BAC} = 2 \\times 30^\\circ = 60^\\circ$."
       },
@@ -419,6 +446,7 @@ window.MATH_EXAMS = [
           "$OA^2 = AD \\cdot AE$",
           "$DE^2 = AD \\cdot AE$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Xét hai tam giác $\\Delta ABD$ và $\\Delta AEB$ có:\n- Góc $\\widehat{BAE}$ chung\n- Góc $\\widehat{ABD} = \\widehat{AEB}$ (góc tạo bởi tiếp tuyến và dây cung bằng góc nội tiếp cùng chắn cung $BD$).\nDo đó $\\Delta ABD \\sim \\Delta AEB\\text{ (g-g)} \\implies \\frac{AB}{AE} = \\frac{AD}{AB} \\implies AB^2 = AD \\cdot AE$."
       }
@@ -447,6 +475,7 @@ window.MATH_EXAMS = [
           "$A = \\frac{1}{\\sqrt{x} - 1}$",
           "$A = \\frac{\\sqrt{x} - 1}{x - 1}$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Quy đồng mẫu thức chung $(\\sqrt{x}-1)(\\sqrt{x}+1)$:\n$A = \\frac{3\\sqrt{x} + 1 - 2(\\sqrt{x} + 1)}{(\\sqrt{x}-1)(\\sqrt{x}+1)} = \\frac{3\\sqrt{x} + 1 - 2\\sqrt{x} - 2}{(\\sqrt{x}-1)(\\sqrt{x}+1)} = \\frac{\\sqrt{x} - 1}{(\\sqrt{x}-1)(\\sqrt{x}+1)} = \\frac{1}{\\sqrt{x} + 1}$."
       },
@@ -461,6 +490,7 @@ window.MATH_EXAMS = [
           "$3$ giá trị ($x = 0, 1, 4$)",
           "$0$ giá trị"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Để $P = 1 + \\frac{3}{\\sqrt{x} + 1} \\in \\mathbb{Z}$ thì $\\sqrt{x} + 1$ phải là ước của $3$. Vì $\\sqrt{x} \\ge 0 \\implies \\sqrt{x} + 1 \\ge 1$. Do đó $\\sqrt{x} + 1 \\in \\{1; 3\\}$.\n- Với $\\sqrt{x} + 1 = 1 \\implies \\sqrt{x} = 0 \\implies x = 0$ (thỏa mãn điều kiện, khi đó $P = 4$).\n- Với $\\sqrt{x} + 1 = 3 \\implies \\sqrt{x} = 2 \\implies x = 4$ (thỏa mãn điều kiện, khi đó $P = 2$).\nVậy có đúng 2 giá trị nguyên của $x$ là $x = 0$ và $x = 4$."
       },
@@ -475,6 +505,7 @@ window.MATH_EXAMS = [
           "$18$ ngày",
           "$30$ ngày"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Mỗi ngày hai tổ cùng làm được: $\\frac{1}{12}$ công việc.\nTrong $4$ ngày đầu, hai tổ làm được: $4 \\times \\frac{1}{12} = \\frac{1}{3}$ công việc.\nKhối lượng công việc tổ II làm trong $10$ ngày tiếp theo là: $\\frac{7}{10} - \\frac{1}{3} = \\frac{11}{30}$ công việc.\nMỗi ngày tổ II làm được: $\\frac{11}{30} : 10 = \\frac{11}{300}$ công việc.\nThời gian một mình tổ II hoàn thành công việc là: $1 : \\frac{11}{300} = \\frac{300}{11} \\approx 27.27$ ngày (xấp xỉ $27$ ngày)."
       },
@@ -489,6 +520,7 @@ window.MATH_EXAMS = [
           "$\\approx 6280\\text{ cm}^3$",
           "$\\approx 8200\\text{ cm}^3$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Thể tích hình nón: $V = \\frac{1}{3}\\pi R^2 h = \\frac{1}{3}\\pi \\times (20)^2 \\times 30 = 4000\\pi \\approx 4000 \\times 3.14 = 12560\\text{ cm}^3$."
       },
@@ -503,6 +535,7 @@ window.MATH_EXAMS = [
           "$(3; -1)$",
           "$(4; -1)$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Từ phương trình 2: $y = 7 - 3x$. Thế vào phương trình 1: $2x - 3(7 - 3x) = 1 \\iff 2x - 21 + 9x = 1 \\iff 11x = 22 \\iff x = 2$. Suy ra $y = 7 - 3(2) = 1$. Nghiệm là $(2; 1)$."
       },
@@ -517,6 +550,7 @@ window.MATH_EXAMS = [
           "$m = -3$",
           "$m = 5$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Phương trình hoành độ giao điểm: $x^2 - 2x - (m - 1) = 0$. Điều kiện có 2 nghiệm phân biệt: $\\Delta' = (-1)^2 - 1(-m + 1) = 1 + m - 1 = m > 0$. Theo định lý Vi-ét: $x_1 + x_2 = 2$ và $x_1x_2 = -(m - 1) = 1 - m$. Ta có: $x_1^2 + x_2^2 = (x_1 + x_2)^2 - 2x_1x_2 = 4 - 2(1 - m) = 4 - 2 + 2m = 2 + 2m$. Theo đề bài: $2 + 2m = 10 \\iff 2m = 8 \\iff m = 4$ (thỏa mãn $m > 0$)."
       },
@@ -531,6 +565,7 @@ window.MATH_EXAMS = [
           "$13.3\\%$",
           "$50\\%$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Số học sinh đạt từ 8 điểm trở lên gồm nhóm $[8; 9)$ ($40$ em) và nhóm $[9; 10]$ ($20$ em), tổng cộng $40 + 20 = 60$ em. Tần số tương đối là: $f = \\frac{60}{150} \\times 100\\% = 40\\%$."
       },
@@ -545,6 +580,7 @@ window.MATH_EXAMS = [
           "$\\frac{1}{5} = 0.20$",
           "$\\frac{1}{2} = 0.50$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Số học sinh đạt từ $9.0$ đến $10.0$ là $20$. Xác suất thực nghiệm là: $P = \\frac{20}{150} = \\frac{2}{15} \\approx 0.133$."
       },
@@ -559,6 +595,7 @@ window.MATH_EXAMS = [
           "Tứ giác $CDHE$ nội tiếp vì $\\widehat{CDH} + \\widehat{CEH} = 180^\\circ$",
           "Tứ giác $BCEF$ nội tiếp đường tròn đường kính $BC$ vì $\\widehat{BEC} = \\widehat{BFC} = 90^\\circ$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Tứ giác $BCEF$ có hai đỉnh $E$ và $F$ cùng nhìn cạnh $BC$ dưới góc vuông $90^\\circ$ nên nội tiếp đường tròn đường kính $BC$, chứ không phải tứ giác có tổng hai góc đối bằng $180^\\circ$. Do đó khẳng định 'Tứ giác BCEF có tổng hai góc đối bằng 180 độ' là SAI."
       },
@@ -573,6 +610,7 @@ window.MATH_EXAMS = [
           "$AD \\cdot HD = BE \\cdot HE$",
           "$AH^2 = BH \\cdot HE$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Xét hai tam giác vuông $\\Delta HAF$ và $\\Delta HCD$ hoặc $\\Delta HAE$ và $\\Delta HBD$ có góc đối đỉnh tại $H$ bằng nhau nên $\\Delta HAE \\sim \\Delta HBD\\text{ (g-g)} \\implies \\frac{HA}{HB} = \\frac{HE}{HD} \\implies HA \\cdot HD = HB \\cdot HE$."
       },
@@ -587,6 +625,7 @@ window.MATH_EXAMS = [
           "Vì tam giác $AEF$ cân tại $A$",
           "Vì $EF$ đi qua tâm $O$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Ta có: $\\widehat{xAB} = \\widehat{ACB}$ (góc tạo bởi tia tiếp tuyến $Ax$ và dây cung $AB$ bằng góc nội tiếp chắn cung $AB$). Mặt khác, tứ giác $BCEF$ nội tiếp $\\implies \\widehat{AFE} = \\widehat{ACB}$ (góc ngoài bằng góc trong tại đỉnh đối). Suy ra $\\widehat{xAB} = \\widehat{AFE}$. Hai góc này ở vị trí so le trong $\\implies Ax \\parallel EF$."
       },
@@ -601,6 +640,7 @@ window.MATH_EXAMS = [
           "$M_{\\min} = \\frac{1}{2}$ khi $a = b = 1$",
           "$M_{\\min} = 4$ khi $a = b = 1$"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Áp dụng bất đẳng thức Cauchy-Schwarz dạng Engel (hoặc BĐT $\\frac{1}{x} + \\frac{1}{y} \\ge \\frac{4}{x + y}$ với $x, y > 0$):\n$M = \\frac{1}{a^2 + b^2} + \\frac{1}{2ab} \\ge \\frac{4}{(a^2 + b^2) + 2ab} = \\frac{4}{(a + b)^2}$.\nVì $a + b \\le 2 \\implies (a + b)^2 \\le 4 \\implies \\frac{4}{(a + b)^2} \\ge \\frac{4}{4} = 1$.\nDấu bằng xảy ra khi $\\begin{cases} a^2 + b^2 = 2ab \\\\ a + b = 2 \\end{cases} \\iff a = b = 1$.\nVậy giá trị nhỏ nhất của $M$ là $1$."
       }

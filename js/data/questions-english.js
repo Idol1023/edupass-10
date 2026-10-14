@@ -27,6 +27,7 @@ window.ENGLISH_EXAMS = [
           "heat (/iː/)",
           "clean (/iː/)"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'threat' phát âm là /θret/ (nguyên âm ngắn /e/), trong khi ba từ còn lại đều có phần gạch chân phát âm là /iː/ (cheap /tʃiːp/, heat /hiːt/, clean /kliːn/)."
       },
@@ -41,6 +42,7 @@ window.ENGLISH_EXAMS = [
           "looked (/t/)",
           "watched (/t/)"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'discovered' kết thúc bằng âm hữu thanh /r/ nên đuôi -ed phát âm là /d/. Các từ còn lại kết thúc bằng âm vô thanh (/s/, /k/, /tʃ/) nên đuôi -ed phát âm là /t/."
       },
@@ -55,6 +57,7 @@ window.ENGLISH_EXAMS = [
           "protect (trọng âm 2)",
           "machine (trọng âm 2)"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'future' /ˈfjuːtʃər/ có trọng âm rơi vào âm tiết thứ nhất. Ba từ còn lại có trọng âm rơi vào âm tiết thứ hai: create /kriˈeɪt/, protect /prəˈtekt/, machine /məˈʃiːn/."
       },
@@ -69,6 +72,7 @@ window.ENGLISH_EXAMS = [
           "decorate (trọng âm 1)",
           "qualify (trọng âm 1)"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'replenish' /rɪˈplenɪʃ/ có trọng âm rơi vào âm tiết thứ 2. Các từ còn lại có trọng âm rơi vào âm tiết thứ nhất: innovate /ˈɪnəveɪt/, decorate /ˈdekəreɪt/, qualify /ˈkwɒlɪfaɪ/."
       },
@@ -83,6 +87,7 @@ window.ENGLISH_EXAMS = [
           "old-fashioned",
           "temporary"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'smart city' (thành phố thông minh) là thuật ngữ chuẩn xác trong bối cảnh giao thông thông minh và chính quyền điện tử số."
       },
@@ -97,6 +102,7 @@ window.ENGLISH_EXAMS = [
           "turn",
           "take"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'cope with' có nghĩa là ứng phó, thích ứng và vượt qua khó khăn, thay đổi (to deal successfully with a difficult situation)."
       },
@@ -111,6 +117,7 @@ window.ENGLISH_EXAMS = [
           "However",
           "Because"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Đứng trước danh động từ 'having a hectic revision schedule' (cụm V-ing) mang ý nghĩa nhượng bộ ta dùng giới từ 'Despite' (hoặc In spite of)."
       },
@@ -125,6 +132,7 @@ window.ENGLISH_EXAMS = [
           "whom",
           "whose"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Đại từ quan hệ 'which' thay thế cho danh từ chỉ vật 'The intelligent camera system' làm chủ ngữ cho mệnh đề quan hệ."
       },
@@ -139,6 +147,7 @@ window.ENGLISH_EXAMS = [
           "would decrease",
           "had decreased"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Mệnh đề If ở hiện tại đơn (continue) diễn tả điều kiện có thể xảy ra ở hiện tại/tương lai (Câu điều kiện loại 1) ➔ Mệnh đề chính dùng 'will + V-inf': 'will decrease'."
       },
@@ -153,6 +162,7 @@ window.ENGLISH_EXAMS = [
           "is restoring",
           "restored"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Chủ ngữ chỉ vật 'The historic timber roof...' chịu tác động của hành động và có trạng ngữ 'next quarter' ➔ thì tương lai đơn thể bị động: 'will be restored'."
       },
@@ -167,6 +177,7 @@ window.ENGLISH_EXAMS = [
           "in",
           "with"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Cấu trúc collocation cố định: 'take advantage of something' (tận dụng, tận dụng lợi thế của điều gì)."
       },
@@ -181,6 +192,7 @@ window.ENGLISH_EXAMS = [
           "emission",
           "damage"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'mental and physical health' (sức khỏe thể chất và tinh thần) là cụm từ chuẩn và hoàn toàn phù hợp với ngữ cảnh cân bằng giữa học tập và rèn luyện."
       },
@@ -195,6 +207,7 @@ window.ENGLISH_EXAMS = [
           "You're welcome.",
           "I don't think so."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Khi nhận lời chúc mừng từ thầy cô, cách đáp lại lịch sự và lễ phép nhất là 'Thank you very much, teacher!'."
       },
@@ -209,6 +222,7 @@ window.ENGLISH_EXAMS = [
           "You must buy a new tablet.",
           "Never mind, you don't need it."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Câu trả lời nhiệt tình, thân thiện của thủ thư khi hướng dẫn học sinh: 'Certainly, let me guide you.' (Chắc chắn rồi, để tôi hướng dẫn bạn)."
       },
@@ -223,6 +237,7 @@ window.ENGLISH_EXAMS = [
           "shouldn't have",
           "might"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'mustn't + V-inf' (tuyệt đối không được phép, bị cấm đoán theo luật/quy định an toàn trên tàu điện ngầm)."
       },
@@ -237,6 +252,7 @@ window.ENGLISH_EXAMS = [
           "appliances",
           "pollutants"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'natural resources' (nguồn tài nguyên thiên nhiên) là danh từ ghép đúng ngữ nghĩa trong việc bảo vệ hệ sinh thái rừng ngập mặn Cần Giờ."
       },
@@ -251,6 +267,7 @@ window.ENGLISH_EXAMS = [
           "Smoking is allowed near pillar 3 during emergencies.",
           "The charging bay is open to general pedestrian traffic."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Biển báo cảnh báo điện áp cao nguy hiểm và quy định rõ chỉ có phương tiện điện được cấp phép và nhân viên đã qua đào tạo mới được vào khu vực này."
       },
@@ -265,6 +282,7 @@ window.ENGLISH_EXAMS = [
           "Shut down the power grid of the entire school building.",
           "Save their work on the local desktop because files are kept permanently."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Quy định số 3 nêu rõ: lưu toàn bộ file vào máy chủ đám mây (Cloud Server) trước khi đăng xuất vì file lưu cục bộ sẽ bị xóa tự động vào ban đêm."
       },
@@ -279,6 +297,7 @@ window.ENGLISH_EXAMS = [
           "pollutants",
           "disasters"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'learning assistants' (trợ lý học tập): AI đóng vai trò như những trợ lý học tập thông minh hỗ trợ giáo viên và học sinh cá nhân hóa lộ trình học tập."
       },
@@ -293,6 +312,7 @@ window.ENGLISH_EXAMS = [
           "ancient",
           "destruction"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'practice exercises' (các bài tập luyện tập) là cụm từ tự nhiên và chính xác trong ngữ cảnh sư phạm rèn luyện kiến thức."
       },
@@ -307,6 +327,7 @@ window.ENGLISH_EXAMS = [
           "damage",
           "pollution"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'grammatical accuracy' (độ chính xác ngữ pháp) là collocation quen thuộc trong việc học ngoại ngữ (phát âm tự nhiên và độ chuẩn xác ngữ pháp)."
       },
@@ -321,6 +342,7 @@ window.ENGLISH_EXAMS = [
           "destroy",
           "pollute"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'replicate' (sao chép, tái tạo): tư duy phản biện, sự sáng tạo và lòng trắc ẩn của con người là những phẩm chất mà không cỗ máy nào có thể sao chép hoàn toàn."
       },
@@ -335,6 +357,7 @@ window.ENGLISH_EXAMS = [
           "pollutions",
           "hazards"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'self-study habits' (thói quen tự học): công nghệ kết hợp với thói quen chủ động tự học tạo nên hiệu quả tối ưu cho học sinh."
       },
@@ -349,6 +372,7 @@ window.ENGLISH_EXAMS = [
           "ancient",
           "historic"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'digital world' (thế giới kỹ thuật số / kỷ nguyên số) là thuật ngữ miêu tả chính xác bối cảnh thời đại ngày nay."
       },
@@ -363,6 +387,7 @@ window.ENGLISH_EXAMS = [
           "A business report detailing wholesale fabric prices in District 1.",
           "The life and career of contractor Brossard et Maupin in France."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Đoạn văn tập trung giới thiệu lịch sử xây dựng, giá trị văn hóa biểu tượng và kế hoạch trùng tu bảo tồn kiến trúc Chợ Bến Thành trong bối cảnh quảng trường metro mới."
       },
@@ -377,6 +402,7 @@ window.ENGLISH_EXAMS = [
           "In 1975",
           "In 1859"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Thông tin ở câu đầu tiên: 'Constructed in 1914 by the French contractor Brossard et Maupin...'."
       },
@@ -391,6 +417,7 @@ window.ENGLISH_EXAMS = [
           "cheap and low-quality",
           "harmful and poisonous"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'delectable' miêu tả các món ăn ẩm thực phương Nam thơm ngon, hấp dẫn ➔ đồng nghĩa với 'delicious and appetizing'."
       },
@@ -405,6 +432,7 @@ window.ENGLISH_EXAMS = [
           "A multi-lane elevated highway",
           "An international seaport terminal"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Căn cứ đoạn 2: '...the completion of the underground Central Metro Station right in front of the market square has breathed vibrant new vitality into the heritage quarter'."
       },
@@ -419,6 +447,7 @@ window.ENGLISH_EXAMS = [
           "sustainability",
           "sustenance"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Trước cụm danh từ 'economic development' cần một tính từ bổ nghĩa: 'sustainable' (bền vững). 'Sustainable economic development': phát triển kinh tế bền vững."
       },
@@ -433,6 +462,7 @@ window.ENGLISH_EXAMS = [
           "knowledge",
           "unknowing"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Sau động từ liên kết 'is' và phó từ 'exceptionally' cần tính từ: 'knowledgeable about something' (am hiểu, có kiến thức sâu rộng về điều gì)."
       },
@@ -447,6 +477,7 @@ window.ENGLISH_EXAMS = [
           "convenient",
           "inconvenience"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Sau tính từ 'unparalleled' (vô song, chưa từng có) cần một danh từ: 'convenience' (sự tiện lợi)."
       },
@@ -461,6 +492,7 @@ window.ENGLISH_EXAMS = [
           "innovation",
           "innovatively"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Đứng trước cụm danh từ 'STEM curriculum' cần một tính từ: 'innovative' (mang tính đổi mới, sáng tạo)."
       },
@@ -475,6 +507,7 @@ window.ENGLISH_EXAMS = [
           "public transportation",
           "natural resource"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Căn cứ chú thích từ điển cung cấp: cụm 2 từ đi với động từ 'integrate' theo đúng định nghĩa là 'artificial intelligence' (trí tuệ nhân tạo)."
       },
@@ -489,6 +522,7 @@ window.ENGLISH_EXAMS = [
           "Standard Card",
           "WiFi Access"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Theo bảng phân loại thẻ thư viện: Hạng thẻ dành cho 'Secondary students & Scholars' có đặc quyền 'Unlimited Cloud Access' là 'Smart Card' (Thẻ thông minh)."
       },
@@ -503,6 +537,7 @@ window.ENGLISH_EXAMS = [
           "In our smart city urban commuters are encouraged the environment to help protect by using electric buses.",
           "To help protect the environment urban commuters are encouraged by using electric buses in our smart city."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Cấu trúc câu chuẩn: Chủ ngữ (Urban commuters) + Bị động (are encouraged) + Mục đích (to help protect the environment) + Phương thức (by using electric buses) + Địa điểm (in our smart city)."
       },
@@ -517,6 +552,7 @@ window.ENGLISH_EXAMS = [
           "In personalizing education artificial intelligence is playing for modern students a crucial role.",
           "For modern students artificial intelligence a crucial role is playing in personalizing education."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Cấu trúc câu chuẩn: Chủ ngữ (Artificial intelligence) + Động từ (is playing) + Tân ngữ (a crucial role) + Giới từ bổ ngữ (in personalizing education for modern students)."
       },
@@ -531,6 +567,7 @@ window.ENGLISH_EXAMS = [
           "It is estimating that the new automated metro line will transport over 150,000 commuters daily.",
           "It has estimated that the new automated metro line will transport over 150,000 commuters daily."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Cấu trúc bị động khách quan: 'People estimate that + S + V' ➔ 'It is estimated that + S + V'."
       },
@@ -545,6 +582,7 @@ window.ENGLISH_EXAMS = [
           "Ben Thanh Market is more famous traditional market in Ho Chi Minh City.",
           "Ben Thanh Market is not so famous as traditional markets in Ho Chi Minh City."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Chuyển từ cấu trúc 'No other ... is more [adj] than X' sang so sánh nhất: 'X is the most [adj] ...'."
       },
@@ -559,6 +597,7 @@ window.ENGLISH_EXAMS = [
           "If students had managed their digital screen time prudently, they wouldn't frequently feel exhausted.",
           "If students managed their digital screen time prudently, they will frequently feel exhausted."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Tình huống thực tế ở hiện tại. Viết lại bằng câu điều kiện trái với hiện tại (Câu điều kiện loại 2): 'If + S + V-ed/V2, S + would not + V-inf'."
       },
@@ -573,6 +612,7 @@ window.ENGLISH_EXAMS = [
           "In spite of the weather being storm, the youth volunteers persevered in planting mangrove saplings.",
           "In spite of stormy, the youth volunteers persevered in planting mangrove saplings."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Chuyển từ 'Although + S + V' ('the weather was stormy') sang 'In spite of + Noun phrase' ('the stormy weather')."
       }
@@ -601,6 +641,7 @@ window.ENGLISH_EXAMS = [
           "food (/uː/)",
           "school (/uː/)"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'flood' phát âm là /flʌd/ (âm ngắn /ʌ/), trong khi các từ còn lại đều có phần gạch chân phát âm là /uː/ ('tooth' /tuːθ/, 'food' /fuːd/, 'school' /skuːl/)."
       },
@@ -615,6 +656,7 @@ window.ENGLISH_EXAMS = [
           "laughs (/s/)",
           "stops (/s/)"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'cleans' kết thúc bằng âm hữu thanh /n/ nên đuôi -s phát âm là /z/. Các từ 'protects' (/t/), 'laughs' (/f/), 'stops' (/p/) kết thúc bằng âm vô thanh nên đuôi -s phát âm là /s/."
       },
@@ -629,6 +671,7 @@ window.ENGLISH_EXAMS = [
           "provide (trọng âm 2)",
           "reduce (trọng âm 2)"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'solar' /ˈsəʊlər/ có trọng âm rơi vào âm tiết thứ nhất. Ba từ còn lại là động từ 2 âm tiết có trọng âm rơi vào âm tiết thứ hai: pollute /pəˈluːt/, provide /prəˈvaɪd/, reduce /rɪˈdjuːs/."
       },
@@ -643,6 +686,7 @@ window.ENGLISH_EXAMS = [
           "natural (trọng âm 1)",
           "dangerous (trọng âm 1)"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'emission' /ɪˈmɪʃn/ có trọng âm rơi vào âm tiết thứ 2 (hậu tố -ion làm trọng âm rơi vào âm tiết ngay trước nó). Các từ còn lại có trọng âm rơi vào âm tiết thứ nhất: energy /ˈenədʒi/, natural /ˈnætʃrəl/, dangerous /ˈdeɪndʒərəs/."
       },
@@ -657,6 +701,7 @@ window.ENGLISH_EXAMS = [
           "out-of-date",
           "disposable"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'eco-friendly' (thân thiện với môi trường) là tính từ phù hợp nhất về nghĩa với ngữ cảnh xe buýt điện và tuyến Metro số 1 nhằm giảm phát thải khí nhà kính."
       },
@@ -671,6 +716,7 @@ window.ENGLISH_EXAMS = [
           "give up",
           "look after"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'carry out' có nghĩa là tiến hành, thực hiện (chiến dịch, kế hoạch, thí nghiệm). Các cụm từ khác: 'turn down' (từ chối/vặn nhỏ), 'give up' (từ bỏ), 'look after' (chăm sóc)."
       },
@@ -685,6 +731,7 @@ window.ENGLISH_EXAMS = [
           "Therefore",
           "Despite"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'Although' + mệnh đề (S + V) diễn tả sự tương phản/nhượng bộ: 'Mặc dù túi nilon dùng một lần rất tiện lợi... nhưng mất hàng trăm năm để phân hủy'. 'Despite' phải đi với cụm danh từ hoặc V-ing."
       },
@@ -699,6 +746,7 @@ window.ENGLISH_EXAMS = [
           "will plant",
           "had planted"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Mệnh đề chính dùng 'would + V-inf' (would be alleviated) diễn tả giả định trái ngược với hiện tại (câu điều kiện loại 2), nên mệnh đề If chia ở thì quá khứ đơn: 'planted'."
       },
@@ -713,6 +761,7 @@ window.ENGLISH_EXAMS = [
           "whom",
           "whose"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Đại từ quan hệ 'who' làm chủ ngữ thay thế cho danh từ chỉ người 'The youth volunteers' và đứng ngay trước động từ 'planted'."
       },
@@ -727,6 +776,7 @@ window.ENGLISH_EXAMS = [
           "should be throwing",
           "cannot throw"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Chủ ngữ 'Hazardous e-waste' (rác điện tử độc hại) là vật chịu tác động nên cần cấu trúc bị động với động từ khuyết thiếu mang tính cấm đoán: 'must not be + V3/ed' (không được phép vứt vào)."
       },
@@ -741,6 +791,7 @@ window.ENGLISH_EXAMS = [
           "with",
           "for"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Cấu trúc collocation chuẩn: 'pay attention to something / V-ing' (chú ý, quan tâm đến việc gì)."
       },
@@ -755,6 +806,7 @@ window.ENGLISH_EXAMS = [
           "obstacles",
           "appliances"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'resources' (nguồn tài nguyên / tài liệu học tập) là từ duy nhất phù hợp trong ngữ cảnh thư viện số và giáo dục."
       },
@@ -769,6 +821,7 @@ window.ENGLISH_EXAMS = [
           "You're totally wrong.",
           "It's none of our business."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Minh bày tỏ sự tán thành nhiệt tình với gợi ý tiết kiệm điện của Lan: 'That\\'s a wonderful idea!' (Đó là một ý tưởng tuyệt vời!)."
       },
@@ -783,6 +836,7 @@ window.ENGLISH_EXAMS = [
           "Never mind, you don't need one.",
           "You shouldn't ask me."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Lời đáp lịch sự, hữu ích của nhân viên nhà ga khi được hỏi đường/dịch vụ: 'Certainly, follow this directional sign.' (Chắc chắn rồi, bạn hãy đi theo biển chỉ dẫn này)."
       },
@@ -797,6 +851,7 @@ window.ENGLISH_EXAMS = [
           "Passengers should step over the yellow line as soon as the train approaches.",
           "Passengers must open the automated screen doors by hand."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Biển báo quy định rõ: 'STAND BEHIND THE YELLOW TACTILE LINE UNTIL TRAIN STOPS' -> Hành khách phải giữ khoảng cách an toàn phía sau vạch vàng cho đến khi tàu dừng hẳn."
       },
@@ -811,6 +866,7 @@ window.ENGLISH_EXAMS = [
           "Throw all types of garbage into a single common trash bag.",
           "Pay a mandatory entrance fee to access the chilled water refill stations."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Thông báo khuyến khích: mang bình nước cá nhân tái sử dụng (reusable drink bottles) và phân loại rác thành đồ tái chế và rác hữu cơ (separate all waste into recyclables and organic compost)."
       },
@@ -825,6 +881,7 @@ window.ENGLISH_EXAMS = [
           "disadvantage",
           "destruction"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'alternative to something' (giải pháp thay thế cho...) là danh từ phù hợp nhất: Tuyến Metro số 1 mang lại giải pháp thay thế không phát thải cho xe máy và ô tô cá nhân."
       },
@@ -839,6 +896,7 @@ window.ENGLISH_EXAMS = [
           "treatment",
           "preservation"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Cụm danh từ 'noise pollution' (ô nhiễm tiếng ồn) là collocation phổ biến và chuẩn ngữ nghĩa trong văn cảnh giao thông công cộng không gây khói thải độc hay ô nhiễm tiếng ồn."
       },
@@ -853,6 +911,7 @@ window.ENGLISH_EXAMS = [
           "destroy",
           "uproot"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'plant trees' (trồng cây) là hành động tích cực, hoàn toàn phù hợp với ngữ cảnh 'Chủ nhật Xanh' và làm sạch kênh mương."
       },
@@ -867,6 +926,7 @@ window.ENGLISH_EXAMS = [
           "looking after",
           "turning off"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'rely on' (dựa vào / phụ thuộc vào): Học sinh được khuyến khích dùng túi vải và bình nước cá nhân thay vì phụ thuộc vào đồ nhựa dùng một lần."
       },
@@ -881,6 +941,7 @@ window.ENGLISH_EXAMS = [
           "appliances",
           "contaminants"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Cụm 'outdoor activities' (các hoạt động ngoài trời): dữ liệu chỉ số chất lượng không khí giúp người dân đưa ra quyết định phù hợp khi tham gia hoạt động ngoài trời."
       },
@@ -895,6 +956,7 @@ window.ENGLISH_EXAMS = [
           "ancient",
           "primitive"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "'future generations' (các thế hệ tương lai) là cụm từ chuẩn và mang ý nghĩa phát triển bền vững cho đời sau."
       },
@@ -909,6 +971,7 @@ window.ENGLISH_EXAMS = [
           "The technical methods used to dredge navigation channels in the Dong Nai river basin.",
           "A travel guidebook focusing on high-speed ferry tickets from central Saigon to Vung Tau."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Toàn bài văn tập trung trình bày về các vai trò sinh thái thiết yếu (lá chắn bờ biển, hấp thụ CO2, lọc nước thải), sự đa dạng sinh học phong phú và ý nghĩa bảo tồn của Khu dự trữ sinh quyển Rừng ngập mặn Cần Giờ."
       },
@@ -923,6 +986,7 @@ window.ENGLISH_EXAMS = [
           "In April 1975",
           "In December 2024"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Thông tin rõ ràng ở đoạn 1: 'Can Gio was designated as Vietnam's first International Biosphere Reserve by UNESCO in January 2000'."
       },
@@ -937,6 +1001,7 @@ window.ENGLISH_EXAMS = [
           "creating or generating suddenly",
           "recording and broadcasting"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Trong câu 'preventing shoreline erosion and dampening storm surges and high tides', 'dampening' mang nghĩa là làm suy giảm, triệt tiêu bớt lực tác động của sóng bão và triều cường (weakening or reducing the impact of)."
       },
@@ -951,6 +1016,7 @@ window.ENGLISH_EXAMS = [
           "They absorb far less carbon than inland forests.",
           "They only capture carbon during periods of severe flooding."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Căn cứ đoạn 2: 'Mangroves absorb and sequester atmospheric carbon dioxide at rates three to five times higher per hectare than mature inland tropical forests'."
       },
@@ -965,6 +1031,7 @@ window.ENGLISH_EXAMS = [
           "Industrial wastewater",
           "The migratory flyway"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Ở đoạn 3: 'The reserve provides vital breeding grounds... It is also an imperative stopover for migratory waterbirds...'. Đại từ 'It' thay thế trực tiếp cho danh từ 'The reserve' (khu bảo tồn Cần Giờ)."
       },
@@ -979,6 +1046,7 @@ window.ENGLISH_EXAMS = [
           "Can Gio acts as a giant natural filter cleansing wastewater from the Saigon - Dong Nai river basin.",
           "The wetland serves as an indispensable stopover for migratory waterbirds on the East Asian - Australasian Flyway."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Câu khẳng định 'Can Gio is situated hundreds of kilometers away from Ho Chi Minh City...' là SAI, vì đoạn 1 nói rõ: 'Located just 40 kilometers southeast of downtown Ho Chi Minh City' và đóng vai trò 'lá phổi xanh', lọc nước cho lưu vực sông Sài Gòn - Đồng Nai."
       },
@@ -993,6 +1061,7 @@ window.ENGLISH_EXAMS = [
           "modernly",
           "modernism"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Sau mạo từ 'the' và tính từ 'continuous' cần một danh từ: 'modernization' (sự hiện đại hóa). Động từ gốc: modernize."
       },
@@ -1007,6 +1076,7 @@ window.ENGLISH_EXAMS = [
           "remark",
           "remarking"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Cần trạng từ 'remarkably' (một cách đáng kể/xuất sắc) đứng trước tính từ 'efficient' để bổ nghĩa cho tính từ này."
       },
@@ -1021,6 +1091,7 @@ window.ENGLISH_EXAMS = [
           "harmfully",
           "harm"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Đứng trước cụm danh từ 'environmental consequences' cần tính từ mang nghĩa tiêu cực: 'harmful' (có hại, gây nguy hại)."
       },
@@ -1035,6 +1106,7 @@ window.ENGLISH_EXAMS = [
           "success",
           "succeed"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Sau phó từ 'exceptionally' và trước danh từ 'conservation model' cần một tính từ: 'successful' (thành công). 'An exceptionally successful conservation model': một mô hình bảo tồn đặc biệt thành công."
       },
@@ -1049,6 +1121,7 @@ window.ENGLISH_EXAMS = [
           "ecological damage",
           "energy resource"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Căn cứ theo chú thích từ điển cung cấp: cụm danh từ 2 từ đi với động từ 'reduce' là 'reduce one's carbon footprint' (giảm thiểu dấu chân carbon của bản thân)."
       },
@@ -1063,6 +1136,7 @@ window.ENGLISH_EXAMS = [
           "QR-Code Ticket",
           "1-Day Ticket"
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Căn cứ vào bảng tra cứu: Loại vé dành cho 'Daily commuters & Students' có đặc quyền 'Unlimited 30-day' (không giới hạn lượt đi trong 30 ngày) chính là 'Monthly Pass' (Vé tháng)."
       },
@@ -1077,6 +1151,7 @@ window.ENGLISH_EXAMS = [
           "Thousands of shade trees Ho Chi Minh City is planting to enhance in public parks urban air quality.",
           "In public parks to enhance urban air quality Ho Chi Minh City is planting thousands of shade trees."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Trật tự câu chuẩn: Chủ ngữ (Ho Chi Minh City) + V (is planting) + Tân ngữ (thousands of shade trees) + Nơi chốn (in public parks) + Mệnh đề chỉ mục đích (to enhance urban air quality)."
       },
@@ -1091,6 +1166,7 @@ window.ENGLISH_EXAMS = [
           "In our neighborhood can create every small conservation habit meaningful changes toward sustainable development.",
           "Meaningful changes every small conservation habit can create in our neighborhood toward sustainable development."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Trật tự câu chuẩn: Chủ ngữ (Every small conservation habit) + Động từ (can create) + Tân ngữ (meaningful changes) + Giới từ bổ ngữ (toward sustainable development in our neighborhood)."
       },
@@ -1105,6 +1181,7 @@ window.ENGLISH_EXAMS = [
           "The transport department has begun operating the automated electric bus system for eight months.",
           "The transport department had been operating the automated electric bus system eight months ago."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Chuyển từ thì Quá khứ đơn với mốc 'began ... eight months ago' sang Hiện tại hoàn thành tiếp diễn / hoàn thành: 'has been operating ... for eight months' (đã và đang vận hành hệ thống xe buýt điện được 8 tháng)."
       },
@@ -1119,6 +1196,7 @@ window.ENGLISH_EXAMS = [
           "If residents had separated solid waste at source, excessive amounts of recyclable materials would not end up in landfills.",
           "If residents separated solid waste at source, excessive amounts of recyclable materials will end up in landfills."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Tình huống thực tế ở hiện tại (do not separate ... end up). Khi viết lại bằng câu điều kiện trái với hiện tại, ta dùng Câu điều kiện loại 2: 'If + S + V-ed/V2, S + would/could (not) + V-inf'."
       },
@@ -1133,6 +1211,7 @@ window.ENGLISH_EXAMS = [
           "Hoang suggested that they organized a school-wide electronic waste collection day next Friday.",
           "Hoang suggested about organizing a school-wide electronic waste collection day the following Friday."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Cấu trúc đề xuất trong câu gián tiếp: 'suggest + V-ing' hoặc 'suggest that + S + (should) + V-inf'. Đồng thời lùi trạng từ chỉ thời gian 'next Friday' thành 'the following Friday'."
       },
@@ -1147,6 +1226,7 @@ window.ENGLISH_EXAMS = [
           "Although the volunteers felt the heat oppressive, but they planted mangrove saplings along the coastal mudflats.",
           "Although oppressive was the midday heat, hundreds of volunteers diligently planted mangrove saplings along the coastal mudflats."
         ],
+        "correctIndex": 0,
         "correct": 0,
         "explanation": "Chuyển từ cấu trúc 'Despite + Noun phrase' sang 'Although + Clause (S + V)'. 'the oppressive midday heat' chuyển thành mệnh đề 'the midday heat was oppressive'. Lưu ý trong tiếng Anh không dùng đồng thời 'Although' và 'but'."
       }

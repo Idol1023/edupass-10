@@ -122,13 +122,16 @@ class ReviewEngine {
 
       const statusBadge = q.isCorrect ? 
         `<span class="review-status-pill correct"><i data-lucide="check-circle-2"></i> Chính xác</span>` : 
+        q.isSkipped ?
+        `<span class="review-status-pill skipped" style="background: rgba(234, 179, 8, 0.15); color: #eab308; border: 1px solid rgba(234, 179, 8, 0.3); padding: 4px 10px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;"><i data-lucide="help-circle" style="width: 14px; height: 14px;"></i> Chưa trả lời</span>` :
         `<span class="review-status-pill wrong"><i data-lucide="x-circle"></i> Chưa chính xác</span>`;
 
       // Build options html
       let optionsHtml = '';
+      const correctIdx = typeof q.correctIndex === 'number' ? q.correctIndex : (typeof q.correct === 'number' ? q.correct : 0);
       q.options.forEach((optText, optIdx) => {
         const isUserPick = q.userAnswer === optIdx;
-        const isCorrectOpt = q.correctIndex === optIdx;
+        const isCorrectOpt = correctIdx === optIdx;
 
         let optClass = 'review-option';
         let labelIcon = '';
@@ -271,7 +274,7 @@ class ReviewEngine {
 
         <div class="explanation-box" style="margin-top: 0.75rem;">
           <div class="explanation-title">
-            <i data-lucide="help-circle"></i> Đáp án đúng: <strong>${m.options[m.correctIndex]}</strong>
+            <i data-lucide="help-circle"></i> Đáp án đúng: <strong>${m.options && m.options[typeof m.correctIndex === 'number' ? m.correctIndex : (typeof m.correct === 'number' ? m.correct : 0)] || ''}</strong>
           </div>
           <div style="font-size: 0.92rem; white-space: pre-line;">${m.explanation || ''}</div>
           ${m.trapTip ? `

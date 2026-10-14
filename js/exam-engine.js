@@ -375,21 +375,27 @@ class ExamEngine {
 
     questions.forEach((q, idx) => {
       const userChoice = this.userAnswers[q.id];
-      const isCorrect = userChoice === q.correctIndex;
-      const isSkipped = userChoice === undefined;
+      const correctIdx = typeof q.correctIndex === 'number' ? q.correctIndex : (typeof q.correct === 'number' ? q.correct : 0);
+      const isSkipped = userChoice === undefined || userChoice === null;
+      const isCorrect = !isSkipped && userChoice === correctIdx;
 
       if (isCorrect) {
         correctCount++;
       } else {
         wrongQuestions.push({
           ...q,
+          correctIndex: correctIdx,
+          correct: correctIdx,
           userAnswer: userChoice,
+          isSkipped,
           subject: this.activeExam.subject
         });
       }
 
       fullReviewData.push({
         ...q,
+        correctIndex: correctIdx,
+        correct: correctIdx,
         userAnswer: userChoice,
         isCorrect,
         isSkipped,
