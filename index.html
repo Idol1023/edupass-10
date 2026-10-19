@@ -619,34 +619,104 @@
       </div>
     </section>
 
-    <!-- TAB 7: KNOWLEDGE & FLASHCARDS (ÔN TẬP KIẾN THỨC) -->
+    <!-- TAB 7: KNOWLEDGE & EXAM QUESTION TYPES (ÔN TẬP KIẾN THỨC THEO DẠNG ĐỀ) -->
     <section class="tab-pane" id="tabPane_knowledge">
       <div class="section-header">
         <div>
           <h2 class="section-title">
-            <i data-lucide="brain"></i> Trung Tâm Ôn Tập Kiến Thức & Flashcard 3D
+            <i data-lucide="brain"></i> Trung Tâm Kiến Thức & Cẩm Nang Dạng Đề Tuyển Sinh Vào 10
           </h2>
-          <p style="color: var(--text-muted); font-size: 0.9rem;">
-            Lật thẻ nhớ nhanh các công thức toán học, quy tắc ngữ pháp tiếng Anh và kiến thức cốt lõi môn Ngữ Văn.
+          <p style="color: var(--text-muted); font-size: 0.92rem; max-width: 900px; line-height: 1.5;">
+            Kiến thức được phân tách biệt lập theo từng môn (Toán, Tiếng Anh, Ngữ Văn) và tổ chức chuẩn 100% theo <strong>các dạng câu hỏi trong đề thi thực tế</strong> của Bộ GD&ĐT, Sở GD&ĐT TP.HCM và Hà Nội (Chuẩn Chương trình GDPT 2018).
           </p>
         </div>
       </div>
 
-      <!-- Subject Switch Tabs -->
-      <div class="filter-bar" style="justify-content: flex-start; gap: 0.75rem;">
-        <button class="filter-chip fc-sub-tab active" data-subject="math">📐 Môn Toán</button>
-        <button class="filter-chip fc-sub-tab" data-subject="english">🔤 Tiếng Anh</button>
-        <button class="filter-chip fc-sub-tab" data-subject="literature">📖 Ngữ Văn</button>
+      <!-- Distinct Subject Switcher (3 Môn Riêng Biệt) -->
+      <div class="knowledge-subject-pills">
+        <button class="knowledge-sub-btn sub-math active" data-subject="math">
+          <div style="display: flex; align-items: center;">
+            <div class="knowledge-sub-icon-box">
+              <i data-lucide="calculator"></i>
+            </div>
+            <div>
+              <div style="font-weight: 800; font-size: 1.05rem;">Môn Toán Học</div>
+              <div style="font-size: 0.78rem; color: var(--text-muted);">9 Dạng câu trong đề thi</div>
+            </div>
+          </div>
+          <span class="stat-pill" style="font-size: 0.75rem; border-color: rgba(99, 102, 241, 0.4); color: #818cf8;">10.0 Điểm • 120'</span>
+        </button>
+
+        <button class="knowledge-sub-btn sub-english" data-subject="english">
+          <div style="display: flex; align-items: center;">
+            <div class="knowledge-sub-icon-box">
+              <i data-lucide="languages"></i>
+            </div>
+            <div>
+              <div style="font-weight: 800; font-size: 1.05rem;">Môn Tiếng Anh</div>
+              <div style="font-size: 0.78rem; color: var(--text-muted);">10 Dạng câu trắc nghiệm & tự luận</div>
+            </div>
+          </div>
+          <span class="stat-pill" style="font-size: 0.75rem; border-color: rgba(2, 132, 199, 0.4); color: #38bdf8;">40 Câu • 90'</span>
+        </button>
+
+        <button class="knowledge-sub-btn sub-literature" data-subject="literature">
+          <div style="display: flex; align-items: center;">
+            <div class="knowledge-sub-icon-box">
+              <i data-lucide="book-open"></i>
+            </div>
+            <div>
+              <div style="font-weight: 800; font-size: 1.05rem;">Môn Ngữ Văn</div>
+              <div style="font-size: 0.78rem; color: var(--text-muted);">6 Dạng bài thi trọng tâm</div>
+            </div>
+          </div>
+          <span class="stat-pill" style="font-size: 0.75rem; border-color: rgba(225, 29, 72, 0.4); color: #fb7185;">10.0 Điểm • 120'</span>
+        </button>
       </div>
 
-      <!-- Flashcard Interactive Area -->
-      <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 2rem;">
+      <!-- Dynamic Exam Structure & Matrix Banner for the active subject -->
+      <div id="knowledgeSubjectMatrixArea">
+        <!-- Injected dynamically based on selected subject -->
+      </div>
+
+      <!-- Interactive Toolbar: Mode Switcher, Search, Difficulty Filter -->
+      <div class="knowledge-toolbar">
+        <div style="display: flex; align-items: center; gap: 0.85rem; flex-wrap: wrap;">
+          <div class="knowledge-mode-toggle">
+            <button class="knowledge-mode-btn active" id="btnKnowledgeModeGuide">
+              <i data-lucide="file-text"></i> Cẩm nang Dạng đề thi
+            </button>
+            <button class="knowledge-mode-btn" id="btnKnowledgeModeFlashcard">
+              <i data-lucide="layers"></i> Thẻ Flashcard 3D
+            </button>
+          </div>
+
+          <div class="filter-group" style="margin-left: 0.25rem;">
+            <button class="filter-chip kn-filter-chip active" data-level="all">Tất cả dạng câu</button>
+            <button class="filter-chip kn-filter-chip" data-level="basic">Nhận biết - Thông hiểu (5-7đ)</button>
+            <button class="filter-chip kn-filter-chip" data-level="intermediate">Vận dụng (7-8.5đ)</button>
+            <button class="filter-chip kn-filter-chip" data-level="advanced">Phân loại 9+ (8.5-10đ)</button>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; flex: 1; justify-content: flex-end;">
+          <div class="knowledge-search-wrapper">
+            <i data-lucide="search" style="width: 16px; height: 16px;"></i>
+            <input type="text" class="knowledge-search-input" id="knowledgeSearchInput" placeholder="Tìm dạng bài, công thức, bẫy thi...">
+          </div>
+
+          <select class="form-select" id="flashcardTopicSelect" style="width: auto; padding: 0.45rem 1rem; font-size: 0.85rem;">
+            <!-- Options injected dynamically -->
+          </select>
+        </div>
+      </div>
+
+      <!-- 3D Flashcard Interactive Stage (Visible in Flashcard mode or when focused) -->
+      <div id="knowledgeFlashcardSection" style="display: none; background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 2rem;">
         <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
           <div style="display: flex; align-items: center; gap: 0.75rem;">
-            <label style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted);">Chuyên đề:</label>
-            <select class="form-select" id="flashcardTopicSelect" style="width: auto; padding: 0.45rem 1rem;">
-              <!-- Options injected -->
-            </select>
+            <span class="subject-badge math" id="fcCurrentTypeTag" style="font-size: 0.82rem; padding: 4px 12px;">Dạng 1: Đồ thị Parabol</span>
+            <span style="font-size: 0.85rem; color: var(--text-muted);" id="fcTopicSubtitle">Nhấn vào thẻ hoặc nút Lật thẻ để xem lời giải và phương pháp</span>
           </div>
           <div style="display: flex; align-items: center; gap: 0.75rem;">
             <span class="stat-pill" style="font-size: 0.8rem;" id="fcMasteryCountBadge">0 thẻ đã thuộc</span>
@@ -663,12 +733,12 @@
                 Điều kiện xác định của căn bậc hai?
               </div>
               <div class="flashcard-hint">
-                <i data-lucide="touchpad"></i> Nhấn vào thẻ để lật xem lời giải
+                <i data-lucide="touchpad"></i> Nhấn vào thẻ để lật xem lời giải & mẹo ghi nhớ
               </div>
             </div>
             <div class="flashcard-back">
               <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; color: #a5b4fc;">
-                Công thức & Phương pháp ghi nhớ:
+                Công thức & Phương pháp chuẩn:
               </div>
               <div class="flashcard-answer" id="fcCardAnswer">
                 Căn A xác định khi A >= 0
@@ -700,14 +770,9 @@
         </div>
       </div>
 
-      <!-- Full Topic Cheat Sheets & Traps -->
-      <div class="section-header">
-        <h3 class="section-title">
-          <i data-lucide="book-open"></i> Cẩm nang công thức trọng tâm & Bẫy đề thi
-        </h3>
-      </div>
+      <!-- Full Question-Type Cheat Sheets, Worked Exam Examples & Traps Area -->
       <div id="knowledgeCheatSheetArea">
-        <!-- Injected dynamically -->
+        <!-- Injected dynamically with rich question-type cards -->
       </div>
     </section>
 
