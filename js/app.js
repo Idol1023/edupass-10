@@ -374,10 +374,16 @@ class EduPassApp {
     ];
 
     // Sort order:
-    // 1. Year descending: 2024 -> 2023 -> 2022
-    // 2. Location: TP.HCM first, then Hà Nội, then others
-    // 3. Subject: English first, then Math, then Literature
+    // 1. Comprehensive exams first, then single-topic drill exams
+    // 2. Year descending: 2025 -> 2024 -> 2023 -> 2022
+    // 3. Location: TP.HCM first, then Hà Nội, then others
+    // 4. Subject: English first, then Math, then Literature
     allExams.sort((a, b) => {
+      const typeScore = (ex) => ex.isSingleTopic ? 2 : 1;
+      const tA = typeScore(a);
+      const tB = typeScore(b);
+      if (tA !== tB) return tA - tB;
+
       const yA = a.year || 2020;
       const yB = b.year || 2020;
       if (yA !== yB) return yB - yA;
@@ -395,13 +401,19 @@ class EduPassApp {
     allExams.forEach(exam => {
       const card = document.createElement('div');
       const isHcmc = exam.location === 'TP.HCM' || exam.id.includes('hcmc');
-      card.className = `subject-card ${isHcmc ? 'hcmc-featured-card' : ''}`;
+      const isTopic = !!exam.isSingleTopic;
+      card.className = `subject-card ${isHcmc ? 'hcmc-featured-card' : ''} ${isTopic ? 'topic-featured-card' : ''}`;
       card.dataset.examId = exam.id;
       card.dataset.subject = exam.subject;
       card.dataset.year = String(exam.year || '2023');
       card.dataset.location = exam.location || 'Toàn quốc';
+      card.dataset.examType = isTopic ? 'single_topic' : 'comprehensive';
 
-      if (isHcmc) {
+      if (isTopic) {
+        card.style.border = '2px solid rgba(99, 102, 241, 0.45)';
+        card.style.background = 'radial-gradient(ellipse at top left, rgba(99, 102, 241, 0.08), transparent 70%), var(--bg-card)';
+        card.style.boxShadow = '0 6px 20px rgba(99, 102, 241, 0.12)';
+      } else if (isHcmc) {
         card.style.border = '2px solid rgba(245, 158, 11, 0.6)';
         card.style.boxShadow = '0 8px 24px rgba(245, 158, 11, 0.12)';
       }
@@ -415,17 +427,22 @@ class EduPassApp {
       else if (exam.year === 2022) yearClass = 'year-2022';
       const yearBadge = exam.year ? `<span class="exam-tag-badge ${yearClass}">Năm ${exam.year}</span>` : '';
 
-      // Location badge
-      let locClass = 'loc-national';
-      if (exam.location === 'TP.HCM') locClass = 'loc-hcmc';
-      else if (exam.location === 'Hà Nội') locClass = 'loc-hanoi';
-      else if (exam.location === 'Bộ GD&ĐT') locClass = 'loc-moet';
-      const locBadge = `<span class="exam-tag-badge ${locClass}"><i data-lucide="map-pin" style="width: 11px; height: 11px;"></i> ${exam.location || 'Toàn quốc'}</span>`;
+      // Location / Category badge
+      let locBadge = '';
+      if (isTopic) {
+        locBadge = `<span class="exam-tag-badge" style="background: linear-gradient(135deg, #0ea5e9, #6366f1); color: #fff; font-weight: 700;"><i data-lucide="target" style="width: 11px; height: 11px;"></i> Luyện 1 Dạng Câu</span>`;
+      } else {
+        let locClass = 'loc-national';
+        if (exam.location === 'TP.HCM') locClass = 'loc-hcmc';
+        else if (exam.location === 'Hà Nội') locClass = 'loc-hanoi';
+        else if (exam.location === 'Bộ GD&ĐT') locClass = 'loc-moet';
+        locBadge = `<span class="exam-tag-badge ${locClass}"><i data-lucide="map-pin" style="width: 11px; height: 11px;"></i> ${exam.location || 'Toàn quốc'}</span>`;
+      }
 
       // Official or special badge
       const badgeContent = exam.badgeText || (exam.isOfficial ? '⭐ Đề Chính Thức' : '');
       const officialBadge = badgeContent ? `
-        <span class="exam-tag-badge year-2024" style="background: linear-gradient(135deg, #f59e0b, #ef4444); color: #fff;">
+        <span class="exam-tag-badge year-2024" style="background: ${isTopic ? 'linear-gradient(135deg, #6366f1, #a855f7)' : 'linear-gradient(135deg, #f59e0b, #ef4444)'}; color: #fff;">
           ${badgeContent}
         </span>
       ` : '';
@@ -434,8 +451,8 @@ class EduPassApp {
         <div class="subject-card-top" style="flex-wrap: wrap; gap: 0.35rem;">
           <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;">
             <span class="subject-badge ${exam.subject}">${subLabel}</span>
-            ${yearBadge}
             ${locBadge}
+            ${yearBadge}
             ${officialBadge}
           </div>
           <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); font-family: var(--font-mono); margin-left: auto;">
@@ -446,7 +463,7 @@ class EduPassApp {
         <p class="subject-desc">${exam.description}</p>
         <div class="subject-meta">
           <div class="subject-meta-item">
-            <i data-lucide="help-circle" style="width: 14px; height: 14px;"></i> ${exam.questions.length} câu hỏi chuẩn hóa
+            <i data-lucide="help-circle" style="width: 14px; height: 14px;"></i> ${exam.questions.length} câu hỏi ${isTopic ? 'thuần dạng này' : 'chuẩn hóa'}
           </div>
           <div class="subject-meta-item">
             <i data-lucide="award" style="width: 14px; height: 14px;"></i> Thang điểm 10.0
@@ -495,6 +512,7 @@ class EduPassApp {
     // Multi-filtering State
     const activeFilters = {
       subject: 'all',
+      examType: 'all',
       year: 'all',
       location: 'all',
       search: ''
@@ -516,6 +534,14 @@ class EduPassApp {
         // Subject check
         const matchSub = activeFilters.subject === 'all' || exam.subject === activeFilters.subject;
 
+        // Exam Type check (Single topic vs Comprehensive)
+        let matchExamType = true;
+        if (activeFilters.examType === 'single_topic') {
+          matchExamType = exam.isSingleTopic === true;
+        } else if (activeFilters.examType === 'comprehensive') {
+          matchExamType = !exam.isSingleTopic;
+        }
+
         // Year check
         const matchYear = activeFilters.year === 'all' || String(exam.year) === activeFilters.year;
 
@@ -529,7 +555,7 @@ class EduPassApp {
           } else if (activeFilters.location === 'Hà Nội') {
             matchLoc = exam.location === 'Hà Nội';
           } else if (activeFilters.location === 'Toàn quốc') {
-            matchLoc = !exam.location || exam.location === 'Toàn quốc' || exam.location === 'Chuyên Top 1';
+            matchLoc = !exam.location || exam.location === 'Toàn quốc' || exam.location === 'Chuyên Top 1' || exam.location === 'Chuyên đề';
           } else {
             matchLoc = exam.location === activeFilters.location;
           }
@@ -538,11 +564,11 @@ class EduPassApp {
         // Search check
         let matchSearch = true;
         if (searchKw.length > 0) {
-          const searchableText = `${exam.title} ${exam.description} ${exam.location} ${exam.year} ${exam.subject} ${exam.questions.map(q => q.topic || '').join(' ')}`.toLowerCase();
+          const searchableText = `${exam.title} ${exam.description} ${exam.location} ${exam.year} ${exam.subject} ${exam.badgeText || ''} ${exam.questions.map(q => q.topic || '').join(' ')}`.toLowerCase();
           matchSearch = searchableText.includes(searchKw);
         }
 
-        if (matchSub && matchYear && matchLoc && matchSearch) {
+        if (matchSub && matchExamType && matchYear && matchLoc && matchSearch) {
           c.style.display = 'flex';
           visibleCount++;
         } else {
@@ -602,6 +628,7 @@ class EduPassApp {
     if (btnReset) {
       btnReset.addEventListener('click', () => {
         activeFilters.subject = 'all';
+        activeFilters.examType = 'all';
         activeFilters.year = 'all';
         activeFilters.location = 'all';
         activeFilters.search = '';

@@ -450,7 +450,7 @@ class FlashcardTrainer {
             <i data-lucide="layers"></i> Luyện ${fcCount} thẻ Flashcard dạng này
           </button>
           <button class="btn btn-primary btn-sm" onclick="window.flashcardTrainer.practiceQuestionTypeInExam('${qt.id}', '${this.currentSubject}')">
-            <i data-lucide="play-circle"></i> Thử sức câu hỏi tương ứng trong đề thi
+            <i data-lucide="play-circle"></i> Đề luyện đúng 1 dạng này (${qt.typeCode})
           </button>
         </div>
       `;
@@ -643,18 +643,20 @@ class FlashcardTrainer {
   }
 
   practiceQuestionTypeInExam(typeId, subject) {
-    // Look up an exam matching this subject
-    let examToStart = null;
+    let exams = [];
     if (subject === 'math') {
-      const exams = window.MATH_EXAMS || [];
-      examToStart = exams.find(e => e.id === 'math_exam_hcmc_2025') || exams[0];
+      exams = window.MATH_EXAMS || [];
     } else if (subject === 'english') {
-      const exams = window.ENGLISH_EXAMS || [];
-      examToStart = exams.find(e => e.id === 'eng_exam_mock_hcmc_2025') || exams[0];
+      exams = window.ENGLISH_EXAMS || [];
     } else if (subject === 'literature') {
-      const exams = window.LITERATURE_EXAMS || [];
-      examToStart = exams.find(e => e.id === 'lit_exam_mock_hcmc_2025') || exams[0];
+      exams = window.LITERATURE_EXAMS || [];
     }
+
+    // Look up dedicated single-topic exam matching this exact question type
+    let examToStart = exams.find(e => e.topicId === typeId) ||
+                      exams.find(e => e.id && (e.id.includes(typeId) || typeId.includes(e.id))) ||
+                      exams.find(e => e.isSingleTopic) ||
+                      exams[0];
 
     if (examToStart && window.examEngine) {
       if (window.app) window.app.switchTab('exam');
