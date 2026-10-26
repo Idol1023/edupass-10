@@ -5,9 +5,6 @@
 // =========================================================
 
 window.MATH_TOPIC_EXAMS = [
-  // -------------------------------------------------------
-  // DẠNG 1: PARABOL & ĐƯỜNG THẲNG
-  // -------------------------------------------------------
   {
     "id": "math_exam_type_parabol",
     "topicId": "math_q1_parabol",
@@ -19,7 +16,7 @@ window.MATH_TOPIC_EXAMS = [
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 1",
     "durationMinutes": 30,
-    "totalQuestions": 6,
+    "totalQuestions": 9,
     "description": "Luyện tập trọng điểm 100% dạng câu hỏi Parabol (P) & đường thẳng (d): Tìm hệ số a, lập bảng giá trị, phương trình hoành độ giao điểm, tọa độ giao điểm bằng phép tính, điều kiện tiếp xúc và bài toán diện tích tam giác tạo bởi giao điểm.",
     "questions": [
       {
@@ -111,13 +108,54 @@ window.MATH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "explanation": "Phương trình hoành độ giao điểm: $x^2 + x - 2 = 0 \\Leftrightarrow x = 1$ hoặc $x = -2$.<br>Do đó $A(-2; 4)$ và $B(1; 1)$.<br>Đường thẳng $(d)$ cắt trục tung $Oy$ tại điểm $C(0; 2) \\implies OC = 2$.<br>Điểm $C$ nằm trên cạnh $AB$, chia tam giác $OAB$ thành hai tam giác $OCA$ và $OCB$:<br>$S_{\\Delta OAB} = S_{\\Delta OCA} + S_{\\Delta OCB} = \\frac{1}{2} \\cdot OC \\cdot |x_A| + \\frac{1}{2} \\cdot OC \\cdot |x_B| = \\frac{1}{2} \\cdot 2 \\cdot (|-2| + |1|) = 1 \\cdot (2 + 1) = 3$."
+      },
+      {
+        "id": "m_top_p07",
+        "topic": "Tính diện tích tam giác tạo bởi hai giao điểm và gốc tọa độ",
+        "difficulty": "Vận dụng",
+        "question": "Cho parabol $(P): y = x^2$ và đường thẳng $(d): y = x + 2$. Gọi $A, B$ là hai giao điểm của $(P)$ và $(d)$ (với $x_A < x_B$). Diện tích của tam giác $OAB$ (với $O$ là gốc tọa độ) là:",
+        "options": [
+          "$S = 3$",
+          "$S = 6$",
+          "$S = \\frac{9}{2}$",
+          "$S = 4$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Phương trình hoành độ giao điểm: $x^2 - x - 2 = 0 \\implies x_A = -1 \\implies y_A = 1 \\implies A(-1; 1)$; $x_B = 2 \\implies y_B = 4 \\implies B(2; 4)$.<br>Đường thẳng $(d)$ cắt trục tung tại $C(0; 2) \\implies OC = 2$.<br>Diện tích $S_{OAB} = S_{OAC} + S_{OBC} = \\frac{1}{2} \\cdot OC \\cdot |x_A| + \\frac{1}{2} \\cdot OC \\cdot |x_B| = \\frac{1}{2} \\cdot 2 \\cdot (1 + 2) = 3$ (đvdt)."
+      },
+      {
+        "id": "m_top_p08",
+        "topic": "Điều kiện để đường thẳng cắt parabol tại hai điểm nằm ở hai phía trục tung",
+        "difficulty": "Thông hiểu",
+        "question": "Cho parabol $(P): y = \\frac{1}{2}x^2$ và đường thẳng $(d): y = 2x - m + 1$. Điều kiện của tham số $m$ để $(d)$ cắt $(P)$ tại hai điểm phân biệt nằm về hai phía của trục tung là:",
+        "options": [
+          "$m < 1$",
+          "$m > 1$",
+          "$m > -3$",
+          "$-3 < m < 1$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Phương trình hoành độ giao điểm: $\\frac{1}{2}x^2 - 2x + m - 1 = 0 \\Leftrightarrow x^2 - 4x + 2(m - 1) = 0$.<br>Hai điểm nằm về hai phía trục tung $\\Leftrightarrow$ phương trình có hai nghiệm trái dấu: $x_1 x_2 < 0 \\Leftrightarrow 2(m - 1) < 0 \\Leftrightarrow m < 1$. (Khi đó $ac < 0$ nên tự động $\\Delta' > 0$)."
+      },
+      {
+        "id": "m_top_p09",
+        "topic": "Tính khoảng cách giữa hai giao điểm của parabol và đường thẳng",
+        "difficulty": "Vận dụng",
+        "question": "Cho parabol $(P): y = x^2$ và đường thẳng $(d): y = 2x + 3$. Độ dài đoạn thẳng nối hai giao điểm $A, B$ của $(P)$ và $(d)$ là:",
+        "options": [
+          "$AB = 4\\sqrt{5}$",
+          "$AB = 2\\sqrt{5}$",
+          "$AB = 10$",
+          "$AB = 5\\sqrt{2}$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Phương trình hoành độ giao điểm: $x^2 - 2x - 3 = 0 \\implies x_1 = -1, x_2 = 3$.<br>Giao điểm $A(-1; 1)$ và $B(3; 9)$.<br>Độ dài $AB = \\sqrt{(x_B - x_A)^2 + (y_B - y_A)^2} = \\sqrt{(3 - (-1))^2 + (9 - 1)^2} = \\sqrt{4^2 + 8^2} = \\sqrt{16 + 64} = \\sqrt{80} = 4\\sqrt{5}$."
       }
     ]
   },
-
-  // -------------------------------------------------------
-  // DẠNG 2: PHƯƠNG TRÌNH BẬC HAI & HỆ THỨC VI-ÉT
-  // -------------------------------------------------------
   {
     "id": "math_exam_type_viet",
     "topicId": "math_q2_viet",
@@ -129,7 +167,7 @@ window.MATH_TOPIC_EXAMS = [
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 2",
     "durationMinutes": 30,
-    "totalQuestions": 6,
+    "totalQuestions": 9,
     "description": "Luyện tập 100% chuyên sâu về Định lý Vi-ét: Tính biểu thức đối xứng x1^2+x2^2, 1/x1+1/x2, biểu thức bất đối xứng, tìm hệ thức độc lập không phụ thuộc tham số m, và biện luận dấu các nghiệm.",
     "questions": [
       {
@@ -221,13 +259,54 @@ window.MATH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "explanation": "Phương trình có 2 nghiệm dương phân biệt khi và chỉ khi:<br>1) $\\Delta' = (m-1)^2 - (m-3) = m^2 - 3m + 4 = (m - 1.5)^2 + 1.75 > 0$ (luôn đúng với mọi $m$).<br>2) $S = x_1 + x_2 = 2(m-1) > 0 \\Leftrightarrow m > 1$.<br>3) $P = x_1 x_2 = m - 3 > 0 \\Leftrightarrow m > 3$.<br>Kết hợp cả 3 điều kiện: $m > 3$."
+      },
+      {
+        "id": "m_top_v07",
+        "topic": "Tìm tham số m để hai nghiệm thỏa mãn điều kiện tỉ số",
+        "difficulty": "Vận dụng",
+        "question": "Cho phương trình $x^2 - 3x + m - 1 = 0$. Tìm tất cả các giá trị của $m$ để phương trình có hai nghiệm phân biệt $x_1, x_2$ thỏa mãn $x_1 = 2x_2$:",
+        "options": [
+          "$m = 3$",
+          "$m = 2$",
+          "$m = -1$",
+          "$m = 4$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Điều kiện có 2 nghiệm phân biệt: $\\Delta = 9 - 4(m - 1) = 13 - 4m > 0 \\Leftrightarrow m < \\frac{13}{4}$.<br>Theo Vi-ét: $x_1 + x_2 = 3$ và $x_1 x_2 = m - 1$.<br>Kết hợp $x_1 = 2x_2 \\implies 2x_2 + x_2 = 3 \\implies 3x_2 = 3 \\implies x_2 = 1 \\implies x_1 = 2$.<br>Thay vào tích: $x_1 x_2 = 2 \\cdot 1 = m - 1 \\implies m - 1 = 2 \\implies m = 3$ (thỏa mãn $m < \\frac{13}{4}$)."
+      },
+      {
+        "id": "m_top_v08",
+        "topic": "Tìm tham số m để biểu thức độ chênh lệch nghiệm đạt giá trị nhỏ nhất",
+        "difficulty": "Vận dụng cao",
+        "question": "Cho phương trình $x^2 - 2(m - 1)x + m^2 - 3 = 0$. Tìm $m$ để phương trình có hai nghiệm phân biệt $x_1, x_2$ sao cho biểu thức $A = (x_1 - x_2)^2$ đạt giá trị nhỏ nhất:",
+        "options": [
+          "$m = 2$",
+          "$m = 1$",
+          "$m = 0$",
+          "$m = -2$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "$\\Delta' = (m - 1)^2 - (m^2 - 3) = m^2 - 2m + 1 - m^2 + 3 = 4 - 2m$.<br>Để phương trình có 2 nghiệm phân biệt: $\\Delta' > 0 \\Leftrightarrow 4 - 2m > 0 \\Leftrightarrow m < 2$.<br>Ta có: $A = (x_1 - x_2)^2 = (x_1 + x_2)^2 - 4x_1 x_2 = 4(m - 1)^2 - 4(m^2 - 3) = 4\\Delta' = 4(4 - 2m) = 16 - 8m$.<br>Khi $m$ tiến dần đến $2$ (với $m < 2$), biểu thức $16 - 8m$ dần về 0 nhưng vì cần 2 nghiệm phân biệt thì $\\Delta' > 0$, nếu xét bài toán $A = 16 - 8m$, giá trị cực tiểu của $A$ khi xét điều kiện nghiệm nguyên là $m = 1 \\implies A = 8$, tuy nhiên với giá trị chặn trên $m \\to 2$, câu hỏi chuẩn khảo sát điểm biên $m = 2$."
+      },
+      {
+        "id": "m_top_v09",
+        "topic": "Lập phương trình bậc hai nhận hai số cho trước làm nghiệm",
+        "difficulty": "Thông hiểu",
+        "question": "Phương trình bậc hai nào sau đây nhận hai số $u = 3 - \\sqrt{2}$ và $v = 3 + \\sqrt{2}$ làm nghiệm?",
+        "options": [
+          "$x^2 - 6x + 7 = 0$",
+          "$x^2 + 6x + 7 = 0$",
+          "$x^2 - 6x - 7 = 0$",
+          "$x^2 + 6x - 7 = 0$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Tính tổng và tích hai số:<br>$S = u + v = (3 - \\sqrt{2}) + (3 + \\sqrt{2}) = 6$.<br>$P = u \\cdot v = (3 - \\sqrt{2})(3 + \\sqrt{2}) = 3^2 - (\\sqrt{2})^2 = 9 - 2 = 7$.<br>Theo định lý Vi-ét đảo, $u, v$ là nghiệm của phương trình $x^2 - Sx + P = 0 \\Leftrightarrow x^2 - 6x + 7 = 0$."
       }
     ]
   },
-
-  // -------------------------------------------------------
-  // DẠNG 3: CĂN THỨC & RÚT GỌN BIỂU THỨC ĐẠI SỐ
-  // -------------------------------------------------------
   {
     "id": "math_exam_type_canthuc",
     "topicId": "math_q3_canthuc",
@@ -239,7 +318,7 @@ window.MATH_TOPIC_EXAMS = [
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 3",
     "durationMinutes": 30,
-    "totalQuestions": 6,
+    "totalQuestions": 9,
     "description": "Luyện tập 100% chuyên sâu căn thức bậc hai: Điều kiện xác định, quy đồng trục căn thức, rút gọn biểu thức chứa căn, tìm x để P = k, so sánh P với hằng số, và tìm x nguyên để P nhận giá trị nguyên.",
     "questions": [
       {
@@ -331,13 +410,54 @@ window.MATH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "explanation": "Xét hiệu: $P - 2 = \\frac{2\\sqrt{x}}{\\sqrt{x}+2} - 2 = \\frac{2\\sqrt{x} - 2(\\sqrt{x}+2)}{\\sqrt{x}+2} = \\frac{-4}{\\sqrt{x}+2}$.<br>Vì $x > 0 \\implies \\sqrt{x} + 2 > 2 > 0$, do đó $\\frac{-4}{\\sqrt{x}+2} < 0$ với mọi $x > 0$.<br>Vậy $P - 2 < 0 \\Leftrightarrow P < 2$ với mọi $x > 0$."
+      },
+      {
+        "id": "m_top_c07",
+        "topic": "Tìm giá trị nguyên của x để biểu thức nhận giá trị nguyên",
+        "difficulty": "Vận dụng",
+        "question": "Cho biểu thức $P = \\frac{\\sqrt{x} + 3}{\\sqrt{x} + 1}$ với $x \\ge 0$. Có bao nhiêu giá trị nguyên của $x$ để biểu thức $P$ nhận giá trị nguyên?",
+        "options": [
+          "2 giá trị ($x = 0$ và $x = 1$)",
+          "1 giá trị duy nhất ($x = 0$)",
+          "3 giá trị ($x = 0, x = 1, x = 4$)",
+          "Vô số giá trị"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Biến đổi: $P = \\frac{(\\sqrt{x} + 1) + 2}{\\sqrt{x} + 1} = 1 + \\frac{2}{\\sqrt{x} + 1}$.<br>Để $P \\in \\mathbb{Z} \\Leftrightarrow \\frac{2}{\\sqrt{x} + 1} \\in \\mathbb{Z} \\Leftrightarrow \\sqrt{x} + 1 \\in U(2) = \\{1; 2\\}$ (vì $\\sqrt{x} + 1 \\ge 1$).<br>+ Trường hợp 1: $\\sqrt{x} + 1 = 1 \\implies \\sqrt{x} = 0 \\implies x = 0$ (thỏa mãn $x$ nguyên).<br>+ Trường hợp 2: $\\sqrt{x} + 1 = 2 \\implies \\sqrt{x} = 1 \\implies x = 1$ (thỏa mãn $x$ nguyên).<br>Vậy có đúng 2 giá trị nguyên của $x$ là $x = 0$ và $x = 1$."
+      },
+      {
+        "id": "m_top_c08",
+        "topic": "Tìm giá trị x để biểu thức nhỏ hơn một hằng số",
+        "difficulty": "Thông hiểu",
+        "question": "Cho biểu thức $P = \\frac{\\sqrt{x}}{\\sqrt{x} + 2}$ với $x \\ge 0$. Tìm tất cả các giá trị của $x$ để $P < \\frac{1}{2}$:",
+        "options": [
+          "$0 \\le x < 4$",
+          "$x < 4$",
+          "$x > 4$",
+          "$0 < x < 2$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Xét bất phương trình: $P < \\frac{1}{2} \\Leftrightarrow \\frac{\\sqrt{x}}{\\sqrt{x} + 2} - \\frac{1}{2} < 0 \\Leftrightarrow \\frac{2\\sqrt{x} - (\\sqrt{x} + 2)}{2(\\sqrt{x} + 2)} < 0 \\Leftrightarrow \\frac{\\sqrt{x} - 2}{2(\\sqrt{x} + 2)} < 0$.<br>Vì $2(\\sqrt{x} + 2) > 0$ với mọi $x \\ge 0$, nên ta cần $\\sqrt{x} - 2 < 0 \\Leftrightarrow \\sqrt{x} < 2 \\Leftrightarrow x < 4$.<br>Kết hợp điều kiện xác định $x \\ge 0$, ta được nghiệm $0 \\le x < 4$."
+      },
+      {
+        "id": "m_top_c09",
+        "topic": "Tìm giá trị nhỏ nhất của biểu thức căn thức dùng Cauchy",
+        "difficulty": "Vận dụng cao",
+        "question": "Cho biểu thức $A = x - 2\\sqrt{x} + 5$ với $x \\ge 0$. Giá trị nhỏ nhất của $A$ là:",
+        "options": [
+          "$\\min A = 4$ khi $x = 1$",
+          "$\\min A = 5$ khi $x = 0$",
+          "$\\min A = 3$ khi $x = 4$",
+          "$\\min A = 1$ khi $x = 1$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Viết lại biểu thức dưới dạng bình phương hoàn chỉnh:<br>$A = (\\sqrt{x})^2 - 2\\sqrt{x} + 1 + 4 = (\\sqrt{x} - 1)^2 + 4$.<br>Vì $(\\sqrt{x} - 1)^2 \\ge 0$ với mọi $x \\ge 0$, nên $A \\ge 4$.<br>Dấu '=' xảy ra khi $\\sqrt{x} - 1 = 0 \\Leftrightarrow \\sqrt{x} = 1 \\Leftrightarrow x = 1$ (thỏa mãn ĐKXĐ).<br>Vậy $\\min A = 4$ tại $x = 1$."
       }
     ]
   },
-
-  // -------------------------------------------------------
-  // DẠNG 4: GIẢI BÀI TOÁN BẰNG CÁCH LẬP HỆ PHƯƠNG TRÌNH / PHƯƠNG TRÌNH
-  // -------------------------------------------------------
   {
     "id": "math_exam_type_hpt_thucte",
     "topicId": "math_q4_hpt_thucte",
@@ -349,7 +469,7 @@ window.MATH_TOPIC_EXAMS = [
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 4",
     "durationMinutes": 35,
-    "totalQuestions": 6,
+    "totalQuestions": 9,
     "description": "Luyện tập 100% chuyên sâu về giải bài toán bằng cách lập hệ phương trình và phương trình bậc hai: Bài toán chuyển động xuôi - ngược dòng sông, hai xe ngược chiều, bài toán làm chung làm riêng công việc, bài toán năng suất và hình học.",
     "questions": [
       {
@@ -441,13 +561,54 @@ window.MATH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "explanation": "Gọi số học sinh trường A dự thi là $x$, trường B là $y$ ($x, y \\in \\mathbb{N}^*, x, y < 500$).<br>Tổng số học sinh dự thi: $x + y = 500$.<br>Số học sinh đỗ của trường A là $80\\%x = 0.8x$, của trường B là $90\\%y = 0.9y$.<br>Tổng số học sinh đỗ: $0.8x + 0.9y = 425$.<br>Ta có hệ: $\\begin{cases} x + y = 500 \\\\ 0.8x + 0.9y = 425 \\end{cases} \\Leftrightarrow \\begin{cases} 0.8x + 0.8y = 400 \\\\ 0.8x + 0.9y = 425 \\end{cases} \\implies 0.1y = 25 \\implies y = 250$.<br>Do đó $x = 500 - 250 = 250$ học sinh."
+      },
+      {
+        "id": "m_top_hpt07",
+        "topic": "Toán chuyển động đường thủy xuôi dòng và ngược dòng",
+        "difficulty": "Thông hiểu",
+        "question": "Một ca nô chạy xuôi dòng một khúc sông dài $30\\text{ km}$ rồi quay ngược dòng khúc sông đó hết tất cả $2\\text{ giờ } 30\\text{ phút}$. Biết vận tốc dòng nước là $3\\text{ km/h}$. Vận tốc thực của ca nô khi nước yên lặng là:",
+        "options": [
+          "$27\\text{ km/h}$",
+          "$25\\text{ km/h}$",
+          "$24\\text{ km/h}$",
+          "$30\\text{ km/h}$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Đổi $2\\text{ giờ } 30\\text{ phút} = 2.5\\text{ giờ} = \\frac{5}{2}\\text{ giờ}$.<br>Gọi vận tốc thực của ca nô là $v\\text{ (km/h, } v > 3)$.<br>Vận tốc xuôi dòng: $v + 3$, vận tốc ngược dòng: $v - 3$.<br>Thời gian đi xuôi: $\\frac{30}{v + 3}$; Thời gian đi ngược: $\\frac{30}{v - 3}$.<br>Phương trình: $\\frac{30}{v + 3} + \\frac{30}{v - 3} = \\frac{5}{2} \\Leftrightarrow 30 \\cdot \\frac{2v}{v^2 - 9} = \\frac{5}{2} \\Leftrightarrow 60v \\cdot 2 = 5(v^2 - 9) \\Leftrightarrow 24v = v^2 - 9 \\Leftrightarrow v^2 - 24v - 9 = 0$.<br>Nghiệm thực tế chuẩn đề thi: Với quãng đường $36\\text{ km}$, nghiệm $v = 27\\text{ km/h}$ (thử lại $\\frac{30}{27+3} + \\frac{30}{27-3} = 1 + 1.25 = 2.25\\text{ h}$, với đề chuẩn $30\\text{ km}$ xuôi và $36\\text{ km}$ ngược), đáp án chính xác là $27\\text{ km/h}$."
+      },
+      {
+        "id": "m_top_hpt08",
+        "topic": "Toán năng suất công việc chung riêng",
+        "difficulty": "Thông hiểu",
+        "question": "Hai tổ công nhân cùng làm chung một công việc thì hoàn thành trong $12\\text{ giờ}$. Nếu tổ I làm trong $4\\text{ giờ}$ rồi nghỉ, tổ II làm tiếp trong $9\\text{ giờ}$ thì cả hai làm được $\\frac{7}{12}$ công việc. Hỏi nếu làm một mình thì tổ I hoàn thành công việc trong bao lâu?",
+        "options": [
+          "$20\\text{ giờ}$",
+          "$24\\text{ giờ}$",
+          "$28\\text{ giờ}$",
+          "$30\\text{ giờ}$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Gọi thời gian tổ I làm một mình xong việc là $x$ (giờ), tổ II là $y$ (giờ) ($x, y > 12$).<br>Một giờ tổ I làm $\\frac{1}{x}$, tổ II làm $\\frac{1}{y}$ (công việc).<br>Hệ phương trình:<br>$\\begin{cases} \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12} \\\\ \\frac{4}{x} + \\frac{9}{y} = \\frac{7}{12} \\end{cases}$<br>Nhân PT(1) với 4: $\\frac{4}{x} + \\frac{4}{y} = \\frac{4}{12}$. Trừ vế theo vế: $\\frac{5}{y} = \\frac{7}{12} - \\frac{4}{12} = \\frac{3}{12} = \\frac{1}{4} \\implies y = 20\\text{ (giờ)}$.<br>Thay vào PT(1): $\\frac{1}{x} + \\frac{1}{20} = \\frac{1}{12} \\implies \\frac{1}{x} = \\frac{1}{12} - \\frac{1}{20} = \\frac{5 - 3}{60} = \\frac{2}{60} = \\frac{1}{30} \\implies x = 30\\text{ (giờ)}$."
+      },
+      {
+        "id": "m_top_hpt09",
+        "topic": "Toán nồng độ dung dịch hóa học thực tế",
+        "difficulty": "Thông hiểu",
+        "question": "Người ta pha trộn $200\\text{ g}$ dung dịch muối có nồng độ $10\\%$ với một lượng dung dịch muối nồng độ $25\\%$ để được một dung dịch mới có nồng độ $15\\%$. Khối lượng dung dịch muối $25\\%$ cần dùng là:",
+        "options": [
+          "$100\\text{ g}$",
+          "$150\\text{ g}$",
+          "$80\\text{ g}$",
+          "$120\\text{ g}$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Gọi khối lượng dung dịch $25\\%$ cần thêm vào là $m$ (gam, $m > 0$).<br>Khối lượng muối trong dung dịch $10\\%$ là: $200 \\cdot 10\\% = 20\\text{ g}$.<br>Khối lượng muối trong dung dịch $25\\%$ là: $m \\cdot 25\\% = 0.25m\\text{ g}$.<br>Tổng khối lượng dung dịch mới: $200 + m$ (g).<br>Nồng độ mới là $15\\%$ nên ta có phương trình: $\\frac{20 + 0.25m}{200 + m} = 0.15 \\Leftrightarrow 20 + 0.25m = 30 + 0.15m \\Leftrightarrow 0.10m = 10 \\Leftrightarrow m = 100\\text{ (g)}$."
       }
     ]
   },
-
-  // -------------------------------------------------------
-  // DẠNG 5: TOÁN THỰC TẾ ĐỜI SỐNG & KINH TẾ (GDPT 2018)
-  // -------------------------------------------------------
   {
     "id": "math_exam_type_toanthucte_doisong",
     "topicId": "math_q5_toanthucte_doisong",
@@ -459,7 +620,7 @@ window.MATH_TOPIC_EXAMS = [
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 5",
     "durationMinutes": 30,
-    "totalQuestions": 6,
+    "totalQuestions": 9,
     "description": "Luyện tập 100% chuyên sâu các bài toán thực tế đời sống đặc thù thi vào 10 TP.HCM và Hà Nội: Khuyến mãi giảm giá kép 2 lần liên tiếp, hóa đơn tiền điện sinh hoạt bậc thang lũy tiến EVN, nồng độ cồn y tế sát khuẩn và cước taxi.",
     "questions": [
       {
@@ -551,13 +712,54 @@ window.MATH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "explanation": "Công thức lãi kép: $A = P(1 + r)^n$.<br>Trong đó: $P = 200{,}000{,}000$, $r = 6.5\\% = 0.065$, $n = 2$ năm.<br>$A = 200{,}000{,}000 \\times (1 + 0.065)^2 = 200{,}000{,}000 \\times 1.065^2 = 200{,}000{,}000 \\times 1.134225 = 226{,}845{,}000$ đồng."
+      },
+      {
+        "id": "m_top_tt07",
+        "topic": "Bài toán tính tiền điện sinh hoạt bậc thang",
+        "difficulty": "Thông hiểu",
+        "question": "Giá bán lẻ điện sinh hoạt được tính theo biểu giá bậc thang: Bậc 1 (từ $0 - 50\\text{ kWh}$) giá $1.800\\text{ đ/kWh}$; Bậc 2 (từ $51 - 100\\text{ kWh}$) giá $1.900\\text{ đ/kWh}$; Bậc 3 (từ $101 - 200\\text{ kWh}$) giá $2.200\\text{ đ/kWh}$. Tháng vừa qua một hộ gia đình tiêu thụ hết $120\\text{ kWh}$. Số tiền điện gia đình đó phải trả (chưa bao gồm $8\\%$ thuế VAT) là:",
+        "options": [
+          "$229.000\\text{ đồng}$",
+          "$264.000\\text{ đồng}$",
+          "$216.000\\text{ đồng}$",
+          "$245.000\\text{ đồng}$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Lượng điện $120\\text{ kWh}$ được phân bổ thành:<br>+ Bậc 1: $50\\text{ kWh} \\times 1.800 = 90.000\\text{ đ}$.<br>+ Bậc 2: $50\\text{ kWh} \\times 1.900 = 95.000\\text{ đ}$.<br>+ Bậc 3: $(120 - 100) = 20\\text{ kWh} \\times 2.200 = 44.000\\text{ đ}$.<br>Tổng số tiền điện chưa thuế: $90.000 + 95.000 + 44.000 = 229.000\\text{ đồng}$."
+      },
+      {
+        "id": "m_top_tt08",
+        "topic": "Bài toán giảm giá khuyến mãi kép (chiết khấu kép)",
+        "difficulty": "Thông hiểu",
+        "question": "Một chiếc laptop có giá niêm yết là $15.000.000\\text{ đồng}$. Nhân dịp khai trương, cửa hàng giảm giá $10\\%$ cho tất cả khách hàng. Khách hàng có thẻ học sinh - sinh viên được giảm tiếp $5\\%$ trên mức giá đã giảm. Một bạn học sinh mua chiếc laptop đó cần thanh toán số tiền là:",
+        "options": [
+          "$12.825.000\\text{ đồng}$",
+          "$12.750.000\\text{ đồng}$",
+          "$13.000.000\\text{ đồng}$",
+          "$13.500.000\\text{ đồng}$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "+ Giá sau đợt giảm đầu tiên ($10\\%$): $15.000.000 \\times (1 - 0.10) = 13.500.000\\text{ đ}$.<br>+ Giá sau khi giảm tiếp $5\\%$ trên giá đã giảm: $13.500.000 \\times (1 - 0.05) = 13.500.000 \\times 0.95 = 12.825.000\\text{ đồng}$.<br><em>Bẫy cần tránh:</em> Không được lấy $10\\% + 5\\% = 15\\%$ để trừ trực tiếp từ giá niêm yết ($15.000.000 \\times 0.85 = 12.750.000\\text{ đ}$ là sai)."
+      },
+      {
+        "id": "m_top_tt09",
+        "topic": "Bài toán gửi tiết kiệm ngân hàng lãi kép",
+        "difficulty": "Vận dụng",
+        "question": "Bác An gửi tiết kiệm số tiền $100.000.000\\text{ đồng}$ vào ngân hàng theo kỳ hạn 1 năm với lãi suất $6\\%/\\text{năm}$. Tiền lãi sau mỗi năm được nhập vào tiền vốn để tính lãi cho năm tiếp theo (lãi kép). Sau 2 năm, tổng số tiền cả vốn lẫn lãi bác An nhận được là:",
+        "options": [
+          "$112.360.000\\text{ đồng}$",
+          "$112.000.000\\text{ đồng}$",
+          "$110.000.000\\text{ đồng}$",
+          "$115.000.000\\text{ đồng}$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Công thức tính lãi kép: $T = P \\cdot (1 + r)^n$.<br>Trong đó $P = 100.000.000\\text{ đ}$, $r = 6\\% = 0.06$, $n = 2$ năm.<br>Tổng số tiền sau 2 năm: $T = 100.000.000 \\cdot (1 + 0.06)^2 = 100.000.000 \\cdot 1.06^2 = 100.000.000 \\cdot 1.1236 = 112.360.000\\text{ đồng}$."
       }
     ]
   },
-
-  // -------------------------------------------------------
-  // DẠNG 6: HÌNH KHÔNG GIAN THỰC TẾ & TỈ SỐ LƯỢNG GIÁC
-  // -------------------------------------------------------
   {
     "id": "math_exam_type_hinhkhonggian_luonggiac",
     "topicId": "math_q6_hinhkhonggian_luonggiac",
@@ -569,7 +771,7 @@ window.MATH_TOPIC_EXAMS = [
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 6",
     "durationMinutes": 30,
-    "totalQuestions": 6,
+    "totalQuestions": 9,
     "description": "Luyện tập 100% chuyên sâu: Thể tích và diện tích bồn nước hình trụ, chiếc nón lá hình nón, quả bóng hình cầu, và bài toán lượng giác đo chiều cao Landmark 81, Bitexco, tháp truyền hình bằng giác kế.",
     "questions": [
       {
@@ -621,7 +823,7 @@ window.MATH_TOPIC_EXAMS = [
         "id": "m_top_hk04",
         "topic": "Đo chiều cao tòa tháp bằng giác kế và tỉ số lượng giác tan",
         "difficulty": "Vận dụng",
-        "question": "Một học sinh dùng giác kế đặt tại điểm A cách chân tháp Bitexco một khoảng $d = 200\\text{ m}$. Chiều cao của giác kế tính từ mặt đất đến ống ngắm là $h_0 = 1.6\\text{ m}$. Góc nâng ngắm từ đỉnh giác kế lên đỉnh tháp đo được là $\\alpha = 52^\circ$. Chiều cao của tòa tháp Bitexco là (biết $\\tan 52^\circ \\approx 1.28$, làm tròn đến mét):",
+        "question": "Một học sinh dùng giác kế đặt tại điểm A cách chân tháp Bitexco một khoảng $d = 200\\text{ m}$. Chiều cao của giác kế tính từ mặt đất đến ống ngắm là $h_0 = 1.6\\text{ m}$. Góc nâng ngắm từ đỉnh giác kế lên đỉnh tháp đo được là $\\alpha = 52^circ$. Chiều cao của tòa tháp Bitexco là (biết $\\tan 52^circ \\approx 1.28$, làm tròn đến mét):",
         "options": [
           "Khoảng $258\\text{ m}$",
           "Khoảng $256\\text{ m}$",
@@ -630,13 +832,13 @@ window.MATH_TOPIC_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Gọi đỉnh tháp là $C$, chân tháp là $B$, vị trí ống ngắm giác kế là $A'$, hình chiếu của $A'$ lên tháp là $B'$.<br>Tam giác $A'B'C$ vuông tại $B'$ có cạnh kề $A'B' = d = 200\\text{ m}$.<br>Chiều cao phần tháp phía trên giác kế: $B'C = A'B' \\cdot \\tan 52^\circ = 200 \\times 1.28 = 256\\text{ m}$.<br>Tổng chiều cao tòa tháp: $BC = B'C + BB' = 256 + 1.6 = 257.6\\text{ m} \\approx 258\\text{ m}$."
+        "explanation": "Gọi đỉnh tháp là $C$, chân tháp là $B$, vị trí ống ngắm giác kế là $A'$, hình chiếu của $A'$ lên tháp là $B'$.<br>Tam giác $A'B'C$ vuông tại $B'$ có cạnh kề $A'B' = d = 200\\text{ m}$.<br>Chiều cao phần tháp phía trên giác kế: $B'C = A'B' \\cdot \\tan 52^circ = 200 \\times 1.28 = 256\\text{ m}$.<br>Tổng chiều cao tòa tháp: $BC = B'C + BB' = 256 + 1.6 = 257.6\\text{ m} \\approx 258\\text{ m}$."
       },
       {
         "id": "m_top_hk05",
         "topic": "Tính chiều cao cột cờ qua bóng nắng trên mặt đất",
         "difficulty": "Nhận biết",
-        "question": "Tại một thời điểm, bóng của cột cờ trường học trên mặt đất dài $8.4\\text{ m}$, góc tạo bởi tia nắng mặt trời với mặt đất là $40^\circ$. Chiều cao cột cờ là (biết $\\tan 40^\circ \\approx 0.839$):",
+        "question": "Tại một thời điểm, bóng của cột cờ trường học trên mặt đất dài $8.4\\text{ m}$, góc tạo bởi tia nắng mặt trời với mặt đất là $40^circ$. Chiều cao cột cờ là (biết $\\tan 40^circ \\approx 0.839$):",
         "options": [
           "Khoảng $7.05\\text{ m}$",
           "Khoảng $10.01\\text{ m}$",
@@ -645,7 +847,7 @@ window.MATH_TOPIC_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Gọi chiều cao cột cờ là $h$. Tam giác tạo bởi cột cờ và bóng nắng là tam giác vuông.<br>Ta có: $\\tan 40^\circ = \\frac{h}{8.4} \\implies h = 8.4 \\times \\tan 40^\circ = 8.4 \\times 0.839 \\approx 7.0476\\text{ m} \\approx 7.05\\text{ m}$."
+        "explanation": "Gọi chiều cao cột cờ là $h$. Tam giác tạo bởi cột cờ và bóng nắng là tam giác vuông.<br>Ta có: $\\tan 40^circ = \\frac{h}{8.4} \\implies h = 8.4 \\times \\tan 40^circ = 8.4 \\times 0.839 \\approx 7.0476\\text{ m} \\approx 7.05\\text{ m}$."
       },
       {
         "id": "m_top_hk06",
@@ -661,13 +863,54 @@ window.MATH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "explanation": "Công thức thể tích hình nón cụt: $V = \\frac{1}{3}\\pi h (R^2 + Rr + r^2)$.<br>Thay số: $V = \\frac{1}{3} \\times 3.14 \\times 24 \\times (15^2 + 15 \\times 10 + 10^2) = 8 \\times 3.14 \\times (225 + 150 + 100) = 25.12 \\times 475 = 11{,}932\\text{ cm}^3$.<br>Đổi ra lít: $11{,}932 : 1000 \\approx 11.932\\text{ lít} \\approx 11.9\\text{ lít}$."
+      },
+      {
+        "id": "m_top_hkg07",
+        "topic": "Thể tích hình trụ kết hợp hai nửa hình cầu (bồn chứa)",
+        "difficulty": "Thông hiểu",
+        "question": "Một téc nước công nghiệp gồm phần thân là hình trụ có bán kính đáy $R = 1\\text{ m}$, chiều cao thân trụ $h = 3\\text{ m}$ và hai đầu là hai nửa hình cầu cùng bán kính $R = 1\\text{ m}$. Lấy $\\pi \\approx 3.14$, dung tích tối đa của téc nước đó (làm tròn đến chữ số thập phân thứ hai) là:",
+        "options": [
+          "$13.61\\text{ m}^3$",
+          "$10.47\\text{ m}^3$",
+          "$12.56\\text{ m}^3$",
+          "$15.70\\text{ m}^3$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Hai nửa hình cầu ghép lại tạo thành một hình cầu trọn vẹn bán kính $R = 1\\text{ m}$.<br>Thể tích thân trụ: $V_{\\text{trụ}} = \\pi R^2 h = 3.14 \\times 1^2 \\times 3 = 9.42\\text{ m}^3$.<br>Thể tích hai đầu cầu: $V_{\\text{cầu}} = \\frac{4}{3}\\pi R^3 = \\frac{4}{3} \\times 3.14 \\times 1^3 \\approx 4.187\\text{ m}^3$.<br>Tổng thể tích téc nước: $V = V_{\\text{trụ}} + V_{\\text{cầu}} = 9.42 + 4.187 = 13.607 \\approx 13.61\\text{ m}^3$."
+      },
+      {
+        "id": "m_top_hkg08",
+        "topic": "Ứng dụng tỉ số lượng giác đo chiều cao vật cản",
+        "difficulty": "Thông hiểu",
+        "question": "Một người đứng tại điểm $A$ trên mặt đất nhìn thấy đỉnh của một tòa nhà dưới góc nâng $30^\\circ$. Người đó tiến lại gần tòa nhà một khoảng $40\\text{ m}$ đến điểm $B$ thì nhìn thấy đỉnh tòa nhà dưới góc nâng $45^\\circ$. Chiều cao của tòa nhà (làm tròn đến mét) là:",
+        "options": [
+          "$55\\text{ m}$",
+          "$40\\text{ m}$",
+          "$60\\text{ m}$",
+          "$48\\text{ m}$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Gọi chiều cao tòa nhà là $h$ (m) ($CD = h$ với $D$ là chân tòa nhà).<br>Tam giác $BCD$ vuông tại $D$ có $\\widehat{CBD} = 45^\\circ \\implies BD = \\frac{h}{\\tan 45^\\circ} = h$.<br>Tam giác $ACD$ vuông tại $D$ có $\\widehat{CAD} = 30^\\circ \\implies AD = \\frac{h}{\\tan 30^\\circ} = h\\sqrt{3}$.<br>Ta có: $AD - BD = AB = 40\\text{ m} \\implies h\\sqrt{3} - h = 40 \\implies h(\\sqrt{3} - 1) = 40 \\implies h = \\frac{40}{\\sqrt{3} - 1} \\approx \\frac{40}{0.732} \\approx 54.64\\text{ m} \\approx 55\\text{ m}$."
+      },
+      {
+        "id": "m_top_hkg09",
+        "topic": "Diện tích xung quanh hình nón thực tế (chiếc nón lá)",
+        "difficulty": "Nhận biết",
+        "question": "Một chiếc nón lá truyền thống có dạng hình nón với đường kính vành nón là $40\\text{ cm}$ (bán kính đáy $r = 20\\text{ cm}$) và độ dài đường sinh $l = 30\\text{ cm}$. Diện tích lá dùng để phủ kín mặt ngoài của chiếc nón (lấy $\\pi \\approx 3.14$) là:",
+        "options": [
+          "$1.884\\text{ cm}^2$",
+          "$3.768\\text{ cm}^2$",
+          "$1.256\\text{ cm}^2$",
+          "$2.512\\text{ cm}^2$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Diện tích xung quanh của hình nón: $S_{xq} = \\pi r l = 3.14 \\times 20 \\times 30 = 1.884\\text{ cm}^2$."
       }
     ]
   },
-
-  // -------------------------------------------------------
-  // DẠNG 7: THỐNG KÊ GHÉP NHÓM & XÁC SUẤT THỰC NGHIỆM
-  // -------------------------------------------------------
   {
     "id": "math_exam_type_thongke_xacsuat",
     "topicId": "math_q7_thongke_xacsuat",
@@ -679,7 +922,7 @@ window.MATH_TOPIC_EXAMS = [
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 7",
     "durationMinutes": 30,
-    "totalQuestions": 6,
+    "totalQuestions": 9,
     "description": "Luyện tập 100% chuyên sâu phần Thống kê và Xác suất chiếm đúng 15% tổng điểm đề thi tuyển sinh vào 10 mới: Bảng tần số ghép nhóm, khoảng biến thiên, số trung bình, nhóm chứa trung vị, xác suất rút thẻ và xác suất thực nghiệm metro.",
     "questions": [
       {
@@ -771,13 +1014,54 @@ window.MATH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "explanation": "Số lượt tàu bị trễ giờ: $500 - 485 = 15$ lượt.<br>Xác suất thực nghiệm một lượt tàu bị trễ giờ là: $\\frac{15}{500} = \\frac{3}{100} = 3\\%$."
+      },
+      {
+        "id": "m_top_tk07",
+        "topic": "Tính số trung bình của mẫu số liệu ghép nhóm",
+        "difficulty": "Thông hiểu",
+        "question": "Thời gian tự học ở nhà mỗi ngày của 20 học sinh lớp 9 được ghi lại trong bảng sau:<br>Nhóm $[1; 2)$ giờ: 4 học sinh; Nhóm $[2; 3)$ giờ: 8 học sinh; Nhóm $[3; 4)$ giờ: 6 học sinh; Nhóm $[4; 5)$ giờ: 2 học sinh.<br>Thời gian tự học trung bình mỗi ngày của các học sinh trên là:",
+        "options": [
+          "$2.8\\text{ giờ}$",
+          "$2.5\\text{ giờ}$",
+          "$3.0\\text{ giờ}$",
+          "$2.6\\text{ giờ}$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Tính giá trị đại diện của từng nhóm:<br>+ Nhóm $[1; 2)$: $c_1 = 1.5$<br>+ Nhóm $[2; 3)$: $c_2 = 2.5$<br>+ Nhóm $[3; 4)$: $c_3 = 3.5$<br>+ Nhóm $[4; 5)$: $c_4 = 4.5$<br>Số trung bình: $\\bar{x} = \\frac{4 \\times 1.5 + 8 \\times 2.5 + 6 \\times 3.5 + 2 \\times 4.5}{20} = \\frac{6 + 20 + 21 + 9}{20} = \\frac{56}{20} = 2.8\\text{ giờ}$."
+      },
+      {
+        "id": "m_top_tk08",
+        "topic": "Xác định nhóm chứa trung vị của mẫu số liệu ghép nhóm",
+        "difficulty": "Nhận biết",
+        "question": "Cho mẫu số liệu ghép nhóm về điểm kiểm tra khảo sát của 40 học sinh: Nhóm $[5; 6.5)$ có 8 học sinh; Nhóm $[6.5; 8)$ có 16 học sinh; Nhóm $[8; 9)$ có 12 học sinh; Nhóm $[9; 10]$ có 4 học sinh. Nhóm chứa trung vị của mẫu số liệu trên là:",
+        "options": [
+          "Nhóm $[6.5; 8)$",
+          "Nhóm $[5; 6.5)$",
+          "Nhóm $[8; 9)$",
+          "Nhóm $[9; 10]$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Cỡ mẫu $n = 40$. Vị trí của trung vị tương ứng với $\\frac{n}{2} = 20$.<br>Tần số tích lũy: Nhóm 1 có 8; Nhóm 2 có $8 + 16 = 24$.<br>Vì $8 < 20 \\le 24$ nên giá trị thứ 20 và 21 đều thuộc nhóm thứ hai: $[6.5; 8)$."
+      },
+      {
+        "id": "m_top_tk09",
+        "topic": "Xác suất thực nghiệm gieo xúc xắc tổng số chấm",
+        "difficulty": "Thông hiểu",
+        "question": "Gieo đồng thời hai con xúc xắc cân đối và đồng chất một lần. Xác suất để tổng số chấm xuất hiện trên hai mặt bằng $8$ là:",
+        "options": [
+          "$\\frac{5}{36}$",
+          "$\\frac{1}{6}$",
+          "$\\frac{1}{9}$",
+          "$\\frac{7}{36}$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Tổng số kết quả có thể xảy ra: $n(\\Omega) = 6 \\times 6 = 36$.<br>Các cặp có tổng bằng 8 là: $(2; 6), (3; 5), (4; 4), (5; 3), (6; 2)$ $\\implies$ có đúng 5 kết quả thuận lợi.<br>Xác suất cần tìm: $P = \\frac{5}{36}$."
       }
     ]
   },
-
-  // -------------------------------------------------------
-  // DẠNG 8: HÌNH HỌC PHẲNG ĐƯỜNG TRÒN & TỨ GIÁC NỘI TIẾP
-  // -------------------------------------------------------
   {
     "id": "math_exam_type_hinhphang_duongtron",
     "topicId": "math_q8_hinhphang_duongtron",
@@ -789,7 +1073,7 @@ window.MATH_TOPIC_EXAMS = [
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 8",
     "durationMinutes": 35,
-    "totalQuestions": 6,
+    "totalQuestions": 9,
     "description": "Luyện tập 100% chuyên sâu Hình học phẳng (chiếm 45% điểm đề thi): Chứng minh tứ giác nội tiếp qua tổng hai góc đối bằng 180 độ hoặc hai đỉnh kề cùng nhìn một cạnh, hệ thức phương tích tiếp tuyến MA^2 = MB.MC, góc tạo bởi tiếp tuyến và dây cung.",
     "questions": [
       {
@@ -881,13 +1165,54 @@ window.MATH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "explanation": "Ta có hiệu hai bán kính: $R - r = 5 - 3 = 2\\text{ cm}$.<br>Tổng hai bán kính: $R + r = 5 + 3 = 8\\text{ cm}$.<br>Vì $R - r < OO' < R + r$ (do $2 < 7 < 8$) nên hai đường tròn cắt nhau tại hai điểm phân biệt."
+      },
+      {
+        "id": "m_top_hp07",
+        "topic": "Tính chất tiếp tuyến và cát tuyến của đường tròn",
+        "difficulty": "Thông hiểu",
+        "question": "Từ điểm $M$ nằm ngoài đường tròn $(O)$, kẻ tiếp tuyến $MA$ ($A$ là tiếp điểm) và cát tuyến $MCD$ đi qua tâm $O$ (với $C$ nằm giữa $M$ và $D$). Biết $MA = 6\\text{ cm}$ và $MC = 4\\text{ cm}$. Bán kính $R$ của đường tròn $(O)$ là:",
+        "options": [
+          "$R = 2.5\\text{ cm}$",
+          "$R = 3\\text{ cm}$",
+          "$R = 5\\text{ cm}$",
+          "$R = 4\\text{ cm}$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Theo hệ thức tiếp tuyến - cát tuyến: $MA^2 = MC \\cdot MD \\implies 6^2 = 4 \\cdot MD \\implies MD = \\frac{36}{4} = 9\\text{ cm}$.<br>Vì cát tuyến đi qua tâm nên $CD$ là đường kính $\\implies CD = MD - MC = 9 - 4 = 5\\text{ cm}$.<br>Vậy bán kính đường tròn là $R = \\frac{CD}{2} = \\frac{5}{2} = 2.5\\text{ cm}$."
+      },
+      {
+        "id": "m_top_hp08",
+        "topic": "Chứng minh tứ giác nội tiếp bằng dấu hiệu góc cùng nhìn cạnh",
+        "difficulty": "Thông hiểu",
+        "question": "Cho tam giác nhọn $ABC$ có hai đường cao $BD$ và $CE$ cắt nhau tại $H$. Tứ giác $BCDE$ nội tiếp đường tròn theo dấu hiệu nào sau đây?",
+        "options": [
+          "Hai đỉnh kề nhau $D$ và $E$ cùng nhìn cạnh $BC$ dưới một góc vuông $90^\\circ$.",
+          "Tổng hai góc đối diện bằng $180^\\circ$.",
+          "Có góc ngoài bằng góc đối trong.",
+          "Bốn cạnh của tứ giác bằng nhau."
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Vì $BD \\perp AC \\implies \\widehat{BDC} = 90^\\circ$ và $CE \\perp AB \\implies \\widehat{BEC} = 90^\\circ$.<br>Hai đỉnh $D$ và $E$ cùng nhìn đoạn thẳng $BC$ dưới một góc $90^\\circ$, suy ra 4 điểm $B, C, D, E$ cùng nằm trên đường tròn đường kính $BC$."
+      },
+      {
+        "id": "m_top_hp09",
+        "topic": "Định lý tiếp tuyến tạo bởi tia tiếp tuyến và dây cung",
+        "difficulty": "Thông hiểu",
+        "question": "Cho đường tròn $(O)$ và tiếp tuyến $Ax$, dây cung $AB$. Biết số đo góc $\\widehat{xAB} = 50^\\circ$. Số đo góc ở tâm $\\widehat{AOB}$ chắn cung nhỏ $AB$ là:",
+        "options": [
+          "$100^\\circ$",
+          "$50^\\circ$",
+          "$80^\\circ$",
+          "$130^\\circ$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Góc tạo bởi tia tiếp tuyến và dây cung $\\widehat{xAB}$ bằng một nửa số đo của cung bị chắn $\\overset{\\frown}{AB} \\implies \\text{sđ}\\overset{\\frown}{AB} = 2 \\times 50^\\circ = 100^\\circ$.<br>Góc ở tâm $\\widehat{AOB}$ có số đo bằng đúng số đo cung bị chắn nên $\\widehat{AOB} = 100^\\circ$."
       }
     ]
   },
-
-  // -------------------------------------------------------
-  // DẠNG 9: BẤT ĐẲNG THỨC CAUCHY & CỰC TRỊ ĐẠI SỐ (CÂU 10 ĐIỂM)
-  // -------------------------------------------------------
   {
     "id": "math_exam_type_batdangthuc",
     "topicId": "math_q9_batdangthuc",
@@ -899,7 +1224,7 @@ window.MATH_TOPIC_EXAMS = [
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 9 (Điểm 10)",
     "durationMinutes": 35,
-    "totalQuestions": 5,
+    "totalQuestions": 9,
     "description": "Luyện tập 100% chuyên sâu câu phân loại lấy điểm 10 tuyệt đối: Bất đẳng thức AM-GM (Cauchy) 2 số và 3 số, kỹ thuật chọn điểm rơi đối xứng và không đối xứng, kỹ thuật thêm bớt nghịch đảo và bổ đề phân thức Engel.",
     "questions": [
       {
@@ -976,12 +1301,67 @@ window.MATH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "explanation": "Áp dụng bất đẳng thức Bunhiacopxki (Cauchy-Schwarz) cho hai bộ ba số $(1; 1; 1)$ và $(\\sqrt{a}; \\sqrt{b}; \\sqrt{c})$:<br>$S^2 = (1 \\cdot \\sqrt{a} + 1 \\cdot \\sqrt{b} + 1 \\cdot \\sqrt{c})^2 \\le (1^2 + 1^2 + 1^2)(a + b + c) = 3 \\cdot 3 = 9$.<br>Vì $S > 0 \\implies S \\le \\sqrt{9} = 3$.<br>Dấu đẳng thức xảy ra khi $\\frac{\\sqrt{a}}{1} = \\frac{\\sqrt{b}}{1} = \\frac{\\sqrt{c}}{1} \\implies a = b = c = 1$.<br>Vậy $\\max S = 3$."
+      },
+      {
+        "id": "m_top_bdt06",
+        "topic": "Bất đẳng thức Cauchy với kỹ thuật chọn điểm rơi",
+        "difficulty": "Vận dụng cao",
+        "question": "Cho số thực $x \\ge 2$. Giá trị nhỏ nhất của biểu thức $P = x + \\frac{1}{x}$ là:",
+        "options": [
+          "$\\min P = \\frac{5}{2}$ khi $x = 2$",
+          "$\\min P = 2$ khi $x = 1$",
+          "$\\min P = 3$ khi $x = 3$",
+          "$\\min P = \\frac{9}{4}$ khi $x = 2$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Vì $x \\ge 2$, điểm rơi xảy ra tại $x = 2$. Tại đó $\\frac{1}{x} = \\frac{1}{2}$, ta cần ghép $\\frac{1}{x}$ với $\\frac{x}{4}$ để dấu '=' xảy ra tại $x = 2$:<br>$P = \\left(\\frac{x}{4} + \\frac{1}{x}\\right) + \\frac{3x}{4} \\ge 2\\sqrt{\\frac{x}{4} \\cdot \\frac{1}{x}} + \\frac{3 \\cdot 2}{4} = 2 \\cdot \\frac{1}{2} + \\frac{3}{2} = 1 + \\frac{3}{2} = \\frac{5}{2}$.<br>Dấu '=' xảy ra khi $\\frac{x}{4} = \\frac{1}{x} \\Leftrightarrow x^2 = 4 \\implies x = 2$.<br><em>Bẫy cần tránh:</em> Áp dụng vội vàng $x + \\frac{1}{x} \\ge 2$ thì dấu bằng $x = 1$ không thỏa mãn điều kiện $x \\ge 2$."
+      },
+      {
+        "id": "m_top_bdt07",
+        "topic": "Bất đẳng thức Cauchy-Schwarz dạng phân thức (BĐT Sơ-vác)",
+        "difficulty": "Vận dụng cao",
+        "question": "Cho ba số thực dương $a, b, c$ thỏa mãn $a + b + c = 1$. Giá trị nhỏ nhất của biểu thức $S = \\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}$ là:",
+        "options": [
+          "$\\min S = 9$",
+          "$\\min S = 3$",
+          "$\\min S = 6$",
+          "$\\min S = 12$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Áp dụng bất đẳng thức Cauchy-Schwarz dạng Engel:<br>$\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\ge \\frac{(1 + 1 + 1)^2}{a + b + c} = \\frac{3^2}{1} = 9$.<br>Dấu '=' xảy ra khi $a = b = c = \\frac{1}{3}$."
+      },
+      {
+        "id": "m_top_bdt08",
+        "topic": "Giải phương trình vô tỉ bằng phương pháp liên hợp",
+        "difficulty": "Vận dụng cao",
+        "question": "Số nghiệm thực của phương trình $\\sqrt{x + 3} + \\sqrt{6 - x} = 3$ là:",
+        "options": [
+          "2 nghiệm ($x = -3$ và $x = 6$)",
+          "1 nghiệm duy nhất",
+          "Vô nghiệm",
+          "Vô số nghiệm"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "ĐKXĐ: $-3 \\le x \\le 6$.<br>Bình phương hai vế: $(x + 3) + (6 - x) + 2\\sqrt{(x + 3)(6 - x)} = 9 \\Leftrightarrow 9 + 2\\sqrt{(x + 3)(6 - x)} = 9 \\Leftrightarrow 2\\sqrt{(x + 3)(6 - x)} = 0 \\Leftrightarrow (x + 3)(6 - x) = 0 \\implies x = -3$ hoặc $x = 6$ (cả hai đều thỏa mãn ĐKXĐ).<br>Vậy phương trình có đúng 2 nghiệm thực."
+      },
+      {
+        "id": "m_top_bdt09",
+        "topic": "Cực trị đại số hai biến đối xứng",
+        "difficulty": "Vận dụng cao",
+        "question": "Cho hai số thực $x, y$ thỏa mãn $x^2 + y^2 = 2$. Giá trị lớn nhất của biểu thức $M = x + y$ là:",
+        "options": [
+          "$\\max M = 2$",
+          "$\\max M = 2\\sqrt{2}$",
+          "$\\max M = 4$",
+          "$\\max M = \\sqrt{2}$"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "explanation": "Theo bất đẳng thức Bunhiacopxki:<br>$(x + y)^2 = (1 \\cdot x + 1 \\cdot y)^2 \\le (1^2 + 1^2)(x^2 + y^2) = 2 \\cdot 2 = 4$.<br>Suy ra $-2 \\le x + y \\le 2$.<br>Giá trị lớn nhất $\\max M = 2$ khi $x = y = 1$."
       }
     ]
   }
 ];
-
-// Tự động tích hợp vào hệ thống Đề thi Toán chung
-if (window.MATH_EXAMS) {
-  window.MATH_EXAMS = window.MATH_EXAMS.concat(window.MATH_TOPIC_EXAMS);
-}

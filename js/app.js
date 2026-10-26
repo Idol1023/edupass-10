@@ -17,6 +17,10 @@ class EduPassApp {
     this.renderRecentHistory();
     this.initLucideIcons();
 
+    if (window.adminController) {
+      window.adminController.init();
+    }
+
     // Default to dashboard
     this.switchTab('dashboard');
   }
@@ -195,6 +199,16 @@ class EduPassApp {
       });
     }
 
+    // User / Role switcher badge
+    const userBadgeBtn = document.getElementById('headerUserBadgeBtn');
+    if (userBadgeBtn) {
+      userBadgeBtn.addEventListener('click', () => {
+        if (window.adminController) {
+          window.adminController.openUserSwitcher();
+        }
+      });
+    }
+
     // Reset data modal controls
     const resetBtn = document.getElementById('btnResetData');
     const footerResetBtn = document.getElementById('btnFooterResetData');
@@ -281,6 +295,10 @@ class EduPassApp {
       if (window.storageManager.getExamHistory().length === 0) {
         window.examEngine.resetResults();
       }
+    } else if (tabId === 'admin-portal' && window.adminController) {
+      window.adminController.renderAdminPortal();
+    } else if (tabId === 'student-portal' && window.adminController) {
+      window.adminController.renderStudentPortal();
     }
 
     this.initLucideIcons();

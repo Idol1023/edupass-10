@@ -1,6 +1,7 @@
 // =========================================================
 // EDUPASS 10 - KHO ĐỀ THI NGỮ VĂN VÀO 10 (CHUẨN GDPT 2018 MỚI NHẤT)
 // 100% Ngữ liệu ngoài SGK, bám sát đời sống thực tiễn, tính nhân văn & thực tế cao
+// Ngữ liệu hiển thị trực tiếp trên tất cả các câu hỏi cùng phần
 // =========================================================
 
 window.LITERATURE_EXAMS = [
@@ -20,7 +21,7 @@ window.LITERATURE_EXAMS = [
         "id": "l_mock25_q01",
         "topic": "Phần 1 - Đọc hiểu văn bản văn học ngoài SGK: Nhận biết thể thơ",
         "difficulty": "Nhận biết",
-        "question": "Đọc đoạn thơ sau trong bài thơ 'Con nằm' của nhà thơ Tế Hanh:\n\n*\"Một chiếc giường nhỏ hẹp*\n*Cha mẹ nằm hai bên*\n*Khoảng giữa nôi êm*\n*Con lật con trườn con cười con réo...*\n*Con nằm giữa cha và mẹ*\n*Cuộc đời nằm giữa yêu thương...\"*\n\nĐoạn trích trên được viết theo thể thơ nào?",
+        "question": "Đoạn trích bài thơ trên được viết theo thể thơ nào?",
         "options": [
           "Thể thơ tự do (kết hợp các dòng thơ ngắn giàu nhịp điệu cảm xúc)",
           "Thể thơ lục bát truyền thống",
@@ -29,7 +30,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Đoạn trích có số chữ trong các dòng không cố định (dòng 5 chữ, dòng 8 chữ, dòng 6 chữ), ngắt nhịp linh hoạt theo dòng cảm xúc tự nhiên, thuộc thể thơ tự do."
+        "explanation": "Đoạn trích có số chữ trong các dòng không cố định (dòng 5 chữ, dòng 8 chữ, dòng 6 chữ), ngắt nhịp linh hoạt theo dòng cảm xúc tự nhiên, thuộc thể thơ tự do.",
+        "passageTitle": "Bài thơ 'Con nằm' (Tế Hanh)",
+        "passage": "Một chiếc giường nhỏ hẹp\nCha mẹ nằm hai bên\nKhoảng giữa nôi êm\nCon lật con trườn con cười con réo...\nCon nằm giữa cha và mẹ\nCuộc đời nằm giữa yêu thương..."
       },
       {
         "id": "l_mock25_q02",
@@ -44,7 +47,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Tác giả sử dụng 4 động từ liên tiếp 'lật, trườn, cười, réo' kết hợp điệp từ 'con' để khắc họa sinh động sự hiếu động, hồn nhiên và sức sống thơ ngây của em bé trong nôi."
+        "explanation": "Tác giả sử dụng 4 động từ liên tiếp 'lật, trườn, cười, réo' kết hợp điệp từ 'con' để khắc họa sinh động sự hiếu động, hồn nhiên và sức sống thơ ngây của em bé trong nôi.",
+        "passageTitle": "Bài thơ 'Con nằm' (Tế Hanh)",
+        "passage": "Một chiếc giường nhỏ hẹp\nCha mẹ nằm hai bên\nKhoảng giữa nôi êm\nCon lật con trườn con cười con réo...\nCon nằm giữa cha và mẹ\nCuộc đời nằm giữa yêu thương..."
       },
       {
         "id": "l_mock25_q03",
@@ -59,7 +64,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Tác giả sử dụng phép điệp cấu trúc '... nằm giữa ...' tạo sự đối xứng tuyệt đẹp: hình ảnh thực tế ấm áp ('con nằm giữa cha và mẹ') được nâng lên thành tầng nghĩa khái quát triết lý nhân văn sâu sắc ('cuộc đời nằm giữa yêu thương')."
+        "explanation": "Tác giả sử dụng phép điệp cấu trúc '... nằm giữa ...' tạo sự đối xứng tuyệt đẹp: hình ảnh thực tế ấm áp ('con nằm giữa cha và mẹ') được nâng lên thành tầng nghĩa khái quát triết lý nhân văn sâu sắc ('cuộc đời nằm giữa yêu thương').",
+        "passageTitle": "Bài thơ 'Con nằm' (Tế Hanh)",
+        "passage": "Một chiếc giường nhỏ hẹp\nCha mẹ nằm hai bên\nKhoảng giữa nôi êm\nCon lật con trườn con cười con réo...\nCon nằm giữa cha và mẹ\nCuộc đời nằm giữa yêu thương..."
       },
       {
         "id": "l_mock25_q04",
@@ -74,7 +81,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Thông điệp cốt lõi của tác phẩm là tình cảm gia đình: dù 'chiếc giường nhỏ hẹp' nhưng vòng tay cha mẹ chính là 'nôi êm', nơi bao bọc trọn vẹn cuộc đời con người trong tình yêu thương cao cả."
+        "explanation": "Thông điệp cốt lõi của tác phẩm là tình cảm gia đình: dù 'chiếc giường nhỏ hẹp' nhưng vòng tay cha mẹ chính là 'nôi êm', nơi bao bọc trọn vẹn cuộc đời con người trong tình yêu thương cao cả.",
+        "passageTitle": "Bài thơ 'Con nằm' (Tế Hanh)",
+        "passage": "Một chiếc giường nhỏ hẹp\nCha mẹ nằm hai bên\nKhoảng giữa nôi êm\nCon lật con trườn con cười con réo...\nCon nằm giữa cha và mẹ\nCuộc đời nằm giữa yêu thương..."
       },
       {
         "id": "l_mock25_q05",
@@ -89,13 +98,15 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Nét đặc sắc nghệ thuật của thơ Tế Hanh trong bài 'Con nằm' là sự giản dị, chân chất, không cầu kỳ hoa mỹ nhưng chạm đến đáy sâu cảm xúc nhờ hình ảnh chân thực và chiều sâu triết lý tình phụ mẫu."
+        "explanation": "Nét đặc sắc nghệ thuật của thơ Tế Hanh trong bài 'Con nằm' là sự giản dị, chân chất, không cầu kỳ hoa mỹ nhưng chạm đến đáy sâu cảm xúc nhờ hình ảnh chân thực và chiều sâu triết lý tình phụ mẫu.",
+        "passageTitle": "Bài thơ 'Con nằm' (Tế Hanh)",
+        "passage": "Một chiếc giường nhỏ hẹp\nCha mẹ nằm hai bên\nKhoảng giữa nôi êm\nCon lật con trườn con cười con réo...\nCon nằm giữa cha và mẹ\nCuộc đời nằm giữa yêu thương..."
       },
       {
         "id": "l_mock25_q06",
         "topic": "Phần 2 - Đọc hiểu văn bản thông tin/nghị luận ngoài SGK: Luận đề chính",
         "difficulty": "Nhận biết",
-        "question": "Đọc đoạn trích văn bản nghị luận xã hội sau:\n\n*\"Trưởng thành không đơn thuần là sự gia tăng về số tuổi hay vóc dáng thể chất. Giữa thời đại số ngập tràn những ảo ảnh hào nhoáng và thông tin đa chiều, một trong những biểu hiện sâu sắc của sự chín chắn là năng lực 'biết đọc' – biết nhận diện những giá trị tốt đẹp đang bị che lấp: nhận ra sự thật phía sau những lời tung hô, thấu hiểu tình yêu thương thầm lặng của người thân phía sau những nhắc nhở nghiêm khắc, và bảo vệ điều ngay lẽ phải giữa sức ép của số đông. Biết nhận ra và trân trọng những điều giản dị vô giá ấy chính là lúc một người trẻ thực sự bước sang ngưỡng cửa trưởng thành.\"*\n\nLuận đề trọng tâm của đoạn trích trên là gì?",
+        "question": "Phương thức biểu đạt chính của đoạn trích trên là gì?",
         "options": [
           "Bản chất của sự trưởng thành đích thực: Năng lực nhận diện và trân trọng những giá trị tốt đẹp đang bị che lấp",
           "Cách thức kiếm tìm sự nổi tiếng nhanh chóng trên không gian mạng xã hội",
@@ -104,7 +115,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Đoạn trích tập trung làm rõ luận đề: sự trưởng thành không đo bằng tuổi tác mà đo bằng năng lực nhận diện các giá trị đích thực (tình yêu thương, sự thật, lẽ phải) đang bị che khuất trong đời sống."
+        "explanation": "Đoạn trích tập trung làm rõ luận đề: sự trưởng thành không đo bằng tuổi tác mà đo bằng năng lực nhận diện các giá trị đích thực (tình yêu thương, sự thật, lẽ phải) đang bị che khuất trong đời sống.",
+        "passageTitle": "Văn bản nghị luận 'Trưởng thành và Nhận diện giá trị tốt đẹp'",
+        "passage": "Trưởng thành không đơn thuần là sự gia tăng về số tuổi hay vóc dáng sinh học, mà là hành trình tâm hồn nhận diện và trân quý những giá trị tốt đẹp bị che khuất trong đời sống thường nhật.\n\nKhi còn thơ bé, ta thường đòi hỏi và đón nhận sự chăm sóc của cha mẹ như một lẽ đương nhiên. Ta dễ bị choáng ngợp bởi những ánh hào quang lộng lẫy bên ngoài mà vô tình lãng quên những giọt mồ hôi lặng lẽ rơi trên lưng áo mẹ, những vết chai sần trên bàn tay cha. Trưởng thành là khoảnh khắc ta biết 'đọc' được nỗi nhọc nhằn ẩn sau nụ cười của đấng sinh thành, biết lắng nghe sự im lặng bao dung sau mỗi lần ta vấp ngã. Nhận ra tình yêu thương thầm lặng của người thân phía sau những nhắc nhở nghiêm khắc chính là dấu mốc thiêng liêng nhất đánh dấu sự chín chắn của một con người."
       },
       {
         "id": "l_mock25_q07",
@@ -119,7 +132,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "'Biết đọc' ở đây được dùng theo nghĩa chuyển ẩn dụ: không phải đọc mặt chữ mà là 'đọc cuộc đời' – năng lực thấu cảm, nhận ra sự thật và tình yêu thương chân thành sau vẻ ngoài giản dị hay nghiêm khắc."
+        "explanation": "'Biết đọc' ở đây được dùng theo nghĩa chuyển ẩn dụ: không phải đọc mặt chữ mà là 'đọc cuộc đời' – năng lực thấu cảm, nhận ra sự thật và tình yêu thương chân thành sau vẻ ngoài giản dị hay nghiêm khắc.",
+        "passageTitle": "Văn bản nghị luận 'Trưởng thành và Nhận diện giá trị tốt đẹp'",
+        "passage": "Trưởng thành không đơn thuần là sự gia tăng về số tuổi hay vóc dáng sinh học, mà là hành trình tâm hồn nhận diện và trân quý những giá trị tốt đẹp bị che khuất trong đời sống thường nhật.\n\nKhi còn thơ bé, ta thường đòi hỏi và đón nhận sự chăm sóc của cha mẹ như một lẽ đương nhiên. Ta dễ bị choáng ngợp bởi những ánh hào quang lộng lẫy bên ngoài mà vô tình lãng quên những giọt mồ hôi lặng lẽ rơi trên lưng áo mẹ, những vết chai sần trên bàn tay cha. Trưởng thành là khoảnh khắc ta biết 'đọc' được nỗi nhọc nhằn ẩn sau nụ cười của đấng sinh thành, biết lắng nghe sự im lặng bao dung sau mỗi lần ta vấp ngã. Nhận ra tình yêu thương thầm lặng của người thân phía sau những nhắc nhở nghiêm khắc chính là dấu mốc thiêng liêng nhất đánh dấu sự chín chắn của một con người."
       },
       {
         "id": "l_mock25_q08",
@@ -134,7 +149,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "'Hào nhoáng' chỉ sự lộng lẫy, bóng bẩy bên ngoài nhằm gây chú ý nhưng thiếu giá trị thực chất bên trong, thường dùng để đối lập với cái chân thật, bền vững."
+        "explanation": "'Hào nhoáng' chỉ sự lộng lẫy, bóng bẩy bên ngoài nhằm gây chú ý nhưng thiếu giá trị thực chất bên trong, thường dùng để đối lập với cái chân thật, bền vững.",
+        "passageTitle": "Văn bản nghị luận 'Trưởng thành và Nhận diện giá trị tốt đẹp'",
+        "passage": "Trưởng thành không đơn thuần là sự gia tăng về số tuổi hay vóc dáng sinh học, mà là hành trình tâm hồn nhận diện và trân quý những giá trị tốt đẹp bị che khuất trong đời sống thường nhật.\n\nKhi còn thơ bé, ta thường đòi hỏi và đón nhận sự chăm sóc của cha mẹ như một lẽ đương nhiên. Ta dễ bị choáng ngợp bởi những ánh hào quang lộng lẫy bên ngoài mà vô tình lãng quên những giọt mồ hôi lặng lẽ rơi trên lưng áo mẹ, những vết chai sần trên bàn tay cha. Trưởng thành là khoảnh khắc ta biết 'đọc' được nỗi nhọc nhằn ẩn sau nụ cười của đấng sinh thành, biết lắng nghe sự im lặng bao dung sau mỗi lần ta vấp ngã. Nhận ra tình yêu thương thầm lặng của người thân phía sau những nhắc nhở nghiêm khắc chính là dấu mốc thiêng liêng nhất đánh dấu sự chín chắn của một con người."
       },
       {
         "id": "l_mock25_q09",
@@ -149,7 +166,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Cả hai câu đều lặp lại từ khóa trọng tâm 'trưởng thành' để duy trì chủ đề mạch lạc, đây là phép lặp từ ngữ (lexical repetition)."
+        "explanation": "Cả hai câu đều lặp lại từ khóa trọng tâm 'trưởng thành' để duy trì chủ đề mạch lạc, đây là phép lặp từ ngữ (lexical repetition).",
+        "passageTitle": "Văn bản nghị luận 'Trưởng thành và Nhận diện giá trị tốt đẹp'",
+        "passage": "Trưởng thành không đơn thuần là sự gia tăng về số tuổi hay vóc dáng sinh học, mà là hành trình tâm hồn nhận diện và trân quý những giá trị tốt đẹp bị che khuất trong đời sống thường nhật.\n\nKhi còn thơ bé, ta thường đòi hỏi và đón nhận sự chăm sóc của cha mẹ như một lẽ đương nhiên. Ta dễ bị choáng ngợp bởi những ánh hào quang lộng lẫy bên ngoài mà vô tình lãng quên những giọt mồ hôi lặng lẽ rơi trên lưng áo mẹ, những vết chai sần trên bàn tay cha. Trưởng thành là khoảnh khắc ta biết 'đọc' được nỗi nhọc nhằn ẩn sau nụ cười của đấng sinh thành, biết lắng nghe sự im lặng bao dung sau mỗi lần ta vấp ngã. Nhận ra tình yêu thương thầm lặng của người thân phía sau những nhắc nhở nghiêm khắc chính là dấu mốc thiêng liêng nhất đánh dấu sự chín chắn của một con người."
       },
       {
         "id": "l_mock25_q10",
@@ -164,7 +183,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Người trẻ thường dễ phản ứng trước lời nhắc nhở vì cái tôi non nớt. Khi biết lắng lại để cảm nhận sự lo lắng, tình thương phía sau vẻ nghiêm khắc, đó là minh chứng rõ nét cho một tâm hồn đã biết thấu hiểu và trưởng thành."
+        "explanation": "Người trẻ thường dễ phản ứng trước lời nhắc nhở vì cái tôi non nớt. Khi biết lắng lại để cảm nhận sự lo lắng, tình thương phía sau vẻ nghiêm khắc, đó là minh chứng rõ nét cho một tâm hồn đã biết thấu hiểu và trưởng thành.",
+        "passageTitle": "Văn bản nghị luận 'Trưởng thành và Nhận diện giá trị tốt đẹp'",
+        "passage": "Trưởng thành không đơn thuần là sự gia tăng về số tuổi hay vóc dáng sinh học, mà là hành trình tâm hồn nhận diện và trân quý những giá trị tốt đẹp bị che khuất trong đời sống thường nhật.\n\nKhi còn thơ bé, ta thường đòi hỏi và đón nhận sự chăm sóc của cha mẹ như một lẽ đương nhiên. Ta dễ bị choáng ngợp bởi những ánh hào quang lộng lẫy bên ngoài mà vô tình lãng quên những giọt mồ hôi lặng lẽ rơi trên lưng áo mẹ, những vết chai sần trên bàn tay cha. Trưởng thành là khoảnh khắc ta biết 'đọc' được nỗi nhọc nhằn ẩn sau nụ cười của đấng sinh thành, biết lắng nghe sự im lặng bao dung sau mỗi lần ta vấp ngã. Nhận ra tình yêu thương thầm lặng của người thân phía sau những nhắc nhở nghiêm khắc chính là dấu mốc thiêng liêng nhất đánh dấu sự chín chắn của một con người."
       },
       {
         "id": "l_mock25_q11",
@@ -259,7 +280,7 @@ window.LITERATURE_EXAMS = [
         "id": "lhcm25_q01",
         "topic": "Phần 1: Đọc hiểu văn bản ngoài SGK - Phương thức biểu đạt",
         "difficulty": "Nhận biết",
-        "question": "Đọc ngữ liệu sau:<br><i>'Thành phố thức dậy trong ánh bình minh rạng rỡ, nơi những chuyến tàu Metro đầu tiên lăn bánh mang theo nụ cười rạng rỡ của bao người trẻ đến trường, đến giảng đường, đến công sở. Giữa nhịp sống hối hả ấy, tuổi trẻ thành phố không chỉ sống cho riêng mình. Họ mang trong tim khát vọng cống hiến, biến những ý tưởng sáng tạo thành hiện thực, giữ cho dòng kênh xanh hơn, góc phố sạch hơn và tình người ấm áp hơn.'</i><br>(Trích <i>Nhịp thở Sài Gòn - Khát vọng vươn mình</i> - Báo Tuổi Trẻ TP.HCM)<br>Phương thức biểu đạt chính của đoạn văn bản trên là:",
+        "question": "Phương thức biểu đạt chính của đoạn ngữ liệu trên là gì?",
         "options": [
           "Biểu cảm kết hợp thuyết minh",
           "Nghị luận",
@@ -268,7 +289,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Đoạn văn bộc lộ trực tiếp tình cảm tự hào, xúc động và trân trọng đối với sức sống mới của TP.HCM và thế hệ trẻ, kết hợp giới thiệu những nét đổi mới của thành phố, do đó phương thức biểu đạt chính là **Biểu cảm kết hợp thuyết minh**.",
-        "trapTip": "Đề thi TP.HCM Phần 1 kết hợp văn bản văn học và văn bản thông tin để kiểm tra khả năng cảm thụ và nắm bắt thông điệp."
+        "trapTip": "Đề thi TP.HCM Phần 1 kết hợp văn bản văn học và văn bản thông tin để kiểm tra khả năng cảm thụ và nắm bắt thông điệp.",
+        "passageTitle": "Văn bản 'Thành phố thức dậy trong ánh bình minh'",
+        "passage": "Thành phố thức dậy trong ánh bình minh rạng rỡ, nơi những chuyến tàu Metro bắt đầu lăn bánh kết nối những nhịp sống hiện đại, năng động. Đi qua những thăng trầm lịch sử, thành phố mang tên Bác không chỉ là trung tâm kinh tế đầu tàu của cả nước mà còn là mảnh đất chở che, nuôi dưỡng biết bao khát vọng tuổi trẻ.\n\nĐiều làm nên linh hồn bền vững của vùng đất phương Nam không chỉ nằm ở những tòa cao ốc chọc trời hay những cây cầu vượt hiện đại, mà sâu thẳm chính là nét đẹp 'thành phố nghĩa tình' - nơi con người luôn sẵn lòng dang rộng vòng tay sẻ chia bát cơm manh áo, ấm áp nụ cười bao dung với đồng bào muôn phương."
       },
       {
         "id": "lhcm25_q02",
@@ -283,7 +306,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Tuyến Metro số 1 Bến Thành - Suối Tiên là công trình biểu tượng của kỷ nguyên hiện đại hóa TP.HCM. Hình ảnh chuyến tàu mang theo nụ cười người trẻ tượng trưng cho niềm hy vọng và sức bật vươn mình của thế hệ tương lai.",
-        "trapTip": "Chi tiết đời thực trong đề thi TP.HCM thường được nâng lên thành tầng nghĩa biểu tượng xã hội sâu sắc."
+        "trapTip": "Chi tiết đời thực trong đề thi TP.HCM thường được nâng lên thành tầng nghĩa biểu tượng xã hội sâu sắc.",
+        "passageTitle": "Văn bản 'Thành phố thức dậy trong ánh bình minh'",
+        "passage": "Thành phố thức dậy trong ánh bình minh rạng rỡ, nơi những chuyến tàu Metro bắt đầu lăn bánh kết nối những nhịp sống hiện đại, năng động. Đi qua những thăng trầm lịch sử, thành phố mang tên Bác không chỉ là trung tâm kinh tế đầu tàu của cả nước mà còn là mảnh đất chở che, nuôi dưỡng biết bao khát vọng tuổi trẻ.\n\nĐiều làm nên linh hồn bền vững của vùng đất phương Nam không chỉ nằm ở những tòa cao ốc chọc trời hay những cây cầu vượt hiện đại, mà sâu thẳm chính là nét đẹp 'thành phố nghĩa tình' - nơi con người luôn sẵn lòng dang rộng vòng tay sẻ chia bát cơm manh áo, ấm áp nụ cười bao dung với đồng bào muôn phương."
       },
       {
         "id": "lhcm25_q03",
@@ -298,7 +323,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Cụm từ '... hơn' được điệp lại liên tiếp ('dòng kênh xanh hơn, góc phố sạch hơn, tình người ấm áp hơn') kết hợp phép liệt kê làm nổi bật tinh thần hành động thiết thực và sự thay đổi tích cực từng ngày của thành phố.",
-        "trapTip": "Điệp cấu trúc cú pháp tạo nhịp điệu dồn dập, thể hiện quyết tâm và niềm tin mãnh liệt."
+        "trapTip": "Điệp cấu trúc cú pháp tạo nhịp điệu dồn dập, thể hiện quyết tâm và niềm tin mãnh liệt.",
+        "passageTitle": "Văn bản 'Thành phố thức dậy trong ánh bình minh'",
+        "passage": "Thành phố thức dậy trong ánh bình minh rạng rỡ, nơi những chuyến tàu Metro bắt đầu lăn bánh kết nối những nhịp sống hiện đại, năng động. Đi qua những thăng trầm lịch sử, thành phố mang tên Bác không chỉ là trung tâm kinh tế đầu tàu của cả nước mà còn là mảnh đất chở che, nuôi dưỡng biết bao khát vọng tuổi trẻ.\n\nĐiều làm nên linh hồn bền vững của vùng đất phương Nam không chỉ nằm ở những tòa cao ốc chọc trời hay những cây cầu vượt hiện đại, mà sâu thẳm chính là nét đẹp 'thành phố nghĩa tình' - nơi con người luôn sẵn lòng dang rộng vòng tay sẻ chia bát cơm manh áo, ấm áp nụ cười bao dung với đồng bào muôn phương."
       },
       {
         "id": "lhcm25_q04",
@@ -313,7 +340,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Cụm từ nằm giữa hai dấu gạch nối '- đô thị đặc biệt năng động và nghĩa tình -' bổ sung đặc điểm tính chất cho chủ ngữ 'Thành phố Hồ Chí Minh', đây là **thành phần phụ chú**.",
-        "trapTip": "Thành phần phụ chú thường nằm giữa hai dấu gạch nối, hai dấu phẩy hoặc trong dấu ngoặc đơn."
+        "trapTip": "Thành phần phụ chú thường nằm giữa hai dấu gạch nối, hai dấu phẩy hoặc trong dấu ngoặc đơn.",
+        "passageTitle": "Văn bản 'Thành phố thức dậy trong ánh bình minh'",
+        "passage": "Thành phố thức dậy trong ánh bình minh rạng rỡ, nơi những chuyến tàu Metro bắt đầu lăn bánh kết nối những nhịp sống hiện đại, năng động. Đi qua những thăng trầm lịch sử, thành phố mang tên Bác không chỉ là trung tâm kinh tế đầu tàu của cả nước mà còn là mảnh đất chở che, nuôi dưỡng biết bao khát vọng tuổi trẻ.\n\nĐiều làm nên linh hồn bền vững của vùng đất phương Nam không chỉ nằm ở những tòa cao ốc chọc trời hay những cây cầu vượt hiện đại, mà sâu thẳm chính là nét đẹp 'thành phố nghĩa tình' - nơi con người luôn sẵn lòng dang rộng vòng tay sẻ chia bát cơm manh áo, ấm áp nụ cười bao dung với đồng bào muôn phương."
       },
       {
         "id": "lhcm25_q05",
@@ -328,7 +357,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Cụm từ 'Ngọn lửa ấy' dùng để thay thế cho 'ngọn lửa nhiệt huyết' ở câu trước nhằm liên kết mạch ý và tránh lặp từ thô thiển, đây là **phép thế**.",
-        "trapTip": "Sử dụng từ ngữ chỉ định (ấy, đó, này...) để thay thế cho cụm từ ở câu đứng trước là biểu hiện của Phép Thế."
+        "trapTip": "Sử dụng từ ngữ chỉ định (ấy, đó, này...) để thay thế cho cụm từ ở câu đứng trước là biểu hiện của Phép Thế.",
+        "passageTitle": "Văn bản 'Thành phố thức dậy trong ánh bình minh'",
+        "passage": "Thành phố thức dậy trong ánh bình minh rạng rỡ, nơi những chuyến tàu Metro bắt đầu lăn bánh kết nối những nhịp sống hiện đại, năng động. Đi qua những thăng trầm lịch sử, thành phố mang tên Bác không chỉ là trung tâm kinh tế đầu tàu của cả nước mà còn là mảnh đất chở che, nuôi dưỡng biết bao khát vọng tuổi trẻ.\n\nĐiều làm nên linh hồn bền vững của vùng đất phương Nam không chỉ nằm ở những tòa cao ốc chọc trời hay những cây cầu vượt hiện đại, mà sâu thẳm chính là nét đẹp 'thành phố nghĩa tình' - nơi con người luôn sẵn lòng dang rộng vòng tay sẻ chia bát cơm manh áo, ấm áp nụ cười bao dung với đồng bào muôn phương."
       },
       {
         "id": "lhcm25_q06",
@@ -343,7 +374,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "'Nghĩa tình' là bản sắc văn hóa cốt lõi của người Sài Gòn - TP.HCM: hào sảng, bao dung, tương thân tương ái, có nhiều mô hình thiện nguyện nổi tiếng như 'bếp ăn 0 đồng', 'bánh mì từ thiện', 'ATM gạo'.",
-        "trapTip": "Đề thi TP.HCM luôn gắn liền với việc bồi đắp tình yêu và lòng tự hào đối với thành phố quê hương."
+        "trapTip": "Đề thi TP.HCM luôn gắn liền với việc bồi đắp tình yêu và lòng tự hào đối với thành phố quê hương.",
+        "passageTitle": "Văn bản 'Thành phố thức dậy trong ánh bình minh'",
+        "passage": "Thành phố thức dậy trong ánh bình minh rạng rỡ, nơi những chuyến tàu Metro bắt đầu lăn bánh kết nối những nhịp sống hiện đại, năng động. Đi qua những thăng trầm lịch sử, thành phố mang tên Bác không chỉ là trung tâm kinh tế đầu tàu của cả nước mà còn là mảnh đất chở che, nuôi dưỡng biết bao khát vọng tuổi trẻ.\n\nĐiều làm nên linh hồn bền vững của vùng đất phương Nam không chỉ nằm ở những tòa cao ốc chọc trời hay những cây cầu vượt hiện đại, mà sâu thẳm chính là nét đẹp 'thành phố nghĩa tình' - nơi con người luôn sẵn lòng dang rộng vòng tay sẻ chia bát cơm manh áo, ấm áp nụ cười bao dung với đồng bào muôn phương."
       },
       {
         "id": "lhcm25_q07",
@@ -358,7 +391,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Sự kết hợp giữa chất trữ tình văn học và tính chân thực thông tin tạo nên hiệu ứng tiếp nhận đa chiều: Người đọc vừa rung động cảm xúc, vừa nhận thức rõ rệt các vấn đề thực tiễn đang diễn ra.",
-        "trapTip": "Đây là định hướng mới nổi bật trong cấu trúc Phần 1 do Sở GD&ĐT TP.HCM công bố cho năm học 2025 - 2026."
+        "trapTip": "Đây là định hướng mới nổi bật trong cấu trúc Phần 1 do Sở GD&ĐT TP.HCM công bố cho năm học 2025 - 2026.",
+        "passageTitle": "Văn bản 'Thành phố thức dậy trong ánh bình minh'",
+        "passage": "Thành phố thức dậy trong ánh bình minh rạng rỡ, nơi những chuyến tàu Metro bắt đầu lăn bánh kết nối những nhịp sống hiện đại, năng động. Đi qua những thăng trầm lịch sử, thành phố mang tên Bác không chỉ là trung tâm kinh tế đầu tàu của cả nước mà còn là mảnh đất chở che, nuôi dưỡng biết bao khát vọng tuổi trẻ.\n\nĐiều làm nên linh hồn bền vững của vùng đất phương Nam không chỉ nằm ở những tòa cao ốc chọc trời hay những cây cầu vượt hiện đại, mà sâu thẳm chính là nét đẹp 'thành phố nghĩa tình' - nơi con người luôn sẵn lòng dang rộng vòng tay sẻ chia bát cơm manh áo, ấm áp nụ cười bao dung với đồng bào muôn phương."
       },
       {
         "id": "lhcm25_q08",
@@ -373,13 +408,15 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Viết đoạn văn ghi lại cảm nghĩ yêu cầu: Về hình thức không ngắt xuống dòng (khoảng 2/3 trang giấy thi); về nội dung phải bám sát từ ngữ nghệ thuật, nêu cảm xúc chân thành và đúc kết thông điệp tư tưởng.",
-        "trapTip": "Quy chuẩn đoạn văn 200 chữ: Bắt đầu viết hoa lùi đầu dòng và chấm hết đoạn, TUYỆT ĐỐI KHÔNG TÁCH XUỐNG DÒNG!"
+        "trapTip": "Quy chuẩn đoạn văn 200 chữ: Bắt đầu viết hoa lùi đầu dòng và chấm hết đoạn, TUYỆT ĐỐI KHÔNG TÁCH XUỐNG DÒNG!",
+        "passageTitle": "Văn bản 'Thành phố thức dậy trong ánh bình minh'",
+        "passage": "Thành phố thức dậy trong ánh bình minh rạng rỡ, nơi những chuyến tàu Metro bắt đầu lăn bánh kết nối những nhịp sống hiện đại, năng động. Đi qua những thăng trầm lịch sử, thành phố mang tên Bác không chỉ là trung tâm kinh tế đầu tàu của cả nước mà còn là mảnh đất chở che, nuôi dưỡng biết bao khát vọng tuổi trẻ.\n\nĐiều làm nên linh hồn bền vững của vùng đất phương Nam không chỉ nằm ở những tòa cao ốc chọc trời hay những cây cầu vượt hiện đại, mà sâu thẳm chính là nét đẹp 'thành phố nghĩa tình' - nơi con người luôn sẵn lòng dang rộng vòng tay sẻ chia bát cơm manh áo, ấm áp nụ cười bao dung với đồng bào muôn phương."
       },
       {
         "id": "lhcm25_q09",
         "topic": "Phần 2: Đọc hiểu văn bản nghị luận - Xác định luận điểm chính",
         "difficulty": "Thông hiểu",
-        "question": "Đọc trích đoạn Phần 2:<br><i>'Thế hệ Gen Z tại TP.HCM đang đứng trước những vận hội to lớn chưa từng có nhưng cũng đối diện với không ít thách thức. Để thành phố trở thành trung tâm kinh tế tri thức và đô thị xanh thông minh của khu vực, không thể thiếu vai trò tiên phong của người trẻ. Tiên phong không phải là làm những điều viển vông, mà là dám dấn thân học tập công nghệ mới, sống có trách nhiệm với môi trường và giữ gìn ngọn lửa nghĩa tình của thành phố.'</i><br>Luận điểm chính của đoạn trích trên là:",
+        "question": "Luận điểm trọng tâm mà tác giả muốn chuyển tải trong đoạn trích trên là gì?",
         "options": [
           "Tuổi trẻ TP.HCM cần phát huy vai trò tiên phong, chủ động trau dồi tri thức công nghệ và sống trách nhiệm để xây dựng thành phố văn minh, hiện đại",
           "Thế hệ Gen Z chỉ nên quan tâm đến việc giải trí trên các nền tảng mạng xã hội",
@@ -388,7 +425,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Đoạn trích khẳng định sứ mệnh lịch sử và trách nhiệm tiên phong của thế hệ trẻ TP.HCM trong giai đoạn phát triển mới bằng tri thức công nghệ và lối sống nhân văn.",
-        "trapTip": "Luận điểm chính là tư tưởng xuyên suốt, thường được đúc kết rõ ràng trong câu chủ đề của đoạn."
+        "trapTip": "Luận điểm chính là tư tưởng xuyên suốt, thường được đúc kết rõ ràng trong câu chủ đề của đoạn.",
+        "passageTitle": "Văn bản 'Gen Z và Khát vọng cất cánh số'",
+        "passage": "Thế hệ Gen Z tại TP.HCM đang đứng trước những vận hội to lớn chưa từng có của kỷ nguyên số và trí tuệ nhân tạo. Được tiếp cận công nghệ từ sớm, các bạn trẻ sở hữu tư duy mở, khả năng sáng tạo không giới hạn và tinh thần khởi nghiệp mạnh mẽ.\n\nTuy nhiên, trước cơn lốc thông tin và những thuật toán thao túng tâm lý, người trẻ cũng đối diện với nguy cơ hội chứng FOMO (sợ bỏ lỡ), căn bệnh so sánh và áp lực vô hình từ mạng xã hội. Để thực sự 'cất cánh', mỗi học sinh cần trang bị tư duy phản biện sắc sảo, kỹ năng tự học suốt đời và quan trọng hơn cả là giữ vững nhân cách, lòng trắc ẩn để không bao giờ bị biến thành nô lệ của công nghệ."
       },
       {
         "id": "lhcm25_q10",
@@ -403,7 +442,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Nhóm tình nguyện viên trẻ 'Sài Gòn Xanh' với những hành động dũng cảm dọn rác kênh mương, hay các dự án khởi nghiệp xanh của sinh viên TP.HCM là dẫn chứng đời thực sống động, giàu sức thuyết phục.",
-        "trapTip": "Dẫn chứng trong bài văn nghị luận xã hội TP.HCM cần 'mang hơi thở thành phố' - người thật việc thật, giàu tính giáo dục."
+        "trapTip": "Dẫn chứng trong bài văn nghị luận xã hội TP.HCM cần 'mang hơi thở thành phố' - người thật việc thật, giàu tính giáo dục.",
+        "passageTitle": "Văn bản 'Gen Z và Khát vọng cất cánh số'",
+        "passage": "Thế hệ Gen Z tại TP.HCM đang đứng trước những vận hội to lớn chưa từng có của kỷ nguyên số và trí tuệ nhân tạo. Được tiếp cận công nghệ từ sớm, các bạn trẻ sở hữu tư duy mở, khả năng sáng tạo không giới hạn và tinh thần khởi nghiệp mạnh mẽ.\n\nTuy nhiên, trước cơn lốc thông tin và những thuật toán thao túng tâm lý, người trẻ cũng đối diện với nguy cơ hội chứng FOMO (sợ bỏ lỡ), căn bệnh so sánh và áp lực vô hình từ mạng xã hội. Để thực sự 'cất cánh', mỗi học sinh cần trang bị tư duy phản biện sắc sảo, kỹ năng tự học suốt đời và quan trọng hơn cả là giữ vững nhân cách, lòng trắc ẩn để không bao giờ bị biến thành nô lệ của công nghệ."
       },
       {
         "id": "lhcm25_q11",
@@ -418,7 +459,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Câu hỏi tu từ mượn lời bài hát 'Một đời người, một rừng cây' (Trần Long Ẩn) mang hàm ý thức tỉnh lương tâm người trẻ: Đừng chỉ tìm kiếm sự an nhàn ích kỷ cho bản thân, mà phải có trách nhiệm gánh vác phần gian khó vì cộng đồng.",
-        "trapTip": "Hàm ý biểu đạt thông qua câu hỏi tu từ mang tính triết lý nhân sinh sâu sắc."
+        "trapTip": "Hàm ý biểu đạt thông qua câu hỏi tu từ mang tính triết lý nhân sinh sâu sắc.",
+        "passageTitle": "Văn bản 'Gen Z và Khát vọng cất cánh số'",
+        "passage": "Thế hệ Gen Z tại TP.HCM đang đứng trước những vận hội to lớn chưa từng có của kỷ nguyên số và trí tuệ nhân tạo. Được tiếp cận công nghệ từ sớm, các bạn trẻ sở hữu tư duy mở, khả năng sáng tạo không giới hạn và tinh thần khởi nghiệp mạnh mẽ.\n\nTuy nhiên, trước cơn lốc thông tin và những thuật toán thao túng tâm lý, người trẻ cũng đối diện với nguy cơ hội chứng FOMO (sợ bỏ lỡ), căn bệnh so sánh và áp lực vô hình từ mạng xã hội. Để thực sự 'cất cánh', mỗi học sinh cần trang bị tư duy phản biện sắc sảo, kỹ năng tự học suốt đời và quan trọng hơn cả là giữ vững nhân cách, lòng trắc ẩn để không bao giờ bị biến thành nô lệ của công nghệ."
       },
       {
         "id": "lhcm25_q12",
@@ -433,7 +476,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Phản đề là một bước quan trọng trong bài văn nghị luận: Phê phán những hành vi đi ngược lại đạo lý (lối sống ích kỷ, thờ ơ) để làm nổi bật sự cần thiết của lối sống tích cực.",
-        "trapTip": "Phê phán hiện tượng tiêu cực phải khách quan, mang tính xây dựng, không chỉ trích cá nhân gay gắt."
+        "trapTip": "Phê phán hiện tượng tiêu cực phải khách quan, mang tính xây dựng, không chỉ trích cá nhân gay gắt.",
+        "passageTitle": "Văn bản 'Gen Z và Khát vọng cất cánh số'",
+        "passage": "Thế hệ Gen Z tại TP.HCM đang đứng trước những vận hội to lớn chưa từng có của kỷ nguyên số và trí tuệ nhân tạo. Được tiếp cận công nghệ từ sớm, các bạn trẻ sở hữu tư duy mở, khả năng sáng tạo không giới hạn và tinh thần khởi nghiệp mạnh mẽ.\n\nTuy nhiên, trước cơn lốc thông tin và những thuật toán thao túng tâm lý, người trẻ cũng đối diện với nguy cơ hội chứng FOMO (sợ bỏ lỡ), căn bệnh so sánh và áp lực vô hình từ mạng xã hội. Để thực sự 'cất cánh', mỗi học sinh cần trang bị tư duy phản biện sắc sảo, kỹ năng tự học suốt đời và quan trọng hơn cả là giữ vững nhân cách, lòng trắc ẩn để không bao giờ bị biến thành nô lệ của công nghệ."
       },
       {
         "id": "lhcm25_q13",
@@ -448,7 +493,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Chương trình GDPT 2018 kiên quyết loại bỏ văn mẫu: Đề thi mở TP.HCM tôn trọng cá tính sáng tạo, đánh giá cao tư duy phản biện độc lập, cảm xúc chân thực và sự liên hệ bản thân thiết thực.",
-        "trapTip": "TUYỆT ĐỐI NÓI KHÔNG VỚI VĂN MẪU! Hãy thể hiện suy nghĩ thật, trải nghiệm thật và góc nhìn nhân văn của chính mình."
+        "trapTip": "TUYỆT ĐỐI NÓI KHÔNG VỚI VĂN MẪU! Hãy thể hiện suy nghĩ thật, trải nghiệm thật và góc nhìn nhân văn của chính mình.",
+        "passageTitle": "Văn bản 'Gen Z và Khát vọng cất cánh số'",
+        "passage": "Thế hệ Gen Z tại TP.HCM đang đứng trước những vận hội to lớn chưa từng có của kỷ nguyên số và trí tuệ nhân tạo. Được tiếp cận công nghệ từ sớm, các bạn trẻ sở hữu tư duy mở, khả năng sáng tạo không giới hạn và tinh thần khởi nghiệp mạnh mẽ.\n\nTuy nhiên, trước cơn lốc thông tin và những thuật toán thao túng tâm lý, người trẻ cũng đối diện với nguy cơ hội chứng FOMO (sợ bỏ lỡ), căn bệnh so sánh và áp lực vô hình từ mạng xã hội. Để thực sự 'cất cánh', mỗi học sinh cần trang bị tư duy phản biện sắc sảo, kỹ năng tự học suốt đời và quan trọng hơn cả là giữ vững nhân cách, lòng trắc ẩn để không bao giờ bị biến thành nô lệ của công nghệ."
       },
       {
         "id": "lhcm25_q14",
@@ -498,7 +545,7 @@ window.LITERATURE_EXAMS = [
         "id": "lm25_q01",
         "topic": "Đọc hiểu văn bản ngoài SGK: Xác định phương thức biểu đạt",
         "difficulty": "Nhận biết",
-        "question": "Đọc đoạn trích sau và trả lời câu hỏi:<br><i>'Thế giới mạng mang lại cho chúng ta cơ hội kết nối vô tận, nhưng cũng tạo ra một thứ áp lực vô hình mang tên 'sống ảo' và 'áp lực đồng trang lứa' (peer pressure). Khi nhìn thấy bạn bè khoe thành tích, khoe những chuyến du lịch sang chảnh hay số lượng người theo dõi khổng lồ, không ít bạn trẻ rơi vào trạng thái tự ti, hoang mang về giá trị của bản thân. Nhưng bạn ơi, cuộc đời không phải là một sàn diễn để tranh nhau lượt 'thích'. Giá trị đích thực của một con người không nằm ở những bức ảnh đã qua chỉnh sửa, mà được kiến tạo từ những giờ miệt mài học tập, từ những giọt mồ hôi trên trang sách và từ sự chân thành trong đời thực.'</i><br>(Trích <i>Bản lĩnh người trẻ trong kỷ nguyên số</i> - Tạp chí Giáo dục & Đời sống)<br>Phương thức biểu đạt chính của đoạn trích trên là:",
+        "question": "Phương thức biểu đạt chính của đoạn trích trên là gì?",
         "options": [
           "Nghị luận",
           "Tự sự",
@@ -507,7 +554,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Đoạn trích nêu lên hiện tượng đời sống (áp lực sống ảo, áp lực đồng trang lứa), sử dụng các lý lẽ và luận điểm sắc bén nhằm thuyết phục người đọc thay đổi nhận thức, do đó phương thức biểu đạt chính là **Nghị luận**.",
-        "trapTip": "Đề thi theo CT GDPT 2018: Đoạn văn bàn luận về vấn đề đạo lý, lối sống, thuyết phục người đọc -> Phương thức Nghị luận."
+        "trapTip": "Đề thi theo CT GDPT 2018: Đoạn văn bàn luận về vấn đề đạo lý, lối sống, thuyết phục người đọc -> Phương thức Nghị luận.",
+        "passageTitle": "Văn bản 'Thế giới mạng và Giá trị con người'",
+        "passage": "Thế giới mạng mang lại cho chúng ta cơ hội kết nối vô tận nhưng cũng đầy cạm bẫy của lối sống phông bạt, ảo tưởng. Không ít bạn trẻ dành hàng giờ đồng hồ để chụp hàng trăm bức ảnh, chỉnh sửa từng đường nét để tìm kiếm những nút like ảo trên mạng xã hội, rồi rơi vào hụt hẫng lo âu khi bước ra ngoài đời thực.\n\nGiá trị đích thực của một con người không nằm ở những bức ảnh đã qua chỉnh sửa, mà được kiến tạo từ tri thức thực chất, nhân cách sống và những cống hiến cụ thể cho cuộc đời. Thay vì tiêu tốn năng lượng để tô vẽ vỏ bọc bên ngoài, hãy đầu tư thời gian đọc một cuốn sách hay, học một kỹ năng mới và đồng cảm sẻ chia với những mảnh đời còn nhiều khó khăn xung quanh ta."
       },
       {
         "id": "lm25_q02",
@@ -522,7 +571,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Câu văn cuối của đoạn trích nêu rõ: 'Giá trị đích thực của một con người không nằm ở những bức ảnh đã qua chỉnh sửa, mà được kiến tạo từ những giờ miệt mài học tập, từ những giọt mồ hôi trên trang sách và từ sự chân thành trong đời thực.'",
-        "trapTip": "Đọc kỹ câu then chốt mang tính đúc kết ở cuối đoạn văn để xác định đúng luận điểm của tác giả."
+        "trapTip": "Đọc kỹ câu then chốt mang tính đúc kết ở cuối đoạn văn để xác định đúng luận điểm của tác giả.",
+        "passageTitle": "Văn bản 'Thế giới mạng và Giá trị con người'",
+        "passage": "Thế giới mạng mang lại cho chúng ta cơ hội kết nối vô tận nhưng cũng đầy cạm bẫy của lối sống phông bạt, ảo tưởng. Không ít bạn trẻ dành hàng giờ đồng hồ để chụp hàng trăm bức ảnh, chỉnh sửa từng đường nét để tìm kiếm những nút like ảo trên mạng xã hội, rồi rơi vào hụt hẫng lo âu khi bước ra ngoài đời thực.\n\nGiá trị đích thực của một con người không nằm ở những bức ảnh đã qua chỉnh sửa, mà được kiến tạo từ tri thức thực chất, nhân cách sống và những cống hiến cụ thể cho cuộc đời. Thay vì tiêu tốn năng lượng để tô vẽ vỏ bọc bên ngoài, hãy đầu tư thời gian đọc một cuốn sách hay, học một kỹ năng mới và đồng cảm sẻ chia với những mảnh đời còn nhiều khó khăn xung quanh ta."
       },
       {
         "id": "lm25_q03",
@@ -537,7 +588,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Cụm từ 'từ những...' được điệp lại 3 lần liên tiếp theo kiểu điệp cấu trúc cú pháp, kết hợp với phép tương phản (không nằm ở... mà kiến tạo từ...) nhằm nhấn mạnh nguồn gốc thực sự tạo nên nhân cách và giá trị sống của người trẻ.",
-        "trapTip": "Điệp từ ngữ/điệp cấu trúc giúp tăng tính nhịp điệu, thuyết phục và khắc sâu thông điệp trong văn nghị luận."
+        "trapTip": "Điệp từ ngữ/điệp cấu trúc giúp tăng tính nhịp điệu, thuyết phục và khắc sâu thông điệp trong văn nghị luận.",
+        "passageTitle": "Văn bản 'Thế giới mạng và Giá trị con người'",
+        "passage": "Thế giới mạng mang lại cho chúng ta cơ hội kết nối vô tận nhưng cũng đầy cạm bẫy của lối sống phông bạt, ảo tưởng. Không ít bạn trẻ dành hàng giờ đồng hồ để chụp hàng trăm bức ảnh, chỉnh sửa từng đường nét để tìm kiếm những nút like ảo trên mạng xã hội, rồi rơi vào hụt hẫng lo âu khi bước ra ngoài đời thực.\n\nGiá trị đích thực của một con người không nằm ở những bức ảnh đã qua chỉnh sửa, mà được kiến tạo từ tri thức thực chất, nhân cách sống và những cống hiến cụ thể cho cuộc đời. Thay vì tiêu tốn năng lượng để tô vẽ vỏ bọc bên ngoài, hãy đầu tư thời gian đọc một cuốn sách hay, học một kỹ năng mới và đồng cảm sẻ chia với những mảnh đời còn nhiều khó khăn xung quanh ta."
       },
       {
         "id": "lm25_q04",
@@ -552,7 +605,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "'Peer pressure' (áp lực đồng trang lứa) là một thuật ngữ tâm lý học xã hội chỉ sự tác động, ảnh hưởng tiêu cực hoặc tích cực từ nhóm bạn bè cùng trang lứa khiến cá nhân cảm thấy bị tụt hậu hoặc bắt buộc phải chạy theo để hòa nhập.",
-        "trapTip": "Đề thi hiện đại thường tích hợp kiến thức đời sống và tâm lý học học đường để đánh giá tư duy xã hội của học sinh."
+        "trapTip": "Đề thi hiện đại thường tích hợp kiến thức đời sống và tâm lý học học đường để đánh giá tư duy xã hội của học sinh.",
+        "passageTitle": "Văn bản 'Thế giới mạng và Giá trị con người'",
+        "passage": "Thế giới mạng mang lại cho chúng ta cơ hội kết nối vô tận nhưng cũng đầy cạm bẫy của lối sống phông bạt, ảo tưởng. Không ít bạn trẻ dành hàng giờ đồng hồ để chụp hàng trăm bức ảnh, chỉnh sửa từng đường nét để tìm kiếm những nút like ảo trên mạng xã hội, rồi rơi vào hụt hẫng lo âu khi bước ra ngoài đời thực.\n\nGiá trị đích thực của một con người không nằm ở những bức ảnh đã qua chỉnh sửa, mà được kiến tạo từ tri thức thực chất, nhân cách sống và những cống hiến cụ thể cho cuộc đời. Thay vì tiêu tốn năng lượng để tô vẽ vỏ bọc bên ngoài, hãy đầu tư thời gian đọc một cuốn sách hay, học một kỹ năng mới và đồng cảm sẻ chia với những mảnh đời còn nhiều khó khăn xung quanh ta."
       },
       {
         "id": "lm25_q05",
@@ -567,7 +622,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Quan hệ từ 'Nhưng' đứng ở đầu câu dùng để nối câu sau với các câu phía trước và biểu thị mối quan hệ tương phản, đối lập về mặt ý nghĩa. Đây là **phép nối**.",
-        "trapTip": "Các quan hệ từ nối (Nhưng, Tuy nhiên, Vì vậy, Do đó, Hơn nữa...) luôn thể hiện Phép Nối."
+        "trapTip": "Các quan hệ từ nối (Nhưng, Tuy nhiên, Vì vậy, Do đó, Hơn nữa...) luôn thể hiện Phép Nối.",
+        "passageTitle": "Văn bản 'Thế giới mạng và Giá trị con người'",
+        "passage": "Thế giới mạng mang lại cho chúng ta cơ hội kết nối vô tận nhưng cũng đầy cạm bẫy của lối sống phông bạt, ảo tưởng. Không ít bạn trẻ dành hàng giờ đồng hồ để chụp hàng trăm bức ảnh, chỉnh sửa từng đường nét để tìm kiếm những nút like ảo trên mạng xã hội, rồi rơi vào hụt hẫng lo âu khi bước ra ngoài đời thực.\n\nGiá trị đích thực của một con người không nằm ở những bức ảnh đã qua chỉnh sửa, mà được kiến tạo từ tri thức thực chất, nhân cách sống và những cống hiến cụ thể cho cuộc đời. Thay vì tiêu tốn năng lượng để tô vẽ vỏ bọc bên ngoài, hãy đầu tư thời gian đọc một cuốn sách hay, học một kỹ năng mới và đồng cảm sẻ chia với những mảnh đời còn nhiều khó khăn xung quanh ta."
       },
       {
         "id": "lm25_q06",
@@ -582,7 +639,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Thông điệp nhân văn và thiết thực nhất là giúp học sinh có cái nhìn tỉnh táo trước mạng xã hội: Không tự ti, không chạy theo vẻ hào nhoáng ảo, mà tập trung vào sự phát triển thực chất của bản thân bằng học tập và rèn luyện.",
-        "trapTip": "Thông điệp đúng đắn luôn mang tính xây dựng, tích cực và hướng tới hành động thực tế của bản thân học sinh."
+        "trapTip": "Thông điệp đúng đắn luôn mang tính xây dựng, tích cực và hướng tới hành động thực tế của bản thân học sinh.",
+        "passageTitle": "Văn bản 'Thế giới mạng và Giá trị con người'",
+        "passage": "Thế giới mạng mang lại cho chúng ta cơ hội kết nối vô tận nhưng cũng đầy cạm bẫy của lối sống phông bạt, ảo tưởng. Không ít bạn trẻ dành hàng giờ đồng hồ để chụp hàng trăm bức ảnh, chỉnh sửa từng đường nét để tìm kiếm những nút like ảo trên mạng xã hội, rồi rơi vào hụt hẫng lo âu khi bước ra ngoài đời thực.\n\nGiá trị đích thực của một con người không nằm ở những bức ảnh đã qua chỉnh sửa, mà được kiến tạo từ tri thức thực chất, nhân cách sống và những cống hiến cụ thể cho cuộc đời. Thay vì tiêu tốn năng lượng để tô vẽ vỏ bọc bên ngoài, hãy đầu tư thời gian đọc một cuốn sách hay, học một kỹ năng mới và đồng cảm sẻ chia với những mảnh đời còn nhiều khó khăn xung quanh ta."
       },
       {
         "id": "lm25_q07",
@@ -975,7 +1034,7 @@ window.LITERATURE_EXAMS = [
         "id": "lt01_q01",
         "topic": "Đọc hiểu văn bản ngoài SGK: Xác định phương thức biểu đạt",
         "difficulty": "Nhận biết",
-        "question": "Đọc đoạn trích sau:<br><i>'Sự tử tế không phải là điều gì to tát hay xa vời. Đó là chiếc ô che vội cho người đi đường khi trời đổ mưa dông, là nụ cười khích lệ một người bạn đang ủ rũ, là lời cảm ơn chân thành với cô chú lao công quét rác đêm khuya. Mỗi việc tử tế nhỏ bé như một đốm lửa sưởi ấm tâm hồn, xua tan giá lạnh của sự thờ ơ, vô cảm. Hãy gieo hạt giống tử tế mỗi ngày, bạn sẽ thấy cuộc đời nở hoa rực rỡ.'</i><br>(Trích <i>Nuôi dưỡng tâm hồn</i> - NXB Trẻ)<br>Phương thức biểu đạt chính của đoạn trích trên là:",
+        "question": "Phương thức biểu đạt chính của đoạn trích trên là gì?",
         "options": [
           "Nghị luận",
           "Biểu cảm",
@@ -984,7 +1043,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Đoạn trích đưa ra quan niệm về sự tử tế, dùng lý lẽ và các dẫn chứng sinh động để thuyết phục người đọc sống nhân ái, vì vậy phương thức biểu đạt chính là **Nghị luận**.",
-        "trapTip": "Mục đích bàn luận, phân tích và thuyết phục hành động -> Phương thức Nghị luận."
+        "trapTip": "Mục đích bàn luận, phân tích và thuyết phục hành động -> Phương thức Nghị luận.",
+        "passageTitle": "Văn bản 'Sự tử tế trong đời sống'",
+        "passage": "Sự tử tế không phải là điều gì to tát hay xa vời. Đó là chiếc ô che vội cho cụ già lúc trời đổ mưa dông, là nụ cười khích lệ dành cho người bạn đang nản lòng, là lời cảm ơn chân thành gửi đến cô chú lao công quét rác đêm khuya.\n\nTrong một xã hội hiện đại hối hả, sự vô cảm và ích kỷ có thể làm tâm hồn con người trở nên khô cằn, giá lạnh. Chính lòng tốt bình dị và sự thấu cảm mỗi ngày sẽ là ngọn lửa ấm áp xua tan bóng tối, kết nối con người với nhau và làm cho cuộc đời đáng sống hơn bao giờ hết."
       },
       {
         "id": "lt01_q02",
@@ -999,7 +1060,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Tác giả liệt kê những hành vi đời thường quen thuộc để người đọc nhận ra: Sự tử tế không cần phải là điều vĩ đại, mà ai cũng có thể thực hiện ngay từ những việc nhỏ bé nhất.",
-        "trapTip": "Dẫn chứng trong văn nghị luận nhằm làm sáng tỏ và tăng sức thuyết phục cho luận điểm."
+        "trapTip": "Dẫn chứng trong văn nghị luận nhằm làm sáng tỏ và tăng sức thuyết phục cho luận điểm.",
+        "passageTitle": "Văn bản 'Sự tử tế trong đời sống'",
+        "passage": "Sự tử tế không phải là điều gì to tát hay xa vời. Đó là chiếc ô che vội cho cụ già lúc trời đổ mưa dông, là nụ cười khích lệ dành cho người bạn đang nản lòng, là lời cảm ơn chân thành gửi đến cô chú lao công quét rác đêm khuya.\n\nTrong một xã hội hiện đại hối hả, sự vô cảm và ích kỷ có thể làm tâm hồn con người trở nên khô cằn, giá lạnh. Chính lòng tốt bình dị và sự thấu cảm mỗi ngày sẽ là ngọn lửa ấm áp xua tan bóng tối, kết nối con người với nhau và làm cho cuộc đời đáng sống hơn bao giờ hết."
       },
       {
         "id": "lt01_q03",
@@ -1014,7 +1077,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Từ so sánh 'như' kết hợp với hình ảnh ẩn dụ 'đốm lửa sưởi ấm' và 'giá lạnh của sự vô cảm' làm nổi bật sức mạnh lan tỏa của lòng tốt con người.",
-        "trapTip": "Dấu hiệu từ 'như', 'tựa như', 'là' thể hiện phép so sánh tu từ."
+        "trapTip": "Dấu hiệu từ 'như', 'tựa như', 'là' thể hiện phép so sánh tu từ.",
+        "passageTitle": "Văn bản 'Sự tử tế trong đời sống'",
+        "passage": "Sự tử tế không phải là điều gì to tát hay xa vời. Đó là chiếc ô che vội cho cụ già lúc trời đổ mưa dông, là nụ cười khích lệ dành cho người bạn đang nản lòng, là lời cảm ơn chân thành gửi đến cô chú lao công quét rác đêm khuya.\n\nTrong một xã hội hiện đại hối hả, sự vô cảm và ích kỷ có thể làm tâm hồn con người trở nên khô cằn, giá lạnh. Chính lòng tốt bình dị và sự thấu cảm mỗi ngày sẽ là ngọn lửa ấm áp xua tan bóng tối, kết nối con người với nhau và làm cho cuộc đời đáng sống hơn bao giờ hết."
       },
       {
         "id": "lt01_q04",
@@ -1029,7 +1094,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Đại từ chỉ định 'Đó' thay thế cho cụm từ 'Sự tử tế' ở câu đứng trước để tránh lặp từ và tạo sự liên kết chặt chẽ, đây là **phép thế**.",
-        "trapTip": "Các đại từ (Đó, Này, Kia, Ấy, Họ, Chúng...) thay thế cho danh từ đứng trước chính là Phép Thế."
+        "trapTip": "Các đại từ (Đó, Này, Kia, Ấy, Họ, Chúng...) thay thế cho danh từ đứng trước chính là Phép Thế.",
+        "passageTitle": "Văn bản 'Sự tử tế trong đời sống'",
+        "passage": "Sự tử tế không phải là điều gì to tát hay xa vời. Đó là chiếc ô che vội cho cụ già lúc trời đổ mưa dông, là nụ cười khích lệ dành cho người bạn đang nản lòng, là lời cảm ơn chân thành gửi đến cô chú lao công quét rác đêm khuya.\n\nTrong một xã hội hiện đại hối hả, sự vô cảm và ích kỷ có thể làm tâm hồn con người trở nên khô cằn, giá lạnh. Chính lòng tốt bình dị và sự thấu cảm mỗi ngày sẽ là ngọn lửa ấm áp xua tan bóng tối, kết nối con người với nhau và làm cho cuộc đời đáng sống hơn bao giờ hết."
       },
       {
         "id": "lt01_q05",
@@ -1044,7 +1111,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Đoạn văn nêu rõ: Việc tử tế 'xua tan giá lạnh của sự thờ ơ, vô cảm'. Căn bệnh vô cảm, bàng quan trước xã hội chính là thứ băng giá đáng sợ nhất trong tâm hồn con người.",
-        "trapTip": "Đọc kỹ từ ngữ trong văn bản để tìm chính xác cụm từ tác giả sử dụng."
+        "trapTip": "Đọc kỹ từ ngữ trong văn bản để tìm chính xác cụm từ tác giả sử dụng.",
+        "passageTitle": "Văn bản 'Sự tử tế trong đời sống'",
+        "passage": "Sự tử tế không phải là điều gì to tát hay xa vời. Đó là chiếc ô che vội cho cụ già lúc trời đổ mưa dông, là nụ cười khích lệ dành cho người bạn đang nản lòng, là lời cảm ơn chân thành gửi đến cô chú lao công quét rác đêm khuya.\n\nTrong một xã hội hiện đại hối hả, sự vô cảm và ích kỷ có thể làm tâm hồn con người trở nên khô cằn, giá lạnh. Chính lòng tốt bình dị và sự thấu cảm mỗi ngày sẽ là ngọn lửa ấm áp xua tan bóng tối, kết nối con người với nhau và làm cho cuộc đời đáng sống hơn bao giờ hết."
       },
       {
         "id": "lt01_q06",
@@ -1059,7 +1128,9 @@ window.LITERATURE_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "'Về lòng nhân ái' đứng trước chủ ngữ để nêu lên đề tài của câu nói, đi kèm quan hệ từ 'Về', do đó là **khởi ngữ**.",
-        "trapTip": "Khởi ngữ đứng đầu câu trước chủ ngữ, có thể thêm 'về', 'đối với'."
+        "trapTip": "Khởi ngữ đứng đầu câu trước chủ ngữ, có thể thêm 'về', 'đối với'.",
+        "passageTitle": "Văn bản 'Sự tử tế trong đời sống'",
+        "passage": "Sự tử tế không phải là điều gì to tát hay xa vời. Đó là chiếc ô che vội cho cụ già lúc trời đổ mưa dông, là nụ cười khích lệ dành cho người bạn đang nản lòng, là lời cảm ơn chân thành gửi đến cô chú lao công quét rác đêm khuya.\n\nTrong một xã hội hiện đại hối hả, sự vô cảm và ích kỷ có thể làm tâm hồn con người trở nên khô cằn, giá lạnh. Chính lòng tốt bình dị và sự thấu cảm mỗi ngày sẽ là ngọn lửa ấm áp xua tan bóng tối, kết nối con người với nhau và làm cho cuộc đời đáng sống hơn bao giờ hết."
       },
       {
         "id": "lt01_q07",
@@ -1199,3 +1270,617 @@ window.LITERATURE_EXAMS = [
     ]
   }
 ];
+
+// =========================================================
+// BỔ SUNG 3 ĐỀ NGỮ VĂN MỚI (Chuẩn cấu trúc GDPT 2018 - Ngữ liệu ngoài SGK)
+// Ngữ liệu: ca dao dân gian & văn bản do EduPass biên soạn
+// =========================================================
+(function () {
+  // ---------- Đề 1: Bám sát cấu trúc Hà Nội 2025 ----------
+  const HN_P1_TITLE = "Ca dao Việt Nam - 'Công cha như núi Thái Sơn'";
+  const HN_P1 = "Công cha như núi Thái Sơn,\nNghĩa mẹ như nước trong nguồn chảy ra.\nMột lòng thờ mẹ kính cha,\nCho tròn chữ hiếu mới là đạo con.\n\n(Ca dao Việt Nam)";
+  const HN_P2_TITLE = "Văn bản nghị luận 'Đọc sách trong thời đại số' (EduPass biên soạn)";
+  const HN_P2 = "Mỗi ngày, một bạn trẻ có thể lướt qua hàng trăm đoạn video ngắn chỉ dài vài chục giây. Thông tin đến nhanh, đi cũng nhanh, để lại trong đầu ta những mảnh vụn rời rạc. Trong khi đó, một cuốn sách đòi hỏi ta dừng lại, kiên nhẫn đi cùng từng trang viết, từng dòng suy nghĩ của tác giả. Chính sự chậm rãi ấy lại là món quà quý giá: nó rèn cho ta khả năng tập trung, nuôi dưỡng trí tưởng tượng và dạy ta cách suy nghĩ thấu đáo trước khi kết luận.\n\nĐọc sách không có nghĩa là quay lưng với công nghệ. Một chiếc máy tính bảng vẫn có thể chứa cả một thư viện. Điều quan trọng không nằm ở trang giấy hay màn hình, mà ở thái độ của người đọc: ta đọc để hiểu sâu, hay chỉ để lướt qua cho xong?";
+
+  // ---------- Đề 2: Thi thử TP.HCM 2025 ----------
+  const HCM_P1_TITLE = "Truyện ngắn 'Chiếc áo len của bà' (EduPass biên soạn)";
+  const HCM_P1 = "Chiều nào bà cũng ngồi bên hiên, đôi tay gầy guộc đưa những mũi kim đan đều đặn. Tôi hỏi bà đan gì mà lâu thế, bà chỉ cười: \"Đan cho đứa cháu sắp đi xa.\" Năm ấy tôi mười lăm tuổi, chỉ mải mê với chiếc điện thoại và những cuộc hẹn cùng bạn bè, chẳng mấy khi để ý rằng đôi mắt bà đã mờ đi nhiều.\n\nNgày tôi lên thành phố nhập học, bà dúi vào tay tôi chiếc áo len màu xanh còn thơm mùi nắng. Đường đan có chỗ lệch, chỗ chật, chỗ lỏng. Tôi chợt hiểu, mỗi mũi kim lệch ấy là một lần bà phải lần mò trong ánh sáng yếu ớt của buổi chiều tàn. Mùa đông năm ấy, giữa phố thị xa lạ, chiếc áo len ấm hơn bất cứ thứ gì tôi từng có.";
+  const HCM_P2_TITLE = "Văn bản nghị luận 'Lòng biết ơn' (EduPass biên soạn)";
+  const HCM_P2 = "Lòng biết ơn không phải là những lời cảm ơn được nói ra cho phải phép. Nó bắt đầu từ khả năng nhận ra rằng mọi điều tốt đẹp ta đang có đều mang dấu vết của người khác: bữa cơm có giọt mồ hôi của người nông dân, con đường sạch có công của người lao công lúc nửa đêm, bài giảng hay có những đêm thức trắng của thầy cô.\n\nNgười biết ơn thường sống tử tế hơn, bởi họ hiểu mình là một mắt xích trong sợi dây gắn kết giữa người với người. Ngược lại, kẻ coi mọi thứ là hiển nhiên sẽ dần trở nên vô cảm, chỉ biết đòi hỏi mà quên mất việc cho đi.";
+
+  // ---------- Đề 3: Thi thử Toàn quốc ----------
+  const TQ_P1_TITLE = "Ca dao Việt Nam - 'Trong đầm gì đẹp bằng sen'";
+  const TQ_P1 = "Trong đầm gì đẹp bằng sen,\nLá xanh bông trắng lại chen nhị vàng.\nNhị vàng bông trắng lá xanh,\nGần bùn mà chẳng hôi tanh mùi bùn.\n\n(Ca dao Việt Nam)";
+  const TQ_P2_TITLE = "Văn bản nghị luận 'Sống xanh bắt đầu từ việc nhỏ' (EduPass biên soạn)";
+  const TQ_P2 = "Một chiếc túi ni lông có thể chỉ được dùng trong vài phút, nhưng phải mất hàng trăm năm mới phân hủy. Những chai nhựa vứt vội bên đường hôm nay có thể trôi ra biển, vỡ thành hạt vi nhựa và quay trở lại bữa ăn của chính chúng ta qua chuỗi thức ăn.\n\n\"Sống xanh\" vì thế không phải là khẩu hiệu xa vời. Nó bắt đầu từ những việc rất nhỏ: mang theo bình nước cá nhân, từ chối ống hút nhựa, phân loại rác tại nhà, tắt điện khi ra khỏi phòng. Một hành động nhỏ được lặp lại bởi hàng triệu người sẽ tạo nên thay đổi lớn. Trái Đất không cần một vài người sống xanh hoàn hảo, mà cần hàng triệu người cùng sống xanh dù chưa hoàn hảo.";
+
+  // Helper gắn ngữ liệu cho từng câu hỏi
+  const withPassage = (title, passage, list) => list.map(q => Object.assign({ passageTitle: title, passage: passage }, q));
+
+  window.LITERATURE_EXAMS.push(
+    {
+      "id": "lit_exam_hanoi_2025_style",
+      "title": "Đề ôn thi Tuyển sinh Lớp 10 TP. Hà Nội - Bám sát cấu trúc đề 2025 - Môn Ngữ Văn",
+      "subject": "literature",
+      "year": 2025,
+      "location": "Hà Nội",
+      "isOfficial": false,
+      "badgeText": "📋 Cấu trúc đề Hà Nội 2025",
+      "durationMinutes": 120,
+      "totalQuestions": 12,
+      "description": "Đề ôn luyện bám sát cấu trúc 2 phần của đề Ngữ văn Hà Nội theo Chương trình GDPT 2018 (120 phút, 100% ngữ liệu ngoài SGK). Phần I: Đọc hiểu bài ca dao 'Công cha như núi Thái Sơn' và viết đoạn văn nghị luận văn học khoảng 200 chữ. Phần II: Đọc hiểu văn bản nghị luận 'Đọc sách trong thời đại số' và viết bài văn nghị luận xã hội về văn hóa đọc của người trẻ.",
+      "questions": [].concat(
+        withPassage(HN_P1_TITLE, HN_P1, [
+          {
+            "id": "l_hn25s_q01",
+            "topic": "Phần I - Đọc hiểu văn bản văn học: Nhận biết thể thơ",
+            "difficulty": "Nhận biết",
+            "question": "Bài ca dao trên được viết theo thể thơ nào?",
+            "options": ["Thể thơ lục bát", "Thể thơ song thất lục bát", "Thể thơ tự do", "Thể thơ bảy chữ"],
+            "correctIndex": 0,
+            "explanation": "Bài ca dao gồm các cặp câu 6 chữ - 8 chữ xen kẽ (Công cha như núi Thái Sơn: 6 chữ / Nghĩa mẹ như nước trong nguồn chảy ra: 8 chữ), vần theo luật lục bát: tiếng cuối câu bát vần với tiếng cuối câu lục kế tiếp (ra - cha), tiếng cuối câu lục vần với tiếng thứ 6 câu bát (cha - là). Đây là thể lục bát.",
+            "trapTip": "Đếm số chữ từng dòng: 6 - 8 - 6 - 8 là dấu hiệu chắc chắn của thể lục bát."
+          },
+          {
+            "id": "l_hn25s_q02",
+            "topic": "Phần I - Đọc hiểu: Biện pháp tu từ so sánh",
+            "difficulty": "Thông hiểu",
+            "question": "Hai câu đầu sử dụng biện pháp tu từ nào và có tác dụng gì?",
+            "options": [
+              "So sánh công cha với núi Thái Sơn, nghĩa mẹ với nước trong nguồn - nhấn mạnh công lao sinh thành to lớn, vô tận của cha mẹ",
+              "Nhân hóa núi và nước - làm cho thiên nhiên trở nên sinh động, gần gũi",
+              "Hoán dụ lấy núi và nước chỉ quê hương đất nước",
+              "Nói giảm nói tránh - làm giảm nhẹ sự vất vả của cha mẹ"
+            ],
+            "correctIndex": 0,
+            "explanation": "Từ so sánh 'như' xuất hiện hai lần: công cha - núi Thái Sơn (cao lớn, vững chãi), nghĩa mẹ - nước trong nguồn (dạt dào, không bao giờ cạn). Phép so sánh lấy hình ảnh thiên nhiên kì vĩ, vĩnh hằng để cụ thể hóa công ơn trừu tượng của cha mẹ.",
+            "trapTip": "Có từ so sánh 'như' nối hai vế ⇒ biện pháp so sánh, không phải ẩn dụ."
+          },
+          {
+            "id": "l_hn25s_q03",
+            "topic": "Phần I - Đọc hiểu: Hiểu nghĩa của từ ngữ trong văn cảnh",
+            "difficulty": "Thông hiểu",
+            "question": "Cụm từ \"đạo con\" trong câu cuối được hiểu là gì?",
+            "options": [
+              "Bổn phận, đạo lí làm con: biết kính yêu, hiếu thảo với cha mẹ",
+              "Con đường mà người con phải đi khi trưởng thành",
+              "Tôn giáo mà người con theo",
+              "Sự nghiệp và thành công của người con"
+            ],
+            "correctIndex": 0,
+            "explanation": "'Đạo' ở đây nghĩa là đạo lí, lẽ phải mà con người cần tuân theo. 'Đạo con' là bổn phận của con cái đối với cha mẹ, mà cốt lõi là 'chữ hiếu'.",
+            "trapTip": "Đặt từ vào văn cảnh 'cho tròn chữ hiếu mới là đạo con' để suy ra nghĩa đạo lí, bổn phận."
+          },
+          {
+            "id": "l_hn25s_q04",
+            "topic": "Phần I - Đọc hiểu: Thông điệp của văn bản",
+            "difficulty": "Thông hiểu",
+            "question": "Thông điệp chính mà bài ca dao gửi gắm là gì?",
+            "options": [
+              "Công ơn cha mẹ vô cùng to lớn; làm con phải một lòng hiếu thảo, kính yêu cha mẹ",
+              "Con người cần chinh phục núi cao và sông dài",
+              "Chỉ người cha mới có công lao nuôi dạy con cái",
+              "Con cái cần sớm rời xa gia đình để tự lập"
+            ],
+            "correctIndex": 0,
+            "explanation": "Hai câu đầu ca ngợi công cha nghĩa mẹ; hai câu sau là lời khuyên về bổn phận làm con. Thông điệp: ghi nhớ công ơn sinh thành và sống trọn đạo hiếu.",
+            "trapTip": "Thông điệp cần bao quát cả hai ý: ca ngợi công ơn + lời khuyên sống hiếu thảo."
+          },
+          {
+            "id": "l_hn25s_q05",
+            "topic": "Phần I - Viết đoạn văn nghị luận văn học (khoảng 200 chữ)",
+            "difficulty": "Vận dụng",
+            "question": "Khi viết đoạn văn khoảng 200 chữ phân tích giá trị nội dung và nghệ thuật của bài ca dao, câu chủ đề nào phù hợp nhất?",
+            "options": [
+              "Bằng thể thơ lục bát nhịp nhàng và phép so sánh giàu sức gợi, bài ca dao đã ngợi ca công lao trời biển của cha mẹ, đồng thời nhắc nhở đạo hiếu của người làm con.",
+              "Núi Thái Sơn là ngọn núi cao nổi tiếng ở Trung Quốc.",
+              "Bài ca dao kể lại câu chuyện của một gia đình nghèo khó thời xưa.",
+              "Ca dao là thể loại văn học viết do các nhà thơ nổi tiếng sáng tác."
+            ],
+            "correctIndex": 0,
+            "explanation": "Câu chủ đề của đoạn nghị luận văn học cần nêu được đối tượng (bài ca dao), đặc sắc nghệ thuật (lục bát, so sánh) và giá trị nội dung (ngợi ca công cha mẹ, nhắc nhở đạo hiếu).",
+            "trapTip": "Ca dao là văn học dân gian truyền miệng, không phải văn học viết."
+          }
+        ]),
+        withPassage(HN_P2_TITLE, HN_P2, [
+          {
+            "id": "l_hn25s_q06",
+            "topic": "Phần II - Đọc hiểu văn bản nghị luận: Xác định vấn đề nghị luận",
+            "difficulty": "Nhận biết",
+            "question": "Vấn đề chính được bàn luận trong văn bản là gì?",
+            "options": [
+              "Giá trị của việc đọc sách sâu sắc, chậm rãi trong thời đại thông tin nhanh",
+              "Tác hại của máy tính bảng đối với sức khỏe học sinh",
+              "Cách làm video ngắn thu hút người xem",
+              "Lịch sử ra đời của sách in"
+            ],
+            "correctIndex": 0,
+            "explanation": "Văn bản đối chiếu thói quen lướt video ngắn với việc đọc sách, khẳng định sự chậm rãi của đọc sách là 'món quà quý giá' và điều cốt lõi là thái độ đọc để hiểu sâu.",
+            "trapTip": "Vấn đề nghị luận thường được khẳng định ở câu then chốt: 'Chính sự chậm rãi ấy lại là món quà quý giá'."
+          },
+          {
+            "id": "l_hn25s_q07",
+            "topic": "Phần II - Đọc hiểu: Thao tác lập luận",
+            "difficulty": "Thông hiểu",
+            "question": "Ở đoạn văn thứ nhất, tác giả chủ yếu sử dụng thao tác lập luận nào?",
+            "options": [
+              "So sánh, đối chiếu (giữa lướt video ngắn và đọc sách)",
+              "Bác bỏ hoàn toàn vai trò của công nghệ",
+              "Kể chuyện theo trình tự thời gian",
+              "Miêu tả nhân vật"
+            ],
+            "correctIndex": 0,
+            "explanation": "Cụm từ 'Trong khi đó' đánh dấu sự đối chiếu: thông tin video 'đến nhanh, đi cũng nhanh' >< sách 'đòi hỏi ta dừng lại, kiên nhẫn'. Phép so sánh làm nổi bật giá trị của việc đọc sách.",
+            "trapTip": "Từ nối 'Trong khi đó', 'Ngược lại' là dấu hiệu của thao tác so sánh - đối chiếu."
+          },
+          {
+            "id": "l_hn25s_q08",
+            "topic": "Phần II - Đọc hiểu: Hiểu ý kiến của tác giả",
+            "difficulty": "Thông hiểu",
+            "question": "Theo tác giả, \"món quà quý giá\" mà sự chậm rãi khi đọc sách mang lại gồm những gì?",
+            "options": [
+              "Khả năng tập trung, trí tưởng tượng và cách suy nghĩ thấu đáo trước khi kết luận",
+              "Nhiều thông tin mới trong thời gian ngắn nhất",
+              "Sự nổi tiếng và lượt yêu thích trên mạng xã hội",
+              "Điểm số cao trong mọi kì thi"
+            ],
+            "correctIndex": 0,
+            "explanation": "Văn bản nêu rõ: 'nó rèn cho ta khả năng tập trung, nuôi dưỡng trí tưởng tượng và dạy ta cách suy nghĩ thấu đáo trước khi kết luận'.",
+            "trapTip": "Câu hỏi nhận biết - thông hiểu: tìm đúng câu chứa thông tin trong văn bản, tránh suy diễn."
+          },
+          {
+            "id": "l_hn25s_q09",
+            "topic": "Phần II - Đọc hiểu: Thái độ, quan điểm của người viết",
+            "difficulty": "Vận dụng",
+            "question": "Câu \"Đọc sách không có nghĩa là quay lưng với công nghệ\" thể hiện quan điểm nào của tác giả?",
+            "options": [
+              "Khách quan, cởi mở: không bài xích công nghệ, điều quan trọng là thái độ đọc để hiểu sâu",
+              "Phản đối gay gắt mọi thiết bị điện tử",
+              "Cho rằng sách giấy đã lỗi thời và cần bị thay thế",
+              "Thờ ơ, không quan tâm đến chuyện đọc sách"
+            ],
+            "correctIndex": 0,
+            "explanation": "Tác giả thừa nhận 'một chiếc máy tính bảng vẫn có thể chứa cả một thư viện', từ đó nhấn mạnh điều quan trọng 'không nằm ở trang giấy hay màn hình, mà ở thái độ của người đọc'. Đây là cách nhìn đa chiều, khách quan.",
+            "trapTip": "Đoạn 2 là phần mở rộng - phản đề giúp lập luận toàn diện, không cực đoan."
+          },
+          {
+            "id": "l_hn25s_q10",
+            "topic": "Phần II - Đọc hiểu: Liên hệ bản thân từ văn bản",
+            "difficulty": "Vận dụng",
+            "question": "Từ câu hỏi cuối văn bản (\"ta đọc để hiểu sâu, hay chỉ để lướt qua cho xong?\"), hành động nào của học sinh thể hiện cách đọc đúng đắn nhất?",
+            "options": [
+              "Dành thời gian cố định mỗi ngày để đọc, ghi chép ý tâm đắc và suy ngẫm, trao đổi về điều đã đọc",
+              "Đọc thật nhiều đầu sách trong thời gian ngắn để khoe với bạn bè",
+              "Chỉ đọc phần tóm tắt trên mạng thay cho đọc toàn bộ cuốn sách",
+              "Vừa đọc sách vừa xem video để tiết kiệm thời gian"
+            ],
+            "correctIndex": 0,
+            "explanation": "Đọc để hiểu sâu là đọc có chủ đích, có suy ngẫm và ghi chép - đúng với tinh thần 'dừng lại, kiên nhẫn đi cùng từng trang viết' mà văn bản đề cao.",
+            "trapTip": "Chọn đáp án thể hiện chiều sâu (suy ngẫm) thay vì số lượng hay tốc độ."
+          },
+          {
+            "id": "l_hn25s_q11",
+            "topic": "Phần II - Viết bài văn nghị luận xã hội: Xác định luận điểm",
+            "difficulty": "Vận dụng",
+            "question": "Khi viết bài văn nghị luận (khoảng 400 chữ) về vấn đề \"Văn hóa đọc của người trẻ trong thời đại số\", luận điểm nào sau đây KHÔNG phù hợp?",
+            "options": [
+              "Người trẻ nên ngừng sử dụng hoàn toàn điện thoại và Internet để đọc sách giấy",
+              "Đọc sách giúp người trẻ bồi dưỡng tri thức, khả năng tư duy và chiều sâu tâm hồn",
+              "Thực trạng: nhiều bạn trẻ có xu hướng 'đọc lướt', ngại đọc sách dài",
+              "Giải pháp: kết hợp linh hoạt sách giấy và sách điện tử, xây dựng thói quen đọc mỗi ngày"
+            ],
+            "correctIndex": 0,
+            "explanation": "Luận điểm 'ngừng sử dụng hoàn toàn điện thoại và Internet' là cực đoan, phiến diện, đi ngược tinh thần văn bản ('Đọc sách không có nghĩa là quay lưng với công nghệ'). Ba luận điểm còn lại hợp lí: ý nghĩa - thực trạng - giải pháp.",
+            "trapTip": "Câu hỏi phủ định 'KHÔNG phù hợp': tìm luận điểm cực đoan, thiếu khách quan."
+          },
+          {
+            "id": "l_hn25s_q12",
+            "topic": "Phần II - Viết bài văn nghị luận xã hội: Bố cục và lập luận",
+            "difficulty": "Vận dụng cao",
+            "question": "Để bài văn nghị luận xã hội về văn hóa đọc đạt điểm cao, phần thân bài cần đảm bảo yêu cầu nào?",
+            "options": [
+              "Giải thích vấn đề, phân tích ý nghĩa bằng lí lẽ và bằng chứng xác thực, bàn luận mở rộng (phản đề) và rút ra bài học nhận thức - hành động",
+              "Chỉ cần liệt kê thật nhiều tên sách nổi tiếng",
+              "Kể lại toàn bộ nội dung một cuốn sách đã đọc",
+              "Sử dụng thật nhiều câu cảm thán để bày tỏ cảm xúc"
+            ],
+            "correctIndex": 0,
+            "explanation": "Thân bài nghị luận xã hội chuẩn gồm: giải thích - phân tích, chứng minh (lí lẽ + bằng chứng) - phản đề, mở rộng - bài học. Lập luận chặt chẽ, bằng chứng tiêu biểu là tiêu chí chấm điểm quan trọng nhất.",
+            "trapTip": "Bằng chứng phải xác thực, tiêu biểu; không bịa số liệu."
+          }
+        ])
+      )
+    },
+    {
+      "id": "lit_exam_hcmc_mock_2025_02",
+      "title": "Đề thi thử Tuyển sinh Lớp 10 TP.HCM Năm 2025 - Môn Ngữ Văn - Đề số 02 (Chủ đề 'Yêu thương & Biết ơn')",
+      "subject": "literature",
+      "year": 2025,
+      "location": "TP.HCM",
+      "isOfficial": false,
+      "badgeText": "📝 Thi thử TP.HCM 2025",
+      "durationMinutes": 120,
+      "totalQuestions": 12,
+      "description": "Đề thi thử theo cấu trúc Sở GD&ĐT TP.HCM (120 phút, thang điểm 10, ngữ liệu ngoài SGK). Phần 1: Đọc hiểu truyện ngắn 'Chiếc áo len của bà' - ngôi kể, chi tiết nghệ thuật, sự thay đổi nhận thức nhân vật và viết đoạn văn phân tích chi tiết. Phần 2: Đọc hiểu văn bản nghị luận 'Lòng biết ơn' và viết bài văn nghị luận xã hội về lối sống biết ơn của người trẻ.",
+      "questions": [].concat(
+        withPassage(HCM_P1_TITLE, HCM_P1, [
+          {
+            "id": "l_hcm25m2_q01",
+            "topic": "Phần 1 - Đọc hiểu văn bản truyện: Ngôi kể",
+            "difficulty": "Nhận biết",
+            "question": "Câu chuyện được kể theo ngôi thứ mấy? Người kể chuyện là ai?",
+            "options": [
+              "Ngôi thứ nhất - nhân vật \"tôi\" (người cháu)",
+              "Ngôi thứ ba - người kể giấu mình",
+              "Ngôi thứ nhất - nhân vật người bà",
+              "Ngôi thứ hai - nhân vật \"bạn\""
+            ],
+            "correctIndex": 0,
+            "explanation": "Người kể xưng 'tôi', là đứa cháu mười lăm tuổi trực tiếp chứng kiến và trải nghiệm câu chuyện ⇒ ngôi thứ nhất.",
+            "trapTip": "Ngôi kể thứ nhất giúp bộc lộ trực tiếp cảm xúc, suy nghĩ của nhân vật kể chuyện."
+          },
+          {
+            "id": "l_hcm25m2_q02",
+            "topic": "Phần 1 - Đọc hiểu: Chi tiết tiêu biểu trong truyện",
+            "difficulty": "Nhận biết",
+            "question": "Chi tiết nào cho thấy nhân vật \"tôi\" từng vô tâm với bà?",
+            "options": [
+              "\"chỉ mải mê với chiếc điện thoại và những cuộc hẹn cùng bạn bè, chẳng mấy khi để ý rằng đôi mắt bà đã mờ đi nhiều\"",
+              "\"bà dúi vào tay tôi chiếc áo len màu xanh còn thơm mùi nắng\"",
+              "\"Đường đan có chỗ lệch, chỗ chật, chỗ lỏng\"",
+              "\"chiếc áo len ấm hơn bất cứ thứ gì tôi từng có\""
+            ],
+            "correctIndex": 0,
+            "explanation": "Chi tiết tự thú 'mải mê với chiếc điện thoại', 'chẳng mấy khi để ý' cho thấy sự vô tâm của tuổi mới lớn trước sự hi sinh thầm lặng của bà.",
+            "trapTip": "Đọc kĩ yêu cầu: tìm chi tiết thể hiện sự VÔ TÂM, không phải chi tiết về tình yêu của bà."
+          },
+          {
+            "id": "l_hcm25m2_q03",
+            "topic": "Phần 1 - Đọc hiểu: Ý nghĩa chi tiết nghệ thuật",
+            "difficulty": "Thông hiểu",
+            "question": "Chi tiết \"Đường đan có chỗ lệch, chỗ chật, chỗ lỏng\" có ý nghĩa gì?",
+            "options": [
+              "Gợi đôi mắt đã mờ và sự cặm cụi, hi sinh thầm lặng của bà; mỗi mũi kim lệch chứa đựng tình yêu thương dành cho cháu",
+              "Cho thấy bà không biết đan len",
+              "Chê trách chất lượng chiếc áo len kém",
+              "Thể hiện sự vội vàng, qua loa của bà"
+            ],
+            "correctIndex": 0,
+            "explanation": "Ngay sau chi tiết, nhân vật 'tôi' tự lí giải: 'mỗi mũi kim lệch ấy là một lần bà phải lần mò trong ánh sáng yếu ớt'. Sự không hoàn hảo của chiếc áo lại là minh chứng cho tình yêu và sự nhọc nhằn của bà.",
+            "trapTip": "Chi tiết 'không hoàn hảo' trong văn chương thường mang ý nghĩa sâu sắc hơn bề mặt."
+          },
+          {
+            "id": "l_hcm25m2_q04",
+            "topic": "Phần 1 - Đọc hiểu: Sự thay đổi nhận thức của nhân vật",
+            "difficulty": "Vận dụng",
+            "question": "Câu kết \"chiếc áo len ấm hơn bất cứ thứ gì tôi từng có\" thể hiện điều gì ở nhân vật \"tôi\"?",
+            "options": [
+              "Sự thức tỉnh, thấu hiểu và biết ơn: cái \"ấm\" không chỉ là hơi ấm của len mà là hơi ấm tình thương của bà",
+              "Sự hài lòng vì có chiếc áo đắt tiền nhất",
+              "Sự phàn nàn về thời tiết lạnh giá của thành phố",
+              "Sự ân hận vì đã làm mất chiếc áo"
+            ],
+            "correctIndex": 0,
+            "explanation": "Phép so sánh 'ấm hơn bất cứ thứ gì' mang nghĩa hàm ẩn: hơi ấm tình thân nâng đỡ người cháu giữa 'phố thị xa lạ'. Nhân vật đã chuyển từ vô tâm sang thấu hiểu, trân trọng.",
+            "trapTip": "Chú ý nghĩa hàm ẩn của từ 'ấm' - từ nghĩa vật chất chuyển sang nghĩa tinh thần."
+          },
+          {
+            "id": "l_hcm25m2_q05",
+            "topic": "Phần 1 - Viết đoạn văn nghị luận văn học (khoảng 200 chữ)",
+            "difficulty": "Vận dụng",
+            "question": "Khi viết đoạn văn phân tích hình ảnh chiếc áo len trong truyện, ý nào cần được triển khai trọng tâm?",
+            "options": [
+              "Chiếc áo len là biểu tượng của tình bà cháu và sự hi sinh thầm lặng; qua đó truyện gợi bài học về sự thấu hiểu, biết ơn người thân",
+              "Hướng dẫn cách đan một chiếc áo len hoàn chỉnh",
+              "So sánh giá tiền áo len tự đan và áo len mua ở cửa hàng",
+              "Kể lại thật chi tiết toàn bộ câu chuyện từ đầu đến cuối"
+            ],
+            "correctIndex": 0,
+            "explanation": "Đoạn văn nghị luận văn học cần phân tích ý nghĩa biểu tượng của hình ảnh (tình thương, sự hi sinh), nghệ thuật xây dựng chi tiết và thông điệp, tránh kể lại cốt truyện.",
+            "trapTip": "Phân tích ≠ kể lại. Mỗi câu kể chỉ nên đi kèm lời bình về ý nghĩa."
+          }
+        ]),
+        withPassage(HCM_P2_TITLE, HCM_P2, [
+          {
+            "id": "l_hcm25m2_q06",
+            "topic": "Phần 2 - Đọc hiểu văn bản nghị luận: Luận đề",
+            "difficulty": "Nhận biết",
+            "question": "Theo văn bản, lòng biết ơn bắt đầu từ đâu?",
+            "options": [
+              "Từ khả năng nhận ra mọi điều tốt đẹp ta có đều mang dấu vết của người khác",
+              "Từ những lời cảm ơn được nói ra cho phải phép",
+              "Từ việc tặng quà thật đắt tiền cho người giúp mình",
+              "Từ những quy định bắt buộc trong trường học"
+            ],
+            "correctIndex": 0,
+            "explanation": "Câu văn: 'Nó bắt đầu từ khả năng nhận ra rằng mọi điều tốt đẹp ta đang có đều mang dấu vết của người khác'.",
+            "trapTip": "Văn bản phủ định 'không phải là những lời cảm ơn được nói ra cho phải phép' - đừng chọn nhầm."
+          },
+          {
+            "id": "l_hcm25m2_q07",
+            "topic": "Phần 2 - Đọc hiểu: Vai trò của bằng chứng",
+            "difficulty": "Thông hiểu",
+            "question": "Việc tác giả đưa ra các hình ảnh \"người nông dân\", \"người lao công\", \"thầy cô\" có tác dụng gì?",
+            "options": [
+              "Là bằng chứng gần gũi, cụ thể giúp làm sáng tỏ ý: điều tốt đẹp ta có đều nhờ công sức người khác",
+              "Liệt kê các nghề nghiệp phổ biến trong xã hội",
+              "Phê phán những người lao động chân tay",
+              "Kể chuyện về cuộc đời của ba nhân vật"
+            ],
+            "correctIndex": 0,
+            "explanation": "Ba hình ảnh đời thường (bữa cơm, con đường sạch, bài giảng hay) là bằng chứng cụ thể, giàu sức thuyết phục, giúp người đọc dễ liên hệ và đồng cảm.",
+            "trapTip": "Trong văn nghị luận, bằng chứng luôn phục vụ cho lí lẽ đứng trước nó."
+          },
+          {
+            "id": "l_hcm25m2_q08",
+            "topic": "Phần 2 - Đọc hiểu: Phép lập luận đối lập",
+            "difficulty": "Thông hiểu",
+            "question": "Đoạn văn thứ hai sử dụng cách lập luận nào để làm nổi bật giá trị của lòng biết ơn?",
+            "options": [
+              "Đối lập giữa người biết ơn (sống tử tế) và kẻ coi mọi thứ là hiển nhiên (vô cảm, chỉ biết đòi hỏi)",
+              "Kể chuyện theo trình tự thời gian",
+              "Miêu tả ngoại hình nhân vật",
+              "Liệt kê số liệu thống kê"
+            ],
+            "correctIndex": 0,
+            "explanation": "Từ nối 'Ngược lại' đánh dấu phép đối lập: người biết ơn 'sống tử tế hơn' >< kẻ vô ơn 'trở nên vô cảm'. Sự tương phản khẳng định mạnh mẽ ý nghĩa của lòng biết ơn.",
+            "trapTip": "Phép đối lập (phản đề) giúp lập luận chặt chẽ và thuyết phục hơn."
+          },
+          {
+            "id": "l_hcm25m2_q09",
+            "topic": "Phần 2 - Đọc hiểu: Liên hệ hai văn bản",
+            "difficulty": "Vận dụng",
+            "question": "Nhân vật \"tôi\" trong truyện 'Chiếc áo len của bà' (Phần 1) đã thể hiện điều gì được bàn luận trong văn bản 'Lòng biết ơn' (Phần 2)?",
+            "options": [
+              "Hành trình từ coi tình thương của bà là hiển nhiên đến khi nhận ra \"dấu vết\" hi sinh của bà trong món quà mình nhận",
+              "Sự vô cảm kéo dài đến cuối câu chuyện",
+              "Việc nói lời cảm ơn cho phải phép",
+              "Thói quen đòi hỏi vật chất từ người thân"
+            ],
+            "correctIndex": 0,
+            "explanation": "Nhân vật 'tôi' ban đầu vô tâm, sau đó 'chợt hiểu' mỗi mũi kim lệch là công sức của bà - đúng với khởi điểm của lòng biết ơn mà Phần 2 nêu: nhận ra dấu vết của người khác trong điều tốt đẹp mình có.",
+            "trapTip": "Câu hỏi liên văn bản yêu cầu tìm điểm giao nhau về tư tưởng của hai ngữ liệu."
+          },
+          {
+            "id": "l_hcm25m2_q10",
+            "topic": "Phần 2 - Đọc hiểu: Thông điệp rút ra",
+            "difficulty": "Thông hiểu",
+            "question": "Thông điệp ý nghĩa nhất từ văn bản 'Lòng biết ơn' là gì?",
+            "options": [
+              "Hãy trân trọng công sức của người khác và biết cho đi, bởi lòng biết ơn khiến ta sống tử tế, gắn kết hơn",
+              "Chỉ cần cảm ơn khi được người khác tặng quà",
+              "Mọi thứ ta có đều do bản thân tự làm ra",
+              "Người lao động chân tay cần được trả lương cao hơn"
+            ],
+            "correctIndex": 0,
+            "explanation": "Văn bản khẳng định: biết ơn là nhận ra công sức người khác; người biết ơn sống tử tế và biết cho đi.",
+            "trapTip": "Thông điệp phải khái quát, hướng đến nhận thức và hành động."
+          },
+          {
+            "id": "l_hcm25m2_q11",
+            "topic": "Phần 2 - Viết bài văn nghị luận xã hội: Bằng chứng phù hợp",
+            "difficulty": "Vận dụng",
+            "question": "Khi viết bài nghị luận xã hội về \"lối sống biết ơn của người trẻ hôm nay\", bằng chứng nào sau đây phù hợp và thuyết phục nhất?",
+            "options": [
+              "Phong trào học sinh viết thư tri ân, thăm hỏi thầy cô, cựu chiến binh, các Mẹ Việt Nam anh hùng nhân dịp 20/11 và 27/7",
+              "Câu chuyện một ca sĩ nổi tiếng mua siêu xe mới",
+              "Số liệu không rõ nguồn về lượng người dùng mạng xã hội",
+              "Giai thoại tự bịa đặt để bài văn hấp dẫn hơn"
+            ],
+            "correctIndex": 0,
+            "explanation": "Bằng chứng cần xác thực, tiêu biểu và đúng vấn đề. Các hoạt động tri ân ngày 20/11 (Nhà giáo Việt Nam) và 27/7 (Thương binh - Liệt sĩ) là minh chứng gần gũi, thuyết phục cho lối sống biết ơn.",
+            "trapTip": "Tuyệt đối không bịa đặt số liệu, dẫn chứng - giám khảo sẽ trừ điểm."
+          },
+          {
+            "id": "l_hcm25m2_q12",
+            "topic": "Phần 2 - Viết bài văn nghị luận xã hội: Phản đề và mở rộng",
+            "difficulty": "Vận dụng cao",
+            "question": "Ý phản đề (mở rộng vấn đề) nào phù hợp nhất cho bài văn về lòng biết ơn?",
+            "options": [
+              "Phê phán lối sống vô ơn, coi mọi sự giúp đỡ là hiển nhiên; đồng thời lưu ý biết ơn cần chân thành, không phải sự xu nịnh hay \"trả ơn\" cho có lệ",
+              "Khẳng định lòng biết ơn là không cần thiết trong xã hội hiện đại",
+              "Cho rằng chỉ người lớn tuổi mới cần có lòng biết ơn",
+              "Lặp lại nguyên văn phần mở bài"
+            ],
+            "correctIndex": 0,
+            "explanation": "Phản đề tốt vừa phê phán biểu hiện trái ngược (vô ơn), vừa phân biệt biết ơn chân thành với biểu hiện lệch lạc (xu nịnh, hình thức), giúp bài viết có chiều sâu và đa chiều.",
+            "trapTip": "Phản đề không phải là phủ nhận vấn đề, mà là nhìn từ mặt trái để khẳng định vấn đề sâu sắc hơn."
+          }
+        ])
+      )
+    },
+    {
+      "id": "lit_exam_national_mock_2024_02",
+      "title": "Đề thi thử Tuyển sinh Lớp 10 Môn Ngữ Văn - Đề số 02 (Chuẩn GDPT 2018 Toàn Quốc - Chủ đề 'Phẩm chất & Trách nhiệm')",
+      "subject": "literature",
+      "year": 2024,
+      "location": "Toàn quốc",
+      "isOfficial": false,
+      "badgeText": "📝 Thi thử Toàn quốc",
+      "durationMinutes": 120,
+      "totalQuestions": 12,
+      "description": "Đề thi thử chuẩn cấu trúc GDPT 2018 áp dụng toàn quốc (120 phút). Phần I: Đọc hiểu bài ca dao 'Trong đầm gì đẹp bằng sen' - thể thơ, câu hỏi tu từ, phép đảo trật tự, ý nghĩa ẩn dụ và viết đoạn văn nghị luận văn học. Phần II: Đọc hiểu văn bản nghị luận 'Sống xanh bắt đầu từ việc nhỏ' và viết bài văn nghị luận xã hội về trách nhiệm bảo vệ môi trường của học sinh.",
+      "questions": [].concat(
+        withPassage(TQ_P1_TITLE, TQ_P1, [
+          {
+            "id": "l_tq24m2_q01",
+            "topic": "Phần I - Đọc hiểu văn bản văn học: Câu hỏi tu từ",
+            "difficulty": "Nhận biết",
+            "question": "Câu \"Trong đầm gì đẹp bằng sen\" là kiểu câu gì xét theo mục đích nói?",
+            "options": [
+              "Câu hỏi tu từ - dùng hình thức câu hỏi để khẳng định không gì đẹp bằng sen",
+              "Câu hỏi thông thường nhằm tìm câu trả lời",
+              "Câu cầu khiến",
+              "Câu cảm thán bộc lộ sự ngạc nhiên"
+            ],
+            "correctIndex": 0,
+            "explanation": "Câu có hình thức nghi vấn ('gì... bằng') nhưng không nhằm hỏi mà khẳng định vẻ đẹp vượt trội của hoa sen ⇒ câu hỏi tu từ.",
+            "trapTip": "Câu hỏi tu từ: người nói đã biết câu trả lời, dùng để khẳng định hoặc nhấn mạnh."
+          },
+          {
+            "id": "l_tq24m2_q02",
+            "topic": "Phần I - Đọc hiểu: Phép đảo trật tự từ ngữ",
+            "difficulty": "Thông hiểu",
+            "question": "Câu 2 \"Lá xanh bông trắng lại chen nhị vàng\" và câu 3 \"Nhị vàng bông trắng lá xanh\" có điểm gì đặc biệt về nghệ thuật?",
+            "options": [
+              "Đảo ngược trật tự miêu tả (từ ngoài vào trong rồi từ trong ra ngoài), vừa tạo nhịp liền mạch vừa khắc họa trọn vẹn vẻ đẹp hài hòa của sen",
+              "Lặp lại do tác giả dân gian thiếu từ ngữ",
+              "Liệt kê các loài hoa khác nhau trong đầm",
+              "So sánh sen với các loài hoa khác"
+            ],
+            "correctIndex": 0,
+            "explanation": "Câu 2 tả từ ngoài vào (lá - bông - nhị), câu 3 tả ngược từ trong ra (nhị - bông - lá). Phép điệp và đảo trật tự tạo cấu trúc vòng tròn, nhấn mạnh sự hài hòa màu sắc xanh - trắng - vàng.",
+            "trapTip": "Chú ý trình tự miêu tả: ngoài ⇒ trong rồi trong ⇒ ngoài."
+          },
+          {
+            "id": "l_tq24m2_q03",
+            "topic": "Phần I - Đọc hiểu: Ý nghĩa ẩn dụ",
+            "difficulty": "Thông hiểu",
+            "question": "Câu \"Gần bùn mà chẳng hôi tanh mùi bùn\" ẩn dụ cho phẩm chất nào của con người?",
+            "options": [
+              "Dù sống trong môi trường xấu vẫn giữ được phẩm chất trong sạch, thanh cao",
+              "Con người cần tránh xa nơi bùn lầy",
+              "Con người dễ bị môi trường xung quanh làm thay đổi",
+              "Người nông dân vất vả khi làm việc trên đồng ruộng"
+            ],
+            "correctIndex": 0,
+            "explanation": "Sen mọc từ bùn nhưng không nhiễm mùi bùn ⇒ ẩn dụ cho người có bản lĩnh, giữ gìn nhân cách trong sạch dù hoàn cảnh sống không thuận lợi.",
+            "trapTip": "Quan hệ từ 'mà' (gần bùn MÀ chẳng hôi tanh) thể hiện ý tương phản quan trọng."
+          },
+          {
+            "id": "l_tq24m2_q04",
+            "topic": "Phần I - Đọc hiểu: Nhận biết thể thơ và vần",
+            "difficulty": "Nhận biết",
+            "question": "Trong câu lục bát \"Trong đầm gì đẹp bằng sen / Lá xanh bông trắng lại chen nhị vàng\", tiếng nào gieo vần với \"sen\"?",
+            "options": ["chen", "xanh", "vàng", "trắng"],
+            "correctIndex": 0,
+            "explanation": "Luật lục bát: tiếng thứ 6 câu lục vần với tiếng thứ 6 câu bát. Tiếng thứ 6 câu lục là 'sen', tiếng thứ 6 câu bát là 'chen' ⇒ vần 'en'.",
+            "trapTip": "Đếm đúng vị trí tiếng thứ 6 của câu bát: Lá(1) xanh(2) bông(3) trắng(4) lại(5) chen(6)."
+          },
+          {
+            "id": "l_tq24m2_q05",
+            "topic": "Phần I - Viết đoạn văn nghị luận văn học (khoảng 200 chữ)",
+            "difficulty": "Vận dụng",
+            "question": "Khi viết đoạn văn cảm nhận về vẻ đẹp của hoa sen trong bài ca dao, hệ thống ý nào là hợp lí nhất?",
+            "options": [
+              "Vẻ đẹp hình thức (màu sắc hài hòa, phép đảo trật tự) ⇒ vẻ đẹp phẩm chất (gần bùn mà không hôi tanh) ⇒ liên hệ phẩm chất con người Việt Nam",
+              "Đặc điểm sinh học của cây sen ⇒ cách trồng sen ⇒ giá trị kinh tế của sen",
+              "Kể lại một chuyến đi ngắm sen ở Đồng Tháp",
+              "Liệt kê các bài hát có hình ảnh hoa sen"
+            ],
+            "correctIndex": 0,
+            "explanation": "Đoạn văn nghị luận văn học cần đi từ tầng nghĩa tả thực (hình thức) đến tầng nghĩa biểu tượng (phẩm chất), kết hợp phân tích nghệ thuật và liên hệ ý nghĩa.",
+            "trapTip": "Không biến đoạn văn nghị luận văn học thành bài thuyết minh về cây sen."
+          }
+        ]),
+        withPassage(TQ_P2_TITLE, TQ_P2, [
+          {
+            "id": "l_tq24m2_q06",
+            "topic": "Phần II - Đọc hiểu văn bản nghị luận: Ý chính",
+            "difficulty": "Nhận biết",
+            "question": "Theo văn bản, \"sống xanh\" bắt đầu từ đâu?",
+            "options": [
+              "Từ những việc rất nhỏ như mang bình nước cá nhân, từ chối ống hút nhựa, phân loại rác, tắt điện khi ra khỏi phòng",
+              "Từ những dự án lớn của chính phủ",
+              "Từ việc mua sắm thật nhiều đồ dùng mới",
+              "Từ việc chỉ tuyên truyền khẩu hiệu"
+            ],
+            "correctIndex": 0,
+            "explanation": "Văn bản nêu rõ: 'Nó bắt đầu từ những việc rất nhỏ: mang theo bình nước cá nhân, từ chối ống hút nhựa, phân loại rác tại nhà, tắt điện khi ra khỏi phòng'.",
+            "trapTip": "Văn bản khẳng định sống xanh 'không phải là khẩu hiệu xa vời'."
+          },
+          {
+            "id": "l_tq24m2_q07",
+            "topic": "Phần II - Đọc hiểu: Biện pháp đối lập",
+            "difficulty": "Thông hiểu",
+            "question": "Câu \"Một chiếc túi ni lông có thể chỉ được dùng trong vài phút, nhưng phải mất hàng trăm năm mới phân hủy\" sử dụng biện pháp gì và nhằm mục đích gì?",
+            "options": [
+              "Đối lập thời gian (vài phút >< hàng trăm năm) - làm nổi bật sự lãng phí và tác hại lâu dài của rác thải nhựa",
+              "Nhân hóa chiếc túi ni lông - làm câu văn sinh động",
+              "Nói giảm nói tránh - làm nhẹ đi vấn đề ô nhiễm",
+              "Hoán dụ - lấy túi ni lông chỉ toàn bộ ngành công nghiệp"
+            ],
+            "correctIndex": 0,
+            "explanation": "Sự chênh lệch khổng lồ giữa thời gian sử dụng (vài phút) và thời gian phân hủy (hàng trăm năm) tạo ấn tượng mạnh, cảnh tỉnh người đọc về hậu quả của thói quen dùng đồ nhựa một lần.",
+            "trapTip": "Quan hệ từ 'nhưng' là dấu hiệu của phép đối lập, tương phản."
+          },
+          {
+            "id": "l_tq24m2_q08",
+            "topic": "Phần II - Đọc hiểu: Lập luận nhân quả",
+            "difficulty": "Thông hiểu",
+            "question": "Chi tiết chai nhựa \"vỡ thành hạt vi nhựa và quay trở lại bữa ăn của chính chúng ta\" có tác dụng gì trong lập luận?",
+            "options": [
+              "Chỉ ra mối quan hệ nhân quả: hành vi xả rác bừa bãi gây hậu quả trực tiếp cho chính con người, tăng sức thuyết phục",
+              "Cung cấp công thức nấu ăn mới",
+              "Ca ngợi tính bền của nhựa",
+              "Kể lại hành trình du lịch biển"
+            ],
+            "correctIndex": 0,
+            "explanation": "Lập luận theo chuỗi nhân quả (vứt chai nhựa ⇒ ra biển ⇒ vi nhựa ⇒ chuỗi thức ăn ⇒ bữa ăn của ta) giúp người đọc thấy vấn đề môi trường gắn liền với lợi ích của chính mình.",
+            "trapTip": "Nhận diện chuỗi nguyên nhân - kết quả để phân tích sức thuyết phục của lập luận."
+          },
+          {
+            "id": "l_tq24m2_q09",
+            "topic": "Phần II - Đọc hiểu: Hiểu câu văn giàu hàm ý",
+            "difficulty": "Vận dụng",
+            "question": "Câu \"Trái Đất không cần một vài người sống xanh hoàn hảo, mà cần hàng triệu người cùng sống xanh dù chưa hoàn hảo\" có ý nghĩa gì?",
+            "options": [
+              "Sức mạnh của hành động tập thể: mỗi người góp một việc nhỏ, dù chưa hoàn hảo, còn ý nghĩa hơn sự hoàn hảo của số ít",
+              "Chỉ những người hoàn hảo mới có thể bảo vệ môi trường",
+              "Bảo vệ môi trường là việc không thể thực hiện",
+              "Con người không cần quan tâm đến môi trường"
+            ],
+            "correctIndex": 0,
+            "explanation": "Câu văn sử dụng cấu trúc đối lập 'không cần... mà cần...' để khẳng định: sự tham gia rộng rãi quan trọng hơn sự hoàn hảo, khích lệ mọi người bắt đầu hành động ngay.",
+            "trapTip": "Cấu trúc 'không... mà...' nhấn mạnh vế sau là điều tác giả khẳng định."
+          },
+          {
+            "id": "l_tq24m2_q10",
+            "topic": "Phần II - Đọc hiểu: Liên hệ hành động thực tế",
+            "difficulty": "Vận dụng",
+            "question": "Hành động nào của học sinh thể hiện đúng tinh thần \"sống xanh\" của văn bản?",
+            "options": [
+              "Mang bình nước cá nhân đến trường và tham gia phân loại rác tại lớp học",
+              "Mua nước đóng chai mỗi giờ ra chơi cho tiện",
+              "Chỉ chia sẻ khẩu hiệu bảo vệ môi trường lên mạng xã hội",
+              "Bật điều hòa và đèn suốt cả ngày dù không có ai trong phòng"
+            ],
+            "correctIndex": 0,
+            "explanation": "Văn bản đề cao hành động nhỏ, cụ thể, thiết thực. Mang bình nước cá nhân và phân loại rác là những việc làm đúng như văn bản đề xuất.",
+            "trapTip": "Chia sẻ khẩu hiệu mà không hành động chính là 'khẩu hiệu xa vời' văn bản phê phán."
+          },
+          {
+            "id": "l_tq24m2_q11",
+            "topic": "Phần II - Viết bài văn nghị luận xã hội: Mở bài",
+            "difficulty": "Vận dụng",
+            "question": "Mở bài nào phù hợp nhất cho bài văn nghị luận về \"trách nhiệm bảo vệ môi trường của học sinh\"?",
+            "options": [
+              "Mỗi ngày, Trái Đất đang phải gồng mình gánh chịu hàng núi rác thải nhựa do chính con người tạo ra. Trong bối cảnh ấy, trách nhiệm bảo vệ môi trường không của riêng ai, và học sinh - thế hệ chủ nhân tương lai - càng cần ý thức sâu sắc điều đó.",
+              "Môi trường là gì? Em không biết.",
+              "Hôm qua em đi chơi công viên và ăn kem rất ngon.",
+              "Bài văn của em sẽ nói về rất nhiều vấn đề khác nhau trong cuộc sống."
+            ],
+            "correctIndex": 0,
+            "explanation": "Mở bài tốt cần dẫn dắt hợp lí (thực trạng rác thải) và nêu rõ vấn đề nghị luận (trách nhiệm bảo vệ môi trường của học sinh).",
+            "trapTip": "Mở bài phải nêu được vấn đề nghị luận, tránh lan man, lạc đề."
+          },
+          {
+            "id": "l_tq24m2_q12",
+            "topic": "Phần II - Viết bài văn nghị luận xã hội: Giải pháp và bài học",
+            "difficulty": "Vận dụng cao",
+            "question": "Phần đề xuất giải pháp trong bài văn về bảo vệ môi trường cần đáp ứng yêu cầu nào để đạt điểm tối đa?",
+            "options": [
+              "Giải pháp cụ thể, khả thi, phù hợp với lứa tuổi học sinh (hạn chế đồ nhựa, phân loại rác, tham gia hoạt động xanh) và gắn với hành động của bản thân",
+              "Đề xuất học sinh tự đóng cửa các nhà máy gây ô nhiễm",
+              "Chỉ nêu chung chung \"mọi người cần bảo vệ môi trường\"",
+              "Đổ lỗi hoàn toàn cho người lớn và các doanh nghiệp"
+            ],
+            "correctIndex": 0,
+            "explanation": "Giải pháp phải thiết thực, vừa sức và có tính hành động; đồng thời người viết cần liên hệ bản thân để bài văn chân thực, thuyết phục.",
+            "trapTip": "Tránh giải pháp viển vông, vượt quá khả năng của học sinh hoặc đổ lỗi một chiều."
+          }
+        ])
+      )
+    }
+  );
+})();

@@ -81,6 +81,63 @@ class ExamEngine {
     this.startTime = Date.now();
     this.timeRemaining = (examData.durationMinutes || 45) * 60;
 
+    // Auto-propagate shared passage / context across consecutive questions of the same group
+    let currentSharedPassage = null;
+    let currentSharedTitle = null;
+
+    this.activeExam.questions.forEach((q) => {
+      if (q.passage) {
+        currentSharedPassage = q.passage;
+        currentSharedTitle = q.passageTitle || 'Đoạn văn / Ngữ liệu đọc hiểu cho các câu hỏi cùng phần:';
+      } else if (currentSharedPassage && q.topic && (
+        q.topic.includes('Đọc hiểu') || 
+        q.topic.includes('Reading') || 
+        q.topic.includes('Cloze') || 
+        q.topic.includes('điền từ') ||
+        q.topic.includes('đoạn trích') ||
+        q.topic.includes('văn bản') ||
+        q.topic.includes('Hội thoại') ||
+        q.topic.includes('Phần 1 - Đọc hiểu') ||
+        q.topic.includes('Phần 2 - Đọc hiểu')
+      )) {
+        q.passage = currentSharedPassage;
+        q.passageTitle = currentSharedTitle;
+      } else if (!q.topic || !(
+        q.topic.includes('Đọc hiểu') || 
+        q.topic.includes('Reading') || 
+        q.topic.includes('Cloze') || 
+        q.topic.includes('điền từ') ||
+        q.topic.includes('đoạn trích') ||
+        q.topic.includes('văn bản') ||
+        q.topic.includes('Hội thoại') ||
+        q.topic.includes('Phần 1 - Đọc hiểu') ||
+        q.topic.includes('Phần 2 - Đọc hiểu')
+      )) {
+        currentSharedPassage = null;
+        currentSharedTitle = null;
+      }
+    });
+
+    // Xáo trộn ngẫu nhiên thứ tự phương án và cập nhật lại correctIndex tương ứng
+    this.activeExam.questions.forEach((q) => {
+      if (q.options && q.options.length > 1) {
+        const origOptions = [...q.options];
+        const origCorrectIdx = typeof q.correctIndex === 'number' ? q.correctIndex : (typeof q.correct === 'number' ? q.correct : 0);
+        
+        // Fisher-Yates shuffle
+        const indices = origOptions.map((_, i) => i);
+        for (let i = indices.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [indices[i], indices[j]] = [indices[j], indices[i]];
+        }
+
+        q.options = indices.map(i => origOptions[i]);
+        const newCorrectIdx = indices.indexOf(origCorrectIdx);
+        q.correctIndex = newCorrectIdx >= 0 ? newCorrectIdx : 0;
+        q.correct = q.correctIndex;
+      }
+    });
+
     // Update Header
     if (this.examTitleBadge) {
       this.examTitleBadge.textContent = this.activeExam.title;
@@ -145,7 +202,26 @@ class ExamEngine {
     if (this.totalQuestionsSeq) this.totalQuestionsSeq.textContent = `/ ${this.activeExam.questions.length}`;
     if (this.questionTopic) this.questionTopic.textContent = q.topic || "Kiến thức chung";
     if (this.questionDifficulty) this.questionDifficulty.textContent = q.difficulty || "Thông hiểu";
-    if (this.questionBody) this.questionBody.innerHTML = q.question;
+    
+    // Render question body with stimulus if present
+    if (this.questionBody) {
+      let contentHtml = '';
+      if (q.passage) {
+        contentHtml += `
+          <div class="exam-shared-stimulus-card">
+            <div class="stimulus-header">
+              <i data-lucide="book-open" style="width: 15px; height: 15px;"></i>
+              <span>${q.passageTitle || 'Đoạn văn / Ngữ liệu đọc hiểu cho các câu hỏi cùng phần:'}</span>
+            </div>
+            <div class="stimulus-body">
+              ${q.passage}
+            </div>
+          </div>
+        `;
+      }
+      contentHtml += `<div class="question-main-text">${q.question}</div>`;
+      this.questionBody.innerHTML = contentHtml;
+    }
 
     const mobileProgress = document.getElementById('mobileExamProgressText');
     if (mobileProgress) {
@@ -432,6 +508,11 @@ class ExamEngine {
 
     // Save to storage
     window.storageManager.saveExamResult(resultPayload);
+
+    // Save to userManager for active student tracking
+    if (window.userManager) {
+      window.userManager.recordExamForCurrentStudent(resultPayload);
+    }
 
     // Audio & Confetti
     if (score >= 8.0) {

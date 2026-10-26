@@ -178,7 +178,18 @@ class ReviewEngine {
           <div>${statusBadge}</div>
         </div>
 
-        <div class="question-body" style="margin-bottom: 1.25rem;">
+        ${q.passage ? `
+          <div class="exam-shared-stimulus-card" style="margin-bottom: 1rem;">
+            <div class="stimulus-header">
+              <i data-lucide="book-open" style="width: 15px; height: 15px;"></i>
+              <span>${q.passageTitle || 'Đoạn văn / Ngữ liệu đọc hiểu:'}</span>
+            </div>
+            <div class="stimulus-body">
+              ${q.passage}
+            </div>
+          </div>
+        ` : ''}
+        <div class="question-body question-main-text" style="margin-bottom: 1.25rem;">
           ${q.question}
         </div>
 
@@ -274,7 +285,18 @@ class ReviewEngine {
           </button>
         </div>
 
-        <div class="question-body" style="margin-bottom: 1rem; font-size: 1.05rem;">
+        ${m.passage ? `
+          <div class="exam-shared-stimulus-card" style="margin-bottom: 1rem;">
+            <div class="stimulus-header">
+              <i data-lucide="book-open" style="width: 15px; height: 15px;"></i>
+              <span>${m.passageTitle || 'Đoạn văn / Ngữ liệu đọc hiểu:'}</span>
+            </div>
+            <div class="stimulus-body">
+              ${m.passage}
+            </div>
+          </div>
+        ` : ''}
+        <div class="question-body question-main-text" style="margin-bottom: 1rem; font-size: 1.05rem;">
           ${m.question}
         </div>
 

@@ -1,6 +1,7 @@
 // =========================================================
 // EDUPASS 10 - KHO ĐỀ THI TUYỂN SINH VÀO 10 CÁC NĂM (2022 - 2024)
 // Đề thi chính thức Sở GD&ĐT TP.HCM, Sở GD&ĐT Hà Nội & Toàn Quốc
+// Ngữ liệu đoạn văn/bài đọc luôn hiển thị đầy đủ trên mọi câu hỏi cùng bài
 // =========================================================
 
 window.ENGLISH_EXAMS = [
@@ -22,10 +23,10 @@ window.ENGLISH_EXAMS = [
         "difficulty": "Nhận biết",
         "question": "Choose the word whose underlined part is pronounced differently from the others: **ch<u>ea</u>p**, **h<u>ea</u>t**, **cl<u>ea</u>n**, **thr<u>ea</u>t**",
         "options": [
-          "threat (/e/)",
-          "cheap (/iː/)",
-          "heat (/iː/)",
-          "clean (/iː/)"
+          "threat",
+          "cheap",
+          "heat",
+          "clean"
         ],
         "correctIndex": 0,
         "correct": 0,
@@ -37,10 +38,10 @@ window.ENGLISH_EXAMS = [
         "difficulty": "Nhận biết",
         "question": "Choose the word whose underlined part is pronounced differently from the others: **discover<u>ed</u>**, **announc<u>ed</u>**, **look<u>ed</u>**, **watch<u>ed</u>**",
         "options": [
-          "discovered (/d/)",
-          "announced (/t/)",
-          "looked (/t/)",
-          "watched (/t/)"
+          "discovered",
+          "announced",
+          "looked",
+          "watched"
         ],
         "correctIndex": 0,
         "correct": 0,
@@ -52,10 +53,10 @@ window.ENGLISH_EXAMS = [
         "difficulty": "Thông hiểu",
         "question": "Choose the word that has a different stress pattern from the others: **create**, **protect**, **machine**, **future**",
         "options": [
-          "future (trọng âm 1)",
-          "create (trọng âm 2)",
-          "protect (trọng âm 2)",
-          "machine (trọng âm 2)"
+          "future",
+          "create",
+          "protect",
+          "machine"
         ],
         "correctIndex": 0,
         "correct": 0,
@@ -67,10 +68,10 @@ window.ENGLISH_EXAMS = [
         "difficulty": "Thông hiểu",
         "question": "Choose the word that has a different stress pattern from the others: **innovate**, **decorate**, **qualify**, **replenish**",
         "options": [
-          "replenish (trọng âm 2)",
-          "innovate (trọng âm 1)",
-          "decorate (trọng âm 1)",
-          "qualify (trọng âm 1)"
+          "replenish",
+          "innovate",
+          "decorate",
+          "qualify"
         ],
         "correctIndex": 0,
         "correct": 0,
@@ -290,7 +291,7 @@ window.ENGLISH_EXAMS = [
         "id": "e_mock25_q19",
         "topic": "Đọc điền từ (Cloze Reading - AI in Education) - Câu 19",
         "difficulty": "Thông hiểu",
-        "question": "**Read the passage and choose the best word for blank (19):**\n\n\"In the era of the Fourth Industrial Revolution, Artificial Intelligence (AI) is transforming classroom education at an unprecedented pace. Rather than replacing human educators, AI tools serve as smart learning (19)________ that tailor lessons to each student's unique learning pace and strengths.\"",
+        "question": "Choose the best word to complete blank (19) in the passage above:",
         "options": [
           "assistants",
           "obstacles",
@@ -299,13 +300,15 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "'learning assistants' (trợ lý học tập): AI đóng vai trò như những trợ lý học tập thông minh hỗ trợ giáo viên và học sinh cá nhân hóa lộ trình học tập."
+        "explanation": "'learning assistants' (trợ lý học tập): AI đóng vai trò như những trợ lý học tập thông minh hỗ trợ giáo viên và học sinh cá nhân hóa lộ trình học tập.",
+        "passageTitle": "Cloze Passage: AI Transforming Classroom Education",
+        "passage": "In the era of the Fourth Industrial Revolution, Artificial Intelligence (AI) is transforming classroom education at an unprecedented pace. Rather than replacing human educators, AI tools serve as smart learning (19)________ that tailor lessons to each student's unique learning pace and strengths.\n\nIntelligent tutoring systems can analyze test results instantly, identifying gaps in understanding and recommending personalized (20)________ exercises for each learner. Language learners can now interact with conversational chatbots in real time to hone natural pronunciation and grammatical (21)________ without feeling shy or nervous.\n\nHowever, technology is merely a facilitator. The ultimate purpose of schooling is to cultivate critical thinking, creative problem-solving, and empathetic teamwork - qualities that no machine can truly (22)________. By combining cutting-edge technology with active self-study (23)________, secondary students can master complex concepts much faster. These foundational competencies ensure that young Vietnamese graduates can thrive in an ever-evolving (24)________ world."
       },
       {
         "id": "e_mock25_q20",
         "topic": "Đọc điền từ (Cloze Reading - AI in Education) - Câu 20",
         "difficulty": "Nhận biết",
-        "question": "**Read the passage and choose the best word for blank (20):**\n\n\"Intelligent tutoring systems can analyze test results instantly, identifying gaps in understanding and recommending personalized (20)________ exercises for each learner.\"",
+        "question": "Choose the best word to complete blank (20) in the passage above:",
         "options": [
           "practice",
           "harmful",
@@ -314,13 +317,15 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "'practice exercises' (các bài tập luyện tập) là cụm từ tự nhiên và chính xác trong ngữ cảnh sư phạm rèn luyện kiến thức."
+        "explanation": "'practice exercises' (các bài tập luyện tập) là cụm từ tự nhiên và chính xác trong ngữ cảnh sư phạm rèn luyện kiến thức.",
+        "passageTitle": "Cloze Passage: AI Transforming Classroom Education",
+        "passage": "In the era of the Fourth Industrial Revolution, Artificial Intelligence (AI) is transforming classroom education at an unprecedented pace. Rather than replacing human educators, AI tools serve as smart learning (19)________ that tailor lessons to each student's unique learning pace and strengths.\n\nIntelligent tutoring systems can analyze test results instantly, identifying gaps in understanding and recommending personalized (20)________ exercises for each learner. Language learners can now interact with conversational chatbots in real time to hone natural pronunciation and grammatical (21)________ without feeling shy or nervous.\n\nHowever, technology is merely a facilitator. The ultimate purpose of schooling is to cultivate critical thinking, creative problem-solving, and empathetic teamwork - qualities that no machine can truly (22)________. By combining cutting-edge technology with active self-study (23)________, secondary students can master complex concepts much faster. These foundational competencies ensure that young Vietnamese graduates can thrive in an ever-evolving (24)________ world."
       },
       {
         "id": "e_mock25_q21",
         "topic": "Đọc điền từ (Cloze Reading - AI in Education) - Câu 21",
         "difficulty": "Thông hiểu",
-        "question": "**Read the passage and choose the best word for blank (21):**\n\n\"Language learners can now interact with conversational chatbots in real time to hone natural pronunciation and grammatical (21)________ without feeling shy or nervous.\"",
+        "question": "Choose the best word to complete blank (21) in the passage above:",
         "options": [
           "accuracy",
           "hazard",
@@ -329,13 +334,15 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "'grammatical accuracy' (độ chính xác ngữ pháp) là collocation quen thuộc trong việc học ngoại ngữ (phát âm tự nhiên và độ chuẩn xác ngữ pháp)."
+        "explanation": "'grammatical accuracy' (độ chính xác ngữ pháp) là collocation quen thuộc trong việc học ngoại ngữ (phát âm tự nhiên và độ chuẩn xác ngữ pháp).",
+        "passageTitle": "Cloze Passage: AI Transforming Classroom Education",
+        "passage": "In the era of the Fourth Industrial Revolution, Artificial Intelligence (AI) is transforming classroom education at an unprecedented pace. Rather than replacing human educators, AI tools serve as smart learning (19)________ that tailor lessons to each student's unique learning pace and strengths.\n\nIntelligent tutoring systems can analyze test results instantly, identifying gaps in understanding and recommending personalized (20)________ exercises for each learner. Language learners can now interact with conversational chatbots in real time to hone natural pronunciation and grammatical (21)________ without feeling shy or nervous.\n\nHowever, technology is merely a facilitator. The ultimate purpose of schooling is to cultivate critical thinking, creative problem-solving, and empathetic teamwork - qualities that no machine can truly (22)________. By combining cutting-edge technology with active self-study (23)________, secondary students can master complex concepts much faster. These foundational competencies ensure that young Vietnamese graduates can thrive in an ever-evolving (24)________ world."
       },
       {
         "id": "e_mock25_q22",
         "topic": "Đọc điền từ (Cloze Reading - AI in Education) - Câu 22",
         "difficulty": "Vận dụng",
-        "question": "**Read the passage and choose the best word for blank (22):**\n\n\"The ultimate purpose of schooling is to cultivate critical thinking, creative problem-solving, and empathetic teamwork - qualities that no machine can truly (22)________.\"",
+        "question": "Choose the best word to complete blank (22) in the passage above:",
         "options": [
           "replicate",
           "ignore",
@@ -344,13 +351,15 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "'replicate' (sao chép, tái tạo): tư duy phản biện, sự sáng tạo và lòng trắc ẩn của con người là những phẩm chất mà không cỗ máy nào có thể sao chép hoàn toàn."
+        "explanation": "'replicate' (sao chép, tái tạo): tư duy phản biện, sự sáng tạo và lòng trắc ẩn của con người là những phẩm chất mà không cỗ máy nào có thể sao chép hoàn toàn.",
+        "passageTitle": "Cloze Passage: AI Transforming Classroom Education",
+        "passage": "In the era of the Fourth Industrial Revolution, Artificial Intelligence (AI) is transforming classroom education at an unprecedented pace. Rather than replacing human educators, AI tools serve as smart learning (19)________ that tailor lessons to each student's unique learning pace and strengths.\n\nIntelligent tutoring systems can analyze test results instantly, identifying gaps in understanding and recommending personalized (20)________ exercises for each learner. Language learners can now interact with conversational chatbots in real time to hone natural pronunciation and grammatical (21)________ without feeling shy or nervous.\n\nHowever, technology is merely a facilitator. The ultimate purpose of schooling is to cultivate critical thinking, creative problem-solving, and empathetic teamwork - qualities that no machine can truly (22)________. By combining cutting-edge technology with active self-study (23)________, secondary students can master complex concepts much faster. These foundational competencies ensure that young Vietnamese graduates can thrive in an ever-evolving (24)________ world."
       },
       {
         "id": "e_mock25_q23",
         "topic": "Đọc điền từ (Cloze Reading - AI in Education) - Câu 23",
         "difficulty": "Thông hiểu",
-        "question": "**Read the passage and choose the best word for blank (23):**\n\n\"By combining cutting-edge technology with active self-study (23)________, secondary students can master complex concepts much faster.\"",
+        "question": "Choose the best word to complete blank (23) in the passage above:",
         "options": [
           "habits",
           "wastes",
@@ -359,13 +368,15 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "'self-study habits' (thói quen tự học): công nghệ kết hợp với thói quen chủ động tự học tạo nên hiệu quả tối ưu cho học sinh."
+        "explanation": "'self-study habits' (thói quen tự học): công nghệ kết hợp với thói quen chủ động tự học tạo nên hiệu quả tối ưu cho học sinh.",
+        "passageTitle": "Cloze Passage: AI Transforming Classroom Education",
+        "passage": "In the era of the Fourth Industrial Revolution, Artificial Intelligence (AI) is transforming classroom education at an unprecedented pace. Rather than replacing human educators, AI tools serve as smart learning (19)________ that tailor lessons to each student's unique learning pace and strengths.\n\nIntelligent tutoring systems can analyze test results instantly, identifying gaps in understanding and recommending personalized (20)________ exercises for each learner. Language learners can now interact with conversational chatbots in real time to hone natural pronunciation and grammatical (21)________ without feeling shy or nervous.\n\nHowever, technology is merely a facilitator. The ultimate purpose of schooling is to cultivate critical thinking, creative problem-solving, and empathetic teamwork - qualities that no machine can truly (22)________. By combining cutting-edge technology with active self-study (23)________, secondary students can master complex concepts much faster. These foundational competencies ensure that young Vietnamese graduates can thrive in an ever-evolving (24)________ world."
       },
       {
         "id": "e_mock25_q24",
         "topic": "Đọc điền từ (Cloze Reading - AI in Education) - Câu 24",
         "difficulty": "Nhận biết",
-        "question": "**Read the passage and choose the best word for blank (24):**\n\n\"These foundational competencies ensure that young Vietnamese graduates can thrive in an ever-evolving (24)________ world.\"",
+        "question": "Choose the best word to complete blank (24) in the passage above:",
         "options": [
           "digital",
           "primitive",
@@ -374,13 +385,15 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "'digital world' (thế giới kỹ thuật số / kỷ nguyên số) là thuật ngữ miêu tả chính xác bối cảnh thời đại ngày nay."
+        "explanation": "'digital world' (thế giới kỹ thuật số / kỷ nguyên số) là thuật ngữ miêu tả chính xác bối cảnh thời đại ngày nay.",
+        "passageTitle": "Cloze Passage: AI Transforming Classroom Education",
+        "passage": "In the era of the Fourth Industrial Revolution, Artificial Intelligence (AI) is transforming classroom education at an unprecedented pace. Rather than replacing human educators, AI tools serve as smart learning (19)________ that tailor lessons to each student's unique learning pace and strengths.\n\nIntelligent tutoring systems can analyze test results instantly, identifying gaps in understanding and recommending personalized (20)________ exercises for each learner. Language learners can now interact with conversational chatbots in real time to hone natural pronunciation and grammatical (21)________ without feeling shy or nervous.\n\nHowever, technology is merely a facilitator. The ultimate purpose of schooling is to cultivate critical thinking, creative problem-solving, and empathetic teamwork - qualities that no machine can truly (22)________. By combining cutting-edge technology with active self-study (23)________, secondary students can master complex concepts much faster. These foundational competencies ensure that young Vietnamese graduates can thrive in an ever-evolving (24)________ world."
       },
       {
         "id": "e_mock25_q25",
         "topic": "Đọc hiểu Di sản Chợ Bến Thành - Ý chính toàn bài",
         "difficulty": "Thông hiểu",
-        "question": "**Read the passage about Ben Thanh Market:**\n\n*Constructed in 1914 by the French contractor Brossard et Maupin, Ben Thanh Market is undeniably one of the most iconic architectural landmarks and cultural symbols of Ho Chi Minh City. Situated in the beating heart of District 1, the market with its world-famous southern clock tower has witnessed over a century of Saigon's historical transformation. Beyond being a bustling commercial hub with over 1,500 stalls selling traditional fabrics, handicrafts, and delectable Southern culinary delicacies, Ben Thanh Market embodies the spirit, warmth, and resilience of the local community.*\n\n*In recent years, the completion of the underground Central Metro Station right in front of the market square has breathed vibrant new vitality into the heritage quarter. Urban planners and heritage conservationists are working collaboratively on a comprehensive renovation blueprint. The primary objective is to restore the market's authentic French-colonial roof architecture and reinforce historical timber beams while upgrading fire prevention systems and pedestrian walkways. By striking a harmonious balance between historic preservation and contemporary urban dynamics, Ho Chi Minh City ensures that Ben Thanh Market remains a timeless crossroads where past heritage warmly meets future prosperity.*\n\n**What is the primary topic of the passage?**",
+        "question": "What is the primary topic of the passage?",
         "options": [
           "The historical significance, cultural value, and modern architectural conservation of Ben Thanh Market.",
           "The technical construction of underground railway tunnels in Southeast Asia.",
@@ -389,7 +402,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Đoạn văn tập trung giới thiệu lịch sử xây dựng, giá trị văn hóa biểu tượng và kế hoạch trùng tu bảo tồn kiến trúc Chợ Bến Thành trong bối cảnh quảng trường metro mới."
+        "explanation": "Đoạn văn tập trung giới thiệu lịch sử xây dựng, giá trị văn hóa biểu tượng và kế hoạch trùng tu bảo tồn kiến trúc Chợ Bến Thành trong bối cảnh quảng trường metro mới.",
+        "passageTitle": "Reading Passage: Heritage & Conservation of Ben Thanh Market",
+        "passage": "Constructed in 1914 by the French contractor Brossard et Maupin, Ben Thanh Market is undeniably one of the most iconic architectural landmarks and cultural symbols of Ho Chi Minh City. Situated in the beating heart of District 1, the market with its world-famous southern clock tower has witnessed over a century of Saigon's historical transformation. Beyond being a bustling commercial hub with over 1,500 stalls selling traditional fabrics, handicrafts, and delectable Southern culinary delicacies, Ben Thanh Market embodies the spirit, warmth, and resilience of the local community.\n\nIn recent years, the completion of the underground Central Metro Station right in front of the market square has breathed vibrant new vitality into the heritage quarter. Urban planners and heritage conservationists are working collaboratively on a comprehensive renovation blueprint. The primary objective is to restore the market's authentic French-colonial roof architecture and reinforce historical timber beams while upgrading fire prevention systems and pedestrian walkways. By striking a harmonious balance between historic preservation and contemporary urban dynamics, Ho Chi Minh City ensures that Ben Thanh Market remains a timeless crossroads where past heritage warmly meets future prosperity."
       },
       {
         "id": "e_mock25_q26",
@@ -404,7 +419,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Thông tin ở câu đầu tiên: 'Constructed in 1914 by the French contractor Brossard et Maupin...'."
+        "explanation": "Thông tin ở câu đầu tiên: 'Constructed in 1914 by the French contractor Brossard et Maupin...'.",
+        "passageTitle": "Reading Passage: Heritage & Conservation of Ben Thanh Market",
+        "passage": "Constructed in 1914 by the French contractor Brossard et Maupin, Ben Thanh Market is undeniably one of the most iconic architectural landmarks and cultural symbols of Ho Chi Minh City. Situated in the beating heart of District 1, the market with its world-famous southern clock tower has witnessed over a century of Saigon's historical transformation. Beyond being a bustling commercial hub with over 1,500 stalls selling traditional fabrics, handicrafts, and delectable Southern culinary delicacies, Ben Thanh Market embodies the spirit, warmth, and resilience of the local community.\n\nIn recent years, the completion of the underground Central Metro Station right in front of the market square has breathed vibrant new vitality into the heritage quarter. Urban planners and heritage conservationists are working collaboratively on a comprehensive renovation blueprint. The primary objective is to restore the market's authentic French-colonial roof architecture and reinforce historical timber beams while upgrading fire prevention systems and pedestrian walkways. By striking a harmonious balance between historic preservation and contemporary urban dynamics, Ho Chi Minh City ensures that Ben Thanh Market remains a timeless crossroads where past heritage warmly meets future prosperity."
       },
       {
         "id": "e_mock25_q27",
@@ -419,7 +436,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "'delectable' miêu tả các món ăn ẩm thực phương Nam thơm ngon, hấp dẫn ➔ đồng nghĩa với 'delicious and appetizing'."
+        "explanation": "'delectable' miêu tả các món ăn ẩm thực phương Nam thơm ngon, hấp dẫn ➔ đồng nghĩa với 'delicious and appetizing'.",
+        "passageTitle": "Reading Passage: Heritage & Conservation of Ben Thanh Market",
+        "passage": "Constructed in 1914 by the French contractor Brossard et Maupin, Ben Thanh Market is undeniably one of the most iconic architectural landmarks and cultural symbols of Ho Chi Minh City. Situated in the beating heart of District 1, the market with its world-famous southern clock tower has witnessed over a century of Saigon's historical transformation. Beyond being a bustling commercial hub with over 1,500 stalls selling traditional fabrics, handicrafts, and delectable Southern culinary delicacies, Ben Thanh Market embodies the spirit, warmth, and resilience of the local community.\n\nIn recent years, the completion of the underground Central Metro Station right in front of the market square has breathed vibrant new vitality into the heritage quarter. Urban planners and heritage conservationists are working collaboratively on a comprehensive renovation blueprint. The primary objective is to restore the market's authentic French-colonial roof architecture and reinforce historical timber beams while upgrading fire prevention systems and pedestrian walkways. By striking a harmonious balance between historic preservation and contemporary urban dynamics, Ho Chi Minh City ensures that Ben Thanh Market remains a timeless crossroads where past heritage warmly meets future prosperity."
       },
       {
         "id": "e_mock25_q28",
@@ -434,7 +453,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Căn cứ đoạn 2: '...the completion of the underground Central Metro Station right in front of the market square has breathed vibrant new vitality into the heritage quarter'."
+        "explanation": "Căn cứ đoạn 2: '...the completion of the underground Central Metro Station right in front of the market square has breathed vibrant new vitality into the heritage quarter'.",
+        "passageTitle": "Reading Passage: Heritage & Conservation of Ben Thanh Market",
+        "passage": "Constructed in 1914 by the French contractor Brossard et Maupin, Ben Thanh Market is undeniably one of the most iconic architectural landmarks and cultural symbols of Ho Chi Minh City. Situated in the beating heart of District 1, the market with its world-famous southern clock tower has witnessed over a century of Saigon's historical transformation. Beyond being a bustling commercial hub with over 1,500 stalls selling traditional fabrics, handicrafts, and delectable Southern culinary delicacies, Ben Thanh Market embodies the spirit, warmth, and resilience of the local community.\n\nIn recent years, the completion of the underground Central Metro Station right in front of the market square has breathed vibrant new vitality into the heritage quarter. Urban planners and heritage conservationists are working collaboratively on a comprehensive renovation blueprint. The primary objective is to restore the market's authentic French-colonial roof architecture and reinforce historical timber beams while upgrading fire prevention systems and pedestrian walkways. By striking a harmonious balance between historic preservation and contemporary urban dynamics, Ho Chi Minh City ensures that Ben Thanh Market remains a timeless crossroads where past heritage warmly meets future prosperity."
       },
       {
         "id": "e_mock25_q29",
@@ -636,10 +657,10 @@ window.ENGLISH_EXAMS = [
         "difficulty": "Nhận biết",
         "question": "Choose the word whose underlined part is pronounced differently from the others: **fl<u>oo</u>d**, **t<u>oo</u>th**, **f<u>oo</u>d**, **sch<u>oo</u>l**",
         "options": [
-          "flood (/ʌ/)",
-          "tooth (/uː/)",
-          "food (/uː/)",
-          "school (/uː/)"
+          "flood",
+          "tooth",
+          "food",
+          "school"
         ],
         "correctIndex": 0,
         "correct": 0,
@@ -651,10 +672,10 @@ window.ENGLISH_EXAMS = [
         "difficulty": "Nhận biết",
         "question": "Choose the word whose underlined part is pronounced differently from the others: **protect<u>s</u>**, **laugh<u>s</u>**, **clean<u>s</u>**, **stop<u>s</u>**",
         "options": [
-          "cleans (/z/)",
-          "protects (/s/)",
-          "laughs (/s/)",
-          "stops (/s/)"
+          "cleans",
+          "protects",
+          "laughs",
+          "stops"
         ],
         "correctIndex": 0,
         "correct": 0,
@@ -666,10 +687,10 @@ window.ENGLISH_EXAMS = [
         "difficulty": "Thông hiểu",
         "question": "Choose the word that has a different stress pattern from the others: **pollute**, **provide**, **solar**, **reduce**",
         "options": [
-          "solar (trọng âm 1)",
-          "pollute (trọng âm 2)",
-          "provide (trọng âm 2)",
-          "reduce (trọng âm 2)"
+          "solar",
+          "pollute",
+          "provide",
+          "reduce"
         ],
         "correctIndex": 0,
         "correct": 0,
@@ -681,10 +702,10 @@ window.ENGLISH_EXAMS = [
         "difficulty": "Thông hiểu",
         "question": "Choose the word that has a different stress pattern from the others: **emission**, **energy**, **natural**, **dangerous**",
         "options": [
-          "emission (trọng âm 2)",
-          "energy (trọng âm 1)",
-          "natural (trọng âm 1)",
-          "dangerous (trọng âm 1)"
+          "emission",
+          "energy",
+          "natural",
+          "dangerous"
         ],
         "correctIndex": 0,
         "correct": 0,
@@ -874,7 +895,7 @@ window.ENGLISH_EXAMS = [
         "id": "e25_q17",
         "topic": "Đọc điền từ (Cloze Reading - Green Urban Transit) - Câu 17",
         "difficulty": "Thông hiểu",
-        "question": "**Read the passage and choose the best word for blank (17):**\n\n\"In recent years, Ho Chi Minh City has taken decisive steps toward becoming an environmentally sustainable and smart metropolis. One of the central pillars of this strategy is modernizing urban transportation. The commercial operation of Metro Line 1 (Ben Thanh - Suoi Tien) represents a momentous milestone, offering hundreds of thousands of commuters a fast, safe, and zero-emission (17)________ to motorbikes and private cars.\"",
+        "question": "Choose the best option to complete blank (17) in the passage above:",
         "options": [
           "alternative",
           "hindrance",
@@ -883,13 +904,15 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "'alternative to something' (giải pháp thay thế cho...) là danh từ phù hợp nhất: Tuyến Metro số 1 mang lại giải pháp thay thế không phát thải cho xe máy và ô tô cá nhân."
+        "explanation": "'alternative to something' (giải pháp thay thế cho...) là danh từ phù hợp nhất: Tuyến Metro số 1 mang lại giải pháp thay thế không phát thải cho xe máy và ô tô cá nhân.",
+        "passageTitle": "Cloze Passage: Green Urban Transit in Ho Chi Minh City",
+        "passage": "Ho Chi Minh City is accelerating its transition toward environmentally friendly public transportation. With the operation of the first underground Metro line and an expanding network of VinBus electric buses, citizens are increasingly (17)________ to leave private motorbikes at home. Commuters praise the quiet, emission-free electric buses, which feature automated passenger counters and USB charging ports.\n\nTo encourage higher ridership among youth, municipal authorities offer substantial ticket (18)________ for secondary and university students. Urban planners highlight that reducing carbon emissions is crucial to (19)________ air pollution and mitigating urban heat island effects. If public awareness and infrastructure continue to improve simultaneously, the city will soon accomplish its ambitious (20)________ of cutting transport emissions by forty percent. Citizens are urged to adopt public transit not only for personal convenience, (21)________ also as a civic responsibility toward protecting our shared (22)________ environment."
       },
       {
         "id": "e25_q18",
         "topic": "Đọc điền từ (Cloze Reading - Green Urban Transit) - Câu 18",
         "difficulty": "Nhận biết",
-        "question": "**Read the passage and choose the best word for blank (18):**\n\n\"Alongside rail transit, the city is rapidly expanding the fleet of modern electric buses, which run smoothly without generating toxic exhaust fumes or excessive noise (18)________.\"",
+        "question": "Choose the best option to complete blank (18) in the passage above:",
         "options": [
           "pollution",
           "protection",
@@ -898,13 +921,15 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Cụm danh từ 'noise pollution' (ô nhiễm tiếng ồn) là collocation phổ biến và chuẩn ngữ nghĩa trong văn cảnh giao thông công cộng không gây khói thải độc hay ô nhiễm tiếng ồn."
+        "explanation": "Cụm danh từ 'noise pollution' (ô nhiễm tiếng ồn) là collocation phổ biến và chuẩn ngữ nghĩa trong văn cảnh giao thông công cộng không gây khói thải độc hay ô nhiễm tiếng ồn.",
+        "passageTitle": "Cloze Passage: Green Urban Transit in Ho Chi Minh City",
+        "passage": "Ho Chi Minh City is accelerating its transition toward environmentally friendly public transportation. With the operation of the first underground Metro line and an expanding network of VinBus electric buses, citizens are increasingly (17)________ to leave private motorbikes at home. Commuters praise the quiet, emission-free electric buses, which feature automated passenger counters and USB charging ports.\n\nTo encourage higher ridership among youth, municipal authorities offer substantial ticket (18)________ for secondary and university students. Urban planners highlight that reducing carbon emissions is crucial to (19)________ air pollution and mitigating urban heat island effects. If public awareness and infrastructure continue to improve simultaneously, the city will soon accomplish its ambitious (20)________ of cutting transport emissions by forty percent. Citizens are urged to adopt public transit not only for personal convenience, (21)________ also as a civic responsibility toward protecting our shared (22)________ environment."
       },
       {
         "id": "e25_q19",
         "topic": "Đọc điền từ (Cloze Reading - Green Urban Transit) - Câu 19",
         "difficulty": "Nhận biết",
-        "question": "**Read the passage and choose the best word for blank (19):**\n\n\"Furthermore, community environmental consciousness has witnessed remarkable growth. Schools and local youth unions regularly organize 'Green Sunday' campaigns to dredge drainage canals and (19)________ indigenous shade trees across residential areas.\"",
+        "question": "Choose the best option to complete blank (19) in the passage above:",
         "options": [
           "plant",
           "fell",
@@ -913,13 +938,15 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "'plant trees' (trồng cây) là hành động tích cực, hoàn toàn phù hợp với ngữ cảnh 'Chủ nhật Xanh' và làm sạch kênh mương."
+        "explanation": "'plant trees' (trồng cây) là hành động tích cực, hoàn toàn phù hợp với ngữ cảnh 'Chủ nhật Xanh' và làm sạch kênh mương.",
+        "passageTitle": "Cloze Passage: Green Urban Transit in Ho Chi Minh City",
+        "passage": "Ho Chi Minh City is accelerating its transition toward environmentally friendly public transportation. With the operation of the first underground Metro line and an expanding network of VinBus electric buses, citizens are increasingly (17)________ to leave private motorbikes at home. Commuters praise the quiet, emission-free electric buses, which feature automated passenger counters and USB charging ports.\n\nTo encourage higher ridership among youth, municipal authorities offer substantial ticket (18)________ for secondary and university students. Urban planners highlight that reducing carbon emissions is crucial to (19)________ air pollution and mitigating urban heat island effects. If public awareness and infrastructure continue to improve simultaneously, the city will soon accomplish its ambitious (20)________ of cutting transport emissions by forty percent. Citizens are urged to adopt public transit not only for personal convenience, (21)________ also as a civic responsibility toward protecting our shared (22)________ environment."
       },
       {
         "id": "e25_q20",
         "topic": "Đọc điền từ (Cloze Reading - Green Urban Transit) - Câu 20",
         "difficulty": "Thông hiểu",
-        "question": "**Read the passage and choose the best word for blank (20):**\n\n\"Students are actively encouraged to bring reusable tumblers and canvas bags rather than (20)________ disposable non-biodegradable plastics.\"",
+        "question": "Choose the best option to complete blank (20) in the passage above:",
         "options": [
           "relying on",
           "giving up",
@@ -928,13 +955,15 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "'rely on' (dựa vào / phụ thuộc vào): Học sinh được khuyến khích dùng túi vải và bình nước cá nhân thay vì phụ thuộc vào đồ nhựa dùng một lần."
+        "explanation": "'rely on' (dựa vào / phụ thuộc vào): Học sinh được khuyến khích dùng túi vải và bình nước cá nhân thay vì phụ thuộc vào đồ nhựa dùng một lần.",
+        "passageTitle": "Cloze Passage: Green Urban Transit in Ho Chi Minh City",
+        "passage": "Ho Chi Minh City is accelerating its transition toward environmentally friendly public transportation. With the operation of the first underground Metro line and an expanding network of VinBus electric buses, citizens are increasingly (17)________ to leave private motorbikes at home. Commuters praise the quiet, emission-free electric buses, which feature automated passenger counters and USB charging ports.\n\nTo encourage higher ridership among youth, municipal authorities offer substantial ticket (18)________ for secondary and university students. Urban planners highlight that reducing carbon emissions is crucial to (19)________ air pollution and mitigating urban heat island effects. If public awareness and infrastructure continue to improve simultaneously, the city will soon accomplish its ambitious (20)________ of cutting transport emissions by forty percent. Citizens are urged to adopt public transit not only for personal convenience, (21)________ also as a civic responsibility toward protecting our shared (22)________ environment."
       },
       {
         "id": "e25_q21",
         "topic": "Đọc điền từ (Cloze Reading - Green Urban Transit) - Câu 21",
         "difficulty": "Thông hiểu",
-        "question": "**Read the passage and choose the best word for blank (21):**\n\n\"Urban infrastructure planners have also deployed IoT sensors that monitor the real-time Air Quality Index (AQI), helping citizens make informed daily decisions regarding outdoor (21)________.\"",
+        "question": "Choose the best option to complete blank (21) in the passage above:",
         "options": [
           "activities",
           "accidents",
@@ -943,13 +972,15 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Cụm 'outdoor activities' (các hoạt động ngoài trời): dữ liệu chỉ số chất lượng không khí giúp người dân đưa ra quyết định phù hợp khi tham gia hoạt động ngoài trời."
+        "explanation": "Cụm 'outdoor activities' (các hoạt động ngoài trời): dữ liệu chỉ số chất lượng không khí giúp người dân đưa ra quyết định phù hợp khi tham gia hoạt động ngoài trời.",
+        "passageTitle": "Cloze Passage: Green Urban Transit in Ho Chi Minh City",
+        "passage": "Ho Chi Minh City is accelerating its transition toward environmentally friendly public transportation. With the operation of the first underground Metro line and an expanding network of VinBus electric buses, citizens are increasingly (17)________ to leave private motorbikes at home. Commuters praise the quiet, emission-free electric buses, which feature automated passenger counters and USB charging ports.\n\nTo encourage higher ridership among youth, municipal authorities offer substantial ticket (18)________ for secondary and university students. Urban planners highlight that reducing carbon emissions is crucial to (19)________ air pollution and mitigating urban heat island effects. If public awareness and infrastructure continue to improve simultaneously, the city will soon accomplish its ambitious (20)________ of cutting transport emissions by forty percent. Citizens are urged to adopt public transit not only for personal convenience, (21)________ also as a civic responsibility toward protecting our shared (22)________ environment."
       },
       {
         "id": "e25_q22",
         "topic": "Đọc điền từ (Cloze Reading - Green Urban Transit) - Câu 22",
         "difficulty": "Nhận biết",
-        "question": "**Read the passage and choose the best word for blank (22):**\n\n\"By fostering sustainable daily habits, the people of Ho Chi Minh City are ensuring a greener, healthier, and more resilient urban habitat for (22)________ generations.\"",
+        "question": "Choose the best option to complete blank (22) in the passage above:",
         "options": [
           "future",
           "historic",
@@ -958,13 +989,15 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "'future generations' (các thế hệ tương lai) là cụm từ chuẩn và mang ý nghĩa phát triển bền vững cho đời sau."
+        "explanation": "'future generations' (các thế hệ tương lai) là cụm từ chuẩn và mang ý nghĩa phát triển bền vững cho đời sau.",
+        "passageTitle": "Cloze Passage: Green Urban Transit in Ho Chi Minh City",
+        "passage": "Ho Chi Minh City is accelerating its transition toward environmentally friendly public transportation. With the operation of the first underground Metro line and an expanding network of VinBus electric buses, citizens are increasingly (17)________ to leave private motorbikes at home. Commuters praise the quiet, emission-free electric buses, which feature automated passenger counters and USB charging ports.\n\nTo encourage higher ridership among youth, municipal authorities offer substantial ticket (18)________ for secondary and university students. Urban planners highlight that reducing carbon emissions is crucial to (19)________ air pollution and mitigating urban heat island effects. If public awareness and infrastructure continue to improve simultaneously, the city will soon accomplish its ambitious (20)________ of cutting transport emissions by forty percent. Citizens are urged to adopt public transit not only for personal convenience, (21)________ also as a civic responsibility toward protecting our shared (22)________ environment."
       },
       {
         "id": "e25_q23",
         "topic": "Đọc hiểu Rừng ngập mặn Cần Giờ - Ý chính (Main Idea)",
         "difficulty": "Thông hiểu",
-        "question": "**Read the passage about Can Gio Biosphere Reserve:**\n\n*Located just 40 kilometers southeast of downtown Ho Chi Minh City, the Can Gio Mangrove Forest is widely recognized as the city’s 'green lungs' and an irreplaceable ecological shield. Covering approximately 75,000 hectares, Can Gio was designated as Vietnam's first International Biosphere Reserve by UNESCO in January 2000. It is home to one of the most successfully rehabilitated mangrove ecosystems in the world after suffering catastrophic wartime deforestation.*\n\n*The mangrove forest fulfills multiple indispensable ecological functions. First and foremost, its dense root network stabilizes coastal soil, preventing shoreline erosion and dampening storm surges and high tides rolling in from the East Sea. Second, the wetland serves as an exceptional natural carbon sink. Mangroves absorb and sequester atmospheric carbon dioxide at rates three to five times higher per hectare than mature inland tropical forests. Third, the reserve acts as a vast biological filter, cleansing wastewater from industrial and domestic sources in the Saigon - Dong Nai river basin before it empties into the ocean.*\n\n*Biodiversity thrives across Can Gio's lush waterways. The reserve provides vital breeding grounds, nurseries, and feeding habitats for countless species of marine life, including mud crabs, mollusks, shrimps, and rare fish. It is also an imperative stopover for migratory waterbirds traveling along the East Asian - Australasian Flyway. Today, Can Gio is pioneering sustainable community-based ecotourism, welcoming travelers who wish to kayak through emerald canals and observe wildlife without disturbing nature.*\n\n**What is the main idea of the entire passage?**",
+        "question": "What is the primary topic of the passage?",
         "options": [
           "The ecological roles, biodiversity, and conservation significance of the Can Gio Mangrove Biosphere Reserve.",
           "The commercial advantages of developing industrial factories along the Can Gio coastline.",
@@ -973,7 +1006,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Toàn bài văn tập trung trình bày về các vai trò sinh thái thiết yếu (lá chắn bờ biển, hấp thụ CO2, lọc nước thải), sự đa dạng sinh học phong phú và ý nghĩa bảo tồn của Khu dự trữ sinh quyển Rừng ngập mặn Cần Giờ."
+        "explanation": "Toàn bài văn tập trung trình bày về các vai trò sinh thái thiết yếu (lá chắn bờ biển, hấp thụ CO2, lọc nước thải), sự đa dạng sinh học phong phú và ý nghĩa bảo tồn của Khu dự trữ sinh quyển Rừng ngập mặn Cần Giờ.",
+        "passageTitle": "Reading Passage: Can Gio Biosphere Reserve - The Green Lung",
+        "passage": "Located just 40 kilometers southeast of downtown Ho Chi Minh City, Can Gio Mangrove Biosphere Reserve is widely celebrated as the city's irreplaceable 'green lung'. Covering over 75,000 hectares, this pristine wetland ecosystem was officially designated as an International Biosphere Reserve by UNESCO in the year 2000. It harbors exceptional biodiversity, including over 150 plant species, thousands of saltwater crocodiles, migratory pelicans, and playful troupes of long-tailed macaques.\n\nBeyond its biological treasures, Can Gio plays a profound physical role in defending metropolitan Saigon against extreme climate events. The dense, entangled stilt roots of mangrove trees act as a natural seawall, dampening fierce ocean storm surges and reducing coastal wave energy by up to sixty percent. Moreover, mangrove forests absorb atmospheric carbon dioxide up to four times faster than mature tropical terrestrial rainforests, making them critical allies in the global fight against climate change.\n\nEvery year, thousands of students from across the southern region visit Can Gio to participate in reforestation field trips. By planting young mangrove saplings with their own hands, the younger generation fosters a deep emotional connection with nature and develops a lifelong commitment to ecological conservation. Protecting Can Gio ensures that Ho Chi Minh City can sustain its vibrant economic growth without sacrificing its natural defenses."
       },
       {
         "id": "e25_q24",
@@ -988,7 +1023,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Thông tin rõ ràng ở đoạn 1: 'Can Gio was designated as Vietnam's first International Biosphere Reserve by UNESCO in January 2000'."
+        "explanation": "Thông tin rõ ràng ở đoạn 1: 'Can Gio was designated as Vietnam's first International Biosphere Reserve by UNESCO in January 2000'.",
+        "passageTitle": "Reading Passage: Can Gio Biosphere Reserve - The Green Lung",
+        "passage": "Located just 40 kilometers southeast of downtown Ho Chi Minh City, Can Gio Mangrove Biosphere Reserve is widely celebrated as the city's irreplaceable 'green lung'. Covering over 75,000 hectares, this pristine wetland ecosystem was officially designated as an International Biosphere Reserve by UNESCO in the year 2000. It harbors exceptional biodiversity, including over 150 plant species, thousands of saltwater crocodiles, migratory pelicans, and playful troupes of long-tailed macaques.\n\nBeyond its biological treasures, Can Gio plays a profound physical role in defending metropolitan Saigon against extreme climate events. The dense, entangled stilt roots of mangrove trees act as a natural seawall, dampening fierce ocean storm surges and reducing coastal wave energy by up to sixty percent. Moreover, mangrove forests absorb atmospheric carbon dioxide up to four times faster than mature tropical terrestrial rainforests, making them critical allies in the global fight against climate change.\n\nEvery year, thousands of students from across the southern region visit Can Gio to participate in reforestation field trips. By planting young mangrove saplings with their own hands, the younger generation fosters a deep emotional connection with nature and develops a lifelong commitment to ecological conservation. Protecting Can Gio ensures that Ho Chi Minh City can sustain its vibrant economic growth without sacrificing its natural defenses."
       },
       {
         "id": "e25_q25",
@@ -1003,7 +1040,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Trong câu 'preventing shoreline erosion and dampening storm surges and high tides', 'dampening' mang nghĩa là làm suy giảm, triệt tiêu bớt lực tác động của sóng bão và triều cường (weakening or reducing the impact of)."
+        "explanation": "Trong câu 'preventing shoreline erosion and dampening storm surges and high tides', 'dampening' mang nghĩa là làm suy giảm, triệt tiêu bớt lực tác động của sóng bão và triều cường (weakening or reducing the impact of).",
+        "passageTitle": "Reading Passage: Can Gio Biosphere Reserve - The Green Lung",
+        "passage": "Located just 40 kilometers southeast of downtown Ho Chi Minh City, Can Gio Mangrove Biosphere Reserve is widely celebrated as the city's irreplaceable 'green lung'. Covering over 75,000 hectares, this pristine wetland ecosystem was officially designated as an International Biosphere Reserve by UNESCO in the year 2000. It harbors exceptional biodiversity, including over 150 plant species, thousands of saltwater crocodiles, migratory pelicans, and playful troupes of long-tailed macaques.\n\nBeyond its biological treasures, Can Gio plays a profound physical role in defending metropolitan Saigon against extreme climate events. The dense, entangled stilt roots of mangrove trees act as a natural seawall, dampening fierce ocean storm surges and reducing coastal wave energy by up to sixty percent. Moreover, mangrove forests absorb atmospheric carbon dioxide up to four times faster than mature tropical terrestrial rainforests, making them critical allies in the global fight against climate change.\n\nEvery year, thousands of students from across the southern region visit Can Gio to participate in reforestation field trips. By planting young mangrove saplings with their own hands, the younger generation fosters a deep emotional connection with nature and develops a lifelong commitment to ecological conservation. Protecting Can Gio ensures that Ho Chi Minh City can sustain its vibrant economic growth without sacrificing its natural defenses."
       },
       {
         "id": "e25_q26",
@@ -1018,7 +1057,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Căn cứ đoạn 2: 'Mangroves absorb and sequester atmospheric carbon dioxide at rates three to five times higher per hectare than mature inland tropical forests'."
+        "explanation": "Căn cứ đoạn 2: 'Mangroves absorb and sequester atmospheric carbon dioxide at rates three to five times higher per hectare than mature inland tropical forests'.",
+        "passageTitle": "Reading Passage: Can Gio Biosphere Reserve - The Green Lung",
+        "passage": "Located just 40 kilometers southeast of downtown Ho Chi Minh City, Can Gio Mangrove Biosphere Reserve is widely celebrated as the city's irreplaceable 'green lung'. Covering over 75,000 hectares, this pristine wetland ecosystem was officially designated as an International Biosphere Reserve by UNESCO in the year 2000. It harbors exceptional biodiversity, including over 150 plant species, thousands of saltwater crocodiles, migratory pelicans, and playful troupes of long-tailed macaques.\n\nBeyond its biological treasures, Can Gio plays a profound physical role in defending metropolitan Saigon against extreme climate events. The dense, entangled stilt roots of mangrove trees act as a natural seawall, dampening fierce ocean storm surges and reducing coastal wave energy by up to sixty percent. Moreover, mangrove forests absorb atmospheric carbon dioxide up to four times faster than mature tropical terrestrial rainforests, making them critical allies in the global fight against climate change.\n\nEvery year, thousands of students from across the southern region visit Can Gio to participate in reforestation field trips. By planting young mangrove saplings with their own hands, the younger generation fosters a deep emotional connection with nature and develops a lifelong commitment to ecological conservation. Protecting Can Gio ensures that Ho Chi Minh City can sustain its vibrant economic growth without sacrificing its natural defenses."
       },
       {
         "id": "e25_q27",
@@ -1033,7 +1074,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Ở đoạn 3: 'The reserve provides vital breeding grounds... It is also an imperative stopover for migratory waterbirds...'. Đại từ 'It' thay thế trực tiếp cho danh từ 'The reserve' (khu bảo tồn Cần Giờ)."
+        "explanation": "Ở đoạn 3: 'The reserve provides vital breeding grounds... It is also an imperative stopover for migratory waterbirds...'. Đại từ 'It' thay thế trực tiếp cho danh từ 'The reserve' (khu bảo tồn Cần Giờ).",
+        "passageTitle": "Reading Passage: Can Gio Biosphere Reserve - The Green Lung",
+        "passage": "Located just 40 kilometers southeast of downtown Ho Chi Minh City, Can Gio Mangrove Biosphere Reserve is widely celebrated as the city's irreplaceable 'green lung'. Covering over 75,000 hectares, this pristine wetland ecosystem was officially designated as an International Biosphere Reserve by UNESCO in the year 2000. It harbors exceptional biodiversity, including over 150 plant species, thousands of saltwater crocodiles, migratory pelicans, and playful troupes of long-tailed macaques.\n\nBeyond its biological treasures, Can Gio plays a profound physical role in defending metropolitan Saigon against extreme climate events. The dense, entangled stilt roots of mangrove trees act as a natural seawall, dampening fierce ocean storm surges and reducing coastal wave energy by up to sixty percent. Moreover, mangrove forests absorb atmospheric carbon dioxide up to four times faster than mature tropical terrestrial rainforests, making them critical allies in the global fight against climate change.\n\nEvery year, thousands of students from across the southern region visit Can Gio to participate in reforestation field trips. By planting young mangrove saplings with their own hands, the younger generation fosters a deep emotional connection with nature and develops a lifelong commitment to ecological conservation. Protecting Can Gio ensures that Ho Chi Minh City can sustain its vibrant economic growth without sacrificing its natural defenses."
       },
       {
         "id": "e25_q28",
@@ -1048,7 +1091,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Câu khẳng định 'Can Gio is situated hundreds of kilometers away from Ho Chi Minh City...' là SAI, vì đoạn 1 nói rõ: 'Located just 40 kilometers southeast of downtown Ho Chi Minh City' và đóng vai trò 'lá phổi xanh', lọc nước cho lưu vực sông Sài Gòn - Đồng Nai."
+        "explanation": "Câu khẳng định 'Can Gio is situated hundreds of kilometers away from Ho Chi Minh City...' là SAI, vì đoạn 1 nói rõ: 'Located just 40 kilometers southeast of downtown Ho Chi Minh City' và đóng vai trò 'lá phổi xanh', lọc nước cho lưu vực sông Sài Gòn - Đồng Nai.",
+        "passageTitle": "Reading Passage: Can Gio Biosphere Reserve - The Green Lung",
+        "passage": "Located just 40 kilometers southeast of downtown Ho Chi Minh City, Can Gio Mangrove Biosphere Reserve is widely celebrated as the city's irreplaceable 'green lung'. Covering over 75,000 hectares, this pristine wetland ecosystem was officially designated as an International Biosphere Reserve by UNESCO in the year 2000. It harbors exceptional biodiversity, including over 150 plant species, thousands of saltwater crocodiles, migratory pelicans, and playful troupes of long-tailed macaques.\n\nBeyond its biological treasures, Can Gio plays a profound physical role in defending metropolitan Saigon against extreme climate events. The dense, entangled stilt roots of mangrove trees act as a natural seawall, dampening fierce ocean storm surges and reducing coastal wave energy by up to sixty percent. Moreover, mangrove forests absorb atmospheric carbon dioxide up to four times faster than mature tropical terrestrial rainforests, making them critical allies in the global fight against climate change.\n\nEvery year, thousands of students from across the southern region visit Can Gio to participate in reforestation field trips. By planting young mangrove saplings with their own hands, the younger generation fosters a deep emotional connection with nature and develops a lifelong commitment to ecological conservation. Protecting Can Gio ensures that Ho Chi Minh City can sustain its vibrant economic growth without sacrificing its natural defenses."
       },
       {
         "id": "e25_q29",
@@ -1250,10 +1295,10 @@ window.ENGLISH_EXAMS = [
         "difficulty": "Nhận biết",
         "question": "Choose the word whose underlined part is pronounced differently from the others: **develop<u>ed</u>**, **promot<u>ed</u>**, **visit<u>ed</u>**, **decid<u>ed</u>**",
         "options": [
-          "developed (/t/)",
-          "promoted (/ɪd/)",
-          "visited (/ɪd/)",
-          "decided (/ɪd/)"
+          "developed",
+          "promoted",
+          "visited",
+          "decided"
         ],
         "correctIndex": 0,
         "explanation": "Quy tắc phát âm đuôi -ed:\n- /t/: sau âm vô thanh /p/ -> developed (/dɪˈvel.əpt/)\n- /ɪd/: sau âm /t/ hoặc /d/ -> promoted, visited, decided.\nDo đó 'developed' có đuôi -ed phát âm là /t/, khác với 3 từ còn lại phát âm là /ɪd/.",
@@ -1265,10 +1310,10 @@ window.ENGLISH_EXAMS = [
         "difficulty": "Thông hiểu",
         "question": "Choose the word whose underlined part is pronounced differently from the others: **br<u>ea</u>the**, **thr<u>ea</u>t**, **w<u>ea</u>ther**, **l<u>ea</u>ther**",
         "options": [
-          "threat (/e/)",
-          "weather (/e/)",
-          "leather (/e/)",
-          "breathe (/iː/)"
+          "threat",
+          "weather",
+          "leather",
+          "breathe"
         ],
         "correctIndex": 3,
         "explanation": "- breathe: /briːð/ (nguyên âm /iː/ dài, chú ý động từ có 'e' ở cuối)\n- threat: /θret/ (nguyên âm /e/ ngắn)\n- weather: /ˈweð.ər/ (nguyên âm /e/ ngắn)\n- leather: /ˈleð.ər/ (nguyên âm /e/ ngắn)\nDo đó 'breathe' có nguyên âm phát âm khác.",
@@ -1278,12 +1323,12 @@ window.ENGLISH_EXAMS = [
         "id": "e24_q03",
         "topic": "Trọng âm từ 2 âm tiết (Word Stress)",
         "difficulty": "Nhận biết",
-        "question": "Choose the word that has a different stress pattern from the others: **reˈduce**, **ˈproduct**, **preˈfer**, **conˈnect**",
+        "question": "Choose the word that has a different stress pattern from the others: **reduce**, **product**, **prefer**, **connect**",
         "options": [
-          "reduce (âm 2)",
-          "product (âm 1)",
-          "prefer (âm 2)",
-          "connect (âm 2)"
+          "reduce",
+          "product",
+          "prefer",
+          "connect"
         ],
         "correctIndex": 1,
         "explanation": "- ˈproduct: trọng âm rơi vào âm tiết thứ 1 (danh từ 2 âm tiết thường nhấn âm 1).\n- reˈduce, preˈfer, conˈnect: trọng âm rơi vào âm tiết thứ 2 (động từ 2 âm tiết thường nhấn âm 2).\nDo đó 'product' có trọng âm khác biệt.",
@@ -1293,12 +1338,12 @@ window.ENGLISH_EXAMS = [
         "id": "e24_q04",
         "topic": "Trọng âm từ 3 âm tiết (Word Stress)",
         "difficulty": "Thông hiểu",
-        "question": "Choose the word that has a different stress pattern from the others: **eˈlectric**, **comˈputer**, **conˈvenient**, **ˈenergy**",
+        "question": "Choose the word that has a different stress pattern from the others: **electric**, **computer**, **convenient**, **energy**",
         "options": [
-          "electric (âm 2)",
-          "computer (âm 2)",
-          "convenient (âm 2)",
-          "energy (âm 1)"
+          "electric",
+          "computer",
+          "convenient",
+          "energy"
         ],
         "correctIndex": 3,
         "explanation": "- ˈenergy: /ˈen.ə.dʒi/ (trọng âm rơi vào âm tiết thứ 1).\n- eˈlectric: /iˈlek.trɪk/ (đuôi -ic nhấn trước nó, âm 2).\n- comˈputer: /kəmˈpjuː.tər/ (nhấn âm 2).\n- conˈvenient: /kənˈviː.ni.ənt/ (đuôi -ient nhấn trước nó, âm 2).\nDo đó 'energy' có trọng âm rơi vào âm 1.",
@@ -1458,7 +1503,7 @@ window.ENGLISH_EXAMS = [
         "id": "e24_q15",
         "topic": "Đọc hiểu: Ý chính bài đọc (Reading Comprehension)",
         "difficulty": "Thông hiểu",
-        "question": "Read the passage about Can Gio Mangrove Forest and choose the best title:\n\n'Located approximately 40 kilometers southeast of central Ho Chi Minh City, the Can Gio Mangrove Forest is widely recognized as the green lung of the southern metropolis. Covering over 75,000 hectares, this unique ecosystem was severely damaged during wartime. However, thanks to the relentless reforestation campaign launched by the city government and generations of citizens since 1978, millions of mangrove trees have been successfully replanted.\n\nIn the year 2000, UNESCO designated Can Gio as Vietnam's first International Mangrove Biosphere Reserve. Today, it serves as a critical natural barrier protecting Ho Chi Minh City from coastal storms, soil erosion, and severe tidal flooding. Moreover, the reserve absorbs massive amounts of carbon dioxide from urban traffic and factories, filtering fresh air for more than 10 million residents.\n\nIn recent years, local secondary schools in Ho Chi Minh City have organized regular eco-tours and practical biology field trips to Can Gio. Students not only learn about biodiversity by observing thousands of migratory birds, wild monkeys, and saltwater crocodiles, but they also actively participate in planting young mangrove saplings. Through these hands-on experiences, young citizens develop a strong sense of responsibility toward environmental conservation.'\n\nWhat is the best title for the passage?",
+        "question": "What is the best title for the reading passage?",
         "options": [
           "Can Gio Mangrove Reserve: The Vital Green Lung of Ho Chi Minh City",
           "The Negative Effects of Urbanization in Ho Chi Minh City",
@@ -1467,7 +1512,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Toàn bộ bài đọc tập trung giới thiệu về Rừng ngập mặn Cần Giờ: quá trình tái sinh, vai trò là 'lá phổi xanh' bảo vệ TP.HCM khỏi bão lũ và ô nhiễm, cùng hoạt động giáo dục môi trường của học sinh thành phố.",
-        "trapTip": "Tiêu đề tốt nhất phải bao quát toàn bài, không được quá hẹp (chỉ nói về cá sấu) hay quá rộng (chiến tranh nói chung)."
+        "trapTip": "Tiêu đề tốt nhất phải bao quát toàn bài, không được quá hẹp (chỉ nói về cá sấu) hay quá rộng (chiến tranh nói chung).",
+        "passageTitle": "Reading Passage: Can Gio Mangrove Forest Protection",
+        "passage": "Located approximately 40 kilometers southeast of Ho Chi Minh City center, Can Gio Mangrove Forest is widely renowned as the green lung of southern Vietnam. Covering over 75,000 hectares, it is home to a rich variety of flora and fauna, including hundreds of bird species, monkeys, and aquatic animals. In 2000, UNESCO officially recognized Can Gio as the first International Biosphere Reserve in Vietnam.\n\nCan Gio plays an indispensable role in maintaining the ecological balance of the metropolitan area. The dense root systems of mangrove trees protect coastal dikes from erosion and significantly diminish wave energy during stormy seasons. Furthermore, the forest functions as a giant water filter, purifying domestic wastewater from industrial zones before it discharges into the East Sea.\n\nIn recent years, educational authorities have organized regular community tree-planting campaigns for secondary school students in Can Gio. These hands-on activities provide teenagers with meaningful environmental lessons, encouraging them to adopt eco-friendly lifestyles and contribute actively to combating climate change."
       },
       {
         "id": "e24_q16",
@@ -1482,7 +1529,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Dẫn chứng trong đoạn 2: 'In the year 2000, UNESCO designated Can Gio as Vietnam's first International Mangrove Biosphere Reserve.'",
-        "trapTip": "Đừng nhầm với năm 1978 (năm bắt đầu chiến dịch trồng lại rừng)."
+        "trapTip": "Đừng nhầm với năm 1978 (năm bắt đầu chiến dịch trồng lại rừng).",
+        "passageTitle": "Reading Passage: Can Gio Mangrove Forest Protection",
+        "passage": "Located approximately 40 kilometers southeast of Ho Chi Minh City center, Can Gio Mangrove Forest is widely renowned as the green lung of southern Vietnam. Covering over 75,000 hectares, it is home to a rich variety of flora and fauna, including hundreds of bird species, monkeys, and aquatic animals. In 2000, UNESCO officially recognized Can Gio as the first International Biosphere Reserve in Vietnam.\n\nCan Gio plays an indispensable role in maintaining the ecological balance of the metropolitan area. The dense root systems of mangrove trees protect coastal dikes from erosion and significantly diminish wave energy during stormy seasons. Furthermore, the forest functions as a giant water filter, purifying domestic wastewater from industrial zones before it discharges into the East Sea.\n\nIn recent years, educational authorities have organized regular community tree-planting campaigns for secondary school students in Can Gio. These hands-on activities provide teenagers with meaningful environmental lessons, encouraging them to adopt eco-friendly lifestyles and contribute actively to combating climate change."
       },
       {
         "id": "e24_q17",
@@ -1497,7 +1546,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Bài đọc nêu rõ: Cần Giờ chắn bão (storms), chống xói mòn (erosion), giảm ngập triều cường (flooding), hấp thụ khí CO2. Bài đọc KHÔNG hề nhắc đến việc sản xuất điện cho nhà máy.",
-        "trapTip": "Đọc kỹ từ 'NOT mentioned' để tìm phương án không có trong bài."
+        "trapTip": "Đọc kỹ từ 'NOT mentioned' để tìm phương án không có trong bài.",
+        "passageTitle": "Reading Passage: Can Gio Mangrove Forest Protection",
+        "passage": "Located approximately 40 kilometers southeast of Ho Chi Minh City center, Can Gio Mangrove Forest is widely renowned as the green lung of southern Vietnam. Covering over 75,000 hectares, it is home to a rich variety of flora and fauna, including hundreds of bird species, monkeys, and aquatic animals. In 2000, UNESCO officially recognized Can Gio as the first International Biosphere Reserve in Vietnam.\n\nCan Gio plays an indispensable role in maintaining the ecological balance of the metropolitan area. The dense root systems of mangrove trees protect coastal dikes from erosion and significantly diminish wave energy during stormy seasons. Furthermore, the forest functions as a giant water filter, purifying domestic wastewater from industrial zones before it discharges into the East Sea.\n\nIn recent years, educational authorities have organized regular community tree-planting campaigns for secondary school students in Can Gio. These hands-on activities provide teenagers with meaningful environmental lessons, encouraging them to adopt eco-friendly lifestyles and contribute actively to combating climate change."
       },
       {
         "id": "e24_q18",
@@ -1512,7 +1563,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Dẫn chứng trong đoạn cuối: 'Students not only learn about biodiversity... but **they** also actively participate in planting young mangrove saplings.' Đại từ 'they' thay thế cho danh từ 'Students' ở trước đó.",
-        "trapTip": "Tìm danh từ số nhiều đứng ngay câu hoặc mệnh đề trước đại từ 'they'."
+        "trapTip": "Tìm danh từ số nhiều đứng ngay câu hoặc mệnh đề trước đại từ 'they'.",
+        "passageTitle": "Reading Passage: Can Gio Mangrove Forest Protection",
+        "passage": "Located approximately 40 kilometers southeast of Ho Chi Minh City center, Can Gio Mangrove Forest is widely renowned as the green lung of southern Vietnam. Covering over 75,000 hectares, it is home to a rich variety of flora and fauna, including hundreds of bird species, monkeys, and aquatic animals. In 2000, UNESCO officially recognized Can Gio as the first International Biosphere Reserve in Vietnam.\n\nCan Gio plays an indispensable role in maintaining the ecological balance of the metropolitan area. The dense root systems of mangrove trees protect coastal dikes from erosion and significantly diminish wave energy during stormy seasons. Furthermore, the forest functions as a giant water filter, purifying domestic wastewater from industrial zones before it discharges into the East Sea.\n\nIn recent years, educational authorities have organized regular community tree-planting campaigns for secondary school students in Can Gio. These hands-on activities provide teenagers with meaningful environmental lessons, encouraging them to adopt eco-friendly lifestyles and contribute actively to combating climate change."
       },
       {
         "id": "e24_q19",
@@ -1527,7 +1580,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "'Vital' có nghĩa là 'vô cùng quan trọng, sống còn, thiết yếu' = 'extremely important and necessary'.",
-        "trapTip": "Vital = Crucial = Essential = Extremely important."
+        "trapTip": "Vital = Crucial = Essential = Extremely important.",
+        "passageTitle": "Reading Passage: Can Gio Mangrove Forest Protection",
+        "passage": "Located approximately 40 kilometers southeast of Ho Chi Minh City center, Can Gio Mangrove Forest is widely renowned as the green lung of southern Vietnam. Covering over 75,000 hectares, it is home to a rich variety of flora and fauna, including hundreds of bird species, monkeys, and aquatic animals. In 2000, UNESCO officially recognized Can Gio as the first International Biosphere Reserve in Vietnam.\n\nCan Gio plays an indispensable role in maintaining the ecological balance of the metropolitan area. The dense root systems of mangrove trees protect coastal dikes from erosion and significantly diminish wave energy during stormy seasons. Furthermore, the forest functions as a giant water filter, purifying domestic wastewater from industrial zones before it discharges into the East Sea.\n\nIn recent years, educational authorities have organized regular community tree-planting campaigns for secondary school students in Can Gio. These hands-on activities provide teenagers with meaningful environmental lessons, encouraging them to adopt eco-friendly lifestyles and contribute actively to combating climate change."
       },
       {
         "id": "e24_q20",
@@ -1542,7 +1597,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Dẫn chứng trong đoạn cuối: 'they also actively participate in planting young mangrove saplings' (trực tiếp trồng những cây con ngập mặn).",
-        "trapTip": "Các đáp án mang tính tiêu cực đối với môi trường đều trái với tinh thần giáo dục bảo tồn của bài đọc."
+        "trapTip": "Các đáp án mang tính tiêu cực đối với môi trường đều trái với tinh thần giáo dục bảo tồn của bài đọc.",
+        "passageTitle": "Reading Passage: Can Gio Mangrove Forest Protection",
+        "passage": "Located approximately 40 kilometers southeast of Ho Chi Minh City center, Can Gio Mangrove Forest is widely renowned as the green lung of southern Vietnam. Covering over 75,000 hectares, it is home to a rich variety of flora and fauna, including hundreds of bird species, monkeys, and aquatic animals. In 2000, UNESCO officially recognized Can Gio as the first International Biosphere Reserve in Vietnam.\n\nCan Gio plays an indispensable role in maintaining the ecological balance of the metropolitan area. The dense root systems of mangrove trees protect coastal dikes from erosion and significantly diminish wave energy during stormy seasons. Furthermore, the forest functions as a giant water filter, purifying domestic wastewater from industrial zones before it discharges into the East Sea.\n\nIn recent years, educational authorities have organized regular community tree-planting campaigns for secondary school students in Can Gio. These hands-on activities provide teenagers with meaningful environmental lessons, encouraging them to adopt eco-friendly lifestyles and contribute actively to combating climate change."
       },
       {
         "id": "e24_q21",
@@ -1557,7 +1614,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Thay thế cho danh từ chỉ vật 'electric smart buses' (những chiếc xe buýt điện thông minh) đứng sau dấu phẩy trong mệnh đề quan hệ không xác định, ta dùng đại từ quan hệ 'which'.",
-        "trapTip": "Sau dấu phẩy KHÔNG BAO GIỜ dùng 'that'. Chỉ người dùng 'who', chỉ vật dùng 'which'."
+        "trapTip": "Sau dấu phẩy KHÔNG BAO GIỜ dùng 'that'. Chỉ người dùng 'who', chỉ vật dùng 'which'.",
+        "passageTitle": "Cloze Passage: Green Urban Transit",
+        "passage": "Ho Chi Minh City is making substantial efforts to improve its urban transit system. Electric bus routes have been launched in various residential districts, providing commuters with a clean, modern, and energy-efficient means of transport. These vehicles emit zero tailpipe pollutants, which directly helps reduce greenhouse gas emissions and urban smog. Municipal leaders are also developing pedestrian-friendly walkways around downtown subway stations. By prioritizing public transit, the city aims to build a greener, cleaner, and more livable urban environment for all residents."
       },
       {
         "id": "e24_q22",
@@ -1572,7 +1631,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Cụm thành ngữ cố định (Idiomatic phrase): **take advantage of sth** có nghĩa là 'tận dụng lợi thế của điều gì'.",
-        "trapTip": "Thành ngữ chuẩn: 'take advantage of'. Không dùng 'make advantage' hay 'do advantage'."
+        "trapTip": "Thành ngữ chuẩn: 'take advantage of'. Không dùng 'make advantage' hay 'do advantage'.",
+        "passageTitle": "Cloze Passage: Green Urban Transit",
+        "passage": "Ho Chi Minh City is making substantial efforts to improve its urban transit system. Electric bus routes have been launched in various residential districts, providing commuters with a clean, modern, and energy-efficient means of transport. These vehicles emit zero tailpipe pollutants, which directly helps reduce greenhouse gas emissions and urban smog. Municipal leaders are also developing pedestrian-friendly walkways around downtown subway stations. By prioritizing public transit, the city aims to build a greener, cleaner, and more livable urban environment for all residents."
       },
       {
         "id": "e24_q23",
@@ -1587,7 +1648,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Cấu trúc cố định: **contribute to + V-ing / Noun** (đóng góp vào việc gì). Ở đây: 'contribute to improving urban air quality'.",
-        "trapTip": "Chú ý: Sau 'contribute to' là V-ing hoặc danh từ, không phải V nguyên thể."
+        "trapTip": "Chú ý: Sau 'contribute to' là V-ing hoặc danh từ, không phải V nguyên thể.",
+        "passageTitle": "Cloze Passage: Green Urban Transit",
+        "passage": "Ho Chi Minh City is making substantial efforts to improve its urban transit system. Electric bus routes have been launched in various residential districts, providing commuters with a clean, modern, and energy-efficient means of transport. These vehicles emit zero tailpipe pollutants, which directly helps reduce greenhouse gas emissions and urban smog. Municipal leaders are also developing pedestrian-friendly walkways around downtown subway stations. By prioritizing public transit, the city aims to build a greener, cleaner, and more livable urban environment for all residents."
       },
       {
         "id": "e24_q24",
@@ -1602,7 +1665,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "- cut down (emissions): cắt giảm (lượng khí thải phát thải).\n- grow up: lớn lên, trưởng thành.\n- give up: từ bỏ.\n- look forward to: mong đợi.\nChọn 'cut down' để mang nghĩa giảm lượng khí thải độc hại.",
-        "trapTip": "Cut down = reduce = cắt giảm."
+        "trapTip": "Cut down = reduce = cắt giảm.",
+        "passageTitle": "Cloze Passage: Green Urban Transit",
+        "passage": "Ho Chi Minh City is making substantial efforts to improve its urban transit system. Electric bus routes have been launched in various residential districts, providing commuters with a clean, modern, and energy-efficient means of transport. These vehicles emit zero tailpipe pollutants, which directly helps reduce greenhouse gas emissions and urban smog. Municipal leaders are also developing pedestrian-friendly walkways around downtown subway stations. By prioritizing public transit, the city aims to build a greener, cleaner, and more livable urban environment for all residents."
       },
       {
         "id": "e24_q25",
@@ -1617,7 +1682,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Cấu trúc: **make + something + (much more) + Adjective** (làm cho cái gì trở nên như thế nào).\nỞ đây cần tính từ mang nghĩa tích cực: 'convenient' (tiện lợi, thuận tiện).",
-        "trapTip": "Sau Make + O là Tính từ (Adjective), không dùng Trạng từ (-ly) hay Danh từ (-ence)."
+        "trapTip": "Sau Make + O là Tính từ (Adjective), không dùng Trạng từ (-ly) hay Danh từ (-ence).",
+        "passageTitle": "Cloze Passage: Green Urban Transit",
+        "passage": "Ho Chi Minh City is making substantial efforts to improve its urban transit system. Electric bus routes have been launched in various residential districts, providing commuters with a clean, modern, and energy-efficient means of transport. These vehicles emit zero tailpipe pollutants, which directly helps reduce greenhouse gas emissions and urban smog. Municipal leaders are also developing pedestrian-friendly walkways around downtown subway stations. By prioritizing public transit, the city aims to build a greener, cleaner, and more livable urban environment for all residents."
       },
       {
         "id": "e24_q26",
@@ -1632,7 +1699,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "'In addition' (Hơn thế nữa, ngoài ra) dùng để bổ sung thêm một thông tin tích cực (học sinh được giảm giá vé đáng kể). 'However' mang nghĩa tương phản (nhưng), 'Otherwise' mang nghĩa nếu không thì, không phù hợp ngữ cảnh.",
-        "trapTip": "In addition = Furthermore = Hơn nữa, thêm vào đó."
+        "trapTip": "In addition = Furthermore = Hơn nữa, thêm vào đó.",
+        "passageTitle": "Cloze Passage: Green Urban Transit",
+        "passage": "Ho Chi Minh City is making substantial efforts to improve its urban transit system. Electric bus routes have been launched in various residential districts, providing commuters with a clean, modern, and energy-efficient means of transport. These vehicles emit zero tailpipe pollutants, which directly helps reduce greenhouse gas emissions and urban smog. Municipal leaders are also developing pedestrian-friendly walkways around downtown subway stations. By prioritizing public transit, the city aims to build a greener, cleaner, and more livable urban environment for all residents."
       },
       {
         "id": "e24_q27",
@@ -1858,12 +1927,12 @@ window.ENGLISH_EXAMS = [
         "id": "e02_q01",
         "topic": "Phát âm phụ âm (Pronunciation)",
         "difficulty": "Nhận biết",
-        "question": "Choose the word whose underlined part is pronounced differently from the others: **schoo<u>l</u>**, **schedu<u>le</u>**, **scho<u>lar</u>ship**, **ma<u>chine</u>**",
+        "question": "Choose the word whose underlined part is pronounced differently from the others: **s<u>ch</u>ool**, **s<u>ch</u>edule**, **s<u>ch</u>olarship**, **ma<u>ch</u>ine**",
         "options": [
-          "scholarship (/sk/)",
-          "school (/sk/)",
-          "schedule (/sk/)",
-          "machine (/ʃ/)"
+          "scholarship",
+          "school",
+          "schedule",
+          "machine"
         ],
         "correctIndex": 3,
         "explanation": "- *scholarship*, *school*, *schedule* có nhóm 'ch' phát âm là /k/.\n- *machine* có nhóm 'ch' phát âm là /ʃ/ (/məˈʃiːn/).\nDo đó 'machine' có phần gạch chân phát âm khác biệt.",
@@ -1888,7 +1957,7 @@ window.ENGLISH_EXAMS = [
         "id": "e02_q03",
         "topic": "Trọng âm 2 âm tiết (Word Stress)",
         "difficulty": "Thông hiểu",
-        "question": "Choose the word that has a different stress pattern from the others: **deˈsign**, **supˈport**, **ˈlisten**, **proˈvide**",
+        "question": "Choose the word that has a different stress pattern from the others: **design**, **support**, **listen**, **provide**",
         "options": [
           "design",
           "support",
@@ -1903,7 +1972,7 @@ window.ENGLISH_EXAMS = [
         "id": "e02_q04",
         "topic": "Trọng âm 3 âm tiết (Word Stress)",
         "difficulty": "Thông hiểu",
-        "question": "Choose the word that has a different stress pattern from the others: **ˈenergy**, **ˈnatural**, **polˈlutant**, **ˈcultural**",
+        "question": "Choose the word that has a different stress pattern from the others: **energy**, **natural**, **pollutant**, **cultural**",
         "options": [
           "energy",
           "natural",
@@ -2158,14 +2227,16 @@ window.ENGLISH_EXAMS = [
         "id": "e02_q21",
         "topic": "Đọc hiểu True/False (Reading Comprehension)",
         "difficulty": "Thông hiểu",
-        "question": "Read the passage about Can Gio Mangrove Forest:\n'Located about 40 kilometers southeast of downtown Ho Chi Minh City, the Can Gio Mangrove Forest covers an area of over 75,000 hectares. Recognized by UNESCO as an International Biosphere Reserve in 2000, it plays a vital role as the \"green lung\" of the city. The forest absorbs huge amounts of carbon dioxide and acts as a natural barrier protecting the city from typhoons and sea level rise. Furthermore, it is home to hundreds of rare species of flora and fauna, making it an ideal destination for ecotourism and environmental education.'\n\n**Statement: Can Gio Mangrove Forest is located right in the center of District 1.**\nIs this statement TRUE or FALSE?",
+        "question": "Read the passage above and decide whether the statement in each question is TRUE or FALSE:",
         "options": [
           "TRUE",
           "FALSE"
         ],
         "correctIndex": 1,
         "explanation": "Bài đọc ghi: 'Located about 40 kilometers southeast of downtown Ho Chi Minh City' (cách trung tâm 40 km về phía đông nam), không phải nằm ngay trung tâm Quận 1. Do đó nhận định này là **FALSE**.",
-        "trapTip": "Đối chiếu kỹ vị trí địa lý: 40 km southeast of downtown != right in the center."
+        "trapTip": "Đối chiếu kỹ vị trí địa lý: 40 km southeast of downtown != right in the center.",
+        "passageTitle": "Reading Passage: Can Gio - Green Lung of Ho Chi Minh City",
+        "passage": "Located about 40 kilometers southeast of downtown Ho Chi Minh City, the Can Gio Mangrove Biosphere Reserve covers more than 75,000 hectares of wetlands. It was recognized by UNESCO as Vietnam's first International Biosphere Reserve in the year 2000.\n\nCan Gio plays a crucial role as the natural shield protecting the southern metropolis against storms, high tides, and tidal surges. Its complex system of mangrove tree roots holds the soil firmly, preventing coastal erosion and filtering water pollutants. Furthermore, the forest provides a safe habitat for hundreds of wildlife species, including migratory birds, saltwater crocodiles, and monkeys.\n\nLocal authorities and schools regularly organize experiential excursions where students plant young mangrove saplings. These practical experiences nurture a genuine love for nature and foster environmental responsibility among youth."
       },
       {
         "id": "e02_q22",
@@ -2178,7 +2249,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Bài đọc ghi rõ: 'Recognized by UNESCO as an International Biosphere Reserve in 2000'. Do đó nhận định này là **TRUE**.",
-        "trapTip": "Tìm mốc năm 2000 và tên tổ chức UNESCO trong bài đọc."
+        "trapTip": "Tìm mốc năm 2000 và tên tổ chức UNESCO trong bài đọc.",
+        "passageTitle": "Reading Passage: Can Gio - Green Lung of Ho Chi Minh City",
+        "passage": "Located about 40 kilometers southeast of downtown Ho Chi Minh City, the Can Gio Mangrove Biosphere Reserve covers more than 75,000 hectares of wetlands. It was recognized by UNESCO as Vietnam's first International Biosphere Reserve in the year 2000.\n\nCan Gio plays a crucial role as the natural shield protecting the southern metropolis against storms, high tides, and tidal surges. Its complex system of mangrove tree roots holds the soil firmly, preventing coastal erosion and filtering water pollutants. Furthermore, the forest provides a safe habitat for hundreds of wildlife species, including migratory birds, saltwater crocodiles, and monkeys.\n\nLocal authorities and schools regularly organize experiential excursions where students plant young mangrove saplings. These practical experiences nurture a genuine love for nature and foster environmental responsibility among youth."
       },
       {
         "id": "e02_q23",
@@ -2191,7 +2264,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Bài đọc ghi: 'acts as a natural barrier protecting the city from typhoons and sea level rise' (đóng vai trò như lá chắn tự nhiên bảo vệ thành phố khỏi bão). Do đó nhận định này là **TRUE**.",
-        "trapTip": "Natural barrier đồng nghĩa với natural shield (lá chắn tự nhiên)."
+        "trapTip": "Natural barrier đồng nghĩa với natural shield (lá chắn tự nhiên).",
+        "passageTitle": "Reading Passage: Can Gio - Green Lung of Ho Chi Minh City",
+        "passage": "Located about 40 kilometers southeast of downtown Ho Chi Minh City, the Can Gio Mangrove Biosphere Reserve covers more than 75,000 hectares of wetlands. It was recognized by UNESCO as Vietnam's first International Biosphere Reserve in the year 2000.\n\nCan Gio plays a crucial role as the natural shield protecting the southern metropolis against storms, high tides, and tidal surges. Its complex system of mangrove tree roots holds the soil firmly, preventing coastal erosion and filtering water pollutants. Furthermore, the forest provides a safe habitat for hundreds of wildlife species, including migratory birds, saltwater crocodiles, and monkeys.\n\nLocal authorities and schools regularly organize experiential excursions where students plant young mangrove saplings. These practical experiences nurture a genuine love for nature and foster environmental responsibility among youth."
       },
       {
         "id": "e02_q24",
@@ -2204,7 +2279,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 1,
         "explanation": "Bài đọc ghi: 'it is home to hundreds of rare species of flora and fauna' (là ngôi nhà của hàng trăm loài động thực vật quý hiếm). Câu nhận định cho rằng 'không có loài động vật nào' là hoàn toàn sai -> **FALSE**.",
-        "trapTip": "Flora = thực vật; Fauna = động vật."
+        "trapTip": "Flora = thực vật; Fauna = động vật.",
+        "passageTitle": "Reading Passage: Can Gio - Green Lung of Ho Chi Minh City",
+        "passage": "Located about 40 kilometers southeast of downtown Ho Chi Minh City, the Can Gio Mangrove Biosphere Reserve covers more than 75,000 hectares of wetlands. It was recognized by UNESCO as Vietnam's first International Biosphere Reserve in the year 2000.\n\nCan Gio plays a crucial role as the natural shield protecting the southern metropolis against storms, high tides, and tidal surges. Its complex system of mangrove tree roots holds the soil firmly, preventing coastal erosion and filtering water pollutants. Furthermore, the forest provides a safe habitat for hundreds of wildlife species, including migratory birds, saltwater crocodiles, and monkeys.\n\nLocal authorities and schools regularly organize experiential excursions where students plant young mangrove saplings. These practical experiences nurture a genuine love for nature and foster environmental responsibility among youth."
       },
       {
         "id": "e02_q25",
@@ -2219,7 +2296,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 1,
         "explanation": "Toàn bộ bài đọc nói về tầm quan trọng môi trường (lá phổi xanh, chống bão) và sự đa dạng sinh học của Rừng ngập mặn Cần Giờ -> Chọn đáp án: The environmental importance and biodiversity of Can Gio Mangrove Forest.",
-        "trapTip": "Câu hỏi ý chính (Main topic): tóm lược nội dung toàn bài, không chọn chi tiết phụ."
+        "trapTip": "Câu hỏi ý chính (Main topic): tóm lược nội dung toàn bài, không chọn chi tiết phụ.",
+        "passageTitle": "Reading Passage: Can Gio - Green Lung of Ho Chi Minh City",
+        "passage": "Located about 40 kilometers southeast of downtown Ho Chi Minh City, the Can Gio Mangrove Biosphere Reserve covers more than 75,000 hectares of wetlands. It was recognized by UNESCO as Vietnam's first International Biosphere Reserve in the year 2000.\n\nCan Gio plays a crucial role as the natural shield protecting the southern metropolis against storms, high tides, and tidal surges. Its complex system of mangrove tree roots holds the soil firmly, preventing coastal erosion and filtering water pollutants. Furthermore, the forest provides a safe habitat for hundreds of wildlife species, including migratory birds, saltwater crocodiles, and monkeys.\n\nLocal authorities and schools regularly organize experiential excursions where students plant young mangrove saplings. These practical experiences nurture a genuine love for nature and foster environmental responsibility among youth."
       },
       {
         "id": "e02_q26",
@@ -2234,7 +2313,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 2,
         "explanation": "Từ 'it' thay thế cho chủ ngữ của mệnh đề chính đứng trước là 'The Can Gio Mangrove Forest'.",
-        "trapTip": "Dạng bài từ quy chiếu (Reference): nhìn ngược lại danh từ số ít làm chủ thể ở câu trước."
+        "trapTip": "Dạng bài từ quy chiếu (Reference): nhìn ngược lại danh từ số ít làm chủ thể ở câu trước.",
+        "passageTitle": "Reading Passage: Can Gio - Green Lung of Ho Chi Minh City",
+        "passage": "Located about 40 kilometers southeast of downtown Ho Chi Minh City, the Can Gio Mangrove Biosphere Reserve covers more than 75,000 hectares of wetlands. It was recognized by UNESCO as Vietnam's first International Biosphere Reserve in the year 2000.\n\nCan Gio plays a crucial role as the natural shield protecting the southern metropolis against storms, high tides, and tidal surges. Its complex system of mangrove tree roots holds the soil firmly, preventing coastal erosion and filtering water pollutants. Furthermore, the forest provides a safe habitat for hundreds of wildlife species, including migratory birds, saltwater crocodiles, and monkeys.\n\nLocal authorities and schools regularly organize experiential excursions where students plant young mangrove saplings. These practical experiences nurture a genuine love for nature and foster environmental responsibility among youth."
       },
       {
         "id": "e02_q27",
@@ -2470,10 +2551,10 @@ window.ENGLISH_EXAMS = [
         "difficulty": "Nhận biết",
         "question": "Choose the word whose underlined part is pronounced differently: **bro<u>th</u>er**, **wea<u>th</u>er**, **toge<u>th</u>er**, **brea<u>th</u>**",
         "options": [
-          "breath (/θ/)",
-          "brother (/ð/)",
-          "weather (/ð/)",
-          "together (/ð/)"
+          "breath",
+          "brother",
+          "weather",
+          "together"
         ],
         "correctIndex": 0,
         "explanation": "- breath: /breθ/ (danh từ hơi thở, âm /θ/ vô thanh)\n- brother, weather, together: đều phát âm là âm /ð/ hữu thanh.\nDo đó 'breath' có phần gạch chân phát âm khác.",
@@ -2485,10 +2566,10 @@ window.ENGLISH_EXAMS = [
         "difficulty": "Nhận biết",
         "question": "Choose the word whose underlined part is pronounced differently: **stop<u>s</u>**, **book<u>s</u>**, **hat<u>s</u>**, **pen<u>s</u>**",
         "options": [
-          "stops (/s/)",
-          "books (/s/)",
-          "hats (/s/)",
-          "pens (/z/)"
+          "stops",
+          "books",
+          "hats",
+          "pens"
         ],
         "correctIndex": 3,
         "explanation": "- stops, books, hats: tận cùng bằng phụ âm vô thanh /p/, /k/, /t/ nên đuôi -s phát âm là /s/.\n- pens: tận cùng bằng phụ âm hữu thanh /n/ nên đuôi -s phát âm là /z/.",
@@ -2498,12 +2579,12 @@ window.ENGLISH_EXAMS = [
         "id": "e22_q03",
         "topic": "Trọng âm 2 âm tiết (Word Stress)",
         "difficulty": "Nhận biết",
-        "question": "Choose the word that has a different stress pattern: **deˈsign**, **preˈpare**, **reˈceive**, **ˈfinish**",
+        "question": "Choose the word that has a different stress pattern: **design**, **prepare**, **receive**, **finish**",
         "options": [
-          "finish (âm 1)",
-          "design (âm 2)",
-          "prepare (âm 2)",
-          "receive (âm 2)"
+          "finish",
+          "design",
+          "prepare",
+          "receive"
         ],
         "correctIndex": 0,
         "explanation": "- ˈfinish: /ˈfɪn.ɪʃ/ (động từ có đuôi -ish thường nhấn âm 1).\n- deˈsign, preˈpare, reˈceive: đều nhấn vào âm tiết thứ 2.\nDo đó 'finish' có trọng âm khác biệt.",
@@ -2513,12 +2594,12 @@ window.ENGLISH_EXAMS = [
         "id": "e22_q04",
         "topic": "Trọng âm 3 âm tiết (Word Stress)",
         "difficulty": "Thông hiểu",
-        "question": "Choose the word that has a different stress pattern: **traˈdition**, **polˈlution**, **inˈvention**, **ˈnatural**",
+        "question": "Choose the word that has a different stress pattern: **tradition**, **pollution**, **invention**, **natural**",
         "options": [
-          "natural (âm 1)",
-          "tradition (âm 2)",
-          "pollution (âm 2)",
-          "invention (âm 2)"
+          "natural",
+          "tradition",
+          "pollution",
+          "invention"
         ],
         "correctIndex": 0,
         "explanation": "- ˈnatural: /ˈnætʃ.ər.əl/ (tính từ 3 âm tiết nhấn âm 1).\n- traˈdition, polˈlution, inˈvention: có đuôi -tion nên trọng âm rơi vào âm tiết ngay trước nó (âm 2).\nDo đó 'natural' có trọng âm khác.",
@@ -2678,7 +2759,7 @@ window.ENGLISH_EXAMS = [
         "id": "e22_q15",
         "topic": "Đọc hiểu: Bánh mì Sài Gòn (Reading Comprehension)",
         "difficulty": "Thông hiểu",
-        "question": "Read the passage and choose the main topic:\n\n'Among various iconic culinary treasures of Vietnam, Saigon Banh Mi stands out as a world-renowned street food masterpiece. Originating from the French baguette introduced in the late 19th century, local bakers in Saigon creatively transformed it into a distinctly Vietnamese specialty.\n\nA typical Saigon Banh Mi features a warm, crispy outer crust and a light, airy interior. It is generously stuffed with savory layers of pork liver pâté, Vietnamese cold cuts, roast pork, pickled daikon and carrots, fresh cucumbers, and cilantro, completed with a splash of rich soy sauce and chili. Today, the word 'Banh mi' has been officially recognized in prestigious international dictionaries such as the Oxford English Dictionary, symbolizing Vietnam's creative and vibrant gastronomic culture on the global stage.'\n\nWhat is the passage mainly about?",
+        "question": "What is the main topic of the reading passage?",
         "options": [
           "The history, characteristics, and global fame of Saigon Banh Mi",
           "How French bakers make traditional baguettes in Paris",
@@ -2687,7 +2768,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Đoạn văn giới thiệu nguồn gốc, thành phần đặc trưng và sự vinh danh toàn cầu của Bánh mì Sài Gòn.",
-        "trapTip": "Tìm câu mở đoạn và ý bao quát toàn bài."
+        "trapTip": "Tìm câu mở đoạn và ý bao quát toàn bài.",
+        "passageTitle": "Reading Passage: Saigon Banh Mi - Street Food Heritage",
+        "passage": "Among various iconic culinary treasures of Vietnam, Saigon Banh Mi stands out as a world-famous street food masterpiece that reflects a unique cultural fusion. Originating from the French baguette introduced during the late 19th century, local Vietnamese bakers modified the recipe by adding rice flour to create an extraordinarily crisp, golden crust and an airy, pillowy interior.\n\nA classic Saigon Banh Mi is filled with a mouth-watering combination of pork liver pâté, Vietnamese cold cuts (chả lụa), pickled carrots and daikon radishes, crisp cucumber slices, fresh cilantro, and fiery chili sauce. This harmonious blend of textures and contrasting flavors has garnered international acclaim. In 2011, the word 'banh mi' was officially added to the Oxford English Dictionary, firmly establishing it as a distinct global delicacy rather than a mere sandwich. Today, Banh Mi represents the culinary pride, creativity, and vibrant street culture of Ho Chi Minh City."
       },
       {
         "id": "e22_q16",
@@ -2702,7 +2785,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Dẫn chứng trong đoạn 1: 'Originating from the French baguette introduced in the late 19th century...'.",
-        "trapTip": "Kiểm tra số thế kỷ: the late 19th century (cuối thế kỷ 19)."
+        "trapTip": "Kiểm tra số thế kỷ: the late 19th century (cuối thế kỷ 19).",
+        "passageTitle": "Reading Passage: Saigon Banh Mi - Street Food Heritage",
+        "passage": "Among various iconic culinary treasures of Vietnam, Saigon Banh Mi stands out as a world-famous street food masterpiece that reflects a unique cultural fusion. Originating from the French baguette introduced during the late 19th century, local Vietnamese bakers modified the recipe by adding rice flour to create an extraordinarily crisp, golden crust and an airy, pillowy interior.\n\nA classic Saigon Banh Mi is filled with a mouth-watering combination of pork liver pâté, Vietnamese cold cuts (chả lụa), pickled carrots and daikon radishes, crisp cucumber slices, fresh cilantro, and fiery chili sauce. This harmonious blend of textures and contrasting flavors has garnered international acclaim. In 2011, the word 'banh mi' was officially added to the Oxford English Dictionary, firmly establishing it as a distinct global delicacy rather than a mere sandwich. Today, Banh Mi represents the culinary pride, creativity, and vibrant street culture of Ho Chi Minh City."
       },
       {
         "id": "e22_q17",
@@ -2717,7 +2802,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Bài đọc nêu rõ: pate gan heo (pâté), chả lụa (cold cuts), thịt nướng, đồ chua (pickled daikon and carrots), dưa leo và ngò rí (cilantro). KHÔNG CÓ phô mai và khoai tây chiên (Cheese and French fries).",
-        "trapTip": "Đọc kỹ danh sách nguyên liệu trong bài."
+        "trapTip": "Đọc kỹ danh sách nguyên liệu trong bài.",
+        "passageTitle": "Reading Passage: Saigon Banh Mi - Street Food Heritage",
+        "passage": "Among various iconic culinary treasures of Vietnam, Saigon Banh Mi stands out as a world-famous street food masterpiece that reflects a unique cultural fusion. Originating from the French baguette introduced during the late 19th century, local Vietnamese bakers modified the recipe by adding rice flour to create an extraordinarily crisp, golden crust and an airy, pillowy interior.\n\nA classic Saigon Banh Mi is filled with a mouth-watering combination of pork liver pâté, Vietnamese cold cuts (chả lụa), pickled carrots and daikon radishes, crisp cucumber slices, fresh cilantro, and fiery chili sauce. This harmonious blend of textures and contrasting flavors has garnered international acclaim. In 2011, the word 'banh mi' was officially added to the Oxford English Dictionary, firmly establishing it as a distinct global delicacy rather than a mere sandwich. Today, Banh Mi represents the culinary pride, creativity, and vibrant street culture of Ho Chi Minh City."
       },
       {
         "id": "e22_q18",
@@ -2732,7 +2819,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "'Originating from the French baguette introduced in the late 19th century, local bakers in Saigon creatively transformed **it** into a distinctly Vietnamese specialty.' Từ 'it' thay thế cho bánh mì baguette của Pháp.",
-        "trapTip": "Các thợ làm bánh đã biến đổi 'nó' (ổ bánh mì baguette) thành đặc sản Việt Nam."
+        "trapTip": "Các thợ làm bánh đã biến đổi 'nó' (ổ bánh mì baguette) thành đặc sản Việt Nam.",
+        "passageTitle": "Reading Passage: Saigon Banh Mi - Street Food Heritage",
+        "passage": "Among various iconic culinary treasures of Vietnam, Saigon Banh Mi stands out as a world-famous street food masterpiece that reflects a unique cultural fusion. Originating from the French baguette introduced during the late 19th century, local Vietnamese bakers modified the recipe by adding rice flour to create an extraordinarily crisp, golden crust and an airy, pillowy interior.\n\nA classic Saigon Banh Mi is filled with a mouth-watering combination of pork liver pâté, Vietnamese cold cuts (chả lụa), pickled carrots and daikon radishes, crisp cucumber slices, fresh cilantro, and fiery chili sauce. This harmonious blend of textures and contrasting flavors has garnered international acclaim. In 2011, the word 'banh mi' was officially added to the Oxford English Dictionary, firmly establishing it as a distinct global delicacy rather than a mere sandwich. Today, Banh Mi represents the culinary pride, creativity, and vibrant street culture of Ho Chi Minh City."
       },
       {
         "id": "e22_q19",
@@ -2747,7 +2836,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "'renowned' nghĩa là 'nổi tiếng, trứ danh' = 'famous and widely known'.",
-        "trapTip": "World-renowned = Globally famous = Nổi tiếng toàn thế giới."
+        "trapTip": "World-renowned = Globally famous = Nổi tiếng toàn thế giới.",
+        "passageTitle": "Reading Passage: Saigon Banh Mi - Street Food Heritage",
+        "passage": "Among various iconic culinary treasures of Vietnam, Saigon Banh Mi stands out as a world-famous street food masterpiece that reflects a unique cultural fusion. Originating from the French baguette introduced during the late 19th century, local Vietnamese bakers modified the recipe by adding rice flour to create an extraordinarily crisp, golden crust and an airy, pillowy interior.\n\nA classic Saigon Banh Mi is filled with a mouth-watering combination of pork liver pâté, Vietnamese cold cuts (chả lụa), pickled carrots and daikon radishes, crisp cucumber slices, fresh cilantro, and fiery chili sauce. This harmonious blend of textures and contrasting flavors has garnered international acclaim. In 2011, the word 'banh mi' was officially added to the Oxford English Dictionary, firmly establishing it as a distinct global delicacy rather than a mere sandwich. Today, Banh Mi represents the culinary pride, creativity, and vibrant street culture of Ho Chi Minh City."
       },
       {
         "id": "e22_q20",
@@ -2762,7 +2853,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Dẫn chứng cuối bài: 'symbolizing Vietnam's creative and vibrant gastronomic culture on the global stage' (biểu tượng cho văn hóa ẩm thực sáng tạo của Việt Nam trên trường quốc tế).",
-        "trapTip": "Gastronomic culture = Văn hóa ẩm thực."
+        "trapTip": "Gastronomic culture = Văn hóa ẩm thực.",
+        "passageTitle": "Reading Passage: Saigon Banh Mi - Street Food Heritage",
+        "passage": "Among various iconic culinary treasures of Vietnam, Saigon Banh Mi stands out as a world-famous street food masterpiece that reflects a unique cultural fusion. Originating from the French baguette introduced during the late 19th century, local Vietnamese bakers modified the recipe by adding rice flour to create an extraordinarily crisp, golden crust and an airy, pillowy interior.\n\nA classic Saigon Banh Mi is filled with a mouth-watering combination of pork liver pâté, Vietnamese cold cuts (chả lụa), pickled carrots and daikon radishes, crisp cucumber slices, fresh cilantro, and fiery chili sauce. This harmonious blend of textures and contrasting flavors has garnered international acclaim. In 2011, the word 'banh mi' was officially added to the Oxford English Dictionary, firmly establishing it as a distinct global delicacy rather than a mere sandwich. Today, Banh Mi represents the culinary pride, creativity, and vibrant street culture of Ho Chi Minh City."
       },
       {
         "id": "e22_q21",
@@ -3084,10 +3177,10 @@ window.ENGLISH_EXAMS = [
         "difficulty": "Nhận biết",
         "question": "Choose the word whose underlined part is pronounced differently: **want<u>ed</u>**, **visit<u>ed</u>**, **start<u>ed</u>**, **work<u>ed</u>**",
         "options": [
-          "worked (/t/)",
-          "wanted (/ɪd/)",
-          "visited (/ɪd/)",
-          "started (/ɪd/)"
+          "worked",
+          "wanted",
+          "visited",
+          "started"
         ],
         "correctIndex": 0,
         "explanation": "- wanted, visited, started có đuôi -ed phát âm là /ɪd/ sau âm /t/.\n- worked có đuôi -ed phát âm là /t/ sau âm /k/.\nDo đó 'worked' phát âm khác.",
@@ -3099,10 +3192,10 @@ window.ENGLISH_EXAMS = [
         "difficulty": "Nhận biết",
         "question": "Choose the word whose underlined part is pronounced differently: **c<u>a</u>t**, **h<u>a</u>t**, **m<u>a</u>p**, **f<u>a</u>st**",
         "options": [
-          "fast (/ɑː/)",
-          "cat (/æ/)",
-          "hat (/æ/)",
-          "map (/æ/)"
+          "fast",
+          "cat",
+          "hat",
+          "map"
         ],
         "correctIndex": 0,
         "explanation": "- cat, hat, map: nguyên âm 'a' phát âm là /æ/ (a bẹt).\n- fast: phát âm là /fɑːst/ (a dài theo giọng chuẩn Anh-Anh).\nDo đó 'fast' có cách phát âm khác.",
@@ -3112,12 +3205,12 @@ window.ENGLISH_EXAMS = [
         "id": "ehn23_q03",
         "topic": "Trọng âm 2 âm tiết (Stress)",
         "difficulty": "Nhận biết",
-        "question": "Choose the word with a different stress pattern: **proˈtect**, **enˈjoy**, **ˈhappen**, **deˈcide**",
+        "question": "Choose the word with a different stress pattern: **protect**, **enjoy**, **happen**, **decide**",
         "options": [
-          "happen (âm 1)",
-          "protect (âm 2)",
-          "enjoy (âm 2)",
-          "decide (âm 2)"
+          "happen",
+          "protect",
+          "enjoy",
+          "decide"
         ],
         "correctIndex": 0,
         "explanation": "- ˈhappen: /ˈhæp.ən/ (động từ 2 âm tiết tận cùng đuôi -en nhấn âm 1).\n- proˈtect, enˈjoy, deˈcide: đều nhấn vào âm tiết thứ 2.",
@@ -3127,12 +3220,12 @@ window.ENGLISH_EXAMS = [
         "id": "ehn23_q04",
         "topic": "Trọng âm 3 âm tiết (Stress)",
         "difficulty": "Thông hiểu",
-        "question": "Choose the word with a different stress pattern: **traˈdition**, **conˈdition**, **inˈvention**, **ˈcelebrate**",
+        "question": "Choose the word with a different stress pattern: **tradition**, **condition**, **invention**, **celebrate**",
         "options": [
-          "celebrate (âm 1)",
-          "tradition (âm 2)",
-          "condition (âm 2)",
-          "invention (âm 2)"
+          "celebrate",
+          "tradition",
+          "condition",
+          "invention"
         ],
         "correctIndex": 0,
         "explanation": "- ˈcelebrate: /ˈsel.ə.breɪt/ (động từ 3 âm tiết đuôi -ate nhấn âm 1).\n- traˈdition, conˈdition, inˈvention: đuôi -tion nhấn âm tiết đứng ngay trước nó (âm 2).",
@@ -3517,7 +3610,7 @@ window.ENGLISH_EXAMS = [
         "id": "ehn23_q30",
         "topic": "Đọc hiểu: Văn Miếu Quốc Tử Giám (Reading)",
         "difficulty": "Thông hiểu",
-        "question": "Read the text and answer:\n\n'Built in 1070 during the reign of Emperor Ly Thanh Tong, the Temple of Literature (Van Mieu) was initially dedicated to Confucius and scholars. In 1076, Quoc Tu Giam, Vietnam's first national university, was established within the complex to educate gifted scholars.\n\nOver several centuries, thousands of doctors graduated from this prestigious academy. Today, the complex preserves 82 Stone Stele of Doctors mounted on tortoise backs, recognized by UNESCO as World Documentary Heritage. Prior to important examinations such as the national high school exam or Grade 10 entrance exam, thousands of students visit Van Mieu to seek luck, pray for academic success, and honor the country's centuries-old tradition of studiousness.'\n\nWhat was Quoc Tu Giam when it was built in 1076?",
+        "question": "What is the main topic of the reading passage?",
         "options": [
           "Vietnam's first national university",
           "A market for ceramic products",
@@ -3526,7 +3619,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Dẫn chứng trong đoạn 1: 'In 1076, Quoc Tu Giam, Vietnam's first national university, was established...'.",
-        "trapTip": "Quoc Tu Giam là trường đại học đầu tiên của Việt Nam."
+        "trapTip": "Quoc Tu Giam là trường đại học đầu tiên của Việt Nam.",
+        "passageTitle": "Reading Passage: The Temple of Literature (Van Mieu - Quoc Tu Giam)",
+        "passage": "Built in 1070 during the reign of Emperor Ly Thanh Tong, the Temple of Literature (Van Mieu) is dedicated to Confucius and scholars. In 1076, Vietnam's first national university, Quoc Tu Giam (Imperial Academy), was established within its grounds to educate noble and talented students from across the country.\n\nOne of the most notable features of the complex is the garden of Doctors' Stone Stele. There are 82 stone slabs resting on the backs of giant carved stone turtles, honoring the names and birthplaces of 1,307 doctors who passed royal examinations between 1442 and 1779. In 2010, UNESCO inscribed these Stone Stele as World Documentary Heritage in the Memory of the World Register.\n\nToday, the Temple of Literature is not only a prime historical destination for domestic and international travelers, but also a sacred sanctuary where students gather before major exams to pray for academic success and draw inspiration from the nation's profound traditions of studiousness."
       },
       {
         "id": "ehn23_q31",
@@ -3541,7 +3636,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Dẫn chứng trong đoạn 2: 'Today, the complex preserves 82 Stone Stele of Doctors mounted on tortoise backs...'.",
-        "trapTip": "82 bia tiến sĩ Văn Miếu."
+        "trapTip": "82 bia tiến sĩ Văn Miếu.",
+        "passageTitle": "Reading Passage: The Temple of Literature (Van Mieu - Quoc Tu Giam)",
+        "passage": "Built in 1070 during the reign of Emperor Ly Thanh Tong, the Temple of Literature (Van Mieu) is dedicated to Confucius and scholars. In 1076, Vietnam's first national university, Quoc Tu Giam (Imperial Academy), was established within its grounds to educate noble and talented students from across the country.\n\nOne of the most notable features of the complex is the garden of Doctors' Stone Stele. There are 82 stone slabs resting on the backs of giant carved stone turtles, honoring the names and birthplaces of 1,307 doctors who passed royal examinations between 1442 and 1779. In 2010, UNESCO inscribed these Stone Stele as World Documentary Heritage in the Memory of the World Register.\n\nToday, the Temple of Literature is not only a prime historical destination for domestic and international travelers, but also a sacred sanctuary where students gather before major exams to pray for academic success and draw inspiration from the nation's profound traditions of studiousness."
       },
       {
         "id": "ehn23_q32",
@@ -3556,7 +3653,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Dẫn chứng: 'mounted on tortoise backs' (đặt trên lưng rùa đá).",
-        "trapTip": "Tortoise = Con rùa."
+        "trapTip": "Tortoise = Con rùa.",
+        "passageTitle": "Reading Passage: The Temple of Literature (Van Mieu - Quoc Tu Giam)",
+        "passage": "Built in 1070 during the reign of Emperor Ly Thanh Tong, the Temple of Literature (Van Mieu) is dedicated to Confucius and scholars. In 1076, Vietnam's first national university, Quoc Tu Giam (Imperial Academy), was established within its grounds to educate noble and talented students from across the country.\n\nOne of the most notable features of the complex is the garden of Doctors' Stone Stele. There are 82 stone slabs resting on the backs of giant carved stone turtles, honoring the names and birthplaces of 1,307 doctors who passed royal examinations between 1442 and 1779. In 2010, UNESCO inscribed these Stone Stele as World Documentary Heritage in the Memory of the World Register.\n\nToday, the Temple of Literature is not only a prime historical destination for domestic and international travelers, but also a sacred sanctuary where students gather before major exams to pray for academic success and draw inspiration from the nation's profound traditions of studiousness."
       },
       {
         "id": "ehn23_q33",
@@ -3571,7 +3670,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "Dẫn chứng câu cuối: 'thousands of students visit Van Mieu to seek luck, pray for academic success, and honor the country's centuries-old tradition of studiousness.'",
-        "trapTip": "Cầu may mắn và tôn vinh truyền thống hiếu học."
+        "trapTip": "Cầu may mắn và tôn vinh truyền thống hiếu học.",
+        "passageTitle": "Reading Passage: The Temple of Literature (Van Mieu - Quoc Tu Giam)",
+        "passage": "Built in 1070 during the reign of Emperor Ly Thanh Tong, the Temple of Literature (Van Mieu) is dedicated to Confucius and scholars. In 1076, Vietnam's first national university, Quoc Tu Giam (Imperial Academy), was established within its grounds to educate noble and talented students from across the country.\n\nOne of the most notable features of the complex is the garden of Doctors' Stone Stele. There are 82 stone slabs resting on the backs of giant carved stone turtles, honoring the names and birthplaces of 1,307 doctors who passed royal examinations between 1442 and 1779. In 2010, UNESCO inscribed these Stone Stele as World Documentary Heritage in the Memory of the World Register.\n\nToday, the Temple of Literature is not only a prime historical destination for domestic and international travelers, but also a sacred sanctuary where students gather before major exams to pray for academic success and draw inspiration from the nation's profound traditions of studiousness."
       },
       {
         "id": "ehn23_q34",
@@ -3586,7 +3687,9 @@ window.ENGLISH_EXAMS = [
         ],
         "correctIndex": 0,
         "explanation": "'prestigious' nghĩa là 'danh giá, uy tín, được kính trọng' = 'respected and admired'.",
-        "trapTip": "Prestigious academy = Học viện danh giá."
+        "trapTip": "Prestigious academy = Học viện danh giá.",
+        "passageTitle": "Reading Passage: The Temple of Literature (Van Mieu - Quoc Tu Giam)",
+        "passage": "Built in 1070 during the reign of Emperor Ly Thanh Tong, the Temple of Literature (Van Mieu) is dedicated to Confucius and scholars. In 1076, Vietnam's first national university, Quoc Tu Giam (Imperial Academy), was established within its grounds to educate noble and talented students from across the country.\n\nOne of the most notable features of the complex is the garden of Doctors' Stone Stele. There are 82 stone slabs resting on the backs of giant carved stone turtles, honoring the names and birthplaces of 1,307 doctors who passed royal examinations between 1442 and 1779. In 2010, UNESCO inscribed these Stone Stele as World Documentary Heritage in the Memory of the World Register.\n\nToday, the Temple of Literature is not only a prime historical destination for domestic and international travelers, but also a sacred sanctuary where students gather before major exams to pray for academic success and draw inspiration from the nation's profound traditions of studiousness."
       },
       {
         "id": "ehn23_q35",
@@ -4050,7 +4153,7 @@ window.ENGLISH_EXAMS = [
         "id": "e01_q04",
         "topic": "Trọng âm từ 2 âm tiết (Word Stress)",
         "difficulty": "Thông hiểu",
-        "question": "Choose the word that has a different stress pattern from the others: **proˈvide**, **ˈlisten**, **ˈhappen**, **ˈvisit**",
+        "question": "Choose the word that has a different stress pattern from the others: **provide**, **listen**, **happen**, **visit**",
         "options": [
           "provide",
           "listen",
@@ -4065,7 +4168,7 @@ window.ENGLISH_EXAMS = [
         "id": "e01_q05",
         "topic": "Trọng âm từ 3 âm tiết (Word Stress)",
         "difficulty": "Thông hiểu",
-        "question": "Choose the word that has a different stress pattern: **ˈdifficult**, **ˈdangerous**, **imˈportant**, **ˈbeautiful**",
+        "question": "Choose the word that has a different stress pattern: **difficult**, **dangerous**, **important**, **beautiful**",
         "options": [
           "difficult",
           "dangerous",
@@ -4382,3 +4485,1478 @@ window.ENGLISH_EXAMS = [
     "badgeText": "Đề Chuẩn Toàn Quốc"
   }
 ];
+
+// =========================================================
+// BỔ SUNG 3 ĐỀ TIẾNG ANH MỚI (Bám sát cấu trúc đề tuyển sinh 9 lên 10)
+// =========================================================
+window.ENGLISH_EXAMS.push(
+{
+  "id": "eng_exam_hanoi_2024_style",
+  "title": "Đề ôn thi Tuyển sinh Lớp 10 TP. Hà Nội - Bám sát cấu trúc đề chính thức 2024 - Môn Tiếng Anh",
+  "subject": "english",
+  "year": 2024,
+  "location": "Hà Nội",
+  "isOfficial": false,
+  "badgeText": "📋 Cấu trúc đề Hà Nội 2024",
+  "durationMinutes": 60,
+  "totalQuestions": 30,
+  "description": "Đề thi ôn luyện bám sát cấu trúc đề thi chính thức vào lớp 10 của Sở GD&ĐT Hà Nội (thời gian 60 phút, 100% trắc nghiệm khách quan). Bao gồm: Ngữ âm (-ed, nguyên âm), Trọng âm từ 2 và 3 âm tiết, Ngữ pháp - Từ vựng trọng tâm (câu hỏi đuôi, thì, giới từ, liên từ, câu điều kiện), Chức năng giao tiếp, Từ đồng nghĩa - trái nghĩa, Tìm lỗi sai, Bài đọc điền từ Cloze test về Vịnh Hạ Long, Bài đọc hiểu về Giấc ngủ của tuổi dậy thì và Viết lại câu.",
+  "questions": [
+    {
+      "id": "ehn24s_q01",
+      "topic": "Phát âm đuôi -ed (Pronunciation)",
+      "difficulty": "Nhận biết",
+      "question": "Choose the word whose underlined part is pronounced differently: **wash<u>ed</u>**, **play<u>ed</u>**, **stay<u>ed</u>**, **lov<u>ed</u>**",
+      "options": [
+        "washed",
+        "played",
+        "stayed",
+        "loved"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *washed*: tận cùng là /ʃ/ (vô thanh) nên -ed phát âm là /t/ (/wɒʃt/).\n- *played*, *stayed*, *loved*: tận cùng là nguyên âm và âm hữu thanh nên -ed phát âm là /d/.\nDo đó 'washed' phát âm khác các từ còn lại.",
+      "trapTip": "Ghi nhớ quy tắc phát âm đuôi -ed: sau âm vô thanh (/p/, /k/, /f/, /s/, /ʃ/, /tʃ/) đuôi -ed đọc là /t/."
+    },
+    {
+      "id": "ehn24s_q02",
+      "topic": "Phát âm nguyên âm (Pronunciation)",
+      "difficulty": "Nhận biết",
+      "question": "Choose the word whose underlined part is pronounced differently: **h<u>o</u>me**, **m<u>o</u>nth**, **c<u>o</u>me**, **br<u>o</u>ther**",
+      "options": [
+        "home",
+        "month",
+        "come",
+        "brother"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *home*: phần gạch chân phát âm là /əʊ/ (/həʊm/).\n- *month*, *come*, *brother*: phần gạch chân phát âm là /ʌ/ (/mʌnθ/, /kʌm/, /ˈbrʌðər/).\nDo đó 'home' có cách phát âm khác.",
+      "trapTip": "Chú ý nhóm từ có 'o' phát âm /ʌ/ rất hay gặp trong đề thi: month, come, brother, son, love."
+    },
+    {
+      "id": "ehn24s_q03",
+      "topic": "Trọng âm từ 2 âm tiết (Word Stress)",
+      "difficulty": "Nhận biết",
+      "question": "Choose the word that has a different stress pattern: **finish**, **decide**, **return**, **agree**",
+      "options": [
+        "finish",
+        "decide",
+        "return",
+        "agree"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *ˈfinish*: trọng âm rơi vào âm tiết 1 (động từ có đuôi -ish thường nhấn âm 1).\n- *deˈcide*, *reˈturn*, *aˈgree*: trọng âm đều rơi vào âm tiết 2.\nDo đó 'finish' có vị trí trọng âm khác biệt.",
+      "trapTip": "Động từ 2 âm tiết thường nhấn âm 2, nhưng 'finish', 'listen', 'happen', 'enter' là các ngoại lệ nhấn âm 1."
+    },
+    {
+      "id": "ehn24s_q04",
+      "topic": "Trọng âm từ 3 âm tiết (Word Stress)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the word that has a different stress pattern: **tradition**, **family**, **holiday**, **festival**",
+      "options": [
+        "tradition",
+        "family",
+        "holiday",
+        "festival"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *traˈdition*: từ có đuôi -tion có trọng âm rơi vào âm tiết ngay trước nó (âm tiết 2).\n- *ˈfamily*, *ˈholiday*, *ˈfestival*: trọng âm đều rơi vào âm tiết 1.\nDo đó 'tradition' có trọng âm khác biệt.",
+      "trapTip": "Hậu tố -tion, -sion, -ic luôn kéo trọng âm về âm tiết liền kề phía trước nó."
+    },
+    {
+      "id": "ehn24s_q05",
+      "topic": "Câu hỏi đuôi (Question Tag)",
+      "difficulty": "Nhận biết",
+      "question": "Your brother didn't go to school yesterday, ______?",
+      "options": [
+        "did he",
+        "didn't he",
+        "does he",
+        "doesn't he"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mệnh đề chính dùng thì quá khứ đơn ở dạng phủ định ('didn't go') nên phần câu hỏi đuôi phải ở dạng khẳng định tương ứng: 'did he'.",
+      "trapTip": "Quy tắc câu hỏi đuôi: Mệnh đề phủ định (-) thì câu hỏi đuôi phải khẳng định (+)."
+    },
+    {
+      "id": "ehn24s_q06",
+      "topic": "Giới từ chỉ thời gian (Prepositions of Time)",
+      "difficulty": "Nhận biết",
+      "question": "We usually visit our grandparents ______ Sunday mornings.",
+      "options": [
+        "on",
+        "in",
+        "at",
+        "to"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dùng giới từ **on** trước các ngày trong tuần và buổi của một ngày cụ thể (on Sunday morning / on Monday afternoon).",
+      "trapTip": "Nếu chỉ có 'the morning' thì dùng 'in the morning', nhưng khi có thứ đi kèm ('Sunday mornings') bắt buộc dùng 'on'."
+    },
+    {
+      "id": "ehn24s_q07",
+      "topic": "Dạng của động từ (Gerund / Infinitive)",
+      "difficulty": "Thông hiểu",
+      "question": "My sister is really looking forward to ______ her pen pal from England next week.",
+      "options": [
+        "meeting",
+        "meet",
+        "to meet",
+        "met"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cấu trúc cố định: **look forward to + V-ing** (rất mong đợi điều gì). Trong đó 'to' là giới từ, sau nó động từ phải ở dạng V-ing.",
+      "trapTip": "Nhiều bạn thấy 'to' liền chọn V-inf là sai lầm kinh điển. Cụm 'look forward to' luôn đi với V-ing!"
+    },
+    {
+      "id": "ehn24s_q08",
+      "topic": "Cụm động từ (Phrasal Verbs)",
+      "difficulty": "Thông hiểu",
+      "question": "Remember to ______ the lights and fan before leaving the classroom to save energy.",
+      "options": [
+        "turn off",
+        "turn on",
+        "look after",
+        "take off"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *turn off*: tắt (thiết bị điện) -> phù hợp nghĩa tiết kiệm năng lượng.\n- *turn on*: bật.\n- *look after*: chăm sóc.\n- *take off*: cất cánh / cởi bỏ.",
+      "trapTip": "Đọc kĩ ngữ cảnh 'save energy' (tiết kiệm năng lượng) để chọn hành động 'tắt thiết bị' (turn off)."
+    },
+    {
+      "id": "ehn24s_q09",
+      "topic": "Từ loại (Word Form)",
+      "difficulty": "Thông hiểu",
+      "question": "Solar energy is an ______ friendly alternative to fossil fuels.",
+      "options": [
+        "environmentally",
+        "environment",
+        "environmental",
+        "environmentalist"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đứng trước tính từ 'friendly' cần một trạng từ (Adv) để bổ nghĩa: **environmentally friendly** (thân thiện với môi trường).",
+      "trapTip": "Cụm 'environmentally friendly' là một cụm từ cố định cực kì phổ biến trong chủ đề bảo vệ môi trường."
+    },
+    {
+      "id": "ehn24s_q10",
+      "topic": "Cụm từ cố định (Collocations)",
+      "difficulty": "Thông hiểu",
+      "question": "If you want to pass the entrance exam with a high score, you should ______ an effort right now.",
+      "options": [
+        "make",
+        "do",
+        "give",
+        "take"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cụm từ cố định: **make an effort** (nỗ lực, cố gắng). Không dùng 'do an effort'.",
+      "trapTip": "Phân biệt make và do: make an effort, make a mistake, make a decision; nhưng do homework, do research."
+    },
+    {
+      "id": "ehn24s_q11",
+      "topic": "Liên từ phụ thuộc (Subordinating Conjunctions)",
+      "difficulty": "Thông hiểu",
+      "question": "______ it was raining heavily, the students went to the botanical garden as planned.",
+      "options": [
+        "Although",
+        "Because",
+        "Despite",
+        "Because of"
+      ],
+      "correctIndex": 0,
+      "explanation": "- 'it was raining heavily' là một mệnh đề (S + V).\n- Hai vế mang nghĩa tương phản (mưa to nhưng vẫn đi dã ngoại) -> dùng liên từ **Although**.\n- 'Despite' và 'Because of' chỉ đi với danh từ hoặc V-ing.",
+      "trapTip": "Sau Although / Even though là mệnh đề (S + V). Sau Despite / In spite of là cụm danh từ hoặc V-ing."
+    },
+    {
+      "id": "ehn24s_q12",
+      "topic": "Đại từ quan hệ (Relative Pronouns)",
+      "difficulty": "Thông hiểu",
+      "question": "The boy ______ won the first prize in the national English contest is my classmate.",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "whose"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đại từ quan hệ thay thế cho danh từ chỉ người 'The boy' và đóng vai trò làm chủ ngữ cho động từ 'won' ở mệnh đề sau phải dùng **who**.",
+      "trapTip": "'whom' chỉ dùng làm tân ngữ; 'whose' chỉ sở hữu; 'which' thay thế cho danh từ chỉ vật."
+    },
+    {
+      "id": "ehn24s_q13",
+      "topic": "Giao tiếp: Đáp lại lời khen (Communication)",
+      "difficulty": "Nhận biết",
+      "question": "Nam: \"You gave a wonderful presentation about renewable energy!\" - Hoa: \"______\"",
+      "options": [
+        "Thank you. It's very nice of you to say so.",
+        "You're welcome.",
+        "I don't think so. It was terrible.",
+        "No problem, anytime."
+      ],
+      "correctIndex": 0,
+      "explanation": "Khi nhận được lời khen ngợi ('wonderful presentation'), cách đáp lại lịch sự và chuẩn mực trong tiếng Anh là cảm ơn: 'Thank you. It's very nice of you to say so.'",
+      "trapTip": "'You're welcome' dùng để đáp lại lời cảm ơn, không dùng để đáp lại lời khen."
+    },
+    {
+      "id": "ehn24s_q14",
+      "topic": "Giao tiếp: Đưa ra lời đề nghị / yêu cầu (Communication)",
+      "difficulty": "Nhận biết",
+      "question": "Passenger: \"Could you show me the way to the nearest bus station?\" - Local resident: \"______\"",
+      "options": [
+        "Certainly. Go straight ahead and turn left at the corner.",
+        "Yes, I can't.",
+        "No, thanks.",
+        "Never mind."
+      ],
+      "correctIndex": 0,
+      "explanation": "Khi được hỏi đường một cách lịch sự ('Could you show me...?'), câu trả lời đồng ý giúp đỡ phù hợp là 'Certainly. Go straight ahead...' (Chắc chắn rồi. Cứ đi thẳng...).",
+      "trapTip": "Chọn câu trả lời vừa đồng ý lịch sự vừa chỉ dẫn cụ thể cho người hỏi."
+    },
+    {
+      "id": "ehn24s_q15",
+      "topic": "Từ đồng nghĩa (Closest in meaning)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the word CLOSEST in meaning to the underlined word: 'The local authority is trying to **<u>preserve</u>** historic buildings in the ancient town.'",
+      "options": [
+        "protect",
+        "destroy",
+        "abandon",
+        "decorate"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *preserve* (v): bảo tồn, gìn giữ = *protect* (bảo vệ).\n- *destroy*: phá hủy (trái nghĩa).\n- *abandon*: từ bỏ.\n- *decorate*: trang trí.",
+      "trapTip": "Đọc kĩ đề: yêu cầu tìm từ ĐỒNG NGHĨA (Closest), đừng chọn nhầm 'destroy'."
+    },
+    {
+      "id": "ehn24s_q16",
+      "topic": "Từ trái nghĩa (Opposite in meaning)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the word OPPOSITE in meaning to the underlined word: 'He is known as a **<u>generous</u>** man who regularly donates money to poor children.'",
+      "options": [
+        "mean",
+        "kind",
+        "helpful",
+        "polite"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *generous* (adj): hào phóng, rộng lượng.\n- *mean* (adj): keo kiệt, bủn xỉn (từ trái nghĩa).\n- *kind*, *helpful*: tốt bụng (đồng nghĩa hoặc gần nghĩa).",
+      "trapTip": "CẢNH BÁO: Đề bài yêu cầu tìm từ TRÁI NGHĨA (Opposite). Trái nghĩa với hào phóng là keo kiệt ('mean')."
+    },
+    {
+      "id": "ehn24s_q17",
+      "topic": "Tìm lỗi sai: Đại từ quan hệ thừa tân ngữ (Error Identification)",
+      "difficulty": "Thông hiểu",
+      "question": "Find the underlined part that needs correction: 'The novel **(A)** <u>which</u> I **(B)** <u>borrowed</u> it from **(C)** <u>the</u> school library yesterday **(D)** <u>is</u> fascinating.'",
+      "options": [
+        "it",
+        "which",
+        "borrowed",
+        "is"
+      ],
+      "correctIndex": 0,
+      "explanation": "Trong mệnh đề quan hệ, 'which' đã đóng vai trò làm tân ngữ cho động từ 'borrowed', do đó tân ngữ 'it' là bị thừa. Cần bỏ 'it'.",
+      "trapTip": "Lỗi thừa đại từ tân ngữ (it / them) trong mệnh đề quan hệ là dạng bẫy rất phổ biến trong đề thi vào 10."
+    },
+    {
+      "id": "ehn24s_q18",
+      "topic": "Tìm lỗi sai: Cấu trúc song hành (Parallel Structure)",
+      "difficulty": "Thông hiểu",
+      "question": "Find the underlined part that needs correction: 'In her free time, Mai enjoys **(A)** <u>listening</u> to music, **(B)** <u>reading</u> comic books, and **(C)** <u>to bake</u> cookies with **(D)** <u>her</u> mother.'",
+      "options": [
+        "to bake",
+        "listening",
+        "reading",
+        "her"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cấu trúc song hành sau động từ 'enjoys': listening, reading và phải là **baking** (V-ing) thay vì 'to bake'.",
+      "trapTip": "Các thành phần nối với nhau bởi 'and', 'or' phải cùng dạng từ loại hoặc dạng thức ngữ pháp."
+    },
+    {
+      "id": "ehn24s_q19",
+      "topic": "Đọc điền từ Cloze: Preserving Ha Long Bay (Câu 1)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the best option to fill in blank (1): 'Ha Long Bay, ______ is situated in Quang Ninh province, is one of the most famous tourist destinations in Vietnam.'",
+      "options": [
+        "which",
+        "who",
+        "where",
+        "that"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mệnh đề quan hệ không xác định (nằm giữa hai dấu phẩy) bổ nghĩa cho danh từ chỉ vật 'Ha Long Bay' chỉ được dùng **which**, không được dùng 'that'.",
+      "trapTip": "Sau dấu phẩy (mệnh đề không xác định) TUYỆT ĐỐI KHÔNG dùng 'that'.",
+      "passageTitle": "Bài đọc điền từ: Preserving Ha Long Bay",
+      "passage": "Ha Long Bay, (1) ______ is situated in Quang Ninh province, is one of the most famous tourist destinations in Vietnam. With thousands of limestone islands rising from the emerald waters, it attracts millions of domestic and international visitors each year. However, the rapid increase in tourism has posed several challenges to the bay's natural (2) ______. Plastic waste and water pollution from tourist boats have negatively affected marine life. To tackle these problems, local authorities have implemented strict regulations to (3) ______ single-use plastics and encourage eco-friendly travel. Many volunteer organizations have also joined hands to clean (4) ______ the beaches and raise public awareness. (5) ______ everyone contributes a small action, Ha Long Bay will continue to be a precious heritage for generations to come."
+    },
+    {
+      "id": "ehn24s_q20",
+      "topic": "Đọc điền từ Cloze: Preserving Ha Long Bay (Câu 2)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the best option to fill in blank (2): '...posed several challenges to the bay's natural ______.'",
+      "options": [
+        "environment",
+        "environmental",
+        "environmentally",
+        "environmentalist"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sau tính từ 'natural' cần một danh từ: **natural environment** (môi trường tự nhiên).",
+      "trapTip": "Tính từ + Danh từ. 'environmental' là tính từ, 'environmentally' là trạng từ.",
+      "passageTitle": "Bài đọc điền từ: Preserving Ha Long Bay",
+      "passage": "Ha Long Bay, (1) ______ is situated in Quang Ninh province, is one of the most famous tourist destinations in Vietnam. With thousands of limestone islands rising from the emerald waters, it attracts millions of domestic and international visitors each year. However, the rapid increase in tourism has posed several challenges to the bay's natural (2) ______. Plastic waste and water pollution from tourist boats have negatively affected marine life. To tackle these problems, local authorities have implemented strict regulations to (3) ______ single-use plastics and encourage eco-friendly travel. Many volunteer organizations have also joined hands to clean (4) ______ the beaches and raise public awareness. (5) ______ everyone contributes a small action, Ha Long Bay will continue to be a precious heritage for generations to come."
+    },
+    {
+      "id": "ehn24s_q21",
+      "topic": "Đọc điền từ Cloze: Preserving Ha Long Bay (Câu 3)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the best option to fill in blank (3): '...implemented strict regulations to ______ single-use plastics and encourage eco-friendly travel.'",
+      "options": [
+        "reduce",
+        "increase",
+        "produce",
+        "waste"
+      ],
+      "correctIndex": 0,
+      "explanation": "Chính quyền đưa ra quy định để **reduce** (giảm thiểu) rác thải nhựa dùng một lần. Các từ còn lại mang nghĩa trái ngược hoặc không hợp lý.",
+      "trapTip": "Đọc cả vế sau 'encourage eco-friendly travel' (khuyến khích du lịch thân thiện môi trường) để suy ra từ cần điền là 'reduce'.",
+      "passageTitle": "Bài đọc điền từ: Preserving Ha Long Bay",
+      "passage": "Ha Long Bay, (1) ______ is situated in Quang Ninh province, is one of the most famous tourist destinations in Vietnam. With thousands of limestone islands rising from the emerald waters, it attracts millions of domestic and international visitors each year. However, the rapid increase in tourism has posed several challenges to the bay's natural (2) ______. Plastic waste and water pollution from tourist boats have negatively affected marine life. To tackle these problems, local authorities have implemented strict regulations to (3) ______ single-use plastics and encourage eco-friendly travel. Many volunteer organizations have also joined hands to clean (4) ______ the beaches and raise public awareness. (5) ______ everyone contributes a small action, Ha Long Bay will continue to be a precious heritage for generations to come."
+    },
+    {
+      "id": "ehn24s_q22",
+      "topic": "Đọc điền từ Cloze: Preserving Ha Long Bay (Câu 4)",
+      "difficulty": "Nhận biết",
+      "question": "Choose the best option to fill in blank (4): '...joined hands to clean ______ the beaches and raise public awareness.'",
+      "options": [
+        "up",
+        "off",
+        "on",
+        "away"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cụm động từ cố định: **clean up** (dọn dẹp sạch sẽ).",
+      "trapTip": "'clean up the beaches' là cụm từ rất phổ biến trong các chiến dịch tình nguyện vì môi trường.",
+      "passageTitle": "Bài đọc điền từ: Preserving Ha Long Bay",
+      "passage": "Ha Long Bay, (1) ______ is situated in Quang Ninh province, is one of the most famous tourist destinations in Vietnam. With thousands of limestone islands rising from the emerald waters, it attracts millions of domestic and international visitors each year. However, the rapid increase in tourism has posed several challenges to the bay's natural (2) ______. Plastic waste and water pollution from tourist boats have negatively affected marine life. To tackle these problems, local authorities have implemented strict regulations to (3) ______ single-use plastics and encourage eco-friendly travel. Many volunteer organizations have also joined hands to clean (4) ______ the beaches and raise public awareness. (5) ______ everyone contributes a small action, Ha Long Bay will continue to be a precious heritage for generations to come."
+    },
+    {
+      "id": "ehn24s_q23",
+      "topic": "Đọc điền từ Cloze: Preserving Ha Long Bay (Câu 5)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the best option to fill in blank (5): '______ everyone contributes a small action, Ha Long Bay will continue to be a precious heritage...'",
+      "options": [
+        "If",
+        "Unless",
+        "Although",
+        "Because of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mệnh đề điều kiện loại 1: **If** everyone contributes a small action, Ha Long Bay will continue... (Nếu mọi người cùng góp một hành động nhỏ, vịnh Hạ Long sẽ tiếp tục...).",
+      "trapTip": "'Unless' mang nghĩa 'Nếu không' (phủ định) -> không hợp nghĩa.",
+      "passageTitle": "Bài đọc điền từ: Preserving Ha Long Bay",
+      "passage": "Ha Long Bay, (1) ______ is situated in Quang Ninh province, is one of the most famous tourist destinations in Vietnam. With thousands of limestone islands rising from the emerald waters, it attracts millions of domestic and international visitors each year. However, the rapid increase in tourism has posed several challenges to the bay's natural (2) ______. Plastic waste and water pollution from tourist boats have negatively affected marine life. To tackle these problems, local authorities have implemented strict regulations to (3) ______ single-use plastics and encourage eco-friendly travel. Many volunteer organizations have also joined hands to clean (4) ______ the beaches and raise public awareness. (5) ______ everyone contributes a small action, Ha Long Bay will continue to be a precious heritage for generations to come."
+    },
+    {
+      "id": "ehn24s_q24",
+      "topic": "Đọc hiểu: Giấc ngủ của tuổi dậy thì - Tiêu đề chính (Reading Comprehension)",
+      "difficulty": "Thông hiểu",
+      "question": "What is the main topic of the passage?",
+      "options": [
+        "The importance of sleep for teenagers' health and academic performance",
+        "How to use smartphones effectively at night",
+        "The history of sleep research in modern medicine",
+        "Different types of physical exercise for teenagers"
+      ],
+      "correctIndex": 0,
+      "explanation": "Toàn bộ bài đọc tập trung vào nhu cầu ngủ của thanh thiếu niên (8 - 10 tiếng), hậu quả của việc thiếu ngủ và lời khuyên để cải thiện giấc ngủ, phục vụ việc học tập và sức khỏe.",
+      "trapTip": "Đọc câu chủ đề đoạn 1 và câu kết đoạn cuối để nắm trọn vẹn ý chính của bài.",
+      "passageTitle": "Bài đọc hiểu: The Importance of Sleep for Teenagers",
+      "passage": "Sleep plays a vital role in good health and well-being throughout our life. For teenagers, getting enough sleep is especially important because their bodies and brains are growing rapidly. Medical experts recommend that adolescents between 13 and 18 years old should get 8 to 10 hours of sleep per night to maintain optimal health.\n\nHowever, studies show that a large number of teenagers suffer from chronic sleep deprivation. There are several reasons for this trend. Heavy homework loads, extracurricular activities, and early school start times all contribute to late bedtimes. Furthermore, the widespread use of electronic devices such as smartphones and tablets before going to bed is a major factor. The blue light emitted by these screens interferes with the production of melatonin, a natural hormone that signals the body to sleep.\n\nNot getting enough sleep can lead to serious consequences. In the short term, sleep-deprived teenagers often experience poor concentration, mood swings, and lower grades at school. Over time, chronic lack of sleep increases the risk of obesity, depression, and weakened immune systems. To improve sleep quality, experts advise teenagers to establish a regular sleep schedule, avoid caffeine in the afternoon, and turn off all digital screens at least 30 minutes before bedtime."
+    },
+    {
+      "id": "ehn24s_q25",
+      "topic": "Đọc hiểu: Chi tiết trong bài đọc (Reading Comprehension)",
+      "difficulty": "Nhận biết",
+      "question": "According to the passage, how many hours of sleep do teenagers need each night?",
+      "options": [
+        "8 to 10 hours",
+        "6 to 8 hours",
+        "10 to 12 hours",
+        "at least 11 hours"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đoạn 1 nêu rõ: 'Medical experts recommend that adolescents between 13 and 18 years old should get 8 to 10 hours of sleep per night...'",
+      "trapTip": "Tìm đúng thông tin số liệu trong đoạn 1 của bài đọc.",
+      "passageTitle": "Bài đọc hiểu: The Importance of Sleep for Teenagers",
+      "passage": "Sleep plays a vital role in good health and well-being throughout our life. For teenagers, getting enough sleep is especially important because their bodies and brains are growing rapidly. Medical experts recommend that adolescents between 13 and 18 years old should get 8 to 10 hours of sleep per night to maintain optimal health.\n\nHowever, studies show that a large number of teenagers suffer from chronic sleep deprivation. There are several reasons for this trend. Heavy homework loads, extracurricular activities, and early school start times all contribute to late bedtimes. Furthermore, the widespread use of electronic devices such as smartphones and tablets before going to bed is a major factor. The blue light emitted by these screens interferes with the production of melatonin, a natural hormone that signals the body to sleep.\n\nNot getting enough sleep can lead to serious consequences. In the short term, sleep-deprived teenagers often experience poor concentration, mood swings, and lower grades at school. Over time, chronic lack of sleep increases the risk of obesity, depression, and weakened immune systems. To improve sleep quality, experts advise teenagers to establish a regular sleep schedule, avoid caffeine in the afternoon, and turn off all digital screens at least 30 minutes before bedtime."
+    },
+    {
+      "id": "ehn24s_q26",
+      "topic": "Đọc hiểu: Từ quy chiếu (Pronoun Reference)",
+      "difficulty": "Thông hiểu",
+      "question": "The word \"these screens\" in paragraph 2 refers to:",
+      "options": [
+        "smartphones and tablets",
+        "televisions and radios",
+        "digital clocks",
+        "medical monitors"
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu trước đó: 'the widespread use of electronic devices such as **smartphones and tablets** before going to bed is a major factor. The blue light emitted by **these screens**...'. Do đó 'these screens' chỉ màn hình của smartphones and tablets.",
+      "trapTip": "Đọc ngược lại câu đứng liền trước để xác định danh từ mà đại từ/từ chỉ định thay thế.",
+      "passageTitle": "Bài đọc hiểu: The Importance of Sleep for Teenagers",
+      "passage": "Sleep plays a vital role in good health and well-being throughout our life. For teenagers, getting enough sleep is especially important because their bodies and brains are growing rapidly. Medical experts recommend that adolescents between 13 and 18 years old should get 8 to 10 hours of sleep per night to maintain optimal health.\n\nHowever, studies show that a large number of teenagers suffer from chronic sleep deprivation. There are several reasons for this trend. Heavy homework loads, extracurricular activities, and early school start times all contribute to late bedtimes. Furthermore, the widespread use of electronic devices such as smartphones and tablets before going to bed is a major factor. The blue light emitted by these screens interferes with the production of melatonin, a natural hormone that signals the body to sleep.\n\nNot getting enough sleep can lead to serious consequences. In the short term, sleep-deprived teenagers often experience poor concentration, mood swings, and lower grades at school. Over time, chronic lack of sleep increases the risk of obesity, depression, and weakened immune systems. To improve sleep quality, experts advise teenagers to establish a regular sleep schedule, avoid caffeine in the afternoon, and turn off all digital screens at least 30 minutes before bedtime."
+    },
+    {
+      "id": "ehn24s_q27",
+      "topic": "Đọc hiểu: Chi tiết không được đề cập (Negative Factual Detail)",
+      "difficulty": "Thông hiểu",
+      "question": "Which of the following is NOT mentioned as a consequence of sleep deprivation?",
+      "options": [
+        "Improving creative writing skills",
+        "Poor concentration in class",
+        "Lower academic grades",
+        "Weakened immune system"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đoạn 3 liệt kê hậu quả: poor concentration, mood swings, lower grades, obesity, depression, weakened immune systems. 'Improving creative writing skills' (nâng cao kĩ năng viết văn) không hề được nhắc đến và hoàn toàn trái ngược với tác hại của thiếu ngủ.",
+      "trapTip": "Câu hỏi 'NOT mentioned': đối chiếu từng đáp án với đoạn 3 để loại trừ.",
+      "passageTitle": "Bài đọc hiểu: The Importance of Sleep for Teenagers",
+      "passage": "Sleep plays a vital role in good health and well-being throughout our life. For teenagers, getting enough sleep is especially important because their bodies and brains are growing rapidly. Medical experts recommend that adolescents between 13 and 18 years old should get 8 to 10 hours of sleep per night to maintain optimal health.\n\nHowever, studies show that a large number of teenagers suffer from chronic sleep deprivation. There are several reasons for this trend. Heavy homework loads, extracurricular activities, and early school start times all contribute to late bedtimes. Furthermore, the widespread use of electronic devices such as smartphones and tablets before going to bed is a major factor. The blue light emitted by these screens interferes with the production of melatonin, a natural hormone that signals the body to sleep.\n\nNot getting enough sleep can lead to serious consequences. In the short term, sleep-deprived teenagers often experience poor concentration, mood swings, and lower grades at school. Over time, chronic lack of sleep increases the risk of obesity, depression, and weakened immune systems. To improve sleep quality, experts advise teenagers to establish a regular sleep schedule, avoid caffeine in the afternoon, and turn off all digital screens at least 30 minutes before bedtime."
+    },
+    {
+      "id": "ehn24s_q28",
+      "topic": "Đọc hiểu: Lời khuyên của chuyên gia (Reading Comprehension)",
+      "difficulty": "Thông hiểu",
+      "question": "What do experts advise teenagers to do before bedtime to sleep better?",
+      "options": [
+        "Turn off all digital screens at least 30 minutes before going to bed",
+        "Drink strong coffee to relax",
+        "Do intense exercise right before sleeping",
+        "Keep smartphone under their pillows"
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu cuối đoạn 3: '...experts advise teenagers to establish a regular sleep schedule, avoid caffeine in the afternoon, and turn off all digital screens at least 30 minutes before bedtime.'",
+      "trapTip": "Chuyên gia khuyên TRÁNH caffeine (avoid caffeine), không phải khuyên uống cà phê.",
+      "passageTitle": "Bài đọc hiểu: The Importance of Sleep for Teenagers",
+      "passage": "Sleep plays a vital role in good health and well-being throughout our life. For teenagers, getting enough sleep is especially important because their bodies and brains are growing rapidly. Medical experts recommend that adolescents between 13 and 18 years old should get 8 to 10 hours of sleep per night to maintain optimal health.\n\nHowever, studies show that a large number of teenagers suffer from chronic sleep deprivation. There are several reasons for this trend. Heavy homework loads, extracurricular activities, and early school start times all contribute to late bedtimes. Furthermore, the widespread use of electronic devices such as smartphones and tablets before going to bed is a major factor. The blue light emitted by these screens interferes with the production of melatonin, a natural hormone that signals the body to sleep.\n\nNot getting enough sleep can lead to serious consequences. In the short term, sleep-deprived teenagers often experience poor concentration, mood swings, and lower grades at school. Over time, chronic lack of sleep increases the risk of obesity, depression, and weakened immune systems. To improve sleep quality, experts advise teenagers to establish a regular sleep schedule, avoid caffeine in the afternoon, and turn off all digital screens at least 30 minutes before bedtime."
+    },
+    {
+      "id": "ehn24s_q29",
+      "topic": "Viết lại câu: Câu điều kiện Unless = If not (Sentence Transformation)",
+      "difficulty": "Vận dụng",
+      "question": "Choose the sentence that is closest in meaning: 'Unless you practice speaking English every day, you cannot improve your fluency.'",
+      "options": [
+        "If you don't practice speaking English every day, you cannot improve your fluency.",
+        "If you practice speaking English every day, you cannot improve your fluency.",
+        "Unless you don't practice speaking English every day, you can improve your fluency.",
+        "Provided that you don't practice speaking English every day, you will improve your fluency."
+      ],
+      "correctIndex": 0,
+      "explanation": "Cấu trúc tương đương kinh điển: **Unless + S + V (khẳng định) = If + S + don't/doesn't + V (phủ định)**. Do đó 'Unless you practice...' = 'If you don't practice...'.",
+      "trapTip": "'Unless' bản thân đã mang nghĩa phủ định ('Nếu không'), tuyệt đối không dùng 'Unless you don't practice'."
+    },
+    {
+      "id": "ehn24s_q30",
+      "topic": "Viết lại câu: Câu tường thuật Wh-question (Reported Speech)",
+      "difficulty": "Vận dụng",
+      "question": "Choose the sentence that is closest in meaning: '\"Where are you going for your summer holiday?\", Peter asked me.'",
+      "options": [
+        "Peter asked me where I was going for my summer holiday.",
+        "Peter asked me where was I going for my summer holiday.",
+        "Peter asked me where I am going for my summer holiday.",
+        "Peter asked me where did I go for my summer holiday."
+      ],
+      "correctIndex": 0,
+      "explanation": "Quy tắc chuyển câu hỏi Wh-question sang câu gián tiếp:\n1. Đổi ngôi: you -> I; your -> my\n2. Lùi thì: are going -> was going\n3. Trật tự từ theo câu trần thuật: **S + was going**, KHÔNG đảo trợ động từ lên trước S.",
+      "trapTip": "Bẫy trật tự từ trong câu gián tiếp: Không được để dạng câu hỏi 'where was I', phải là 'where I was'."
+    }
+  ]
+},
+{
+  "id": "eng_exam_moet_mock_2025_02",
+  "title": "Đề thi thử Tuyển sinh Lớp 10 Năm 2025 - Môn Tiếng Anh - Đề số 02 (Chuẩn Định Dạng Mới GDPT 2018)",
+  "subject": "english",
+  "year": 2025,
+  "location": "Bộ GD&ĐT",
+  "isOfficial": false,
+  "badgeText": "🔥 Chuẩn GDPT 2018 Mới",
+  "durationMinutes": 60,
+  "totalQuestions": 30,
+  "description": "Đề thi thử bám sát định dạng cấu trúc đề minh họa mới của Bộ GD&ĐT theo Chương trình GDPT 2018 (thời gian 60 phút, 30 câu hỏi trắc nghiệm khách quan). Đổi mới toàn diện: Biển báo & thông báo thực tế trường học/công cộng, Phát âm & Trọng âm, Từ vựng - Ngữ pháp bối cảnh thực tế (công nghệ AI, môi trường, thanh niên), Giao tiếp đời sống, Tìm lỗi sai, Đọc điền từ, Đọc hiểu bài đọc dài về Lối sống xanh và Viết lại câu.",
+  "questions": [
+    {
+      "id": "emoet25_q01",
+      "topic": "Biển báo thực tế đời sống (Public Sign Notice - GDPT 2018)",
+      "difficulty": "Nhận biết",
+      "question": "What does this sign mean? <br><div style='display:inline-block;border:2px solid #ef4444;border-radius:8px;padding:8px 16px;font-weight:bold;color:#ef4444;background:#fef2f2;margin:6px 0;'>🚫 NO PHOTOGRAPHY ALLOWED IN THE EXHIBITION ROOM</div>",
+      "options": [
+        "You must not take photos in this room.",
+        "You can take photos if you pay a fee.",
+        "Only professional cameras are allowed.",
+        "Photos are sold in this exhibition room."
+      ],
+      "correctIndex": 0,
+      "explanation": "'NO PHOTOGRAPHY ALLOWED' có nghĩa là không được phép chụp ảnh = 'You must not take photos in this room'.",
+      "trapTip": "'must not' diễn tả sự cấm đoán, tương đương với 'not allowed' / 'prohibited'."
+    },
+    {
+      "id": "emoet25_q02",
+      "topic": "Thông báo học đường thực tế (School Notice - GDPT 2018)",
+      "difficulty": "Thông hiểu",
+      "question": "Read this school library notice:<br><div style='border:2px dashed #3b82f6;border-radius:8px;padding:10px;background:#eff6ff;color:#1e3a8a;margin:6px 0;'><strong>LIBRARY NOTICE:</strong><br>All borrowed books must be returned by Friday afternoon. Students who return books late will be charged 5,000 VND per day.</div>What must students do?",
+      "options": [
+        "Return their books before or on Friday afternoon to avoid paying a fine.",
+        "Pay 5,000 VND every time they borrow a book from the library.",
+        "Buy new books for the school library on Friday afternoon.",
+        "Only visit the library on Friday afternoon."
+      ],
+      "correctIndex": 0,
+      "explanation": "Thông báo yêu cầu học sinh trả sách trước hoặc đúng chiều thứ Sáu ('must be returned by Friday afternoon'), nếu trả muộn sẽ bị phạt tiền 5.000đ/ngày.",
+      "trapTip": "Đọc kĩ điều kiện: tiền phạt 5.000đ chỉ áp dụng khi trả muộn ('return books late'), không phải phí mượn sách thông thường."
+    },
+    {
+      "id": "emoet25_q03",
+      "topic": "Phát âm đuôi -s/es (Pronunciation)",
+      "difficulty": "Nhận biết",
+      "question": "Choose the word whose underlined part is pronounced differently: **practic<u>es</u>**, **hous<u>es</u>**, **chang<u>es</u>**, **not<u>es</u>**",
+      "options": [
+        "notes",
+        "practices",
+        "houses",
+        "changes"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *notes*: tận cùng là âm /t/ (vô thanh) nên đuôi -es phát âm là /s/ (/nəʊts/).\n- *practices*, *houses*, *changes*: đều có đuôi -es phát âm là /ɪz/ sau các âm rít /s/, /z/, /dʒ/.\nDo đó 'notes' có cách phát âm khác.",
+      "trapTip": "Ghi nhớ quy tắc phát âm -s/es: tận cùng là /s/, /z/, /ʃ/, /tʃ/, /dʒ/, /ʒ/ thì đuôi đọc là /ɪz/."
+    },
+    {
+      "id": "emoet25_q04",
+      "topic": "Trọng âm từ 2 âm tiết (Word Stress)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the word that has a different stress pattern: **pollute**, **protect**, **damage**, **reduce**",
+      "options": [
+        "damage",
+        "pollute",
+        "protect",
+        "reduce"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *ˈdamage*: danh từ/động từ có trọng âm rơi vào âm tiết 1.\n- *polˈlute*, *proˈtect*, *reˈduce*: đều là động từ có trọng âm rơi vào âm tiết 2.\nDo đó 'damage' có trọng âm khác biệt.",
+      "trapTip": "'damage' có phiên âm /ˈdæmɪdʒ/, trọng âm nhấn vào âm tiết 1."
+    },
+    {
+      "id": "emoet25_q05",
+      "topic": "Thì của động từ: Hiện tại hoàn thành (Verb Tenses)",
+      "difficulty": "Nhận biết",
+      "question": "My family ______ in this eco-friendly apartment complex since 2021.",
+      "options": [
+        "has lived",
+        "lives",
+        "lived",
+        "is living"
+      ],
+      "correctIndex": 0,
+      "explanation": "Có dấu hiệu 'since + mốc thời gian trong quá khứ' ('since 2021') chỉ một hành động bắt đầu trong quá khứ và kéo dài đến hiện tại -> dùng thì Hiện tại hoàn thành: **has lived**.",
+      "trapTip": "Dấu hiệu kinh điển: Since + mốc thời gian / For + khoảng thời gian -> dùng Present Perfect."
+    },
+    {
+      "id": "emoet25_q06",
+      "topic": "Câu bị động (Passive Voice)",
+      "difficulty": "Thông hiểu",
+      "question": "Thousands of plastic bottles ______ by local volunteers along the coastline yesterday.",
+      "options": [
+        "were collected",
+        "was collected",
+        "collected",
+        "are collected"
+      ],
+      "correctIndex": 0,
+      "explanation": "- Chủ ngữ 'Thousands of plastic bottles' là danh từ số nhiều chỉ vật (nhận hành động) -> câu bị động.\n- Dấu hiệu thời gian 'yesterday' -> thì Quá khứ đơn bị động: **were + V3/ed** = were collected.",
+      "trapTip": "Chủ ngữ là số nhiều ('bottles') nên phải dùng 'were', không dùng 'was'."
+    },
+    {
+      "id": "emoet25_q07",
+      "topic": "Mệnh đề nhượng bộ (Concession Clauses)",
+      "difficulty": "Thông hiểu",
+      "question": "In spite of ______ late due to the heavy traffic, the speaker delivered an engaging presentation.",
+      "options": [
+        "arriving",
+        "arrived",
+        "to arrive",
+        "arrive"
+      ],
+      "correctIndex": 0,
+      "explanation": "Quy tắc ngữ pháp: **In spite of / Despite + V-ing / Noun phrase**. Do đó sau 'In spite of' dùng động từ dạng V-ing: 'arriving'.",
+      "trapTip": "'In spite of' là cụm giới từ, sau nó bắt buộc là danh từ hoặc danh động từ (V-ing)."
+    },
+    {
+      "id": "emoet25_q08",
+      "topic": "Từ vựng theo chủ đề: Trí tuệ nhân tạo (Vocabulary - Technology)",
+      "difficulty": "Thông hiểu",
+      "question": "Artificial intelligence applications have helped doctors ______ diseases more quickly and accurately.",
+      "options": [
+        "diagnose",
+        "pollute",
+        "invent",
+        "damage"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *diagnose* (v): chẩn đoán (bệnh) -> hoàn toàn phù hợp với ngữ cảnh 'doctors ... diseases'.\n- *pollute*: gây ô nhiễm.\n- *invent*: phát minh.\n- *damage*: làm hư hại.",
+      "trapTip": "Cụm từ chuyên môn y tế: 'diagnose diseases' (chẩn đoán bệnh tật)."
+    },
+    {
+      "id": "emoet25_q09",
+      "topic": "Từ loại (Word Form)",
+      "difficulty": "Thông hiểu",
+      "question": "Participating in community activities helps teenagers develop their social skills ______.",
+      "options": [
+        "effectively",
+        "effective",
+        "effectiveness",
+        "effect"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đứng sau động từ 'develop' và tân ngữ 'their social skills' cần một trạng từ (Adv) để bổ nghĩa cho động từ: **effectively** (một cách hiệu quả).",
+      "trapTip": "Trạng từ đứng ở cuối mệnh đề để bổ nghĩa cho toàn bộ hành động phía trước."
+    },
+    {
+      "id": "emoet25_q10",
+      "topic": "Câu điều kiện loại 2 (Conditional Type 2)",
+      "difficulty": "Thông hiểu",
+      "question": "If I ______ more free time, I would join the green club to plant trees every weekend.",
+      "options": [
+        "had",
+        "have",
+        "will have",
+        "would have"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mệnh đề chính dùng 'would + V-inf' (would join) -> Câu điều kiện loại 2 diễn tả giả định trái với thực tế ở hiện tại. Mệnh đề If chia ở Quá khứ đơn: **had**.",
+      "trapTip": "Công thức câu điều kiện loại 2: If + S + V2/ed, S + would/could + V-inf."
+    },
+    {
+      "id": "emoet25_q11",
+      "topic": "Giao tiếp: Bày tỏ quan điểm đồng tình (Communication)",
+      "difficulty": "Nhận biết",
+      "question": "Alex: \"I think using public transport is an effective way to reduce air pollution.\" - Brian: \"______ It also helps save commuting costs.\"",
+      "options": [
+        "I totally agree with you.",
+        "I don't think that's a good idea.",
+        "You must be kidding.",
+        "I'm afraid I have to disagree."
+      ],
+      "correctIndex": 0,
+      "explanation": "Vế sau Brian bổ sung thêm lợi ích ('It also helps save commuting costs' - Nó cũng giúp tiết kiệm chi phí đi lại) chứng tỏ Brian hoàn toàn đồng tình với Alex: 'I totally agree with you.'",
+      "trapTip": "Đọc câu nói tiếp theo để biết thái độ đồng tình hay phản đối."
+    },
+    {
+      "id": "emoet25_q12",
+      "topic": "Giao tiếp: Đưa ra lời khuyên (Communication)",
+      "difficulty": "Nhận biết",
+      "question": "Minh: \"I feel exhausted because of staying up late studying for exams.\" - Teacher: \"______\"",
+      "options": [
+        "You should manage your study time better and get enough rest.",
+        "Don't worry, stay up later tonight.",
+        "Congratulations on your success!",
+        "It's none of my business."
+      ],
+      "correctIndex": 0,
+      "explanation": "Trước lời than phiền kiệt sức vì thức khuya học bài, lời khuyên sư phạm chuẩn mực là: 'You should manage your study time better and get enough rest.' (Em nên quản lý thời gian học tốt hơn và nghỉ ngơi đầy đủ).",
+      "trapTip": "Chọn câu phản hồi thể hiện sự quan tâm và đưa ra lời khuyên hữu ích."
+    },
+    {
+      "id": "emoet25_q13",
+      "topic": "Từ đồng nghĩa: Lối sống bền vững (Closest in meaning)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the word CLOSEST in meaning to the underlined word: 'The school launched an initiative to encourage **<u>sustainable</u>** habits among students.'",
+      "options": [
+        "eco-friendly",
+        "temporary",
+        "harmful",
+        "expensive"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *sustainable* (adj): bền vững, thân thiện với môi trường = *eco-friendly*.\n- *temporary*: tạm thời.\n- *harmful*: có hại.\n- *expensive*: đắt đỏ.",
+      "trapTip": "Trong chủ đề môi trường của GDPT 2018, 'sustainable' đồng nghĩa với 'eco-friendly' (thân thiện môi trường)."
+    },
+    {
+      "id": "emoet25_q14",
+      "topic": "Từ trái nghĩa (Opposite in meaning)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the word OPPOSITE in meaning to the underlined word: 'Regular physical exercise is **<u>beneficial</u>** to both your physical and mental health.'",
+      "options": [
+        "harmful",
+        "helpful",
+        "useful",
+        "convenient"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *beneficial* (adj): có lợi, có ích.\n- *harmful* (adj): có hại (từ trái nghĩa).\n- *helpful*, *useful*: hữu ích (từ đồng nghĩa).",
+      "trapTip": "CẢNH BÁO: Tìm từ TRÁI NGHĨA (Opposite). Trái nghĩa với có ích ('beneficial') là có hại ('harmful')."
+    },
+    {
+      "id": "emoet25_q15",
+      "topic": "Tìm lỗi sai: Sự hòa hợp Chủ ngữ - Động từ (Subject-Verb Agreement)",
+      "difficulty": "Thông hiểu",
+      "question": "Find the underlined part that needs correction: 'Neither the teacher **(A)** <u>nor</u> the students **(B)** <u>was</u> aware of **(C)** <u>the</u> sudden change in the exam schedule **(D)** <u>yesterday</u>.'",
+      "options": [
+        "was",
+        "nor",
+        "the",
+        "yesterday"
+      ],
+      "correctIndex": 0,
+      "explanation": "Quy tắc với cấu trúc 'Neither... nor...': Động từ chia theo chủ ngữ gần nó nhất. Ở đây chủ ngữ gần động từ là 'the students' (số nhiều) nên động từ phải chia là **were**, không dùng 'was'.",
+      "trapTip": "Neither S1 nor S2 + V (chia theo S2). S2 là 'the students' số nhiều -> were."
+    },
+    {
+      "id": "emoet25_q16",
+      "topic": "Tìm lỗi sai: Giới từ sau tính từ (Error Identification)",
+      "difficulty": "Thông hiểu",
+      "question": "Find the underlined part that needs correction: 'Many teenagers **(A)** <u>are</u> increasingly interested **(B)** <u>on</u> joining local green clubs **(C)** <u>to protect</u> their **(D)** <u>surrounding</u> environment.'",
+      "options": [
+        "on",
+        "are",
+        "to protect",
+        "surrounding"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cụm cố định: **be interested in** (quan tâm, hứng thú với điều gì). Đề bài dùng 'interested on' là sai giới từ, cần sửa thành **in**.",
+      "trapTip": "Ghi nhớ cặp tính từ - giới từ: interested in, fond of, good at, keen on, proud of."
+    },
+    {
+      "id": "emoet25_q17",
+      "topic": "Đọc điền từ Cloze: AI in Education (Câu 1)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the best option to fill in blank (1): 'Artificial intelligence (AI) is transforming modern education in ______ exciting ways.'",
+      "options": [
+        "many",
+        "much",
+        "little",
+        "every"
+      ],
+      "correctIndex": 0,
+      "explanation": "'ways' là danh từ đếm được số nhiều nên đi với từ chỉ số lượng **many**. 'much' và 'little' đi với danh từ không đếm được; 'every' đi với danh từ số ít.",
+      "trapTip": "'many + plural noun' (nhiều...).",
+      "passageTitle": "Bài đọc điền từ: AI in Education",
+      "passage": "Artificial intelligence (AI) is transforming modern education in (1) ______ exciting ways. Today, smart learning platforms can analyze students' strengths and weaknesses to provide personalized study paths. For example, language apps use speech recognition to help learners improve their pronunciation (2) ______ instant feedback. Furthermore, teachers can save valuable time because AI tools assist in grading tests and creating interactive lesson materials. However, experts emphasize that AI should not replace human teachers. While technology can deliver information efficiently, teachers provide emotional support, moral guidance, and critical thinking skills (3) ______ machines cannot replicate. (4) ______, educational institutions must teach students how to use AI responsibly and avoid cheating. In conclusion, the key to successful modern education lies in finding a balanced collaboration (5) ______ technology and human empathy."
+    },
+    {
+      "id": "emoet25_q18",
+      "topic": "Đọc điền từ Cloze: AI in Education (Câu 2)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the best option to fill in blank (2): '...help learners improve their pronunciation ______ instant feedback.'",
+      "options": [
+        "through",
+        "about",
+        "for",
+        "against"
+      ],
+      "correctIndex": 0,
+      "explanation": "**through instant feedback** (thông qua phản hồi tức thì). Giới từ 'through' chỉ phương tiện, cách thức đạt được kết quả.",
+      "trapTip": "'through' dùng để chỉ kênh hoặc phương thức giúp việc học tiến bộ.",
+      "passageTitle": "Bài đọc điền từ: AI in Education",
+      "passage": "Artificial intelligence (AI) is transforming modern education in (1) ______ exciting ways. Today, smart learning platforms can analyze students' strengths and weaknesses to provide personalized study paths. For example, language apps use speech recognition to help learners improve their pronunciation (2) ______ instant feedback. Furthermore, teachers can save valuable time because AI tools assist in grading tests and creating interactive lesson materials. However, experts emphasize that AI should not replace human teachers. While technology can deliver information efficiently, teachers provide emotional support, moral guidance, and critical thinking skills (3) ______ machines cannot replicate. (4) ______, educational institutions must teach students how to use AI responsibly and avoid cheating. In conclusion, the key to successful modern education lies in finding a balanced collaboration (5) ______ technology and human empathy."
+    },
+    {
+      "id": "emoet25_q19",
+      "topic": "Đọc điền từ Cloze: AI in Education (Câu 3)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the best option to fill in blank (3): '...provide emotional support, moral guidance, and critical thinking skills ______ machines cannot replicate.'",
+      "options": [
+        "which",
+        "who",
+        "whom",
+        "where"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đại từ quan hệ thay thế cho cụm danh từ chỉ vật/khái niệm 'emotional support, moral guidance, and critical thinking skills' là **which** (hoặc that).",
+      "trapTip": "Các kĩ năng và sự hỗ trợ cảm xúc là danh từ chỉ sự vật/khái niệm -> dùng 'which'.",
+      "passageTitle": "Bài đọc điền từ: AI in Education",
+      "passage": "Artificial intelligence (AI) is transforming modern education in (1) ______ exciting ways. Today, smart learning platforms can analyze students' strengths and weaknesses to provide personalized study paths. For example, language apps use speech recognition to help learners improve their pronunciation (2) ______ instant feedback. Furthermore, teachers can save valuable time because AI tools assist in grading tests and creating interactive lesson materials. However, experts emphasize that AI should not replace human teachers. While technology can deliver information efficiently, teachers provide emotional support, moral guidance, and critical thinking skills (3) ______ machines cannot replicate. (4) ______, educational institutions must teach students how to use AI responsibly and avoid cheating. In conclusion, the key to successful modern education lies in finding a balanced collaboration (5) ______ technology and human empathy."
+    },
+    {
+      "id": "emoet25_q20",
+      "topic": "Đọc điền từ Cloze: AI in Education (Câu 4)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the best option to fill in blank (4): '______, educational institutions must teach students how to use AI responsibly...'",
+      "options": [
+        "Therefore",
+        "However",
+        "Although",
+        "Because"
+      ],
+      "correctIndex": 0,
+      "explanation": "Từ nối liên kết câu chỉ kết quả: **Therefore** (Do đó / Vì vậy). Đứng ở đầu câu và theo sau là dấu phẩy.",
+      "trapTip": "Sau chỗ trống có dấu phẩy ',' nên dùng trạng từ liên kết 'Therefore'.",
+      "passageTitle": "Bài đọc điền từ: AI in Education",
+      "passage": "Artificial intelligence (AI) is transforming modern education in (1) ______ exciting ways. Today, smart learning platforms can analyze students' strengths and weaknesses to provide personalized study paths. For example, language apps use speech recognition to help learners improve their pronunciation (2) ______ instant feedback. Furthermore, teachers can save valuable time because AI tools assist in grading tests and creating interactive lesson materials. However, experts emphasize that AI should not replace human teachers. While technology can deliver information efficiently, teachers provide emotional support, moral guidance, and critical thinking skills (3) ______ machines cannot replicate. (4) ______, educational institutions must teach students how to use AI responsibly and avoid cheating. In conclusion, the key to successful modern education lies in finding a balanced collaboration (5) ______ technology and human empathy."
+    },
+    {
+      "id": "emoet25_q21",
+      "topic": "Đọc điền từ Cloze: AI in Education (Câu 5)",
+      "difficulty": "Nhận biết",
+      "question": "Choose the best option to fill in blank (5): '...finding a balanced collaboration ______ technology and human empathy.'",
+      "options": [
+        "between",
+        "among",
+        "with",
+        "from"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cấu trúc: **between A and B** (giữa hai đối tượng: công nghệ và sự thấu cảm của con người).",
+      "trapTip": "Có liên từ 'and' nối 2 đối tượng -> chọn ngay 'between'. ('among' dùng cho 3 đối tượng trở lên).",
+      "passageTitle": "Bài đọc điền từ: AI in Education",
+      "passage": "Artificial intelligence (AI) is transforming modern education in (1) ______ exciting ways. Today, smart learning platforms can analyze students' strengths and weaknesses to provide personalized study paths. For example, language apps use speech recognition to help learners improve their pronunciation (2) ______ instant feedback. Furthermore, teachers can save valuable time because AI tools assist in grading tests and creating interactive lesson materials. However, experts emphasize that AI should not replace human teachers. While technology can deliver information efficiently, teachers provide emotional support, moral guidance, and critical thinking skills (3) ______ machines cannot replicate. (4) ______, educational institutions must teach students how to use AI responsibly and avoid cheating. In conclusion, the key to successful modern education lies in finding a balanced collaboration (5) ______ technology and human empathy."
+    },
+    {
+      "id": "emoet25_q22",
+      "topic": "Đọc hiểu: Lối sống xanh của giới trẻ - Ý chính (Reading Comprehension)",
+      "difficulty": "Thông hiểu",
+      "question": "What is the best title for the passage?",
+      "options": [
+        "Youth Leading the Way Toward a Greener Future",
+        "The Negative Impacts of Plastic Pollution",
+        "How to Become a Successful Influencer on Social Media",
+        "The Financial Cost of Environmental Campaigns"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bài đọc nói về phong trào thanh niên tham gia các hoạt động bảo vệ môi trường (trồng cây, giảm rác thải nhựa, chia sẻ lối sống xanh trên mạng), làm nổi bật vai trò tiên phong của tuổi trẻ hướng tới tương lai xanh.",
+      "trapTip": "Đọc câu đầu đoạn 1 và câu kết bài để chọn tiêu đề bao quát toàn diện nhất.",
+      "passageTitle": "Bài đọc hiểu: Youth Leading the Way Toward a Greener Future",
+      "passage": "Across the globe, young people are becoming the driving force in environmental protection. Rather than passively waiting for governments to take action, millions of teenagers are actively organizing eco-friendly movements in their schools and local communities.\n\nOne of the most notable initiatives is the fight against single-use plastics. Many secondary school students in Vietnam have successfully campaigned to eliminate plastic straws and disposable cups from their school cafeterias. Instead, they encourage classmates to bring reusable water bottles and cloth bags. In addition, student-led tree-planting projects have turned barren areas around schools into vibrant green gardens, contributing to cleaner air and cooler surroundings.\n\nSocial media has also become a powerful tool for young environmentalists. By sharing creative videos, engaging infographics, and zero-waste daily challenges on platforms like TikTok and Instagram, they inspire thousands of peers to adopt green habits. For instance, the 'No Plastic Weekend' challenge started by a group of grade 9 students quickly gained nationwide popularity.\n\nExperts believe that these youth initiatives are not merely short-term trends. By developing environmental consciousness at an early age, teenagers are cultivating habits that will shape sustainable business practices and public policies in the future. As one student leader stated: 'Small actions multiplied by millions of people can truly transform the world.'"
+    },
+    {
+      "id": "emoet25_q23",
+      "topic": "Đọc hiểu: Chi tiết trong bài đọc (Reading Comprehension)",
+      "difficulty": "Thông hiểu",
+      "question": "What have students in Vietnam done to reduce plastic waste in their schools?",
+      "options": [
+        "Campaigned to eliminate plastic straws and disposable cups from cafeterias",
+        "Stopped eating at the school cafeteria completely",
+        "Asked the government to close down plastic manufacturing factories",
+        "Refused to bring water to school"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đoạn 2 nêu rõ: 'Many secondary school students in Vietnam have successfully campaigned to eliminate plastic straws and disposable cups from their school cafeterias.'",
+      "trapTip": "Tìm đúng thông tin trong đoạn 2 về hành động của học sinh Việt Nam.",
+      "passageTitle": "Bài đọc hiểu: Youth Leading the Way Toward a Greener Future",
+      "passage": "Across the globe, young people are becoming the driving force in environmental protection. Rather than passively waiting for governments to take action, millions of teenagers are actively organizing eco-friendly movements in their schools and local communities.\n\nOne of the most notable initiatives is the fight against single-use plastics. Many secondary school students in Vietnam have successfully campaigned to eliminate plastic straws and disposable cups from their school cafeterias. Instead, they encourage classmates to bring reusable water bottles and cloth bags. In addition, student-led tree-planting projects have turned barren areas around schools into vibrant green gardens, contributing to cleaner air and cooler surroundings.\n\nSocial media has also become a powerful tool for young environmentalists. By sharing creative videos, engaging infographics, and zero-waste daily challenges on platforms like TikTok and Instagram, they inspire thousands of peers to adopt green habits. For instance, the 'No Plastic Weekend' challenge started by a group of grade 9 students quickly gained nationwide popularity.\n\nExperts believe that these youth initiatives are not merely short-term trends. By developing environmental consciousness at an early age, teenagers are cultivating habits that will shape sustainable business practices and public policies in the future. As one student leader stated: 'Small actions multiplied by millions of people can truly transform the world.'"
+    },
+    {
+      "id": "emoet25_q24",
+      "topic": "Đọc hiểu: Từ vựng trong ngữ cảnh (Vocabulary in Context)",
+      "difficulty": "Thông hiểu",
+      "question": "The word \"eliminate\" in paragraph 2 is closest in meaning to:",
+      "options": [
+        "remove",
+        "create",
+        "promote",
+        "purchase"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *eliminate* (v): loại bỏ, loại trừ = *remove*.\n- *create*: tạo ra.\n- *promote*: thúc đẩy.\n- *purchase*: mua.",
+      "trapTip": "Ngữ cảnh: loại bỏ ống hút nhựa và cốc dùng một lần khỏi căng tin trường -> eliminate = remove.",
+      "passageTitle": "Bài đọc hiểu: Youth Leading the Way Toward a Greener Future",
+      "passage": "Across the globe, young people are becoming the driving force in environmental protection. Rather than passively waiting for governments to take action, millions of teenagers are actively organizing eco-friendly movements in their schools and local communities.\n\nOne of the most notable initiatives is the fight against single-use plastics. Many secondary school students in Vietnam have successfully campaigned to eliminate plastic straws and disposable cups from their school cafeterias. Instead, they encourage classmates to bring reusable water bottles and cloth bags. In addition, student-led tree-planting projects have turned barren areas around schools into vibrant green gardens, contributing to cleaner air and cooler surroundings.\n\nSocial media has also become a powerful tool for young environmentalists. By sharing creative videos, engaging infographics, and zero-waste daily challenges on platforms like TikTok and Instagram, they inspire thousands of peers to adopt green habits. For instance, the 'No Plastic Weekend' challenge started by a group of grade 9 students quickly gained nationwide popularity.\n\nExperts believe that these youth initiatives are not merely short-term trends. By developing environmental consciousness at an early age, teenagers are cultivating habits that will shape sustainable business practices and public policies in the future. As one student leader stated: 'Small actions multiplied by millions of people can truly transform the world.'"
+    },
+    {
+      "id": "emoet25_q25",
+      "topic": "Đọc hiểu: Từ quy chiếu (Pronoun Reference)",
+      "difficulty": "Thông hiểu",
+      "question": "The word \"they\" in paragraph 3 refers to:",
+      "options": [
+        "young environmentalists",
+        "social media platforms",
+        "short videos",
+        "disposable plastic items"
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu trước đó: 'Social media has also become a powerful tool for **young environmentalists**. By sharing creative videos... **they** inspire thousands of peers...'. Đại từ 'they' thay thế cho 'young environmentalists' (các bạn trẻ hoạt động vì môi trường).",
+      "trapTip": "Đại từ số nhiều 'they' ở đây là chủ ngữ thực hiện hành động truyền cảm hứng ('inspire thousands of peers'), phải là danh từ chỉ người.",
+      "passageTitle": "Bài đọc hiểu: Youth Leading the Way Toward a Greener Future",
+      "passage": "Across the globe, young people are becoming the driving force in environmental protection. Rather than passively waiting for governments to take action, millions of teenagers are actively organizing eco-friendly movements in their schools and local communities.\n\nOne of the most notable initiatives is the fight against single-use plastics. Many secondary school students in Vietnam have successfully campaigned to eliminate plastic straws and disposable cups from their school cafeterias. Instead, they encourage classmates to bring reusable water bottles and cloth bags. In addition, student-led tree-planting projects have turned barren areas around schools into vibrant green gardens, contributing to cleaner air and cooler surroundings.\n\nSocial media has also become a powerful tool for young environmentalists. By sharing creative videos, engaging infographics, and zero-waste daily challenges on platforms like TikTok and Instagram, they inspire thousands of peers to adopt green habits. For instance, the 'No Plastic Weekend' challenge started by a group of grade 9 students quickly gained nationwide popularity.\n\nExperts believe that these youth initiatives are not merely short-term trends. By developing environmental consciousness at an early age, teenagers are cultivating habits that will shape sustainable business practices and public policies in the future. As one student leader stated: 'Small actions multiplied by millions of people can truly transform the world.'"
+    },
+    {
+      "id": "emoet25_q26",
+      "topic": "Đọc hiểu: Ý nghĩa câu danh ngôn cuối bài (Reading Comprehension)",
+      "difficulty": "Vận dụng",
+      "question": "What is the message of the student leader's quote: 'Small actions multiplied by millions of people can truly transform the world'?",
+      "options": [
+        "Collective individual efforts, no matter how small, can create a massive positive change.",
+        "Only large-scale government projects can save the environment.",
+        "Small actions are not useful unless they cost a lot of money.",
+        "People should stop doing small daily habits."
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu nói mang thông điệp: Hành động của từng cá nhân dẫu nhỏ bé, nhưng khi được nhân lên bởi hàng triệu người sẽ tạo nên sự thay đổi to lớn cho thế giới.",
+      "trapTip": "Hiểu nghĩa hàm ẩn của phép nhân: 'Small actions multiplied by millions' = sức mạnh tập thể.",
+      "passageTitle": "Bài đọc hiểu: Youth Leading the Way Toward a Greener Future",
+      "passage": "Across the globe, young people are becoming the driving force in environmental protection. Rather than passively waiting for governments to take action, millions of teenagers are actively organizing eco-friendly movements in their schools and local communities.\n\nOne of the most notable initiatives is the fight against single-use plastics. Many secondary school students in Vietnam have successfully campaigned to eliminate plastic straws and disposable cups from their school cafeterias. Instead, they encourage classmates to bring reusable water bottles and cloth bags. In addition, student-led tree-planting projects have turned barren areas around schools into vibrant green gardens, contributing to cleaner air and cooler surroundings.\n\nSocial media has also become a powerful tool for young environmentalists. By sharing creative videos, engaging infographics, and zero-waste daily challenges on platforms like TikTok and Instagram, they inspire thousands of peers to adopt green habits. For instance, the 'No Plastic Weekend' challenge started by a group of grade 9 students quickly gained nationwide popularity.\n\nExperts believe that these youth initiatives are not merely short-term trends. By developing environmental consciousness at an early age, teenagers are cultivating habits that will shape sustainable business practices and public policies in the future. As one student leader stated: 'Small actions multiplied by millions of people can truly transform the world.'"
+    },
+    {
+      "id": "emoet25_q27",
+      "topic": "Viết lại câu: Cấu trúc câu ước (Wish in the present)",
+      "difficulty": "Vận dụng",
+      "question": "Choose the sentence that is closest in meaning: 'I don't have enough money to buy that high-performance laptop.'",
+      "options": [
+        "I wish I had enough money to buy that high-performance laptop.",
+        "I wish I have enough money to buy that high-performance laptop.",
+        "I wish I didn't have enough money to buy that high-performance laptop.",
+        "I wish I would have had enough money to buy that high-performance laptop."
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu ước trái với hiện tại: **S + wish + S + V2/ed** (hoặc were). Thực tế hiện tại: 'don't have' -> câu ước: 'wish I had'.",
+      "trapTip": "Quy tắc câu ước hiện tại: Động từ lùi về Quá khứ đơn (had)."
+    },
+    {
+      "id": "emoet25_q28",
+      "topic": "Viết lại câu: Chuyển đổi thì HTHT sang QKĐ (Sentence Transformation)",
+      "difficulty": "Vận dụng",
+      "question": "Choose the sentence that is closest in meaning: 'The last time we planted trees in the national park was two years ago.'",
+      "options": [
+        "We haven't planted trees in the national park for two years.",
+        "We have planted trees in the national park for two years.",
+        "We didn't plant trees in the national park two years ago.",
+        "We have planted trees in the national park since two years."
+      ],
+      "correctIndex": 0,
+      "explanation": "Cấu trúc tương đương kinh điển:\n**The last time + S + V2/ed + was + [time] ago = S + have/has not + V3/ed + for + [time]**.\nLần cuối cùng chúng tôi trồng cây là 2 năm trước = Chúng tôi đã không trồng cây được 2 năm rồi.",
+      "trapTip": "Hai năm là khoảng thời gian nên dùng giới từ 'for', không dùng 'since'."
+    },
+    {
+      "id": "emoet25_q29",
+      "topic": "Viết lại câu: Câu bị động với động từ khuyết thiếu (Passive Modal)",
+      "difficulty": "Vận dụng",
+      "question": "Choose the sentence that is closest in meaning: 'Students must submit their science projects before Friday.'",
+      "options": [
+        "Science projects must be submitted before Friday by students.",
+        "Science projects must submit before Friday by students.",
+        "Science projects must been submitted before Friday by students.",
+        "Science projects are must submitted before Friday by students."
+      ],
+      "correctIndex": 0,
+      "explanation": "Cấu trúc bị động của Modal Verb: **Modal + be + V3/ed**.\n'must submit' chuyển sang bị động thành 'must be submitted'.",
+      "trapTip": "Bị động sau modal verb: must + be + V3/ed (không dùng 'been')."
+    },
+    {
+      "id": "emoet25_q30",
+      "topic": "Viết lại câu: So sánh hơn sang so sánh nhất (Comparison)",
+      "difficulty": "Vận dụng",
+      "question": "Choose the sentence that is closest in meaning: 'No other student in my class is more diligent than Nam.'",
+      "options": [
+        "Nam is the most diligent student in my class.",
+        "Nam is less diligent than other students in my class.",
+        "Nam is as diligent as other students in my class.",
+        "No student in my class is as lazy as Nam."
+      ],
+      "correctIndex": 0,
+      "explanation": "'Không có học sinh nào trong lớp chăm chỉ hơn Nam' = 'Nam là học sinh chăm chỉ nhất lớp' (**Nam is the most diligent student in my class**).",
+      "trapTip": "'No other + N + is more + Adj + than X' = 'X is the most + Adj'."
+    }
+  ]
+},
+{
+  "id": "eng_exam_hcmc_mock_2025_03",
+  "title": "Đề thi thử Tuyển sinh Lớp 10 TP.HCM Năm 2025 - Môn Tiếng Anh - Đề số 03 (Chuẩn Cấu Trúc Sở GD&ĐT)",
+  "subject": "english",
+  "year": 2025,
+  "location": "TP.HCM",
+  "isOfficial": false,
+  "badgeText": "📝 Thi thử TP.HCM 2025",
+  "durationMinutes": 90,
+  "totalQuestions": 30,
+  "description": "Đề thi thử bám sát 100% phong cách đề thi tuyển sinh vào lớp 10 của Sở GD&ĐT TP.HCM (thời gian 90 phút). Đề bao gồm: 4 câu Ngữ âm & Trọng âm, 2 câu Biển báo thực tế đời sống đô thị, 8 câu Ngữ pháp - Từ vựng tổng hợp, 2 câu Tình huống giao tiếp, Bài đọc điền từ Cloze test về Đô thị thông minh TP.HCM, Bài đọc hiểu về Tinh thần tình nguyện của học sinh và 4 câu Viết lại câu.",
+  "questions": [
+    {
+      "id": "ehcm25m3_q01",
+      "topic": "Phát âm phụ âm 'ch' (Pronunciation)",
+      "difficulty": "Nhận biết",
+      "question": "Choose the word whose underlined part is pronounced differently: **<u>ch</u>emistry**, **<u>ch</u>aracter**, **<u>ch</u>ristmas**, **<u>ch</u>ildren**",
+      "options": [
+        "children",
+        "chemistry",
+        "character",
+        "christmas"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *children*: 'ch' phát âm là /tʃ/ (/ˈtʃɪldrən/).\n- *chemistry*, *character*, *christmas*: 'ch' đều phát âm là /k/ (/ˈkemɪstri/, /ˈkærəktər/, /ˈkrɪsməs/).\nDo đó 'children' có phần gạch chân phát âm khác.",
+      "trapTip": "Nhóm từ gốc Hy Lạp có 'ch' đọc là /k/: chemistry, character, Christmas, school, stomach, mechanic."
+    },
+    {
+      "id": "ehcm25m3_q02",
+      "topic": "Phát âm nguyên âm (Pronunciation)",
+      "difficulty": "Nhận biết",
+      "question": "Choose the word whose underlined part is pronounced differently: **fl<u>oo</u>d**, **bl<u>oo</u>d**, **m<u>oo</u>n**, **m<u>u</u>d**",
+      "options": [
+        "moon",
+        "flood",
+        "blood",
+        "mud"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *moon*: phần gạch chân phát âm là /uː/ (/muːn/).\n- *flood*, *blood*, *mud*: phần gạch chân phát âm là /ʌ/ (/flʌd/, /blʌd/, /mʌd/).\nDo đó 'moon' có cách phát âm khác biệt.",
+      "trapTip": "Hai ngoại lệ đặc biệt của 'oo' đọc là /ʌ/ cần ghi nhớ là 'flood' và 'blood'."
+    },
+    {
+      "id": "ehcm25m3_q03",
+      "topic": "Trọng âm từ 2 âm tiết (Word Stress)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the word that has a different stress pattern: **support**, **inspire**, **modern**, **improve**",
+      "options": [
+        "modern",
+        "support",
+        "inspire",
+        "improve"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *ˈmodern*: tính từ 2 âm tiết có trọng âm rơi vào âm tiết 1.\n- *supˈport*, *inˈspire*, *imˈprove*: động từ 2 âm tiết có trọng âm rơi vào âm tiết 2.\nDo đó 'modern' có trọng âm khác biệt.",
+      "trapTip": "Tính từ 2 âm tiết thường nhấn âm 1; động từ 2 âm tiết thường nhấn âm 2."
+    },
+    {
+      "id": "ehcm25m3_q04",
+      "topic": "Trọng âm từ 3 âm tiết (Word Stress)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the word that has a different stress pattern: **volunteer**, **pollution**, **solution**, **decision**",
+      "options": [
+        "volunteer",
+        "pollution",
+        "solution",
+        "decision"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *volunˈteer*: từ có đuôi -eer nhận trọng âm chính ở chính nó (âm tiết 3).\n- *polˈlution*, *soˈlution*, *deˈcision*: từ có đuôi -tion, -sion có trọng âm rơi vào âm tiết trước nó (âm tiết 2).\nDo đó 'volunteer' có trọng âm khác biệt.",
+      "trapTip": "Các từ tận cùng bằng -ee, -eer, -ese luôn nhấn trọng âm vào chính nó: volunteer, engineer, pioneer, Vietnamese."
+    },
+    {
+      "id": "ehcm25m3_q05",
+      "topic": "Biển báo thực tế TP.HCM (Signboard 1 - Sở GD&ĐT TP.HCM)",
+      "difficulty": "Nhận biết",
+      "question": "What does this traffic sign say?<br><div style='display:inline-block;border:2px solid #3b82f6;border-radius:50%;width:70px;height:70px;line-height:70px;text-align:center;font-size:24px;background:#1d4ed8;color:#fff;margin:8px 0;'>🚲</div><br><em>(Circular blue sign with a white bicycle symbol)</em>",
+      "options": [
+        "This lane is reserved exclusively for bicycles.",
+        "Bicycles are not permitted on this road.",
+        "Beware of bicycles crossing the road.",
+        "Bicycle repair shop ahead."
+      ],
+      "correctIndex": 0,
+      "explanation": "Biển báo hiệu lệnh hình tròn nền xanh biểu tượng xe đạp màu trắng có ý nghĩa: Đường/làn đường dành riêng cho xe đạp ('lane reserved exclusively for bicycles').",
+      "trapTip": "Biển tròn nền xanh là biển hiệu lệnh (bắt buộc theo). Biển tròn viền đỏ nền trắng mới là biển cấm."
+    },
+    {
+      "id": "ehcm25m3_q06",
+      "topic": "Biển báo thực tế công cộng (Signboard 2 - Sở GD&ĐT TP.HCM)",
+      "difficulty": "Nhận biết",
+      "question": "What does this public sign warn people about?<br><div style='display:inline-block;border:2px solid #f59e0b;border-radius:8px;padding:8px 16px;background:#fef3c7;color:#b45309;font-weight:bold;margin:8px 0;'>⚠️ CAUTION: WET FLOOR - WATCH YOUR STEP</div>",
+      "options": [
+        "Walk carefully because the floor is slippery and you might fall.",
+        "You must wash the floor right now.",
+        "No shoes are allowed on this floor.",
+        "Water is available for drinking on this floor."
+      ],
+      "correctIndex": 0,
+      "explanation": "'WET FLOOR - WATCH YOUR STEP' cảnh báo sàn nhà đang ướt và trơn trượt, hãy đi cẩn thận kẻo ngã ('Walk carefully because the floor is slippery').",
+      "trapTip": "'Watch your step' = cẩn thận khi bước đi / chú ý bước chân."
+    },
+    {
+      "id": "ehcm25m3_q07",
+      "topic": "Từ loại (Word Form)",
+      "difficulty": "Thông hiểu",
+      "question": "The metro system in Ho Chi Minh City will ______ reduce travel time between districts.",
+      "options": [
+        "significantly",
+        "significant",
+        "significance",
+        "signify"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đứng giữa trợ động từ 'will' và động từ chính 'reduce' cần một trạng từ (Adv) để bổ nghĩa: **significantly** (đáng kể).",
+      "trapTip": "Vị trí của trạng từ: will + Adv + V-inf."
+    },
+    {
+      "id": "ehcm25m3_q08",
+      "topic": "Cụm động từ (Phrasal Verbs)",
+      "difficulty": "Thông hiểu",
+      "question": "You shouldn't ______ hope even when facing challenging math problems.",
+      "options": [
+        "give up",
+        "give in",
+        "take up",
+        "take after"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *give up* (v): từ bỏ, bỏ cuộc -> 'give up hope' = từ bỏ hi vọng.\n- *give in*: nhượng bộ, đầu hàng.\n- *take up*: bắt đầu một sở thích.\n- *take after*: giống ai đó.",
+      "trapTip": "Cụm thành ngữ cố định: 'give up hope' (từ bỏ hy vọng)."
+    },
+    {
+      "id": "ehcm25m3_q09",
+      "topic": "Liên từ chỉ nguyên nhân (Conjunctions of Reason)",
+      "difficulty": "Thông hiểu",
+      "question": "______ the flight was delayed by severe weather, we arrived in Da Nang later than expected.",
+      "options": [
+        "Since",
+        "Although",
+        "Despite",
+        "In spite of"
+      ],
+      "correctIndex": 0,
+      "explanation": "- 'the flight was delayed...' là mệnh đề chỉ nguyên nhân.\n- **Since** (= Because / As) đi với mệnh đề chỉ lý do: 'Vì chuyến bay bị hoãn... nên chúng tôi đến muộn'.",
+      "trapTip": "'Since' ngoài nghĩa mốc thời gian ('kể từ khi') còn có nghĩa là 'Bởi vì' (= Because)."
+    },
+    {
+      "id": "ehcm25m3_q10",
+      "topic": "Đại từ quan hệ chỉ sở hữu (Whose)",
+      "difficulty": "Thông hiểu",
+      "question": "The architect ______ design won the first prize in the smart city contest was praised by the mayor.",
+      "options": [
+        "whose",
+        "who",
+        "whom",
+        "which"
+      ],
+      "correctIndex": 0,
+      "explanation": "Danh từ 'design' thuộc quyền sở hữu của 'The architect' (bản thiết kế của vị kiến trúc sư) -> dùng đại từ quan hệ chỉ sở hữu: **whose**.",
+      "trapTip": "Cấu trúc: Noun (chỉ người) + whose + Noun (vật sở hữu) + V."
+    },
+    {
+      "id": "ehcm25m3_q11",
+      "topic": "Cụm từ cố định: Tham gia hoạt động (Collocations)",
+      "difficulty": "Thông hiểu",
+      "question": "Students are encouraged to ______ part in environmental protection activities in their neighborhood.",
+      "options": [
+        "take",
+        "make",
+        "get",
+        "do"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cụm từ cố định kinh điển: **take part in** (= participate in / join: tham gia vào).",
+      "trapTip": "Học thuộc: take part in = participate in = join."
+    },
+    {
+      "id": "ehcm25m3_q12",
+      "topic": "Thì Quá khứ tiếp diễn kết hợp Quá khứ đơn (Past Continuous)",
+      "difficulty": "Thông hiểu",
+      "question": "While we ______ along Nguyen Hue Walking Street, it suddenly started to pour with rain.",
+      "options": [
+        "were walking",
+        "walked",
+        "are walking",
+        "have walked"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hành động đang diễn ra trong quá khứ thì một hành động khác xen vào: Hành động đang diễn ra chia ở thì Quá khứ tiếp diễn (**were walking**), hành động xen vào chia Quá khứ đơn ('started').",
+      "trapTip": "Sau 'While' thường là hành động đang diễn ra (Past Continuous: was/were + V-ing)."
+    },
+    {
+      "id": "ehcm25m3_q13",
+      "topic": "Giao tiếp: Lời mời và phản hồi (Communication)",
+      "difficulty": "Nhận biết",
+      "question": "Linh: \"Would you like to join our cycling trip to Can Gio mangrove forest this Sunday?\" - Ba: \"______\"",
+      "options": [
+        "I'd love to, thanks. What time do we leave?",
+        "No, I wouldn't like.",
+        "Yes, I do.",
+        "You are very kind, but I don't."
+      ],
+      "correctIndex": 0,
+      "explanation": "Lời mời 'Would you like to...?' được đáp lại bằng sự hào hứng lịch sự: 'I'd love to, thanks. What time do we leave?' (Mình rất thích, cảm ơn bạn. Mấy giờ chúng ta xuất phát?).",
+      "trapTip": "'I'd love to' là câu trả lời chuẩn mực và tự nhiên nhất khi nhận lời mời."
+    },
+    {
+      "id": "ehcm25m3_q14",
+      "topic": "Giao tiếp: Bày tỏ sự cảm thông (Communication)",
+      "difficulty": "Nhận biết",
+      "question": "Mary: \"I failed the driving test this morning.\" - John: \"______ Better luck next time!\"",
+      "options": [
+        "I'm sorry to hear that.",
+        "Congratulations!",
+        "That's fantastic news!",
+        "Good job!"
+      ],
+      "correctIndex": 0,
+      "explanation": "Khi ai đó chia sẻ tin buồn hoặc thất bại, câu đáp lại chia sẻ và an ủi chuẩn xác là 'I'm sorry to hear that.' (Mình rất tiếc khi nghe điều đó).",
+      "trapTip": "'I'm sorry to hear that' dùng để chia sẻ tin không vui, không mang nghĩa xin lỗi vì mình có lỗi."
+    },
+    {
+      "id": "ehcm25m3_q15",
+      "topic": "Đọc điền từ Cloze: Smart City HCMC (Câu 1)",
+      "difficulty": "Nhận biết",
+      "question": "Choose the best option to fill in blank (1): 'Ho Chi Minh City is developing into a smart city to improve the quality of ______ for its residents.'",
+      "options": [
+        "life",
+        "live",
+        "living",
+        "alive"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cụm danh từ cố định quen thuộc: **quality of life** (chất lượng cuộc sống).",
+      "trapTip": "'quality of life' là cụm từ chuẩn.",
+      "passageTitle": "Bài đọc điền từ: Smart City Development in HCMC",
+      "passage": "Ho Chi Minh City is developing into a smart city to improve the quality of (1) ______ for its residents. By using modern digital technology and big data, the city aims to solve urban challenges such as traffic congestion and flood control. (2) ______, an intelligent transport monitoring center has been established to manage real-time traffic flow and coordinate emergency responses. Furthermore, local authorities are digitizing public administrative services, allowing citizens to submit documents online (3) ______ having to wait in long queues at government offices. In the education sector, schools are equipped with smart classrooms and digital libraries to (4) ______ better learning environments for students. (5) ______ the transformation requires significant investment and effort, it promises to make the southern metropolis more sustainable, modern, and liveable."
+    },
+    {
+      "id": "ehcm25m3_q16",
+      "topic": "Đọc điền từ Cloze: Smart City HCMC (Câu 2)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the best option to fill in blank (2): '______, an intelligent transport monitoring center has been established...'",
+      "options": [
+        "For example",
+        "However",
+        "Although",
+        "In contrast"
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu sau đưa ra một ví dụ cụ thể về việc áp dụng công nghệ giải quyết kẹt xe: **For example** (Ví dụ như).",
+      "trapTip": "Đọc ý câu trước 'solve urban challenges' và câu sau 'an intelligent transport monitoring center' để thấy quan hệ đưa ra ví dụ.",
+      "passageTitle": "Bài đọc điền từ: Smart City Development in HCMC",
+      "passage": "Ho Chi Minh City is developing into a smart city to improve the quality of (1) ______ for its residents. By using modern digital technology and big data, the city aims to solve urban challenges such as traffic congestion and flood control. (2) ______, an intelligent transport monitoring center has been established to manage real-time traffic flow and coordinate emergency responses. Furthermore, local authorities are digitizing public administrative services, allowing citizens to submit documents online (3) ______ having to wait in long queues at government offices. In the education sector, schools are equipped with smart classrooms and digital libraries to (4) ______ better learning environments for students. (5) ______ the transformation requires significant investment and effort, it promises to make the southern metropolis more sustainable, modern, and liveable."
+    },
+    {
+      "id": "ehcm25m3_q16b",
+      "topic": "Đọc điền từ Cloze: Smart City HCMC (Câu 3)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the best option to fill in blank (3): '...submit documents online ______ having to wait in long queues...'",
+      "options": [
+        "without",
+        "instead",
+        "despite",
+        "because of"
+      ],
+      "correctIndex": 0,
+      "explanation": "**without having to wait** (mà không phải chờ đợi trong các hàng dài). Giới từ 'without + V-ing' diễn tả việc không cần làm gì đó.",
+      "trapTip": "'without + V-ing' mang nghĩa 'mà không cần...'.",
+      "passageTitle": "Bài đọc điền từ: Smart City Development in HCMC",
+      "passage": "Ho Chi Minh City is developing into a smart city to improve the quality of (1) ______ for its residents. By using modern digital technology and big data, the city aims to solve urban challenges such as traffic congestion and flood control. (2) ______, an intelligent transport monitoring center has been established to manage real-time traffic flow and coordinate emergency responses. Furthermore, local authorities are digitizing public administrative services, allowing citizens to submit documents online (3) ______ having to wait in long queues at government offices. In the education sector, schools are equipped with smart classrooms and digital libraries to (4) ______ better learning environments for students. (5) ______ the transformation requires significant investment and effort, it promises to make the southern metropolis more sustainable, modern, and liveable."
+    },
+    {
+      "id": "ehcm25m3_q17",
+      "topic": "Đọc điền từ Cloze: Smart City HCMC (Câu 4)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the best option to fill in blank (4): '...smart classrooms and digital libraries to ______ better learning environments for students.'",
+      "options": [
+        "provide",
+        "prevent",
+        "destroy",
+        "damage"
+      ],
+      "correctIndex": 0,
+      "explanation": "**provide better learning environments** (cung cấp môi trường học tập tốt hơn).",
+      "trapTip": "'provide something for somebody' = cung cấp cái gì cho ai.",
+      "passageTitle": "Bài đọc điền từ: Smart City Development in HCMC",
+      "passage": "Ho Chi Minh City is developing into a smart city to improve the quality of (1) ______ for its residents. By using modern digital technology and big data, the city aims to solve urban challenges such as traffic congestion and flood control. (2) ______, an intelligent transport monitoring center has been established to manage real-time traffic flow and coordinate emergency responses. Furthermore, local authorities are digitizing public administrative services, allowing citizens to submit documents online (3) ______ having to wait in long queues at government offices. In the education sector, schools are equipped with smart classrooms and digital libraries to (4) ______ better learning environments for students. (5) ______ the transformation requires significant investment and effort, it promises to make the southern metropolis more sustainable, modern, and liveable."
+    },
+    {
+      "id": "ehcm25m3_q18",
+      "topic": "Đọc điền từ Cloze: Smart City HCMC (Câu 5)",
+      "difficulty": "Thông hiểu",
+      "question": "Choose the best option to fill in blank (5): '______ the transformation requires significant investment and effort, it promises to make the southern metropolis more sustainable...'",
+      "options": [
+        "Although",
+        "Because",
+        "Despite",
+        "Because of"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mệnh đề chỉ sự nhượng bộ (Dù đòi hỏi nhiều công sức và đầu tư nhưng nó hứa hẹn...): Dùng **Although** đứng trước mệnh đề 'the transformation requires...'.",
+      "trapTip": "Đằng sau là mệnh đề đầy đủ (S + V) nên dùng 'Although', không dùng 'Despite'.",
+      "passageTitle": "Bài đọc điền từ: Smart City Development in HCMC",
+      "passage": "Ho Chi Minh City is developing into a smart city to improve the quality of (1) ______ for its residents. By using modern digital technology and big data, the city aims to solve urban challenges such as traffic congestion and flood control. (2) ______, an intelligent transport monitoring center has been established to manage real-time traffic flow and coordinate emergency responses. Furthermore, local authorities are digitizing public administrative services, allowing citizens to submit documents online (3) ______ having to wait in long queues at government offices. In the education sector, schools are equipped with smart classrooms and digital libraries to (4) ______ better learning environments for students. (5) ______ the transformation requires significant investment and effort, it promises to make the southern metropolis more sustainable, modern, and liveable."
+    },
+    {
+      "id": "ehcm25m3_q19",
+      "topic": "Đọc hiểu: Tinh thần tình nguyện của học sinh TP.HCM - Ý chính (Reading Comprehension)",
+      "difficulty": "Thông hiểu",
+      "question": "What is the main idea of the reading passage?",
+      "options": [
+        "The meaningful contributions and personal growth of student volunteers in Ho Chi Minh City",
+        "The history of social work in Vietnam during the twentieth century",
+        "How to pass final exams with high scores without volunteering",
+        "The economic problems of orphanages in suburban areas"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bài đọc làm nổi bật những đóng góp thiết thực của học sinh TP.HCM qua các chiến dịch tình nguyện (Hoa Phượng Đỏ, dạy kèm, dọn vệ sinh) và những bài học trưởng thành quý báu về sự tự tin, thấu cảm mà các em nhận được.",
+      "trapTip": "Đọc đoạn đầu và đoạn cuối để nắm bao quát chủ đề chính của bài.",
+      "passageTitle": "Bài đọc hiểu: The Spirit of Volunteerism among Teenagers in HCMC",
+      "passage": "Every summer, thousands of secondary school students in Ho Chi Minh City eagerly participate in the 'Red Flamboyant' (Hoa Phượng Đỏ) volunteer campaign. Instead of spending their entire vacation on video games or idle pastimes, these enthusiastic teenagers dedicate their energy to meaningful community services across the city.\n\nTheir activities are diverse and impactful. Many volunteer groups organize free tutoring classes in English and mathematics for underprivileged children in shelter homes and suburban districts. Others visit nursing homes to converse with elderly residents, clean up public parks, or paint colorful murals on old street walls to discourage illegal advertising. During environmental weekends, student volunteers actively sort recyclable rubbish and collect plastic debris along the Nhieu Loc - Thi Nghe canal.\n\nParticipating in voluntary work brings tremendous personal benefits to teenagers. First and foremost, it fosters empathy and social responsibility. By meeting people from different walks of life, students gain a deeper appreciation for their own privileges and develop a strong desire to support the vulnerable. Furthermore, community service sharpens essential life skills such as teamwork, communication, and problem-solving, which cannot be acquired solely from textbooks.\n\nParents and educators strongly endorse this trend. As students step out of their comfort zones to serve the community, they mature into compassionate, confident, and responsible citizens who are ready to build a better society."
+    },
+    {
+      "id": "ehcm25m3_q20",
+      "topic": "Đọc hiểu: Chi tiết trong bài đọc (Reading Comprehension)",
+      "difficulty": "Nhận biết",
+      "question": "What is the name of the summer volunteer campaign mentioned in the text?",
+      "options": [
+        "Hoa Phượng Đỏ (Red Flamboyant)",
+        "Mùa Hè Xanh (Green Summer)",
+        "Tiếp Sức Mùa Thi",
+        "Xuân Tình Nguyện"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đoạn 1 nêu rõ tên chiến dịch dành cho học sinh: 'the \"Red Flamboyant\" (Hoa Phượng Đỏ) volunteer campaign'.",
+      "trapTip": "Tìm đúng tên chiến dịch được nhắc đến ở câu đầu tiên của bài đọc.",
+      "passageTitle": "Bài đọc hiểu: The Spirit of Volunteerism among Teenagers in HCMC",
+      "passage": "Every summer, thousands of secondary school students in Ho Chi Minh City eagerly participate in the 'Red Flamboyant' (Hoa Phượng Đỏ) volunteer campaign. Instead of spending their entire vacation on video games or idle pastimes, these enthusiastic teenagers dedicate their energy to meaningful community services across the city.\n\nTheir activities are diverse and impactful. Many volunteer groups organize free tutoring classes in English and mathematics for underprivileged children in shelter homes and suburban districts. Others visit nursing homes to converse with elderly residents, clean up public parks, or paint colorful murals on old street walls to discourage illegal advertising. During environmental weekends, student volunteers actively sort recyclable rubbish and collect plastic debris along the Nhieu Loc - Thi Nghe canal.\n\nParticipating in voluntary work brings tremendous personal benefits to teenagers. First and foremost, it fosters empathy and social responsibility. By meeting people from different walks of life, students gain a deeper appreciation for their own privileges and develop a strong desire to support the vulnerable. Furthermore, community service sharpens essential life skills such as teamwork, communication, and problem-solving, which cannot be acquired solely from textbooks.\n\nParents and educators strongly endorse this trend. As students step out of their comfort zones to serve the community, they mature into compassionate, confident, and responsible citizens who are ready to build a better society."
+    },
+    {
+      "id": "ehcm25m3_q21",
+      "topic": "Đọc hiểu: Hoạt động cụ thể của tình nguyện viên (Reading Comprehension)",
+      "difficulty": "Thông hiểu",
+      "question": "Which activity do student volunteers do along the Nhieu Loc - Thi Nghe canal?",
+      "options": [
+        "Sort recyclable rubbish and collect plastic debris",
+        "Fish for recreational purposes",
+        "Build new bridges across the canal",
+        "Operate tourist boats"
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu cuối đoạn 2: 'student volunteers actively sort recyclable rubbish and collect plastic debris along the Nhieu Loc - Thi Nghe canal.'",
+      "trapTip": "Tìm từ khóa 'Nhieu Loc - Thi Nghe canal' trong bài đọc.",
+      "passageTitle": "Bài đọc hiểu: The Spirit of Volunteerism among Teenagers in HCMC",
+      "passage": "Every summer, thousands of secondary school students in Ho Chi Minh City eagerly participate in the 'Red Flamboyant' (Hoa Phượng Đỏ) volunteer campaign. Instead of spending their entire vacation on video games or idle pastimes, these enthusiastic teenagers dedicate their energy to meaningful community services across the city.\n\nTheir activities are diverse and impactful. Many volunteer groups organize free tutoring classes in English and mathematics for underprivileged children in shelter homes and suburban districts. Others visit nursing homes to converse with elderly residents, clean up public parks, or paint colorful murals on old street walls to discourage illegal advertising. During environmental weekends, student volunteers actively sort recyclable rubbish and collect plastic debris along the Nhieu Loc - Thi Nghe canal.\n\nParticipating in voluntary work brings tremendous personal benefits to teenagers. First and foremost, it fosters empathy and social responsibility. By meeting people from different walks of life, students gain a deeper appreciation for their own privileges and develop a strong desire to support the vulnerable. Furthermore, community service sharpens essential life skills such as teamwork, communication, and problem-solving, which cannot be acquired solely from textbooks.\n\nParents and educators strongly endorse this trend. As students step out of their comfort zones to serve the community, they mature into compassionate, confident, and responsible citizens who are ready to build a better society."
+    },
+    {
+      "id": "ehcm25m3_q22",
+      "topic": "Đọc hiểu: Từ vựng trong ngữ cảnh (Vocabulary in Context)",
+      "difficulty": "Thông hiểu",
+      "question": "The word \"fosters\" in paragraph 3 is closest in meaning to:",
+      "options": [
+        "develops",
+        "destroys",
+        "ignores",
+        "prevents"
+      ],
+      "correctIndex": 0,
+      "explanation": "- *foster* (v): nuôi dưỡng, phát triển = *develop*.\n- *destroy*: phá hủy.\n- *ignore*: phớt lờ.\n- *prevent*: ngăn chặn.",
+      "trapTip": "'fosters empathy' = nuôi dưỡng lòng trắc ẩn, sự thấu cảm.",
+      "passageTitle": "Bài đọc hiểu: The Spirit of Volunteerism among Teenagers in HCMC",
+      "passage": "Every summer, thousands of secondary school students in Ho Chi Minh City eagerly participate in the 'Red Flamboyant' (Hoa Phượng Đỏ) volunteer campaign. Instead of spending their entire vacation on video games or idle pastimes, these enthusiastic teenagers dedicate their energy to meaningful community services across the city.\n\nTheir activities are diverse and impactful. Many volunteer groups organize free tutoring classes in English and mathematics for underprivileged children in shelter homes and suburban districts. Others visit nursing homes to converse with elderly residents, clean up public parks, or paint colorful murals on old street walls to discourage illegal advertising. During environmental weekends, student volunteers actively sort recyclable rubbish and collect plastic debris along the Nhieu Loc - Thi Nghe canal.\n\nParticipating in voluntary work brings tremendous personal benefits to teenagers. First and foremost, it fosters empathy and social responsibility. By meeting people from different walks of life, students gain a deeper appreciation for their own privileges and develop a strong desire to support the vulnerable. Furthermore, community service sharpens essential life skills such as teamwork, communication, and problem-solving, which cannot be acquired solely from textbooks.\n\nParents and educators strongly endorse this trend. As students step out of their comfort zones to serve the community, they mature into compassionate, confident, and responsible citizens who are ready to build a better society."
+    },
+    {
+      "id": "ehcm25m3_q23",
+      "topic": "Đọc hiểu: Kĩ năng sống đạt được qua tình nguyện (Reading Comprehension)",
+      "difficulty": "Thông hiểu",
+      "question": "According to the passage, what essential skills can teenagers develop through volunteer work?",
+      "options": [
+        "Teamwork, communication, and problem-solving",
+        "Advanced computer programming only",
+        "Professional sports and gaming skills",
+        "Driving heavy transport vehicles"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đoạn 3 nêu rõ: 'community service sharpens essential life skills such as teamwork, communication, and problem-solving...'",
+      "trapTip": "Đọc kĩ câu cuối đoạn 3 để chọn đúng bộ ba kĩ năng: teamwork, communication, problem-solving.",
+      "passageTitle": "Bài đọc hiểu: The Spirit of Volunteerism among Teenagers in HCMC",
+      "passage": "Every summer, thousands of secondary school students in Ho Chi Minh City eagerly participate in the 'Red Flamboyant' (Hoa Phượng Đỏ) volunteer campaign. Instead of spending their entire vacation on video games or idle pastimes, these enthusiastic teenagers dedicate their energy to meaningful community services across the city.\n\nTheir activities are diverse and impactful. Many volunteer groups organize free tutoring classes in English and mathematics for underprivileged children in shelter homes and suburban districts. Others visit nursing homes to converse with elderly residents, clean up public parks, or paint colorful murals on old street walls to discourage illegal advertising. During environmental weekends, student volunteers actively sort recyclable rubbish and collect plastic debris along the Nhieu Loc - Thi Nghe canal.\n\nParticipating in voluntary work brings tremendous personal benefits to teenagers. First and foremost, it fosters empathy and social responsibility. By meeting people from different walks of life, students gain a deeper appreciation for their own privileges and develop a strong desire to support the vulnerable. Furthermore, community service sharpens essential life skills such as teamwork, communication, and problem-solving, which cannot be acquired solely from textbooks.\n\nParents and educators strongly endorse this trend. As students step out of their comfort zones to serve the community, they mature into compassionate, confident, and responsible citizens who are ready to build a better society."
+    },
+    {
+      "id": "ehcm25m3_q24",
+      "topic": "Đọc hiểu: Thái độ của cha mẹ và thầy cô (Reading Comprehension)",
+      "difficulty": "Thông hiểu",
+      "question": "How do parents and educators view the students' participation in volunteer campaigns?",
+      "options": [
+        "They strongly endorse and support it.",
+        "They strictly prohibit students from participating.",
+        "They consider it a complete waste of time.",
+        "They are completely indifferent and unconcerned."
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu đầu đoạn 4: 'Parents and educators strongly endorse this trend.' ('endorse' = ủng hộ, tán đồng mạnh mẽ).",
+      "trapTip": "'strongly endorse' = hết sức ủng hộ.",
+      "passageTitle": "Bài đọc hiểu: The Spirit of Volunteerism among Teenagers in HCMC",
+      "passage": "Every summer, thousands of secondary school students in Ho Chi Minh City eagerly participate in the 'Red Flamboyant' (Hoa Phượng Đỏ) volunteer campaign. Instead of spending their entire vacation on video games or idle pastimes, these enthusiastic teenagers dedicate their energy to meaningful community services across the city.\n\nTheir activities are diverse and impactful. Many volunteer groups organize free tutoring classes in English and mathematics for underprivileged children in shelter homes and suburban districts. Others visit nursing homes to converse with elderly residents, clean up public parks, or paint colorful murals on old street walls to discourage illegal advertising. During environmental weekends, student volunteers actively sort recyclable rubbish and collect plastic debris along the Nhieu Loc - Thi Nghe canal.\n\nParticipating in voluntary work brings tremendous personal benefits to teenagers. First and foremost, it fosters empathy and social responsibility. By meeting people from different walks of life, students gain a deeper appreciation for their own privileges and develop a strong desire to support the vulnerable. Furthermore, community service sharpens essential life skills such as teamwork, communication, and problem-solving, which cannot be acquired solely from textbooks.\n\nParents and educators strongly endorse this trend. As students step out of their comfort zones to serve the community, they mature into compassionate, confident, and responsible citizens who are ready to build a better society."
+    },
+    {
+      "id": "ehcm25m3_q25",
+      "topic": "Viết lại câu: Cấu trúc So... that sang Such... that (Sentence Transformation)",
+      "difficulty": "Vận dụng",
+      "question": "Choose the sentence that is closest in meaning: 'The weather was so bad that we had to cancel our field trip to Cu Chi.'",
+      "options": [
+        "It was such bad weather that we had to cancel our field trip to Cu Chi.",
+        "It was such a bad weather that we had to cancel our field trip to Cu Chi.",
+        "The weather was not bad enough for us to cancel our field trip to Cu Chi.",
+        "Such was the bad weather that we didn't cancel our field trip to Cu Chi."
+      ],
+      "correctIndex": 0,
+      "explanation": "Chuyển từ 'so + Adj + that' sang 'such + (a/an) + Adj + N + that'. 'weather' là danh từ không đếm được nên KHÔNG có mạo từ 'a': **It was such bad weather that...**.",
+      "trapTip": "Bẫy danh từ không đếm được: 'weather' không có mạo từ 'a' đằng trước (loại trừ đáp án 'such a bad weather')."
+    },
+    {
+      "id": "ehcm25m3_q26",
+      "topic": "Viết lại câu: Đề xuất gợi ý (Suggestions)",
+      "difficulty": "Vận dụng",
+      "question": "Choose the sentence that is closest in meaning: '\"Why don't we collect used batteries to protect the environment?\", said Mai.'",
+      "options": [
+        "Mai suggested collecting used batteries to protect the environment.",
+        "Mai asked why they don't collect used batteries.",
+        "Mai ordered us to collect used batteries immediately.",
+        "Mai refused to collect used batteries to protect the environment."
+      ],
+      "correctIndex": 0,
+      "explanation": "Cấu trúc gợi ý 'Why don't we + V-inf?' khi tường thuật lại dùng: **S + suggested + V-ing** = 'Mai suggested collecting used batteries...'.",
+      "trapTip": "'Why don't we' là câu gợi ý (suggested V-ing), không phải câu hỏi chất vấn nguyên nhân."
+    },
+    {
+      "id": "ehcm25m3_q27",
+      "topic": "Viết lại câu: Cấu trúc Used to (Habit in the past)",
+      "difficulty": "Vận dụng",
+      "question": "Choose the sentence that is closest in meaning: 'My father often rode a bicycle to work when he was young, but now he takes the bus.'",
+      "options": [
+        "My father used to ride a bicycle to work when he was young.",
+        "My father is used to riding a bicycle to work now.",
+        "My father used to taking the bus to work when he was young.",
+        "My father gets used to ride a bicycle to work."
+      ],
+      "correctIndex": 0,
+      "explanation": "Diễn tả thói quen trong quá khứ nay không còn nữa: **S + used to + V-inf** (đã từng làm gì).",
+      "trapTip": "Phân biệt 'used to + V-inf' (đã từng) và 'be/get used to + V-ing' (quen với việc gì ở hiện tại)."
+    },
+    {
+      "id": "ehcm25m3_q28",
+      "topic": "Viết lại câu: Cấu trúc Too... to sang Enough (Sentence Transformation)",
+      "difficulty": "Vận dụng",
+      "question": "Choose the sentence that is closest in meaning: 'He is too young to ride a motorbike legally.'",
+      "options": [
+        "He is not old enough to ride a motorbike legally.",
+        "He is enough old to ride a motorbike legally.",
+        "He is so old that he can ride a motorbike legally.",
+        "He is very young, so he can ride a motorbike legally."
+      ],
+      "correctIndex": 0,
+      "explanation": "Chuyển đổi giữa 'too... to' và 'not... enough to': **S + is too + Adj + to V = S + is not + [trái nghĩa của Adj] + enough to V**.\n'Quá trẻ' = 'chưa đủ tuổi' (not old enough).",
+      "trapTip": "Vị trí của enough: Adj + enough (old enough, không nói enough old)."
+    },
+    {
+      "id": "ehcm25m3_q29",
+      "topic": "Viết lại câu: Câu ước điều kiện loại 3 / hối tiếc (Regret in the past)",
+      "difficulty": "Vận dụng",
+      "question": "Choose the sentence that is closest in meaning: 'I regret not revising my lessons carefully before the entrance exam.'",
+      "options": [
+        "I wish I had revised my lessons carefully before the entrance exam.",
+        "I wish I revised my lessons carefully before the entrance exam.",
+        "I wish I didn't revise my lessons carefully before the entrance exam.",
+        "I wish I would revise my lessons carefully before the entrance exam."
+      ],
+      "correctIndex": 0,
+      "explanation": "Hối tiếc một hành động trong quá khứ ('regret not V-ing'): Dùng câu ước ở quá khứ: **S + wish + S + had + V3/ed** = 'I wish I had revised...'.",
+      "trapTip": "Ước cho một sự việc trong quá khứ phải lùi về thì Quá khứ hoàn thành (had + V3/ed)."
+    },
+    {
+      "id": "ehcm25m3_q30",
+      "topic": "Viết lại câu: Liên từ Because of sang Because (Sentence Transformation)",
+      "difficulty": "Vận dụng",
+      "question": "Choose the sentence that is closest in meaning: 'Because of her carelessness, Lan made many unnecessary mistakes in the test.'",
+      "options": [
+        "Because Lan was careless, she made many unnecessary mistakes in the test.",
+        "Although Lan was careless, she made many unnecessary mistakes in the test.",
+        "Despite being careless, Lan made many unnecessary mistakes in the test.",
+        "Because Lan was careful, she made many unnecessary mistakes in the test."
+      ],
+      "correctIndex": 0,
+      "explanation": "Chuyển từ 'Because of + Noun phrase' sang 'Because + Clause (S + V)':\n'Because of her carelessness' = 'Because Lan was careless'.",
+      "trapTip": "carelessness (danh từ: sự bất cẩn) -> careless (tính từ: bất cẩn)."
+    }
+  ]
+}
+);

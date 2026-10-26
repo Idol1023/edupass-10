@@ -52,9 +52,9 @@ window.MATH_EXAMS = [
         "difficulty": "Nhận biết",
         "question": "Cho phương trình bậc hai $2x^2 - 6x - 3 = 0$. Khẳng định nào sau đây về số nghiệm của phương trình là đúng?",
         "options": [
-          "Phương trình luôn có hai nghiệm phân biệt $x_1, x_2$ vì $a \\cdot c = 2 \\cdot (-3) = -6 < 0$",
-          "Phương trình vô nghiệm vì $\\Delta < 0$",
-          "Phương trình có nghiệm kép vì $\\Delta = 0$",
+          "Phương trình luôn có hai nghiệm phân biệt trái dấu",
+          "Phương trình vô nghiệm",
+          "Phương trình có nghiệm kép",
           "Phương trình có hai nghiệm cùng dấu dương"
         ],
         "correctIndex": 0,
@@ -97,10 +97,10 @@ window.MATH_EXAMS = [
         "difficulty": "Thông hiểu",
         "question": "Chọn ngẫu nhiên một học sinh trong nhóm khảo sát trên. Xác suất thực nghiệm của biến cố $E$: 'Học sinh được chọn sử dụng phương tiện xanh từ $30$ phút trở lên mỗi ngày' là:",
         "options": [
-          "$0.30$ ($30\\%$)",
-          "$0.20$ ($20\\%$)",
-          "$0.46$ ($46\\%$)",
-          "$0.10$ ($10\\%$)"
+          "$0.30$",
+          "$0.20$",
+          "$0.46$",
+          "$0.10$"
         ],
         "correctIndex": 0,
         "correct": 0,
@@ -112,10 +112,10 @@ window.MATH_EXAMS = [
         "difficulty": "Thông hiểu",
         "question": "Một bồn nước inox Tân Á Đại Thành hình trụ đứng có bán kính đáy $R = 0.7\\text{ m}$ và chiều cao $h = 1.5\\text{ m}$. Lấy $\\pi \\approx 3.14$. Dung tích chứa nước tối đa của bồn nước (làm tròn đến lít, biết $1\\text{ m}^3 = 1000\\text{ lít}$) là:",
         "options": [
-          "$2308$ lít ($2.308\\text{ m}^3$)",
-          "$1540$ lít ($1.54\\text{ m}^3$)",
-          "$3297$ lít ($3.297\\text{ m}^3$)",
-          "$1154$ lít ($1.154\\text{ m}^3$)"
+          "$2308$ lít",
+          "$1540$ lít",
+          "$3297$ lít",
+          "$1154$ lít"
         ],
         "correctIndex": 0,
         "correct": 0,
@@ -157,8 +157,8 @@ window.MATH_EXAMS = [
         "difficulty": "Nhận biết",
         "question": "Với chính sách giảm giá kép ở câu trên, học sinh có thẻ thành viên đã tiết kiệm được tổng cộng bao nhiêu tiền so với giá niêm yết ban đầu?",
         "options": [
-          "$1,740,000$ đồng (tương đương giảm $14.5\\%$)",
-          "$1,800,000$ đồng (tương đương giảm $15\\%$)",
+          "$1,740,000$ đồng",
+          "$1,800,000$ đồng",
           "$1,200,000$ đồng",
           "$1,440,000$ đồng"
         ],
@@ -246,10 +246,10 @@ window.MATH_EXAMS = [
         "difficulty": "Nhận biết",
         "question": "Cho hàm số parabol $(P): y = -x^2$. Khẳng định nào sau đây về tọa độ các điểm thuộc đồ thị $(P)$ là đúng?",
         "options": [
-          "Điểm $M(2; -4)$ thuộc $(P)$ vì khi $x = 2$ thì $y = -(2)^2 = -4$",
-          "Điểm $N(-2; 4)$ thuộc $(P)$ vì khi $x = -2$ thì $y = (-2)^2 = 4$",
-          "Điểm $P(1; 1)$ thuộc $(P)$ vì khi $x = 1$ thì $y = 1$",
-          "Điểm $Q(-3; 9)$ thuộc $(P)$ vì parabol luôn nhận giá trị dương"
+          "Điểm $M(2; -4)$ thuộc $(P)$",
+          "Điểm $N(-2; 4)$ thuộc $(P)$",
+          "Điểm $P(1; 1)$ thuộc $(P)$",
+          "Điểm $Q(-3; 9)$ thuộc $(P)$"
         ],
         "correctIndex": 0,
         "correct": 0,
@@ -276,10 +276,10 @@ window.MATH_EXAMS = [
         "difficulty": "Nhận biết",
         "question": "Cho phương trình bậc hai: $x^2 - 4x - 5 = 0$. Nhận xét đúng về số nghiệm và dấu các nghiệm của phương trình là:",
         "options": [
-          "Phương trình luôn có 2 nghiệm phân biệt trái dấu vì hệ số $a \\cdot c = 1 \\cdot (-5) = -5 < 0$",
-          "Phương trình vô nghiệm vì $\\Delta < 0$",
-          "Phương trình có 2 nghiệm phân biệt cùng dấu dương vì tích $P > 0$",
-          "Phương trình có nghiệm kép $x_1 = x_2 = 2$"
+          "Phương trình có 2 nghiệm phân biệt trái dấu",
+          "Phương trình vô nghiệm",
+          "Phương trình có 2 nghiệm phân biệt cùng dấu dương",
+          "Phương trình có nghiệm kép"
         ],
         "correctIndex": 0,
         "correct": 0,
@@ -321,10 +321,10 @@ window.MATH_EXAMS = [
         "difficulty": "Thông hiểu",
         "question": "Dựa vào bảng số liệu trên của $200$ học sinh, xác suất thực nghiệm để chọn ngẫu nhiên một học sinh có thời gian tự học từ $3$ giờ trở lên mỗi ngày ($[3; 5)$ giờ) là:",
         "options": [
-          "$0.45$ ($45\\%$)",
-          "$0.30$ ($30\\%$)",
-          "$0.15$ ($15\\%$)",
-          "$0.70$ ($70\\%$)"
+          "$0.45$",
+          "$0.30$",
+          "$0.15$",
+          "$0.70$"
         ],
         "correctIndex": 0,
         "correct": 0,
@@ -336,10 +336,10 @@ window.MATH_EXAMS = [
         "difficulty": "Thông hiểu",
         "question": "Một bồn nước inox hình trụ dạng đứng dùng cho trường học có đường kính đáy $d = 1.2\\text{ m}$ (bán kính $R = 0.6\\text{ m}$) và chiều cao thân bồn $h = 1.8\\text{ m}$. Lấy $\\pi \\approx 3.14$. Thể tích dung tích nước tối đa của bồn (làm tròn đến hàng đơn vị lít) là:",
         "options": [
-          "$2035$ lít ($2.035\\text{ m}^3$)",
-          "$1540$ lít ($1.54\\text{ m}^3$)",
-          "$8140$ lít ($8.14\\text{ m}^3$)",
-          "$1020$ lít ($1.02\\text{ m}^3$)"
+          "$2035$ lít",
+          "$1540$ lít",
+          "$8140$ lít",
+          "$1020$ lít"
         ],
         "correctIndex": 0,
         "correct": 0,
@@ -485,9 +485,9 @@ window.MATH_EXAMS = [
         "difficulty": "Vận dụng",
         "question": "Cho biểu thức $P = \\frac{\\sqrt{x} + 4}{\\sqrt{x} + 1} = 1 + \\frac{3}{\\sqrt{x} + 1}$ với $x \\ge 0$. Có bao nhiêu giá trị nguyên của $x$ để biểu thức $P$ nhận giá trị là số nguyên dương?",
         "options": [
-          "$2$ giá trị ($x = 0$ và $x = 4$)",
-          "$1$ giá trị ($x = 0$)",
-          "$3$ giá trị ($x = 0, 1, 4$)",
+          "$2$ giá trị",
+          "$1$ giá trị",
+          "$3$ giá trị",
           "$0$ giá trị"
         ],
         "correctIndex": 0,
@@ -500,7 +500,7 @@ window.MATH_EXAMS = [
         "difficulty": "Thông hiểu",
         "question": "Hai tổ công nhân cùng tham gia gia cố đường hầm tuyến đường sắt đô thị Nhổn - Ga Hà Nội. Nếu cùng làm thì trong $12$ ngày sẽ hoàn thành công việc. Nhưng hai tổ cùng làm trong $4$ ngày thì tổ I được điều đi làm việc khác, tổ II làm tiếp trong $10$ ngày nữa thì hoàn thành được tổng cộng $\\frac{7}{10}$ công việc. Hỏi nếu làm một mình thì tổ II hoàn thành toàn bộ công việc trong bao nhiêu ngày?",
         "options": [
-          "$27$ ngày (xấp xỉ)",
+          "$27$ ngày",
           "$20$ ngày",
           "$18$ ngày",
           "$30$ ngày"
@@ -515,7 +515,7 @@ window.MATH_EXAMS = [
         "difficulty": "Thông hiểu",
         "question": "Một chiếc nón lá truyền thống của làng Chuông (Thanh Oai, Hà Nội) có đường kính vành nón $d = 40\\text{ cm}$ (bán kính đáy $R = 20\\text{ cm}$) và chiều cao từ đỉnh nón tới tâm đáy là $h = 30\\text{ cm}$. Thể tích không gian bên trong nón là:",
         "options": [
-          "$\\approx 12560\\text{ cm}^3$ ($4000\\pi\\text{ cm}^3$)",
+          "$\\approx 12560\\text{ cm}^3$",
           "$\\approx 37680\\text{ cm}^3$",
           "$\\approx 6280\\text{ cm}^3$",
           "$\\approx 8200\\text{ cm}^3$"
@@ -591,9 +591,9 @@ window.MATH_EXAMS = [
         "question": "Cho tam giác nhọn $ABC$ nội tiếp đường tròn $(O)$, các đường cao $AD, BE, CF$ cắt nhau tại trực tâm $H$. Khẳng định nào sau đây là SAI?",
         "options": [
           "Tứ giác $BCEF$ có tổng hai góc đối bằng $180^\\circ$",
-          "Tứ giác $BDHF$ nội tiếp vì $\\widehat{BDH} + \\widehat{BFH} = 90^\\circ + 90^\\circ = 180^\\circ$",
-          "Tứ giác $CDHE$ nội tiếp vì $\\widehat{CDH} + \\widehat{CEH} = 180^\\circ$",
-          "Tứ giác $BCEF$ nội tiếp đường tròn đường kính $BC$ vì $\\widehat{BEC} = \\widehat{BFC} = 90^\\circ$"
+          "Tứ giác $BDHF$ là tứ giác nội tiếp",
+          "Tứ giác $CDHE$ là tứ giác nội tiếp",
+          "Tứ giác $BCEF$ nội tiếp đường tròn đường kính $BC$"
         ],
         "correctIndex": 0,
         "correct": 0,
@@ -620,10 +620,10 @@ window.MATH_EXAMS = [
         "difficulty": "Vận dụng",
         "question": "Kẻ tiếp tuyến $Ax$ với đường tròn $(O)$ ngoại tiếp tam giác $ABC$. Khẳng định nào sau đây chứng minh được $Ax \\parallel EF$?",
         "options": [
-          "Vì $\\widehat{xAB} = \\widehat{ACB}$ (góc tạo bởi tiếp tuyến & dây cung) và $\\widehat{AFE} = \\widehat{ACB}$ nên $\\widehat{xAB} = \\widehat{AFE}$ (ở vị trí so le trong)",
-          "Vì $OA$ vuông góc với $EF$",
-          "Vì tam giác $AEF$ cân tại $A$",
-          "Vì $EF$ đi qua tâm $O$"
+          "$\\widehat{xAB} = \\widehat{AFE}$ (hai góc so le trong bằng nhau)",
+          "$OA$ vuông góc với $EF$",
+          "Tam giác $AEF$ cân tại $A$",
+          "$EF$ đi qua tâm $O$"
         ],
         "correctIndex": 0,
         "correct": 0,
@@ -635,10 +635,10 @@ window.MATH_EXAMS = [
         "difficulty": "Vận dụng cao",
         "question": "Cho các số thực dương $a, b$ thỏa mãn $a + b \\le 2$. Giá trị nhỏ nhất của biểu thức $M = \\frac{1}{a^2 + b^2} + \\frac{1}{2ab}$ là:",
         "options": [
-          "$M_{\\min} = 1$ khi $a = b = 1$",
-          "$M_{\\min} = 2$ khi $a = b = 1$",
-          "$M_{\\min} = \\frac{1}{2}$ khi $a = b = 1$",
-          "$M_{\\min} = 4$ khi $a = b = 1$"
+          "$M_{\\min} = 1$",
+          "$M_{\\min} = 2$",
+          "$M_{\\min} = \\frac{1}{2}$",
+          "$M_{\\min} = 4$"
         ],
         "correctIndex": 0,
         "correct": 0,
@@ -709,10 +709,10 @@ window.MATH_EXAMS = [
         "difficulty": "Vận dụng",
         "question": "Theo Quy chuẩn Kỹ thuật Quốc gia về Xây dựng (QCVN), để đảm bảo an toàn cho người khuyết tật sử dụng xe lăn, độ dốc của ram dốc (tỉ số giữa chiều cao dốc và chiều dài mặt sàn ngang: $\\tan\\alpha$) không được vượt quá $\\frac{1}{12} \\approx 0.0833$. Một trung tâm thương mại thiết kế lối đi cho xe lăn có độ cao bậc dốc $h = 0.6\\text{ m}$ và chiều dài mặt sàn ngang $d = 7.5\\text{ m}$. Thiết kế này có đạt quy chuẩn an toàn hay không?",
         "options": [
-          "Đạt chuẩn, vì độ dốc thực tế là $0.0800 \\le 0.0833$",
-          "Không đạt chuẩn, vì độ dốc thực tế là $0.0920 > 0.0833$",
-          "Không đạt chuẩn, vì độ dốc thực tế là $0.1250 > 0.0833$",
-          "Đạt chuẩn, vì chiều dài dốc lớn hơn $5\\text{ m}$"
+          "Đạt chuẩn (độ dốc thực tế là $0.0800$)",
+          "Không đạt chuẩn (độ dốc thực tế là $0.0920$)",
+          "Không đạt chuẩn (độ dốc thực tế là $0.1250$)",
+          "Đạt chuẩn (chiều dài dốc lớn hơn $5\\text{ m}$)"
         ],
         "correctIndex": 0,
         "explanation": "Độ dốc của ram dốc xe lăn được xác định bởi tỉ số lượng giác:<br>$\\tan\\alpha = \\frac{h}{d} = \\frac{0.6}{7.5} = 0.0800$.<br>So sánh với quy chuẩn tối đa cho phép:<br>$0.0800 \\le \\frac{1}{12} \\approx 0.0833$.<br>Do đó thiết kế ram dốc này hoàn toàn đạt chuẩn kỹ thuật quốc gia.",
@@ -1676,3 +1676,471 @@ window.MATH_EXAMS = [
     ]
   }
 ];
+
+// =========================================================
+// BỔ SUNG 3 ĐỀ TOÁN MỚI (Bám sát cấu trúc đề tuyển sinh 9 lên 10)
+// =========================================================
+window.MATH_EXAMS.push(
+  {
+    "id": "math_exam_hanoi_2024_style",
+    "title": "Đề ôn thi Tuyển sinh Lớp 10 TP. Hà Nội - Bám sát cấu trúc đề chính thức 2024 - Môn Toán",
+    "subject": "math",
+    "year": 2024,
+    "location": "Hà Nội",
+    "isOfficial": false,
+    "badgeText": "📋 Cấu trúc đề Hà Nội 2024",
+    "durationMinutes": 120,
+    "totalQuestions": 14,
+    "description": "Đề ôn luyện bám sát 5 bài của đề tuyển sinh Hà Nội 2024 (120 phút): Bài I - Rút gọn biểu thức chứa căn và tìm x nguyên; Bài II - Giải bài toán bằng cách lập phương trình (xưởng may), Thống kê - Xác suất, Bồn nước hình trụ; Bài III - Hệ phương trình và phương trình bậc hai chứa tham số; Bài IV - Hình học đường tròn với hai tiếp tuyến; Bài V - Bất đẳng thức tìm giá trị nhỏ nhất.",
+    "questions": [
+      {
+        "id": "mhn24s_q01",
+        "topic": "Bài I.1: Tính giá trị biểu thức chứa căn (Số và đại số)",
+        "difficulty": "Nhận biết",
+        "question": "Cho biểu thức $A = \\frac{\\sqrt{x}+1}{\\sqrt{x}-1}$ với $x \\ge 0, x \\ne 1$. Giá trị của $A$ khi $x = 9$ là:",
+        "options": ["$A = 2$", "$A = 4$", "$A = \\frac{1}{2}$", "$A = \\frac{5}{4}$"],
+        "correctIndex": 0,
+        "explanation": "Với $x = 9$ (thỏa mãn điều kiện) $\\Rightarrow \\sqrt{x} = 3$.<br>$A = \\frac{3+1}{3-1} = \\frac{4}{2} = 2$.",
+        "trapTip": "Luôn kiểm tra giá trị $x$ có thỏa mãn điều kiện xác định trước khi thay vào biểu thức."
+      },
+      {
+        "id": "mhn24s_q02",
+        "topic": "Bài I.2: Rút gọn biểu thức chứa căn bậc hai (Số và đại số)",
+        "difficulty": "Thông hiểu",
+        "question": "Rút gọn biểu thức $B = \\frac{\\sqrt{x}}{\\sqrt{x}+1} + \\frac{2\\sqrt{x}}{x-1}$ với $x \\ge 0, x \\ne 1$, ta được:",
+        "options": ["$B = \\frac{\\sqrt{x}}{\\sqrt{x}-1}$", "$B = \\frac{\\sqrt{x}}{\\sqrt{x}+1}$", "$B = \\frac{1}{\\sqrt{x}-1}$", "$B = \\frac{\\sqrt{x}+1}{\\sqrt{x}}$"],
+        "correctIndex": 0,
+        "explanation": "Mẫu chung $x - 1 = (\\sqrt{x}-1)(\\sqrt{x}+1)$.<br>$B = \\frac{\\sqrt{x}(\\sqrt{x}-1) + 2\\sqrt{x}}{x-1} = \\frac{x + \\sqrt{x}}{x-1} = \\frac{\\sqrt{x}(\\sqrt{x}+1)}{(\\sqrt{x}-1)(\\sqrt{x}+1)} = \\frac{\\sqrt{x}}{\\sqrt{x}-1}$.",
+        "trapTip": "Phân tích $x - 1 = (\\sqrt{x}-1)(\\sqrt{x}+1)$ và $x + \\sqrt{x} = \\sqrt{x}(\\sqrt{x}+1)$ để rút gọn triệt để."
+      },
+      {
+        "id": "mhn24s_q03",
+        "topic": "Bài I.3: Tìm x nguyên để biểu thức nhận giá trị nguyên (Số và đại số)",
+        "difficulty": "Vận dụng",
+        "question": "Với $B = \\frac{\\sqrt{x}}{\\sqrt{x}-1}$ ($x \\ge 0, x \\ne 1$), tập hợp tất cả các số nguyên $x$ để $B$ nhận giá trị nguyên là:",
+        "options": ["$\\{0; 4\\}$", "$\\{4\\}$", "$\\{0; 4; 9\\}$", "$\\{4; 9\\}$"],
+        "correctIndex": 0,
+        "explanation": "$B = \\frac{\\sqrt{x}-1+1}{\\sqrt{x}-1} = 1 + \\frac{1}{\\sqrt{x}-1}$.<br>Nếu $x$ nguyên không chính phương thì $\\sqrt{x}$ vô tỉ, $B$ không nguyên. Nếu $x$ chính phương thì $\\sqrt{x}-1$ là ước của 1: $\\sqrt{x}-1 = 1 \\Rightarrow x = 4$; $\\sqrt{x}-1 = -1 \\Rightarrow x = 0$.<br>Vậy $x \\in \\{0; 4\\}$.",
+        "trapTip": "Đừng quên trường hợp $\\sqrt{x} - 1 = -1$ cho nghiệm $x = 0$!"
+      },
+      {
+        "id": "mhn24s_q04",
+        "topic": "Bài II.1: Giải bài toán bằng cách lập phương trình - Năng suất xưởng may",
+        "difficulty": "Vận dụng",
+        "question": "Theo kế hoạch, một xưởng may phải may xong $1200$ chiếc áo trong một thời gian quy định. Thực tế, mỗi ngày xưởng may được nhiều hơn kế hoạch $20$ chiếc áo nên đã hoàn thành sớm hơn $2$ ngày. Hỏi theo kế hoạch, mỗi ngày xưởng phải may bao nhiêu chiếc áo? (Giả định năng suất mỗi ngày không đổi)",
+        "options": ["$100$ chiếc", "$120$ chiếc", "$80$ chiếc", "$150$ chiếc"],
+        "correctIndex": 0,
+        "explanation": "Gọi số áo may mỗi ngày theo kế hoạch là $x$ (chiếc, $x \\in \\mathbb{N}^*$).<br>Ta có phương trình: $\\frac{1200}{x} - \\frac{1200}{x+20} = 2 \\Leftrightarrow 1200 \\cdot 20 = 2x(x+20) \\Leftrightarrow x^2 + 20x - 12000 = 0$.<br>$\\Delta' = 100 + 12000 = 12100 \\Rightarrow \\sqrt{\\Delta'} = 110 \\Rightarrow x = -10 + 110 = 100$ (nhận) hoặc $x = -120$ (loại).",
+        "trapTip": "Thời gian kế hoạch LỚN hơn thời gian thực tế, nên lấy $\\frac{1200}{x} - \\frac{1200}{x+20} = 2$."
+      },
+      {
+        "id": "mhn24s_q05",
+        "topic": "Bài II.2: Thống kê - Tần số tương đối (Thống kê và xác suất)",
+        "difficulty": "Nhận biết",
+        "question": "Điểm kiểm tra môn Toán của $40$ học sinh lớp 9A được thống kê như sau:<br>• Điểm 5: $4$ HS • Điểm 6: $8$ HS • Điểm 7: $12$ HS • Điểm 8: $10$ HS • Điểm 9: $6$ HS.<br>Tần số tương đối của điểm 7 là:",
+        "options": ["$30\\%$", "$12\\%$", "$25\\%$", "$35\\%$"],
+        "correctIndex": 0,
+        "explanation": "Tần số tương đối của điểm 7: $f = \\frac{12}{40} \\cdot 100\\% = 30\\%$.",
+        "trapTip": "Tần số tương đối = tần số chia cho tổng số giá trị (cỡ mẫu), không phải chia cho 100."
+      },
+      {
+        "id": "mhn24s_q06",
+        "topic": "Bài II.3: Xác suất của biến cố - Lấy bi từ hộp (Thống kê và xác suất)",
+        "difficulty": "Thông hiểu",
+        "question": "Một hộp có $3$ viên bi đỏ và $2$ viên bi xanh có cùng kích thước. Lấy ngẫu nhiên đồng thời $2$ viên bi từ hộp. Xác suất để lấy được $2$ viên bi cùng màu là:",
+        "options": ["$\\frac{2}{5}$", "$\\frac{3}{5}$", "$\\frac{3}{10}$", "$\\frac{1}{2}$"],
+        "correctIndex": 0,
+        "explanation": "Đánh số bi đỏ $Đ_1, Đ_2, Đ_3$; bi xanh $X_1, X_2$. Số cách lấy 2 viên từ 5 viên là $10$ kết quả đồng khả năng.<br>Cùng màu đỏ: $\\{Đ_1Đ_2; Đ_1Đ_3; Đ_2Đ_3\\}$ (3 kết quả); cùng màu xanh: $\\{X_1X_2\\}$ (1 kết quả).<br>$P = \\frac{3+1}{10} = \\frac{2}{5}$.",
+        "trapTip": "Liệt kê đủ 10 kết quả của không gian mẫu và đừng quên trường hợp 2 bi cùng màu xanh."
+      },
+      {
+        "id": "mhn24s_q07",
+        "topic": "Bài II.4: Hình trụ thực tế - Bồn chứa nước (Hình học và đo lường)",
+        "difficulty": "Thông hiểu",
+        "question": "Một bồn chứa nước inox hình trụ đặt đứng có bán kính đáy $0.5\\text{ m}$ và chiều cao $1.6\\text{ m}$. Lấy $\\pi \\approx 3.14$. Bồn chứa được tối đa bao nhiêu lít nước? (bỏ qua độ dày thành bồn)",
+        "options": ["$1256$ lít", "$2512$ lít", "$628$ lít", "$1570$ lít"],
+        "correctIndex": 0,
+        "explanation": "$V = \\pi r^2 h \\approx 3.14 \\cdot 0.5^2 \\cdot 1.6 = 1.256\\text{ m}^3 = 1256$ lít (vì $1\\text{ m}^3 = 1000$ lít).",
+        "trapTip": "Nhớ bình phương bán kính và đổi $\\text{m}^3$ sang lít (nhân 1000)."
+      },
+      {
+        "id": "mhn24s_q08",
+        "topic": "Bài III.1: Giải hệ phương trình bậc nhất hai ẩn (Số và đại số)",
+        "difficulty": "Nhận biết",
+        "question": "Nghiệm của hệ phương trình $\\begin{cases} 2x + y = 7 \\\\ x - 3y = -7 \\end{cases}$ là:",
+        "options": ["$(x; y) = (2; 3)$", "$(x; y) = (3; 1)$", "$(x; y) = (1; 5)$", "$(x; y) = (2; -3)$"],
+        "correctIndex": 0,
+        "explanation": "Từ phương trình (1): $y = 7 - 2x$. Thay vào (2): $x - 3(7 - 2x) = -7 \\Leftrightarrow 7x = 14 \\Leftrightarrow x = 2 \\Rightarrow y = 3$.",
+        "trapTip": "Thử lại nghiệm vào CẢ HAI phương trình để tránh sai dấu."
+      },
+      {
+        "id": "mhn24s_q09",
+        "topic": "Bài III.2: Phương trình bậc hai chứa tham số và hệ thức Vi-ét (Số và đại số)",
+        "difficulty": "Vận dụng",
+        "question": "Cho phương trình $x^2 - (m+2)x + m + 1 = 0$ ($m$ là tham số). Giá trị của $m$ để phương trình có hai nghiệm phân biệt $x_1, x_2$ thỏa mãn $x_1^2 + x_2^2 = 10$ là:",
+        "options": ["$m = 2$ hoặc $m = -4$", "$m = 2$", "$m = -4$", "$m = -2$ hoặc $m = 4$"],
+        "correctIndex": 0,
+        "explanation": "$\\Delta = (m+2)^2 - 4(m+1) = m^2$. Phương trình có hai nghiệm phân biệt $\\Leftrightarrow m \\ne 0$.<br>Vì $a + b + c = 1 - (m+2) + m + 1 = 0$ nên hai nghiệm là $1$ và $m + 1$.<br>$1 + (m+1)^2 = 10 \\Leftrightarrow (m+1)^2 = 9 \\Leftrightarrow m = 2$ hoặc $m = -4$ (đều thỏa $m \\ne 0$).",
+        "trapTip": "Nhẩm nghiệm $a + b + c = 0$ giúp giải nhanh; đừng quên đối chiếu điều kiện $m \\ne 0$."
+      },
+      {
+        "id": "mhn24s_q10",
+        "topic": "Bài IV.1: Hai tiếp tuyến cắt nhau của đường tròn (Hình học và đo lường)",
+        "difficulty": "Thông hiểu",
+        "question": "Cho đường tròn $(O; R)$ và điểm $A$ nằm ngoài đường tròn sao cho $OA = 2R$. Kẻ hai tiếp tuyến $AB, AC$ với đường tròn ($B, C$ là các tiếp điểm). Số đo góc $\\widehat{BAC}$ là:",
+        "options": ["$60^\\circ$", "$30^\\circ$", "$90^\\circ$", "$120^\\circ$"],
+        "correctIndex": 0,
+        "explanation": "Tam giác $OAB$ vuông tại $B$: $\\sin\\widehat{OAB} = \\frac{OB}{OA} = \\frac{R}{2R} = \\frac{1}{2} \\Rightarrow \\widehat{OAB} = 30^\\circ$.<br>Theo tính chất hai tiếp tuyến cắt nhau, $AO$ là tia phân giác góc $BAC$ nên $\\widehat{BAC} = 2 \\cdot 30^\\circ = 60^\\circ$.",
+        "trapTip": "$30^\\circ$ chỉ là một nửa góc $BAC$ — nhớ nhân đôi!"
+      },
+      {
+        "id": "mhn24s_q11",
+        "topic": "Bài IV.2: Độ dài tiếp tuyến - Định lý Pythagore (Hình học và đo lường)",
+        "difficulty": "Thông hiểu",
+        "question": "Với hình vẽ ở câu trên ($OA = 2R$), độ dài đoạn tiếp tuyến $AB$ tính theo $R$ là:",
+        "options": ["$R\\sqrt{3}$", "$R\\sqrt{5}$", "$2R$", "$R\\sqrt{2}$"],
+        "correctIndex": 0,
+        "explanation": "Tam giác $OAB$ vuông tại $B$: $AB = \\sqrt{OA^2 - OB^2} = \\sqrt{4R^2 - R^2} = R\\sqrt{3}$.",
+        "trapTip": "Tiếp tuyến vuông góc với bán kính tại tiếp điểm: $AB \\perp OB$."
+      },
+      {
+        "id": "mhn24s_q12",
+        "topic": "Bài IV.3: Tứ giác nội tiếp đường tròn (Hình học và đo lường)",
+        "difficulty": "Thông hiểu",
+        "question": "Tứ giác $ABOC$ (với $AB, AC$ là hai tiếp tuyến của $(O)$) nội tiếp đường tròn có đường kính là đoạn thẳng nào?",
+        "options": ["$OA$", "$BC$", "$OB$", "$AB$"],
+        "correctIndex": 0,
+        "explanation": "Vì $\\widehat{ABO} = \\widehat{ACO} = 90^\\circ$ nên $B$ và $C$ cùng nằm trên đường tròn đường kính $OA$. Vậy tứ giác $ABOC$ nội tiếp đường tròn đường kính $OA$, tâm là trung điểm của $OA$.",
+        "trapTip": "Hai đỉnh cùng nhìn một cạnh dưới góc vuông ⇒ cạnh đó là đường kính."
+      },
+      {
+        "id": "mhn24s_q13",
+        "topic": "Bài IV.4: Diện tích tứ giác tạo bởi hai tiếp tuyến (Hình học và đo lường)",
+        "difficulty": "Vận dụng",
+        "question": "Với $OA = 2R$, diện tích tứ giác $ABOC$ tính theo $R$ là:",
+        "options": ["$R^2\\sqrt{3}$", "$\\frac{R^2\\sqrt{3}}{2}$", "$2R^2$", "$2R^2\\sqrt{3}$"],
+        "correctIndex": 0,
+        "explanation": "$S_{ABOC} = 2 \\cdot S_{OAB} = 2 \\cdot \\frac{1}{2} \\cdot OB \\cdot AB = R \\cdot R\\sqrt{3} = R^2\\sqrt{3}$.",
+        "trapTip": "Tứ giác $ABOC$ gồm hai tam giác vuông bằng nhau $OAB$ và $OAC$."
+      },
+      {
+        "id": "mhn24s_q14",
+        "topic": "Bài V: Bất đẳng thức - Tìm giá trị nhỏ nhất (Vận dụng cao)",
+        "difficulty": "Vận dụng cao",
+        "question": "Cho hai số thực dương $x, y$ thỏa mãn $x + y = 1$. Giá trị nhỏ nhất của biểu thức $P = \\frac{1}{x} + \\frac{4}{y}$ là:",
+        "options": ["$9$", "$5$", "$8$", "$4$"],
+        "correctIndex": 0,
+        "explanation": "$P = \\left(\\frac{1}{x} + \\frac{4}{y}\\right)(x + y) = 5 + \\frac{y}{x} + \\frac{4x}{y} \\ge 5 + 2\\sqrt{\\frac{y}{x} \\cdot \\frac{4x}{y}} = 5 + 4 = 9$ (Cô-si).<br>Dấu \"=\" xảy ra khi $y = 2x$, kết hợp $x + y = 1 \\Rightarrow x = \\frac{1}{3}, y = \\frac{2}{3}$.<br>Vậy $P_{\\min} = 9$.",
+        "trapTip": "Nhân với $(x+y) = 1$ để tạo cặp nghịch đảo $\\frac{y}{x}$ và $\\frac{4x}{y}$ rồi áp dụng Cô-si."
+      }
+    ]
+  },
+  {
+    "id": "math_exam_moet_mock_2025_02",
+    "title": "Đề thi thử Tuyển sinh Lớp 10 Năm 2025 - Môn Toán - Đề số 02 (Chuẩn GDPT 2018 Bộ GD&ĐT)",
+    "subject": "math",
+    "year": 2025,
+    "location": "Bộ GD&ĐT",
+    "isOfficial": false,
+    "badgeText": "🔥 Thi thử GDPT 2018",
+    "durationMinutes": 120,
+    "totalQuestions": 14,
+    "description": "Đề thi thử phủ đầy đủ kiến thức mới của Chương trình GDPT 2018 lớp 9: Bất phương trình bậc nhất, Căn bậc ba, Phương trình tích và phương trình chứa ẩn ở mẫu, Tỉ số lượng giác thực tế (thang dựa tường), Thống kê ghép nhóm, Xác suất gieo xúc xắc, Phép quay và đa giác đều, Đường tròn nội tiếp, Độ dài cung tròn, Mặt cầu (quả bóng đá) và Lãi kép ngân hàng.",
+    "questions": [
+      {
+        "id": "mmoet25_q01",
+        "topic": "Bất phương trình bậc nhất một ẩn (Số và đại số)",
+        "difficulty": "Nhận biết",
+        "question": "Nghiệm của bất phương trình $3x - 5 \\ge 2x + 1$ là:",
+        "options": ["$x \\ge 6$", "$x \\le 6$", "$x \\ge -4$", "$x > 6$"],
+        "correctIndex": 0,
+        "explanation": "$3x - 5 \\ge 2x + 1 \\Leftrightarrow 3x - 2x \\ge 1 + 5 \\Leftrightarrow x \\ge 6$.",
+        "trapTip": "Dấu \"$\\ge$\" giữ nguyên vì hệ số của $x$ sau khi chuyển vế là số dương."
+      },
+      {
+        "id": "mmoet25_q02",
+        "topic": "Căn bậc hai và căn bậc ba (Số và đại số)",
+        "difficulty": "Nhận biết",
+        "question": "Giá trị của biểu thức $\\sqrt[3]{-27} + \\sqrt{16}$ là:",
+        "options": ["$1$", "$7$", "$-7$", "$-1$"],
+        "correctIndex": 0,
+        "explanation": "$\\sqrt[3]{-27} = -3$ (vì $(-3)^3 = -27$) và $\\sqrt{16} = 4$. Vậy tổng bằng $-3 + 4 = 1$.",
+        "trapTip": "Căn bậc ba của số âm là số âm (khác với căn bậc hai không xác định với số âm)."
+      },
+      {
+        "id": "mmoet25_q03",
+        "topic": "Phương trình tích (Số và đại số)",
+        "difficulty": "Nhận biết",
+        "question": "Tập nghiệm của phương trình $(2x - 1)(x + 3) = 0$ là:",
+        "options": ["$S = \\left\\{\\frac{1}{2}; -3\\right\\}$", "$S = \\left\\{-\\frac{1}{2}; 3\\right\\}$", "$S = \\{2; -3\\}$", "$S = \\left\\{\\frac{1}{2}; 3\\right\\}$"],
+        "correctIndex": 0,
+        "explanation": "$(2x - 1)(x + 3) = 0 \\Leftrightarrow 2x - 1 = 0$ hoặc $x + 3 = 0 \\Leftrightarrow x = \\frac{1}{2}$ hoặc $x = -3$.",
+        "trapTip": "Tích bằng 0 khi một trong các thừa số bằng 0."
+      },
+      {
+        "id": "mmoet25_q04",
+        "topic": "Phương trình chứa ẩn ở mẫu (Số và đại số)",
+        "difficulty": "Thông hiểu",
+        "question": "Phương trình $\\frac{x}{x-2} - \\frac{2}{x+2} = \\frac{8}{x^2-4}$ có tập nghiệm là:",
+        "options": ["$S = \\varnothing$ (vô nghiệm)", "$S = \\{2\\}$", "$S = \\{-2\\}$", "$S = \\{-2; 2\\}$"],
+        "correctIndex": 0,
+        "explanation": "ĐKXĐ: $x \\ne \\pm 2$. Quy đồng khử mẫu: $x(x+2) - 2(x-2) = 8 \\Leftrightarrow x^2 + 4 = 8 \\Leftrightarrow x^2 = 4 \\Leftrightarrow x = \\pm 2$.<br>Cả hai giá trị đều không thỏa mãn ĐKXĐ nên phương trình vô nghiệm.",
+        "trapTip": "Bẫy kinh điển: giải ra $x = \\pm 2$ nhưng quên đối chiếu điều kiện xác định!"
+      },
+      {
+        "id": "mmoet25_q05",
+        "topic": "Tỉ số lượng giác thực tế: Chiếc thang dựa vào tường (Hình học và đo lường)",
+        "difficulty": "Thông hiểu",
+        "question": "Một chiếc thang dài $4\\text{ m}$ được đặt dựa vào một bức tường thẳng đứng. Biết góc tạo bởi thang và mặt đất là $60^\\circ$. Đầu trên của thang chạm tường ở độ cao bao nhiêu mét so với mặt đất? (làm tròn đến hàng phần trăm)",
+        "options": ["$3.46\\text{ m}$", "$2.00\\text{ m}$", "$2.83\\text{ m}$", "$3.20\\text{ m}$"],
+        "correctIndex": 0,
+        "explanation": "Độ cao $h = 4 \\cdot \\sin 60^\\circ = 4 \\cdot \\frac{\\sqrt{3}}{2} = 2\\sqrt{3} \\approx 3.46\\text{ m}$.",
+        "trapTip": "Độ cao là cạnh ĐỐI của góc $60^\\circ$ nên dùng $\\sin$; $2\\text{ m}$ là khoảng cách chân thang tới tường (dùng $\\cos$)."
+      },
+      {
+        "id": "mmoet25_q06",
+        "topic": "Tỉ số lượng giác của góc nhọn (Hình học và đo lường)",
+        "difficulty": "Nhận biết",
+        "question": "Cho tam giác $ABC$ vuông tại $A$ có $AB = 6\\text{ cm}$, $AC = 8\\text{ cm}$. Giá trị của $\\sin B$ là:",
+        "options": ["$0.8$", "$0.6$", "$0.75$", "$\\frac{4}{3}$"],
+        "correctIndex": 0,
+        "explanation": "$BC = \\sqrt{6^2 + 8^2} = 10\\text{ cm}$. $\\sin B = \\frac{\\text{cạnh đối}}{\\text{cạnh huyền}} = \\frac{AC}{BC} = \\frac{8}{10} = 0.8$.",
+        "trapTip": "Cạnh đối của góc $B$ là $AC$, không phải $AB$."
+      },
+      {
+        "id": "mmoet25_q07",
+        "topic": "Thống kê: Bảng tần số ghép nhóm (Thống kê và xác suất)",
+        "difficulty": "Thông hiểu",
+        "question": "Thời gian tự học mỗi ngày (phút) của $40$ học sinh lớp 9 được ghi lại:<br>• $[0; 30)$: $6$ HS • $[30; 60)$: $14$ HS • $[60; 90)$: $12$ HS • $[90; 120)$: $8$ HS.<br>Tỉ lệ học sinh tự học từ $60$ phút trở lên mỗi ngày là:",
+        "options": ["$50\\%$", "$30\\%$", "$20\\%$", "$35\\%$"],
+        "correctIndex": 0,
+        "explanation": "Số học sinh tự học từ 60 phút trở lên: $12 + 8 = 20$. Tỉ lệ: $\\frac{20}{40} \\cdot 100\\% = 50\\%$.",
+        "trapTip": "Gộp cả hai nhóm $[60; 90)$ và $[90; 120)$."
+      },
+      {
+        "id": "mmoet25_q08",
+        "topic": "Xác suất: Gieo xúc xắc hai lần (Thống kê và xác suất)",
+        "difficulty": "Thông hiểu",
+        "question": "Gieo một con xúc xắc cân đối và đồng chất hai lần liên tiếp. Xác suất để tổng số chấm xuất hiện trong hai lần gieo bằng $7$ là:",
+        "options": ["$\\frac{1}{6}$", "$\\frac{7}{36}$", "$\\frac{1}{12}$", "$\\frac{5}{36}$"],
+        "correctIndex": 0,
+        "explanation": "Không gian mẫu có $6 \\cdot 6 = 36$ kết quả đồng khả năng.<br>Các kết quả có tổng bằng 7: $(1;6), (2;5), (3;4), (4;3), (5;2), (6;1)$ — gồm 6 kết quả.<br>$P = \\frac{6}{36} = \\frac{1}{6}$.",
+        "trapTip": "$(1;6)$ và $(6;1)$ là hai kết quả KHÁC nhau vì thứ tự lần gieo khác nhau."
+      },
+      {
+        "id": "mmoet25_q09",
+        "topic": "Phép quay và đa giác đều (Hình học và đo lường)",
+        "difficulty": "Thông hiểu",
+        "question": "Phép quay thuận chiều tâm $O$ (tâm của lục giác đều $ABCDEF$) với góc quay $\\alpha$ ($0^\\circ < \\alpha \\le 360^\\circ$) biến lục giác thành chính nó. Giá trị nhỏ nhất của $\\alpha$ là:",
+        "options": ["$60^\\circ$", "$30^\\circ$", "$45^\\circ$", "$120^\\circ$"],
+        "correctIndex": 0,
+        "explanation": "Các phép quay giữ nguyên đa giác đều $n$ cạnh có góc $\\frac{k \\cdot 360^\\circ}{n}$. Với lục giác đều ($n = 6$): góc nhỏ nhất là $\\frac{360^\\circ}{6} = 60^\\circ$.",
+        "trapTip": "Công thức: góc quay nhỏ nhất $= 360^\\circ : n$."
+      },
+      {
+        "id": "mmoet25_q10",
+        "topic": "Đường tròn nội tiếp tam giác đều (Hình học và đo lường)",
+        "difficulty": "Thông hiểu",
+        "question": "Bán kính đường tròn nội tiếp tam giác đều có cạnh $6\\text{ cm}$ là:",
+        "options": ["$\\sqrt{3}\\text{ cm}$", "$2\\sqrt{3}\\text{ cm}$", "$3\\text{ cm}$", "$3\\sqrt{3}\\text{ cm}$"],
+        "correctIndex": 0,
+        "explanation": "Bán kính đường tròn nội tiếp tam giác đều cạnh $a$: $r = \\frac{a\\sqrt{3}}{6} = \\frac{6\\sqrt{3}}{6} = \\sqrt{3}\\text{ cm}$.",
+        "trapTip": "$2\\sqrt{3}$ là bán kính đường tròn NGOẠI tiếp ($R = \\frac{a\\sqrt{3}}{3}$), gấp đôi $r$."
+      },
+      {
+        "id": "mmoet25_q11",
+        "topic": "Độ dài cung tròn (Hình học và đo lường)",
+        "difficulty": "Nhận biết",
+        "question": "Độ dài cung tròn có số đo $60^\\circ$ của đường tròn bán kính $12\\text{ cm}$ là:",
+        "options": ["$4\\pi\\text{ cm}$", "$2\\pi\\text{ cm}$", "$6\\pi\\text{ cm}$", "$12\\pi\\text{ cm}$"],
+        "correctIndex": 0,
+        "explanation": "$l = \\frac{\\pi R n}{180} = \\frac{\\pi \\cdot 12 \\cdot 60}{180} = 4\\pi\\text{ cm}$.",
+        "trapTip": "Đừng nhầm với công thức diện tích hình quạt $S = \\frac{\\pi R^2 n}{360}$."
+      },
+      {
+        "id": "mmoet25_q12",
+        "topic": "Hình cầu thực tế: Diện tích da bọc quả bóng đá (Hình học và đo lường)",
+        "difficulty": "Thông hiểu",
+        "question": "Một quả bóng đá tiêu chuẩn có dạng hình cầu với đường kính khoảng $22\\text{ cm}$. Lấy $\\pi \\approx 3.14$. Diện tích da cần dùng để bọc quả bóng (bỏ qua phần mép nối) khoảng:",
+        "options": ["$1520\\text{ cm}^2$", "$380\\text{ cm}^2$", "$6079\\text{ cm}^2$", "$5572\\text{ cm}^2$"],
+        "correctIndex": 0,
+        "explanation": "$S = 4\\pi R^2 = \\pi d^2 \\approx 3.14 \\cdot 22^2 = 3.14 \\cdot 484 = 1519.76 \\approx 1520\\text{ cm}^2$.",
+        "trapTip": "Đề cho ĐƯỜNG KÍNH: dùng $S = \\pi d^2$ hoặc đổi $R = 11\\text{ cm}$ rồi dùng $4\\pi R^2$."
+      },
+      {
+        "id": "mmoet25_q13",
+        "topic": "Bất phương trình thực tế: Mua đồ dùng học tập (Số và đại số)",
+        "difficulty": "Vận dụng",
+        "question": "Bạn Minh có $200.000$ đồng. Bạn mua một chiếc bút giá $15.000$ đồng, số tiền còn lại dùng để mua vở với giá $12.000$ đồng/quyển. Bạn Minh mua được nhiều nhất bao nhiêu quyển vở?",
+        "options": ["$15$ quyển", "$16$ quyển", "$14$ quyển", "$17$ quyển"],
+        "correctIndex": 0,
+        "explanation": "Gọi số vở là $x$ ($x \\in \\mathbb{N}$). Ta có: $15.000 + 12.000x \\le 200.000 \\Leftrightarrow x \\le \\frac{185.000}{12.000} \\approx 15.4$.<br>Vì $x$ là số tự nhiên lớn nhất nên $x = 15$.",
+        "trapTip": "Số quyển vở phải là số tự nhiên: lấy phần nguyên, không làm tròn lên."
+      },
+      {
+        "id": "mmoet25_q14",
+        "topic": "Phương trình bậc hai thực tế: Lãi suất kép ngân hàng (Số và đại số)",
+        "difficulty": "Vận dụng",
+        "question": "Bác An gửi tiết kiệm $100$ triệu đồng với lãi suất $r\\%$/năm theo hình thức lãi kép (tiền lãi năm trước được cộng vào gốc năm sau). Sau $2$ năm, bác nhận được tổng cộng $112.36$ triệu đồng. Lãi suất $r$ là:",
+        "options": ["$6\\%$/năm", "$6.18\\%$/năm", "$5.5\\%$/năm", "$12.36\\%$/năm"],
+        "correctIndex": 0,
+        "explanation": "Đặt $t = 1 + \\frac{r}{100}$. Ta có: $100t^2 = 112.36 \\Leftrightarrow t^2 = 1.1236 \\Leftrightarrow t = 1.06$ (vì $t > 0$).<br>Vậy $r = 6\\%$/năm.",
+        "trapTip": "Lãi kép KHÔNG phải chia đôi $12.36\\%$: phải giải $(1 + r)^2 = 1.1236$."
+      }
+    ]
+  },
+  {
+    "id": "math_exam_hcmc_mock_2025_03",
+    "title": "Đề thi thử Tuyển sinh Lớp 10 TP.HCM Năm 2025 - Môn Toán - Đề số 03 (Cấu trúc 7 bài)",
+    "subject": "math",
+    "year": 2025,
+    "location": "TP.HCM",
+    "isOfficial": false,
+    "badgeText": "📝 Thi thử TP.HCM 2025",
+    "durationMinutes": 120,
+    "totalQuestions": 14,
+    "description": "Đề thi thử theo đúng cấu trúc 7 bài của Sở GD&ĐT TP.HCM (120 phút): Parabol và đường thẳng, Vi-ét biểu thức đối xứng, Hàm số bậc nhất cước taxi công nghệ, Toán phần trăm mua tivi điện máy, Xác suất rút thẻ số nguyên tố và thống kê phương tiện đến trường, Phễu hình nón, Hình học tam giác nội tiếp đường tròn với hai đường cao.",
+    "questions": [
+      {
+        "id": "mhcm25m3_q01",
+        "topic": "Bài 1a: Điểm thuộc đồ thị Parabol (Số và đại số)",
+        "difficulty": "Nhận biết",
+        "question": "Cho parabol $(P): y = -\\frac{1}{4}x^2$. Điểm thuộc $(P)$ có hoành độ $x = 4$ là:",
+        "options": ["$(4; -4)$", "$(4; 4)$", "$(4; -2)$", "$(4; -16)$"],
+        "correctIndex": 0,
+        "explanation": "Thay $x = 4$: $y = -\\frac{1}{4} \\cdot 4^2 = -\\frac{16}{4} = -4$. Vậy điểm cần tìm là $(4; -4)$.",
+        "trapTip": "Hệ số $a < 0$ nên tung độ luôn không dương."
+      },
+      {
+        "id": "mhcm25m3_q02",
+        "topic": "Bài 1b: Giao điểm của Parabol và đường thẳng (Số và đại số)",
+        "difficulty": "Thông hiểu",
+        "question": "Tọa độ giao điểm của parabol $(P): y = -\\frac{1}{4}x^2$ và đường thẳng $(d): y = x - 3$ là:",
+        "options": ["$(2; -1)$ và $(-6; -9)$", "$(2; -1)$ và $(6; -9)$", "$(-2; -1)$ và $(6; 3)$", "$(2; 1)$ và $(-6; 9)$"],
+        "correctIndex": 0,
+        "explanation": "Phương trình hoành độ giao điểm: $-\\frac{1}{4}x^2 = x - 3 \\Leftrightarrow x^2 + 4x - 12 = 0 \\Leftrightarrow (x - 2)(x + 6) = 0$.<br>$x = 2 \\Rightarrow y = -1$; $x = -6 \\Rightarrow y = -9$.",
+        "trapTip": "Nhân hai vế với $-4$ cẩn thận đổi dấu tất cả các hạng tử."
+      },
+      {
+        "id": "mhcm25m3_q03",
+        "topic": "Bài 2a: Dấu các nghiệm của phương trình bậc hai (Số và đại số)",
+        "difficulty": "Nhận biết",
+        "question": "Phương trình $x^2 - 5x + 3 = 0$ có:",
+        "options": ["Hai nghiệm phân biệt cùng dương", "Hai nghiệm phân biệt trái dấu", "Nghiệm kép", "Vô nghiệm"],
+        "correctIndex": 0,
+        "explanation": "$\\Delta = 25 - 12 = 13 > 0$ nên có hai nghiệm phân biệt. Theo Vi-ét: $S = 5 > 0$, $P = 3 > 0$ nên hai nghiệm cùng dương.",
+        "trapTip": "$P > 0$ ⇒ cùng dấu; kết hợp $S > 0$ ⇒ cùng dương."
+      },
+      {
+        "id": "mhcm25m3_q04",
+        "topic": "Bài 2b: Hệ thức Vi-ét - Biểu thức đối xứng (Số và đại số)",
+        "difficulty": "Thông hiểu",
+        "question": "Gọi $x_1, x_2$ là hai nghiệm của phương trình $x^2 - 5x + 3 = 0$. Giá trị của biểu thức $M = \\frac{x_1}{x_2} + \\frac{x_2}{x_1}$ là:",
+        "options": ["$\\frac{19}{3}$", "$\\frac{25}{3}$", "$\\frac{13}{3}$", "$\\frac{31}{3}$"],
+        "correctIndex": 0,
+        "explanation": "$S = 5$, $P = 3$. $M = \\frac{x_1^2 + x_2^2}{x_1x_2} = \\frac{S^2 - 2P}{P} = \\frac{25 - 6}{3} = \\frac{19}{3}$.",
+        "trapTip": "$x_1^2 + x_2^2 = S^2 - 2P$, không phải $S^2$."
+      },
+      {
+        "id": "mhcm25m3_q05",
+        "topic": "Bài 3a: Hàm số bậc nhất thực tế - Cước taxi công nghệ",
+        "difficulty": "Thông hiểu",
+        "question": "Một hãng taxi tại TP.HCM tính giá: $12.000$ đồng cho km đầu tiên, từ km thứ 2 trở đi là $16.000$ đồng/km. Gọi $y$ (đồng) là số tiền phải trả khi đi $x$ km ($x \\ge 1$) thì $y = 16.000x - 4.000$. Đi quãng đường $15$ km phải trả bao nhiêu tiền?",
+        "options": ["$236.000$ đồng", "$240.000$ đồng", "$252.000$ đồng", "$224.000$ đồng"],
+        "correctIndex": 0,
+        "explanation": "$y = 12.000 + 16.000(x - 1) = 16.000x - 4.000$.<br>Với $x = 15$: $y = 16.000 \\cdot 15 - 4.000 = 236.000$ đồng.",
+        "trapTip": "Km đầu tiên có giá riêng, chỉ $14$ km sau mới tính $16.000$ đ/km."
+      },
+      {
+        "id": "mhcm25m3_q06",
+        "topic": "Bài 3b: Hàm số bậc nhất thực tế - Quãng đường tối đa",
+        "difficulty": "Vận dụng",
+        "question": "Với cách tính cước $y = 16.000x - 4.000$ như trên, nếu khách chỉ có $300.000$ đồng thì có thể đi được tối đa bao nhiêu km?",
+        "options": ["$19$ km", "$18$ km", "$20$ km", "$18.75$ km"],
+        "correctIndex": 0,
+        "explanation": "$16.000x - 4.000 \\le 300.000 \\Leftrightarrow 16.000x \\le 304.000 \\Leftrightarrow x \\le 19$.<br>Vậy khách đi được tối đa $19$ km.",
+        "trapTip": "Nhớ cộng lại $4.000$ trước khi chia cho $16.000$."
+      },
+      {
+        "id": "mhcm25m3_q07",
+        "topic": "Bài 4: Toán phần trăm thực tế - Mua tivi khuyến mãi",
+        "difficulty": "Thông hiểu",
+        "question": "Một siêu thị điện máy giảm giá $20\\%$ cho chiếc tivi có giá niêm yết $15$ triệu đồng. Khách hàng có thẻ thành viên được giảm thêm $5\\%$ trên giá đã giảm. Chị Lan có thẻ thành viên mua chiếc tivi này phải trả:",
+        "options": ["$11.4$ triệu đồng", "$11.25$ triệu đồng", "$12$ triệu đồng", "$11$ triệu đồng"],
+        "correctIndex": 0,
+        "explanation": "Giá sau giảm $20\\%$: $15 \\cdot 0.8 = 12$ triệu.<br>Giá sau giảm thêm $5\\%$: $12 \\cdot 0.95 = 11.4$ triệu đồng.",
+        "trapTip": "Giảm liên tiếp $20\\%$ rồi $5\\%$ KHÁC giảm một lần $25\\%$ (sẽ ra $11.25$ triệu)."
+      },
+      {
+        "id": "mhcm25m3_q08",
+        "topic": "Bài 5a: Xác suất rút thẻ số nguyên tố (Thống kê và xác suất)",
+        "difficulty": "Thông hiểu",
+        "question": "Một hộp có $20$ tấm thẻ được đánh số từ $1$ đến $20$. Rút ngẫu nhiên một tấm thẻ. Xác suất để rút được thẻ ghi số nguyên tố là:",
+        "options": ["$\\frac{2}{5}$", "$\\frac{9}{20}$", "$\\frac{7}{20}$", "$\\frac{1}{2}$"],
+        "correctIndex": 0,
+        "explanation": "Các số nguyên tố từ 1 đến 20: $2, 3, 5, 7, 11, 13, 17, 19$ (8 số).<br>$P = \\frac{8}{20} = \\frac{2}{5}$.",
+        "trapTip": "Số 1 KHÔNG phải số nguyên tố; số 2 là số nguyên tố chẵn duy nhất."
+      },
+      {
+        "id": "mhcm25m3_q09",
+        "topic": "Bài 5b: Thống kê - Biểu đồ tần số tương đối (Thống kê và xác suất)",
+        "difficulty": "Nhận biết",
+        "question": "Khảo sát phương tiện đến trường của $40$ học sinh lớp 9A cho kết quả: đi xe đạp chiếm $35\\%$, đi xe buýt chiếm $25\\%$, phụ huynh đưa đón chiếm $40\\%$. Số học sinh đi xe buýt là:",
+        "options": ["$10$ học sinh", "$14$ học sinh", "$16$ học sinh", "$25$ học sinh"],
+        "correctIndex": 0,
+        "explanation": "Số học sinh đi xe buýt: $40 \\cdot 25\\% = 10$ học sinh.",
+        "trapTip": "Tần số = cỡ mẫu × tần số tương đối."
+      },
+      {
+        "id": "mhcm25m3_q10",
+        "topic": "Bài 6a: Hình nón thực tế - Thể tích phễu (Hình học và đo lường)",
+        "difficulty": "Thông hiểu",
+        "question": "Một chiếc phễu có dạng hình nón với bán kính đáy $6\\text{ cm}$ và chiều cao $8\\text{ cm}$. Lấy $\\pi \\approx 3.14$. Thể tích của phễu là:",
+        "options": ["$301.44\\text{ cm}^3$", "$904.32\\text{ cm}^3$", "$150.72\\text{ cm}^3$", "$376.8\\text{ cm}^3$"],
+        "correctIndex": 0,
+        "explanation": "$V = \\frac{1}{3}\\pi r^2 h \\approx \\frac{1}{3} \\cdot 3.14 \\cdot 36 \\cdot 8 = 301.44\\text{ cm}^3$.",
+        "trapTip": "Thể tích hình nón bằng $\\frac{1}{3}$ thể tích hình trụ cùng đáy, cùng chiều cao."
+      },
+      {
+        "id": "mhcm25m3_q11",
+        "topic": "Bài 6b: Hình nón thực tế - Diện tích xung quanh (Hình học và đo lường)",
+        "difficulty": "Thông hiểu",
+        "question": "Với chiếc phễu hình nón ở câu trên (bán kính $6\\text{ cm}$, chiều cao $8\\text{ cm}$), diện tích vật liệu làm mặt xung quanh của phễu là ($\\pi \\approx 3.14$):",
+        "options": ["$188.4\\text{ cm}^2$", "$301.44\\text{ cm}^2$", "$113.04\\text{ cm}^2$", "$150.72\\text{ cm}^2$"],
+        "correctIndex": 0,
+        "explanation": "Đường sinh $l = \\sqrt{r^2 + h^2} = \\sqrt{36 + 64} = 10\\text{ cm}$.<br>$S_{xq} = \\pi r l \\approx 3.14 \\cdot 6 \\cdot 10 = 188.4\\text{ cm}^2$.",
+        "trapTip": "Phải tính đường sinh $l$ trước, không dùng chiều cao $h$ thay cho $l$."
+      },
+      {
+        "id": "mhcm25m3_q12",
+        "topic": "Bài 7a: Tứ giác nội tiếp tạo bởi hai đường cao (Hình học và đo lường)",
+        "difficulty": "Thông hiểu",
+        "question": "Cho tam giác $ABC$ nhọn nội tiếp đường tròn $(O)$, hai đường cao $BE, CF$ cắt nhau tại $H$. Tứ giác $BCEF$ nội tiếp đường tròn có tâm là:",
+        "options": ["Trung điểm của $BC$", "Điểm $H$", "Điểm $O$", "Trung điểm của $AH$"],
+        "correctIndex": 0,
+        "explanation": "Vì $\\widehat{BEC} = \\widehat{BFC} = 90^\\circ$ nên $E, F$ cùng thuộc đường tròn đường kính $BC$. Vậy tứ giác $BCEF$ nội tiếp đường tròn tâm là trung điểm của $BC$.",
+        "trapTip": "Trung điểm $AH$ là tâm đường tròn ngoại tiếp tứ giác $AEHF$, không phải $BCEF$."
+      },
+      {
+        "id": "mhcm25m3_q13",
+        "topic": "Bài 7b: Tam giác đồng dạng và hệ thức (Hình học và đo lường)",
+        "difficulty": "Vận dụng",
+        "question": "Với hình vẽ ở câu trên, hệ thức nào sau đây là ĐÚNG?",
+        "options": ["$AE \\cdot AC = AF \\cdot AB$", "$AE \\cdot AB = AF \\cdot AC$", "$AE \\cdot AF = AB \\cdot AC$", "$AH \\cdot AE = AB \\cdot AC$"],
+        "correctIndex": 0,
+        "explanation": "Xét $\\triangle ABE$ và $\\triangle ACF$: chung góc $A$, $\\widehat{AEB} = \\widehat{AFC} = 90^\\circ$ nên $\\triangle ABE \\backsim \\triangle ACF$ (g.g).<br>$\\Rightarrow \\frac{AE}{AF} = \\frac{AB}{AC} \\Rightarrow AE \\cdot AC = AF \\cdot AB$.",
+        "trapTip": "Viết đúng thứ tự đỉnh tương ứng khi lập tỉ số đồng dạng."
+      },
+      {
+        "id": "mhcm25m3_q14",
+        "topic": "Bài 7c: Góc ở tâm và bán kính đường tròn ngoại tiếp (Hình học và đo lường)",
+        "difficulty": "Vận dụng cao",
+        "question": "Với tam giác $ABC$ nội tiếp $(O; R)$ như trên, biết $\\widehat{BAC} = 60^\\circ$ và $BC = 6\\text{ cm}$. Bán kính $R$ của đường tròn $(O)$ là:",
+        "options": ["$2\\sqrt{3}\\text{ cm}$", "$3\\sqrt{3}\\text{ cm}$", "$3\\text{ cm}$", "$6\\text{ cm}$"],
+        "correctIndex": 0,
+        "explanation": "Góc ở tâm $\\widehat{BOC} = 2\\widehat{BAC} = 120^\\circ$. Tam giác $OBC$ cân tại $O$, kẻ $OM \\perp BC$ ($M$ là trung điểm $BC$) thì $\\widehat{BOM} = 60^\\circ$, $BM = 3\\text{ cm}$.<br>$R = OB = \\frac{BM}{\\sin 60^\\circ} = \\frac{3}{\\frac{\\sqrt{3}}{2}} = 2\\sqrt{3}\\text{ cm}$.",
+        "trapTip": "Góc nội tiếp bằng nửa góc ở tâm cùng chắn một cung."
+      }
+    ]
+  }
+);

@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/exam.css">
+  <link rel="stylesheet" href="css/admin.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -50,6 +51,16 @@
         </div>
 
         <div class="header-controls">
+          <!-- Role Switcher Button -->
+          <button class="header-user-btn" id="headerUserBadgeBtn" title="Chuyển đổi vai trò Admin / Học sinh">
+            <div class="header-user-avatar" id="headerUserAvatar">AD</div>
+            <div style="display: flex; flex-direction: column; text-align: left;">
+              <span id="headerUserName" style="line-height: 1.1; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">ThS. Nguyễn Mai Anh</span>
+              <span class="header-user-role-tag admin" id="headerUserRoleTag">Giáo viên</span>
+            </div>
+            <i data-lucide="chevron-down" style="width: 14px; height: 14px; opacity: 0.7;"></i>
+          </button>
+
           <button class="btn-icon-circle" id="themeToggleBtn" title="Chuyển đổi giao diện Sáng / Tối">
             <i data-lucide="sun"></i>
           </button>
@@ -105,6 +116,12 @@
       </button>
       <button class="nav-tab-btn" data-tab="roadmap">
         <i data-lucide="trending-up"></i> Lộ trình tiến bộ
+      </button>
+      <button class="nav-tab-btn" data-tab="admin-portal" id="navBtnAdminPortal" style="border: 1px solid rgba(236, 72, 153, 0.35); background: rgba(236, 72, 153, 0.08); color: #f472b6;">
+        <i data-lucide="users"></i> Quản lý lớp (Admin)
+      </button>
+      <button class="nav-tab-btn" data-tab="student-portal" id="navBtnStudentPortal" style="border: 1px solid rgba(6, 182, 212, 0.35); background: rgba(6, 182, 212, 0.08); color: #22d3ee;">
+        <i data-lucide="graduation-cap"></i> Tiến trình học sinh
       </button>
     </div>
   </nav>
@@ -979,6 +996,87 @@
       </div>
     </section>
 
+    <!-- TAB 9: ADMIN / TEACHER MANAGEMENT PORTAL -->
+    <section class="tab-pane" id="tabPane_admin-portal">
+      <!-- Admin Hero Banner -->
+      <div class="portal-hero-banner">
+        <div>
+          <div style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 99px; background: rgba(236, 72, 153, 0.15); color: #ec4899; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 10px;">
+            <i data-lucide="shield-check" style="width: 14px; height: 14px;"></i> Trung Tâm Quản Lý Giáo Viên & Admin
+          </div>
+          <h2 class="portal-hero-title">Lớp 9A1 — Luyện Thi Tuyển Sinh Vào Lớp 10</h2>
+          <div class="portal-hero-sub">Theo dõi phổ điểm thời gian thực, quản lý giao bài tập về nhà, phát hiện sớm học sinh hổng kiến thức để hỗ trợ kịp thời.</div>
+        </div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <button class="btn btn-primary btn-sm" id="btnOpenAddAssignmentModal">
+            <i data-lucide="plus-circle"></i> Giao bài tập mới
+          </button>
+          <button class="btn btn-secondary btn-sm" id="btnAdminExportCSV" title="Xuất danh sách học sinh ra file CSV">
+            <i data-lucide="download"></i> Xuất CSV
+          </button>
+          <button class="btn btn-secondary btn-sm" id="btnAdminBackupJSON" title="Sao lưu toàn bộ dữ liệu">
+            <i data-lucide="database"></i> Sao lưu JSON
+          </button>
+          <button class="btn btn-secondary btn-sm" id="btnAdminResetSample" title="Khôi phục danh sách Lớp 9A1 mẫu ban đầu" style="color: var(--text-dim);">
+            <i data-lucide="rotate-ccw"></i> Mẫu 9A1
+          </button>
+        </div>
+      </div>
+
+      <!-- KPI Summary Cards -->
+      <div class="stats-grid" style="margin-bottom: 1.5rem;">
+        <div class="stat-card">
+          <div class="stat-icon indigo"><i data-lucide="users"></i></div>
+          <div class="stat-content">
+            <div class="stat-value" id="adminStatTotalStudents">8</div>
+            <div class="stat-label">Sĩ số học sinh lớp 9A1</div>
+            <div class="stat-sub">Đang tích cực ôn luyện</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon emerald"><i data-lucide="check-circle-2"></i></div>
+          <div class="stat-content">
+            <div class="stat-value" id="adminStatTotalExams">0</div>
+            <div class="stat-label">Tổng bài thi thử đã nộp</div>
+            <div class="stat-sub">Toán, Ngữ Văn, Tiếng Anh</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon amber"><i data-lucide="award"></i></div>
+          <div class="stat-content">
+            <div class="stat-value" id="adminStatClassAvg">0.0/10</div>
+            <div class="stat-label">Điểm trung bình toàn lớp</div>
+            <div class="stat-sub">Thang điểm 10 chuẩn</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon cyan"><i data-lucide="target"></i></div>
+          <div class="stat-content">
+            <div class="stat-value" id="adminStatPassRate">0%</div>
+            <div class="stat-label">Tỷ lệ dự kiến đỗ NV1</div>
+            <div class="stat-sub">So sánh với điểm chuẩn trường</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub Navigation Tabs (Roster, Assignments, Analytics) -->
+      <div class="filter-chips-wrapper" id="adminSubNavTabs" style="margin-bottom: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <!-- Rendered dynamically via adminController.renderSubTabNavigation() -->
+      </div>
+
+      <!-- Dynamic Admin Content View Area -->
+      <div id="adminContentArea">
+        <!-- Rendered dynamically: Student Roster, Assignments list, or Class Analytics -->
+      </div>
+    </section>
+
+    <!-- TAB 10: STUDENT PROGRESS PORTAL (TIẾN TRÌNH HỌC SINH) -->
+    <section class="tab-pane" id="tabPane_student-portal">
+      <div id="studentPortalContentArea">
+        <!-- Rendered dynamically via adminController.renderStudentPortal() -->
+      </div>
+    </section>
+
   </main>
 
   <!-- ================= MODALS ================= -->
@@ -1083,6 +1181,142 @@
     </div>
   </div>
 
+  <!-- ================= MANAGEMENT MODALS ================= -->
+
+  <!-- Modal 1: User / Role Switcher -->
+  <div class="edupass-modal-overlay" id="userSwitcherModal">
+    <div class="edupass-modal-dialog">
+      <div class="edupass-modal-header">
+        <div class="edupass-modal-title">
+          <i data-lucide="users" style="color: var(--primary);"></i> Chuyển đổi tài khoản & Vai trò
+        </div>
+        <button class="edupass-modal-close" id="btnCloseUserSwitcher">&times;</button>
+      </div>
+      <div class="edupass-modal-body">
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px;">
+          Chọn tài khoản để trải nghiệm hệ thống dưới góc nhìn của Giáo viên quản lý lớp hoặc Học sinh cá nhân:
+        </p>
+        <div class="user-switch-list" id="userSwitcherListContainer">
+          <!-- Rendered dynamically via adminController.renderUserSwitcherModal() -->
+        </div>
+      </div>
+      <div class="edupass-modal-footer">
+        <button class="admin-btn" id="btnCancelUserSwitcher">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Student Detail Progress Modal -->
+  <div class="edupass-modal-overlay" id="studentDetailModal">
+    <div class="edupass-modal-dialog wide">
+      <div class="edupass-modal-header">
+        <div class="edupass-modal-title" id="studentDetailModalTitle">
+          <i data-lucide="user-check" style="color: var(--accent-cyan);"></i> Hồ Sơ Năng Lực Học Sinh
+        </div>
+        <button class="edupass-modal-close" id="btnCloseStudentDetailModal">&times;</button>
+      </div>
+      <div class="edupass-modal-body" id="studentDetailModalBody">
+        <!-- Rendered dynamically via adminController.openStudentDetail(id) -->
+      </div>
+      <div class="edupass-modal-footer">
+        <button class="btn btn-secondary btn-sm" id="btnDismissStudentDetail">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Add New Student Modal -->
+  <div class="edupass-modal-overlay" id="addStudentModal">
+    <div class="edupass-modal-dialog">
+      <div class="edupass-modal-header">
+        <div class="edupass-modal-title">
+          <i data-lucide="user-plus" style="color: var(--success);"></i> Thêm học sinh vào lớp 9A1
+        </div>
+        <button class="edupass-modal-close" id="btnCloseAddStudentModal">&times;</button>
+      </div>
+      <div class="edupass-modal-body">
+        <form id="formAddStudent">
+          <div class="edupass-form-group">
+            <label>Họ và tên học sinh *</label>
+            <input type="text" id="inputNewStudentName" placeholder="Ví dụ: Hoàng Minh Đức" required>
+          </div>
+          <div class="edupass-form-row">
+            <div class="edupass-form-group">
+              <label>Lớp học</label>
+              <input type="text" id="inputNewStudentClass" value="9A1" placeholder="Ví dụ: 9A1">
+            </div>
+            <div class="edupass-form-group">
+              <label>Giới tính</label>
+              <select id="inputNewStudentGender">
+                <option value="Nam">Nam</option>
+                <option value="Nữ">Nữ</option>
+              </select>
+            </div>
+          </div>
+          <div class="edupass-form-row">
+            <div class="edupass-form-group">
+              <label>SĐT Học Sinh</label>
+              <input type="tel" id="inputNewStudentPhone" placeholder="0901234567">
+            </div>
+            <div class="edupass-form-group">
+              <label>SĐT Phụ Huynh</label>
+              <input type="tel" id="inputNewStudentParentPhone" placeholder="0918765432">
+            </div>
+          </div>
+          <div class="edupass-form-group">
+            <label>Trường THPT NV1 Mục tiêu *</label>
+            <input type="text" id="inputNewStudentTargetSchool" placeholder="Ví dụ: THPT Nguyễn Thượng Hiền" required>
+          </div>
+          <div class="edupass-form-group">
+            <label>Điểm chuẩn dự kiến (Tổng 3 môn)</label>
+            <input type="number" step="0.25" id="inputNewStudentBenchmark" placeholder="Ví dụ: 25.5" value="24.5">
+          </div>
+          <div class="edupass-modal-footer" style="padding: 1rem 0 0 0; background: transparent; border-top: none;">
+            <button type="button" class="btn btn-secondary btn-sm" id="btnCancelAddStudent">Hủy</button>
+            <button type="submit" class="btn btn-primary btn-sm">
+              <i data-lucide="check"></i> Thêm học sinh
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Add / Assign Homework Modal -->
+  <div class="edupass-modal-overlay" id="addAssignmentModal">
+    <div class="edupass-modal-dialog">
+      <div class="edupass-modal-header">
+        <div class="edupass-modal-title">
+          <i data-lucide="calendar-plus" style="color: var(--primary);"></i> Giao bài tập về nhà mới
+        </div>
+        <button class="edupass-modal-close" id="btnCloseAddAssignmentModal">&times;</button>
+      </div>
+      <div class="edupass-modal-body">
+        <form id="formAddAssignment">
+          <div class="edupass-form-group">
+            <label>Bộ đề thi chỉ định trong kho *</label>
+            <select id="selectAssignmentExam" required style="font-weight: 600;">
+              <!-- Dynamically populated from all Math, Lit, Eng exams -->
+            </select>
+          </div>
+          <div class="edupass-form-group">
+            <label>Hạn chót nộp bài *</label>
+            <input type="datetime-local" id="inputAssignmentDeadline" required>
+          </div>
+          <div class="edupass-form-group">
+            <label>Yêu cầu / Lời dặn của Giáo viên</label>
+            <textarea id="inputAssignmentNote" rows="3" placeholder="Ví dụ: Làm bài nghiêm túc, bấm đúng giờ 120 phút, chú ý không dùng máy tính cầm tay cho câu rút gọn."></textarea>
+          </div>
+          <div class="edupass-modal-footer" style="padding: 1rem 0 0 0; background: transparent; border-top: none;">
+            <button type="button" class="btn btn-secondary btn-sm" id="btnCancelAddAssignment">Hủy</button>
+            <button type="submit" class="btn btn-primary btn-sm">
+              <i data-lucide="send"></i> Giao bài tập ngay
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <!-- ================= MOBILE BOTTOM NAVIGATION BAR ================= -->
   <nav class="mobile-bottom-nav" id="mobileBottomNav">
     <button class="mobile-nav-item active" data-tab="dashboard">
@@ -1140,6 +1374,8 @@
   <script src="js/review-engine.js"></script>
   <script src="js/flashcards.js"></script>
   <script src="js/progress-tracker.js"></script>
+  <script src="js/user-manager.js"></script>
+  <script src="js/admin-controller.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

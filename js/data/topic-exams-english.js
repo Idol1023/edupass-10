@@ -2,12 +2,10 @@
 // EDUPASS 10 - BỘ ĐỀ LUYỆN CHUYÊN SÂU THEO TỪNG DẠNG CÂU HỎI MÔN TIẾNG ANH
 // Chuẩn cấu trúc đề thi tuyển sinh vào 10 TP.HCM, Hà Nội & GDPT 2018
 // Mỗi đề tập trung duy nhất 100% vào đúng 1 dạng câu hỏi trọng tâm
+// Tích hợp 100% ngữ liệu đọc hiểu/đoạn văn trên từng câu hỏi liên quan
 // =========================================================
 
 window.ENGLISH_TOPIC_EXAMS = [
-  // -------------------------------------------------------
-  // DẠNG 1: NGỮ ÂM - PHÁT ÂM (-ed, -s/es & Nguyên âm/Phụ âm)
-  // -------------------------------------------------------
   {
     "id": "eng_exam_type_pronunciation",
     "topicId": "eng_q1_pronunciation",
@@ -19,7 +17,7 @@ window.ENGLISH_TOPIC_EXAMS = [
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 1",
     "durationMinutes": 20,
-    "totalQuestions": 10,
+    "totalQuestions": 14,
     "description": "Luyện tập 100% dạng bài Ngữ âm phát âm: Quy tắc đuôi -ed (/t/, /d/, /ɪd/), các tính từ ngoại lệ kết thúc bằng -ed, quy tắc đuôi -s/es (/s/, /z/, /ɪz/), nguyên âm ngắn - dài và các phụ âm câm kinh điển.",
     "questions": [
       {
@@ -181,13 +179,73 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correct": 0,
         "audioText": "bed, bad, cat, man",
         "explanation": "Trong 'bed', chữ 'e' phát âm là /e/ (/bed/).<br>Trong ba từ còn lại, chữ 'a' phát âm là nguyên âm bẹt /æ/: bad /bæd/, cat /kæt/, man /mæn/."
+      },
+      {
+        "id": "e_top_pr11",
+        "topic": "Phát âm phụ âm 'ch': /k/ vs /tʃ/",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word whose underlined part is pronounced differently from that of the others:",
+        "options": [
+          "<u>ch</u>emistry",
+          "<u>ch</u>ildren",
+          "<u>ch</u>urch",
+          "<u>ch</u>oice"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "chemistry, children, church, choice",
+        "explanation": "Trong 'chemistry', 'ch' phát âm là /k/ (/ˈkemɪstri/). Trong ba từ còn lại, 'ch' phát âm là /tʃ/: children /ˈtʃɪldrən/, church /tʃɜːtʃ/, choice /tʃɔɪs/."
+      },
+      {
+        "id": "e_top_pr12",
+        "topic": "Phát âm nguyên âm đôi 'ou': /aʊ/ vs /ʌ/ vs /uː/",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word whose underlined part is pronounced differently from that of the others:",
+        "options": [
+          "c<u>ou</u>sin",
+          "h<u>ou</u>se",
+          "m<u>ou</u>se",
+          "cl<u>ou</u>d"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "cousin, house, mouse, cloud",
+        "explanation": "Trong 'cousin', 'ou' phát âm là /ʌ/ (/ˈkʌzn/). Trong ba từ còn lại, 'ou' phát âm là /aʊ/: house /haʊs/, mouse /maʊs/, cloud /klaʊd/."
+      },
+      {
+        "id": "e_top_pr13",
+        "topic": "Phát âm đuôi -s/es sau âm /f/, /k/, /p/, /t/, /θ/",
+        "difficulty": "Nhận biết",
+        "question": "Choose the word whose underlined part is pronounced differently from that of the others:",
+        "options": [
+          "bag<u>s</u>",
+          "roof<u>s</u>",
+          "month<u>s</u>",
+          "cook<u>s</u>"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "bags, roofs, months, cooks",
+        "explanation": "Trong 'bags', '-s' đứng sau âm hữu thanh /g/ nên phát âm là /z/ (/bæɡz/). Ba từ còn lại tận cùng là âm vô thanh (/f/, /θ/, /k/) nên '-s' phát âm là /s/: roofs /ruːfs/, months /mʌnθs/, cooks /kʊks/."
+      },
+      {
+        "id": "e_top_pr14",
+        "topic": "Phụ âm câm 'w': silent 'w' trước r",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word whose underlined part is pronounced differently from that of the others:",
+        "options": [
+          "<u>w</u>ater",
+          "<u>w</u>rite",
+          "<u>w</u>rong",
+          "<u>w</u>rap"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "water, write, wrong, wrap",
+        "explanation": "Trong 'water', chữ 'w' phát âm rõ là /w/ (/ˈwɔːtər/). Trong ba từ còn lại, 'w' đứng trước 'r' là âm câm: write /raɪt/, wrong /rɒŋ/, wrap /ræp/."
       }
     ]
   },
-
-  // -------------------------------------------------------
-  // DẠNG 2: NGỮ ÂM - TRỌNG ÂM TỪ 2 & 3 ÂM TIẾT
-  // -------------------------------------------------------
   {
     "id": "eng_exam_type_stress",
     "topicId": "eng_q2_stress",
@@ -199,7 +257,7 @@ window.ENGLISH_TOPIC_EXAMS = [
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 2",
     "durationMinutes": 20,
-    "totalQuestions": 10,
+    "totalQuestions": 14,
     "description": "Luyện tập 100% chuyên sâu về Trọng âm: Quy tắc danh từ/tính từ 2 âm tiết nhấn âm 1, động từ 2 âm tiết nhấn âm 2, quy tắc hậu tố -tion, -sion, -ic, -ity, hậu tố nhận trọng âm -ee, -eer, -ese và các từ 3 âm tiết bẫy thi vào 10.",
     "questions": [
       {
@@ -361,13 +419,73 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correct": 0,
         "audioText": "remember, beautiful, wonderful, peacefully",
         "explanation": "remember /rɪˈmembər/ có trọng âm rơi vào âm tiết thứ 2.<br>Ba từ còn lại các hậu tố -ful, -ly không làm đổi trọng âm gốc, trọng âm rơi vào âm tiết thứ 1: beautiful /ˈbjuːtɪfl/, wonderful /ˈwʌndəfl/, peacefully /ˈpiːsfəli/."
+      },
+      {
+        "id": "e_top_st11",
+        "topic": "Trọng âm từ 2 âm tiết có đuôi -er, -or",
+        "difficulty": "Nhận biết",
+        "question": "Choose the word that has a different stress pattern from that of the others:",
+        "options": [
+          "prefer",
+          "teacher",
+          "doctor",
+          "worker"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "prefer, teacher, doctor, worker",
+        "explanation": "prefer /prɪˈfɜːr/ là động từ 2 âm tiết có trọng âm rơi vào âm tiết thứ 2. Ba từ còn lại là danh từ chỉ người kết thúc bằng -er/-or có trọng âm rơi vào âm tiết thứ 1: teacher /ˈtiːtʃər/, doctor /ˈdɒktər/, worker /ˈwɜːkər/."
+      },
+      {
+        "id": "e_top_st12",
+        "topic": "Trọng âm từ 3 âm tiết có hậu tố -al",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word that has a different stress pattern from that of the others:",
+        "options": [
+          "polluting",
+          "natural",
+          "national",
+          "musical"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "polluting, natural, national, musical",
+        "explanation": "polluting /pəˈluːtɪŋ/ có trọng âm rơi vào âm tiết thứ 2. Ba từ còn lại có trọng âm rơi vào âm tiết thứ 1: natural /ˈnætʃrəl/, national /ˈnæʃnəl/, musical /ˈmjuːzɪkl/."
+      },
+      {
+        "id": "e_top_st13",
+        "topic": "Từ 2 âm tiết cùng chữ viết nhưng danh từ nhấn 1, động từ nhấn 2",
+        "difficulty": "Vận dụng",
+        "question": "In the sentence <em>'Vietnam exports a large amount of rice abroad'</em>, which syllable of the verb <strong>'exports'</strong> carries the main stress?",
+        "options": [
+          "The second syllable: /ɪkˈspɔːts/",
+          "The first syllable: /ˈekspɔːts/",
+          "Both syllables have equal stress",
+          "It does not carry stress"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "In the sentence Vietnam exports a large amount of rice abroad, exports is stressed on the second syllable.",
+        "explanation": "Quy tắc cặp từ chuyển loại: khi là ĐỘNG TỪ (xuất khẩu) thì trọng âm rơi vào âm 2: ex'port /ɪkˈspɔːt/. Khi là DANH TỪ (hàng xuất khẩu) thì trọng âm rơi vào âm 1: 'export /ˈekspɔːt/."
+      },
+      {
+        "id": "e_top_st14",
+        "topic": "Từ 3 âm tiết kết thúc bằng -ate",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the word that has a different stress pattern from that of the others:",
+        "options": [
+          "communicate",
+          "celebrate",
+          "decorate",
+          "educate"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "communicate, celebrate, decorate, educate",
+        "explanation": "communicate /kəˈmjuːnɪkeɪt/ là từ 4 âm tiết có trọng âm rơi vào âm tiết thứ 2. Ba từ còn lại là từ 3 âm tiết có trọng âm rơi vào âm tiết thứ 1: celebrate /ˈselɪbreɪt/, decorate /ˈdekəreɪt/, educate /ˈedʒukeɪt/."
       }
     ]
   },
-
-  // -------------------------------------------------------
-  // DẠNG 3: NGỮ PHÁP TRẮC NGHIỆM TRỌNG ĐIỂM
-  // -------------------------------------------------------
   {
     "id": "eng_exam_type_grammar_mcq",
     "topicId": "eng_q3_grammar_mcq",
@@ -379,7 +497,7 @@ window.ENGLISH_TOPIC_EXAMS = [
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 3",
     "durationMinutes": 25,
-    "totalQuestions": 10,
+    "totalQuestions": 14,
     "description": "Luyện tập 100% chuyên sâu ngữ pháp cốt lõi: Phối hợp thì (Quá khứ tiếp diễn với when/while, Hiện tại hoàn thành với since/for), Câu điều kiện loại 1 & 2, Câu ước Wish, Mệnh đề quan hệ (who, whom, which, whose, that), Câu hỏi đuôi và Bị động.",
     "questions": [
       {
@@ -541,13 +659,73 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correct": 0,
         "audioText": "The English teacher suggested that we do more practice tests before taking the official entrance exam.",
         "explanation": "Cấu trúc giả định thức: S + suggest + that + S + (should) + V(nguyên thể không chia). Do đó động từ giữ nguyên là 'do'."
+      },
+      {
+        "id": "e_top_gr11",
+        "topic": "Cấu trúc Used to V (thói quen quá khứ) vs Be used to V-ing",
+        "difficulty": "Thông hiểu",
+        "question": "My grandfather ________ cycling 10 kilometers to work every morning when he was young.",
+        "options": [
+          "used to go",
+          "is used to go",
+          "was used to go",
+          "uses to go"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "My grandfather used to go cycling 10 kilometers to work every morning when he was young.",
+        "explanation": "'used to + V-bare' diễn tả thói quen hoặc hành động thường xuyên làm trong quá khứ và nay không còn nữa."
+      },
+      {
+        "id": "e_top_gr12",
+        "topic": "So sánh kép (The more... the more...)",
+        "difficulty": "Vận dụng",
+        "question": "The more mock tests you practice before the entrance exam, ________ you will feel on the official test day.",
+        "options": [
+          "the more confident",
+          "more confident",
+          "the most confident",
+          "the confident"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "The more mock tests you practice before the entrance exam, the more confident you will feel.",
+        "explanation": "Cấu trúc so sánh kép (The + comparative, the + comparative): The more... the more confident (Bạn càng luyện tập nhiều đề thi thử thì bạn sẽ càng cảm thấy tự tin hơn)."
+      },
+      {
+        "id": "e_top_gr13",
+        "topic": "Liên từ phụ thuộc chỉ nhượng bộ và nguyên nhân: Although vs Because",
+        "difficulty": "Thông hiểu",
+        "question": "________ she spent endless hours revising, she remained composed and calm during the exam.",
+        "options": [
+          "Although",
+          "Because",
+          "Despite",
+          "Because of"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "Although she spent endless hours revising, she remained composed and calm during the exam.",
+        "explanation": "Sau chỗ trống là một mệnh đề hoàn chỉnh (S + V: she spent...) mang nghĩa nhượng bộ (Mặc dù ôn tập nhiều giờ...), nên chọn 'Although'."
+      },
+      {
+        "id": "e_top_gr14",
+        "topic": "Câu tường thuật lùi thì với câu hỏi Yes/No",
+        "difficulty": "Thông hiểu",
+        "question": "The examiner asked Nam ________ he had remembered to bring his registration identification card.",
+        "options": [
+          "if",
+          "that",
+          "what",
+          "which"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "The examiner asked Nam if he had remembered to bring his registration identification card.",
+        "explanation": "Tường thuật câu hỏi Yes/No: S + asked + (O) + IF / WHETHER + S + V(lùi thì). Không dùng 'that'."
       }
     ]
   },
-
-  // -------------------------------------------------------
-  // DẠNG 4: CỤM ĐỘNG TỪ (PHRASAL VERBS) & COLLOCATIONS
-  // -------------------------------------------------------
   {
     "id": "eng_exam_type_phrasal_collocation",
     "topicId": "eng_q4_phrasal_collocation",
@@ -559,7 +737,7 @@ window.ENGLISH_TOPIC_EXAMS = [
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 4",
     "durationMinutes": 25,
-    "totalQuestions": 10,
+    "totalQuestions": 14,
     "description": "Luyện tập 100% chuyên sâu cụm động từ và cụm cố định: turn down, carry out, look forward to, run out of, catch up with, pay attention to, make a decision, take responsibility và heavy rain.",
     "questions": [
       {
@@ -721,13 +899,73 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correct": 0,
         "audioText": "The football match was postponed due to the heavy rain and strong wind.",
         "explanation": "Trong tiếng Anh: mưa to dùng 'heavy rain' (không bao giờ dùng 'big rain'). Gió to dùng 'strong wind'."
+      },
+      {
+        "id": "e_top_ph11",
+        "topic": "Phrasal verb: look up (tra cứu thông tin, từ điển)",
+        "difficulty": "Nhận biết",
+        "question": "If you come across a new word while reading, you can ________ its meaning in an English-Vietnamese dictionary.",
+        "options": [
+          "look up",
+          "look after",
+          "look for",
+          "look forward to"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "you can look up its meaning in an English-Vietnamese dictionary",
+        "explanation": "'look up' = tra cứu (từ mới trong từ điển, số điện thoại trong danh bạ). look after = chăm sóc; look for = tìm kiếm."
+      },
+      {
+        "id": "e_top_ph12",
+        "topic": "Phrasal verb: give up (từ bỏ mục tiêu)",
+        "difficulty": "Nhận biết",
+        "question": "Even though math geometry problems are tough, you should never ________ trying your best.",
+        "options": [
+          "give up",
+          "give in",
+          "give away",
+          "give off"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "you should never give up trying your best",
+        "explanation": "'give up + V-ing' = bỏ cuộc, từ bỏ việc gì. give away = trao tặng; give off = phát ra (mùi, khí)."
+      },
+      {
+        "id": "e_top_ph13",
+        "topic": "Phrasal verb: break down (xe cộ, máy móc bị hỏng hóc)",
+        "difficulty": "Thông hiểu",
+        "question": "Our bus suddenly ________ on the way to school, so we had to call a taxi to arrive on time.",
+        "options": [
+          "broke down",
+          "broke out",
+          "broke into",
+          "broke up"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "Our bus suddenly broke down on the way to school",
+        "explanation": "'break down' = (xe cộ, phương tiện) bị hỏng giữa đường. break into = đột nhập; break out = bùng phát (dịch bệnh, chiến tranh)."
+      },
+      {
+        "id": "e_top_ph14",
+        "topic": "Collocation: make friends (kết bạn) vs do friends",
+        "difficulty": "Nhận biết",
+        "question": "Entering high school will be a great opportunity for you to ________ new lifelong friends.",
+        "options": [
+          "make",
+          "do",
+          "get",
+          "take"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "a great opportunity for you to make new lifelong friends",
+        "explanation": "Collocation cố định: 'make friends with sb' = kết bạn với ai. Không dùng 'do friends'."
       }
     ]
   },
-
-  // -------------------------------------------------------
-  // DẠNG 5: TÌNH HUỐNG GIAO TIẾP XÃ HỘI (COMMUNICATION)
-  // -------------------------------------------------------
   {
     "id": "eng_exam_type_communication",
     "topicId": "eng_q5_communication",
@@ -739,7 +977,7 @@ window.ENGLISH_TOPIC_EXAMS = [
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 5",
     "durationMinutes": 20,
-    "totalQuestions": 8,
+    "totalQuestions": 12,
     "description": "Luyện tập 100% chuyên sâu tình huống giao tiếp đời sống: Lời khen và đáp lại lời khen, lời cảm ơn và đáp lại lịch sự, đề nghị giúp đỡ, bày tỏ quan điểm đồng ý hoặc phản đối lịch sự, và lời chúc mừng.",
     "questions": [
       {
@@ -869,13 +1107,73 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correct": 0,
         "audioText": "I've just received the results! I got admitted to Le Hong Phong High School! Congratulations! You worked so hard for this!",
         "explanation": "Khi ai đó đạt được thành tích tốt hoặc đỗ kỳ thi: 'Congratulations!' (Xin chúc mừng!). Lưu ý chữ có 's'."
+      },
+      {
+        "id": "e_top_com09",
+        "topic": "Hỏi đường và chỉ đường (Asking for directions)",
+        "difficulty": "Thông hiểu",
+        "question": "Tourist: 'Excuse me, could you please tell me how to get to the nearest Metro station?'<br>Local student: '________'",
+        "options": [
+          "Go straight ahead for two blocks, then turn left. It's right opposite the park.",
+          "Yes, I know where it is.",
+          "You should take a plane.",
+          "No, I don't want to talk."
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "Go straight ahead for two blocks, then turn left. It's right opposite the park.",
+        "explanation": "Khi người khác hỏi đường lịch sự 'could you please tell me how to get to...', câu trả lời tự nhiên nhất là chỉ rõ hướng đi: 'Go straight ahead...'"
+      },
+      {
+        "id": "e_top_com10",
+        "topic": "Giao tiếp trong nhà hàng / quán ăn (Ordering at a cafe)",
+        "difficulty": "Thông hiểu",
+        "question": "Waiter: 'May I take your order now, please?'<br>Customer: '________'",
+        "options": [
+          "Yes, I'd like an iced coffee with milk, please.",
+          "No, you may not.",
+          "You are welcome.",
+          "It's none of your business."
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "Yes, I'd like an iced coffee with milk, please.",
+        "explanation": "Cách gọi món ăn/uống lịch sự: 'Yes, I'd like + món ăn/uống, please.'"
+      },
+      {
+        "id": "e_top_com11",
+        "topic": "Bày tỏ sự cảm thông, chia sẻ nỗi buồn (Expressing sympathy)",
+        "difficulty": "Thông hiểu",
+        "question": "Nam: 'I failed to pass the first round of the scholarship interview.'<br>Lan: '________! Keep your chin up, better luck next time!'",
+        "options": [
+          "I'm so sorry to hear that",
+          "Congratulations",
+          "You are so lucky",
+          "It's my pleasure"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "I'm so sorry to hear that! Keep your chin up, better luck next time!",
+        "explanation": "Khi nghe tin không may của bạn bè, câu cảm thông chuẩn mực là: 'I'm so sorry to hear that' (Mình rất tiếc khi nghe điều đó)."
+      },
+      {
+        "id": "e_top_com12",
+        "topic": "Cuộc gọi điện thoại (Telephone conversation)",
+        "difficulty": "Nhận biết",
+        "question": "Caller: 'Hello, may I speak to Dr. Quang, please?'<br>Receptionist: '________'",
+        "options": [
+          "Hold on a moment, please. I'll connect you right now.",
+          "Who are you calling for?",
+          "No, he is speaking.",
+          "I am fine, thank you."
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "Hold on a moment, please. I'll connect you right now.",
+        "explanation": "Khi trực điện thoại, câu giữ máy lịch sự: 'Hold on a moment, please. I'll connect you...' (Xin vui lòng chờ một lát, tôi sẽ nối máy ngay)."
       }
     ]
   },
-
-  // -------------------------------------------------------
-  // DẠNG 6: ĐỌC HIỂU BIỂN BÁO & THÔNG BÁO ĐỜI SỐNG (SIGNS & NOTICES)
-  // -------------------------------------------------------
   {
     "id": "eng_exam_type_signs_notices",
     "topicId": "eng_q6_signs_notices",
@@ -887,7 +1185,7 @@ window.ENGLISH_TOPIC_EXAMS = [
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 6",
     "durationMinutes": 20,
-    "totalQuestions": 8,
+    "totalQuestions": 12,
     "description": "Luyện tập 100% chuyên sâu phần Biển báo và Thông báo đời sống (đặc thù Sở GD&ĐT TP.HCM): Biển báo an toàn thư viện, hồ bơi, ga tàu điện Metro, an toàn phòng thí nghiệm, công viên và siêu thị.",
     "questions": [
       {
@@ -1017,13 +1315,73 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correct": 0,
         "audioText": "Notice. No flash photography allowed in the exhibition hall.",
         "explanation": "'No flash photography' nghĩa là bạn vẫn có thể chụp ảnh nhưng TUYỆT ĐỐI không được bật đèn flash để tránh làm hỏng các hiện vật cổ."
+      },
+      {
+        "id": "e_top_sn09",
+        "topic": "Biển báo lối thoát hiểm khẩn cấp (Emergency Exit)",
+        "difficulty": "Nhận biết",
+        "question": "What does this green building sign indicate?<br><div style='padding: 10px; border: 2px solid #10b981; border-radius: 8px; text-align: center; font-weight: 700; margin: 8px 0; background: rgba(16, 185, 129, 0.1); color: #059669;'>EMERGENCY EXIT ONLY<br>Alarm will sound if opened during normal hours.</div>",
+        "options": [
+          "This door is strictly for escape during an emergency, not for regular use.",
+          "You can freely enter and leave through this door at any time.",
+          "The building is currently closed for renovation.",
+          "Only firefighters are allowed to open this door even in a fire."
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "Emergency exit only. Alarm will sound if opened during normal hours.",
+        "explanation": "'Emergency exit only' = chỉ dùng làm lối thoát hiểm trong trường hợp khẩn cấp, không dùng làm lối đi thông thường vì chuông báo động sẽ reo."
+      },
+      {
+        "id": "e_top_sn10",
+        "topic": "Biển báo trạm sạc xe buýt điện thông minh",
+        "difficulty": "Thông hiểu",
+        "question": "What does this sign at an electric vehicle charging station mean?<br><div style='padding: 10px; border: 2px solid #0284c7; border-radius: 8px; text-align: center; font-weight: 700; margin: 8px 0; background: rgba(2, 132, 199, 0.1); color: #0284c7;'>EV FAST CHARGING BAY<br>Parking restricted to charging vehicles only. Max 60 mins.</div>",
+        "options": [
+          "Only electric cars that are actively charging may park here for up to 1 hour.",
+          "Gasoline-powered vehicles can park here overnight.",
+          "Free parking is provided for all motorbikes all day.",
+          "Vehicles are prohibited from parking for more than 5 minutes."
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "Electric vehicle fast charging bay. Parking restricted to charging vehicles only. Maximum sixty minutes.",
+        "explanation": "Vị trí chỉ dành riêng cho xe điện đang cắm sạc và giới hạn đỗ tối đa 60 phút."
+      },
+      {
+        "id": "e_top_sn11",
+        "topic": "Biển báo ghế ưu tiên trên tàu xe công cộng (Priority Seating)",
+        "difficulty": "Nhận biết",
+        "question": "What does this symbol on the Metro train instruct passengers to do?<br><div style='padding: 10px; border: 2px solid #6366f1; border-radius: 8px; text-align: center; font-weight: 700; margin: 8px 0; background: rgba(99, 102, 241, 0.1); color: #6366f1;'>PRIORITY SEATING<br>Please offer this seat to the elderly, pregnant women, and disabled passengers.</div>",
+        "options": [
+          "You should give up this seat to people in need, such as the elderly or expectant mothers.",
+          "Young passengers have exclusive right to sit here.",
+          "No one is permitted to sit in this row of seats at all.",
+          "Seats are sold with a higher fare ticket."
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "Priority seating. Please offer this seat to the elderly, pregnant women, and disabled passengers.",
+        "explanation": "'Priority seating' = ghế ưu tiên nhường cho người cao tuổi, phụ nữ mang thai và người khuyết tật."
+      },
+      {
+        "id": "e_top_sn12",
+        "topic": "Biển báo an toàn khu vực thi công (Construction Area)",
+        "difficulty": "Thông hiểu",
+        "question": "What does this warning notice at a construction site state?<br><div style='padding: 10px; border: 2px solid #f59e0b; border-radius: 8px; text-align: center; font-weight: 700; margin: 8px 0; background: rgba(245, 158, 11, 0.1); color: #d97706;'>HARD HAT AREA<br>Unauthorized personnel keep out. Falling debris danger.</div>",
+        "options": [
+          "People without safety helmets and permission are not allowed to enter.",
+          "Anyone can walk through if they wear sunglasses.",
+          "Construction workers must take off their hats when entering.",
+          "The area is completely safe for children to play."
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "Hard hat area. Unauthorized personnel keep out. Falling debris danger.",
+        "explanation": "'Hard hat area' (khu vực đội mũ bảo hộ cứng) và 'keep out' nghĩa là người không có nhiệm vụ và không đội mũ bảo hộ tuyệt đối không được vào do nguy hiểm vật thể rơi."
       }
     ]
   },
-
-  // -------------------------------------------------------
-  // DẠNG 7: ĐỌC ĐIỀN TỪ VÀO ĐOẠN VĂN (CLOZE TEST)
-  // -------------------------------------------------------
   {
     "id": "eng_exam_type_cloze_test",
     "topicId": "eng_q7_cloze_test",
@@ -1034,8 +1392,8 @@ window.ENGLISH_TOPIC_EXAMS = [
     "isOfficial": false,
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 7",
-    "durationMinutes": 20,
-    "totalQuestions": 6,
+    "durationMinutes": 25,
+    "totalQuestions": 12,
     "description": "Luyện tập 100% chuyên sâu kỹ năng làm bài Cloze Test (chủ đề Living Green in Modern Cities): Kiểm tra liên từ (Therefore, However), đại từ quan hệ (which, who), giới từ theo cụm và từ vựng chính xác theo ngữ cảnh.",
     "questions": [
       {
@@ -1052,7 +1410,9 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "audioText": "These collective actions greatly contribute to the reduction of carbon emissions.",
-        "explanation": "Cấu trúc cố định: 'contribute TO sth' = đóng góp vào việc gì. Không dùng 'contribute with/for'."
+        "explanation": "Cấu trúc cố định: 'contribute TO sth' = đóng góp vào việc gì. Không dùng 'contribute with/for'.",
+        "passageTitle": "Đoạn văn đọc điền từ số 1: Lối sống xanh trong đô thị thông minh",
+        "passage": "<p>In recent years, many big cities around the world have been actively promoting green lifestyles to combat global climate change. Urban citizens are encouraged to sort household waste, use public transit, and plant trees on their balconies. These collective actions greatly contribute <strong>(1)</strong> ________ the reduction of carbon emissions. Single-use plastic bags take hundreds of years to decompose in nature. <strong>(2)</strong> ________, municipal governments are encouraging supermarkets to replace plastic bags with reusable canvas totes. Rooftop solar panels are modern devices <strong>(3)</strong> ________ convert sunlight directly into clean electricity for household appliances. Switching from coal-fired power plants to <strong>(4)</strong> ________ energy sources such as wind and solar power is crucial for a cleaner future. Schools also play an indispensable role in organizing environmental campaigns to <strong>(5)</strong> ________ awareness among teenagers. Every individual can make a tangible difference simply by <strong>(6)</strong> ________ off electrical switches when leaving an empty room.</p>"
       },
       {
         "id": "e_top_cl02",
@@ -1068,7 +1428,9 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "audioText": "Therefore, municipal governments are encouraging supermarkets to replace plastic bags with reusable canvas totes.",
-        "explanation": "'Therefore' (Do đó / Vì vậy) đứng đầu câu sau dấu chấm và trước dấu phẩy, dùng để chỉ kết quả hợp lý của câu trước."
+        "explanation": "'Therefore' (Do đó / Vì vậy) đứng đầu câu sau dấu chấm và trước dấu phẩy, dùng để chỉ kết quả hợp lý của câu trước.",
+        "passageTitle": "Đoạn văn đọc điền từ số 1: Lối sống xanh trong đô thị thông minh",
+        "passage": "<p>In recent years, many big cities around the world have been actively promoting green lifestyles to combat global climate change. Urban citizens are encouraged to sort household waste, use public transit, and plant trees on their balconies. These collective actions greatly contribute <strong>(1)</strong> ________ the reduction of carbon emissions. Single-use plastic bags take hundreds of years to decompose in nature. <strong>(2)</strong> ________, municipal governments are encouraging supermarkets to replace plastic bags with reusable canvas totes. Rooftop solar panels are modern devices <strong>(3)</strong> ________ convert sunlight directly into clean electricity for household appliances. Switching from coal-fired power plants to <strong>(4)</strong> ________ energy sources such as wind and solar power is crucial for a cleaner future. Schools also play an indispensable role in organizing environmental campaigns to <strong>(5)</strong> ________ awareness among teenagers. Every individual can make a tangible difference simply by <strong>(6)</strong> ________ off electrical switches when leaving an empty room.</p>"
       },
       {
         "id": "e_top_cl03",
@@ -1084,7 +1446,9 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "audioText": "Rooftop solar panels are modern devices which convert sunlight directly into clean electricity.",
-        "explanation": "'devices' là danh từ chỉ vật làm chủ ngữ trong mệnh đề quan hệ, do đó đại từ quan hệ thích hợp là 'which' (hoặc 'that')."
+        "explanation": "'devices' là danh từ chỉ vật làm chủ ngữ trong mệnh đề quan hệ, do đó đại từ quan hệ thích hợp là 'which' (hoặc 'that').",
+        "passageTitle": "Đoạn văn đọc điền từ số 1: Lối sống xanh trong đô thị thông minh",
+        "passage": "<p>In recent years, many big cities around the world have been actively promoting green lifestyles to combat global climate change. Urban citizens are encouraged to sort household waste, use public transit, and plant trees on their balconies. These collective actions greatly contribute <strong>(1)</strong> ________ the reduction of carbon emissions. Single-use plastic bags take hundreds of years to decompose in nature. <strong>(2)</strong> ________, municipal governments are encouraging supermarkets to replace plastic bags with reusable canvas totes. Rooftop solar panels are modern devices <strong>(3)</strong> ________ convert sunlight directly into clean electricity for household appliances. Switching from coal-fired power plants to <strong>(4)</strong> ________ energy sources such as wind and solar power is crucial for a cleaner future. Schools also play an indispensable role in organizing environmental campaigns to <strong>(5)</strong> ________ awareness among teenagers. Every individual can make a tangible difference simply by <strong>(6)</strong> ________ off electrical switches when leaving an empty room.</p>"
       },
       {
         "id": "e_top_cl04",
@@ -1100,7 +1464,9 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "audioText": "Switching from coal-fired power plants to renewable energy sources such as wind and solar power is crucial.",
-        "explanation": "'renewable energy sources' = các nguồn năng lượng tái tạo (như gió, mặt trời). Các từ khác trái nghĩa hoặc mang nghĩa tiêu cực."
+        "explanation": "'renewable energy sources' = các nguồn năng lượng tái tạo (như gió, mặt trời). Các từ khác trái nghĩa hoặc mang nghĩa tiêu cực.",
+        "passageTitle": "Đoạn văn đọc điền từ số 1: Lối sống xanh trong đô thị thông minh",
+        "passage": "<p>In recent years, many big cities around the world have been actively promoting green lifestyles to combat global climate change. Urban citizens are encouraged to sort household waste, use public transit, and plant trees on their balconies. These collective actions greatly contribute <strong>(1)</strong> ________ the reduction of carbon emissions. Single-use plastic bags take hundreds of years to decompose in nature. <strong>(2)</strong> ________, municipal governments are encouraging supermarkets to replace plastic bags with reusable canvas totes. Rooftop solar panels are modern devices <strong>(3)</strong> ________ convert sunlight directly into clean electricity for household appliances. Switching from coal-fired power plants to <strong>(4)</strong> ________ energy sources such as wind and solar power is crucial for a cleaner future. Schools also play an indispensable role in organizing environmental campaigns to <strong>(5)</strong> ________ awareness among teenagers. Every individual can make a tangible difference simply by <strong>(6)</strong> ________ off electrical switches when leaving an empty room.</p>"
       },
       {
         "id": "e_top_cl05",
@@ -1116,7 +1482,9 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "audioText": "Schools also play an indispensable role in organizing environmental campaigns to raise awareness among teenagers.",
-        "explanation": "Collocation kinh điển: 'raise awareness' = nâng cao nhận thức. 'rise' là nội động từ không có tân ngữ phía sau."
+        "explanation": "Collocation kinh điển: 'raise awareness' = nâng cao nhận thức. 'rise' là nội động từ không có tân ngữ phía sau.",
+        "passageTitle": "Đoạn văn đọc điền từ số 1: Lối sống xanh trong đô thị thông minh",
+        "passage": "<p>In recent years, many big cities around the world have been actively promoting green lifestyles to combat global climate change. Urban citizens are encouraged to sort household waste, use public transit, and plant trees on their balconies. These collective actions greatly contribute <strong>(1)</strong> ________ the reduction of carbon emissions. Single-use plastic bags take hundreds of years to decompose in nature. <strong>(2)</strong> ________, municipal governments are encouraging supermarkets to replace plastic bags with reusable canvas totes. Rooftop solar panels are modern devices <strong>(3)</strong> ________ convert sunlight directly into clean electricity for household appliances. Switching from coal-fired power plants to <strong>(4)</strong> ________ energy sources such as wind and solar power is crucial for a cleaner future. Schools also play an indispensable role in organizing environmental campaigns to <strong>(5)</strong> ________ awareness among teenagers. Every individual can make a tangible difference simply by <strong>(6)</strong> ________ off electrical switches when leaving an empty room.</p>"
       },
       {
         "id": "e_top_cl06",
@@ -1132,14 +1500,120 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "audioText": "Every individual can make a tangible difference simply by turning off electrical switches when leaving an empty room.",
-        "explanation": "Sau giới từ 'by' động từ phải ở dạng V-ing: 'by turning off' = bằng cách tắt các công tắc điện."
+        "explanation": "Sau giới từ 'by' động từ phải ở dạng V-ing: 'by turning off' = bằng cách tắt các công tắc điện.",
+        "passageTitle": "Đoạn văn đọc điền từ số 1: Lối sống xanh trong đô thị thông minh",
+        "passage": "<p>In recent years, many big cities around the world have been actively promoting green lifestyles to combat global climate change. Urban citizens are encouraged to sort household waste, use public transit, and plant trees on their balconies. These collective actions greatly contribute <strong>(1)</strong> ________ the reduction of carbon emissions. Single-use plastic bags take hundreds of years to decompose in nature. <strong>(2)</strong> ________, municipal governments are encouraging supermarkets to replace plastic bags with reusable canvas totes. Rooftop solar panels are modern devices <strong>(3)</strong> ________ convert sunlight directly into clean electricity for household appliances. Switching from coal-fired power plants to <strong>(4)</strong> ________ energy sources such as wind and solar power is crucial for a cleaner future. Schools also play an indispensable role in organizing environmental campaigns to <strong>(5)</strong> ________ awareness among teenagers. Every individual can make a tangible difference simply by <strong>(6)</strong> ________ off electrical switches when leaving an empty room.</p>"
+      },
+      {
+        "id": "e_top_cl07",
+        "topic": "Đọc điền từ - Đại từ quan hệ thay thế cả mệnh đề (which)",
+        "difficulty": "Thông hiểu",
+        "passageTitle": "Đoạn văn đọc điền từ số 2: Giao thông xanh & Tuyến Metro TP.HCM",
+        "passage": "<p>Ho Chi Minh City is accelerating its transition toward digital and eco-friendly public transportation. The official operation of Metro Line 1 (Ben Thanh - Suoi Tien) represents a breakthrough in urban mobility. Commuters can now travel from District 1 to Thu Duc City in less than thirty minutes, <strong>(7)</strong> ________ alleviates chronic road congestion along the Hanoi Highway corridor. Furthermore, feeder electric buses have been synchronized with metro stations so that passengers can transfer <strong>(8)</strong> ________ and conveniently without long delays. City authorities believe that when public transport is proved to be <strong>(9)</strong> ________ and punctual, citizens will eagerly choose it over personal motorbikes. A digital ticketing app also allows users to check train schedules and calculate fares in real time, <strong>(10)</strong> ________ commuting smoother than ever. The transportation department is currently <strong>(11)</strong> ________ plans to expand pedestrian shaded walkways around each metro terminal. Environmental specialists affirm that green mobility is the most <strong>(12)</strong> ________ solution to improve urban air quality permanently.</p>",
+        "question": "Read the passage and choose the best option for blank <strong>(7)</strong>:",
+        "options": [
+          "which",
+          "who",
+          "whom",
+          "that"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "which alleviates chronic road congestion along the Hanoi Highway corridor",
+        "explanation": "'which' đứng sau dấu phẩy dùng để thay thế cho toàn bộ sự việc ở mệnh đề trước (việc tuyến Metro đi từ Q.1 đến Thủ Đức dưới 30 phút). 'that' không được dùng sau dấu phẩy."
+      },
+      {
+        "id": "e_top_cl08",
+        "topic": "Đọc điền từ - Trạng từ chỉ cách thức bổ nghĩa cho động từ",
+        "difficulty": "Thông hiểu",
+        "passageTitle": "Đoạn văn đọc điền từ số 2: Giao thông xanh & Tuyến Metro TP.HCM",
+        "passage": "<p>Ho Chi Minh City is accelerating its transition toward digital and eco-friendly public transportation. The official operation of Metro Line 1 (Ben Thanh - Suoi Tien) represents a breakthrough in urban mobility. Commuters can now travel from District 1 to Thu Duc City in less than thirty minutes, <strong>(7)</strong> ________ alleviates chronic road congestion along the Hanoi Highway corridor. Furthermore, feeder electric buses have been synchronized with metro stations so that passengers can transfer <strong>(8)</strong> ________ and conveniently without long delays. City authorities believe that when public transport is proved to be <strong>(9)</strong> ________ and punctual, citizens will eagerly choose it over personal motorbikes. A digital ticketing app also allows users to check train schedules and calculate fares in real time, <strong>(10)</strong> ________ commuting smoother than ever. The transportation department is currently <strong>(11)</strong> ________ plans to expand pedestrian shaded walkways around each metro terminal. Environmental specialists affirm that green mobility is the most <strong>(12)</strong> ________ solution to improve urban air quality permanently.</p>",
+        "question": "Read the passage and choose the best option for blank <strong>(8)</strong>:",
+        "options": [
+          "seamlessly",
+          "difficultly",
+          "dangerously",
+          "carelessly"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "transfer seamlessly and conveniently between stations",
+        "explanation": "'transfer seamlessly' = chuyển tuyến một cách trơn tru, liền mạch không bị gián đoạn. Các từ khác mang nghĩa tiêu cực."
+      },
+      {
+        "id": "e_top_cl09",
+        "topic": "Đọc điền từ - Tính từ chỉ tính chất đáng tin cậy",
+        "difficulty": "Thông hiểu",
+        "passageTitle": "Đoạn văn đọc điền từ số 2: Giao thông xanh & Tuyến Metro TP.HCM",
+        "passage": "<p>Ho Chi Minh City is accelerating its transition toward digital and eco-friendly public transportation. The official operation of Metro Line 1 (Ben Thanh - Suoi Tien) represents a breakthrough in urban mobility. Commuters can now travel from District 1 to Thu Duc City in less than thirty minutes, <strong>(7)</strong> ________ alleviates chronic road congestion along the Hanoi Highway corridor. Furthermore, feeder electric buses have been synchronized with metro stations so that passengers can transfer <strong>(8)</strong> ________ and conveniently without long delays. City authorities believe that when public transport is proved to be <strong>(9)</strong> ________ and punctual, citizens will eagerly choose it over personal motorbikes. A digital ticketing app also allows users to check train schedules and calculate fares in real time, <strong>(10)</strong> ________ commuting smoother than ever. The transportation department is currently <strong>(11)</strong> ________ plans to expand pedestrian shaded walkways around each metro terminal. Environmental specialists affirm that green mobility is the most <strong>(12)</strong> ________ solution to improve urban air quality permanently.</p>",
+        "question": "Read the passage and choose the best option for blank <strong>(9)</strong>:",
+        "options": [
+          "reliable",
+          "relied",
+          "reliably",
+          "unreliable"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "public transport is proved to be reliable and punctual",
+        "explanation": "Sau 'to be' ta cần một tính từ song hành với 'punctual' (đúng giờ): 'reliable' = đáng tin cậy, chuẩn xác."
+      },
+      {
+        "id": "e_top_cl10",
+        "topic": "Đọc điền từ - Dạng V-ing rút gọn mệnh đề quan hệ kết quả",
+        "difficulty": "Vận dụng",
+        "passageTitle": "Đoạn văn đọc điền từ số 2: Giao thông xanh & Tuyến Metro TP.HCM",
+        "passage": "<p>Ho Chi Minh City is accelerating its transition toward digital and eco-friendly public transportation. The official operation of Metro Line 1 (Ben Thanh - Suoi Tien) represents a breakthrough in urban mobility. Commuters can now travel from District 1 to Thu Duc City in less than thirty minutes, <strong>(7)</strong> ________ alleviates chronic road congestion along the Hanoi Highway corridor. Furthermore, feeder electric buses have been synchronized with metro stations so that passengers can transfer <strong>(8)</strong> ________ and conveniently without long delays. City authorities believe that when public transport is proved to be <strong>(9)</strong> ________ and punctual, citizens will eagerly choose it over personal motorbikes. A digital ticketing app also allows users to check train schedules and calculate fares in real time, <strong>(10)</strong> ________ commuting smoother than ever. The transportation department is currently <strong>(11)</strong> ________ plans to expand pedestrian shaded walkways around each metro terminal. Environmental specialists affirm that green mobility is the most <strong>(12)</strong> ________ solution to improve urban air quality permanently.</p>",
+        "question": "Read the passage and choose the best option for blank <strong>(10)</strong>:",
+        "options": [
+          "making",
+          "makes",
+          "made",
+          "to make"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "which makes commuting smoother than ever, reduced to making",
+        "explanation": "Rút gọn mệnh đề quan hệ chỉ kết quả: ', which makes...' rút gọn thành hiện tại phân từ dạng V-ing: ', making commuting smoother than ever'."
+      },
+      {
+        "id": "e_top_cl11",
+        "topic": "Đọc điền từ - Cụm động từ triển khai kế hoạch (carrying out)",
+        "difficulty": "Thông hiểu",
+        "passageTitle": "Đoạn văn đọc điền từ số 2: Giao thông xanh & Tuyến Metro TP.HCM",
+        "passage": "<p>Ho Chi Minh City is accelerating its transition toward digital and eco-friendly public transportation. The official operation of Metro Line 1 (Ben Thanh - Suoi Tien) represents a breakthrough in urban mobility. Commuters can now travel from District 1 to Thu Duc City in less than thirty minutes, <strong>(7)</strong> ________ alleviates chronic road congestion along the Hanoi Highway corridor. Furthermore, feeder electric buses have been synchronized with metro stations so that passengers can transfer <strong>(8)</strong> ________ and conveniently without long delays. City authorities believe that when public transport is proved to be <strong>(9)</strong> ________ and punctual, citizens will eagerly choose it over personal motorbikes. A digital ticketing app also allows users to check train schedules and calculate fares in real time, <strong>(10)</strong> ________ commuting smoother than ever. The transportation department is currently <strong>(11)</strong> ________ plans to expand pedestrian shaded walkways around each metro terminal. Environmental specialists affirm that green mobility is the most <strong>(12)</strong> ________ solution to improve urban air quality permanently.</p>",
+        "question": "Read the passage and choose the best option for blank <strong>(11)</strong>:",
+        "options": [
+          "carrying out",
+          "giving up",
+          "looking for",
+          "turning off"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "The transportation department is currently carrying out plans to expand pedestrian shaded walkways.",
+        "explanation": "'carry out plans' = tiến hành, triển khai các kế hoạch thực tế."
+      },
+      {
+        "id": "e_top_cl12",
+        "topic": "Đọc điền từ - Tính từ so sánh nhất mang nghĩa hiệu quả nhất",
+        "difficulty": "Nhận biết",
+        "passageTitle": "Đoạn văn đọc điền từ số 2: Giao thông xanh & Tuyến Metro TP.HCM",
+        "passage": "<p>Ho Chi Minh City is accelerating its transition toward digital and eco-friendly public transportation. The official operation of Metro Line 1 (Ben Thanh - Suoi Tien) represents a breakthrough in urban mobility. Commuters can now travel from District 1 to Thu Duc City in less than thirty minutes, <strong>(7)</strong> ________ alleviates chronic road congestion along the Hanoi Highway corridor. Furthermore, feeder electric buses have been synchronized with metro stations so that passengers can transfer <strong>(8)</strong> ________ and conveniently without long delays. City authorities believe that when public transport is proved to be <strong>(9)</strong> ________ and punctual, citizens will eagerly choose it over personal motorbikes. A digital ticketing app also allows users to check train schedules and calculate fares in real time, <strong>(10)</strong> ________ commuting smoother than ever. The transportation department is currently <strong>(11)</strong> ________ plans to expand pedestrian shaded walkways around each metro terminal. Environmental specialists affirm that green mobility is the most <strong>(12)</strong> ________ solution to improve urban air quality permanently.</p>",
+        "question": "Read the passage and choose the best option for blank <strong>(12)</strong>:",
+        "options": [
+          "effective",
+          "costly",
+          "polluting",
+          "hopeless"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "green mobility is the most effective solution to improve urban air quality",
+        "explanation": "'the most effective solution' = giải pháp hiệu quả nhất. Các từ khác mang nghĩa tốn kém, gây ô nhiễm hoặc vô vọng."
       }
     ]
   },
-
-  // -------------------------------------------------------
-  // DẠNG 8: ĐỌC HIỂU VĂN BẢN (READING COMPREHENSION)
-  // -------------------------------------------------------
   {
     "id": "eng_exam_type_reading_comprehension",
     "topicId": "eng_q8_reading_comprehension",
@@ -1151,7 +1625,7 @@ window.ENGLISH_TOPIC_EXAMS = [
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 8",
     "durationMinutes": 25,
-    "totalQuestions": 6,
+    "totalQuestions": 12,
     "description": "Luyện tập 100% chuyên sâu 5 kỹ năng đọc hiểu cốt lõi đề thi vào 10: Xác định ý chính toàn bài (Main Idea), chi tiết cụ thể (Factual Details), từ đồng nghĩa trong ngữ cảnh (Vocabulary in context), từ quy chiếu (Pronoun reference) và câu hỏi suy luận (Inference).",
     "questions": [
       {
@@ -1168,7 +1642,9 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "audioText": "How artificial intelligence is assisting and personalizing student learning.",
-        "explanation": "Bài đọc phân tích cách AI cá nhân hóa việc học (tự điều chỉnh bài tập theo điểm yếu, phát hiện lỗi toán, luyện phát âm tiếng Anh) và đóng vai trò trợ lý đắc lực cho học sinh."
+        "explanation": "Bài đọc phân tích cách AI cá nhân hóa việc học (tự điều chỉnh bài tập theo điểm yếu, phát hiện lỗi toán, luyện phát âm tiếng Anh) và đóng vai trò trợ lý đắc lực cho học sinh.",
+        "passageTitle": "Đoạn văn Đọc hiểu số 1: Trí tuệ nhân tạo (AI) trong giáo dục hiện đại",
+        "passage": "<p>Artificial intelligence (AI) is transforming the landscape of education in unprecedented ways. In contemporary classrooms, AI-driven learning platforms can analyze individual student performance in real time, detecting areas where a learner struggles and automatically customizing practice exercises. For example, when a grade 9 student solves math problems, the intelligent software can identify whether the mistake stems from arithmetic calculation or conceptual misunderstanding, offering targeted remedial explanations instantly.</p>\n<p>Furthermore, automated speech recognition allows language learners to practice their English pronunciation and receive instant feedback without feeling embarrassed. Rather than waiting for weekly classroom corrections, students can record their voices and hear accurate native phoneme models repeatedly.</p>\n<p>While AI cannot entirely replace inspiring human teachers who nurture empathy, ethical values, and critical thinking, it unquestionably serves as a powerful personal tutor that empowers students to learn at their own pace. Educators are no longer mere lecturers who deliver uniform content; instead, they become facilitators who mentor students in developing collaborative problem-solving skills for the 21st century.</p>"
       },
       {
         "id": "e_top_rd02",
@@ -1184,7 +1660,9 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "audioText": "Identify whether the error is due to calculation or conceptual misunderstanding.",
-        "explanation": "Dẫn chứng trong bài: 'the intelligent software can identify whether the mistake stems from arithmetic calculation or conceptual misunderstanding, offering targeted remedial explanations instantly.'"
+        "explanation": "Dẫn chứng trong bài: 'the intelligent software can identify whether the mistake stems from arithmetic calculation or conceptual misunderstanding, offering targeted remedial explanations instantly.'",
+        "passageTitle": "Đoạn văn Đọc hiểu số 1: Trí tuệ nhân tạo (AI) trong giáo dục hiện đại",
+        "passage": "<p>Artificial intelligence (AI) is transforming the landscape of education in unprecedented ways. In contemporary classrooms, AI-driven learning platforms can analyze individual student performance in real time, detecting areas where a learner struggles and automatically customizing practice exercises. For example, when a grade 9 student solves math problems, the intelligent software can identify whether the mistake stems from arithmetic calculation or conceptual misunderstanding, offering targeted remedial explanations instantly.</p>\n<p>Furthermore, automated speech recognition allows language learners to practice their English pronunciation and receive instant feedback without feeling embarrassed. Rather than waiting for weekly classroom corrections, students can record their voices and hear accurate native phoneme models repeatedly.</p>\n<p>While AI cannot entirely replace inspiring human teachers who nurture empathy, ethical values, and critical thinking, it unquestionably serves as a powerful personal tutor that empowers students to learn at their own pace. Educators are no longer mere lecturers who deliver uniform content; instead, they become facilitators who mentor students in developing collaborative problem-solving skills for the 21st century.</p>"
       },
       {
         "id": "e_top_rd03",
@@ -1200,7 +1678,9 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "audioText": "transforming means changing completely",
-        "explanation": "'transform' = biến đổi hoàn toàn, làm thay đổi sâu sắc (= changing completely)."
+        "explanation": "'transform' = biến đổi hoàn toàn, làm thay đổi sâu sắc (= changing completely).",
+        "passageTitle": "Đoạn văn Đọc hiểu số 1: Trí tuệ nhân tạo (AI) trong giáo dục hiện đại",
+        "passage": "<p>Artificial intelligence (AI) is transforming the landscape of education in unprecedented ways. In contemporary classrooms, AI-driven learning platforms can analyze individual student performance in real time, detecting areas where a learner struggles and automatically customizing practice exercises. For example, when a grade 9 student solves math problems, the intelligent software can identify whether the mistake stems from arithmetic calculation or conceptual misunderstanding, offering targeted remedial explanations instantly.</p>\n<p>Furthermore, automated speech recognition allows language learners to practice their English pronunciation and receive instant feedback without feeling embarrassed. Rather than waiting for weekly classroom corrections, students can record their voices and hear accurate native phoneme models repeatedly.</p>\n<p>While AI cannot entirely replace inspiring human teachers who nurture empathy, ethical values, and critical thinking, it unquestionably serves as a powerful personal tutor that empowers students to learn at their own pace. Educators are no longer mere lecturers who deliver uniform content; instead, they become facilitators who mentor students in developing collaborative problem-solving skills for the 21st century.</p>"
       },
       {
         "id": "e_top_rd04",
@@ -1216,7 +1696,9 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "audioText": "their refers to language learners",
-        "explanation": "'their English pronunciation' quy chiếu trực tiếp về đối tượng 'language learners' (người học ngoại ngữ) ngay trước đó."
+        "explanation": "'their English pronunciation' quy chiếu trực tiếp về đối tượng 'language learners' (người học ngoại ngữ) ngay trước đó.",
+        "passageTitle": "Đoạn văn Đọc hiểu số 1: Trí tuệ nhân tạo (AI) trong giáo dục hiện đại",
+        "passage": "<p>Artificial intelligence (AI) is transforming the landscape of education in unprecedented ways. In contemporary classrooms, AI-driven learning platforms can analyze individual student performance in real time, detecting areas where a learner struggles and automatically customizing practice exercises. For example, when a grade 9 student solves math problems, the intelligent software can identify whether the mistake stems from arithmetic calculation or conceptual misunderstanding, offering targeted remedial explanations instantly.</p>\n<p>Furthermore, automated speech recognition allows language learners to practice their English pronunciation and receive instant feedback without feeling embarrassed. Rather than waiting for weekly classroom corrections, students can record their voices and hear accurate native phoneme models repeatedly.</p>\n<p>While AI cannot entirely replace inspiring human teachers who nurture empathy, ethical values, and critical thinking, it unquestionably serves as a powerful personal tutor that empowers students to learn at their own pace. Educators are no longer mere lecturers who deliver uniform content; instead, they become facilitators who mentor students in developing collaborative problem-solving skills for the 21st century.</p>"
       },
       {
         "id": "e_top_rd05",
@@ -1232,7 +1714,9 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "audioText": "Human teachers remain vital because they provide emotional support and critical thinking.",
-        "explanation": "Dẫn chứng cuối bài: 'While AI cannot entirely replace inspiring human teachers who nurture empathy and critical thinking...' suy ra giáo viên con người vẫn có vai trò không thể thay thế vì nuôi dưỡng sự đồng cảm và tư duy phản biện."
+        "explanation": "Dẫn chứng cuối bài: 'While AI cannot entirely replace inspiring human teachers who nurture empathy and critical thinking...' suy ra giáo viên con người vẫn có vai trò không thể thay thế vì nuôi dưỡng sự đồng cảm và tư duy phản biện.",
+        "passageTitle": "Đoạn văn Đọc hiểu số 1: Trí tuệ nhân tạo (AI) trong giáo dục hiện đại",
+        "passage": "<p>Artificial intelligence (AI) is transforming the landscape of education in unprecedented ways. In contemporary classrooms, AI-driven learning platforms can analyze individual student performance in real time, detecting areas where a learner struggles and automatically customizing practice exercises. For example, when a grade 9 student solves math problems, the intelligent software can identify whether the mistake stems from arithmetic calculation or conceptual misunderstanding, offering targeted remedial explanations instantly.</p>\n<p>Furthermore, automated speech recognition allows language learners to practice their English pronunciation and receive instant feedback without feeling embarrassed. Rather than waiting for weekly classroom corrections, students can record their voices and hear accurate native phoneme models repeatedly.</p>\n<p>While AI cannot entirely replace inspiring human teachers who nurture empathy, ethical values, and critical thinking, it unquestionably serves as a powerful personal tutor that empowers students to learn at their own pace. Educators are no longer mere lecturers who deliver uniform content; instead, they become facilitators who mentor students in developing collaborative problem-solving skills for the 21st century.</p>"
       },
       {
         "id": "e_top_rd06",
@@ -1248,14 +1732,120 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correctIndex": 0,
         "correct": 0,
         "audioText": "AI is a valuable educational complement when combined with human guidance.",
-        "explanation": "Tác giả đánh giá cao lợi ích cá nhân hóa của AI nhưng cũng khẳng định giáo viên vẫn cần thiết, tức AI là công cụ bổ trợ đắc lực khi kết hợp với sự hướng dẫn của giáo viên."
+        "explanation": "Tác giả đánh giá cao lợi ích cá nhân hóa của AI nhưng cũng khẳng định giáo viên vẫn cần thiết, tức AI là công cụ bổ trợ đắc lực khi kết hợp với sự hướng dẫn của giáo viên.",
+        "passageTitle": "Đoạn văn Đọc hiểu số 1: Trí tuệ nhân tạo (AI) trong giáo dục hiện đại",
+        "passage": "<p>Artificial intelligence (AI) is transforming the landscape of education in unprecedented ways. In contemporary classrooms, AI-driven learning platforms can analyze individual student performance in real time, detecting areas where a learner struggles and automatically customizing practice exercises. For example, when a grade 9 student solves math problems, the intelligent software can identify whether the mistake stems from arithmetic calculation or conceptual misunderstanding, offering targeted remedial explanations instantly.</p>\n<p>Furthermore, automated speech recognition allows language learners to practice their English pronunciation and receive instant feedback without feeling embarrassed. Rather than waiting for weekly classroom corrections, students can record their voices and hear accurate native phoneme models repeatedly.</p>\n<p>While AI cannot entirely replace inspiring human teachers who nurture empathy, ethical values, and critical thinking, it unquestionably serves as a powerful personal tutor that empowers students to learn at their own pace. Educators are no longer mere lecturers who deliver uniform content; instead, they become facilitators who mentor students in developing collaborative problem-solving skills for the 21st century.</p>"
+      },
+      {
+        "id": "e_top_rd07",
+        "topic": "Đọc hiểu - Ý chính của bài đọc (Main Idea)",
+        "difficulty": "Thông hiểu",
+        "passageTitle": "Đoạn văn Đọc hiểu số 2: Khu dự trữ sinh quyển Rừng ngập mặn Cần Giờ",
+        "passage": "<p>Located approximately 40 kilometers southeast of downtown Ho Chi Minh City, the Can Gio Mangrove Biosphere Reserve covers an area of over 75,000 hectares and is recognized by UNESCO as Vietnam's first international mangrove biosphere reserve. Often acclaimed as the \"green lung\" of southern Vietnam, Can Gio plays an irreplaceable role in absorbing industrial carbon emissions, purifying polluted river waters flowing into the East Sea, and shielding the coastal metropolis from tropical storm surges and tidal erosion.</p>\n<p>In addition to its vital ecological functions, Can Gio is celebrated for its extraordinary biodiversity. The reserve serves as a sanctuary for hundreds of flora and fauna species, including rare migratory birds, saltwater crocodiles, mudskippers, and mischievous troops of long-tailed macaques at Monkey Island.</p>\n<p>In recent years, local authorities have pursued eco-friendly sustainable tourism models. Instead of constructing noisy concrete resorts that disrupt fragile wildlife habitats, community-based homestays and guided canoe tours through serene mangrove waterways have flourished. Visitors can experience catching crabs with local fishermen, planting young mangrove saplings with conservationists, and enjoying fresh regional specialties. Protecting Can Gio is not merely preserving a forest; it is safeguarding the climatic stability and ecological resilience of the entire Ho Chi Minh City metropolitan region for generations to come.</p>",
+        "question": "What is the primary focus of the passage?",
+        "options": [
+          "The ecological significance, biodiversity, and sustainable ecotourism of Can Gio Mangrove Biosphere Reserve.",
+          "The history of building modern industrial sea ports in Ho Chi Minh City.",
+          "The dangers of saltwater crocodiles and monkeys on tourists in southern Vietnam.",
+          "A comparison of mangrove forests around the world and in Southeast Asia."
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "The ecological significance, biodiversity, and sustainable ecotourism of Can Gio Mangrove Biosphere Reserve.",
+        "explanation": "Toàn bài đọc làm nổi bật vai trò sinh thái ('lá phổi xanh'), đa dạng sinh học phong phú và mô hình du lịch sinh thái bền vững của Rừng ngập mặn Cần Giờ."
+      },
+      {
+        "id": "e_top_rd08",
+        "topic": "Đọc hiểu - Chi tiết chức năng sinh thái (Factual Detail)",
+        "difficulty": "Thông hiểu",
+        "passageTitle": "Đoạn văn Đọc hiểu số 2: Khu dự trữ sinh quyển Rừng ngập mặn Cần Giờ",
+        "passage": "<p>Located approximately 40 kilometers southeast of downtown Ho Chi Minh City, the Can Gio Mangrove Biosphere Reserve covers an area of over 75,000 hectares and is recognized by UNESCO as Vietnam's first international mangrove biosphere reserve. Often acclaimed as the \"green lung\" of southern Vietnam, Can Gio plays an irreplaceable role in absorbing industrial carbon emissions, purifying polluted river waters flowing into the East Sea, and shielding the coastal metropolis from tropical storm surges and tidal erosion.</p>\n<p>In addition to its vital ecological functions, Can Gio is celebrated for its extraordinary biodiversity. The reserve serves as a sanctuary for hundreds of flora and fauna species, including rare migratory birds, saltwater crocodiles, mudskippers, and mischievous troops of long-tailed macaques at Monkey Island.</p>\n<p>In recent years, local authorities have pursued eco-friendly sustainable tourism models. Instead of constructing noisy concrete resorts that disrupt fragile wildlife habitats, community-based homestays and guided canoe tours through serene mangrove waterways have flourished. Visitors can experience catching crabs with local fishermen, planting young mangrove saplings with conservationists, and enjoying fresh regional specialties. Protecting Can Gio is not merely preserving a forest; it is safeguarding the climatic stability and ecological resilience of the entire Ho Chi Minh City metropolitan region for generations to come.</p>",
+        "question": "According to paragraph 1, why is Can Gio known as the 'green lung' of southern Vietnam?",
+        "options": [
+          "Because it absorbs carbon emissions, purifies river waters, and protects the city from storm surges.",
+          "Because it produces timber and firewood for industrial paper factories.",
+          "Because it is the only place in Vietnam where rare medicinal herbs grow.",
+          "Because its trees have green leaves that never shed throughout the four seasons."
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "Because it absorbs carbon emissions, purifies river waters, and protects the city from storm surges.",
+        "explanation": "Dẫn chứng đoạn 1: 'Can Gio plays an irreplaceable role in absorbing industrial carbon emissions, purifying polluted river waters flowing into the East Sea, and shielding the coastal metropolis from tropical storm surges and tidal erosion.'"
+      },
+      {
+        "id": "e_top_rd09",
+        "topic": "Đọc hiểu - Từ đồng nghĩa theo ngữ cảnh (Vocabulary in context)",
+        "difficulty": "Thông hiểu",
+        "passageTitle": "Đoạn văn Đọc hiểu số 2: Khu dự trữ sinh quyển Rừng ngập mặn Cần Giờ",
+        "passage": "<p>Located approximately 40 kilometers southeast of downtown Ho Chi Minh City, the Can Gio Mangrove Biosphere Reserve covers an area of over 75,000 hectares and is recognized by UNESCO as Vietnam's first international mangrove biosphere reserve. Often acclaimed as the \"green lung\" of southern Vietnam, Can Gio plays an irreplaceable role in absorbing industrial carbon emissions, purifying polluted river waters flowing into the East Sea, and shielding the coastal metropolis from tropical storm surges and tidal erosion.</p>\n<p>In addition to its vital ecological functions, Can Gio is celebrated for its extraordinary biodiversity. The reserve serves as a sanctuary for hundreds of flora and fauna species, including rare migratory birds, saltwater crocodiles, mudskippers, and mischievous troops of long-tailed macaques at Monkey Island.</p>\n<p>In recent years, local authorities have pursued eco-friendly sustainable tourism models. Instead of constructing noisy concrete resorts that disrupt fragile wildlife habitats, community-based homestays and guided canoe tours through serene mangrove waterways have flourished. Visitors can experience catching crabs with local fishermen, planting young mangrove saplings with conservationists, and enjoying fresh regional specialties. Protecting Can Gio is not merely preserving a forest; it is safeguarding the climatic stability and ecological resilience of the entire Ho Chi Minh City metropolitan region for generations to come.</p>",
+        "question": "The word <strong>'sanctuary'</strong> in paragraph 2 is closest in meaning to:",
+        "options": [
+          "safe haven / protected refuge",
+          "dangerous trap",
+          "crowded amusement park",
+          "busy international market"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "sanctuary means safe haven or protected refuge",
+        "explanation": "'sanctuary' = nơi trú ẩn an toàn, khu bảo tồn động vật hoang dã (= safe haven / protected refuge)."
+      },
+      {
+        "id": "e_top_rd10",
+        "topic": "Đọc hiểu - Từ quy chiếu (Pronoun reference)",
+        "difficulty": "Nhận biết",
+        "passageTitle": "Đoạn văn Đọc hiểu số 2: Khu dự trữ sinh quyển Rừng ngập mặn Cần Giờ",
+        "passage": "<p>Located approximately 40 kilometers southeast of downtown Ho Chi Minh City, the Can Gio Mangrove Biosphere Reserve covers an area of over 75,000 hectares and is recognized by UNESCO as Vietnam's first international mangrove biosphere reserve. Often acclaimed as the \"green lung\" of southern Vietnam, Can Gio plays an irreplaceable role in absorbing industrial carbon emissions, purifying polluted river waters flowing into the East Sea, and shielding the coastal metropolis from tropical storm surges and tidal erosion.</p>\n<p>In addition to its vital ecological functions, Can Gio is celebrated for its extraordinary biodiversity. The reserve serves as a sanctuary for hundreds of flora and fauna species, including rare migratory birds, saltwater crocodiles, mudskippers, and mischievous troops of long-tailed macaques at Monkey Island.</p>\n<p>In recent years, local authorities have pursued eco-friendly sustainable tourism models. Instead of constructing noisy concrete resorts that disrupt fragile wildlife habitats, community-based homestays and guided canoe tours through serene mangrove waterways have flourished. Visitors can experience catching crabs with local fishermen, planting young mangrove saplings with conservationists, and enjoying fresh regional specialties. Protecting Can Gio is not merely preserving a forest; it is safeguarding the climatic stability and ecological resilience of the entire Ho Chi Minh City metropolitan region for generations to come.</p>",
+        "question": "In the final sentence, the pronoun <strong>'it'</strong> refers to:",
+        "options": [
+          "Protecting Can Gio",
+          "The bustling city center",
+          "A concrete resort",
+          "A canoe tour"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "it refers to Protecting Can Gio",
+        "explanation": "Câu cuối: 'Protecting Can Gio is not merely preserving a forest; it is safeguarding the climatic stability...' -> 'it' thay thế cho hành động 'Protecting Can Gio' (việc bảo vệ Cần Giờ)."
+      },
+      {
+        "id": "e_top_rd11",
+        "topic": "Đọc hiểu - Tìm thông tin KHÔNG đúng (Negative Fact)",
+        "difficulty": "Vận dụng",
+        "passageTitle": "Đoạn văn Đọc hiểu số 2: Khu dự trữ sinh quyển Rừng ngập mặn Cần Giờ",
+        "passage": "<p>Located approximately 40 kilometers southeast of downtown Ho Chi Minh City, the Can Gio Mangrove Biosphere Reserve covers an area of over 75,000 hectares and is recognized by UNESCO as Vietnam's first international mangrove biosphere reserve. Often acclaimed as the \"green lung\" of southern Vietnam, Can Gio plays an irreplaceable role in absorbing industrial carbon emissions, purifying polluted river waters flowing into the East Sea, and shielding the coastal metropolis from tropical storm surges and tidal erosion.</p>\n<p>In addition to its vital ecological functions, Can Gio is celebrated for its extraordinary biodiversity. The reserve serves as a sanctuary for hundreds of flora and fauna species, including rare migratory birds, saltwater crocodiles, mudskippers, and mischievous troops of long-tailed macaques at Monkey Island.</p>\n<p>In recent years, local authorities have pursued eco-friendly sustainable tourism models. Instead of constructing noisy concrete resorts that disrupt fragile wildlife habitats, community-based homestays and guided canoe tours through serene mangrove waterways have flourished. Visitors can experience catching crabs with local fishermen, planting young mangrove saplings with conservationists, and enjoying fresh regional specialties. Protecting Can Gio is not merely preserving a forest; it is safeguarding the climatic stability and ecological resilience of the entire Ho Chi Minh City metropolitan region for generations to come.</p>",
+        "question": "Which of the following activities is <strong>NOT MENTIONED</strong> as part of the ecotourism experience in Can Gio?",
+        "options": [
+          "Riding jet skis at high speeds in prohibited animal reserves",
+          "Planting young mangrove saplings with conservationists",
+          "Catching crabs with local fishermen",
+          "Taking guided canoe tours through serene mangrove waterways"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "Riding jet skis at high speeds in prohibited animal reserves",
+        "explanation": "Đoạn 3 đề cập đến đi thuyền canoe, bắt cua với ngư dân và trồng cây ngập mặn non, hoàn toàn KHÔNG đề cập đến việc chạy môtô nước (jet ski) tốc độ cao."
+      },
+      {
+        "id": "e_top_rd12",
+        "topic": "Đọc hiểu - Câu hỏi suy luận (Inference)",
+        "difficulty": "Vận dụng",
+        "passageTitle": "Đoạn văn Đọc hiểu số 2: Khu dự trữ sinh quyển Rừng ngập mặn Cần Giờ",
+        "passage": "<p>Located approximately 40 kilometers southeast of downtown Ho Chi Minh City, the Can Gio Mangrove Biosphere Reserve covers an area of over 75,000 hectares and is recognized by UNESCO as Vietnam's first international mangrove biosphere reserve. Often acclaimed as the \"green lung\" of southern Vietnam, Can Gio plays an irreplaceable role in absorbing industrial carbon emissions, purifying polluted river waters flowing into the East Sea, and shielding the coastal metropolis from tropical storm surges and tidal erosion.</p>\n<p>In addition to its vital ecological functions, Can Gio is celebrated for its extraordinary biodiversity. The reserve serves as a sanctuary for hundreds of flora and fauna species, including rare migratory birds, saltwater crocodiles, mudskippers, and mischievous troops of long-tailed macaques at Monkey Island.</p>\n<p>In recent years, local authorities have pursued eco-friendly sustainable tourism models. Instead of constructing noisy concrete resorts that disrupt fragile wildlife habitats, community-based homestays and guided canoe tours through serene mangrove waterways have flourished. Visitors can experience catching crabs with local fishermen, planting young mangrove saplings with conservationists, and enjoying fresh regional specialties. Protecting Can Gio is not merely preserving a forest; it is safeguarding the climatic stability and ecological resilience of the entire Ho Chi Minh City metropolitan region for generations to come.</p>",
+        "question": "What can be inferred about the local authorities' approach to development in Can Gio?",
+        "options": [
+          "They prioritize long-term ecological balance over rapid, destructive commercial exploitation.",
+          "They want to stop all tourism completely to keep the forest untouched.",
+          "They encourage cutting down mangroves to build residential high-rises.",
+          "They only care about short-term profit from luxury hotels."
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "They prioritize long-term ecological balance over rapid, destructive commercial exploitation.",
+        "explanation": "Chính quyền 'pursued eco-friendly sustainable tourism models... Instead of constructing noisy concrete resorts', suy ra họ ưu tiên cân bằng sinh thái lâu dài hơn khai thác thương mại ồ ạt phá hủy môi trường."
       }
     ]
   },
-
-  // -------------------------------------------------------
-  // DẠNG 9: BIẾN ĐỔI DẠNG TỪ (WORD FORM / WORD FORMATION)
-  // -------------------------------------------------------
   {
     "id": "eng_exam_type_word_form",
     "topicId": "eng_q9_word_form",
@@ -1267,7 +1857,7 @@ window.ENGLISH_TOPIC_EXAMS = [
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 9",
     "durationMinutes": 20,
-    "totalQuestions": 10,
+    "totalQuestions": 15,
     "description": "Luyện tập 100% chuyên sâu bài tập biến đổi từ loại (Word Form - đặc sản ăn trọn điểm thi vào 10): Phân tích vị trí ngữ pháp trong câu để xác định Danh từ, Động từ, Tính từ hay Trạng từ, kết hợp các tiền tố/hậu tố un-, dis-, -tion, -ment, -ful, -ly.",
     "questions": [
       {
@@ -1429,13 +2019,89 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correct": 0,
         "audioText": "The tropical typhoon caused disastrous damage to the central coastal provinces.",
         "explanation": "Đứng trước danh từ 'damage' (thiệt hại) ta cần một tính từ: 'disastrous' (thảm khốc, nặng nề)."
+      },
+      {
+        "id": "e_top_wf11",
+        "topic": "Word form: Adjective đi với giới từ of (pride -> proud of)",
+        "difficulty": "Nhận biết",
+        "question": "Parents are always ________ of their children when they pass the exam. (PRIDE)",
+        "options": [
+          "proud",
+          "proudly",
+          "prideful",
+          "pride"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "Parents are always proud of their children when they pass the exam.",
+        "explanation": "Cấu trúc tính từ: 'be proud of sb/sth' = tự hào về ai/cái gì. Danh từ là 'pride' (take pride in)."
+      },
+      {
+        "id": "e_top_wf12",
+        "topic": "Word form: Noun chỉ sự phát minh (invent -> invention)",
+        "difficulty": "Nhận biết",
+        "question": "The internet is considered one of the greatest ________ of human history. (INVENT)",
+        "options": [
+          "inventions",
+          "inventors",
+          "inventive",
+          "inventing"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "The internet is considered one of the greatest inventions of human history.",
+        "explanation": "Đứng sau 'the greatest' ta cần danh từ chỉ phát minh: 'inventions' (số nhiều vì sau 'one of the greatest')."
+      },
+      {
+        "id": "e_top_wf13",
+        "topic": "Word form: Noun chỉ buổi biểu diễn (perform -> performance)",
+        "difficulty": "Thông hiểu",
+        "question": "The students gave a spectacular musical ________ at the school closing ceremony. (PERFORM)",
+        "options": [
+          "performance",
+          "performer",
+          "performing",
+          "performed"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "The students gave a spectacular musical performance at the school closing ceremony.",
+        "explanation": "Sau tính từ 'musical' ta cần một danh từ chỉ buổi biểu diễn: 'performance'."
+      },
+      {
+        "id": "e_top_wf14",
+        "topic": "Word form: Adjective đứng trước danh từ (nature -> natural)",
+        "difficulty": "Nhận biết",
+        "question": "Vietnam is gifted with numerous breathtaking ________ wonders like Ha Long Bay. (NATURE)",
+        "options": [
+          "natural",
+          "naturally",
+          "naturalist",
+          "nature"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "Vietnam is gifted with numerous breathtaking natural wonders like Ha Long Bay.",
+        "explanation": "Đứng trước danh từ 'wonders' ta cần tính từ: 'natural wonders' = các kỳ quan thiên nhiên."
+      },
+      {
+        "id": "e_top_wf15",
+        "topic": "Word form: Noun mang nghĩa bóng tối (dark -> darkness)",
+        "difficulty": "Thông hiểu",
+        "question": "The sudden power blackout plunged the whole neighborhood into complete ________. (DARK)",
+        "options": [
+          "darkness",
+          "darken",
+          "darkly",
+          "darker"
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "The sudden power blackout plunged the whole neighborhood into complete darkness.",
+        "explanation": "Sau tính từ 'complete' ta cần danh từ: 'darkness' = bóng tối (chìm vào bóng tối hoàn toàn)."
       }
     ]
   },
-
-  // -------------------------------------------------------
-  // DẠNG 10: VIẾT LẠI CÂU TƯƠNG ĐƯƠNG (SENTENCE TRANSFORMATION)
-  // -------------------------------------------------------
   {
     "id": "eng_exam_type_transformation",
     "topicId": "eng_q10_transformation",
@@ -1447,7 +2113,7 @@ window.ENGLISH_TOPIC_EXAMS = [
     "isSingleTopic": true,
     "badgeText": "🎯 Chuyên Đề: Dạng 10",
     "durationMinutes": 20,
-    "totalQuestions": 8,
+    "totalQuestions": 12,
     "description": "Luyện tập 100% chuyên sâu kỹ năng chọn câu đồng nghĩa chuẩn tuyển sinh vào 10: Chuyển đổi Although <-> In spite of, Because <-> Because of, Active <-> Passive, Direct <-> Reported Speech, If not <-> Unless và thì Hiện tại hoàn thành <-> Quá khứ đơn.",
     "questions": [
       {
@@ -1577,6 +2243,70 @@ window.ENGLISH_TOPIC_EXAMS = [
         "correct": 0,
         "audioText": "Minh set the alarm clock for 5:30 AM so as not to be late for the exam.",
         "explanation": "Chỉ mục đích phủ định: 'so that S wouldn't V' <=> 'so as not to V' hoặc 'in order not to V' (từ 'not' luôn đứng trước 'to')."
+      },
+      {
+        "id": "e_top_tr09",
+        "topic": "Chuyển đổi Used to V sang No longer V",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the sentence that has the CLOSEST meaning to the original one:<br><strong>'Mr. Hai used to smoke 20 cigarettes a day, but he stopped last year.'</strong>",
+        "options": [
+          "Mr. Hai no longer smokes cigarettes.",
+          "Mr. Hai is used to smoking 20 cigarettes.",
+          "Mr. Hai still smokes 20 cigarettes every day.",
+          "Mr. Hai started smoking cigarettes last year."
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "Mr. Hai no longer smokes cigarettes.",
+        "explanation": "Cấu trúc: 'used to V ... but stopped' <=> 'S + no longer + V(hiện tại)' (không còn làm việc đó nữa)."
+      },
+      {
+        "id": "e_top_tr10",
+        "topic": "Chuyển đổi Prefer V-ing to V-ing sang Would rather V than V",
+        "difficulty": "Thông hiểu",
+        "question": "Choose the sentence that has the CLOSEST meaning to the original one:<br><strong>'Lan prefers reading English books to playing video games.'</strong>",
+        "options": [
+          "Lan would rather read English books than play video games.",
+          "Lan would rather reading English books than playing video games.",
+          "Lan likes playing video games more than reading books.",
+          "Lan would rather to read English books than play games."
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "Lan would rather read English books than play video games.",
+        "explanation": "Công thức tương đương: Prefer + V-ing + TO + V-ing <=> Would rather + V-bare + THAN + V-bare."
+      },
+      {
+        "id": "e_top_tr11",
+        "topic": "Chuyển đổi So... that sang Too... for sb to V",
+        "difficulty": "Vận dụng",
+        "question": "Choose the sentence that has the CLOSEST meaning to the original one:<br><strong>'This math problem is so difficult that none of the students can solve it.'</strong>",
+        "options": [
+          "This math problem is too difficult for the students to solve.",
+          "This math problem is easy enough for the students to solve.",
+          "This math problem is too difficult that the students solve it.",
+          "This math problem is so difficult for the students solving."
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "This math problem is too difficult for the students to solve.",
+        "explanation": "Cấu trúc: S + be + so + adj + that + S + cannot + V <=> S + be + too + adj + (for sb) + to V."
+      },
+      {
+        "id": "e_top_tr12",
+        "topic": "Chuyển đổi câu điều kiện If loại 3 sang But for / Without",
+        "difficulty": "Vận dụng cao",
+        "question": "Choose the sentence that has the CLOSEST meaning to the original one:<br><strong>'Without your helpful advice, I wouldn't have passed the examination.'</strong>",
+        "options": [
+          "If you hadn't given me helpful advice, I wouldn't have passed the examination.",
+          "If you gave me helpful advice, I would pass the examination.",
+          "Unless you gave me helpful advice, I wouldn't pass the exam.",
+          "Because of your advice, I couldn't pass the examination."
+        ],
+        "correctIndex": 0,
+        "correct": 0,
+        "audioText": "If you hadn't given me helpful advice, I wouldn't have passed the examination.",
+        "explanation": "Cấu trúc giả định quá khứ: Without + Noun <=> If it hadn't been for + Noun / If + S + hadn't + V3."
       }
     ]
   }
