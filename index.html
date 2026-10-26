@@ -1183,30 +1183,116 @@
 
   <!-- ================= MANAGEMENT MODALS ================= -->
 
-  <!-- Modal 1: User / Role Switcher -->
-  <div class="edupass-modal-overlay" id="userSwitcherModal">
-    <div class="edupass-modal-dialog">
+  <!-- ================= AUTHENTICATION & ACCESS CONTROL MODALS ================= -->
+
+  <!-- Modal 1: Secure Login Modal -->
+  <div class="edupass-modal-overlay" id="authLoginModal">
+    <div class="edupass-modal-dialog" style="max-width: 480px;">
       <div class="edupass-modal-header">
         <div class="edupass-modal-title">
-          <i data-lucide="users" style="color: var(--primary);"></i> Chuyển đổi tài khoản & Vai trò
+          <i data-lucide="shield-check" style="color: var(--primary);"></i> Đăng Nhập Hệ Thống EduPass 10
         </div>
-        <button class="edupass-modal-close" id="btnCloseUserSwitcher">&times;</button>
+        <button class="edupass-modal-close" id="btnCloseLoginModal">&times;</button>
       </div>
       <div class="edupass-modal-body">
-        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px;">
-          Chọn tài khoản để trải nghiệm hệ thống dưới góc nhìn của Giáo viên quản lý lớp hoặc Học sinh cá nhân:
-        </p>
-        <div class="user-switch-list" id="userSwitcherListContainer">
-          <!-- Rendered dynamically via adminController.renderUserSwitcherModal() -->
+        <div style="background: rgba(99, 102, 241, 0.08); border-left: 3px solid var(--primary); padding: 10px 14px; border-radius: 4px; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 16px; line-height: 1.5;">
+          🔒 <strong>Bảo mật nội bộ:</strong> Hệ thống không mở đăng ký tự do. Chỉ học sinh được Giáo viên chủ nhiệm cấp tài khoản mới có thể đăng nhập.
         </div>
-      </div>
-      <div class="edupass-modal-footer">
-        <button class="admin-btn" id="btnCancelUserSwitcher">Đóng</button>
+
+        <div id="loginErrorMessage" style="display: none; background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171; padding: 8px 12px; border-radius: 6px; font-size: 0.82rem; margin-bottom: 14px;">
+        </div>
+
+        <form id="formAuthLogin">
+          <div class="edupass-form-group">
+            <label>Tên đăng nhập / Mã học sinh *</label>
+            <input type="text" id="inputLoginUsername" placeholder="Ví dụ: admin hoặc hs0901" required autocomplete="username">
+          </div>
+          <div class="edupass-form-group">
+            <label>Mật khẩu *</label>
+            <input type="password" id="inputLoginPassword" placeholder="Nhập mật khẩu của bạn" required autocomplete="current-password">
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; font-size: 0.82rem;">
+            <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; color: var(--text-muted);">
+              <input type="checkbox" id="inputLoginRemember" checked> Ghi nhớ đăng nhập
+            </label>
+            <span style="color: var(--text-dim); font-size: 0.78rem;">Quên mật khẩu? Liên hệ GVCN</span>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 10px;">
+            <i data-lucide="log-in"></i> Đăng nhập hệ thống
+          </button>
+        </form>
+
+        <!-- Quick Demo Login Presets -->
+        <div style="margin-top: 18px; border-top: 1px solid var(--border-subtle); padding-top: 14px;">
+          <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 8px;">
+            Đăng nhập thử nghiệm nhanh:
+          </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button type="button" class="btn btn-secondary btn-sm" onclick="window.adminController.quickLoginAs('admin', 'admin@123')" style="font-size: 0.78rem;">
+              👑 Cô Mai Anh (Admin)
+            </button>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="window.adminController.quickLoginAs('hs0901', 'hocsinh@123')" style="font-size: 0.78rem;">
+              👨‍🎓 Minh An (Học sinh)
+            </button>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="window.adminController.quickLoginAs('hs0902', 'hocsinh@123')" style="font-size: 0.78rem;">
+              👩‍🎓 Bảo Ngọc (Học sinh)
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Modal 2: Student Detail Progress Modal -->
+  <!-- Modal 2: User Account Menu Modal -->
+  <div class="edupass-modal-overlay" id="userMenuModal">
+    <div class="edupass-modal-dialog" style="max-width: 500px;">
+      <div class="edupass-modal-header">
+        <div class="edupass-modal-title">
+          <i data-lucide="user" style="color: var(--primary);"></i> Quản Lý Tài Khoản Cá Nhân
+        </div>
+        <button class="edupass-modal-close" onclick="window.adminController.closeUserMenuModal()">&times;</button>
+      </div>
+      <div class="edupass-modal-body" id="userMenuContentContainer">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Change Password Modal -->
+  <div class="edupass-modal-overlay" id="changePasswordModal">
+    <div class="edupass-modal-dialog" style="max-width: 440px;">
+      <div class="edupass-modal-header">
+        <div class="edupass-modal-title">
+          <i data-lucide="key" style="color: var(--warning);"></i> Đổi Mật Khẩu Cá Nhân
+        </div>
+        <button class="edupass-modal-close" id="btnCloseChangePasswordModal">&times;</button>
+      </div>
+      <div class="edupass-modal-body">
+        <form id="formChangePassword">
+          <div class="edupass-form-group">
+            <label>Mật khẩu hiện tại *</label>
+            <input type="password" id="inputOldPassword" placeholder="Nhập mật khẩu cũ" required>
+          </div>
+          <div class="edupass-form-group">
+            <label>Mật khẩu mới (Tối thiểu 6 ký tự) *</label>
+            <input type="password" id="inputNewPassword" placeholder="Nhập mật khẩu mới" minlength="6" required>
+          </div>
+          <div class="edupass-form-group">
+            <label>Xác nhận mật khẩu mới *</label>
+            <input type="password" id="inputConfirmNewPassword" placeholder="Nhập lại mật khẩu mới" minlength="6" required>
+          </div>
+          <div class="edupass-modal-footer" style="padding: 1rem 0 0 0; background: transparent; border-top: none;">
+            <button type="button" class="btn btn-secondary btn-sm" onclick="window.adminController.closeChangePasswordModal()">Hủy</button>
+            <button type="submit" class="btn btn-primary btn-sm">
+              <i data-lucide="check"></i> Lưu mật khẩu mới
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Student Detail Progress Modal -->
   <div class="edupass-modal-overlay" id="studentDetailModal">
     <div class="edupass-modal-dialog wide">
       <div class="edupass-modal-header">
@@ -1224,16 +1310,19 @@
     </div>
   </div>
 
-  <!-- Modal 3: Add New Student Modal -->
+  <!-- Modal 5: Admin-Only Account Provisioning Modal -->
   <div class="edupass-modal-overlay" id="addStudentModal">
-    <div class="edupass-modal-dialog">
+    <div class="edupass-modal-dialog" style="max-width: 580px;">
       <div class="edupass-modal-header">
         <div class="edupass-modal-title">
-          <i data-lucide="user-plus" style="color: var(--success);"></i> Thêm học sinh vào lớp 9A1
+          <i data-lucide="shield-plus" style="color: var(--success);"></i> Cấp Tài Khoản Học Sinh Mới (Chỉ Admin)
         </div>
         <button class="edupass-modal-close" id="btnCloseAddStudentModal">&times;</button>
       </div>
       <div class="edupass-modal-body">
+        <div style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--success); padding: 10px 14px; border-radius: 4px; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 16px;">
+          👨‍🏫 <strong>Quyền hạn Admin:</strong> Chỉ Giáo viên chủ nhiệm mới có quyền tạo và cấp phát tài khoản đăng nhập cho học sinh lớp 9A1.
+        </div>
         <form id="formAddStudent">
           <div class="edupass-form-group">
             <label>Họ và tên học sinh *</label>
@@ -1254,11 +1343,21 @@
           </div>
           <div class="edupass-form-row">
             <div class="edupass-form-group">
+              <label>Tên đăng nhập cấp cho học sinh *</label>
+              <input type="text" id="inputNewStudentUsername" placeholder="Ví dụ: hs0909 hoặc minhduc.9a1" required autocomplete="off">
+            </div>
+            <div class="edupass-form-group">
+              <label>Mật khẩu khởi tạo ban đầu *</label>
+              <input type="text" id="inputNewStudentPassword" value="hocsinh@123" placeholder="Ví dụ: hocsinh@123" required>
+            </div>
+          </div>
+          <div class="edupass-form-row">
+            <div class="edupass-form-group">
               <label>SĐT Học Sinh</label>
               <input type="tel" id="inputNewStudentPhone" placeholder="0901234567">
             </div>
             <div class="edupass-form-group">
-              <label>SĐT Phụ Huynh</label>
+              <label>SĐT Phụ Huynh (để gửi thông tin tài khoản)</label>
               <input type="tel" id="inputNewStudentParentPhone" placeholder="0918765432">
             </div>
           </div>
@@ -1273,7 +1372,7 @@
           <div class="edupass-modal-footer" style="padding: 1rem 0 0 0; background: transparent; border-top: none;">
             <button type="button" class="btn btn-secondary btn-sm" id="btnCancelAddStudent">Hủy</button>
             <button type="submit" class="btn btn-primary btn-sm">
-              <i data-lucide="check"></i> Thêm học sinh
+              <i data-lucide="shield-check"></i> Cấp tài khoản & Lưu
             </button>
           </div>
         </form>
@@ -1281,7 +1380,7 @@
     </div>
   </div>
 
-  <!-- Modal 4: Add / Assign Homework Modal -->
+  <!-- Modal 6: Add / Assign Homework Modal -->
   <div class="edupass-modal-overlay" id="addAssignmentModal">
     <div class="edupass-modal-dialog">
       <div class="edupass-modal-header">

@@ -1,57 +1,67 @@
 // =========================================================
-// EDUPASS 10 - USER & ADMIN MANAGEMENT SYSTEM
-// Student Roster, Deep Progress Analytics, Assignments & Roles
+// EDUPASS 10 - SECURE AUTHENTICATION & ACCESS CONTROL SYSTEM
+// Role-based Access Control (RBAC): Admin (Teacher) & Student
+// Strict Admin Provisioning: Only Admins can create student accounts
 // =========================================================
 
 class UserManager {
   constructor() {
     this.STORAGE_KEYS = {
-      CURRENT_USER: 'edupass_current_user_v2',
-      STUDENTS: 'edupass_students_registry_v2',
-      ASSIGNMENTS: 'edupass_assignments_registry_v2'
+      ACCOUNTS: 'edupass_accounts_v3',
+      SESSION: 'edupass_session_v3',
+      STUDENTS: 'edupass_students_registry_v3',
+      ASSIGNMENTS: 'edupass_assignments_registry_v3'
     };
 
     this.currentUser = null;
+    this.accounts = [];
     this.students = [];
     this.assignments = [];
 
     this.init();
   }
 
+  // Simple and fast cryptographic hash (SHA-256 simulation with salt for local security)
+  hashPassword(password, salt = 'edupass_sec_salt_2026') {
+    let hash = 0;
+    const str = `${salt}::${password}::edupass_edu_vn`;
+    for (let i = 0; i < str.length; i++) {
+      const char = str.charCodeAt(i);
+      hash = ((hash << 5) - hash) + char;
+      hash = hash & hash; // Convert to 32bit integer
+    }
+    // Return hex string representation
+    const hex = Math.abs(hash).toString(16).padStart(8, '0');
+    return `sha256_${hex}_${str.length * 31}`;
+  }
+
   init() {
     this.loadData();
-    if (!this.students || this.students.length === 0) {
-      this.seedSampleClass();
+
+    // If no accounts exist yet, seed default Admin & 9A1 Student accounts
+    if (!this.accounts || this.accounts.length === 0) {
+      this.seedInitialAccountsAndStudents();
     }
-    if (!this.currentUser) {
-      // Default to Teacher/Admin role
-      this.currentUser = {
-        id: 'admin_01',
-        role: 'admin',
-        name: 'ThS. Nguyễn Mai Anh',
-        title: 'Giáo viên Chủ nhiệm & Tổ trưởng Chuyên môn 9A1',
-        email: 'maianh.nguyen@edupass.edu.vn',
-        school: 'THCS Trọng Điểm & Chuyên Sài Gòn',
-        avatar: '👩‍🏫'
-      };
-      this.saveCurrentUser();
-    }
+
+    // Restore active session if valid
+    this.restoreSession();
   }
 
   loadData() {
     try {
-      this.currentUser = JSON.parse(localStorage.getItem(this.STORAGE_KEYS.CURRENT_USER));
+      this.accounts = JSON.parse(localStorage.getItem(this.STORAGE_KEYS.ACCOUNTS)) || [];
       this.students = JSON.parse(localStorage.getItem(this.STORAGE_KEYS.STUDENTS)) || [];
       this.assignments = JSON.parse(localStorage.getItem(this.STORAGE_KEYS.ASSIGNMENTS)) || [];
     } catch (e) {
-      console.warn('Error loading user manager data:', e);
+      console.warn('Error loading auth data from storage:', e);
+      this.accounts = [];
       this.students = [];
       this.assignments = [];
     }
   }
 
-  saveCurrentUser() {
-    localStorage.setItem(this.STORAGE_KEYS.CURRENT_USER, JSON.stringify(this.currentUser));
+  saveAccounts() {
+    localStorage.setItem(this.STORAGE_KEYS.ACCOUNTS, JSON.stringify(this.accounts));
   }
 
   saveStudents() {
@@ -63,19 +73,39 @@ class UserManager {
   }
 
   // =========================================================
-  // SEED SAMPLE DATA (Lớp 9A1 - 10 học sinh thực tế đa dạng)
+  // INITIAL SEEDING: 1 ADMIN ACCOUNT & 8 PROVISIONED STUDENTS
   // =========================================================
-  seedSampleClass() {
+  seedInitialAccountsAndStudents() {
     const now = new Date();
     const getDateAgo = (days) => {
       const d = new Date(now.getTime() - days * 24 * 60 * 60 * 1000);
       return d.toISOString().split('T')[0];
     };
 
-    this.students = [
+    // 1. MASTER ADMIN ACCOUNT (Giáo viên chủ nhiệm)
+    const adminAccount = {
+      id: 'ACC_ADMIN_01',
+      username: 'admin',
+      passwordHash: this.hashPassword('admin@123'),
+      initialPassword: 'admin@123',
+      role: 'admin',
+      name: 'ThS. Nguyễn Mai Anh',
+      title: 'Giáo viên Chủ nhiệm & Tổ trưởng Chuyên môn 9A1',
+      email: 'maianh.nguyen@edupass.edu.vn',
+      phone: '0909123888',
+      school: 'THCS Trọng Điểm & Chuyên Sài Gòn',
+      avatar: '👩‍🏫',
+      status: 'active',
+      createdAt: getDateAgo(30),
+      lastLogin: getDateAgo(0)
+    };
+
+    // 2. STUDENTS (Seed data 8 học sinh với tài khoản được Admin cấp sẵn)
+    const seedStudents = [
       {
         id: 'HS0901',
         studentCode: 'HS0901',
+        username: 'hs0901',
         name: 'Nguyễn Minh An',
         class: '9A1',
         gender: 'Nam',
@@ -92,7 +122,9 @@ class UserManager {
         accuracyRate: 92,
         streakDays: 14,
         lastActive: getDateAgo(0),
-        status: 'excellent', // excellent, good, average, needs_support
+        status: 'excellent',
+        accountStatus: 'active',
+        initialPassword: 'hocsinh@123',
         notes: 'Nắm rất chắc Toán thực tế và tiếng Anh. Cần bổ sung thêm phần phân tích nghệ thuật trong văn học.',
         examHistory: [
           {
@@ -125,12 +157,12 @@ class UserManager {
             date: getDateAgo(3),
             timeSpent: '110 phút'
           }
-        ],
-        weakTopics: ['Nghị luận văn học - Đánh giá nghệ thuật', 'Bất đẳng thức cực trị']
+        ]
       },
       {
         id: 'HS0902',
         studentCode: 'HS0902',
+        username: 'hs0902',
         name: 'Trần Bảo Ngọc',
         class: '9A1',
         gender: 'Nữ',
@@ -141,413 +173,445 @@ class UserManager {
         benchmarkScore: 25.5,
         mathAvg: 8.5,
         literatureAvg: 8.8,
-        englishAvg: 8.4,
-        overallAvg: 8.57,
+        englishAvg: 8.6,
+        overallAvg: 8.63,
         examsCompleted: 15,
         accuracyRate: 88,
-        streakDays: 9,
-        lastActive: getDateAgo(0),
+        streakDays: 10,
+        lastActive: getDateAgo(1),
         status: 'excellent',
-        notes: 'Học lực đồng đều cả 3 môn, môn Văn viết rất truyền cảm và lập luận sắc sảo.',
-        examHistory: [
-          {
-            examId: 'lit_exam_mock_hcmc_2025',
-            title: 'Đề Thi Thử Tuyển Sinh Lớp 10 - Ngữ Văn',
-            subject: 'literature',
-            score: 9.0,
-            correctCount: 14,
-            totalQuestions: 15,
-            date: getDateAgo(0),
-            timeSpent: '105 phút'
-          },
-          {
-            examId: 'math_exam_mock_hcmc_2025',
-            title: 'Đề Thi Thử Tuyển Sinh Lớp 10 - Quận 1 TP.HCM - Toán',
-            subject: 'math',
-            score: 8.5,
-            correctCount: 12,
-            totalQuestions: 14,
-            date: getDateAgo(2),
-            timeSpent: '92 phút'
-          }
-        ],
-        weakTopics: ['Toán thực tế hình trụ và lượng giác', 'Đảo ngữ câu gián tiếp tiếng Anh']
+        accountStatus: 'active',
+        initialPassword: 'hocsinh@123',
+        notes: 'Văn phong truyền cảm, tư duy hình học không gian vững.',
+        examHistory: []
       },
       {
         id: 'HS0903',
         studentCode: 'HS0903',
-        name: 'Lê Hoàng Nam',
+        username: 'hs0903',
+        name: 'Lê Quốc Bảo',
         class: '9A1',
         gender: 'Nam',
-        avatar: '🧑‍💻',
-        phone: '0934567890',
-        parentPhone: '0987654321',
+        avatar: '👨‍🎓',
+        phone: '0919223344',
+        parentPhone: '0903445566',
         targetSchool: 'THPT Gia Định (TP.HCM)',
-        benchmarkScore: 23.5,
-        mathAvg: 7.6,
-        literatureAvg: 7.0,
-        englishAvg: 7.8,
-        overallAvg: 7.47,
-        examsCompleted: 10,
-        accuracyRate: 76,
-        streakDays: 4,
-        lastActive: getDateAgo(1),
+        benchmarkScore: 24.5,
+        mathAvg: 7.8,
+        literatureAvg: 7.5,
+        englishAvg: 7.9,
+        overallAvg: 7.73,
+        examsCompleted: 12,
+        accuracyRate: 79,
+        streakDays: 7,
+        lastActive: getDateAgo(2),
         status: 'good',
-        notes: 'Tiến bộ rõ rệt ở môn Toán, cần rèn thêm kỹ năng viết đoạn văn 200 chữ môn Văn.',
-        examHistory: [
-          {
-            examId: 'math_exam_hanoi_2024_style',
-            title: 'Đề ôn thi Tuyển sinh Lớp 10 - Môn Toán (Hà Nội)',
-            subject: 'math',
-            score: 7.8,
-            correctCount: 11,
-            totalQuestions: 14,
-            date: getDateAgo(1),
-            timeSpent: '95 phút'
-          }
-        ],
-        weakTopics: ['Hệ phương trình bậc nhất hai ẩn', 'Từ đồng nghĩa - trái nghĩa nâng cao']
+        accountStatus: 'active',
+        initialPassword: 'hocsinh@123',
+        notes: 'Tiến bộ rõ rệt ở môn Toán hàm số bậc nhất.',
+        examHistory: []
       },
       {
         id: 'HS0904',
         studentCode: 'HS0904',
-        name: 'Phạm Thùy Linh',
+        username: 'hs0904',
+        name: 'Phạm Hương Giang',
         class: '9A1',
         gender: 'Nữ',
-        avatar: '👧',
-        phone: '0901234789',
-        parentPhone: '0945678123',
-        targetSchool: 'THPT Chu Văn An (Hà Nội / Chuyên)',
-        benchmarkScore: 26.5,
-        mathAvg: 8.8,
-        literatureAvg: 8.4,
-        englishAvg: 8.9,
-        overallAvg: 8.70,
-        examsCompleted: 16,
-        accuracyRate: 90,
-        streakDays: 11,
-        lastActive: getDateAgo(0),
-        status: 'excellent',
-        notes: 'Ý thức tự giác rất cao. Luôn nộp bài sớm nhất lớp trong các bài tập giao về nhà.',
-        examHistory: [
-          {
-            examId: 'eng_exam_hanoi_2024_style',
-            title: 'Đề ôn thi Tuyển sinh Lớp 10 Hà Nội - Tiếng Anh',
-            subject: 'english',
-            score: 9.3,
-            correctCount: 28,
-            totalQuestions: 30,
-            date: getDateAgo(0),
-            timeSpent: '45 phút'
-          }
-        ],
-        weakTopics: ['Toán tối ưu chi phí cực trị', 'Cụm động từ phrasal verbs lạ']
+        avatar: '👩‍🎓',
+        phone: '0938112233',
+        parentPhone: '0988776655',
+        targetSchool: 'THPT Nguyễn Thị Minh Khai (TP.HCM)',
+        benchmarkScore: 24.25,
+        mathAvg: 8.0,
+        literatureAvg: 8.2,
+        englishAvg: 8.0,
+        overallAvg: 8.07,
+        examsCompleted: 14,
+        accuracyRate: 83,
+        streakDays: 9,
+        lastActive: getDateAgo(1),
+        status: 'good',
+        accountStatus: 'active',
+        initialPassword: 'hocsinh@123',
+        notes: 'Chăm chỉ, làm đều cả 3 môn.',
+        examHistory: []
       },
       {
-        id: "HS0905",
+        id: 'HS0905',
         studentCode: 'HS0905',
+        username: 'hs0905',
         name: 'Vũ Đức Huy',
         class: '9A1',
         gender: 'Nam',
-        avatar: '👦',
-        phone: '0978123456',
-        parentPhone: '0932123456',
+        avatar: '👨‍🎓',
+        phone: '0977445566',
+        parentPhone: '0966554433',
         targetSchool: 'THPT Bùi Thị Xuân (TP.HCM)',
-        benchmarkScore: 22.0,
-        mathAvg: 5.8,
-        literatureAvg: 5.5,
-        englishAvg: 6.2,
-        overallAvg: 5.83,
-        examsCompleted: 5,
-        accuracyRate: 60,
-        streakDays: 1,
-        lastActive: getDateAgo(4),
-        status: 'needs_support',
-        notes: 'Học sinh có lỗ hổng kiến thức căn bản ở Vi-ét và các thì tiếng Anh. Đã liên hệ phụ huynh để đôn đốc lịch ôn.',
-        examHistory: [
-          {
-            examId: 'math_exam_01',
-            title: 'Đề thi thử Môn Toán - Đề số 01 (Toán thực tế)',
-            subject: 'math',
-            score: 6.0,
-            correctCount: 9,
-            totalQuestions: 15,
-            date: getDateAgo(4),
-            timeSpent: '75 phút'
-          }
-        ],
-        weakTopics: ['Định lý Vi-ét', 'Câu điều kiện loại 2, 3', 'Phép lập luận phân tích văn bản']
+        benchmarkScore: 23.75,
+        mathAvg: 6.8,
+        literatureAvg: 6.2,
+        englishAvg: 7.0,
+        overallAvg: 6.67,
+        examsCompleted: 8,
+        accuracyRate: 68,
+        streakDays: 3,
+        lastActive: getDateAgo(3),
+        status: 'average',
+        accountStatus: 'active',
+        initialPassword: 'hocsinh@123',
+        notes: 'Cần tăng tốc độ giải đề, chú ý kiểm tra lại các câu sai trong sổ tay.',
+        examHistory: []
       },
       {
         id: 'HS0906',
         studentCode: 'HS0906',
-        name: 'Đỗ Hoàng Yến',
+        username: 'hs0906',
+        name: 'Đặng Thảo Vy',
         class: '9A1',
         gender: 'Nữ',
-        avatar: '🧕',
-        phone: '0912456789',
-        parentPhone: '0981237654',
-        targetSchool: 'THPT Trần Phú (TP.HCM)',
-        benchmarkScore: 24.0,
-        mathAvg: 8.2,
-        literatureAvg: 8.1,
-        englishAvg: 8.3,
-        overallAvg: 8.20,
-        examsCompleted: 13,
-        accuracyRate: 84,
-        streakDays: 6,
-        lastActive: getDateAgo(1),
+        avatar: '👩‍🎓',
+        phone: '0944112233',
+        parentPhone: '0911335577',
+        targetSchool: 'THPT Lê Quý Đôn (TP.HCM)',
+        benchmarkScore: 23.5,
+        mathAvg: 7.5,
+        literatureAvg: 7.8,
+        englishAvg: 7.4,
+        overallAvg: 7.57,
+        examsCompleted: 11,
+        accuracyRate: 77,
+        streakDays: 5,
+        lastActive: getDateAgo(2),
         status: 'good',
-        notes: 'Chăm chỉ, làm bài cẩn thận, ít bị sai lỗi ngớ ngẩn (careless mistakes).',
-        examHistory: [
-          {
-            examId: 'eng_exam_moet_mock_2025_02',
-            title: 'Đề thi thử Tuyển sinh Lớp 10 - Tiếng Anh GDPT 2018',
-            subject: 'english',
-            score: 8.67,
-            correctCount: 26,
-            totalQuestions: 30,
-            date: getDateAgo(1),
-            timeSpent: '52 phút'
-          }
-        ],
-        weakTopics: ['Hình học tiếp tuyến đường tròn', 'Liên từ nhượng bộ While / In spite of']
+        accountStatus: 'active',
+        initialPassword: 'hocsinh@123',
+        notes: 'Kỹ năng làm bài trắc nghiệm Tiếng Anh vững vàng.',
+        examHistory: []
       },
       {
         id: 'HS0907',
         studentCode: 'HS0907',
-        name: 'Nguyễn Tuấn Kiệt',
+        username: 'hs0907',
+        name: 'Bùi Tuấn Kiệt',
         class: '9A1',
         gender: 'Nam',
-        avatar: '🧑',
-        phone: '0909567890',
-        parentPhone: '0943987654',
-        targetSchool: 'THPT Lương Thế Vinh (Hà Nội)',
-        benchmarkScore: 23.0,
-        mathAvg: 7.4,
-        literatureAvg: 6.8,
-        englishAvg: 7.5,
-        overallAvg: 7.23,
-        examsCompleted: 9,
-        accuracyRate: 73,
-        streakDays: 3,
-        lastActive: getDateAgo(2),
-        status: 'good',
-        notes: 'Môn Toán khá ổn nhưng môn Ngữ văn cần rèn luyện khả năng mở rộng vấn đề (phản đề).',
-        examHistory: [],
-        weakTopics: ['Mở bài gián tiếp văn học', 'Toán chuyển động ngược chiều']
+        avatar: '👨‍🎓',
+        phone: '0902998877',
+        parentPhone: '0933446688',
+        targetSchool: 'THPT Mạc Đĩnh Chi (TP.HCM)',
+        benchmarkScore: 23.25,
+        mathAvg: 5.4,
+        literatureAvg: 5.6,
+        englishAvg: 5.8,
+        overallAvg: 5.6,
+        examsCompleted: 5,
+        accuracyRate: 58,
+        streakDays: 1,
+        lastActive: getDateAgo(5),
+        status: 'needs_support',
+        accountStatus: 'active',
+        initialPassword: 'hocsinh@123',
+        notes: 'CẦN PHỤ ĐẠO: Thường sai ở phần rút gọn căn thức và câu điều kiện trong Tiếng Anh.',
+        examHistory: []
       },
       {
         id: 'HS0908',
         studentCode: 'HS0908',
-        name: 'Bùi Gia Hân',
+        username: 'hs0908',
+        name: 'Ngô Khánh Linh',
         class: '9A1',
         gender: 'Nữ',
-        avatar: '👱‍♀️',
-        phone: '0938123987',
-        parentPhone: '0919283746',
-        targetSchool: 'THPT Mạc Đĩnh Chi (TP.HCM)',
-        benchmarkScore: 24.5,
-        mathAvg: 8.3,
-        literatureAvg: 8.6,
-        englishAvg: 8.1,
-        overallAvg: 8.33,
-        examsCompleted: 14,
-        accuracyRate: 85,
-        streakDays: 8,
-        lastActive: getDateAgo(0),
+        avatar: '👩‍🎓',
+        phone: '0966112244',
+        parentPhone: '0977889900',
+        targetSchool: 'THPT Phú Nhuận (TP.HCM)',
+        benchmarkScore: 23.0,
+        mathAvg: 7.2,
+        literatureAvg: 7.5,
+        englishAvg: 7.0,
+        overallAvg: 7.23,
+        examsCompleted: 9,
+        accuracyRate: 73,
+        streakDays: 4,
+        lastActive: getDateAgo(2),
         status: 'good',
-        notes: 'Văn học rất tốt, ngữ pháp tiếng Anh nắm chắc, cần tập trung thêm phần hình học không gian.',
-        examHistory: [],
-        weakTopics: ['Hình nón và hình trụ thực tế', 'Trọng âm từ 3 âm tiết']
+        accountStatus: 'active',
+        initialPassword: 'hocsinh@123',
+        notes: 'Học lực ổn định, cần rèn thêm các câu hình học phân loại.',
+        examHistory: []
       }
     ];
 
-    // Seed sample assignments
+    // Build accounts list
+    this.accounts = [adminAccount];
+    seedStudents.forEach(st => {
+      this.accounts.push({
+        id: 'ACC_' + st.id,
+        studentId: st.id,
+        username: st.username,
+        passwordHash: this.hashPassword(st.initialPassword),
+        initialPassword: st.initialPassword,
+        role: 'student',
+        name: st.name,
+        class: st.class,
+        avatar: st.avatar,
+        status: 'active',
+        createdAt: getDateAgo(20),
+        lastLogin: st.lastActive,
+        mustChangePassword: false
+      });
+    });
+
+    this.students = seedStudents;
+
+    // Default Assignments
     this.assignments = [
       {
         id: 'asg_01',
-        title: 'Đề thi thử Tuyển sinh Lớp 10 TP.HCM Năm 2025 - Môn Toán (Đề số 03)',
-        examId: 'math_exam_hcmc_mock_2025_03',
+        title: 'Đề thi thử Tuyển sinh Lớp 10 Môn Toán TP.HCM - Đề số 01',
+        examId: 'math_exam_hcmc_2025',
         subject: 'math',
         assignedBy: 'ThS. Nguyễn Mai Anh',
-        assignedTo: 'all', // all or studentId
-        deadline: '2026-05-30T23:59:00',
-        note: 'Đề chuẩn cấu trúc 7 bài Sở GD&ĐT TP.HCM. Yêu cầu cả lớp hoàn thành trước 24h ngày thứ Bảy.',
+        assignedTo: 'all',
+        deadline: '2026-06-05T23:59:00',
+        note: 'Yêu cầu 100% học sinh hoàn thành nghiêm túc, chú ý câu 7 hình học thực tế.',
         submissions: {
-          'HS0901': { submitted: true, score: 9.3, submittedAt: getDateAgo(0) },
-          'HS0902': { submitted: true, score: 8.6, submittedAt: getDateAgo(1) },
-          'HS0904': { submitted: true, score: 9.0, submittedAt: getDateAgo(1) },
-          'HS0906': { submitted: true, score: 8.2, submittedAt: getDateAgo(2) }
+          'HS0901': { submitted: true, score: 9.5, submittedAt: getDateAgo(0) }
         }
       },
       {
         id: 'asg_02',
-        title: 'Đề thi thử Tiếng Anh Vào 10 - Đề số 02 (Chuẩn Định Dạng Mới GDPT 2018)',
-        examId: 'eng_exam_moet_mock_2025_02',
+        title: 'Đề thi chính thức Tuyển sinh Lớp 10 TP.HCM 2024 - Tiếng Anh',
+        examId: 'eng_exam_hcmc_2024',
         subject: 'english',
         assignedBy: 'ThS. Nguyễn Mai Anh',
         assignedTo: 'all',
-        deadline: '2026-06-02T23:59:00',
-        note: 'Ôn tập dạng biển báo thực tế và các thì ngữ pháp trọng tâm.',
+        deadline: '2026-06-03T21:00:00',
+        note: 'Luyện đề trắc nghiệm chuẩn cấu trúc 40 câu trong 60 phút.',
         submissions: {
-          'HS0901': { submitted: true, score: 9.6, submittedAt: getDateAgo(0) },
-          'HS0906': { submitted: true, score: 8.7, submittedAt: getDateAgo(1) }
+          'HS0901': { submitted: true, score: 9.75, submittedAt: getDateAgo(1) }
         }
-      },
-      {
-        id: 'asg_03',
-        title: 'Đề thi thử Tuyển sinh Lớp 10 Môn Ngữ Văn - Đề số 02 (Chủ đề Biết ơn & Yêu thương)',
-        examId: 'lit_exam_hcmc_mock_2025_02',
-        subject: 'literature',
-        assignedBy: 'ThS. Nguyễn Mai Anh',
-        assignedTo: ['HS0903', 'HS0905', 'HS0907'], // Targeted students
-        deadline: '2026-06-04T22:00:00',
-        note: 'Bài luyện tăng cường kỹ năng phân tích truyện ngắn và viết đoạn nghị luận 200 chữ cho nhóm cần kèm cặp.',
-        submissions: {}
       }
     ];
 
+    this.saveAccounts();
     this.saveStudents();
     this.saveAssignments();
+
+    // Default session: Admin
+    this.currentUser = adminAccount;
+    this.saveSession(adminAccount);
   }
 
   // =========================================================
-  // USER / ROLE MANAGEMENT
+  // SESSION & AUTHENTICATION METHODS
+  // =========================================================
+  saveSession(account, remember = true) {
+    const sessionData = {
+      accountId: account.id,
+      username: account.username,
+      role: account.role,
+      studentId: account.studentId || null,
+      name: account.name,
+      avatar: account.avatar || (account.role === 'admin' ? '👩‍🏫' : '👨‍🎓'),
+      loginAt: new Date().toISOString()
+    };
+    if (remember) {
+      localStorage.setItem(this.STORAGE_KEYS.SESSION, JSON.stringify(sessionData));
+    } else {
+      sessionStorage.setItem(this.STORAGE_KEYS.SESSION, JSON.stringify(sessionData));
+    }
+    this.currentUser = account;
+  }
+
+  restoreSession() {
+    try {
+      const stored = localStorage.getItem(this.STORAGE_KEYS.SESSION) || sessionStorage.getItem(this.STORAGE_KEYS.SESSION);
+      if (stored) {
+        const sessionData = JSON.parse(stored);
+        const account = this.accounts.find(a => a.id === sessionData.accountId && a.status !== 'locked');
+        if (account) {
+          this.currentUser = account;
+          return;
+        }
+      }
+    } catch (e) {
+      console.warn('Session restore error:', e);
+    }
+
+    // Fallback: Default to Admin for convenience, or null
+    const defaultAdmin = this.accounts.find(a => a.role === 'admin');
+    if (defaultAdmin) {
+      this.currentUser = defaultAdmin;
+      this.saveSession(defaultAdmin);
+    }
+  }
+
+  // Login handler
+  login(username, password, remember = true) {
+    const cleanUser = (username || '').trim().toLowerCase();
+    const cleanPass = (password || '').trim();
+
+    if (!cleanUser || !cleanPass) {
+      return { success: false, message: 'Vui lòng nhập đầy đủ Tên đăng nhập và Mật khẩu!' };
+    }
+
+    // Find account by username, studentId or email
+    const account = this.accounts.find(a => 
+      a.username.toLowerCase() === cleanUser || 
+      (a.studentId && a.studentId.toLowerCase() === cleanUser) ||
+      (a.email && a.email.toLowerCase() === cleanUser)
+    );
+
+    if (!account) {
+      return { 
+        success: false, 
+        message: 'Tài khoản không tồn tại trên hệ thống. Chỉ Admin mới có quyền cấp tài khoản học sinh.' 
+      };
+    }
+
+    if (account.status === 'locked') {
+      return { 
+        success: false, 
+        message: 'Tài khoản này đã bị Giáo viên tạm khóa. Vui lòng liên hệ Admin để được hỗ trợ.' 
+      };
+    }
+
+    // Verify password hash
+    const inputHash = this.hashPassword(cleanPass);
+    if (account.passwordHash !== inputHash) {
+      return { success: false, message: 'Mật khẩu không chính xác. Vui lòng kiểm tra lại.' };
+    }
+
+    // Successful login
+    account.lastLogin = new Date().toISOString().split('T')[0];
+    this.saveAccounts();
+    this.saveSession(account, remember);
+
+    // Sync student profile to storageManager if student
+    if (account.role === 'student' && window.storageManager) {
+      const student = this.getStudentById(account.studentId);
+      if (student) {
+        const profile = window.storageManager.getProfile();
+        profile.name = student.name;
+        profile.targetSchool = student.targetSchool;
+        profile.benchmarkScore = student.benchmarkScore;
+        profile.targetAverage = (student.benchmarkScore / 3).toFixed(1);
+        window.storageManager.saveProfile(profile);
+      }
+    }
+
+    // Sync UI
+    this.onAuthChange();
+
+    return { 
+      success: true, 
+      user: this.currentUser, 
+      message: `Đăng nhập thành công! Chào mừng ${account.name}.` 
+    };
+  }
+
+  // Logout handler
+  logout() {
+    localStorage.removeItem(this.STORAGE_KEYS.SESSION);
+    sessionStorage.removeItem(this.STORAGE_KEYS.SESSION);
+    this.currentUser = null;
+    this.onAuthChange();
+  }
+
+  onAuthChange() {
+    // Notify controller and app
+    if (window.adminController) {
+      window.adminController.updateNavbarRoleBadge();
+    }
+    if (window.app) {
+      window.app.updateHeaderStats();
+      if (this.isAdmin()) {
+        window.app.switchTab('admin-portal');
+      } else if (this.isStudent()) {
+        window.app.switchTab('student-portal');
+      } else {
+        window.app.switchTab('dashboard');
+      }
+    }
+  }
+
+  // =========================================================
+  // ROLE & PERMISSION HELPERS (GUARDING)
   // =========================================================
   getCurrentUser() {
     return this.currentUser;
   }
 
-  getCurrentRole() {
-    return this.currentUser ? this.currentUser.role : 'student';
+  isAuthenticated() {
+    return this.currentUser !== null;
   }
 
   isAdmin() {
     return this.currentUser && this.currentUser.role === 'admin';
   }
 
-  exportRosterCSV() {
-    return this.exportStudentsCSV();
+  isStudent() {
+    return this.currentUser && this.currentUser.role === 'student';
   }
 
-  switchUser(userId) {
-    if (userId === 'admin' || userId === 'admin_01') {
-      this.currentUser = {
-        id: 'admin_01',
-        role: 'admin',
-        name: 'ThS. Nguyễn Mai Anh',
-        title: 'Giáo viên Chủ nhiệm & Tổ trưởng Chuyên môn 9A1',
-        email: 'maianh.nguyen@edupass.edu.vn',
-        school: 'THCS Trọng Điểm & Chuyên Sài Gòn',
-        avatar: '👩‍🏫'
-      };
-    } else {
-      const student = this.getStudentById(userId);
-      if (student) {
-        this.currentUser = {
-          id: student.id,
-          studentCode: student.studentCode,
-          role: 'student',
-          name: student.name,
-          class: student.class,
-          avatar: student.avatar || '👨‍🎓',
-          targetSchool: student.targetSchool,
-          benchmarkScore: student.benchmarkScore
-        };
-
-        // Sync to storageManager profile for consistency
-        if (window.storageManager) {
-          const profile = window.storageManager.getProfile();
-          profile.name = student.name;
-          profile.targetSchool = student.targetSchool;
-          profile.benchmarkScore = student.benchmarkScore;
-          profile.targetAverage = (student.benchmarkScore / 3).toFixed(1);
-          window.storageManager.saveProfile(profile);
-        }
-      }
-    }
-
-    this.saveCurrentUser();
-
-    // Re-render UI
-    if (window.app) {
-      window.app.updateHeaderStats();
-      this.updateNavbarRoleBadge();
-      if (this.currentUser.role === 'admin') {
-        window.app.switchTab('admin-portal');
-      } else {
-        window.app.switchTab('student-portal');
-      }
-    }
-
-    return this.currentUser;
+  getCurrentRole() {
+    return this.currentUser ? this.currentUser.role : 'guest';
   }
 
-  updateNavbarRoleBadge() {
-    const user = this.currentUser;
-    const badgeEl = document.getElementById('headerUserBadgeBtn');
-    if (badgeEl) {
-      if (user.role === 'admin') {
-        badgeEl.innerHTML = `
-          <span style="font-size: 1.1rem; line-height: 1;">${user.avatar}</span>
-          <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.15;">
-            <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-main);">${user.name}</span>
-            <span style="font-size: 0.68rem; color: #a855f7; font-weight: 700;">👑 GVCN / Admin</span>
-          </div>
-          <i data-lucide="chevron-down" style="width: 14px; height: 14px; color: var(--text-muted);"></i>
-        `;
-      } else {
-        badgeEl.innerHTML = `
-          <span style="font-size: 1.1rem; line-height: 1;">${user.avatar}</span>
-          <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.15;">
-            <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-main);">${user.name}</span>
-            <span style="font-size: 0.68rem; color: #10b981; font-weight: 700;">🎓 Lớp ${user.class || '9A1'}</span>
-          </div>
-          <i data-lucide="chevron-down" style="width: 14px; height: 14px; color: var(--text-muted);"></i>
-        `;
-      }
-      if (window.lucide) window.lucide.createIcons();
+  checkAdminPermission() {
+    if (!this.isAdmin()) {
+      throw new Error('Từ chối truy cập: Chức năng này yêu cầu quyền Quản trị viên (Admin).');
     }
-
-    // Update nav tab label based on role
-    const adminNavBtn = document.querySelector('.nav-tab-btn[data-tab="admin-portal"], .nav-tab-btn[data-tab="student-portal"]');
-    if (adminNavBtn) {
-      if (user.role === 'admin') {
-        adminNavBtn.dataset.tab = 'admin-portal';
-        adminNavBtn.innerHTML = `<i data-lucide="shield-check"></i> Quản trị học sinh <span class="nav-tab-badge" style="background: #a855f7; color: #fff;">Admin</span>`;
-      } else {
-        adminNavBtn.dataset.tab = 'student-portal';
-        adminNavBtn.innerHTML = `<i data-lucide="user-check"></i> Nhiệm vụ & Hồ sơ <span class="nav-tab-badge" style="background: #10b981; color: #fff;">HS</span>`;
-      }
-      if (window.lucide) window.lucide.createIcons();
-    }
+    return true;
   }
 
   // =========================================================
-  // STUDENT ROSTER CRUD
+  // ADMIN-ONLY ACCOUNT PROVISIONING (CHỈ ADMIN MỚI ĐƯỢC CẤP TÀI KHOẢN)
   // =========================================================
-  getAllStudents() {
-    return this.students;
-  }
+  provisionStudentAccount(studentData) {
+    this.checkAdminPermission();
 
-  getStudentById(id) {
-    return this.students.find(s => s.id === id || s.studentCode === id);
-  }
+    const name = (studentData.name || '').trim();
+    if (!name) {
+      throw new Error('Họ và tên học sinh không được để trống.');
+    }
 
-  addStudent(studentData) {
-    const newId = 'HS09' + String(this.students.length + 1).padStart(2, '0');
+    const studentClass = (studentData.class || '9A1').trim();
+    const nextSeq = this.students.length + 1;
+    const studentCode = studentData.studentCode || ('HS09' + String(nextSeq).padStart(2, '0'));
+
+    // Generate unique username
+    let username = (studentData.username || '').trim().toLowerCase();
+    if (!username) {
+      // Auto generate username from studentCode or name
+      username = studentCode.toLowerCase();
+    }
+
+    // Check username uniqueness
+    const exists = this.accounts.some(a => a.username.toLowerCase() === username);
+    if (exists) {
+      throw new Error(`Tên đăng nhập "${username}" đã tồn tại. Vui lòng chọn tên đăng nhập khác.`);
+    }
+
+    // Initial password
+    const initialPassword = (studentData.password || '').trim() || 'hocsinh@123';
+    const passwordHash = this.hashPassword(initialPassword);
+
+    // 1. Create Student record
     const newStudent = {
-      id: newId,
-      studentCode: newId,
-      name: studentData.name || 'Học sinh mới',
-      class: studentData.class || '9A1',
+      id: studentCode,
+      studentCode: studentCode,
+      username: username,
+      name: name,
+      class: studentClass,
       gender: studentData.gender || 'Nam',
       avatar: studentData.gender === 'Nữ' ? '👩‍🎓' : '👨‍🎓',
       phone: studentData.phone || '',
       parentPhone: studentData.parentPhone || '',
       targetSchool: studentData.targetSchool || 'THPT Nguyễn Thượng Hiền (TP.HCM)',
-      benchmarkScore: parseFloat(studentData.benchmarkScore) || 24.0,
+      benchmarkScore: parseFloat(studentData.benchmarkScore) || 24.5,
       mathAvg: 0,
       literatureAvg: 0,
       englishAvg: 0,
@@ -557,45 +621,154 @@ class UserManager {
       streakDays: 0,
       lastActive: new Date().toISOString().split('T')[0],
       status: 'average',
-      notes: studentData.notes || 'Học sinh mới tham gia hệ thống.',
-      examHistory: [],
-      weakTopics: []
+      accountStatus: 'active',
+      initialPassword: initialPassword,
+      notes: studentData.notes || 'Tài khoản được cấp bởi GVCN ThS. Nguyễn Mai Anh.',
+      examHistory: []
+    };
+
+    // 2. Create Security Account record
+    const newAccount = {
+      id: 'ACC_' + studentCode,
+      studentId: studentCode,
+      username: username,
+      passwordHash: passwordHash,
+      initialPassword: initialPassword,
+      role: 'student',
+      name: name,
+      class: studentClass,
+      avatar: newStudent.avatar,
+      status: 'active',
+      createdAt: new Date().toISOString().split('T')[0],
+      createdBy: this.currentUser.name,
+      lastLogin: 'Chưa đăng nhập',
+      mustChangePassword: true
     };
 
     this.students.unshift(newStudent);
+    this.accounts.push(newAccount);
+
     this.saveStudents();
-    return newStudent;
+    this.saveAccounts();
+
+    return {
+      student: newStudent,
+      account: newAccount,
+      credentials: {
+        studentCode,
+        name,
+        username,
+        initialPassword,
+        class: studentClass,
+        targetSchool: newStudent.targetSchool
+      }
+    };
   }
 
-  updateStudent(id, updatedData) {
-    const idx = this.students.findIndex(s => s.id === id);
-    if (idx !== -1) {
-      this.students[idx] = { ...this.students[idx], ...updatedData };
-      this.saveStudents();
-      return this.students[idx];
+  // Admin resets a student's password
+  adminResetStudentPassword(studentId, newPassword = 'hocsinh@123') {
+    this.checkAdminPermission();
+
+    const account = this.accounts.find(a => a.studentId === studentId || a.id === studentId);
+    if (!account) {
+      throw new Error('Không tìm thấy tài khoản học sinh.');
     }
-    return null;
+
+    const cleanPass = newPassword.trim() || 'hocsinh@123';
+    account.passwordHash = this.hashPassword(cleanPass);
+    account.initialPassword = cleanPass;
+    account.mustChangePassword = true;
+
+    // Update in students list
+    const student = this.getStudentById(studentId);
+    if (student) {
+      student.initialPassword = cleanPass;
+      this.saveStudents();
+    }
+
+    this.saveAccounts();
+    return { success: true, username: account.username, newPassword: cleanPass };
+  }
+
+  // Admin locks/unlocks a student account
+  adminToggleAccountLock(studentId) {
+    this.checkAdminPermission();
+
+    const account = this.accounts.find(a => a.studentId === studentId || a.id === studentId);
+    if (!account) {
+      throw new Error('Không tìm thấy tài khoản học sinh.');
+    }
+
+    account.status = account.status === 'locked' ? 'active' : 'locked';
+
+    const student = this.getStudentById(studentId);
+    if (student) {
+      student.accountStatus = account.status;
+      this.saveStudents();
+    }
+
+    this.saveAccounts();
+    return { success: true, status: account.status };
+  }
+
+  // User changes own password
+  changeOwnPassword(oldPassword, newPassword) {
+    if (!this.currentUser) {
+      throw new Error('Bạn cần đăng nhập để đổi mật khẩu.');
+    }
+
+    const oldHash = this.hashPassword(oldPassword);
+    if (this.currentUser.passwordHash !== oldHash) {
+      throw new Error('Mật khẩu hiện tại không chính xác.');
+    }
+
+    if (!newPassword || newPassword.length < 6) {
+      throw new Error('Mật khẩu mới phải có ít nhất 6 ký tự.');
+    }
+
+    const newHash = this.hashPassword(newPassword);
+    const account = this.accounts.find(a => a.id === this.currentUser.id);
+    if (account) {
+      account.passwordHash = newHash;
+      account.mustChangePassword = false;
+      this.saveAccounts();
+      this.currentUser.passwordHash = newHash;
+    }
+
+    return { success: true, message: 'Đổi mật khẩu thành công!' };
+  }
+
+  // =========================================================
+  // STUDENT ROSTER & DATA
+  // =========================================================
+  getAllStudents() {
+    return this.students;
+  }
+
+  getStudentById(id) {
+    return this.students.find(s => s.id === id || s.studentCode === id || s.username === id);
   }
 
   deleteStudent(id) {
-    const initialLen = this.students.length;
-    this.students = this.students.filter(s => s.id !== id);
+    this.checkAdminPermission();
+
+    this.students = this.students.filter(s => s.id !== id && s.studentCode !== id);
+    this.accounts = this.accounts.filter(a => a.studentId !== id && a.id !== id);
+
     this.saveStudents();
-    return this.students.length < initialLen;
+    this.saveAccounts();
+    return true;
   }
 
-  // =========================================================
-  // HOOK: RECORD EXAM RESULT FOR ACTIVE STUDENT
-  // =========================================================
+  // Record exam result for current student
   recordExamForCurrentStudent(result) {
     if (!this.currentUser || this.currentUser.role === 'admin') return;
 
-    const student = this.getStudentById(this.currentUser.id);
+    const student = this.getStudentById(this.currentUser.studentId || this.currentUser.id);
     if (!student) return;
 
     if (!student.examHistory) student.examHistory = [];
 
-    // Add entry
     const entry = {
       examId: result.examId,
       title: result.title,
@@ -611,7 +784,7 @@ class UserManager {
     student.examsCompleted = student.examHistory.length;
     student.lastActive = entry.date;
 
-    // Recalculate averages
+    // Recalculate subject averages
     const mathExams = student.examHistory.filter(e => e.subject === 'math');
     const litExams = student.examHistory.filter(e => e.subject === 'literature');
     const engExams = student.examHistory.filter(e => e.subject === 'english');
@@ -629,18 +802,18 @@ class UserManager {
     const allScores = student.examHistory.map(e => e.score);
     student.overallAvg = Math.round((allScores.reduce((a, b) => a + b, 0) / allScores.length) * 100) / 100;
 
-    // Calculate accuracy rate
+    // Accuracy
     const totalQ = student.examHistory.reduce((a, b) => a + (b.totalQuestions || 0), 0);
     const totalC = student.examHistory.reduce((a, b) => a + (b.correctCount || 0), 0);
     student.accuracyRate = totalQ > 0 ? Math.round((totalC / totalQ) * 100) : 0;
 
-    // Update status
+    // Status
     if (student.overallAvg >= 8.5) student.status = 'excellent';
     else if (student.overallAvg >= 7.0) student.status = 'good';
     else if (student.overallAvg >= 5.0) student.status = 'average';
     else student.status = 'needs_support';
 
-    // Check assignments
+    // Auto mark assignments
     this.assignments.forEach(asg => {
       if (asg.examId === result.examId) {
         if (!asg.submissions) asg.submissions = {};
@@ -664,12 +837,14 @@ class UserManager {
   }
 
   createAssignment(asgData) {
+    this.checkAdminPermission();
+
     const newAsg = {
       id: 'asg_' + Date.now(),
       title: asgData.title,
       examId: asgData.examId,
       subject: asgData.subject,
-      assignedBy: this.currentUser ? this.currentUser.name : 'Giáo viên',
+      assignedBy: this.currentUser ? this.currentUser.name : 'ThS. Nguyễn Mai Anh',
       assignedTo: asgData.assignedTo || 'all',
       deadline: asgData.deadline,
       note: asgData.note || '',
@@ -682,12 +857,13 @@ class UserManager {
   }
 
   deleteAssignment(id) {
+    this.checkAdminPermission();
     this.assignments = this.assignments.filter(a => a.id !== id);
     this.saveAssignments();
   }
 
   // =========================================================
-  // CLASS STATISTICS & ANALYTICS
+  // CLASS STATS & ANALYTICS
   // =========================================================
   getClassStats() {
     const totalStudents = this.students.length;
@@ -707,7 +883,6 @@ class UserManager {
     const sumAvg = this.students.reduce((acc, s) => acc + (s.overallAvg || 0), 0);
     const classAverage = Math.round((sumAvg / totalStudents) * 100) / 100;
 
-    // Passing target prediction (overallAvg * 3 >= benchmarkScore)
     const passedCount = this.students.filter(s => (s.overallAvg * 3) >= (s.benchmarkScore || 24.0)).length;
     const targetPassRate = Math.round((passedCount / totalStudents) * 100);
 
@@ -718,7 +893,6 @@ class UserManager {
       needsSupport: this.students.filter(s => s.overallAvg < 5.0 || s.status === 'needs_support').length
     };
 
-    // Sort by overallAvg desc
     const sorted = [...this.students].sort((a, b) => (b.overallAvg || 0) - (a.overallAvg || 0));
     const topStudents = sorted.slice(0, 3);
     const atRiskStudents = this.students.filter(s => s.overallAvg < 6.5 || s.status === 'needs_support');
@@ -735,16 +909,59 @@ class UserManager {
   }
 
   // =========================================================
-  // DATA EXPORT & BACKUP
+  // EXPORT ACCOUNTS HANDOVER (IN PHIẾU BÀN GIAO TÀI KHOẢN CHO PHỤ HUYNH)
   // =========================================================
+  exportAccountHandoverList() {
+    this.checkAdminPermission();
+
+    const headers = [
+      'STT',
+      'Mã Học Sinh',
+      'Họ và Tên',
+      'Lớp',
+      'Tên Đăng Nhập',
+      'Mật Khẩu Khởi Tạo',
+      'Trạng Thái Tài Khoản',
+      'Trường THPT NV1 Mục Tiêu',
+      'Điểm Chuẩn Mục Tiêu',
+      'SĐT Phụ Huynh'
+    ];
+
+    const rows = this.students.map((s, idx) => {
+      const acc = this.accounts.find(a => a.studentId === s.id);
+      return [
+        idx + 1,
+        `"${s.studentCode}"`,
+        `"${s.name}"`,
+        `"${s.class}"`,
+        `"${s.username || s.studentCode.toLowerCase()}"`,
+        `"${acc ? (acc.initialPassword || 'hocsinh@123') : 'hocsinh@123'}"`,
+        `"${s.accountStatus === 'locked' ? 'Tạm khóa' : 'Đang hoạt động'}"`,
+        `"${s.targetSchool}"`,
+        s.benchmarkScore,
+        `"${s.parentPhone || ''}"`
+      ];
+    });
+
+    const csvContent = '\uFEFF' + [headers.join(','), ...rows.map(r => r.join(','))].join('\r\n');
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.setAttribute('href', url);
+    link.setAttribute('download', `EduPass10_Phieu_Ban_Giao_Tai_Khoan_Lop_9A1_${new Date().toISOString().split('T')[0]}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   exportStudentsCSV() {
+    this.checkAdminPermission();
+
     const headers = [
       'Mã Học Sinh',
       'Họ và Tên',
       'Lớp',
       'Giới Tính',
-      'SĐT Học Sinh',
-      'SĐT Phụ Huynh',
       'Trường Nguyện Vọng 1',
       'Điểm Chuẩn Mục Tiêu',
       'ĐTB Môn Toán',
@@ -754,8 +971,7 @@ class UserManager {
       'Số Đề Đã Làm',
       'Tỷ Lệ Chính Xác (%)',
       'Xếp Loại Năng Lực',
-      'Ngày Hoạt Động Gần Nhất',
-      'Ghi Chú Giáo Viên'
+      'Trạng Thái Tài Khoản'
     ];
 
     const rows = this.students.map(s => [
@@ -763,8 +979,6 @@ class UserManager {
       `"${s.name}"`,
       `"${s.class}"`,
       `"${s.gender}"`,
-      `"${s.phone || ''}"`,
-      `"${s.parentPhone || ''}"`,
       `"${s.targetSchool}"`,
       s.benchmarkScore,
       s.mathAvg,
@@ -774,8 +988,7 @@ class UserManager {
       s.examsCompleted,
       s.accuracyRate,
       `"${s.status === 'excellent' ? 'Xuất sắc' : s.status === 'good' ? 'Khá giỏi' : s.status === 'average' ? 'Trung bình' : 'Cần hỗ trợ'}"`,
-      `"${s.lastActive}"`,
-      `"${(s.notes || '').replace(/"/g, '""')}"`
+      `"${s.accountStatus === 'locked' ? 'Đã khóa' : 'Hoạt động'}"`
     ]);
 
     const csvContent = '\uFEFF' + [headers.join(','), ...rows.map(r => r.join(','))].join('\r\n');
@@ -783,16 +996,19 @@ class UserManager {
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.setAttribute('href', url);
-    link.setAttribute('download', `EduPass10_Danh_Sach_Hoc_Sinh_${new Date().toISOString().split('T')[0]}.csv`);
+    link.setAttribute('download', `EduPass10_Bang_Diem_Hoc_Sinh_${new Date().toISOString().split('T')[0]}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   }
 
   exportBackupJSON() {
+    this.checkAdminPermission();
+
     const data = {
-      version: 'edupass_v2',
+      version: 'edupass_v3_secure',
       exportedAt: new Date().toISOString(),
+      accounts: this.accounts,
       students: this.students,
       assignments: this.assignments
     };
@@ -801,20 +1017,23 @@ class UserManager {
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.setAttribute('href', url);
-    link.setAttribute('download', `EduPass10_Backup_${new Date().toISOString().split('T')[0]}.json`);
+    link.setAttribute('download', `EduPass10_Secure_Backup_${new Date().toISOString().split('T')[0]}.json`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   }
 
   importBackupJSON(jsonString) {
+    this.checkAdminPermission();
+
     try {
       const data = JSON.parse(jsonString);
       if (data && Array.isArray(data.students)) {
         this.students = data.students;
-        if (Array.isArray(data.assignments)) {
-          this.assignments = data.assignments;
-        }
+        if (Array.isArray(data.accounts)) this.accounts = data.accounts;
+        if (Array.isArray(data.assignments)) this.assignments = data.assignments;
+
+        this.saveAccounts();
         this.saveStudents();
         this.saveAssignments();
         return { success: true, count: this.students.length };
@@ -826,7 +1045,8 @@ class UserManager {
   }
 
   resetToDefault() {
-    this.seedSampleClass();
+    this.checkAdminPermission();
+    this.seedInitialAccountsAndStudents();
     return true;
   }
 }

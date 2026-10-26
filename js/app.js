@@ -295,8 +295,18 @@ class EduPassApp {
       if (window.storageManager.getExamHistory().length === 0) {
         window.examEngine.resetResults();
       }
-    } else if (tabId === 'admin-portal' && window.adminController) {
-      window.adminController.renderAdminPortal();
+    } else if (tabId === 'admin-portal') {
+      if (window.userManager && !window.userManager.isAdmin()) {
+        if (!window.userManager.isAuthenticated()) {
+          this.showToast('Vui lòng đăng nhập tài khoản Quản trị viên (Admin) để truy cập!');
+          if (window.adminController) window.adminController.openLoginModal();
+        } else {
+          this.showToast('Từ chối truy cập: Tài khoản Học sinh không có quyền quản trị lớp!');
+        }
+        this.switchTab(window.userManager && window.userManager.isStudent() ? 'student-portal' : 'dashboard');
+        return;
+      }
+      if (window.adminController) window.adminController.renderAdminPortal();
     } else if (tabId === 'student-portal' && window.adminController) {
       window.adminController.renderStudentPortal();
     }
