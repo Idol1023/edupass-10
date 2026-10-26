@@ -133,6 +133,7 @@ window.KNOWLEDGE_BASE = {
           "Bước 4: Giải câu hỏi phụ (Để $P \\in \\mathbb{Z} \\implies$ tách phần nguyên, cho mẫu là ước của hằng số). Đối chiếu ĐKXĐ và kết luận."
         ],
         formulas: [
+          { name: "Điều kiện xác định", formula: "$$\\sqrt{A} \\text{ xác định khi } A \\ge 0; \\quad \\frac{1}{\\sqrt{A}} \\text{ xác định khi } A > 0$$" },
           { name: "Hằng đẳng thức căn", formula: "$$\\sqrt{A^2} = |A| = \\begin{cases} A & \\text{khi } A \\ge 0 \\\\ -A & \\text{khi } A < 0 \\end{cases}$$" },
           { name: "Trục căn thức ở mẫu", formula: "$$\\frac{m}{\\sqrt{A} \\pm \\sqrt{B}} = \\frac{m(\\sqrt{A} \\mp \\sqrt{B})}{A - B}$$" },
           { name: "Phân tích nhân tử căn thức", formula: "$$x - a = (\\sqrt{x} - \\sqrt{a})(\\sqrt{x} + \\sqrt{a}) \\quad (x \\ge 0, a > 0)$$" }

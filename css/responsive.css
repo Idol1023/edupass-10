@@ -216,6 +216,14 @@
     white-space: nowrap;
     flex-shrink: 0;
   }
+
+  .btn-admin-nav-pill span {
+    display: none;
+  }
+
+  .btn-admin-nav-pill {
+    padding: 6px 10px;
+  }
 }
 
 /* --- 4. EXAM ROOM FULL-SCREEN MOBILE OPTIMIZATIONS --- */

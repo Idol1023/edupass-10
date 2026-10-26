@@ -4,6 +4,62 @@
    homework assignments & user switcher.
    ========================================================= */
 
+/* --- Dedicated Admin Portal Direct Button on Header --- */
+.btn-admin-nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.18), rgba(168, 85, 247, 0.22));
+  border: 1.5px solid rgba(236, 72, 153, 0.5);
+  color: #f472b6;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-main);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(236, 72, 153, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.btn-admin-nav-pill:hover {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 18px rgba(236, 72, 153, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-admin-nav-pill i {
+  width: 15px;
+  height: 15px;
+}
+
+/* --- Admin Top Shortcut Bar in Admin Portal --- */
+.admin-top-shortcut-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: var(--bg-surface-elevated);
+  border: 1px solid rgba(236, 72, 153, 0.3);
+  border-radius: var(--radius-md);
+  padding: 10px 18px;
+  margin-bottom: 20px;
+}
+
+.admin-shortcut-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #f472b6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 /* --- User Badge on Top Navbar --- */
 .header-user-btn {
   display: inline-flex;

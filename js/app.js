@@ -1,7 +1,48 @@
 // =========================================================
-// EDUPASS 10 - MAIN APPLICATION CONTROLLER
-// Tab Router, Exam Catalog, Countdown, Theme & UI Handlers
+// KaTeX Math Formula Safe Renderer with Automatic Polling
 // =========================================================
+window.renderMathSafely = function(container = document.body) {
+  if (!container) return;
+  const doRender = () => {
+    if (window.renderMathInElement) {
+      try {
+        window.renderMathInElement(container, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\[", right: "\\]", display: true },
+            { left: "\\(", right: "\\)", display: false }
+          ],
+          throwOnError: false,
+          ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'option']
+        });
+      } catch (err) {
+        console.warn('KaTeX render warning:', err);
+      }
+    }
+  };
+
+  if (window.renderMathInElement) {
+    doRender();
+  } else {
+    let count = 0;
+    const interval = setInterval(() => {
+      count++;
+      if (window.renderMathInElement) {
+        clearInterval(interval);
+        doRender();
+      } else if (count > 30) {
+        clearInterval(interval);
+      }
+    }, 120);
+  }
+};
+
+window.addEventListener('load', () => {
+  if (window.renderMathSafely) {
+    window.renderMathSafely(document.body);
+  }
+});
 
 class EduPassApp {
   constructor() {
@@ -16,6 +57,7 @@ class EduPassApp {
     this.updateHeaderStats();
     this.renderRecentHistory();
     this.initLucideIcons();
+    this.initHashRouter();
 
     if (window.adminController) {
       window.adminController.init();
@@ -299,11 +341,11 @@ class EduPassApp {
       if (window.userManager && !window.userManager.isAdmin()) {
         if (!window.userManager.isAuthenticated()) {
           this.showToast('Vui lòng đăng nhập tài khoản Quản trị viên (Admin) để truy cập!');
-          if (window.adminController) window.adminController.openLoginModal();
+          if (window.adminController) window.adminController.openLoginModal('admin');
         } else {
           this.showToast('Từ chối truy cập: Tài khoản Học sinh không có quyền quản trị lớp!');
         }
-        this.switchTab(window.userManager && window.userManager.isStudent() ? 'student-portal' : 'dashboard');
+        this.switchTab('dashboard');
         return;
       }
       if (window.adminController) window.adminController.renderAdminPortal();
@@ -311,8 +353,41 @@ class EduPassApp {
       window.adminController.renderStudentPortal();
     }
 
+    // Trigger KaTeX math rendering for the newly opened tab
+    setTimeout(() => {
+      if (targetPane && window.renderMathSafely) {
+        window.renderMathSafely(targetPane);
+      }
+    }, 60);
+
     this.initLucideIcons();
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  initHashRouter() {
+    const handleHash = () => {
+      const hash = (window.location.hash || '').replace('#', '').trim().toLowerCase();
+      if (!hash) return;
+
+      if (hash === 'admin' || hash === 'admin-portal') {
+        if (window.userManager && window.userManager.isAdmin()) {
+          this.switchTab('admin-portal');
+        } else {
+          this.showToast('Đường dẫn riêng cho Admin: Vui lòng đăng nhập tài khoản Giáo viên!');
+          if (window.adminController) {
+            window.adminController.openLoginModal('admin');
+          }
+        }
+      } else if (hash === 'student-portal') {
+        this.switchTab('student-portal');
+      } else if (document.getElementById(`tabPane_${hash}`)) {
+        this.switchTab(hash);
+      }
+    };
+
+    window.addEventListener('hashchange', handleHash);
+    // Delayed check on initial load to allow session restore
+    setTimeout(handleHash, 250);
   }
 
   initCountdown() {

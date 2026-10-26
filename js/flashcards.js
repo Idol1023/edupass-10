@@ -345,8 +345,8 @@ class FlashcardTrainer {
       if (qt.formulas && qt.formulas.length > 0) {
         let formulaCards = '';
         qt.formulas.forEach(f => {
-          let formulaBody = f.formula;
-          if (formulaBody.includes('\\') && !formulaBody.includes('$')) {
+          let formulaBody = (f.formula || '').trim();
+          if ((formulaBody.includes('\\') || formulaBody.includes('^') || formulaBody.includes('_')) && !formulaBody.includes('$')) {
             formulaBody = `$$${formulaBody}$$`;
           }
           formulaCards += `
@@ -460,12 +460,16 @@ class FlashcardTrainer {
 
     if (window.lucide) window.lucide.createIcons();
 
-    // KaTeX Math Rendering
-    if (window.renderMathInElement) {
+    // KaTeX Math Rendering with global safe fallback
+    if (window.renderMathSafely) {
+      window.renderMathSafely(this.cheatSheetArea);
+    } else if (window.renderMathInElement) {
       window.renderMathInElement(this.cheatSheetArea, {
         delimiters: [
           { left: "$$", right: "$$", display: true },
-          { left: "$", right: "$", display: false }
+          { left: "$", right: "$", display: false },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "\\(", right: "\\)", display: false }
         ],
         throwOnError: false
       });
@@ -629,11 +633,15 @@ class FlashcardTrainer {
     }
 
     // KaTeX auto render on card
-    if (window.renderMathInElement && this.cardStage) {
+    if (window.renderMathSafely) {
+      window.renderMathSafely(this.cardStage);
+    } else if (window.renderMathInElement && this.cardStage) {
       window.renderMathInElement(this.cardStage, {
         delimiters: [
           { left: "$$", right: "$$", display: true },
-          { left: "$", right: "$", display: false }
+          { left: "$", right: "$", display: false },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "\\(", right: "\\)", display: false }
         ],
         throwOnError: false
       });

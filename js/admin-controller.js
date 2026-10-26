@@ -31,6 +31,28 @@ class AdminController {
       });
     }
 
+    // Direct Admin Portal button on header
+    const btnHeaderAdmin = document.getElementById('btnHeaderAdminPortal');
+    if (btnHeaderAdmin) {
+      btnHeaderAdmin.addEventListener('click', () => {
+        if (window.app) {
+          window.location.hash = '#admin';
+          window.app.switchTab('admin-portal');
+        }
+      });
+    }
+
+    // Back to Student View button in Admin Portal
+    const btnBackStudent = document.getElementById('btnAdminBackToStudentView');
+    if (btnBackStudent) {
+      btnBackStudent.addEventListener('click', () => {
+        if (window.app) {
+          window.location.hash = '#dashboard';
+          window.app.switchTab('dashboard');
+        }
+      });
+    }
+
     // Login modal
     const closeLoginBtn = document.getElementById('btnCloseLoginModal');
     if (closeLoginBtn) {
@@ -145,67 +167,60 @@ class AdminController {
   // =========================================================
   updateNavbarRoleBadge() {
     const badgeEl = document.getElementById('headerUserBadgeBtn');
-    if (!badgeEl) return;
-
+    const btnHeaderAdmin = document.getElementById('btnHeaderAdminPortal');
     const user = window.userManager.getCurrentUser();
 
-    if (!user) {
-      badgeEl.innerHTML = `
-        <div class="header-user-avatar" style="background: var(--bg-surface-elevated); color: var(--text-muted);">
-          <i data-lucide="lock" style="width: 14px; height: 14px;"></i>
-        </div>
-        <div style="display: flex; flex-direction: column; text-align: left;">
-          <span style="font-size: 0.82rem; font-weight: 700; color: var(--text-main);">Đăng nhập</span>
-          <span style="font-size: 0.68rem; color: var(--text-muted);">Khách vãng lai</span>
-        </div>
-        <i data-lucide="log-in" style="width: 14px; height: 14px; opacity: 0.8; color: var(--primary);"></i>
-      `;
-    } else if (user.role === 'admin') {
-      badgeEl.innerHTML = `
-        <div class="header-user-avatar" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);">
-          ${user.avatar || '👩‍🏫'}
-        </div>
-        <div style="display: flex; flex-direction: column; text-align: left;">
-          <span id="headerUserName" style="font-size: 0.82rem; font-weight: 700; line-height: 1.1; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${user.name}</span>
-          <span class="header-user-role-tag admin">👑 Giáo viên (Admin)</span>
-        </div>
-        <i data-lucide="chevron-down" style="width: 14px; height: 14px; opacity: 0.7;"></i>
-      `;
-    } else {
-      badgeEl.innerHTML = `
-        <div class="header-user-avatar" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">
-          ${user.avatar || '👨‍🎓'}
-        </div>
-        <div style="display: flex; flex-direction: column; text-align: left;">
-          <span id="headerUserName" style="font-size: 0.82rem; font-weight: 700; line-height: 1.1; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${user.name}</span>
-          <span class="header-user-role-tag student">🎓 Lớp ${user.class || '9A1'}</span>
-        </div>
-        <i data-lucide="chevron-down" style="width: 14px; height: 14px; opacity: 0.7;"></i>
-      `;
+    // Toggle Direct Admin Portal button on Header
+    if (btnHeaderAdmin) {
+      btnHeaderAdmin.style.display = (window.userManager.isAdmin()) ? 'inline-flex' : 'none';
     }
 
-    // Role-based Nav tabs styling and accessibility
+    if (badgeEl) {
+      if (!user) {
+        badgeEl.innerHTML = `
+          <div class="header-user-avatar" style="background: linear-gradient(135deg, var(--primary), var(--accent-cyan));">
+            <i data-lucide="lock" style="width: 14px; height: 14px;"></i>
+          </div>
+          <div style="display: flex; flex-direction: column; text-align: left;">
+            <span style="font-size: 0.84rem; font-weight: 700; color: #fff;">Đăng nhập</span>
+            <span style="font-size: 0.68rem; color: #94a3b8;">Lưu tiến trình học</span>
+          </div>
+          <i data-lucide="log-in" style="width: 14px; height: 14px; opacity: 0.9; color: var(--accent-cyan);"></i>
+        `;
+        badgeEl.title = 'Nhấn để đăng nhập tài khoản Học sinh hoặc Giáo viên';
+      } else if (user.role === 'admin') {
+        badgeEl.innerHTML = `
+          <div class="header-user-avatar" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);">
+            ${user.avatar || '👩‍🏫'}
+          </div>
+          <div style="display: flex; flex-direction: column; text-align: left;">
+            <span id="headerUserName" style="font-size: 0.84rem; font-weight: 700; line-height: 1.1; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${user.name}</span>
+            <span class="header-user-role-tag admin">👑 Giáo viên (Admin)</span>
+          </div>
+          <i data-lucide="chevron-down" style="width: 14px; height: 14px; opacity: 0.7;"></i>
+        `;
+        badgeEl.title = 'Tài khoản Giáo viên Quản trị • Nhấn để quản lý tài khoản';
+      } else {
+        badgeEl.innerHTML = `
+          <div class="header-user-avatar" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">
+            ${user.avatar || '👨‍🎓'}
+          </div>
+          <div style="display: flex; flex-direction: column; text-align: left;">
+            <span id="headerUserName" style="font-size: 0.84rem; font-weight: 700; line-height: 1.1; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${user.name}</span>
+            <span class="header-user-role-tag student">🎓 Lớp ${user.class || '9A1'}</span>
+          </div>
+          <i data-lucide="chevron-down" style="width: 14px; height: 14px; opacity: 0.7;"></i>
+        `;
+        badgeEl.title = 'Tài khoản Học sinh • Nhấn để xem hồ sơ và tiến trình cá nhân';
+      }
+    }
+
+    // Hide deprecated portal buttons from student nav if present
     const navAdminBtn = document.getElementById('navBtnAdminPortal');
+    if (navAdminBtn) navAdminBtn.style.display = 'none';
+
     const navStudentBtn = document.getElementById('navBtnStudentPortal');
-
-    if (navAdminBtn) {
-      if (window.userManager.isAdmin()) {
-        navAdminBtn.style.display = 'inline-flex';
-        navAdminBtn.style.opacity = '1';
-        navAdminBtn.title = 'Khu vực quản lý lớp dành cho Giáo viên';
-      } else {
-        navAdminBtn.style.opacity = '0.45';
-        navAdminBtn.title = 'Bị khóa: Chỉ Quản trị viên/Giáo viên mới có quyền truy cập';
-      }
-    }
-
-    if (navStudentBtn) {
-      if (window.userManager.isStudent()) {
-        navStudentBtn.innerHTML = `<i data-lucide="graduation-cap"></i> Tiến trình của bạn`;
-      } else {
-        navStudentBtn.innerHTML = `<i data-lucide="graduation-cap"></i> Xem góc nhìn Học sinh`;
-      }
-    }
+    if (navStudentBtn) navStudentBtn.style.display = 'none';
 
     if (window.lucide) window.lucide.createIcons();
   }
@@ -301,6 +316,9 @@ class AdminController {
             <i data-lucide="key"></i> Đổi mật khẩu cá nhân
           </button>
           ${user.role === 'admin' ? `
+            <button class="btn btn-primary btn-sm" id="btnGoToAdminPortalFromMenu" style="justify-content: flex-start; background: linear-gradient(135deg, #ec4899, #8b5cf6);">
+              <i data-lucide="shield-check"></i> Cổng Quản Trị Hệ Thống (#admin)
+            </button>
             <button class="btn btn-secondary btn-sm" id="btnOpenProvisionFromMenu" style="justify-content: flex-start; color: var(--primary);">
               <i data-lucide="user-plus"></i> Cấp tài khoản học sinh mới
             </button>
@@ -308,8 +326,8 @@ class AdminController {
               <i data-lucide="file-text"></i> Xuất phiếu bàn giao tài khoản toàn lớp
             </button>
           ` : `
-            <button class="btn btn-secondary btn-sm" id="btnGoToMyProgressFromMenu" style="justify-content: flex-start; color: var(--accent-cyan);">
-              <i data-lucide="bar-chart-2"></i> Xem hồ sơ & nhiệm vụ của tôi
+            <button class="btn btn-primary btn-sm" id="btnGoToMyProgressFromMenu" style="justify-content: flex-start; background: linear-gradient(135deg, #06b6d4, #3b82f6);">
+              <i data-lucide="graduation-cap"></i> Xem Hồ Sơ & Nhiệm Vụ Của Tôi
             </button>
           `}
           <button class="btn btn-secondary btn-sm" id="btnAppLogout" style="justify-content: flex-start; color: #f87171; border-color: rgba(239, 68, 68, 0.3);">
@@ -355,6 +373,15 @@ class AdminController {
         btnChangePass.addEventListener('click', () => {
           this.closeUserMenuModal();
           this.openChangePasswordModal();
+        });
+      }
+
+      const btnGoAdmin = container.querySelector('#btnGoToAdminPortalFromMenu');
+      if (btnGoAdmin) {
+        btnGoAdmin.addEventListener('click', () => {
+          this.closeUserMenuModal();
+          window.location.hash = '#admin';
+          if (window.app) window.app.switchTab('admin-portal');
         });
       }
 
