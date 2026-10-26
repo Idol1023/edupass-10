@@ -26,11 +26,11 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
   <!-- Stylesheets with versioning -->
-  <link rel="stylesheet" href="css/main.css?v=2.2.0">
-  <link rel="stylesheet" href="css/components.css?v=2.2.0">
-  <link rel="stylesheet" href="css/exam.css?v=2.2.0">
-  <link rel="stylesheet" href="css/admin.css?v=2.2.0">
-  <link rel="stylesheet" href="css/responsive.css?v=2.2.0">
+  <link rel="stylesheet" href="css/main.css?v=2.3.0">
+  <link rel="stylesheet" href="css/components.css?v=2.3.0">
+  <link rel="stylesheet" href="css/exam.css?v=2.3.0">
+  <link rel="stylesheet" href="css/admin.css?v=2.3.0">
+  <link rel="stylesheet" href="css/responsive.css?v=2.3.0">
 </head>
 <body>
 
@@ -61,7 +61,7 @@
           <button class="header-user-btn" id="headerUserBadgeBtn" title="Tài khoản cá nhân / Đăng nhập">
             <div class="header-user-avatar" id="headerUserAvatar">AD</div>
             <div style="display: flex; flex-direction: column; text-align: left;">
-              <span id="headerUserName" style="line-height: 1.1; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">ThS. Nguyễn Mai Anh</span>
+              <span id="headerUserName" style="line-height: 1.1; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Quản Trị Viên</span>
               <span class="header-user-role-tag admin" id="headerUserRoleTag">Giáo viên</span>
             </div>
             <i data-lucide="chevron-down" style="width: 14px; height: 14px; opacity: 0.7;"></i>
@@ -1240,13 +1240,10 @@
           </div>
           <div style="display: flex; gap: 8px; flex-wrap: wrap;">
             <button type="button" class="btn btn-secondary btn-sm" onclick="window.adminController.quickLoginAs('admin', 'admin@123')" style="font-size: 0.78rem;">
-              👑 Cô Mai Anh (Admin)
+              👑 Quản Trị Viên (Admin)
             </button>
-            <button type="button" class="btn btn-secondary btn-sm" onclick="window.adminController.quickLoginAs('hs0901', 'hocsinh@123')" style="font-size: 0.78rem;">
-              👨‍🎓 Minh An (Học sinh)
-            </button>
-            <button type="button" class="btn btn-secondary btn-sm" onclick="window.adminController.quickLoginAs('hs0902', 'hocsinh@123')" style="font-size: 0.78rem;">
-              👩‍🎓 Bảo Ngọc (Học sinh)
+            <button type="button" class="btn btn-secondary btn-sm" onclick="window.adminController.quickLoginAs('hocsinh', 'hocsinh@123')" style="font-size: 0.78rem;">
+              👨‍🎓 Học Sinh (Test User)
             </button>
           </div>
         </div>
@@ -1471,21 +1468,21 @@
   </footer>
 
   <!-- ================= JAVASCRIPT BUNDLES (WITH CACHE BUSTER) ================= -->
-  <script src="js/data/questions-math.js?v=2.2.0"></script>
-  <script src="js/data/questions-english.js?v=2.2.0"></script>
-  <script src="js/data/questions-literature.js?v=2.2.0"></script>
-  <script src="js/data/topic-exams-math.js?v=2.2.0"></script>
-  <script src="js/data/topic-exams-english.js?v=2.2.0"></script>
-  <script src="js/data/topic-exams-literature.js?v=2.2.0"></script>
-  <script src="js/data/knowledge-base.js?v=2.2.0"></script>
-  <script src="js/audio-utils.js?v=2.2.0"></script>
-  <script src="js/storage-manager.js?v=2.2.0"></script>
-  <script src="js/exam-engine.js?v=2.2.0"></script>
-  <script src="js/review-engine.js?v=2.2.0"></script>
-  <script src="js/flashcards.js?v=2.2.0"></script>
-  <script src="js/progress-tracker.js?v=2.2.0"></script>
-  <script src="js/user-manager.js?v=2.2.0"></script>
-  <script src="js/admin-controller.js?v=2.2.0"></script>
-  <script src="js/app.js?v=2.2.0"></script>
+  <script src="js/data/questions-math.js?v=2.3.0"></script>
+  <script src="js/data/questions-english.js?v=2.3.0"></script>
+  <script src="js/data/questions-literature.js?v=2.3.0"></script>
+  <script src="js/data/topic-exams-math.js?v=2.3.0"></script>
+  <script src="js/data/topic-exams-english.js?v=2.3.0"></script>
+  <script src="js/data/topic-exams-literature.js?v=2.3.0"></script>
+  <script src="js/data/knowledge-base.js?v=2.3.0"></script>
+  <script src="js/audio-utils.js?v=2.3.0"></script>
+  <script src="js/storage-manager.js?v=2.3.0"></script>
+  <script src="js/exam-engine.js?v=2.3.0"></script>
+  <script src="js/review-engine.js?v=2.3.0"></script>
+  <script src="js/flashcards.js?v=2.3.0"></script>
+  <script src="js/progress-tracker.js?v=2.3.0"></script>
+  <script src="js/user-manager.js?v=2.3.0"></script>
+  <script src="js/admin-controller.js?v=2.3.0"></script>
+  <script src="js/app.js?v=2.3.0"></script>
 </body>
 </html>

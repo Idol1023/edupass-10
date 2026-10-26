@@ -134,10 +134,31 @@
     box-shadow: 0 2px 6px rgba(239, 68, 68, 0.4);
   }
 
-  /* Top nav adjustments on mobile */
+  /* Top nav adjustments on mobile: keep all learning tabs accessible with smooth horizontal scroll */
   .app-nav {
+    display: block;
+    position: sticky;
     top: 0;
-    display: none; /* Mobile bottom nav takes over primary navigation */
+    z-index: 95;
+    border-bottom: 1px solid var(--border-subtle);
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .nav-container {
+    padding: 0 0.5rem;
+    gap: 0.25rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .nav-tab-btn {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.82rem;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 }
 
@@ -187,12 +208,20 @@
     position: static;
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.35rem;
+    flex-shrink: 0;
+  }
+
+  .header-user-btn {
+    padding: 4px 8px 4px 4px;
+    font-size: 0.8rem;
+    gap: 6px;
   }
 
   .btn-icon-circle {
     width: 34px;
     height: 34px;
+    flex-shrink: 0;
   }
 
   .header-stats {
@@ -223,6 +252,38 @@
 
   .btn-admin-nav-pill {
     padding: 6px 10px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  #headerUserName {
+    display: none;
+  }
+
+  .header-user-role-tag {
+    font-size: 0.68rem;
+    padding: 1px 6px;
+  }
+
+  .brand-title {
+    font-size: 1rem;
+  }
+
+  .brand-badge {
+    display: none;
+  }
+
+  .btn-icon-circle {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+
+  .btn-admin-nav-pill {
+    padding: 5px 8px;
+    font-size: 0.75rem;
   }
 }
 
@@ -661,11 +722,39 @@
 
 /* --- 9. MODALS & DIALOGS RESPONSIVENESS --- */
 @media (max-width: 640px) {
-  .modal-dialog {
-    width: 92%;
-    max-width: 460px;
-    padding: 1.25rem 1rem;
+  .modal-dialog,
+  .edupass-modal-dialog {
+    width: 95vw !important;
+    max-width: 95vw !important;
+    max-height: 92vh !important;
     border-radius: var(--radius-md);
+  }
+
+  .modal-dialog {
+    padding: 1.25rem 1rem;
+  }
+
+  .edupass-modal-header {
+    padding: 12px 14px;
+  }
+
+  .edupass-modal-body {
+    padding: 14px 16px;
+    max-height: calc(92vh - 120px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .edupass-modal-footer {
+    padding: 10px 14px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .edupass-modal-footer .btn,
+  .edupass-modal-footer .admin-btn {
+    flex: 1 1 auto;
+    justify-content: center;
   }
 
   .preset-schools-grid {
@@ -706,3 +795,25 @@
     font-size: 0.82rem;
   }
 }
+
+/* --- 11. MULTI-DEVICE OVERFLOW & RESIZE CONTENT PROTECTION --- */
+.type-formula-body,
+.example-solution,
+.question-body,
+.explanation-card,
+.solution-text,
+.admin-table-container,
+.exam-timeline-item {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Ensure buttons never get squashed or clipped */
+.btn, .admin-btn, .nav-tab-btn, .option-btn, .stat-pill, .filter-chip {
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+

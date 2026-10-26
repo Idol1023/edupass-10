@@ -1751,4 +1751,81 @@
   flex-wrap: wrap;
 }
 
+/* =========================================================
+   QUESTION TYPE CARDS - LIGHT MODE CONTRAST STYLES
+   ========================================================= */
+[data-theme="light"] .type-formula-card {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+[data-theme="light"] .type-formula-title {
+  color: #4338ca;
+}
+
+[data-theme="light"] .type-formula-body {
+  color: #0f172a;
+}
+
+[data-theme="light"] .type-example-box {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+[data-theme="light"] .example-badge {
+  background: rgba(99, 102, 241, 0.12);
+  color: #4338ca;
+}
+
+[data-theme="light"] .example-question {
+  color: #0f172a;
+  border-left-color: var(--primary);
+}
+
+[data-theme="light"] .example-solution {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+[data-theme="light"] .example-note {
+  color: #b45309;
+}
+
+[data-theme="light"] .type-traps-box {
+  background: #fef2f2;
+  border-color: #fca5a5;
+}
+
+[data-theme="light"] .type-traps-title {
+  color: #b91c1c;
+}
+
+[data-theme="light"] .type-traps-list {
+  color: #7f1d1d;
+}
+
+[data-theme="light"] .knowledge-type-card {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+[data-theme="light"] .type-title {
+  color: #0f172a;
+}
+
+[data-theme="light"] .type-core-knowledge {
+  color: #1e293b;
+}
+
+[data-theme="light"] .step-card {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+[data-theme="light"] .step-text {
+  color: #0f172a;
+}
+
+
 

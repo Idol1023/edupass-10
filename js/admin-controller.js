@@ -342,16 +342,10 @@ class AdminController {
           </div>
           <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
             <button class="btn btn-secondary btn-sm" id="btnSwitchAdminQuick" style="font-size: 0.78rem;">
-              👑 Cô Mai Anh (Admin)
+              👑 Quản Trị Viên (Admin)
             </button>
-            <button class="btn btn-secondary btn-sm" id="btnSwitchStudent1Quick" style="font-size: 0.78rem;">
-              👨‍🎓 Minh An (Top 1)
-            </button>
-            <button class="btn btn-secondary btn-sm" id="btnSwitchStudent2Quick" style="font-size: 0.78rem;">
-              👩‍🎓 Bảo Ngọc (NV1 NTH)
-            </button>
-            <button class="btn btn-secondary btn-sm" id="btnSwitchStudent7Quick" style="font-size: 0.78rem;">
-              👨‍🎓 Tuấn Kiệt (Phụ đạo)
+            <button class="btn btn-secondary btn-sm" id="btnSwitchStudentQuick" style="font-size: 0.78rem;">
+              👨‍🎓 Học Sinh (Test User)
             </button>
           </div>
         </div>
@@ -415,17 +409,9 @@ class AdminController {
       if (btnSwAdmin) {
         btnSwAdmin.addEventListener('click', () => this.quickLoginAs('admin', 'admin@123'));
       }
-      const btnSw1 = container.querySelector('#btnSwitchStudent1Quick');
-      if (btnSw1) {
-        btnSw1.addEventListener('click', () => this.quickLoginAs('hs0901', 'hocsinh@123'));
-      }
-      const btnSw2 = container.querySelector('#btnSwitchStudent2Quick');
-      if (btnSw2) {
-        btnSw2.addEventListener('click', () => this.quickLoginAs('hs0902', 'hocsinh@123'));
-      }
-      const btnSw7 = container.querySelector('#btnSwitchStudent7Quick');
-      if (btnSw7) {
-        btnSw7.addEventListener('click', () => this.quickLoginAs('hs0907', 'hocsinh@123'));
+      const btnSwStudent = container.querySelector('#btnSwitchStudentQuick');
+      if (btnSwStudent) {
+        btnSwStudent.addEventListener('click', () => this.quickLoginAs('hocsinh', 'hocsinh@123'));
       }
     }
 
@@ -1402,7 +1388,7 @@ class AdminController {
           "${student.notes || 'Em đang có lộ trình ôn luyện rất tốt. Hãy tiếp tục duy trì chuỗi ngày học tập và chú ý làm lại các câu sai trong sổ tay lỗi sai.'}"
         </div>
         <div style="margin-top: 0.75rem; font-size: 0.78rem; color: var(--text-muted); text-align: right;">
-          — ThS. Nguyễn Mai Anh (Giáo viên chủ nhiệm 9A1)
+          — Ban Quản Trị Hệ Thống EduPass 10
         </div>
       </div>
 

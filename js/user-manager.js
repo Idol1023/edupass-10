@@ -7,10 +7,10 @@
 class UserManager {
   constructor() {
     this.STORAGE_KEYS = {
-      ACCOUNTS: 'edupass_accounts_v3',
-      SESSION: 'edupass_session_v3',
-      STUDENTS: 'edupass_students_registry_v3',
-      ASSIGNMENTS: 'edupass_assignments_registry_v3'
+      ACCOUNTS: 'edupass_accounts_v4',
+      SESSION: 'edupass_session_v4',
+      STUDENTS: 'edupass_students_registry_v4',
+      ASSIGNMENTS: 'edupass_assignments_registry_v4'
     };
 
     this.currentUser = null;
@@ -82,31 +82,31 @@ class UserManager {
       return d.toISOString().split('T')[0];
     };
 
-    // 1. MASTER ADMIN ACCOUNT (Giáo viên chủ nhiệm)
+    // 1. MASTER ADMIN ACCOUNT (Ban Quản Trị Hệ Thống)
     const adminAccount = {
       id: 'ACC_ADMIN_01',
       username: 'admin',
       passwordHash: this.hashPassword('admin@123'),
       initialPassword: 'admin@123',
       role: 'admin',
-      name: 'ThS. Nguyễn Mai Anh',
-      title: 'Giáo viên Chủ nhiệm & Tổ trưởng Chuyên môn 9A1',
-      email: 'maianh.nguyen@edupass.edu.vn',
+      name: 'Quản Trị Viên',
+      title: 'Ban Quản Trị Hệ Thống EduPass 10',
+      email: 'admin@edupass.edu.vn',
       phone: '0909123888',
-      school: 'THCS Trọng Điểm & Chuyên Sài Gòn',
-      avatar: '👩‍🏫',
+      school: 'Hệ Thống Luyện Thi EduPass 10',
+      avatar: '👑',
       status: 'active',
       createdAt: getDateAgo(30),
       lastLogin: getDateAgo(0)
     };
 
-    // 2. STUDENTS (Seed data 8 học sinh với tài khoản được Admin cấp sẵn)
+    // 2. STUDENTS (Seed data đúng 1 tài khoản học sinh thử nghiệm duy nhất)
     const seedStudents = [
       {
         id: 'HS0901',
         studentCode: 'HS0901',
-        username: 'hs0901',
-        name: 'Nguyễn Minh An',
+        username: 'hocsinh',
+        name: 'Học Sinh',
         class: '9A1',
         gender: 'Nam',
         avatar: '👨‍🎓',
@@ -125,7 +125,7 @@ class UserManager {
         status: 'excellent',
         accountStatus: 'active',
         initialPassword: 'hocsinh@123',
-        notes: 'Nắm rất chắc Toán thực tế và tiếng Anh. Cần bổ sung thêm phần phân tích nghệ thuật trong văn học.',
+        notes: 'Tài khoản học sinh thử nghiệm hệ thống. Nắm chắc kiến thức cả 3 môn Toán, Văn, Anh.',
         examHistory: [
           {
             examId: 'math_exam_hcmc_2025',
@@ -158,188 +158,6 @@ class UserManager {
             timeSpent: '110 phút'
           }
         ]
-      },
-      {
-        id: 'HS0902',
-        studentCode: 'HS0902',
-        username: 'hs0902',
-        name: 'Trần Bảo Ngọc',
-        class: '9A1',
-        gender: 'Nữ',
-        avatar: '👩‍🎓',
-        phone: '0908888999',
-        parentPhone: '0912345678',
-        targetSchool: 'THPT Nguyễn Thượng Hiền (TP.HCM)',
-        benchmarkScore: 25.5,
-        mathAvg: 8.5,
-        literatureAvg: 8.8,
-        englishAvg: 8.6,
-        overallAvg: 8.63,
-        examsCompleted: 15,
-        accuracyRate: 88,
-        streakDays: 10,
-        lastActive: getDateAgo(1),
-        status: 'excellent',
-        accountStatus: 'active',
-        initialPassword: 'hocsinh@123',
-        notes: 'Văn phong truyền cảm, tư duy hình học không gian vững.',
-        examHistory: []
-      },
-      {
-        id: 'HS0903',
-        studentCode: 'HS0903',
-        username: 'hs0903',
-        name: 'Lê Quốc Bảo',
-        class: '9A1',
-        gender: 'Nam',
-        avatar: '👨‍🎓',
-        phone: '0919223344',
-        parentPhone: '0903445566',
-        targetSchool: 'THPT Gia Định (TP.HCM)',
-        benchmarkScore: 24.5,
-        mathAvg: 7.8,
-        literatureAvg: 7.5,
-        englishAvg: 7.9,
-        overallAvg: 7.73,
-        examsCompleted: 12,
-        accuracyRate: 79,
-        streakDays: 7,
-        lastActive: getDateAgo(2),
-        status: 'good',
-        accountStatus: 'active',
-        initialPassword: 'hocsinh@123',
-        notes: 'Tiến bộ rõ rệt ở môn Toán hàm số bậc nhất.',
-        examHistory: []
-      },
-      {
-        id: 'HS0904',
-        studentCode: 'HS0904',
-        username: 'hs0904',
-        name: 'Phạm Hương Giang',
-        class: '9A1',
-        gender: 'Nữ',
-        avatar: '👩‍🎓',
-        phone: '0938112233',
-        parentPhone: '0988776655',
-        targetSchool: 'THPT Nguyễn Thị Minh Khai (TP.HCM)',
-        benchmarkScore: 24.25,
-        mathAvg: 8.0,
-        literatureAvg: 8.2,
-        englishAvg: 8.0,
-        overallAvg: 8.07,
-        examsCompleted: 14,
-        accuracyRate: 83,
-        streakDays: 9,
-        lastActive: getDateAgo(1),
-        status: 'good',
-        accountStatus: 'active',
-        initialPassword: 'hocsinh@123',
-        notes: 'Chăm chỉ, làm đều cả 3 môn.',
-        examHistory: []
-      },
-      {
-        id: 'HS0905',
-        studentCode: 'HS0905',
-        username: 'hs0905',
-        name: 'Vũ Đức Huy',
-        class: '9A1',
-        gender: 'Nam',
-        avatar: '👨‍🎓',
-        phone: '0977445566',
-        parentPhone: '0966554433',
-        targetSchool: 'THPT Bùi Thị Xuân (TP.HCM)',
-        benchmarkScore: 23.75,
-        mathAvg: 6.8,
-        literatureAvg: 6.2,
-        englishAvg: 7.0,
-        overallAvg: 6.67,
-        examsCompleted: 8,
-        accuracyRate: 68,
-        streakDays: 3,
-        lastActive: getDateAgo(3),
-        status: 'average',
-        accountStatus: 'active',
-        initialPassword: 'hocsinh@123',
-        notes: 'Cần tăng tốc độ giải đề, chú ý kiểm tra lại các câu sai trong sổ tay.',
-        examHistory: []
-      },
-      {
-        id: 'HS0906',
-        studentCode: 'HS0906',
-        username: 'hs0906',
-        name: 'Đặng Thảo Vy',
-        class: '9A1',
-        gender: 'Nữ',
-        avatar: '👩‍🎓',
-        phone: '0944112233',
-        parentPhone: '0911335577',
-        targetSchool: 'THPT Lê Quý Đôn (TP.HCM)',
-        benchmarkScore: 23.5,
-        mathAvg: 7.5,
-        literatureAvg: 7.8,
-        englishAvg: 7.4,
-        overallAvg: 7.57,
-        examsCompleted: 11,
-        accuracyRate: 77,
-        streakDays: 5,
-        lastActive: getDateAgo(2),
-        status: 'good',
-        accountStatus: 'active',
-        initialPassword: 'hocsinh@123',
-        notes: 'Kỹ năng làm bài trắc nghiệm Tiếng Anh vững vàng.',
-        examHistory: []
-      },
-      {
-        id: 'HS0907',
-        studentCode: 'HS0907',
-        username: 'hs0907',
-        name: 'Bùi Tuấn Kiệt',
-        class: '9A1',
-        gender: 'Nam',
-        avatar: '👨‍🎓',
-        phone: '0902998877',
-        parentPhone: '0933446688',
-        targetSchool: 'THPT Mạc Đĩnh Chi (TP.HCM)',
-        benchmarkScore: 23.25,
-        mathAvg: 5.4,
-        literatureAvg: 5.6,
-        englishAvg: 5.8,
-        overallAvg: 5.6,
-        examsCompleted: 5,
-        accuracyRate: 58,
-        streakDays: 1,
-        lastActive: getDateAgo(5),
-        status: 'needs_support',
-        accountStatus: 'active',
-        initialPassword: 'hocsinh@123',
-        notes: 'CẦN PHỤ ĐẠO: Thường sai ở phần rút gọn căn thức và câu điều kiện trong Tiếng Anh.',
-        examHistory: []
-      },
-      {
-        id: 'HS0908',
-        studentCode: 'HS0908',
-        username: 'hs0908',
-        name: 'Ngô Khánh Linh',
-        class: '9A1',
-        gender: 'Nữ',
-        avatar: '👩‍🎓',
-        phone: '0966112244',
-        parentPhone: '0977889900',
-        targetSchool: 'THPT Phú Nhuận (TP.HCM)',
-        benchmarkScore: 23.0,
-        mathAvg: 7.2,
-        literatureAvg: 7.5,
-        englishAvg: 7.0,
-        overallAvg: 7.23,
-        examsCompleted: 9,
-        accuracyRate: 73,
-        streakDays: 4,
-        lastActive: getDateAgo(2),
-        status: 'good',
-        accountStatus: 'active',
-        initialPassword: 'hocsinh@123',
-        notes: 'Học lực ổn định, cần rèn thêm các câu hình học phân loại.',
-        examHistory: []
       }
     ];
 
@@ -372,7 +190,7 @@ class UserManager {
         title: 'Đề thi thử Tuyển sinh Lớp 10 Môn Toán TP.HCM - Đề số 01',
         examId: 'math_exam_hcmc_2025',
         subject: 'math',
-        assignedBy: 'ThS. Nguyễn Mai Anh',
+        assignedBy: 'Quản Trị Viên',
         assignedTo: 'all',
         deadline: '2026-06-05T23:59:00',
         note: 'Yêu cầu 100% học sinh hoàn thành nghiêm túc, chú ý câu 7 hình học thực tế.',
@@ -385,7 +203,7 @@ class UserManager {
         title: 'Đề thi chính thức Tuyển sinh Lớp 10 TP.HCM 2024 - Tiếng Anh',
         examId: 'eng_exam_hcmc_2024',
         subject: 'english',
-        assignedBy: 'ThS. Nguyễn Mai Anh',
+        assignedBy: 'Quản Trị Viên',
         assignedTo: 'all',
         deadline: '2026-06-03T21:00:00',
         note: 'Luyện đề trắc nghiệm chuẩn cấu trúc 40 câu trong 60 phút.',
@@ -457,11 +275,13 @@ class UserManager {
       return { success: false, message: 'Vui lòng nhập đầy đủ Tên đăng nhập và Mật khẩu!' };
     }
 
-    // Find account by username, studentId or email
+    // Find account by username, studentId, email or testing alias
     const account = this.accounts.find(a => 
       a.username.toLowerCase() === cleanUser || 
       (a.studentId && a.studentId.toLowerCase() === cleanUser) ||
-      (a.email && a.email.toLowerCase() === cleanUser)
+      (a.email && a.email.toLowerCase() === cleanUser) ||
+      (a.role === 'student' && (cleanUser === 'testuser' || cleanUser === 'hs0901' || cleanUser === 'hocsinh')) ||
+      (a.role === 'admin' && (cleanUser === 'admin' || cleanUser === 'quantri' || cleanUser === 'giaovien'))
     );
 
     if (!account) {
@@ -478,9 +298,10 @@ class UserManager {
       };
     }
 
-    // Verify password hash
+    // Verify password hash or test shortcuts (123456 or initialPassword)
     const inputHash = this.hashPassword(cleanPass);
-    if (account.passwordHash !== inputHash) {
+    const isTestPassMatch = cleanPass === '123456' || (account.initialPassword && cleanPass === account.initialPassword);
+    if (account.passwordHash !== inputHash && !isTestPassMatch) {
       return { success: false, message: 'Mật khẩu không chính xác. Vui lòng kiểm tra lại.' };
     }
 
@@ -623,7 +444,7 @@ class UserManager {
       status: 'average',
       accountStatus: 'active',
       initialPassword: initialPassword,
-      notes: studentData.notes || 'Tài khoản được cấp bởi GVCN ThS. Nguyễn Mai Anh.',
+      notes: studentData.notes || 'Tài khoản được cấp bởi Quản Trị Viên hệ thống.',
       examHistory: []
     };
 
@@ -844,7 +665,7 @@ class UserManager {
       title: asgData.title,
       examId: asgData.examId,
       subject: asgData.subject,
-      assignedBy: this.currentUser ? this.currentUser.name : 'ThS. Nguyễn Mai Anh',
+      assignedBy: this.currentUser ? this.currentUser.name : 'Quản Trị Viên',
       assignedTo: asgData.assignedTo || 'all',
       deadline: asgData.deadline,
       note: asgData.note || '',
