@@ -7,10 +7,10 @@
 class UserManager {
   constructor() {
     this.STORAGE_KEYS = {
-      ACCOUNTS: 'edupass_accounts_v4',
-      SESSION: 'edupass_session_v4',
-      STUDENTS: 'edupass_students_registry_v4',
-      ASSIGNMENTS: 'edupass_assignments_registry_v4'
+      ACCOUNTS: 'edupass_accounts_v5',
+      SESSION: 'edupass_session_v5',
+      STUDENTS: 'edupass_students_registry_v5',
+      ASSIGNMENTS: 'edupass_assignments_registry_v5'
     };
 
     this.currentUser = null;
@@ -217,9 +217,10 @@ class UserManager {
     this.saveStudents();
     this.saveAssignments();
 
-    // Default session: Admin
-    this.currentUser = adminAccount;
-    this.saveSession(adminAccount);
+    // Default session: Student (Test User)
+    const defaultStudent = this.accounts.find(a => a.role === 'student') || adminAccount;
+    this.currentUser = defaultStudent;
+    this.saveSession(defaultStudent);
   }
 
   // =========================================================
@@ -232,7 +233,7 @@ class UserManager {
       role: account.role,
       studentId: account.studentId || null,
       name: account.name,
-      avatar: account.avatar || (account.role === 'admin' ? '👩‍🏫' : '👨‍🎓'),
+      avatar: account.avatar || (account.role === 'admin' ? '👑' : '👨‍🎓'),
       loginAt: new Date().toISOString()
     };
     if (remember) {
@@ -258,11 +259,11 @@ class UserManager {
       console.warn('Session restore error:', e);
     }
 
-    // Fallback: Default to Admin for convenience, or null
-    const defaultAdmin = this.accounts.find(a => a.role === 'admin');
-    if (defaultAdmin) {
-      this.currentUser = defaultAdmin;
-      this.saveSession(defaultAdmin);
+    // Fallback: Default to Student for public user convenience
+    const defaultStudent = this.accounts.find(a => a.role === 'student');
+    if (defaultStudent) {
+      this.currentUser = defaultStudent;
+      this.saveSession(defaultStudent);
     }
   }
 
@@ -348,11 +349,8 @@ class UserManager {
     }
     if (window.app) {
       window.app.updateHeaderStats();
-      if (this.isAdmin()) {
-        window.app.switchTab('admin-portal');
-      } else if (this.isStudent()) {
-        window.app.switchTab('student-portal');
-      } else {
+      // If user was on admin-portal and logged out or switched to student, redirect to dashboard
+      if (window.app.activeTab === 'admin-portal' && !this.isAdmin()) {
         window.app.switchTab('dashboard');
       }
     }
