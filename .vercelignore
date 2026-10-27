@@ -1,0 +1,8 @@
+.git
+.gitignore
+netlify.toml
+render.yaml
+package.json
+package-lock.json
+*.md
+node_modules

@@ -10,7 +10,18 @@ class UserManager {
       ACCOUNTS: 'edupass_accounts_v5',
       SESSION: 'edupass_session_v6',
       STUDENTS: 'edupass_students_registry_v5',
-      ASSIGNMENTS: 'edupass_assignments_registry_v5'
+      ASSIGNMENTS: 'edupass_assignments_registry_v5',
+      LOGIN_GUARD: 'edupass_login_guard_v1'
+    };
+
+    // Security policy
+    this.SECURITY = {
+      MAX_ATTEMPTS: 5,                       // failed attempts before lockout
+      BASE_LOCK_MS: 60 * 1000,               // 1 minute, doubles each subsequent lockout
+      MAX_LOCK_MS: 30 * 60 * 1000,           // cap at 30 minutes
+      ADMIN_SESSION_MS: 8 * 60 * 60 * 1000,  // admin session: 8 hours
+      STUDENT_SESSION_MS: 7 * 24 * 60 * 60 * 1000, // student session: 7 days
+      MAX_NAME_LEN: 60
     };
 
     this.currentUser = null;
@@ -19,6 +30,56 @@ class UserManager {
     this.assignments = [];
 
     this.init();
+  }
+
+  // Strip HTML/script-significant characters to prevent stored XSS via names/notes
+  sanitizeText(value, maxLen = this.SECURITY.MAX_NAME_LEN) {
+    return String(value == null ? '' : value)
+      .replace(/[\u0000-\u001F\u007F]/g, '')
+      .replace(/[<>"'`\\]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .slice(0, maxLen);
+  }
+
+  // ---------- Brute-force protection ----------
+  getLoginGuard() {
+    try {
+      return JSON.parse(localStorage.getItem(this.STORAGE_KEYS.LOGIN_GUARD)) || {};
+    } catch (e) {
+      return {};
+    }
+  }
+
+  saveLoginGuard(guard) {
+    localStorage.setItem(this.STORAGE_KEYS.LOGIN_GUARD, JSON.stringify(guard));
+  }
+
+  getLockRemainingMs(key) {
+    const entry = this.getLoginGuard()[key];
+    if (!entry || !entry.lockedUntil) return 0;
+    return Math.max(0, entry.lockedUntil - Date.now());
+  }
+
+  registerFailedAttempt(key) {
+    const guard = this.getLoginGuard();
+    const entry = guard[key] || { fails: 0, lockouts: 0, lockedUntil: 0 };
+    entry.fails += 1;
+    if (entry.fails >= this.SECURITY.MAX_ATTEMPTS) {
+      const lockMs = Math.min(this.SECURITY.BASE_LOCK_MS * Math.pow(2, entry.lockouts), this.SECURITY.MAX_LOCK_MS);
+      entry.lockedUntil = Date.now() + lockMs;
+      entry.lockouts += 1;
+      entry.fails = 0;
+    }
+    guard[key] = entry;
+    this.saveLoginGuard(guard);
+    return entry;
+  }
+
+  clearFailedAttempts(key) {
+    const guard = this.getLoginGuard();
+    delete guard[key];
+    this.saveLoginGuard(guard);
   }
 
   // Simple and fast cryptographic hash (SHA-256 simulation with salt for local security)
@@ -52,6 +113,9 @@ class UserManager {
       this.accounts = JSON.parse(localStorage.getItem(this.STORAGE_KEYS.ACCOUNTS)) || [];
       this.students = JSON.parse(localStorage.getItem(this.STORAGE_KEYS.STUDENTS)) || [];
       this.assignments = JSON.parse(localStorage.getItem(this.STORAGE_KEYS.ASSIGNMENTS)) || [];
+      // Defensive: neutralize any legacy HTML payloads stored in names
+      this.accounts.forEach(a => { if (a && a.name) a.name = this.sanitizeText(a.name); });
+      this.students.forEach(s => { if (s && s.name) s.name = this.sanitizeText(s.name); });
     } catch (e) {
       console.warn('Error loading auth data from storage:', e);
       this.accounts = [];
@@ -232,7 +296,8 @@ class UserManager {
       studentId: account.studentId || null,
       name: account.name,
       avatar: account.avatar || (account.role === 'admin' ? '👑' : '👨‍🎓'),
-      loginAt: new Date().toISOString()
+      loginAt: new Date().toISOString(),
+      expiresAt: Date.now() + (account.role === 'admin' ? this.SECURITY.ADMIN_SESSION_MS : this.SECURITY.STUDENT_SESSION_MS)
     };
     if (remember) {
       localStorage.setItem(this.STORAGE_KEYS.SESSION, JSON.stringify(sessionData));
@@ -247,8 +312,13 @@ class UserManager {
       const stored = localStorage.getItem(this.STORAGE_KEYS.SESSION) || sessionStorage.getItem(this.STORAGE_KEYS.SESSION);
       if (stored) {
         const sessionData = JSON.parse(stored);
+        const expired = !sessionData.expiresAt || Date.now() > sessionData.expiresAt;
         const account = this.accounts.find(a => a.id === sessionData.accountId && a.status !== 'locked');
-        if (account) {
+        // Reject expired sessions and sessions whose role does not match the stored account
+        if (expired || !account || account.role !== sessionData.role) {
+          localStorage.removeItem(this.STORAGE_KEYS.SESSION);
+          sessionStorage.removeItem(this.STORAGE_KEYS.SESSION);
+        } else {
           this.currentUser = account;
           return;
         }
@@ -270,6 +340,33 @@ class UserManager {
       return { success: false, message: 'Vui lòng nhập đầy đủ Tên đăng nhập và Mật khẩu!' };
     }
 
+    if (cleanUser.length > 64 || cleanPass.length > 128) {
+      return { success: false, message: 'Thông tin đăng nhập không hợp lệ.' };
+    }
+
+    // Brute-force lockout check (per username + global)
+    const guardKey = 'u:' + cleanUser;
+    const lockMs = Math.max(this.getLockRemainingMs(guardKey), this.getLockRemainingMs('global'));
+    if (lockMs > 0) {
+      const mins = Math.ceil(lockMs / 60000);
+      return {
+        success: false,
+        locked: true,
+        message: `Đăng nhập sai quá nhiều lần. Vui lòng thử lại sau ${mins} phút.`
+      };
+    }
+
+    const genericFail = () => {
+      const entry = this.registerFailedAttempt(guardKey);
+      this.registerFailedAttempt('global');
+      const left = this.SECURITY.MAX_ATTEMPTS - entry.fails;
+      if (entry.lockedUntil > Date.now()) {
+        return { success: false, locked: true, message: 'Đăng nhập sai quá nhiều lần. Tài khoản tạm khóa đăng nhập, vui lòng thử lại sau.' };
+      }
+      // Generic message: do not reveal whether username exists (prevents account enumeration)
+      return { success: false, message: `Tên đăng nhập hoặc mật khẩu không chính xác. Còn ${left} lần thử.` };
+    };
+
     // Find account by username, studentId, email or testing alias
     const account = this.accounts.find(a => 
       a.username.toLowerCase() === cleanUser || 
@@ -280,10 +377,7 @@ class UserManager {
     );
 
     if (!account) {
-      return { 
-        success: false, 
-        message: 'Tài khoản không tồn tại trên hệ thống. Chỉ Admin mới có quyền cấp tài khoản học sinh.' 
-      };
+      return genericFail();
     }
 
     if (account.status === 'locked') {
@@ -293,12 +387,13 @@ class UserManager {
       };
     }
 
-    // Verify password hash or test shortcuts (123456 or initialPassword)
+    // Verify password strictly against stored hash (no master/backdoor passwords)
     const inputHash = this.hashPassword(cleanPass);
-    const isTestPassMatch = cleanPass === '123456' || (account.initialPassword && cleanPass === account.initialPassword);
-    if (account.passwordHash !== inputHash && !isTestPassMatch) {
-      return { success: false, message: 'Mật khẩu không chính xác. Vui lòng kiểm tra lại.' };
+    if (account.passwordHash !== inputHash) {
+      return genericFail();
     }
+
+    this.clearFailedAttempts(guardKey);
 
     // Successful login
     account.lastLogin = new Date().toISOString().split('T')[0];
@@ -386,7 +481,7 @@ class UserManager {
   provisionStudentAccount(studentData) {
     this.checkAdminPermission();
 
-    const name = (studentData.name || '').trim();
+    const name = this.sanitizeText(studentData.name);
     if (!name) {
       throw new Error('Họ và tên học sinh không được để trống.');
     }
@@ -556,7 +651,7 @@ class UserManager {
     if (!this.currentUser) {
       throw new Error('Bạn cần đăng nhập để đổi tên.');
     }
-    const cleanName = (newName || '').trim();
+    const cleanName = this.sanitizeText(newName);
     if (!cleanName || cleanName.length < 2) {
       throw new Error('Họ và tên không hợp lệ (tối thiểu 2 ký tự).');
     }
@@ -595,7 +690,7 @@ class UserManager {
   // Admin updates any student's name
   adminUpdateStudentName(studentId, newName) {
     this.checkAdminPermission();
-    const cleanName = (newName || '').trim();
+    const cleanName = this.sanitizeText(newName);
     if (!cleanName || cleanName.length < 2) {
       throw new Error('Họ và tên học sinh không hợp lệ (tối thiểu 2 ký tự).');
     }

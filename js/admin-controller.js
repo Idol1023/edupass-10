@@ -426,11 +426,7 @@ class AdminController {
         });
       }
 
-      // Quick switch buttons
-      const btnSwAdmin = container.querySelector('#btnSwitchAdminQuick');
-      if (btnSwAdmin) {
-        btnSwAdmin.addEventListener('click', () => this.quickLoginAs('admin', 'admin@123'));
-      }
+      // Quick switch (student test account only — admin credentials are never exposed in UI)
       const btnSwStudent = container.querySelector('#btnSwitchStudentQuick');
       if (btnSwStudent) {
         btnSwStudent.addEventListener('click', () => this.quickLoginAs('hocsinh', 'hocsinh@123'));

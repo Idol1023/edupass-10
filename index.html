@@ -26,11 +26,11 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
   <!-- Stylesheets with versioning -->
-  <link rel="stylesheet" href="css/main.css?v=2.3.4">
-  <link rel="stylesheet" href="css/components.css?v=2.3.4">
-  <link rel="stylesheet" href="css/exam.css?v=2.3.4">
-  <link rel="stylesheet" href="css/admin.css?v=2.3.4">
-  <link rel="stylesheet" href="css/responsive.css?v=2.3.4">
+  <link rel="stylesheet" href="css/main.css?v=2.3.5">
+  <link rel="stylesheet" href="css/components.css?v=2.3.5">
+  <link rel="stylesheet" href="css/exam.css?v=2.3.5">
+  <link rel="stylesheet" href="css/admin.css?v=2.3.5">
+  <link rel="stylesheet" href="css/responsive.css?v=2.3.5">
 </head>
 <body>
 
@@ -1218,7 +1218,7 @@
         <form id="formAuthLogin">
           <div class="edupass-form-group">
             <label>Tên đăng nhập / Mã học sinh *</label>
-            <input type="text" id="inputLoginUsername" placeholder="Ví dụ: admin hoặc hs0901" required autocomplete="username">
+            <input type="text" id="inputLoginUsername" placeholder="Ví dụ: hs0901" required autocomplete="username" maxlength="64">
           </div>
           <div class="edupass-form-group">
             <label>Mật khẩu *</label>
@@ -1241,9 +1241,6 @@
             Đăng nhập thử nghiệm nhanh:
           </div>
           <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-            <button type="button" class="btn btn-secondary btn-sm" onclick="window.adminController.quickLoginAs('admin', 'admin@123')" style="font-size: 0.78rem;">
-              👑 Quản Trị Viên (Admin)
-            </button>
             <button type="button" class="btn btn-secondary btn-sm" onclick="window.adminController.quickLoginAs('hocsinh', 'hocsinh@123')" style="font-size: 0.78rem;">
               👨‍🎓 Học Sinh (Test User)
             </button>
@@ -1554,21 +1551,21 @@
   </footer>
 
   <!-- ================= JAVASCRIPT BUNDLES (WITH CACHE BUSTER) ================= -->
-  <script src="js/data/questions-math.js?v=2.3.4"></script>
-  <script src="js/data/questions-english.js?v=2.3.4"></script>
-  <script src="js/data/questions-literature.js?v=2.3.4"></script>
-  <script src="js/data/topic-exams-math.js?v=2.3.4"></script>
-  <script src="js/data/topic-exams-english.js?v=2.3.4"></script>
-  <script src="js/data/topic-exams-literature.js?v=2.3.4"></script>
-  <script src="js/data/knowledge-base.js?v=2.3.4"></script>
-  <script src="js/audio-utils.js?v=2.3.4"></script>
-  <script src="js/storage-manager.js?v=2.3.4"></script>
-  <script src="js/exam-engine.js?v=2.3.4"></script>
-  <script src="js/review-engine.js?v=2.3.4"></script>
-  <script src="js/flashcards.js?v=2.3.4"></script>
-  <script src="js/progress-tracker.js?v=2.3.4"></script>
-  <script src="js/user-manager.js?v=2.3.4"></script>
-  <script src="js/admin-controller.js?v=2.3.4"></script>
-  <script src="js/app.js?v=2.3.4"></script>
+  <script src="js/data/questions-math.js?v=2.3.5"></script>
+  <script src="js/data/questions-english.js?v=2.3.5"></script>
+  <script src="js/data/questions-literature.js?v=2.3.5"></script>
+  <script src="js/data/topic-exams-math.js?v=2.3.5"></script>
+  <script src="js/data/topic-exams-english.js?v=2.3.5"></script>
+  <script src="js/data/topic-exams-literature.js?v=2.3.5"></script>
+  <script src="js/data/knowledge-base.js?v=2.3.5"></script>
+  <script src="js/audio-utils.js?v=2.3.5"></script>
+  <script src="js/storage-manager.js?v=2.3.5"></script>
+  <script src="js/exam-engine.js?v=2.3.5"></script>
+  <script src="js/review-engine.js?v=2.3.5"></script>
+  <script src="js/flashcards.js?v=2.3.5"></script>
+  <script src="js/progress-tracker.js?v=2.3.5"></script>
+  <script src="js/user-manager.js?v=2.3.5"></script>
+  <script src="js/admin-controller.js?v=2.3.5"></script>
+  <script src="js/app.js?v=2.3.5"></script>
 </body>
 </html>
