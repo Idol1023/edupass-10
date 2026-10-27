@@ -120,6 +120,7 @@ class ProgressTracker {
     try { this.renderSubjectDiagnostics(); } catch (err) { console.error("renderSubjectDiagnostics failed:", err); }
     try { this.renderCharts(); } catch (err) { console.error("renderCharts failed:", err); }
     try { this.renderAchievements(); } catch (err) { console.error("renderAchievements failed:", err); }
+    try { this.renderDashboardPreview(); } catch (err) { console.error("renderDashboardPreview failed:", err); }
   }
 
   // 1. Calculate subject-specific performance & projected admission score
@@ -1030,6 +1031,170 @@ class ProgressTracker {
         </div>
       </div>
     `).join('');
+
+    if (window.lucide) window.lucide.createIcons();
+  }
+
+  // 7. Render Dashboard Homepage 4-Stage Roadmap Preview
+  renderDashboardPreview() {
+    const previewContainer = document.getElementById('dashRoadmapPreview');
+    if (!previewContainer) return;
+
+    const profile = window.storageManager.getProfile();
+    const stats = this.getSubjectStats();
+    const history = window.storageManager.getExamHistory();
+    const mistakes = window.storageManager.getMistakes();
+    const flashcards = window.storageManager.getMasteredFlashcards();
+    const benchmark = profile.benchmarkScore || 25.5;
+
+    // 1. Update Target School Header
+    const targetSchoolEl = document.getElementById('dashRoadmapTargetSchool');
+    if (targetSchoolEl) {
+      targetSchoolEl.textContent = profile.targetSchool || "THPT Nguyễn Thượng Hiền (TP.HCM)";
+    }
+
+    // 2. Compute 4 stages (Same robust milestones as 3-subject comprehensive roadmap)
+    const totalTests = history.length;
+    const proj = stats.projectedTotal;
+
+    const s1Criteria = [
+      { label: 'Làm ≥ 2 bài thi', done: totalTests >= 2 },
+      { label: 'Thuộc ≥ 10 Flashcards', done: flashcards.length >= 10 },
+      { label: 'Nhận biết/Thông hiểu ≥ 75%', done: proj >= 20.0 }
+    ];
+    const s1Pct = Math.round((s1Criteria.filter(c => c.done).length / s1Criteria.length) * 100);
+
+    const s2Criteria = [
+      { label: 'Điểm TB 3 môn ≥ 7.5', done: totalTests >= 1 && proj >= 22.5 },
+      { label: 'Sửa bẫy trong Sổ lỗi', done: totalTests >= 1 && mistakes.length <= 20 },
+      { label: 'Vi-ét & Biển báo TP.HCM', done: totalTests >= 1 && stats.math.avg >= 7.5 && stats.english.avg >= 7.5 }
+    ];
+    const s2Pct = totalTests === 0 ? 0 : s1Pct >= 100 ? Math.round((s2Criteria.filter(c => c.done).length / s2Criteria.length) * 100) : Math.round(s1Pct * 0.4);
+
+    const s3Criteria = [
+      { label: 'Đề chuẩn Sở GD TP.HCM', done: totalTests >= 3 },
+      { label: 'Điểm dự phóng ≥ 24.5đ', done: proj >= 24.5 },
+      { label: 'Kiểm soát tốc độ 90-120p', done: totalTests >= 4 }
+    ];
+    const s3Pct = s2Pct >= 80 ? Math.round((s3Criteria.filter(c => c.done).length / s3Criteria.length) * 100) : 0;
+
+    const s4Criteria = [
+      { label: 'Đạt điểm ≥ 9.0 trong bài thi', done: history.some(h => h.score >= 9.0) },
+      { label: 'Xử lý câu Vận dụng cao', done: stats.english.avg >= 9.0 || stats.math.avg >= 9.0 },
+      { label: `Vượt điểm chuẩn (${benchmark.toFixed(2)}đ)`, done: totalTests >= 3 && proj >= benchmark }
+    ];
+    const s4Pct = s3Pct >= 80 ? Math.round((s4Criteria.filter(c => c.done).length / s4Criteria.length) * 100) : 0;
+
+    const stages = [
+      {
+        num: 1,
+        title: 'Chặng 1: Nền tảng SGK Lớp 9',
+        target: 'Mục tiêu: 5.5 - 6.5đ',
+        pct: s1Pct,
+        criteria: s1Criteria
+      },
+      {
+        num: 2,
+        title: 'Chặng 2: Bẻ khóa bẫy đề thi',
+        target: 'Mục tiêu: 7.5 - 8.5đ',
+        pct: s2Pct,
+        criteria: s2Criteria
+      },
+      {
+        num: 3,
+        title: 'Chặng 3: Luyện đề chuẩn TP.HCM',
+        target: 'Mục tiêu: 8.5 - 9.0đ',
+        pct: s3Pct,
+        criteria: s3Criteria
+      },
+      {
+        num: 4,
+        title: 'Chặng 4: Bứt phá điểm 9-10 & Top 1',
+        target: 'Mục tiêu: 9.0 - 10.0đ',
+        pct: s4Pct,
+        criteria: s4Criteria
+      }
+    ];
+
+    // 3. Render 4 Stage Cards into Grid
+    const stagesGrid = document.getElementById('dashRoadmapStagesGrid');
+    if (stagesGrid) {
+      stagesGrid.innerHTML = stages.map(st => {
+        const isCompleted = st.pct >= 100;
+        const isInProgress = st.pct > 0 && st.pct < 100;
+        const statusBadge = isCompleted 
+          ? '<span class="dash-stage-badge completed"><i data-lucide="check-circle-2"></i> Hoàn thành</span>'
+          : isInProgress 
+          ? `<span class="dash-stage-badge current"><i data-lucide="clock"></i> Đang học (${st.pct}%)</span>`
+          : '<span class="dash-stage-badge locked"><i data-lucide="lock"></i> Chưa mở</span>';
+
+        return `
+          <div class="dash-stage-card ${isCompleted ? 'completed' : isInProgress ? 'active' : ''}" 
+               onclick="window.app.switchTab('roadmap'); setTimeout(() => { const el = document.getElementById('roadmapStage_${st.num}'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 150);"
+               title="Nhấn để xem chi tiết Chặng ${st.num} trong Lộ trình"
+               role="button" tabindex="0">
+            <div class="dash-stage-header">
+              <div class="dash-stage-num">${st.num}</div>
+              ${statusBadge}
+            </div>
+            <div class="dash-stage-title">${st.title}</div>
+            <div class="dash-stage-target">${st.target}</div>
+            <div class="dash-stage-progress-bar">
+              <div class="dash-stage-progress-fill" style="width: ${Math.min(100, Math.max(st.pct > 0 ? 8 : 0, st.pct))}%;"></div>
+            </div>
+            <div class="dash-stage-criteria-count">
+              <span>Tiến độ tiêu chí:</span>
+              <strong>${st.criteria.filter(c => c.done).length}/${st.criteria.length}</strong>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // 4. Update Footer Stats (Projected score & admission chance)
+    const gap = Math.round((proj - benchmark) * 100) / 100;
+    let chanceText = "Khởi đầu (Cần làm bài thi khảo sát)";
+    let chanceColor = "var(--text-muted)";
+    let chanceBg = "rgba(148, 163, 184, 0.12)";
+
+    if (totalTests === 0) {
+      chanceText = "Khởi đầu (Cần làm bài thi khảo sát)";
+      chanceColor = "var(--primary)";
+      chanceBg = "rgba(14, 165, 233, 0.15)";
+    } else if (gap >= 1.5) {
+      chanceText = "Xác suất: Rất an toàn (95%)";
+      chanceColor = "var(--success)";
+      chanceBg = "rgba(16, 185, 129, 0.18)";
+    } else if (gap >= 0.5) {
+      chanceText = "Xác suất: Cơ hội cao (88%)";
+      chanceColor = "var(--primary)";
+      chanceBg = "rgba(14, 165, 233, 0.18)";
+    } else if (gap >= 0.0) {
+      chanceText = "Xác suất: Đạt chuẩn (80%)";
+      chanceColor = "var(--primary)";
+      chanceBg = "rgba(14, 165, 233, 0.15)";
+    } else if (gap >= -1.0) {
+      chanceText = `Xác suất: Đang bám sát (Thiếu ${Math.abs(gap).toFixed(2)}đ)`;
+      chanceColor = "#f59e0b";
+      chanceBg = "rgba(245, 158, 11, 0.18)";
+    } else {
+      chanceText = `Xác suất: Cần tăng tốc (Thiếu ${Math.abs(gap).toFixed(2)}đ)`;
+      chanceColor = "#f97316";
+      chanceBg = "rgba(249, 115, 22, 0.15)";
+    }
+
+    const chanceBadge = document.getElementById('dashRoadmapChanceBadge');
+    if (chanceBadge) {
+      chanceBadge.innerHTML = `<i data-lucide="target"></i> ${chanceText}`;
+      chanceBadge.style.color = chanceColor;
+      chanceBadge.style.background = chanceBg;
+      chanceBadge.style.borderColor = chanceColor;
+    }
+
+    const scoreSummary = document.getElementById('dashRoadmapScoreSummary');
+    if (scoreSummary) {
+      scoreSummary.innerHTML = `Tổng điểm dự phóng: <strong style="color: var(--primary);">${proj.toFixed(2)} / 30.0đ</strong> • Điểm chuẩn cần: <strong>${benchmark.toFixed(2)}đ</strong>`;
+    }
 
     if (window.lucide) window.lucide.createIcons();
   }

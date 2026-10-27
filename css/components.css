@@ -742,6 +742,257 @@
   transform: translateY(-1px);
 }
 
+/* --- Target School Forecast Card Components --- */
+.target-forecast-header-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.target-forecast-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.target-forecast-metric-item {
+  min-width: 0;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+/* --- Dashboard Roadmap Preview Card (Trang Chủ) --- */
+.dash-roadmap-preview-card {
+  margin-bottom: 2rem;
+  padding: 1.75rem 2rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(14, 165, 233, 0.08) 50%, var(--bg-surface) 100%);
+  border: 1.5px solid rgba(99, 102, 241, 0.35);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+[data-theme="light"] .dash-roadmap-preview-card {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(14, 165, 233, 0.05) 50%, #ffffff 100%);
+  border-color: rgba(99, 102, 241, 0.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.dash-roadmap-preview-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.dash-roadmap-preview-info {
+  flex: 1;
+  min-width: 260px;
+}
+
+.dash-roadmap-preview-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.18);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.dash-roadmap-preview-title {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--text-main);
+  line-height: 1.3;
+  margin-bottom: 0.35rem;
+}
+
+.dash-roadmap-preview-desc {
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
+  max-width: 760px;
+}
+
+.dash-roadmap-stages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dash-stage-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-width: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.dash-stage-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.18);
+}
+
+.dash-stage-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
+.dash-stage-num-badge {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.78rem;
+  background: var(--bg-surface-elevated);
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.dash-stage-card.completed .dash-stage-num-badge {
+  background: var(--success);
+  color: #fff;
+  border-color: var(--success);
+}
+
+.dash-stage-card.current .dash-stage-num-badge {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  box-shadow: 0 0 10px var(--primary-glow);
+}
+
+.dash-stage-status-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.dash-stage-status-tag.done {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.dash-stage-status-tag.in-progress {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.dash-stage-status-tag.locked {
+  background: var(--bg-surface-elevated);
+  color: var(--text-dim);
+}
+
+.dash-stage-title {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.25;
+}
+
+.dash-stage-timeline {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+}
+
+.dash-stage-bar-bg {
+  height: 6px;
+  background: var(--bg-surface-elevated);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: auto;
+}
+
+.dash-stage-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), var(--accent-cyan));
+  transition: width 0.6s ease;
+}
+
+.dash-stage-card.completed .dash-stage-bar-fill {
+  background: var(--success);
+}
+
+.dash-stage-pct {
+  font-size: 0.75rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  text-align: right;
+}
+
+.dash-roadmap-preview-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.dash-roadmap-footer-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.dash-roadmap-chance-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  background: rgba(148, 163, 184, 0.12);
+  color: #94a3b8;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  white-space: nowrap;
+}
+
+.dash-roadmap-score-summary {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}
+
 /* Modals */
 .modal-overlay {
   position: fixed;

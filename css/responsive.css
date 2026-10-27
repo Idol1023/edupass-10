@@ -534,6 +534,13 @@
 }
 
 /* --- 7. ROADMAP & DIAGNOSTIC ANALYTICS RESPONSIVENESS --- */
+@media (max-width: 1100px) {
+  .dash-roadmap-stages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .chart-grid {
     grid-template-columns: 1fr;
@@ -547,10 +554,50 @@
   .chart-canvas-container {
     height: 280px !important;
   }
+
+  .target-forecast-metric-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
+  /* Dashboard Roadmap Preview */
+  .dash-roadmap-preview-card {
+    padding: 1.25rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .dash-roadmap-preview-title {
+    font-size: 1.15rem;
+  }
+
+  .dash-roadmap-stages-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .dash-roadmap-preview-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+  }
+
+  .dash-roadmap-preview-footer .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
   /* Target School Forecast Card */
+  #sec_roadmapTarget {
+    padding: 1.25rem 1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .target-forecast-header-info {
+    min-width: 100% !important;
+  }
+
   .target-forecast-metric-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 0.85rem !important;
@@ -592,10 +639,15 @@
   .roadmap-quick-btn {
     font-size: 0.75rem;
     padding: 0.35rem 0.65rem;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .roadmap-step {
     gap: 0.75rem;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
 
   .roadmap-step::before {
@@ -607,10 +659,14 @@
     width: 38px;
     height: 38px;
     font-size: 1rem;
+    flex-shrink: 0;
   }
 
   .roadmap-card {
     padding: 1rem;
+    min-width: 0;
+    overflow: hidden;
+    box-sizing: border-box;
   }
 
   .roadmap-subject-pills {
@@ -630,9 +686,10 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   .target-forecast-metric-grid {
     grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
   }
 }
 

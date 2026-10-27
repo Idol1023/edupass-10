@@ -296,7 +296,13 @@ class EduPassApp {
 
     // Update nav tab highlights (both desktop top bar and mobile bottom bar)
     document.querySelectorAll('.nav-tab-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.tab === tabId);
+      const isActive = btn.dataset.tab === tabId;
+      btn.classList.toggle('active', isActive);
+      if (isActive) {
+        try {
+          btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        } catch (e) {}
+      }
     });
     document.querySelectorAll('.mobile-nav-item').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.tab === tabId);
@@ -324,6 +330,9 @@ class EduPassApp {
     } else if (tabId === 'dashboard') {
       this.updateHeaderStats();
       this.renderRecentHistory();
+      if (window.progressTracker) {
+        try { window.progressTracker.renderDashboardPreview(); } catch (e) { console.error(e); }
+      }
     } else if (tabId === 'results' && window.examEngine) {
       if (window.storageManager.getExamHistory().length === 0) {
         window.examEngine.resetResults();

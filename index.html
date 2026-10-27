@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi" data-theme="dark">
 <head>
   <meta charset="UTF-8">
@@ -26,11 +26,11 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
   <!-- Stylesheets with versioning -->
-  <link rel="stylesheet" href="css/main.css?v=2.3.5">
-  <link rel="stylesheet" href="css/components.css?v=2.3.5">
-  <link rel="stylesheet" href="css/exam.css?v=2.3.5">
-  <link rel="stylesheet" href="css/admin.css?v=2.3.5">
-  <link rel="stylesheet" href="css/responsive.css?v=2.3.5">
+  <link rel="stylesheet" href="css/main.css?v=2.3.6">
+  <link rel="stylesheet" href="css/components.css?v=2.3.6">
+  <link rel="stylesheet" href="css/exam.css?v=2.3.6">
+  <link rel="stylesheet" href="css/admin.css?v=2.3.6">
+  <link rel="stylesheet" href="css/responsive.css?v=2.3.6">
 </head>
 <body>
 
@@ -102,28 +102,28 @@
   <nav class="app-nav">
     <div class="nav-container">
       <button class="nav-tab-btn active" data-tab="dashboard">
-        <i data-lucide="layout-dashboard"></i> Tổng quan
+        <i data-lucide="layout-dashboard"></i> <span>Tổng quan</span>
       </button>
       <button class="nav-tab-btn" data-tab="exams-list">
-        <i data-lucide="file-text"></i> Danh sách đề thi
+        <i data-lucide="file-text"></i> <span class="nav-text-full">Danh sách đề thi</span><span class="nav-text-short">Kho đề</span>
       </button>
       <button class="nav-tab-btn" data-tab="exam">
-        <i data-lucide="timer"></i> Phòng thi thử
+        <i data-lucide="timer"></i> <span class="nav-text-full">Phòng thi thử</span><span class="nav-text-short">Thi thử</span>
       </button>
       <button class="nav-tab-btn" data-tab="results">
-        <i data-lucide="bar-chart-2"></i> Kết quả thi
+        <i data-lucide="bar-chart-2"></i> <span class="nav-text-full">Kết quả thi</span><span class="nav-text-short">Kết quả</span>
       </button>
       <button class="nav-tab-btn" data-tab="review">
-        <i data-lucide="search"></i> Xem lại bài làm
+        <i data-lucide="search"></i> <span class="nav-text-full">Xem lại bài làm</span><span class="nav-text-short">Xem lại</span>
       </button>
       <button class="nav-tab-btn" data-tab="mistakes">
-        <i data-lucide="book-x"></i> Sổ tay lỗi sai <span class="nav-tab-badge" id="navMistakeBadgeCount">0</span>
+        <i data-lucide="book-x"></i> <span class="nav-text-full">Sổ tay lỗi sai</span><span class="nav-text-short">Sổ lỗi</span> <span class="nav-tab-badge" id="navMistakeBadgeCount">0</span>
       </button>
       <button class="nav-tab-btn" data-tab="knowledge">
-        <i data-lucide="sparkles"></i> Ôn tập kiến thức
+        <i data-lucide="sparkles"></i> <span class="nav-text-full">Ôn tập kiến thức</span><span class="nav-text-short">Ôn tập</span>
       </button>
       <button class="nav-tab-btn" data-tab="roadmap">
-        <i data-lucide="trending-up"></i> Lộ trình tiến bộ
+        <i data-lucide="trending-up"></i> <span class="nav-text-full">Lộ trình tiến bộ</span><span class="nav-text-short">Lộ trình</span>
       </button>
     </div>
   </nav>
@@ -201,6 +201,45 @@
             <div class="stat-label">Câu sai trong sổ tay</div>
             <div class="stat-sub" style="color: var(--primary); cursor: pointer;" id="btnGoToMistakeNotebook">Xem sổ tay →</div>
           </div>
+        </div>
+      </div>
+
+      <!-- DASHBOARD ROADMAP PREVIEW: LỘ TRÌNH TIẾN BỘ 4 CHẶNG TRÊN TRANG CHỦ -->
+      <div class="dash-roadmap-preview-card" id="dashRoadmapPreview">
+        <div class="dash-roadmap-preview-header">
+          <div class="dash-roadmap-preview-info">
+            <div class="dash-roadmap-preview-tag">
+              <i data-lucide="trending-up"></i> Lộ Trình Tiến Bộ 4 Chặng Vào 10
+            </div>
+            <h2 class="dash-roadmap-preview-title">
+              Mục Tiêu Tuyển Sinh: <span id="dashRoadmapTargetSchool" style="color: var(--primary);">THPT Nguyễn Thượng Hiền (TP.HCM)</span>
+            </h2>
+            <p class="dash-roadmap-preview-desc">
+              Tiến độ tích lũy tự động từ các bài thi thực tế: Nền tảng SGK ➔ Bẻ khóa bẫy đề ➔ Luyện đề chuẩn TP.HCM ➔ Bứt phá điểm 9-10.
+            </p>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="window.app.switchTab('roadmap')" style="flex-shrink: 0;">
+            <span>Xem chi tiết Lộ trình</span> <i data-lucide="arrow-right"></i>
+          </button>
+        </div>
+
+        <!-- 4 Milestone Stage Progress Track -->
+        <div class="dash-roadmap-stages-grid" id="dashRoadmapStagesGrid">
+          <!-- Populated by window.progressTracker.renderDashboardPreview() -->
+        </div>
+
+        <div class="dash-roadmap-preview-footer">
+          <div class="dash-roadmap-footer-stats">
+            <span class="dash-roadmap-chance-badge" id="dashRoadmapChanceBadge">
+              <i data-lucide="target"></i> Xác suất: Khởi đầu (0%)
+            </span>
+            <span class="dash-roadmap-score-summary" id="dashRoadmapScoreSummary">
+              Tổng điểm dự phóng: <strong>0.0 / 30.0đ</strong> • Điểm chuẩn cần: <strong>25.50đ</strong>
+            </span>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="window.app.switchTab('roadmap')">
+            <i data-lucide="compass"></i> Mở Kế Hoạch Bứt Phá Hôm Nay
+          </button>
         </div>
       </div>
 
@@ -831,27 +870,27 @@
       </div>
 
       <!-- Target High School Card with 3-Subject Admission Projection -->
-      <div class="stat-card" id="sec_roadmapTarget" style="margin-bottom: 2rem; padding: 1.8rem; background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(14, 165, 233, 0.1) 50%, var(--bg-surface) 100%); border: 1.5px solid rgba(99, 102, 241, 0.35); box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);">
-        <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-          <div style="flex: 1; min-width: 300px;">
+      <div class="stat-card" id="sec_roadmapTarget" style="margin-bottom: 2rem; padding: 1.8rem; background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(14, 165, 233, 0.1) 50%, var(--bg-surface) 100%); border: 1.5px solid rgba(99, 102, 241, 0.35); box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1); width: 100%; box-sizing: border-box; min-width: 0;">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 1rem; width: 100%;">
+          <div class="target-forecast-header-info">
             <div style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.25rem 0.75rem; border-radius: 999px; background: rgba(99, 102, 241, 0.2); color: #818cf8; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 0.5rem;">
               <i data-lucide="target"></i> Dự Báo Trúng Tuyển Tuyển Sinh Lớp 10
             </div>
-            <h2 style="font-size: 1.7rem; font-weight: 900; color: var(--text-main); margin-bottom: 0.35rem;" id="roadmapTargetSchoolName">
+            <h2 style="font-size: 1.7rem; font-weight: 900; color: var(--text-main); margin-bottom: 0.35rem; line-height: 1.25; word-break: break-word;" id="roadmapTargetSchoolName">
               THPT Nguyễn Thượng Hiền (TP.HCM)
             </h2>
-            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.5;">
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.5; max-width: 760px;">
               Hệ thống tự động tổng hợp điểm thực tế 3 môn (Toán + Tiếng Anh + Ngữ Văn) theo barem tuyển sinh Sở GD&ĐT để đo lường xác suất trúng tuyển an toàn.
             </p>
           </div>
-          <button class="btn btn-secondary btn-sm" id="btnEditTargetSchool" style="align-self: flex-start;">
+          <button class="btn btn-secondary btn-sm" id="btnEditTargetSchool" style="align-self: flex-start; flex-shrink: 0;">
             <i data-lucide="edit-3"></i> Đổi trường mục tiêu
           </button>
         </div>
 
         <!-- Metric Cards Inside Target Header -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle);">
-          <div>
+        <div class="target-forecast-metric-grid">
+          <div class="target-forecast-metric-item">
             <div style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Điểm chuẩn mục tiêu:</div>
             <div style="font-size: 1.4rem; font-weight: 800; font-family: var(--font-mono); color: var(--text-main); margin-top: 2px;" id="roadmapTargetBenchmark">
               25.50 điểm
@@ -859,25 +898,25 @@
             <div style="font-size: 0.75rem; color: var(--text-muted);">Trung bình cần: <strong id="roadmapTargetPerSubject">8.50đ/môn</strong></div>
           </div>
 
-          <div>
+          <div class="target-forecast-metric-item">
             <div style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Tổng điểm 3 môn dự phóng:</div>
             <div style="font-size: 1.4rem; font-weight: 800; font-family: var(--font-mono); color: var(--primary); margin-top: 2px;" id="roadmapProjectedTotal">
               0.0 / 30.0đ
             </div>
-            <div style="font-size: 0.75rem; color: var(--text-muted);" id="roadmapProjectedBreakdown">Toán: 0.0 • Anh: 0.0 • Văn: 0.0 (Chưa có bài thi)</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); word-break: break-word;" id="roadmapProjectedBreakdown">Toán: 0.0 • Anh: 0.0 • Văn: 0.0 (Chưa có bài thi)</div>
           </div>
 
-          <div>
+          <div class="target-forecast-metric-item">
             <div style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Chênh lệch so với điểm chuẩn:</div>
             <div style="font-size: 1.4rem; font-weight: 800; font-family: var(--font-mono); color: var(--text-muted); margin-top: 2px;" id="roadmapScoreGap">
               -25.50 điểm
             </div>
-            <div style="font-size: 0.75rem; color: var(--text-muted);" id="roadmapGapDetail">Chưa có bài thi nào hoàn thành</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); word-break: break-word;" id="roadmapGapDetail">Chưa có bài thi nào hoàn thành</div>
           </div>
 
-          <div>
+          <div class="target-forecast-metric-item">
             <div style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Xác suất trúng tuyển:</div>
-            <div class="stat-pill" style="margin-top: 0.35rem; font-weight: 800; display: inline-flex; width: auto; color: #94a3b8; background: rgba(148, 163, 184, 0.12); border-color: rgba(148, 163, 184, 0.25);" id="roadmapAdmissionChanceBadge">
+            <div class="stat-pill" style="margin-top: 0.35rem; font-weight: 800; display: inline-flex; width: auto; color: #94a3b8; background: rgba(148, 163, 184, 0.12); border-color: rgba(148, 163, 184, 0.25); white-space: nowrap;" id="roadmapAdmissionChanceBadge">
               Khởi đầu (0%)
             </div>
           </div>
@@ -1551,21 +1590,21 @@
   </footer>
 
   <!-- ================= JAVASCRIPT BUNDLES (WITH CACHE BUSTER) ================= -->
-  <script src="js/data/questions-math.js?v=2.3.5"></script>
-  <script src="js/data/questions-english.js?v=2.3.5"></script>
-  <script src="js/data/questions-literature.js?v=2.3.5"></script>
-  <script src="js/data/topic-exams-math.js?v=2.3.5"></script>
-  <script src="js/data/topic-exams-english.js?v=2.3.5"></script>
-  <script src="js/data/topic-exams-literature.js?v=2.3.5"></script>
-  <script src="js/data/knowledge-base.js?v=2.3.5"></script>
-  <script src="js/audio-utils.js?v=2.3.5"></script>
-  <script src="js/storage-manager.js?v=2.3.5"></script>
-  <script src="js/exam-engine.js?v=2.3.5"></script>
-  <script src="js/review-engine.js?v=2.3.5"></script>
-  <script src="js/flashcards.js?v=2.3.5"></script>
-  <script src="js/progress-tracker.js?v=2.3.5"></script>
-  <script src="js/user-manager.js?v=2.3.5"></script>
-  <script src="js/admin-controller.js?v=2.3.5"></script>
-  <script src="js/app.js?v=2.3.5"></script>
+  <script src="js/data/questions-math.js?v=2.3.6"></script>
+  <script src="js/data/questions-english.js?v=2.3.6"></script>
+  <script src="js/data/questions-literature.js?v=2.3.6"></script>
+  <script src="js/data/topic-exams-math.js?v=2.3.6"></script>
+  <script src="js/data/topic-exams-english.js?v=2.3.6"></script>
+  <script src="js/data/topic-exams-literature.js?v=2.3.6"></script>
+  <script src="js/data/knowledge-base.js?v=2.3.6"></script>
+  <script src="js/audio-utils.js?v=2.3.6"></script>
+  <script src="js/storage-manager.js?v=2.3.6"></script>
+  <script src="js/exam-engine.js?v=2.3.6"></script>
+  <script src="js/review-engine.js?v=2.3.6"></script>
+  <script src="js/flashcards.js?v=2.3.6"></script>
+  <script src="js/progress-tracker.js?v=2.3.6"></script>
+  <script src="js/user-manager.js?v=2.3.6"></script>
+  <script src="js/admin-controller.js?v=2.3.6"></script>
+  <script src="js/app.js?v=2.3.6"></script>
 </body>
 </html>

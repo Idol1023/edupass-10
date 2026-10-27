@@ -366,6 +366,31 @@ body {
   font-weight: 700;
 }
 
+.nav-text-short {
+  display: none;
+}
+.nav-text-full {
+  display: inline;
+}
+
+@media (max-width: 1400px) {
+  .nav-container {
+    gap: 0.25rem;
+    padding: 0 0.5rem;
+  }
+  .nav-tab-btn {
+    padding: 0.7rem 0.65rem;
+    font-size: 0.82rem;
+    gap: 0.35rem;
+  }
+  .nav-text-short {
+    display: inline;
+  }
+  .nav-text-full {
+    display: none;
+  }
+}
+
 .nav-tab-badge {
   font-size: 0.7rem;
   padding: 1px 6px;
