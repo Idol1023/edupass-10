@@ -233,10 +233,16 @@ class EduPassApp {
       });
     }
 
-    // Target pill click
+    // Target pill click (Guarded for privacy)
     const targetPill = document.getElementById('headerTargetPill');
     if (targetPill) {
       targetPill.addEventListener('click', () => {
+        const isAuth = window.userManager && window.userManager.isAuthenticated();
+        if (!isAuth) {
+          if (window.adminController) window.adminController.openLoginModal('student');
+          this.showToast('Vui lòng đăng nhập tài khoản Học sinh để xem và quản lý trường mục tiêu!');
+          return;
+        }
         this.switchTab('roadmap');
       });
     }
@@ -420,18 +426,32 @@ class EduPassApp {
   }
 
   updateHeaderStats() {
+    const isAuth = window.userManager && typeof window.userManager.isAuthenticated === 'function' && window.userManager.isAuthenticated();
+    const isStudent = isAuth && typeof window.userManager.isStudent === 'function' && window.userManager.isStudent();
     const profile = window.storageManager.getProfile();
     const history = window.storageManager.getExamHistory();
     const mistakes = window.storageManager.getMistakes();
 
     const streakVal = document.getElementById('headerStreakVal');
+    const targetPill = document.getElementById('headerTargetPill');
     const targetSchoolVal = document.getElementById('headerTargetSchoolVal');
     const mistakeBadgeCount = document.getElementById('navMistakeBadgeCount');
     const mobileMistakeBadge = document.getElementById('mobileMistakeBadge');
 
     const streak = typeof profile.streakDays === 'number' ? profile.streakDays : 0;
     if (streakVal) streakVal.textContent = `${streak} ngày`;
-    if (targetSchoolVal) targetSchoolVal.textContent = profile.targetSchool || "THPT Nguyễn Thượng Hiền (TP.HCM)";
+
+    // PRIVACY POLICY: Never show personal target school for unauthenticated guests!
+    if (targetPill) {
+      if (isStudent && profile.targetSchool) {
+        targetPill.style.display = 'inline-flex';
+        if (targetSchoolVal) targetSchoolVal.textContent = profile.targetSchool;
+      } else {
+        targetPill.style.display = 'none';
+        if (targetSchoolVal) targetSchoolVal.textContent = '';
+      }
+    }
+
     if (mistakeBadgeCount) mistakeBadgeCount.textContent = mistakes.length;
     if (mobileMistakeBadge) mobileMistakeBadge.textContent = mistakes.length;
 

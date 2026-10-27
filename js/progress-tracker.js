@@ -20,12 +20,19 @@ class ProgressTracker {
 
     if (editTargetBtn) {
       editTargetBtn.addEventListener('click', () => {
+        const isAuth = window.userManager && typeof window.userManager.isAuthenticated === 'function' && window.userManager.isAuthenticated();
+        if (!isAuth) {
+          if (window.app) window.app.showToast('Vui lòng đăng nhập tài khoản Học sinh để đặt và lưu trường mục tiêu cá nhân!');
+          if (window.adminController) window.adminController.openLoginModal('student');
+          return;
+        }
+
         const profile = window.storageManager.getProfile();
         const schoolInput = document.getElementById('inputTargetSchoolName');
         const benchInput = document.getElementById('inputTargetBenchmark');
 
-        if (schoolInput) schoolInput.value = profile.targetSchool || "THPT Nguyễn Thượng Hiền (TP.HCM)";
-        if (benchInput) benchInput.value = profile.benchmarkScore || 25.5;
+        if (schoolInput) schoolInput.value = profile.targetSchool || "THPT Chuyên Lê Hồng Phong (TP.HCM)";
+        if (benchInput) benchInput.value = profile.benchmarkScore || 28.0;
 
         if (targetModal) targetModal.classList.add('active');
       });
@@ -50,12 +57,20 @@ class ProgressTracker {
 
     if (saveTargetBtn) {
       saveTargetBtn.addEventListener('click', () => {
+        const isAuth = window.userManager && typeof window.userManager.isAuthenticated === 'function' && window.userManager.isAuthenticated();
+        if (!isAuth) {
+          if (targetModal) targetModal.classList.remove('active');
+          if (window.app) window.app.showToast('Vui lòng đăng nhập tài khoản Học sinh để lưu trường mục tiêu!');
+          if (window.adminController) window.adminController.openLoginModal('student');
+          return;
+        }
+
         const schoolInput = document.getElementById('inputTargetSchoolName');
         const benchInput = document.getElementById('inputTargetBenchmark');
 
         const profile = window.storageManager.getProfile();
-        profile.targetSchool = schoolInput.value.trim() || "THPT Nguyễn Thượng Hiền (TP.HCM)";
-        profile.benchmarkScore = parseFloat(benchInput.value) || 25.5;
+        profile.targetSchool = schoolInput.value.trim() || "THPT Chuyên Lê Hồng Phong (TP.HCM)";
+        profile.benchmarkScore = parseFloat(benchInput.value) || 28.0;
         profile.targetAverage = Math.round((profile.benchmarkScore / 3) * 100) / 100;
 
         window.storageManager.saveProfile(profile);
@@ -63,7 +78,10 @@ class ProgressTracker {
 
         window.soundManager.playSuccess();
         this.renderAll();
-        if (window.app) window.app.updateHeaderStats();
+        if (window.app) {
+          window.app.updateHeaderStats();
+          window.app.showToast(`Đã lưu trường mục tiêu: ${profile.targetSchool}`);
+        }
       });
     }
 
@@ -174,12 +192,33 @@ class ProgressTracker {
     const projectedBreakdownDisplay = document.getElementById('roadmapProjectedBreakdown');
     const scoreGapDisplay = document.getElementById('roadmapScoreGap');
     const gapDetailDisplay = document.getElementById('roadmapGapDetail');
-    const chanceBadge = document.getElementById('roadmapAdmissionChanceBadge');
+    const isAuth = window.userManager && typeof window.userManager.isAuthenticated === 'function' && window.userManager.isAuthenticated();
+    const isStudent = isAuth && typeof window.userManager.isStudent === 'function' && window.userManager.isStudent();
 
-    const benchmark = profile.benchmarkScore || 25.5;
+    if (!isStudent || !profile.targetSchool) {
+      if (targetSchoolDisplay) targetSchoolDisplay.textContent = "Chưa Đăng Nhập Tài Khoản";
+      if (targetBenchDisplay) targetBenchDisplay.textContent = "Chưa thiết lập";
+      if (targetPerSubjectDisplay) targetPerSubjectDisplay.textContent = "--đ/môn";
+      if (projectedTotalDisplay) projectedTotalDisplay.textContent = "0.0 / 30.0đ";
+      if (projectedBreakdownDisplay) projectedBreakdownDisplay.textContent = "Đăng nhập tài khoản Học sinh để lưu trường mục tiêu & tính điểm chuẩn";
+      if (scoreGapDisplay) {
+        scoreGapDisplay.textContent = "--";
+        scoreGapDisplay.style.color = "var(--text-muted)";
+      }
+      if (gapDetailDisplay) gapDetailDisplay.textContent = "Mục tiêu và điểm số cá nhân được bảo mật riêng cho từng tài khoản.";
+      if (chanceBadge) {
+        chanceBadge.textContent = "Đăng nhập để xem dự báo";
+        chanceBadge.style.color = "#94a3b8";
+        chanceBadge.style.background = "rgba(148, 163, 184, 0.12)";
+        chanceBadge.style.borderColor = "rgba(148, 163, 184, 0.25)";
+      }
+      return;
+    }
+
+    const benchmark = profile.benchmarkScore || 28.0;
     const targetPerSubject = Math.round((benchmark / 3) * 100) / 100;
 
-    if (targetSchoolDisplay) targetSchoolDisplay.textContent = profile.targetSchool || "THPT Nguyễn Thượng Hiền (TP.HCM)";
+    if (targetSchoolDisplay) targetSchoolDisplay.textContent = profile.targetSchool;
     if (targetBenchDisplay) targetBenchDisplay.textContent = `${benchmark.toFixed(2)} điểm`;
     if (targetPerSubjectDisplay) targetPerSubjectDisplay.textContent = `${targetPerSubject.toFixed(2)}đ/môn`;
 
@@ -1047,10 +1086,17 @@ class ProgressTracker {
     const flashcards = window.storageManager.getMasteredFlashcards();
     const benchmark = profile.benchmarkScore || 25.5;
 
-    // 1. Update Target School Header
+    const isAuth = window.userManager && typeof window.userManager.isAuthenticated === 'function' && window.userManager.isAuthenticated();
+    const isStudent = isAuth && typeof window.userManager.isStudent === 'function' && window.userManager.isStudent();
+
+    // 1. Update Target School Header (Privacy guard)
     const targetSchoolEl = document.getElementById('dashRoadmapTargetSchool');
     if (targetSchoolEl) {
-      targetSchoolEl.textContent = profile.targetSchool || "THPT Nguyễn Thượng Hiền (TP.HCM)";
+      if (isStudent && profile.targetSchool) {
+        targetSchoolEl.textContent = profile.targetSchool;
+      } else {
+        targetSchoolEl.innerHTML = `<span style="color: var(--text-muted); font-size: 1.05rem; font-weight: 500;">(Chưa đăng nhập — Mục tiêu được bảo mật riêng)</span>`;
+      }
     }
 
     // 2. Compute 4 stages (Same robust milestones as 3-subject comprehensive roadmap)
@@ -1120,17 +1166,21 @@ class ProgressTracker {
     const stagesGrid = document.getElementById('dashRoadmapStagesGrid');
     if (stagesGrid) {
       stagesGrid.innerHTML = stages.map(st => {
-        const isCompleted = st.pct >= 100;
-        const isInProgress = st.pct > 0 && st.pct < 100;
+        const isCompleted = isStudent && st.pct >= 100;
+        const isInProgress = isStudent && st.pct > 0 && st.pct < 100;
         const statusBadge = isCompleted 
           ? '<span class="dash-stage-badge completed"><i data-lucide="check-circle-2"></i> Hoàn thành</span>'
           : isInProgress 
           ? `<span class="dash-stage-badge current"><i data-lucide="clock"></i> Đang học (${st.pct}%)</span>`
           : '<span class="dash-stage-badge locked"><i data-lucide="lock"></i> Chưa mở</span>';
 
+        const clickAction = isAuth 
+          ? `window.app.switchTab('roadmap'); setTimeout(() => { const el = document.getElementById('roadmapStage_${st.num}'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 150);`
+          : `if (window.adminController) window.adminController.openLoginModal('student');`;
+
         return `
           <div class="dash-stage-card ${isCompleted ? 'completed' : isInProgress ? 'active' : ''}" 
-               onclick="window.app.switchTab('roadmap'); setTimeout(() => { const el = document.getElementById('roadmapStage_${st.num}'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 150);"
+               onclick="${clickAction}"
                title="Nhấn để xem chi tiết Chặng ${st.num} trong Lộ trình"
                role="button" tabindex="0">
             <div class="dash-stage-header">
@@ -1140,11 +1190,11 @@ class ProgressTracker {
             <div class="dash-stage-title">${st.title}</div>
             <div class="dash-stage-target">${st.target}</div>
             <div class="dash-stage-progress-bar">
-              <div class="dash-stage-progress-fill" style="width: ${Math.min(100, Math.max(st.pct > 0 ? 8 : 0, st.pct))}%;"></div>
+              <div class="dash-stage-progress-fill" style="width: ${isStudent ? Math.min(100, Math.max(st.pct > 0 ? 8 : 0, st.pct)) : 0}%;"></div>
             </div>
             <div class="dash-stage-criteria-count">
               <span>Tiến độ tiêu chí:</span>
-              <strong>${st.criteria.filter(c => c.done).length}/${st.criteria.length}</strong>
+              <strong>${isStudent ? st.criteria.filter(c => c.done).length : 0}/${st.criteria.length}</strong>
             </div>
           </div>
         `;
@@ -1152,48 +1202,61 @@ class ProgressTracker {
     }
 
     // 4. Update Footer Stats (Projected score & admission chance)
-    const gap = Math.round((proj - benchmark) * 100) / 100;
-    let chanceText = "Khởi đầu (Cần làm bài thi khảo sát)";
-    let chanceColor = "var(--text-muted)";
-    let chanceBg = "rgba(148, 163, 184, 0.12)";
-
-    if (totalTests === 0) {
-      chanceText = "Khởi đầu (Cần làm bài thi khảo sát)";
-      chanceColor = "var(--primary)";
-      chanceBg = "rgba(14, 165, 233, 0.15)";
-    } else if (gap >= 1.5) {
-      chanceText = "Xác suất: Rất an toàn (95%)";
-      chanceColor = "var(--success)";
-      chanceBg = "rgba(16, 185, 129, 0.18)";
-    } else if (gap >= 0.5) {
-      chanceText = "Xác suất: Cơ hội cao (88%)";
-      chanceColor = "var(--primary)";
-      chanceBg = "rgba(14, 165, 233, 0.18)";
-    } else if (gap >= 0.0) {
-      chanceText = "Xác suất: Đạt chuẩn (80%)";
-      chanceColor = "var(--primary)";
-      chanceBg = "rgba(14, 165, 233, 0.15)";
-    } else if (gap >= -1.0) {
-      chanceText = `Xác suất: Đang bám sát (Thiếu ${Math.abs(gap).toFixed(2)}đ)`;
-      chanceColor = "#f59e0b";
-      chanceBg = "rgba(245, 158, 11, 0.18)";
-    } else {
-      chanceText = `Xác suất: Cần tăng tốc (Thiếu ${Math.abs(gap).toFixed(2)}đ)`;
-      chanceColor = "#f97316";
-      chanceBg = "rgba(249, 115, 22, 0.15)";
-    }
-
     const chanceBadge = document.getElementById('dashRoadmapChanceBadge');
-    if (chanceBadge) {
-      chanceBadge.innerHTML = `<i data-lucide="target"></i> ${chanceText}`;
-      chanceBadge.style.color = chanceColor;
-      chanceBadge.style.background = chanceBg;
-      chanceBadge.style.borderColor = chanceColor;
-    }
-
     const scoreSummary = document.getElementById('dashRoadmapScoreSummary');
-    if (scoreSummary) {
-      scoreSummary.innerHTML = `Tổng điểm dự phóng: <strong style="color: var(--primary);">${proj.toFixed(2)} / 30.0đ</strong> • Điểm chuẩn cần: <strong>${benchmark.toFixed(2)}đ</strong>`;
+
+    if (!isStudent || !profile.targetSchool) {
+      if (chanceBadge) {
+        chanceBadge.innerHTML = `<i data-lucide="shield-check"></i> Bảo mật tài khoản riêng`;
+        chanceBadge.style.color = "var(--text-muted)";
+        chanceBadge.style.background = "rgba(148, 163, 184, 0.12)";
+        chanceBadge.style.borderColor = "rgba(148, 163, 184, 0.25)";
+      }
+      if (scoreSummary) {
+        scoreSummary.innerHTML = `Vui lòng <strong>Đăng nhập</strong> tài khoản học sinh để theo dõi lộ trình & lưu mục tiêu cá nhân.`;
+      }
+    } else {
+      const gap = Math.round((proj - benchmark) * 100) / 100;
+      let chanceText = "Khởi đầu (Cần làm bài thi khảo sát)";
+      let chanceColor = "var(--text-muted)";
+      let chanceBg = "rgba(148, 163, 184, 0.12)";
+
+      if (totalTests === 0) {
+        chanceText = "Khởi đầu (Cần làm bài thi khảo sát)";
+        chanceColor = "var(--primary)";
+        chanceBg = "rgba(14, 165, 233, 0.15)";
+      } else if (gap >= 1.5) {
+        chanceText = "Xác suất: Rất an toàn (95%)";
+        chanceColor = "var(--success)";
+        chanceBg = "rgba(16, 185, 129, 0.18)";
+      } else if (gap >= 0.5) {
+        chanceText = "Xác suất: Cơ hội cao (88%)";
+        chanceColor = "var(--primary)";
+        chanceBg = "rgba(14, 165, 233, 0.18)";
+      } else if (gap >= 0.0) {
+        chanceText = "Xác suất: Đạt chuẩn (80%)";
+        chanceColor = "var(--primary)";
+        chanceBg = "rgba(14, 165, 233, 0.15)";
+      } else if (gap >= -1.0) {
+        chanceText = `Xác suất: Đang bám sát (Thiếu ${Math.abs(gap).toFixed(2)}đ)`;
+        chanceColor = "#f59e0b";
+        chanceBg = "rgba(245, 158, 11, 0.18)";
+      } else {
+        chanceText = `Xác suất: Cần tăng tốc (Thiếu ${Math.abs(gap).toFixed(2)}đ)`;
+        chanceColor = "#f97316";
+        chanceBg = "rgba(249, 115, 22, 0.15)";
+      }
+
+      if (chanceBadge) {
+        chanceBadge.innerHTML = `<i data-lucide="target"></i> ${chanceText}`;
+        chanceBadge.style.color = chanceColor;
+        chanceBadge.style.background = chanceBg;
+        chanceBadge.style.borderColor = chanceColor;
+      }
+
+      if (scoreSummary) {
+        scoreSummary.innerHTML = `Tổng điểm dự phóng: <strong style="color: var(--primary);">${proj.toFixed(2)} / 30.0đ</strong> • Điểm chuẩn cần: <strong>${benchmark.toFixed(2)}đ</strong>`;
+      }
     }
 
     if (window.lucide) window.lucide.createIcons();

@@ -438,10 +438,21 @@ class UserManager {
     }
     if (window.app) {
       window.app.updateHeaderStats();
+      window.app.renderRecentHistory();
       // If user was on admin-portal and logged out or switched to student, redirect to dashboard
       if (window.app.activeTab === 'admin-portal' && !this.isAdmin()) {
         window.app.switchTab('dashboard');
       }
+    }
+    if (window.progressTracker) {
+      window.progressTracker.renderAll();
+    }
+    if (window.reviewEngine) {
+      window.reviewEngine.renderMistakeNotebook();
+      window.reviewEngine.renderReviewList();
+    }
+    if (window.flashcardTrainer && typeof window.flashcardTrainer.init === 'function') {
+      window.flashcardTrainer.init();
     }
   }
 

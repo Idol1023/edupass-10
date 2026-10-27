@@ -1,87 +1,160 @@
 // =========================================================
-// EDUPASS 10 - STORAGE MANAGER
-// LocalStorage Persistence, Seed Data & History Management
+// EDUPASS 10 - STORAGE MANAGER (MULTI-TENANT ACCOUNT ISOLATION)
+// Strict Per-Account Storage Partitioning & Privacy Protection
+// Guest Mode: No personal data or target school leakage
+// Authenticated Mode: Securely scoped to each user/student account
 // =========================================================
 
 class StorageManager {
   constructor() {
-    this.KEYS = {
-      PROFILE: 'edupass_profile',
-      EXAM_HISTORY: 'edupass_history',
-      MISTAKE_BANK: 'edupass_mistakes',
-      FLASHCARDS: 'edupass_flashcards',
-      STREAK: 'edupass_streak'
-    };
-
     this.initDefaults();
   }
 
-  initDefaults() {
-    const isCleanZero = localStorage.getItem('edupass_zero_clean_v6');
-    const history = this.getExamHistory();
-    const hasSeedHistory = history.some(h => String(h.id).startsWith('seed_'));
-    const mistakes = this.getMistakes();
-    const hasSeedMistakes = mistakes.some(m => String(m.id).startsWith('m01_') || String(m.id).startsWith('e01_'));
-    const profile = this.getProfile();
+  // Returns isolated storage prefix based on active session
+  getCurrentPrefix() {
+    try {
+      if (window.userManager && typeof window.userManager.isAuthenticated === 'function' && window.userManager.isAuthenticated()) {
+        const user = window.userManager.getCurrentUser();
+        if (user) {
+          const id = (user.username || user.studentId || user.id || 'usr').toLowerCase().replace(/[^a-z0-9_-]/g, '_');
+          return `edupass_user_${id}_`;
+        }
+      }
+    } catch (e) {
+      console.warn("getCurrentPrefix error:", e);
+    }
+    return 'edupass_guest_';
+  }
 
-    if (!isCleanZero || hasSeedHistory || hasSeedMistakes || profile.streakDays === 6) {
+  getKey(type) {
+    return `${this.getCurrentPrefix()}${type}`;
+  }
+
+  initDefaults() {
+    const isCleanZero = localStorage.getItem('edupass_zero_clean_v7');
+    if (!isCleanZero) {
       this.resetAllData();
-      return;
+      localStorage.setItem('edupass_zero_clean_v7', 'true');
+    }
+  }
+
+  // 1. User Profile Management (Isolated per account)
+  getProfile() {
+    const prefix = this.getCurrentPrefix();
+    const isAuth = window.userManager && typeof window.userManager.isAuthenticated === 'function' && window.userManager.isAuthenticated();
+    const isStudent = isAuth && window.userManager.isStudent && window.userManager.isStudent();
+    const user = isAuth ? window.userManager.getCurrentUser() : null;
+
+    try {
+      const stored = localStorage.getItem(prefix + 'profile');
+      if (stored) {
+        return JSON.parse(stored);
+      }
+    } catch (e) {
+      console.warn('Error reading profile:', e);
     }
 
-    if (!profile || !profile.targetSchool) {
-      const defaultProfile = {
-        name: "Sĩ Tử Lớp 9",
-        targetSchool: "THPT Nguyễn Thượng Hiền (TP.HCM)",
-        benchmarkScore: 25.5, // Điểm chuẩn tuyển sinh lớp 10 TP.HCM
-        targetAverage: 8.5,
+    // If authenticated as student, initialize from student records in userManager
+    if (isStudent && user) {
+      const student = window.userManager.getStudentById ? window.userManager.getStudentById(user.studentId || user.id) : null;
+      const studentProfile = {
+        name: (student && student.name) || user.name || "Học Sinh",
+        targetSchool: (student && student.targetSchool) || "THPT Chuyên Lê Hồng Phong (TP.HCM)",
+        benchmarkScore: (student && student.benchmarkScore) || 28.0,
+        targetAverage: (student && student.benchmarkScore) ? Math.round((student.benchmarkScore / 3) * 100) / 100 : 9.33,
+        region: "TP. Hồ Chí Minh",
+        examDate: "2026-06-06",
+        streakDays: (student && student.streakDays) || 0,
+        lastActiveDate: null,
+        isGuest: false
+      };
+      this.saveProfile(studentProfile);
+      return studentProfile;
+    }
+
+    // If authenticated as admin
+    if (isAuth && user && user.role === 'admin') {
+      return {
+        name: user.name || "Quản Trị Viên",
+        targetSchool: "",
+        benchmarkScore: null,
+        targetAverage: null,
         region: "TP. Hồ Chí Minh",
         examDate: "2026-06-06",
         streakDays: 0,
-        lastActiveDate: null
+        lastActiveDate: null,
+        isGuest: false,
+        isAdmin: true
       };
-      this.saveProfile(defaultProfile);
     }
 
-    if (localStorage.getItem(this.KEYS.EXAM_HISTORY) === null) {
-      localStorage.setItem(this.KEYS.EXAM_HISTORY, JSON.stringify([]));
-    }
-    if (localStorage.getItem(this.KEYS.MISTAKE_BANK) === null) {
-      localStorage.setItem(this.KEYS.MISTAKE_BANK, JSON.stringify([]));
-    }
-    if (localStorage.getItem(this.KEYS.FLASHCARDS) === null) {
-      localStorage.setItem(this.KEYS.FLASHCARDS, JSON.stringify([]));
-    }
-  }
-
-  getProfile() {
-    try {
-      return JSON.parse(localStorage.getItem(this.KEYS.PROFILE)) || {};
-    } catch {
-      return {};
-    }
+    // Guest Mode: ABSOLUTELY NO TARGET SCHOOL!
+    return {
+      name: "Khách",
+      targetSchool: "",
+      benchmarkScore: null,
+      targetAverage: null,
+      region: "TP. Hồ Chí Minh",
+      examDate: "2026-06-06",
+      streakDays: 0,
+      lastActiveDate: null,
+      isGuest: true
+    };
   }
 
   saveProfile(profile) {
-    localStorage.setItem(this.KEYS.PROFILE, JSON.stringify(profile));
-  }
+    const prefix = this.getCurrentPrefix();
+    localStorage.setItem(prefix + 'profile', JSON.stringify(profile));
 
-  getExamHistory() {
-    try {
-      return JSON.parse(localStorage.getItem(this.KEYS.EXAM_HISTORY)) || [];
-    } catch {
-      return [];
+    // Also sync back to student record in userManager if student
+    if (window.userManager && typeof window.userManager.isStudent === 'function' && window.userManager.isStudent()) {
+      const user = window.userManager.getCurrentUser();
+      if (user) {
+        const student = window.userManager.getStudentById ? window.userManager.getStudentById(user.studentId || user.id) : null;
+        if (student) {
+          if (profile.targetSchool !== undefined) student.targetSchool = profile.targetSchool;
+          if (profile.benchmarkScore !== undefined) student.benchmarkScore = profile.benchmarkScore;
+          if (profile.streakDays !== undefined) student.streakDays = profile.streakDays;
+          if (typeof window.userManager.saveStudents === 'function') {
+            window.userManager.saveStudents();
+          }
+        }
+      }
     }
   }
 
+  // 2. Exam History (Isolated per account)
+  getExamHistory() {
+    const prefix = this.getCurrentPrefix();
+    try {
+      const data = JSON.parse(localStorage.getItem(prefix + 'history'));
+      if (Array.isArray(data)) return data;
+    } catch (e) {
+      console.warn('Error reading history:', e);
+    }
+
+    // If student has seeded examHistory in userManager and no isolated storage exists yet
+    if (window.userManager && typeof window.userManager.isStudent === 'function' && window.userManager.isStudent()) {
+      const user = window.userManager.getCurrentUser();
+      const student = window.userManager.getStudentById ? window.userManager.getStudentById(user.studentId || user.id) : null;
+      if (student && student.examHistory && Array.isArray(student.examHistory) && student.examHistory.length > 0) {
+        localStorage.setItem(prefix + 'history', JSON.stringify(student.examHistory));
+        return student.examHistory;
+      }
+    }
+
+    return [];
+  }
+
   saveExamResult(result) {
+    const prefix = this.getCurrentPrefix();
     const history = this.getExamHistory();
     history.unshift({
       ...result,
       timestamp: new Date().toISOString(),
       id: 'res_' + Date.now()
     });
-    localStorage.setItem(this.KEYS.EXAM_HISTORY, JSON.stringify(history));
+    localStorage.setItem(prefix + 'history', JSON.stringify(history));
 
     // Also update mistake bank if any wrong questions
     if (result.wrongQuestions && result.wrongQuestions.length > 0) {
@@ -92,15 +165,18 @@ class StorageManager {
     this.updateStreak();
   }
 
+  // 3. Mistake Bank (Isolated per account)
   getMistakes() {
+    const prefix = this.getCurrentPrefix();
     try {
-      return JSON.parse(localStorage.getItem(this.KEYS.MISTAKE_BANK)) || [];
+      return JSON.parse(localStorage.getItem(prefix + 'mistakes')) || [];
     } catch {
       return [];
     }
   }
 
   addMistakes(questions, subject) {
+    const prefix = this.getCurrentPrefix();
     const currentMistakes = this.getMistakes();
     const existingIds = new Set(currentMistakes.map(m => m.id));
 
@@ -116,24 +192,28 @@ class StorageManager {
       }
     });
 
-    localStorage.setItem(this.KEYS.MISTAKE_BANK, JSON.stringify(currentMistakes));
+    localStorage.setItem(prefix + 'mistakes', JSON.stringify(currentMistakes));
   }
 
   removeMistake(questionId) {
+    const prefix = this.getCurrentPrefix();
     let currentMistakes = this.getMistakes();
     currentMistakes = currentMistakes.filter(m => m.id !== questionId);
-    localStorage.setItem(this.KEYS.MISTAKE_BANK, JSON.stringify(currentMistakes));
+    localStorage.setItem(prefix + 'mistakes', JSON.stringify(currentMistakes));
   }
 
+  // 4. Flashcards (Isolated per account)
   getMasteredFlashcards() {
+    const prefix = this.getCurrentPrefix();
     try {
-      return JSON.parse(localStorage.getItem(this.KEYS.FLASHCARDS)) || [];
+      return JSON.parse(localStorage.getItem(prefix + 'flashcards')) || [];
     } catch {
       return [];
     }
   }
 
   toggleMasteredFlashcard(cardFrontText) {
+    const prefix = this.getCurrentPrefix();
     const mastered = this.getMasteredFlashcards();
     const idx = mastered.indexOf(cardFrontText);
     if (idx > -1) {
@@ -141,7 +221,7 @@ class StorageManager {
     } else {
       mastered.push(cardFrontText);
     }
-    localStorage.setItem(this.KEYS.FLASHCARDS, JSON.stringify(mastered));
+    localStorage.setItem(prefix + 'flashcards', JSON.stringify(mastered));
     return idx === -1; // true if now mastered
   }
 
@@ -174,7 +254,6 @@ class StorageManager {
         const name = eqPos > -1 ? cookie.substring(0, eqPos).trim() : cookie.trim();
         if (!name) return;
 
-        // Path /
         document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
         document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC;`;
 
@@ -194,42 +273,25 @@ class StorageManager {
   }
 
   resetAllData() {
-    // 1. Clear all cookies
     this.clearCookies();
+    try { sessionStorage.clear(); } catch (e) {}
 
-    // 2. Clear sessionStorage
-    try {
-      sessionStorage.clear();
-    } catch (e) {
-      console.warn("Could not clear sessionStorage:", e);
-    }
-
-    // 3. Clear localStorage items
-    localStorage.removeItem(this.KEYS.EXAM_HISTORY);
-    localStorage.removeItem(this.KEYS.MISTAKE_BANK);
-    localStorage.removeItem(this.KEYS.FLASHCARDS);
-    localStorage.removeItem(this.KEYS.STREAK);
+    // Clean legacy unpartitioned keys
+    localStorage.removeItem('edupass_profile');
+    localStorage.removeItem('edupass_history');
+    localStorage.removeItem('edupass_mistakes');
+    localStorage.removeItem('edupass_flashcards');
+    localStorage.removeItem('edupass_streak');
     localStorage.removeItem('edupass_last_exam');
     localStorage.removeItem('edupass_active_exam');
-    localStorage.removeItem('edupass_mistakes');
-    localStorage.removeItem('edupass_history');
-    localStorage.removeItem('edupass_flashcards');
 
-    const cleanProfile = {
-      name: "Sĩ Tử Lớp 9",
-      targetSchool: "THPT Nguyễn Thượng Hiền (TP.HCM)",
-      benchmarkScore: 25.5,
-      targetAverage: 8.5,
-      region: "TP. Hồ Chí Minh",
-      examDate: "2026-06-06",
-      streakDays: 0,
-      lastActiveDate: null
-    };
-    this.saveProfile(cleanProfile);
-    localStorage.setItem(this.KEYS.EXAM_HISTORY, JSON.stringify([]));
-    localStorage.setItem(this.KEYS.MISTAKE_BANK, JSON.stringify([]));
-    localStorage.setItem(this.KEYS.FLASHCARDS, JSON.stringify([]));
-    localStorage.setItem('edupass_zero_clean_v6', 'true');
+    // Clean current partition
+    const prefix = this.getCurrentPrefix();
+    localStorage.removeItem(prefix + 'profile');
+    localStorage.removeItem(prefix + 'history');
+    localStorage.removeItem(prefix + 'mistakes');
+    localStorage.removeItem(prefix + 'flashcards');
+    localStorage.removeItem(prefix + 'streak');
   }
 }
 
