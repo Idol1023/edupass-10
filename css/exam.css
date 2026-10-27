@@ -589,3 +589,380 @@
     top: 0;
   }
 }
+
+/* =========================================================
+   INTERACTIVE REMEDIATION & PROGRESSIVE LADDER STYLES
+   ========================================================= */
+
+.remediation-step-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.25rem;
+  background: var(--bg-surface-elevated);
+  border-bottom: 1px solid var(--border-subtle);
+  overflow-x: auto;
+  gap: 0.5rem;
+}
+
+.rem-step-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.rem-step-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--text-muted);
+}
+
+.rem-step-pill.active {
+  color: var(--primary);
+}
+
+.rem-step-pill.active .rem-step-num {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+}
+
+.rem-step-pill.completed {
+  color: #10b981;
+}
+
+.rem-step-pill.completed .rem-step-num {
+  background: #10b981;
+  color: #ffffff;
+  border-color: #10b981;
+}
+
+.rem-step-line {
+  flex: 1;
+  height: 2px;
+  background: var(--border-subtle);
+  min-width: 16px;
+}
+
+/* Original Question Card */
+.rem-original-card {
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 1.5rem;
+}
+
+/* Deconstruction Grid (Problem Analysis) */
+.deconstruct-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.deconstruct-card {
+  padding: 1.15rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: transform var(--transition-fast);
+}
+
+.deconstruct-card:hover {
+  transform: translateY(-2px);
+}
+
+.deconstruct-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.84rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.deconstruct-card.given {
+  border-left: 4px solid #3b82f6;
+}
+.deconstruct-card.given .deconstruct-card-header {
+  color: #60a5fa;
+}
+
+.deconstruct-card.target {
+  border-left: 4px solid #8b5cf6;
+}
+.deconstruct-card.target .deconstruct-card-header {
+  color: #a78bfa;
+}
+
+.deconstruct-card.key {
+  border-left: 4px solid #06b6d4;
+}
+.deconstruct-card.key .deconstruct-card-header {
+  color: #22d3ee;
+}
+
+.deconstruct-card.trap {
+  border-left: 4px solid #f59e0b;
+  background: rgba(245, 158, 11, 0.04);
+}
+.deconstruct-card.trap .deconstruct-card-header {
+  color: #fbbf24;
+}
+
+/* Solution Steps Box */
+.solution-steps-wrapper {
+  margin-bottom: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.solution-step-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  align-items: flex-start;
+}
+
+.solution-step-badge {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent-cyan));
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+
+.solution-step-content {
+  flex: 1;
+}
+
+.solution-step-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+}
+
+.solution-step-detail {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Ladder Progressive Practice Cards */
+.ladder-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.ladder-card {
+  padding: 1.35rem;
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 1.25rem;
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.ladder-card.locked {
+  opacity: 0.6;
+  filter: grayscale(0.6);
+  pointer-events: none;
+  border-style: dashed;
+}
+
+.ladder-card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.ladder-card-tag.lvl1 {
+  background: rgba(6, 182, 212, 0.15);
+  color: #22d3ee;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+.ladder-card-tag.lvl2 {
+  background: rgba(236, 72, 153, 0.15);
+  color: #f472b6;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+.ladder-options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.ladder-option-item {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  transition: all var(--transition-fast);
+}
+
+.ladder-option-item:hover {
+  border-color: var(--primary);
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.ladder-option-item.selected {
+  border-color: var(--primary);
+  background: rgba(99, 102, 241, 0.15);
+  font-weight: 600;
+}
+
+.ladder-option-item.correct {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+}
+
+.ladder-option-item.wrong {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+}
+
+.ladder-option-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.ladder-option-item.selected .ladder-option-circle {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.ladder-feedback {
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  margin-top: 0.75rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  display: none;
+}
+
+.ladder-feedback.active {
+  display: block;
+}
+
+.ladder-feedback.success {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #34d399;
+}
+
+.ladder-feedback.danger {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+}
+
+/* Remediation Mastery Banner */
+.rem-mastery-banner {
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.2));
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  text-align: center;
+  margin-top: 1.5rem;
+  animation: pulseMastery 1.5s ease infinite alternate;
+}
+
+@keyframes pulseMastery {
+  from { box-shadow: 0 0 10px rgba(16, 185, 129, 0.2); }
+  to { box-shadow: 0 0 25px rgba(16, 185, 129, 0.5); }
+}
+
+[data-theme="light"] .rem-step-bar {
+  background: #f1f5f9;
+}
+
+[data-theme="light"] .rem-original-card {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+[data-theme="light"] .deconstruct-card {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+[data-theme="light"] .solution-step-item {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+[data-theme="light"] .ladder-card {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+[data-theme="light"] .ladder-option-item {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+[data-theme="light"] .ladder-option-item:hover {
+  background: #eef2ff;
+  border-color: #6366f1;
+}

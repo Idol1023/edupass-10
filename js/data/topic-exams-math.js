@@ -47,7 +47,58 @@ window.MATH_TOPIC_EXAMS = [
         ],
         "correctIndex": 0,
         "correct": 0,
-        "explanation": "Phương trình hoành độ giao điểm: $x^2 = 2x + 3 \\Leftrightarrow x^2 - 2x - 3 = 0$. Vì $a - b + c = 1 - (-2) + (-3) = 0$ nên phương trình có hai nghiệm: $x_1 = -1$ và $x_2 = 3$.<br>Với $x = -1 \\implies y = (-1)^2 = 1 \\implies (-1; 1)$.<br>Với $x = 3 \\implies y = 3^2 = 9 \\implies (3; 9)$.<br>Vậy tọa độ giao điểm là $(3; 9)$ và $(-1; 1)$."
+        "explanation": "Phương trình hoành độ giao điểm: $x^2 = 2x + 3 \\Leftrightarrow x^2 - 2x - 3 = 0$. Vì $a - b + c = 1 - (-2) + (-3) = 0$ nên phương trình có hai nghiệm: $x_1 = -1$ và $x_2 = 3$.<br>Với $x = -1 \\implies y = (-1)^2 = 1 \\implies (-1; 1)$.<br>Với $x = 3 \\implies y = 3^2 = 9 \\implies (3; 9)$.<br>Vậy tọa độ giao điểm là $(3; 9)$ và $(-1; 1)$.",
+        "analysisGuide": {
+          "given": "Parabol $(P): y = x^2$ và đường thẳng $(d): y = 2x + 3$.",
+          "required": "Tìm tọa độ các giao điểm của $(P)$ và $(d)$ bằng phương pháp giải tích (phép tính).",
+          "keyConcepts": ["Phương trình hoành độ giao điểm", "Nhẩm nghiệm $a - b + c = 0$", "Tọa độ điểm $(x; y)$"],
+          "trapWarning": "Nhiều học sinh chỉ tìm xong hoành độ $x_1, x_2$ rồi dừng lại hoặc khoanh nhầm đáp án, quên thay ngược $x$ vào để tìm tung độ $y$ của điểm!"
+        },
+        "solutionSteps": [
+          {
+            "step": 1,
+            "title": "Lập phương trình hoành độ giao điểm",
+            "detail": "Cho hai vế phải bằng nhau: $x^2 = 2x + 3 \\Leftrightarrow x^2 - 2x - 3 = 0$."
+          },
+          {
+            "step": 2,
+            "title": "Giải phương trình tìm hoành độ x",
+            "detail": "Phương trình bậc hai có $a - b + c = 1 - (-2) + (-3) = 0$ nên có hai nghiệm: $x_1 = -1$ và $x_2 = 3$."
+          },
+          {
+            "step": 3,
+            "title": "Tính tung độ y và kết luận tọa độ",
+            "detail": "Với $x = -1 \\implies y = (-1)^2 = 1 \\implies (-1; 1)$. Với $x = 3 \\implies y = 3^2 = 9 \\implies (3; 9)$. Tọa độ giao điểm là $(3; 9)$ và $(-1; 1)$."
+          }
+        ],
+        "ladderDrills": [
+          {
+            "level": 1,
+            "title": "Cấp độ 1: Tìm tọa độ giao điểm cơ bản",
+            "question": "Cho parabol $(P): y = x^2$ và đường thẳng $(d): y = x + 2$. Tọa độ các giao điểm của $(P)$ và $(d)$ là:",
+            "options": [
+              "$(2; 4)$ và $(-1; 1)$",
+              "$(2; 4)$ và $(1; 1)$",
+              "$(-2; 4)$ và $(1; 1)$",
+              "$(2; 2)$ và $(-1; 1)$"
+            ],
+            "correctIndex": 0,
+            "explanation": "Phương trình hoành độ giao điểm: $x^2 - x - 2 = 0 \\Leftrightarrow x = 2$ hoặc $x = -1$. Với $x = 2 \\implies y = 4 \\implies (2; 4)$. Với $x = -1 \\implies y = 1 \\implies (-1; 1)$."
+          },
+          {
+            "level": 2,
+            "title": "Cấp độ 2: Vận dụng tính diện tích / đoạn thẳng qua giao điểm",
+            "question": "Cho $(P): y = x^2$ và $(d): y = 2x + 3$ cắt nhau tại hai điểm $A(-1; 1)$ và $B(3; 9)$. Độ dài đoạn thẳng $AB$ là:",
+            "options": [
+              "$4\\sqrt{5}$",
+              "$4\\sqrt{3}$",
+              "$5\\sqrt{2}$",
+              "$8$"
+            ],
+            "correctIndex": 0,
+            "explanation": "Độ dài đoạn thẳng $AB = \\sqrt{(x_B - x_A)^2 + (y_B - y_A)^2} = \\sqrt{(3 - (-1))^2 + (9 - 1)^2} = \\sqrt{4^2 + 8^2} = \\sqrt{16 + 64} = \\sqrt{80} = 4\\sqrt{5}$."
+          }
+        ]
       },
       {
         "id": "m_top_p03",

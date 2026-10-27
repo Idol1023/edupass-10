@@ -155,6 +155,14 @@ class StorageManager {
     }
   }
 
+  addXP(amount = 20) {
+    const profile = this.getProfile();
+    profile.xp = (profile.xp || 0) + amount;
+    profile.masteredMistakesCount = (profile.masteredMistakesCount || 0) + 1;
+    this.saveProfile(profile);
+    return profile.xp;
+  }
+
   clearCookies() {
     try {
       const cookies = document.cookie.split(";");
