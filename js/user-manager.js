@@ -557,6 +557,85 @@ class UserManager {
     return { success: true, message: 'Đổi mật khẩu thành công!' };
   }
 
+  // User changes own display name
+  updateDisplayName(newName) {
+    if (!this.currentUser) {
+      throw new Error('Bạn cần đăng nhập để đổi tên.');
+    }
+    const cleanName = (newName || '').trim();
+    if (!cleanName || cleanName.length < 2) {
+      throw new Error('Họ và tên không hợp lệ (tối thiểu 2 ký tự).');
+    }
+
+    this.currentUser.name = cleanName;
+
+    // Update in accounts
+    const account = this.accounts.find(a => a.id === this.currentUser.id);
+    if (account) {
+      account.name = cleanName;
+      this.saveAccounts();
+    }
+
+    // If student, update in students list
+    if (this.currentUser.role === 'student' || this.currentUser.studentId) {
+      const studentId = this.currentUser.studentId || this.currentUser.id;
+      const student = this.students.find(s => s.id === studentId || s.studentCode === studentId);
+      if (student) {
+        student.name = cleanName;
+        this.saveStudents();
+      }
+      // Sync to storageManager
+      if (window.storageManager) {
+        const profile = window.storageManager.getProfile();
+        profile.name = cleanName;
+        window.storageManager.saveProfile(profile);
+      }
+    }
+
+    this.saveSession(this.currentUser);
+    this.onAuthChange();
+
+    return { success: true, name: cleanName, message: 'Đổi họ và tên thành công!' };
+  }
+
+  // Admin updates any student's name
+  adminUpdateStudentName(studentId, newName) {
+    this.checkAdminPermission();
+    const cleanName = (newName || '').trim();
+    if (!cleanName || cleanName.length < 2) {
+      throw new Error('Họ và tên học sinh không hợp lệ (tối thiểu 2 ký tự).');
+    }
+
+    const student = this.students.find(s => s.id === studentId || s.studentCode === studentId);
+    if (!student) {
+      throw new Error('Không tìm thấy học sinh cần đổi tên.');
+    }
+
+    student.name = cleanName;
+    this.saveStudents();
+
+    // Update associated security account
+    const account = this.accounts.find(a => a.studentId === student.id || a.studentId === student.studentCode || a.id === 'ACC_' + student.id);
+    if (account) {
+      account.name = cleanName;
+      this.saveAccounts();
+    }
+
+    // If current session is this student, sync session
+    if (this.currentUser && (this.currentUser.studentId === student.id || this.currentUser.id === student.id)) {
+      this.currentUser.name = cleanName;
+      this.saveSession(this.currentUser);
+      if (window.storageManager) {
+        const profile = window.storageManager.getProfile();
+        profile.name = cleanName;
+        window.storageManager.saveProfile(profile);
+      }
+    }
+
+    this.onAuthChange();
+    return { success: true, name: cleanName, message: `Đã đổi tên học sinh thành: ${cleanName}` };
+  }
+
   // =========================================================
   // STUDENT ROSTER & DATA
   // =========================================================

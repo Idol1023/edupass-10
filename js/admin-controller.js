@@ -75,6 +75,17 @@ class AdminController {
       closeChangePassBtn.addEventListener('click', () => this.closeChangePasswordModal());
     }
 
+    // Change display name modal
+    const formChangeName = document.getElementById('formChangeName');
+    if (formChangeName) {
+      formChangeName.addEventListener('submit', (e) => this.handleChangeNameSubmit(e));
+    }
+
+    const closeChangeNameBtn = document.getElementById('btnCloseChangeNameModal');
+    if (closeChangeNameBtn) {
+      closeChangeNameBtn.addEventListener('click', () => this.closeChangeNameModal());
+    }
+
     // Student detail modal close
     const closeDetailBtn = document.getElementById('btnCloseStudentDetailModal') || document.getElementById('btnDismissStudentDetail');
     if (closeDetailBtn) {
@@ -312,6 +323,9 @@ class AdminController {
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem;">
+          <button class="btn btn-secondary btn-sm" id="btnOpenChangeNameFromMenu" style="justify-content: flex-start;">
+            <i data-lucide="edit-3"></i> Đổi họ và tên hiển thị
+          </button>
           <button class="btn btn-secondary btn-sm" id="btnOpenChangePassFromMenu" style="justify-content: flex-start;">
             <i data-lucide="key"></i> Đổi mật khẩu cá nhân
           </button>
@@ -359,6 +373,14 @@ class AdminController {
           this.closeUserMenuModal();
           this.updateNavbarRoleBadge();
           if (window.app) window.app.showToast('Bạn đã đăng xuất an toàn.');
+        });
+      }
+
+      const btnChangeName = container.querySelector('#btnOpenChangeNameFromMenu');
+      if (btnChangeName) {
+        btnChangeName.addEventListener('click', () => {
+          this.closeUserMenuModal();
+          this.openChangeNameModal();
         });
       }
 
@@ -455,6 +477,97 @@ class AdminController {
         this.closeChangePasswordModal();
         e.target.reset();
         if (window.app) window.app.showToast('Đổi mật khẩu thành công!');
+      }
+    } catch (err) {
+      alert(err.message);
+    }
+  }
+
+  // =========================================================
+  // CHANGE DISPLAY NAME MODAL
+  // =========================================================
+  openChangeNameModal(targetStudentId = null) {
+    const modal = document.getElementById('changeNameModal');
+    if (!modal) return;
+
+    const inputTargetId = document.getElementById('inputTargetStudentIdForName');
+    const inputName = document.getElementById('inputNewDisplayName');
+    const titleEl = document.getElementById('changeNameModalTitle');
+    const labelEl = document.getElementById('labelChangeNameTarget');
+
+    if (targetStudentId) {
+      const student = window.userManager.getStudentById(targetStudentId);
+      if (inputTargetId) inputTargetId.value = targetStudentId;
+      if (inputName) inputName.value = student ? student.name : '';
+      if (titleEl) {
+        titleEl.innerHTML = `<i data-lucide="edit-3" style="color: var(--accent-cyan);"></i> Đổi Tên Học Sinh: ${student ? student.name : ''}`;
+      }
+      if (labelEl) {
+        labelEl.textContent = `Họ và tên mới cho học sinh (${student ? student.studentCode : ''}) *`;
+      }
+    } else {
+      const currentUser = window.userManager.getCurrentUser();
+      if (inputTargetId) inputTargetId.value = '';
+      if (inputName) inputName.value = currentUser ? currentUser.name : '';
+      if (titleEl) {
+        titleEl.innerHTML = `<i data-lucide="edit-3" style="color: var(--accent-cyan);"></i> Đổi Họ Và Tên Cá Nhân`;
+      }
+      if (labelEl) {
+        labelEl.textContent = 'Họ và tên hiển thị mới của bạn *';
+      }
+    }
+
+    modal.classList.add('active');
+    if (window.lucide) window.lucide.createIcons();
+    if (inputName) {
+      setTimeout(() => {
+        inputName.focus();
+        inputName.select();
+      }, 100);
+    }
+  }
+
+  closeChangeNameModal() {
+    const modal = document.getElementById('changeNameModal');
+    if (modal) modal.classList.remove('active');
+  }
+
+  handleChangeNameSubmit(e) {
+    e.preventDefault();
+    const inputTargetId = document.getElementById('inputTargetStudentIdForName');
+    const inputName = document.getElementById('inputNewDisplayName');
+    const newName = inputName ? inputName.value.trim() : '';
+
+    if (!newName) {
+      alert('Vui lòng nhập họ và tên hợp lệ!');
+      return;
+    }
+
+    const targetStudentId = inputTargetId ? inputTargetId.value.trim() : '';
+
+    try {
+      if (targetStudentId) {
+        const res = window.userManager.adminUpdateStudentName(targetStudentId, newName);
+        if (res.success) {
+          this.closeChangeNameModal();
+          this.renderStudentRosterTable();
+          const detailModal = document.getElementById('studentDetailModal');
+          if (detailModal && detailModal.classList.contains('active')) {
+            this.openStudentDetailModal(targetStudentId);
+          }
+          if (window.app) window.app.showToast(`Đã đổi tên học sinh thành: ${newName}`);
+        }
+      } else {
+        const res = window.userManager.updateDisplayName(newName);
+        if (res.success) {
+          this.closeChangeNameModal();
+          this.updateNavbarRoleBadge();
+          const studentPane = document.getElementById('tabPane_student-portal');
+          if (studentPane && studentPane.classList.contains('active')) {
+            this.renderStudentPortal();
+          }
+          if (window.app) window.app.showToast(`Đổi họ và tên thành công: ${newName}!`);
+        }
       }
     } catch (err) {
       alert(err.message);
@@ -683,6 +796,9 @@ class AdminController {
                       <button class="btn btn-primary btn-sm btn-view-student" data-id="${s.id}" style="padding: 0.4rem 0.65rem; font-size: 0.75rem;" title="Xem hồ sơ tiến trình">
                         <i data-lucide="bar-chart-2"></i> Hồ sơ
                       </button>
+                      <button class="btn btn-secondary btn-sm btn-edit-student-name" data-id="${s.id}" data-name="${s.name}" title="Đổi họ tên học sinh" style="padding: 0.4rem 0.5rem; color: var(--accent-cyan);">
+                        <i data-lucide="edit-3"></i>
+                      </button>
                       <button class="btn btn-secondary btn-sm btn-reset-pass" data-id="${s.id}" data-name="${s.name}" title="Đặt lại mật khẩu cho học sinh" style="padding: 0.4rem 0.5rem; color: #f59e0b;">
                         <i data-lucide="key-round"></i>
                       </button>
@@ -721,6 +837,14 @@ class AdminController {
       btn.addEventListener('click', (e) => {
         const id = e.currentTarget.dataset.id;
         this.openStudentDetailModal(id);
+      });
+    });
+
+    // Rename student
+    container.querySelectorAll('.btn-edit-student-name').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const id = e.currentTarget.dataset.id;
+        this.openChangeNameModal(id);
       });
     });
 
@@ -857,8 +981,13 @@ class AdminController {
           <div style="display: flex; align-items: center; gap: 1rem;">
             <span style="font-size: 2.5rem; width: 64px; height: 64px; border-radius: 50%; background: var(--bg-surface); display: flex; align-items: center; justify-content: center;">${student.avatar || '👨‍🎓'}</span>
             <div>
-              <div style="font-size: 1.25rem; font-weight: 800; color: var(--text-main);">${student.name}</div>
-              <div style="font-size: 0.85rem; color: var(--text-muted);">Lớp: ${student.class} • SĐT Phụ huynh: <strong>${student.parentPhone || 'Chưa cập nhật'}</strong></div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                <div style="font-size: 1.25rem; font-weight: 800; color: var(--text-main);">${student.name}</div>
+                <button class="btn btn-secondary btn-sm btn-edit-student-name-detail" data-id="${student.id}" style="padding: 0.2rem 0.55rem; font-size: 0.72rem; gap: 4px;" title="Đổi tên học sinh">
+                  <i data-lucide="edit-3" style="width: 12px; height: 12px;"></i> Đổi tên
+                </button>
+              </div>
+              <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Lớp: ${student.class} • SĐT Phụ huynh: <strong>${student.parentPhone || 'Chưa cập nhật'}</strong></div>
               <div style="font-size: 0.85rem; color: #a855f7; font-weight: 700; margin-top: 0.2rem;">Mục tiêu: ${student.targetSchool} (Điểm chuẩn: ${student.benchmarkScore}đ)</div>
             </div>
           </div>
@@ -927,6 +1056,15 @@ class AdminController {
           `}
         </div>
       `;
+
+      // Bind rename student in detail modal
+      const btnEditInDetail = bodyEl.querySelector('.btn-edit-student-name-detail');
+      if (btnEditInDetail) {
+        btnEditInDetail.addEventListener('click', (e) => {
+          const id = e.currentTarget.dataset.id;
+          this.openChangeNameModal(id);
+        });
+      }
 
       // Bind note saving
       const btnSaveNote = bodyEl.querySelector('#btnSaveTeacherNote');
@@ -1271,6 +1409,9 @@ class AdminController {
             <div>
               <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                 <h2 style="font-size: 1.75rem; font-weight: 800; color: var(--text-main);">${student.name}</h2>
+                <button class="btn btn-secondary btn-sm" id="btnEditStudentNameDirect" title="Đổi họ và tên hiển thị" style="padding: 0.25rem 0.65rem; font-size: 0.75rem; gap: 4px;">
+                  <i data-lucide="edit-3" style="width: 14px; height: 14px;"></i> Đổi tên
+                </button>
                 <span class="badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 99px;">Lớp ${student.class}</span>
                 <span class="badge" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 99px;">Tài khoản: ${student.username || student.studentCode}</span>
               </div>
@@ -1460,6 +1601,15 @@ class AdminController {
         }
       });
     });
+
+    // Bind direct edit student name
+    const btnEditDirect = container.querySelector('#btnEditStudentNameDirect');
+    if (btnEditDirect) {
+      btnEditDirect.addEventListener('click', () => {
+        const u = window.userManager.getCurrentUser();
+        this.openChangeNameModal(u && u.role === 'admin' ? (student ? student.id : null) : null);
+      });
+    }
 
     if (window.lucide) window.lucide.createIcons();
   }

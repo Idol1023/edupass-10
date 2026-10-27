@@ -26,11 +26,11 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
   <!-- Stylesheets with versioning -->
-  <link rel="stylesheet" href="css/main.css?v=2.3.1">
-  <link rel="stylesheet" href="css/components.css?v=2.3.1">
-  <link rel="stylesheet" href="css/exam.css?v=2.3.1">
-  <link rel="stylesheet" href="css/admin.css?v=2.3.1">
-  <link rel="stylesheet" href="css/responsive.css?v=2.3.1">
+  <link rel="stylesheet" href="css/main.css?v=2.3.2">
+  <link rel="stylesheet" href="css/components.css?v=2.3.2">
+  <link rel="stylesheet" href="css/exam.css?v=2.3.2">
+  <link rel="stylesheet" href="css/admin.css?v=2.3.2">
+  <link rel="stylesheet" href="css/responsive.css?v=2.3.2">
 </head>
 <body>
 
@@ -1300,6 +1300,36 @@
     </div>
   </div>
 
+  <!-- Modal 3.5: Change Display Name Modal -->
+  <div class="edupass-modal-overlay" id="changeNameModal">
+    <div class="edupass-modal-dialog" style="max-width: 440px;">
+      <div class="edupass-modal-header">
+        <div class="edupass-modal-title" id="changeNameModalTitle">
+          <i data-lucide="edit-3" style="color: var(--accent-cyan);"></i> Đổi Họ Và Tên Hiển Thị
+        </div>
+        <button class="edupass-modal-close" id="btnCloseChangeNameModal">&times;</button>
+      </div>
+      <div class="edupass-modal-body">
+        <form id="formChangeName">
+          <input type="hidden" id="inputTargetStudentIdForName" value="">
+          <div class="edupass-form-group">
+            <label id="labelChangeNameTarget">Họ và tên mới *</label>
+            <input type="text" id="inputNewDisplayName" placeholder="Nhập họ và tên đầy đủ..." maxlength="50" required autocomplete="off">
+            <small style="font-size: 0.76rem; color: var(--text-muted); margin-top: 0.35rem; display: block;">
+              Tên sẽ hiển thị trên thanh tiêu đề, bảng điểm, bài thi và hồ sơ năng lực.
+            </small>
+          </div>
+          <div class="edupass-modal-footer" style="padding: 1rem 0 0 0; background: transparent; border-top: none;">
+            <button type="button" class="btn btn-secondary btn-sm" onclick="window.adminController.closeChangeNameModal()">Hủy</button>
+            <button type="submit" class="btn btn-primary btn-sm">
+              <i data-lucide="check"></i> Lưu thay đổi
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <!-- Modal 4: Student Detail Progress Modal -->
   <div class="edupass-modal-overlay" id="studentDetailModal">
     <div class="edupass-modal-dialog wide">
@@ -1468,21 +1498,21 @@
   </footer>
 
   <!-- ================= JAVASCRIPT BUNDLES (WITH CACHE BUSTER) ================= -->
-  <script src="js/data/questions-math.js?v=2.3.1"></script>
-  <script src="js/data/questions-english.js?v=2.3.1"></script>
-  <script src="js/data/questions-literature.js?v=2.3.1"></script>
-  <script src="js/data/topic-exams-math.js?v=2.3.1"></script>
-  <script src="js/data/topic-exams-english.js?v=2.3.1"></script>
-  <script src="js/data/topic-exams-literature.js?v=2.3.1"></script>
-  <script src="js/data/knowledge-base.js?v=2.3.1"></script>
-  <script src="js/audio-utils.js?v=2.3.1"></script>
-  <script src="js/storage-manager.js?v=2.3.1"></script>
-  <script src="js/exam-engine.js?v=2.3.1"></script>
-  <script src="js/review-engine.js?v=2.3.1"></script>
-  <script src="js/flashcards.js?v=2.3.1"></script>
-  <script src="js/progress-tracker.js?v=2.3.1"></script>
-  <script src="js/user-manager.js?v=2.3.1"></script>
-  <script src="js/admin-controller.js?v=2.3.1"></script>
-  <script src="js/app.js?v=2.3.1"></script>
+  <script src="js/data/questions-math.js?v=2.3.2"></script>
+  <script src="js/data/questions-english.js?v=2.3.2"></script>
+  <script src="js/data/questions-literature.js?v=2.3.2"></script>
+  <script src="js/data/topic-exams-math.js?v=2.3.2"></script>
+  <script src="js/data/topic-exams-english.js?v=2.3.2"></script>
+  <script src="js/data/topic-exams-literature.js?v=2.3.2"></script>
+  <script src="js/data/knowledge-base.js?v=2.3.2"></script>
+  <script src="js/audio-utils.js?v=2.3.2"></script>
+  <script src="js/storage-manager.js?v=2.3.2"></script>
+  <script src="js/exam-engine.js?v=2.3.2"></script>
+  <script src="js/review-engine.js?v=2.3.2"></script>
+  <script src="js/flashcards.js?v=2.3.2"></script>
+  <script src="js/progress-tracker.js?v=2.3.2"></script>
+  <script src="js/user-manager.js?v=2.3.2"></script>
+  <script src="js/admin-controller.js?v=2.3.2"></script>
+  <script src="js/app.js?v=2.3.2"></script>
 </body>
 </html>
