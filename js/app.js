@@ -241,15 +241,6 @@ class EduPassApp {
       });
     }
 
-    // User / Role switcher badge
-    const userBadgeBtn = document.getElementById('headerUserBadgeBtn');
-    if (userBadgeBtn) {
-      userBadgeBtn.addEventListener('click', () => {
-        if (window.adminController) {
-          window.adminController.openUserSwitcher();
-        }
-      });
-    }
 
     // Reset data modal controls
     const resetBtn = document.getElementById('btnResetData');

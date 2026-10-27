@@ -26,11 +26,11 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
   <!-- Stylesheets with versioning -->
-  <link rel="stylesheet" href="css/main.css?v=2.3.3">
-  <link rel="stylesheet" href="css/components.css?v=2.3.3">
-  <link rel="stylesheet" href="css/exam.css?v=2.3.3">
-  <link rel="stylesheet" href="css/admin.css?v=2.3.3">
-  <link rel="stylesheet" href="css/responsive.css?v=2.3.3">
+  <link rel="stylesheet" href="css/main.css?v=2.3.4">
+  <link rel="stylesheet" href="css/components.css?v=2.3.4">
+  <link rel="stylesheet" href="css/exam.css?v=2.3.4">
+  <link rel="stylesheet" href="css/admin.css?v=2.3.4">
+  <link rel="stylesheet" href="css/responsive.css?v=2.3.4">
 </head>
 <body>
 
@@ -58,13 +58,15 @@
           </button>
 
           <!-- User Account / Login Button -->
-          <button class="header-user-btn" id="headerUserBadgeBtn" title="Tài khoản cá nhân / Đăng nhập">
-            <div class="header-user-avatar" id="headerUserAvatar">HS</div>
-            <div style="display: flex; flex-direction: column; text-align: left;">
-              <span id="headerUserName" style="line-height: 1.1; max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Học Sinh</span>
-              <span class="header-user-role-tag student" id="headerUserRoleTag">Lớp 9A1</span>
+          <button class="header-user-btn" id="headerUserBadgeBtn" title="Nhấn để đăng nhập tài khoản Học sinh hoặc Giáo viên">
+            <div class="header-user-avatar" id="headerUserAvatar" style="background: linear-gradient(135deg, var(--primary), var(--accent-cyan)); color: #fff;">
+              <i data-lucide="lock" style="width: 14px; height: 14px;"></i>
             </div>
-            <i data-lucide="chevron-down" style="width: 14px; height: 14px; opacity: 0.7;"></i>
+            <div style="display: flex; flex-direction: column; text-align: left;">
+              <span id="headerUserName" style="font-size: 0.84rem; font-weight: 700; color: var(--text-main); line-height: 1.1;">Đăng nhập</span>
+              <span class="header-user-role-tag" id="headerUserRoleTag" style="font-size: 0.68rem; color: var(--text-muted); background: transparent; padding: 0;">Lưu tiến trình học</span>
+            </div>
+            <i data-lucide="log-in" style="width: 14px; height: 14px; opacity: 0.9; color: var(--primary);"></i>
           </button>
 
           <button class="btn-icon-circle" id="themeToggleBtn" title="Chuyển đổi giao diện Sáng / Tối">
@@ -1552,21 +1554,21 @@
   </footer>
 
   <!-- ================= JAVASCRIPT BUNDLES (WITH CACHE BUSTER) ================= -->
-  <script src="js/data/questions-math.js?v=2.3.3"></script>
-  <script src="js/data/questions-english.js?v=2.3.3"></script>
-  <script src="js/data/questions-literature.js?v=2.3.3"></script>
-  <script src="js/data/topic-exams-math.js?v=2.3.3"></script>
-  <script src="js/data/topic-exams-english.js?v=2.3.3"></script>
-  <script src="js/data/topic-exams-literature.js?v=2.3.3"></script>
-  <script src="js/data/knowledge-base.js?v=2.3.3"></script>
-  <script src="js/audio-utils.js?v=2.3.3"></script>
-  <script src="js/storage-manager.js?v=2.3.3"></script>
-  <script src="js/exam-engine.js?v=2.3.3"></script>
-  <script src="js/review-engine.js?v=2.3.3"></script>
-  <script src="js/flashcards.js?v=2.3.3"></script>
-  <script src="js/progress-tracker.js?v=2.3.3"></script>
-  <script src="js/user-manager.js?v=2.3.3"></script>
-  <script src="js/admin-controller.js?v=2.3.3"></script>
-  <script src="js/app.js?v=2.3.3"></script>
+  <script src="js/data/questions-math.js?v=2.3.4"></script>
+  <script src="js/data/questions-english.js?v=2.3.4"></script>
+  <script src="js/data/questions-literature.js?v=2.3.4"></script>
+  <script src="js/data/topic-exams-math.js?v=2.3.4"></script>
+  <script src="js/data/topic-exams-english.js?v=2.3.4"></script>
+  <script src="js/data/topic-exams-literature.js?v=2.3.4"></script>
+  <script src="js/data/knowledge-base.js?v=2.3.4"></script>
+  <script src="js/audio-utils.js?v=2.3.4"></script>
+  <script src="js/storage-manager.js?v=2.3.4"></script>
+  <script src="js/exam-engine.js?v=2.3.4"></script>
+  <script src="js/review-engine.js?v=2.3.4"></script>
+  <script src="js/flashcards.js?v=2.3.4"></script>
+  <script src="js/progress-tracker.js?v=2.3.4"></script>
+  <script src="js/user-manager.js?v=2.3.4"></script>
+  <script src="js/admin-controller.js?v=2.3.4"></script>
+  <script src="js/app.js?v=2.3.4"></script>
 </body>
 </html>

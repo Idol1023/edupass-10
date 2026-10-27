@@ -8,7 +8,7 @@ class UserManager {
   constructor() {
     this.STORAGE_KEYS = {
       ACCOUNTS: 'edupass_accounts_v5',
-      SESSION: 'edupass_session_v5',
+      SESSION: 'edupass_session_v6',
       STUDENTS: 'edupass_students_registry_v5',
       ASSIGNMENTS: 'edupass_assignments_registry_v5'
     };
@@ -217,10 +217,8 @@ class UserManager {
     this.saveStudents();
     this.saveAssignments();
 
-    // Default session: Student (Test User)
-    const defaultStudent = this.accounts.find(a => a.role === 'student') || adminAccount;
-    this.currentUser = defaultStudent;
-    this.saveSession(defaultStudent);
+    // Default state: Guest (unauthenticated). Users explicitly click "Đăng nhập" to sign in.
+    this.currentUser = null;
   }
 
   // =========================================================
@@ -259,12 +257,8 @@ class UserManager {
       console.warn('Session restore error:', e);
     }
 
-    // Fallback: Default to Student for public user convenience
-    const defaultStudent = this.accounts.find(a => a.role === 'student');
-    if (defaultStudent) {
-      this.currentUser = defaultStudent;
-      this.saveSession(defaultStudent);
-    }
+    // Default: Remain as Guest (unauthenticated)
+    this.currentUser = null;
   }
 
   // Login handler

@@ -189,14 +189,14 @@ class AdminController {
     if (badgeEl) {
       if (!user) {
         badgeEl.innerHTML = `
-          <div class="header-user-avatar" style="background: linear-gradient(135deg, var(--primary), var(--accent-cyan));">
+          <div class="header-user-avatar" style="background: linear-gradient(135deg, var(--primary), var(--accent-cyan)); color: #fff;">
             <i data-lucide="lock" style="width: 14px; height: 14px;"></i>
           </div>
           <div style="display: flex; flex-direction: column; text-align: left;">
-            <span style="font-size: 0.84rem; font-weight: 700; color: #fff;">Đăng nhập</span>
-            <span style="font-size: 0.68rem; color: #94a3b8;">Lưu tiến trình học</span>
+            <span style="font-size: 0.84rem; font-weight: 700; color: var(--text-main); line-height: 1.1;">Đăng nhập</span>
+            <span style="font-size: 0.68rem; color: var(--text-muted); margin-top: 1px;">Lưu tiến trình học</span>
           </div>
-          <i data-lucide="log-in" style="width: 14px; height: 14px; opacity: 0.9; color: var(--accent-cyan);"></i>
+          <i data-lucide="log-in" style="width: 14px; height: 14px; opacity: 0.9; color: var(--primary);"></i>
         `;
         badgeEl.title = 'Nhấn để đăng nhập tài khoản Học sinh hoặc Giáo viên';
       } else if (user.role === 'admin') {
